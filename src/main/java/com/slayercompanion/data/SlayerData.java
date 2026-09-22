@@ -60,7 +60,7 @@ public class SlayerData
 	private volatile AreaRules areaRules;
 
 	@Inject
-	SlayerData(Gson gson)
+	public SlayerData(Gson gson)
 	{
 		this.gson = gson;
 	}

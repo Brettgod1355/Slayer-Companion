@@ -59,9 +59,6 @@ import net.runelite.client.game.ItemManager;
 public class OwnedItems
 {
 	private static final String BANK_KEY = "bankSnapshot";
-	private static final java.lang.reflect.Type BANK_TYPE = new TypeToken<Map<Integer, Integer>>()
-	{
-	}.getType();
 
 	private final Client client;
 	private final ItemManager itemManager;
@@ -183,7 +180,9 @@ public class OwnedItems
 		}
 		try
 		{
-			Map<Integer, Integer> saved = gson.fromJson(json, BANK_TYPE);
+			Map<Integer, Integer> saved = gson.fromJson(json, new TypeToken<Map<Integer, Integer>>()
+			{
+			}.getType());
 			if (saved != null)
 			{
 				bank.clear();

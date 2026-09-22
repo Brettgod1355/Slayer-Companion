@@ -30,7 +30,6 @@ import com.slayercompanion.SlayerCompanionConfig;
 import com.slayercompanion.events.SessionUpdated;
 import com.slayercompanion.events.TaskChanged;
 import com.slayercompanion.task.CurrentTask;
-import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -82,9 +81,6 @@ public class TaskSessionTracker
 	private static final String SESSION_KEY = "session";
 	private static final String HISTORY_KEY = "sessionHistory";
 	private static final int HISTORY_LIMIT = 30;
-	private static final Type HISTORY_TYPE = new TypeToken<List<TaskSession>>()
-	{
-	}.getType();
 	/** Item names (lowercase) that count as supplies when their stack shrinks. */
 	private static final List<String> STACKABLE_SUPPLY_SUFFIXES = Arrays.asList(
 		"rune", "arrow", "bolt", "bolts (e)", "dart", "knife", "javelin", "thrownaxe", "chinchompa",
@@ -151,7 +147,9 @@ public class TaskSessionTracker
 		}
 		try
 		{
-			List<TaskSession> list = gson.fromJson(json, HISTORY_TYPE);
+			List<TaskSession> list = gson.fromJson(json, new TypeToken<List<TaskSession>>()
+			{
+			}.getType());
 			return list == null ? Collections.emptyList() : list;
 		}
 		catch (RuntimeException e)

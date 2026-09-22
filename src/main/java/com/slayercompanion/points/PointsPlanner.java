@@ -53,7 +53,7 @@ public class PointsPlanner
 	private final SlayerCompanionConfig config;
 
 	@Inject
-	PointsPlanner(SlayerData data, SlayerCompanionConfig config)
+	public PointsPlanner(SlayerData data, SlayerCompanionConfig config)
 	{
 		this.data = data;
 		this.config = config;

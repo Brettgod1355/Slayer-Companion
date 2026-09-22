@@ -22,35 +22,24 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package com.slayercompanion.data;
+package com.slayercompanion.task;
 
-import java.util.List;
-import javax.annotation.Nullable;
-import lombok.Data;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
 
-/** One Slayer reward from the bundled unlocks.json, with the plugin's recommendation. */
-@Data
-public class UnlockInfo
+import org.junit.Test;
+
+public class SlayerMasterTest
 {
-	private String id;
-	private String name;
-	/** "unlock", "extend", "buy" or "block". */
-	private String category;
-	private int cost;
-	/** Free-text cost when it varies by master (e.g. block/skip), else null. */
-	@Nullable
-	private String costText;
-	@Nullable
-	private String effect;
-	@Nullable
-	private List<String> requirements;
-	@Nullable
-	private List<String> affectsTasks;
-	private boolean repeatable;
-	/** 1 = buy first ... 5 = situational. */
-	private int priority;
-	@Nullable
-	private List<String> audience;
-	@Nullable
-	private String rationale;
+	@Test
+	public void varbitValuesAreUniqueAndCoreConstantsMatch()
+	{
+		// RuneLite's core Slayer plugin uses 7 for Krystilia and 10 for Mortimer.
+		assertEquals(SlayerMaster.KRYSTILIA, SlayerMaster.fromVarbit(7));
+		assertEquals(SlayerMaster.MORTIMER, SlayerMaster.fromVarbit(10));
+		assertNull(SlayerMaster.fromVarbit(0));
+		assertNull(SlayerMaster.fromVarbit(99));
+		long distinct = java.util.Arrays.stream(SlayerMaster.values()).mapToInt(SlayerMaster::getVarbitValue).distinct().count();
+		assertEquals(SlayerMaster.values().length, distinct);
+	}
 }

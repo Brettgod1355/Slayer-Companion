@@ -1,1756 +1,1758 @@
 {
-  "meta": {
-    "sources": [
-      "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page)",
-      "Slayer_reward_point.wikitext",
-      "Slayer_task.wikitext",
-      "Boss.wikitext",
-      "Superior_slayer_monster.wikitext",
-      "Slayer.wikitext",
-      "Mortimer.wikitext",
-      "Slayer_helmet.wikitext"
-    ],
-    "generatedBy": "build_unlocks.py (research task R3)",
-    "toggleLegend": {
-      "perm": "permanent (cannot be disabled; one-off purchase)",
-      "free": "free toggle (one-off purchase; can be switched off/on without repaying)",
-      "paid": "one-off purchase, but must be paid again to reactivate once disabled"
-    },
-    "priorityLegend": "1 = buy first ... 5 = situational/skip. The priority/audience/rationale fields are judgement; each rationale states whether it is wiki-supported or an inference.",
-    "affectsTasksNaming": "Task names use the RuneLite Task enum display name (task-enum.txt column 2). Rockslugs, Mutated zygomites and Gargoyles are absent from task-enum.txt but present in runelite Task.java (ROCKSLUGS 'Rockslugs', MUTATED_ZYGOMITES 'Mutated zygomites', GARGOYLES 'Gargoyles'); those names are taken from Task.java."
+ "cosmetics": [
+  {
+   "affectsTasks": [
+    "(cosmetic only)"
+   ],
+   "audience": [
+    "cosmetic"
+   ],
+   "category": "cosmetic",
+   "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Cosmetics table row 'King Black Bonnet | 1,000 | Permanent'",
+   "cost": 1000,
+   "effect": "Learn how to combine a KBD head with your Slayer helmet to make it black.",
+   "id": "king_black_bonnet",
+   "name": "King Black Bonnet",
+   "priority": 5,
+   "rationale": "Wiki-supported that these are cosmetic only ('Learn how to combine certain items with your Slayer helmet to upgrade it into a cosmetic variant'); the Slayer_reward_point page treats the recolours as optional ('Excluding the slayer helmet recolours reduces this to 3,580 points').",
+   "repeatable": false,
+   "requirements": [
+    "Slayer helmet (Malevolent Masquerade)",
+    "The named head/item"
+   ],
+   "tab": "Cosmetics",
+   "toggle": "permanent (cannot be disabled; one-off purchase)"
   },
-  "totals": {
-    "unlockTab": 3835,
-    "extendTab": 2875,
-    "cosmeticsTab": 8400,
-    "unlockPlusExtend": 6710,
-    "unlockPlusExtendPlusCosmetics": 15110,
-    "wikiClaims": {
-      "SlayerRewards_page": "'Purchasing each unlock and extend reward once costs 15,510 points'",
-      "SlayerRewardPoint_page": "'A total of 11,580 points are required in order to obtain all the rewards and blocks at least once ... Excluding the slayer helmet recolours reduces this to 3,580 points'"
-    },
-    "note": "Computed sums of the table rows in this run do not match either wiki sentence; the wiki totals appear stale relative to the tables (which were repriced 27 Aug 2025 and 22 Jul 2026)."
+  {
+   "affectsTasks": [
+    "(cosmetic only)"
+   ],
+   "audience": [
+    "cosmetic"
+   ],
+   "category": "cosmetic",
+   "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Cosmetics table row 'Kalphite Khat | 1,000 | Permanent'",
+   "cost": 1000,
+   "effect": "Learn how to combine a Kalphite Queen head with your Slayer helmet to make it green.",
+   "id": "kalphite_khat",
+   "name": "Kalphite Khat",
+   "priority": 5,
+   "rationale": "Wiki-supported that these are cosmetic only ('Learn how to combine certain items with your Slayer helmet to upgrade it into a cosmetic variant'); the Slayer_reward_point page treats the recolours as optional ('Excluding the slayer helmet recolours reduces this to 3,580 points').",
+   "repeatable": false,
+   "requirements": [
+    "Slayer helmet (Malevolent Masquerade)",
+    "The named head/item"
+   ],
+   "tab": "Cosmetics",
+   "toggle": "permanent (cannot be disabled; one-off purchase)"
   },
-  "unlocks": [
-    {
-      "id": "gargoyle_smasher",
-      "name": "Gargoyle Smasher",
-      "tab": "Unlock",
-      "category": "unlock",
-      "cost": 120,
-      "toggle": "permanent (cannot be disabled; one-off purchase)",
-      "effect": "Gargoyles are automatically dealt the finishing blow if the player has a rock hammer in their inventory.",
-      "requirements": [
-        "Rock hammer in inventory (to trigger the effect)"
-      ],
-      "affectsTasks": [
-        "Gargoyles"
-      ],
-      "repeatable": false,
-      "priority": 2,
-      "audience": [
-        "everyone"
-      ],
-      "rationale": "Inference: removes the manual rock-hammer finish on a common high-level task; wiki states only the mechanic: 'Gargoyles are automatically dealt the finishing blow if the player has a rock hammer in their inventory.'",
-      "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Unlock table row 'Gargoyle Smasher | 120 | Permanent'"
-    },
-    {
-      "id": "slug_salter",
-      "name": "Slug Salter",
-      "tab": "Unlock",
-      "category": "unlock",
-      "cost": 10,
-      "toggle": "permanent (cannot be disabled; one-off purchase)",
-      "effect": "Rock slugs are automatically dealt the finishing blow if the player has a bag of salt in their inventory.",
-      "requirements": [
-        "Bag of salt in inventory (to trigger the effect)"
-      ],
-      "affectsTasks": [
-        "Rockslugs"
-      ],
-      "repeatable": false,
-      "priority": 3,
-      "audience": [
-        "point-boosting",
-        "everyone"
-      ],
-      "rationale": "Inference: near-free at 10 points and Rockslug is a Mazchna task ('Require a bag of salt to kill', Slayer_reward_point Mazchna boosting table), so it speeds point-boosting streaks. Cost was 'reduced from 80 to 10 points' (27 Aug 2025 change).",
-      "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Unlock table row 'Slug Salter | 10 | Permanent'; Slayer_reward_point.wikitext Mazchna boosting table"
-    },
-    {
-      "id": "reptile_freezer",
-      "name": "Reptile Freezer",
-      "tab": "Unlock",
-      "category": "unlock",
-      "cost": 10,
-      "toggle": "permanent (cannot be disabled; one-off purchase)",
-      "effect": "Desert lizards are automatically dealt the finishing blow if the player has an ice cooler in their inventory.",
-      "requirements": [
-        "Ice cooler in inventory (to trigger the effect)"
-      ],
-      "affectsTasks": [
-        "Lizards"
-      ],
-      "repeatable": false,
-      "priority": 3,
-      "audience": [
-        "point-boosting",
-        "everyone"
-      ],
-      "rationale": "Inference: near-free at 10 points; Desert Lizard is a Turael task that 'Needs Ice cooler to kill' (Slayer_reward_point Turael boosting table). Cost 'reduced from 90 to 10 points' (27 Aug 2025 change).",
-      "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Unlock table row 'Reptile Freezer | 10 | Permanent'; Slayer_reward_point.wikitext Turael boosting table"
-    },
-    {
-      "id": "shroom_sprayer",
-      "name": "'Shroom Sprayer",
-      "tab": "Unlock",
-      "category": "unlock",
-      "cost": 110,
-      "toggle": "permanent (cannot be disabled; one-off purchase)",
-      "effect": "Mutated zygomites are automatically dealt the finishing blow if the player has fungicide spray and fungicide in their inventory.",
-      "requirements": [
-        "Fungicide spray and fungicide in inventory (to trigger the effect)"
-      ],
-      "affectsTasks": [
-        "Mutated zygomites"
-      ],
-      "repeatable": false,
-      "priority": 4,
-      "audience": [
-        "everyone"
-      ],
-      "rationale": "Inference: convenience only; wiki gives the mechanic and no recommendation. Note in-game spelling begins with an apostrophe: 'Shroom Sprayer.",
-      "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Unlock table row ''Shroom Sprayer | 110 | Permanent'"
-    },
-    {
-      "id": "malevolent_masquerade",
-      "name": "Malevolent Masquerade",
-      "tab": "Unlock",
-      "category": "unlock",
-      "cost": 400,
-      "toggle": "permanent (cannot be disabled; one-off purchase)",
-      "effect": "Learn to assemble a Slayer helmet, which requires level 55 Crafting.",
-      "requirements": [
-        "55 Crafting to assemble (boosts work)",
-        "10 Defence to equip (Slayer_helmet page)",
-        "Components: nose peg, facemask, earmuffs, spiny helmet, enchanted gem, black mask (+ reinforced goggles if A Porcine of Interest is complete)"
-      ],
-      "affectsTasks": [
-        "(all tasks)"
-      ],
-      "repeatable": false,
-      "priority": 1,
-      "audience": [
-        "everyone"
-      ],
-      "rationale": "Wiki-supported: the Slayer helmet 'is therefore commonly worn by players on tasks' (Slayer page) and 'making it the best melee helmet option for slayers' (Slayer page).",
-      "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Unlock table row 'Malevolent Masquerade | 400 | Permanent'; Slayer.wikitext lines 200 and 1019; Slayer_helmet.wikitext line 25"
-    },
-    {
-      "id": "ring_bling",
-      "name": "Ring Bling",
-      "tab": "Unlock",
-      "category": "unlock",
-      "cost": 150,
-      "toggle": "permanent (cannot be disabled; one-off purchase)",
-      "effect": "Learn to craft a Slayer ring, which requires level 75 Crafting.",
-      "requirements": [
-        "75 Crafting to craft"
-      ],
-      "affectsTasks": [
-        "(all tasks)"
-      ],
-      "repeatable": false,
-      "priority": 3,
-      "audience": [
-        "ironman",
-        "everyone"
-      ],
-      "rationale": "Inference: a Slayer ring 'provides 8 charges for teleporting to useful Slayer sites' (Buy tab note); crafting them is mainly valuable if you would otherwise spend 75 points per ring. Cost 'reduced from 300 to 150 points' (27 Aug 2025 change).",
-      "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Unlock table row 'Ring Bling | 150 | Permanent' and Buy tab 'Slayer ring (8)'"
-    },
-    {
-      "id": "broader_fletching",
-      "name": "Broader Fletching",
-      "tab": "Unlock",
-      "category": "unlock",
-      "cost": 300,
-      "toggle": "permanent (cannot be disabled; one-off purchase)",
-      "effect": "Learn to fletch broad arrows (level 52 Fletching), broad bolts (level 55 Fletching), and amethyst broad bolts (level 76 Fletching).",
-      "requirements": [
-        "52 Fletching (broad arrows)",
-        "55 Fletching (broad bolts)",
-        "76 Fletching (amethyst broad bolts)"
-      ],
-      "affectsTasks": [
-        "Turoth",
-        "Kurask"
-      ],
-      "repeatable": false,
-      "priority": 3,
-      "audience": [
-        "ironman",
-        "ranged slayers"
-      ],
-      "rationale": "Inference: only matters if you use broad ammunition ('Bolts that can damage Turoths and Kurask' per the Buy tab) and prefer fletching over buying at 35 points per 250; the wiki gives no ranking.",
-      "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Unlock table row 'Broader Fletching | 300 | Permanent'"
-    },
-    {
-      "id": "seeing_red",
-      "name": "Seeing Red",
-      "tab": "Unlock",
-      "category": "unlock",
-      "cost": 50,
-      "toggle": "one-off purchase, but must be paid again to reactivate once disabled",
-      "effect": "Konar, Duradel, and Nieve will be able to assign you red dragons as your task.",
-      "requirements": [
-        "Dragon Slayer I (partially) (Slayer_task Red dragons row)"
-      ],
-      "affectsTasks": [
-        "Red dragons"
-      ],
-      "repeatable": false,
-      "priority": 5,
-      "audience": [
-        "situational"
-      ],
-      "rationale": "Inference: adds a task type rather than improving existing ones; the wiki gives no recommendation, and because the toggle is 'No' it must be paid again if disabled.",
-      "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Unlock table row 'Seeing Red | 50 | No'; Slayer_task.wikitext row 'Red dragons': '* Seeing red unlocked'"
-    },
-    {
-      "id": "watch_the_birdie",
-      "name": "Watch the Birdie",
-      "tab": "Unlock",
-      "category": "unlock",
-      "cost": 80,
-      "toggle": "one-off purchase, but must be paid again to reactivate once disabled",
-      "effect": "Konar, Duradel, Nieve, Chaeldar, and Krystilia will be able to assign you Aviansie as your task. Requires level 60 Agility or 60 Strength to unlock.",
-      "requirements": [
-        "60 Agility or 60 Strength"
-      ],
-      "affectsTasks": [
-        "Aviansies"
-      ],
-      "repeatable": false,
-      "priority": 4,
-      "audience": [
-        "situational",
-        "wilderness slayers"
-      ],
-      "rationale": "Inference: adds aviansie tasks (including Krystilia's Wilderness God Wars Dungeon); useful only if you want that task, no wiki ranking.",
-      "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Unlock table row 'Watch the Birdie | 80 | No'"
-    },
-    {
-      "id": "hot_stuff",
-      "name": "Hot Stuff",
-      "tab": "Unlock",
-      "category": "unlock",
-      "cost": 100,
-      "toggle": "one-off purchase, but must be paid again to reactivate once disabled",
-      "effect": "Duradel, Nieve, and Chaeldar will be able to assign TzHaar as your task; you will be offered a chance to slay TzTok-Jad instead.",
-      "requirements": [
-        "None stated on the Slayer Rewards page; TzHaar row on Slayer_task lists only '* Hot stuff unlocked'"
-      ],
-      "affectsTasks": [
-        "Tzhaar",
-        "TzTok-Jad",
-        "TzKal-Zuk"
-      ],
-      "repeatable": false,
-      "priority": 4,
-      "audience": [
-        "situational",
-        "fight-caves"
-      ],
-      "rationale": "Wiki note: 'When assigned a TzHaar task, there will be an option to kill TzTok-Jad instead of TzHaar ... all monsters in the challenge will grant Slayer experience and be affected by the Slayer helmet' - valuable for on-task Fight Caves/Inferno attempts, otherwise inference: skip.",
-      "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Unlock table row 'Hot Stuff | 100 | No' + note 'tzhaar task'"
-    },
-    {
-      "id": "like_a_boss",
-      "name": "Like a Boss",
-      "tab": "Unlock",
-      "category": "unlock",
-      "cost": 200,
-      "toggle": "one-off purchase, but must be paid again to reactivate once disabled",
-      "effect": "Konar, Duradel, Krystilia, and Nieve will be able to assign various boss monsters as your task.",
-      "requirements": [
-        "Per-boss requirements are checked by the master, e.g. 85 Slayer for Abyssal Sire, 95 Slayer for Alchemical Hydra (Konar only), 91 Cerberus, 87 Kraken, 92 Araxxor, 93 Thermonuclear smoke devil, 75 Grotesque Guardians, quest completions per boss (Boss page table)"
-      ],
-      "affectsTasks": [
-        "The Abyssal Sire",
-        "The Alchemical Hydra",
-        "Araxxor",
-        "Barrows Brothers",
-        "Callisto",
-        "Cerberus",
-        "The Chaos Elemental",
-        "The Chaos Fanatic",
-        "Commander Zilyana",
-        "Crazy Archaeologists",
-        "Dagannoth Kings",
-        "Duke Sucellus",
-        "General Graardor",
-        "The Giant Mole",
-        "Grotesque Guardians (Task enum: Gargoyles alt 'Dusk'/'Dawn')",
-        "K'ril Tsutsaroth",
-        "The Kalphite Queen",
-        "The King Black Dragon",
-        "The Cave Kraken Boss",
-        "Kree'arra",
-        "The Leviathan",
-        "The Maggot King",
-        "The Phantom Muspah",
-        "Sarachnis",
-        "Scorpia",
-        "The Shellbane Gryphon",
-        "The Thermonuclear Smoke Devil",
-        "Vardorvis",
-        "Venenatis",
-        "Vet'ion",
-        "Vorkath",
-        "The Whisperer",
-        "Zulrah"
-      ],
-      "repeatable": false,
-      "priority": 2,
-      "audience": [
-        "bossers",
-        "wilderness slayers",
-        "everyone"
-      ],
-      "rationale": "Wiki-supported: 'This allows players to benefit from a black mask or slayer helmet (including imbued), making boss slayer more lucrative' and 'Upon finishing a boss task, the player will get an additional 5,000 Slayer experience regardless of task length' (Boss page). Caveat from wiki: 'The only way to \"block\" a boss is by toggling the ability off ... and the 200 point cost must be paid again to toggle it back on.'",
-      "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Unlock table row 'Like a Boss | 200 | No'; Boss.wikitext '==Boss slayer==' and its boss table; Slayer.wikitext line 794"
-    },
-    {
-      "id": "reptile_got_ripped",
-      "name": "Reptile Got Ripped",
-      "tab": "Unlock",
-      "category": "unlock",
-      "cost": 75,
-      "toggle": "one-off purchase, but must be paid again to reactivate once disabled",
-      "effect": "Konar, Duradel, Nieve, and Chaeldar will be able to assign Lizardmen as your task.",
-      "requirements": [
-        "None stated; Slayer_task Lizardmen row lists only '* Reptile got ripped unlocked'"
-      ],
-      "affectsTasks": [
-        "Lizardmen"
-      ],
-      "repeatable": false,
-      "priority": 5,
-      "audience": [
-        "situational"
-      ],
-      "rationale": "Inference: adds a task type only; the wiki gives no recommendation.",
-      "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Unlock table row 'Reptile Got Ripped | 75 | No'"
-    },
-    {
-      "id": "bigger_and_badder",
-      "name": "Bigger and Badder",
-      "tab": "Unlock",
-      "category": "unlock",
-      "cost": 50,
-      "toggle": "free toggle (one-off purchase; can be switched off/on without repaying)",
-      "effect": "Certain Slayer monsters will have the chance of spawning a superior version whilst on a Slayer task.",
-      "requirements": [
-        "None"
-      ],
-      "affectsTasks": [
-        "(all tasks with a superior variant)"
-      ],
-      "repeatable": false,
-      "priority": 1,
-      "audience": [
-        "everyone"
-      ],
-      "rationale": "Wiki-supported: 'Killing a superior Slayer monster rewards the player with a generous amount of Slayer experience - generally about ten times the hitpoints of the superior monster' and 'players may toggle ... on and off without loss of points ... although there generally isn't any benefit to this' (Superior slayer monster page). Cost 'reduced from 150 to 50 points' (27 Aug 2025 change).",
-      "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Unlock table row 'Bigger and Badder | 50 | Yes'; Superior_slayer_monster.wikitext lead and '==Overview=='"
-    },
-    {
-      "id": "duly_noted",
-      "name": "Duly Noted",
-      "tab": "Unlock",
-      "category": "unlock",
-      "cost": 200,
-      "toggle": "permanent (cannot be disabled; one-off purchase)",
-      "effect": "Mithril dragons drop mithril bars in banknote form while killed on assignment.",
-      "requirements": [
-        "Being on a metal dragon task at mithril dragons"
-      ],
-      "affectsTasks": [
-        "Metal dragons"
-      ],
-      "repeatable": false,
-      "priority": 5,
-      "audience": [
-        "situational"
-      ],
-      "rationale": "Inference: only affects mithril dragon kills on task; wiki gives no ranking.",
-      "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Unlock table row 'Duly Noted | 200 | Permanent'"
-    },
-    {
-      "id": "stop_the_wyvern",
-      "name": "Stop the Wyvern",
-      "tab": "Unlock",
-      "category": "unlock",
-      "cost": 500,
-      "toggle": "free toggle (one-off purchase; can be switched off/on without repaying)",
-      "effect": "Stops you getting Fossil Island Wyvern tasks, without counting towards your blocked task limit. This does not cancel a current fossil wyvern task.",
-      "requirements": [
-        "None"
-      ],
-      "affectsTasks": [
-        "Fossil island wyverns"
-      ],
-      "repeatable": false,
-      "priority": 4,
-      "audience": [
-        "task-blockers",
-        "situational"
-      ],
-      "rationale": "Wiki-supported effect: acts like an extra block slot 'without counting towards your blocked task limit'; whether it is worth 500 points depends on how much you dislike the task (inference).",
-      "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Unlock table row 'Stop the Wyvern | 500 | Yes'"
-    },
-    {
-      "id": "double_trouble",
-      "name": "Double Trouble",
-      "tab": "Unlock",
-      "category": "unlock",
-      "cost": 500,
-      "toggle": "one-off purchase, but must be paid again to reactivate once disabled",
-      "effect": "Slaying Dusk and Dawn now counts for two kills towards your task rather than one.",
-      "requirements": [
-        "Access to Grotesque Guardians (75 Slayer, Brittle key roof access, Priest in Peril per Boss page)"
-      ],
-      "affectsTasks": [
-        "Gargoyles",
-        "Grotesque Guardians (Task enum: Gargoyles alt 'Dusk'/'Dawn')"
-      ],
-      "repeatable": false,
-      "priority": 5,
-      "audience": [
-        "situational",
-        "bossers"
-      ],
-      "rationale": "Inference: only useful if you routinely complete gargoyle tasks at the Grotesque Guardians; wiki gives no ranking.",
-      "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Unlock table row 'Double Trouble | 500 | No'"
-    },
-    {
-      "id": "basilocked",
-      "name": "Basilocked",
-      "tab": "Unlock",
-      "category": "unlock",
-      "cost": 80,
-      "toggle": "one-off purchase, but must be paid again to reactivate once disabled",
-      "effect": "Konar, Duradel, and Nieve will be able to assign Basilisks as your task.",
-      "requirements": [
-        "40 Combat (Slayer_task Basilisks row); 40 Slayer to kill basilisks (first column)"
-      ],
-      "affectsTasks": [
-        "Basilisks"
-      ],
-      "repeatable": false,
-      "priority": 3,
-      "audience": [
-        "situational"
-      ],
-      "rationale": "Inference: adds Basilisk Knights (listed as a task variant on Slayer_task) to high masters; no wiki ranking. Note: 'Task must be unlocked with Slayer reward points to be assigned by Konar, Nieve and Duradel.'",
-      "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Unlock table row 'Basilocked | 80 | No'; Slayer_task.wikitext Basilisks row efn UnlockKND"
-    },
-    {
-      "id": "actual_vampyre_slayer",
-      "name": "Actual Vampyre Slayer",
-      "tab": "Unlock",
-      "category": "unlock",
-      "cost": 80,
-      "toggle": "one-off purchase, but must be paid again to reactivate once disabled",
-      "effect": "Konar, Duradel, Nieve, and Chaeldar will be able to assign Vampyres as your task.",
-      "requirements": [
-        "Priest in Peril; 35 Combat (Slayer_task Vampyres row)"
-      ],
-      "affectsTasks": [
-        "Vampyres"
-      ],
-      "repeatable": false,
-      "priority": 4,
-      "audience": [
-        "situational"
-      ],
-      "rationale": "Inference: adds a task type; no wiki ranking. Wiki bug note: 'Although the ingame menu lists Mortimer, it doesn't affect him. He will assign venators regardless and doesn't assign vampyres'.",
-      "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Unlock table row 'Actual Vampyre Slayer | 80 | No'"
-    },
-    {
-      "id": "task_storage",
-      "name": "Task Storage",
-      "tab": "Unlock",
-      "category": "unlock",
-      "cost": 500,
-      "toggle": "permanent (cannot be disabled; one-off purchase)",
-      "effect": "Gain the ability to store your task; once unlocked the operation is controlled by the Tasks tab, and you can freely swap between your current task and stored task.",
-      "requirements": [
-        "None"
-      ],
-      "affectsTasks": [
-        "(all tasks)"
-      ],
-      "repeatable": false,
-      "priority": 2,
-      "audience": [
-        "everyone",
-        "point-boosting"
-      ],
-      "rationale": "Wiki-supported: 'you may store your current Slayer task for free' and 'it can be unstored ... or swapped with their current task for free'; also 'The Task Storage can now store Wilderness tasks' (27 Aug 2025). Cost 'reduced from 1000 points 500 points'.",
-      "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Unlock table row 'Task Storage | 500 | Permanent' and Tasks table 'Store task'/'Unstore/Swap task'"
-    },
-    {
-      "id": "i_wildy_more_slayer",
-      "name": "I Wildy More Slayer",
-      "tab": "Unlock",
-      "category": "unlock",
-      "cost": 0,
-      "toggle": "free toggle (one-off purchase; can be switched off/on without repaying)",
-      "effect": "Krystilia will be able to assign Jellies, Dust Devils, Nechryaels, and Abyssal Demons as your task.",
-      "requirements": [
-        "None stated on the Slayer Rewards page (per-task reqs on Slayer_task: Jellies 57 Combat/52 Slayer; Dust devils Desert Treasure I partial, 70 Combat, 65 Slayer; Nechryael Priest in Peril, 85 Combat, 80 Slayer; Abyssal demons Priest in Peril or Fairytale II, 85 Combat, 85 Slayer)"
-      ],
-      "affectsTasks": [
-        "Jellies",
-        "Dust devils",
-        "Nechryael",
-        "Abyssal demons"
-      ],
-      "repeatable": false,
-      "priority": 1,
-      "audience": [
-        "wilderness slayers"
-      ],
-      "rationale": "Wiki-supported: costs 0 points and is a free toggle ('Added a free toggleable option ... to let players opt out of the new Wilderness tasks'); leave on unless you specifically want to avoid the Wilderness Slayer Cave tasks (inference).",
-      "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Unlock table row 'I Wildy More Slayer | 0 | Yes' and 9 Feb 2022 change"
-    },
-    {
-      "id": "warped_reality",
-      "name": "Warped Reality",
-      "tab": "Unlock",
-      "category": "unlock",
-      "cost": 60,
-      "toggle": "one-off purchase, but must be paid again to reactivate once disabled",
-      "effect": "Konar, Duradel, Nieve, and Chaeldar will be able to assign Warped creatures as your task.",
-      "requirements": [
-        "The Path of Glouphrie (wiki note: 'After completion of The Path of Glouphrie')"
-      ],
-      "affectsTasks": [
-        "Warped Creatures"
-      ],
-      "repeatable": false,
-      "priority": 4,
-      "audience": [
-        "situational"
-      ],
-      "rationale": "Inference: adds a task type; no wiki ranking.",
-      "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Unlock table row 'Warped Reality | 60 | No'"
-    },
-    {
-      "id": "lured_in",
-      "name": "Lured In",
-      "tab": "Unlock",
-      "category": "unlock",
-      "cost": 80,
-      "toggle": "one-off purchase, but must be paid again to reactivate once disabled",
-      "effect": "Nieve and Duradel will be able to assign Aquanites as your task.",
-      "requirements": [
-        "73 Sailing (Slayer_task Aquanites row); 78 Slayer (first column)"
-      ],
-      "affectsTasks": [
-        "Aquanites"
-      ],
-      "repeatable": false,
-      "priority": 4,
-      "audience": [
-        "situational"
-      ],
-      "rationale": "Inference: adds a task type; no wiki ranking. 'Task must be unlocked with Slayer reward points to be assigned by Nieve and Duradel.'",
-      "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Unlock table row 'Lured In | 80 | No'; Slayer_task.wikitext Aquanites row"
-    },
-    {
-      "id": "wings_spread",
-      "name": "Wings Spread",
-      "tab": "Unlock",
-      "category": "unlock",
-      "cost": 80,
-      "toggle": "one-off purchase, but must be paid again to reactivate once disabled",
-      "effect": "Nieve and Duradel will be able to assign Gryphons as your task.",
-      "requirements": [
-        "Troubled Tortugans (wiki note 'After completion of Troubled Tortugans'); 50 Combat; 51 Slayer (Slayer_task Gryphons row)"
-      ],
-      "affectsTasks": [
-        "Gryphons"
-      ],
-      "repeatable": false,
-      "priority": 4,
-      "audience": [
-        "situational"
-      ],
-      "rationale": "Inference: adds a task type; no wiki ranking.",
-      "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Unlock table row 'Wings Spread | 80 | No'; Slayer_task.wikitext Gryphons row"
-    },
-    {
-      "id": "chance_of_heavy_frost",
-      "name": "Chance of Heavy Frost",
-      "tab": "Unlock",
-      "category": "unlock",
-      "cost": 100,
-      "toggle": "one-off purchase, but must be paid again to reactivate once disabled",
-      "effect": "Weighting increased from 5 to 8 for Frost dragon tasks from Nieve and Duradel.",
-      "requirements": [
-        "85 Combat; 87 Sailing (Slayer_task Frost dragon row)"
-      ],
-      "affectsTasks": [
-        "Frost dragons"
-      ],
-      "repeatable": false,
-      "priority": 5,
-      "audience": [
-        "situational"
-      ],
-      "rationale": "Inference: only increases the frequency of an already-available task; no wiki ranking. Added 17 June 2026.",
-      "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Unlock table row 'Chance of Heavy Frost | 100 | No' and 17 June 2026 change; Slayer_task.wikitext Frost dragon row"
-    },
-    {
-      "id": "need_more_darkness",
-      "name": "Need More Darkness",
-      "tab": "Extend",
-      "category": "extend",
-      "cost": 100,
-      "toggle": "one-off purchase, but must be paid again to reactivate once disabled",
-      "effect": "Number of dark beasts assigned is increased to 110-135.",
-      "requirements": [
-        "Must be able to receive the task"
-      ],
-      "affectsTasks": [
-        "Dark beasts"
-      ],
-      "repeatable": false,
-      "priority": 3,
-      "audience": [
-        "task-extenders"
-      ],
-      "rationale": "Inference: the wiki ranks no extensions; extending works 'across all slayer masters that can assign it regardless of the quantity they can originally assign' and the bulk button gives 'a 5% discount'. Priority reflects my judgement that this task is less commonly extended; no wiki text supports the ordering.",
-      "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Extend table row 'Need More Darkness | 100 | No'"
-    },
-    {
-      "id": "ankou_very_much",
-      "name": "Ankou Very Much",
-      "tab": "Extend",
-      "category": "extend",
-      "cost": 100,
-      "toggle": "one-off purchase, but must be paid again to reactivate once disabled",
-      "effect": "Number of ankou assigned is increased to 91-150.",
-      "requirements": [
-        "Must be able to receive the task"
-      ],
-      "affectsTasks": [
-        "Ankou"
-      ],
-      "repeatable": false,
-      "priority": 4,
-      "audience": [
-        "task-extenders"
-      ],
-      "rationale": "Inference: the wiki ranks no extensions; extending works 'across all slayer masters that can assign it regardless of the quantity they can originally assign' and the bulk button gives 'a 5% discount'. Priority reflects my judgement that this task is less commonly extended; no wiki text supports the ordering.",
-      "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Extend table row 'Ankou Very Much | 100 | No'"
-    },
-    {
-      "id": "suq_a_nother_one",
-      "name": "Suq-a-nother One",
-      "tab": "Extend",
-      "category": "extend",
-      "cost": 100,
-      "toggle": "one-off purchase, but must be paid again to reactivate once disabled",
-      "effect": "Number of suqahs assigned is increased to 186-250.",
-      "requirements": [
-        "Must be able to receive the task"
-      ],
-      "affectsTasks": [
-        "Suqahs"
-      ],
-      "repeatable": false,
-      "priority": 4,
-      "audience": [
-        "task-extenders"
-      ],
-      "rationale": "Inference: the wiki ranks no extensions; extending works 'across all slayer masters that can assign it regardless of the quantity they can originally assign' and the bulk button gives 'a 5% discount'. Priority reflects my judgement that this task is less commonly extended; no wiki text supports the ordering.",
-      "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Extend table row 'Suq-a-nother One | 100 | No'"
-    },
-    {
-      "id": "fire_darkness",
-      "name": "Fire & Darkness",
-      "tab": "Extend",
-      "category": "extend",
-      "cost": 50,
-      "toggle": "one-off purchase, but must be paid again to reactivate once disabled",
-      "effect": "Number of black dragons assigned is increased to 40-60.",
-      "requirements": [
-        "Must be able to receive the task"
-      ],
-      "affectsTasks": [
-        "Black dragons"
-      ],
-      "repeatable": false,
-      "priority": 5,
-      "audience": [
-        "task-extenders"
-      ],
-      "rationale": "Inference: the wiki ranks no extensions; extending works 'across all slayer masters that can assign it regardless of the quantity they can originally assign' and the bulk button gives 'a 5% discount'. Priority reflects my judgement that this task is less commonly extended; no wiki text supports the ordering.",
-      "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Extend table row 'Fire & Darkness | 50 | No'"
-    },
-    {
-      "id": "pedal_to_the_metals",
-      "name": "Pedal to the Metals",
-      "tab": "Extend",
-      "category": "extend",
-      "cost": 200,
-      "toggle": "one-off purchase, but must be paid again to reactivate once disabled",
-      "effect": "Number of metal dragons assigned is increased to 150-200.",
-      "requirements": [
-        "Must be able to receive the task"
-      ],
-      "affectsTasks": [
-        "Metal dragons"
-      ],
-      "repeatable": false,
-      "priority": 4,
-      "audience": [
-        "task-extenders"
-      ],
-      "rationale": "Inference: the wiki ranks no extensions; extending works 'across all slayer masters that can assign it regardless of the quantity they can originally assign' and the bulk button gives 'a 5% discount'. Priority reflects my judgement that this task is less commonly extended; no wiki text supports the ordering. Cost 'increased from 100 to 200 points, to account for all metal dragons now that they are under one task' (27 Aug 2025); amounts corrected to 150-200 (7 Jan 2026).",
-      "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Extend table row 'Pedal to the Metals | 200 | No'"
-    },
-    {
-      "id": "spiritual_fervour",
-      "name": "Spiritual Fervour",
-      "tab": "Extend",
-      "category": "extend",
-      "cost": 100,
-      "toggle": "one-off purchase, but must be paid again to reactivate once disabled",
-      "effect": "Number of spiritual creatures assigned is increased to 181-250.",
-      "requirements": [
-        "Must be able to receive the task"
-      ],
-      "affectsTasks": [
-        "Spiritual creatures"
-      ],
-      "repeatable": false,
-      "priority": 4,
-      "audience": [
-        "task-extenders"
-      ],
-      "rationale": "Inference: the wiki ranks no extensions; extending works 'across all slayer masters that can assign it regardless of the quantity they can originally assign' and the bulk button gives 'a 5% discount'. Priority reflects my judgement that this task is less commonly extended; no wiki text supports the ordering.",
-      "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Extend table row 'Spiritual Fervour | 100 | No'"
-    },
-    {
-      "id": "augment_my_abbies",
-      "name": "Augment my Abbies",
-      "tab": "Extend",
-      "category": "extend",
-      "cost": 100,
-      "toggle": "one-off purchase, but must be paid again to reactivate once disabled",
-      "effect": "Number of abyssal demons assigned is increased to 200-250.",
-      "requirements": [
-        "Must be able to receive the task"
-      ],
-      "affectsTasks": [
-        "Abyssal demons"
-      ],
-      "repeatable": false,
-      "priority": 2,
-      "audience": [
-        "task-extenders",
-        "xp-focused"
-      ],
-      "rationale": "Inference: the wiki ranks no extensions; extending works 'across all slayer masters that can assign it regardless of the quantity they can originally assign' and the bulk button gives 'a 5% discount'. Priority 2 is my inference that this is a commonly-kept high-XP task type; no wiki text supports the ordering.",
-      "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Extend table row 'Augment my Abbies | 100 | No'"
-    },
-    {
-      "id": "it_s_dark_in_here",
-      "name": "It's Dark in Here",
-      "tab": "Extend",
-      "category": "extend",
-      "cost": 100,
-      "toggle": "one-off purchase, but must be paid again to reactivate once disabled",
-      "effect": "Number of black demons assigned is increased to 200-250.",
-      "requirements": [
-        "Must be able to receive the task"
-      ],
-      "affectsTasks": [
-        "Black demons"
-      ],
-      "repeatable": false,
-      "priority": 3,
-      "audience": [
-        "task-extenders"
-      ],
-      "rationale": "Inference: the wiki ranks no extensions; extending works 'across all slayer masters that can assign it regardless of the quantity they can originally assign' and the bulk button gives 'a 5% discount'. Priority reflects my judgement that this task is less commonly extended; no wiki text supports the ordering.",
-      "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Extend table row 'It's Dark in Here | 100 | No'"
-    },
-    {
-      "id": "greater_challenge",
-      "name": "Greater Challenge",
-      "tab": "Extend",
-      "category": "extend",
-      "cost": 100,
-      "toggle": "one-off purchase, but must be paid again to reactivate once disabled",
-      "effect": "Number of greater demons assigned is increased to 200-250.",
-      "requirements": [
-        "Must be able to receive the task"
-      ],
-      "affectsTasks": [
-        "Greater demons"
-      ],
-      "repeatable": false,
-      "priority": 3,
-      "audience": [
-        "task-extenders"
-      ],
-      "rationale": "Inference: the wiki ranks no extensions; extending works 'across all slayer masters that can assign it regardless of the quantity they can originally assign' and the bulk button gives 'a 5% discount'. Priority reflects my judgement that this task is less commonly extended; no wiki text supports the ordering.",
-      "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Extend table row 'Greater Challenge | 100 | No'"
-    },
-    {
-      "id": "bleed_me_dry",
-      "name": "Bleed Me Dry",
-      "tab": "Extend",
-      "category": "extend",
-      "cost": 75,
-      "toggle": "one-off purchase, but must be paid again to reactivate once disabled",
-      "effect": "Number of bloodveld assigned is increased to 200-250.",
-      "requirements": [
-        "Must be able to receive the task"
-      ],
-      "affectsTasks": [
-        "Bloodveld"
-      ],
-      "repeatable": false,
-      "priority": 2,
-      "audience": [
-        "task-extenders",
-        "xp-focused"
-      ],
-      "rationale": "Inference: the wiki ranks no extensions; extending works 'across all slayer masters that can assign it regardless of the quantity they can originally assign' and the bulk button gives 'a 5% discount'. Priority 2 is my inference that this is a commonly-kept high-XP task type; no wiki text supports the ordering.",
-      "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Extend table row 'Bleed Me Dry | 75 | No'"
-    },
-    {
-      "id": "smell_ya_later",
-      "name": "Smell Ya Later",
-      "tab": "Extend",
-      "category": "extend",
-      "cost": 100,
-      "toggle": "one-off purchase, but must be paid again to reactivate once disabled",
-      "effect": "Number of aberrant spectres assigned is increased to 200-250.",
-      "requirements": [
-        "Must be able to receive the task"
-      ],
-      "affectsTasks": [
-        "Aberrant spectres"
-      ],
-      "repeatable": false,
-      "priority": 3,
-      "audience": [
-        "task-extenders"
-      ],
-      "rationale": "Inference: the wiki ranks no extensions; extending works 'across all slayer masters that can assign it regardless of the quantity they can originally assign' and the bulk button gives 'a 5% discount'. Priority reflects my judgement that this task is less commonly extended; no wiki text supports the ordering.",
-      "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Extend table row 'Smell Ya Later | 100 | No'"
-    },
-    {
-      "id": "birds_of_a_feather",
-      "name": "Birds of a Feather",
-      "tab": "Extend",
-      "category": "extend",
-      "cost": 100,
-      "toggle": "one-off purchase, but must be paid again to reactivate once disabled",
-      "effect": "Number of aviansie assigned is increased to 200-250.",
-      "requirements": [
-        "Must be able to receive the task"
-      ],
-      "affectsTasks": [
-        "Aviansies"
-      ],
-      "repeatable": false,
-      "priority": 4,
-      "audience": [
-        "task-extenders"
-      ],
-      "rationale": "Inference: the wiki ranks no extensions; extending works 'across all slayer masters that can assign it regardless of the quantity they can originally assign' and the bulk button gives 'a 5% discount'. Priority reflects my judgement that this task is less commonly extended; no wiki text supports the ordering.",
-      "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Extend table row 'Birds of a Feather | 100 | No'"
-    },
-    {
-      "id": "horrorific",
-      "name": "Horrorific",
-      "tab": "Extend",
-      "category": "extend",
-      "cost": 100,
-      "toggle": "one-off purchase, but must be paid again to reactivate once disabled",
-      "effect": "Number of cave horrors assigned is increased to 200-250.",
-      "requirements": [
-        "Must be able to receive the task"
-      ],
-      "affectsTasks": [
-        "Cave horrors"
-      ],
-      "repeatable": false,
-      "priority": 4,
-      "audience": [
-        "task-extenders"
-      ],
-      "rationale": "Inference: the wiki ranks no extensions; extending works 'across all slayer masters that can assign it regardless of the quantity they can originally assign' and the bulk button gives 'a 5% discount'. Priority reflects my judgement that this task is less commonly extended; no wiki text supports the ordering.",
-      "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Extend table row 'Horrorific | 100 | No'"
-    },
-    {
-      "id": "to_dust_you_shall_return",
-      "name": "To Dust You Shall Return",
-      "tab": "Extend",
-      "category": "extend",
-      "cost": 100,
-      "toggle": "one-off purchase, but must be paid again to reactivate once disabled",
-      "effect": "Number of dust devils assigned is increased to 200-250.",
-      "requirements": [
-        "Must be able to receive the task"
-      ],
-      "affectsTasks": [
-        "Dust devils"
-      ],
-      "repeatable": false,
-      "priority": 2,
-      "audience": [
-        "task-extenders",
-        "xp-focused"
-      ],
-      "rationale": "Inference: the wiki ranks no extensions; extending works 'across all slayer masters that can assign it regardless of the quantity they can originally assign' and the bulk button gives 'a 5% discount'. Priority 2 is my inference that this is a commonly-kept high-XP task type; no wiki text supports the ordering.",
-      "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Extend table row 'To Dust You Shall Return | 100 | No'"
-    },
-    {
-      "id": "wyver_nother_one",
-      "name": "Wyver-nother One",
-      "tab": "Extend",
-      "category": "extend",
-      "cost": 100,
-      "toggle": "one-off purchase, but must be paid again to reactivate once disabled",
-      "effect": "Number of Skeletal Wyverns assigned is increased to 50-75.",
-      "requirements": [
-        "Must be able to receive the task"
-      ],
-      "affectsTasks": [
-        "Skeletal wyverns"
-      ],
-      "repeatable": false,
-      "priority": 5,
-      "audience": [
-        "task-extenders"
-      ],
-      "rationale": "Inference: the wiki ranks no extensions; extending works 'across all slayer masters that can assign it regardless of the quantity they can originally assign' and the bulk button gives 'a 5% discount'. Priority reflects my judgement that this task is less commonly extended; no wiki text supports the ordering.",
-      "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Extend table row 'Wyver-nother One | 100 | No'"
-    },
-    {
-      "id": "get_smashed",
-      "name": "Get Smashed",
-      "tab": "Extend",
-      "category": "extend",
-      "cost": 100,
-      "toggle": "one-off purchase, but must be paid again to reactivate once disabled",
-      "effect": "Number of gargoyles assigned is increased to 200-250.",
-      "requirements": [
-        "Must be able to receive the task"
-      ],
-      "affectsTasks": [
-        "Gargoyles"
-      ],
-      "repeatable": false,
-      "priority": 2,
-      "audience": [
-        "task-extenders",
-        "xp-focused"
-      ],
-      "rationale": "Inference: the wiki ranks no extensions; extending works 'across all slayer masters that can assign it regardless of the quantity they can originally assign' and the bulk button gives 'a 5% discount'. Priority 2 is my inference that this is a commonly-kept high-XP task type; no wiki text supports the ordering.",
-      "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Extend table row 'Get Smashed | 100 | No'"
-    },
-    {
-      "id": "nechs_please",
-      "name": "Nechs Please",
-      "tab": "Extend",
-      "category": "extend",
-      "cost": 100,
-      "toggle": "one-off purchase, but must be paid again to reactivate once disabled",
-      "effect": "Number of nechryael assigned is increased to 200-250.",
-      "requirements": [
-        "Must be able to receive the task"
-      ],
-      "affectsTasks": [
-        "Nechryael"
-      ],
-      "repeatable": false,
-      "priority": 2,
-      "audience": [
-        "task-extenders",
-        "xp-focused"
-      ],
-      "rationale": "Inference: the wiki ranks no extensions; extending works 'across all slayer masters that can assign it regardless of the quantity they can originally assign' and the bulk button gives 'a 5% discount'. Priority 2 is my inference that this is a commonly-kept high-XP task type; no wiki text supports the ordering.",
-      "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Extend table row 'Nechs Please | 100 | No'"
-    },
-    {
-      "id": "krack_on",
-      "name": "Krack On",
-      "tab": "Extend",
-      "category": "extend",
-      "cost": 100,
-      "toggle": "one-off purchase, but must be paid again to reactivate once disabled",
-      "effect": "Number of cave kraken assigned is increased to 150-200.",
-      "requirements": [
-        "Must be able to receive the task"
-      ],
-      "affectsTasks": [
-        "Cave kraken"
-      ],
-      "repeatable": false,
-      "priority": 3,
-      "audience": [
-        "task-extenders"
-      ],
-      "rationale": "Inference: the wiki ranks no extensions; extending works 'across all slayer masters that can assign it regardless of the quantity they can originally assign' and the bulk button gives 'a 5% discount'. Priority reflects my judgement that this task is less commonly extended; no wiki text supports the ordering.",
-      "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Extend table row 'Krack On | 100 | No'"
-    },
-    {
-      "id": "get_scabaright_on_it",
-      "name": "Get Scabaright on It",
-      "tab": "Extend",
-      "category": "extend",
-      "cost": 50,
-      "toggle": "one-off purchase, but must be paid again to reactivate once disabled",
-      "effect": "Number of scabarites assigned is increased to 130-170.",
-      "requirements": [
-        "Must be able to receive the task"
-      ],
-      "affectsTasks": [
-        "Scabarites"
-      ],
-      "repeatable": false,
-      "priority": 5,
-      "audience": [
-        "task-extenders"
-      ],
-      "rationale": "Inference: the wiki ranks no extensions; extending works 'across all slayer masters that can assign it regardless of the quantity they can originally assign' and the bulk button gives 'a 5% discount'. Priority reflects my judgement that this task is less commonly extended; no wiki text supports the ordering.",
-      "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Extend table row 'Get Scabaright on It | 50 | No'"
-    },
-    {
-      "id": "wyver_nother_two",
-      "name": "Wyver-nother Two",
-      "tab": "Extend",
-      "category": "extend",
-      "cost": 100,
-      "toggle": "one-off purchase, but must be paid again to reactivate once disabled",
-      "effect": "Number of Fossil Island Wyverns assigned is increased to 55-75.",
-      "requirements": [
-        "Must be able to receive the task"
-      ],
-      "affectsTasks": [
-        "Fossil island wyverns"
-      ],
-      "repeatable": false,
-      "priority": 5,
-      "audience": [
-        "task-extenders"
-      ],
-      "rationale": "Inference: the wiki ranks no extensions; extending works 'across all slayer masters that can assign it regardless of the quantity they can originally assign' and the bulk button gives 'a 5% discount'. Priority reflects my judgement that this task is less commonly extended; no wiki text supports the ordering.",
-      "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Extend table row 'Wyver-nother Two | 100 | No'"
-    },
-    {
-      "id": "basilonger",
-      "name": "Basilonger",
-      "tab": "Extend",
-      "category": "extend",
-      "cost": 100,
-      "toggle": "one-off purchase, but must be paid again to reactivate once disabled",
-      "effect": "Number of basilisks assigned is increased to 200-250.",
-      "requirements": [
-        "Must be able to receive the task"
-      ],
-      "affectsTasks": [
-        "Basilisks"
-      ],
-      "repeatable": false,
-      "priority": 3,
-      "audience": [
-        "task-extenders"
-      ],
-      "rationale": "Inference: the wiki ranks no extensions; extending works 'across all slayer masters that can assign it regardless of the quantity they can originally assign' and the bulk button gives 'a 5% discount'. Priority reflects my judgement that this task is less commonly extended; no wiki text supports the ordering.",
-      "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Extend table row 'Basilonger | 100 | No'"
-    },
-    {
-      "id": "more_at_stake",
-      "name": "More at Stake",
-      "tab": "Extend",
-      "category": "extend",
-      "cost": 100,
-      "toggle": "one-off purchase, but must be paid again to reactivate once disabled",
-      "effect": "Number of vampyres assigned is increased to 200-250.",
-      "requirements": [
-        "Must be able to receive the task"
-      ],
-      "affectsTasks": [
-        "Vampyres"
-      ],
-      "repeatable": false,
-      "priority": 4,
-      "audience": [
-        "task-extenders"
-      ],
-      "rationale": "Inference: the wiki ranks no extensions; extending works 'across all slayer masters that can assign it regardless of the quantity they can originally assign' and the bulk button gives 'a 5% discount'. Priority reflects my judgement that this task is less commonly extended; no wiki text supports the ordering.",
-      "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Extend table row 'More at Stake | 100 | No'"
-    },
-    {
-      "id": "revenenenenenants",
-      "name": "Revenenenenenants",
-      "tab": "Extend",
-      "category": "extend",
-      "cost": 100,
-      "toggle": "free toggle (one-off purchase; can be switched off/on without repaying)",
-      "effect": "Number of revenants assigned is increased to 100-150.",
-      "requirements": [
-        "Must be able to receive the task"
-      ],
-      "affectsTasks": [
-        "Revenants"
-      ],
-      "repeatable": false,
-      "priority": 3,
-      "audience": [
-        "wilderness slayers",
-        "task-extenders",
-        "ironman"
-      ],
-      "rationale": "Inference: the only free-toggle extension ('Yes'); the Slayer_reward_point page notes Ironmen use Krystilia 'looking for Revenant tasks to receive a wilderness weapon', which longer revenant tasks help. Amount 'up from 40 to 100' (12 Apr 2023 change).",
-      "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Extend table row 'Revenenenenenants | 100 | Yes'"
-    },
-    {
-      "id": "more_eyes_than_sense",
-      "name": "More eyes than sense",
-      "tab": "Extend",
-      "category": "extend",
-      "cost": 150,
-      "toggle": "one-off purchase, but must be paid again to reactivate once disabled",
-      "effect": "Number of araxytes assigned is increased to 200-250.",
-      "requirements": [
-        "Must be able to receive the task"
-      ],
-      "affectsTasks": [
-        "Araxytes"
-      ],
-      "repeatable": false,
-      "priority": 3,
-      "audience": [
-        "task-extenders"
-      ],
-      "rationale": "Inference: the wiki ranks no extensions; extending works 'across all slayer masters that can assign it regardless of the quantity they can originally assign' and the bulk button gives 'a 5% discount'. Priority reflects my judgement that this task is less commonly extended; no wiki text supports the ordering.",
-      "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Extend table row 'More eyes than sense | 150 | No'"
-    },
-    {
-      "id": "un_restraining_order",
-      "name": "Un-restraining Order",
-      "tab": "Extend",
-      "category": "extend",
-      "cost": 100,
-      "toggle": "one-off purchase, but must be paid again to reactivate once disabled",
-      "effect": "Number of custodian stalkers assigned is increased to 200-250.",
-      "requirements": [
-        "Must be able to receive the task"
-      ],
-      "affectsTasks": [
-        "Custodian Stalkers"
-      ],
-      "repeatable": false,
-      "priority": 4,
-      "audience": [
-        "task-extenders"
-      ],
-      "rationale": "Inference: the wiki ranks no extensions; extending works 'across all slayer masters that can assign it regardless of the quantity they can originally assign' and the bulk button gives 'a 5% discount'. Priority reflects my judgement that this task is less commonly extended; no wiki text supports the ordering.",
-      "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Extend table row 'Un-restraining Order | 100 | No'"
-    },
-    {
-      "id": "let_s_stay_all_aquanite",
-      "name": "Let's Stay All Aquanite",
-      "tab": "Extend",
-      "category": "extend",
-      "cost": 100,
-      "toggle": "one-off purchase, but must be paid again to reactivate once disabled",
-      "effect": "Number of aquanites assigned is increased to 150-200.",
-      "requirements": [
-        "Must be able to receive the task"
-      ],
-      "affectsTasks": [
-        "Aquanites"
-      ],
-      "repeatable": false,
-      "priority": 4,
-      "audience": [
-        "task-extenders"
-      ],
-      "rationale": "Inference: the wiki ranks no extensions; extending works 'across all slayer masters that can assign it regardless of the quantity they can originally assign' and the bulk button gives 'a 5% discount'. Priority reflects my judgement that this task is less commonly extended; no wiki text supports the ordering.",
-      "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Extend table row 'Let's Stay All Aquanite | 100 | No'"
-    },
-    {
-      "id": "can_of_wyrms",
-      "name": "Can of Wyrms",
-      "tab": "Extend",
-      "category": "extend",
-      "cost": 100,
-      "toggle": "one-off purchase, but must be paid again to reactivate once disabled",
-      "effect": "Number of wyrms assigned is increased to 200-250.",
-      "requirements": [
-        "Must be able to receive the task"
-      ],
-      "affectsTasks": [
-        "Wyrms"
-      ],
-      "repeatable": false,
-      "priority": 3,
-      "audience": [
-        "task-extenders"
-      ],
-      "rationale": "Inference: the wiki ranks no extensions; extending works 'across all slayer masters that can assign it regardless of the quantity they can originally assign' and the bulk button gives 'a 5% discount'. Priority reflects my judgement that this task is less commonly extended; no wiki text supports the ordering.",
-      "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Extend table row 'Can of Wyrms | 100 | No'"
-    },
-    {
-      "id": "gryphon_and_on",
-      "name": "Gryphon and on",
-      "tab": "Extend",
-      "category": "extend",
-      "cost": 50,
-      "toggle": "one-off purchase, but must be paid again to reactivate once disabled",
-      "effect": "Number of gryphons assigned is increased by 80.",
-      "requirements": [
-        "Must be able to receive the task"
-      ],
-      "affectsTasks": [
-        "Gryphons"
-      ],
-      "repeatable": false,
-      "priority": 4,
-      "audience": [
-        "task-extenders"
-      ],
-      "rationale": "Inference: the wiki ranks no extensions; extending works 'across all slayer masters that can assign it regardless of the quantity they can originally assign' and the bulk button gives 'a 5% discount'. Priority reflects my judgement that this task is less commonly extended; no wiki text supports the ordering.",
-      "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Extend table row 'Gryphon and on | 50 | No'"
-    },
-    {
-      "id": "i_see_dragons",
-      "name": "I see Dragons",
-      "tab": "Extend",
-      "category": "extend",
-      "cost": 100,
-      "toggle": "one-off purchase, but must be paid again to reactivate once disabled",
-      "effect": "Number of frost dragons assigned is increased to 180-240.",
-      "requirements": [
-        "Must be able to receive the task"
-      ],
-      "affectsTasks": [
-        "Frost dragons"
-      ],
-      "repeatable": false,
-      "priority": 4,
-      "audience": [
-        "task-extenders"
-      ],
-      "rationale": "Inference: the wiki ranks no extensions; extending works 'across all slayer masters that can assign it regardless of the quantity they can originally assign' and the bulk button gives 'a 5% discount'. Priority reflects my judgement that this task is less commonly extended; no wiki text supports the ordering.",
-      "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Extend table row 'I see Dragons | 100 | No'"
-    },
-    {
-      "id": "slayer_ring_8",
-      "name": "Slayer ring (8)",
-      "tab": "Buy",
-      "category": "buy",
-      "cost": 75,
-      "toggle": "n/a (item purchase)",
-      "effect": "An equippable ring that provides all the functions of an Enchanted gem, and provides 8 charges for teleporting to useful Slayer sites.",
-      "requirements": [
-        "None"
-      ],
-      "affectsTasks": [
-        "(all tasks)"
-      ],
-      "repeatable": true,
-      "priority": 3,
-      "audience": [
-        "everyone",
-        "ironman"
-      ],
-      "rationale": "Inference: convenience teleports; players with Ring Bling (75 Crafting) can craft instead of buying.",
-      "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Buy table StoreLine 'Slayer ring (8)' sell=75"
-    },
-    {
-      "id": "broad_bolts_x250",
-      "name": "Broad bolts (x250)",
-      "tab": "Buy",
-      "category": "buy",
-      "cost": 35,
-      "toggle": "n/a (item purchase)",
-      "effect": "Bolts that can damage Turoths and Kurask. Level 55 Slayer and 61 Ranged, alongside a suitable crossbow, are required to fire these bolts.",
-      "requirements": [
-        "55 Slayer",
-        "61 Ranged",
-        "suitable crossbow"
-      ],
-      "affectsTasks": [
-        "Turoth",
-        "Kurask"
-      ],
-      "repeatable": true,
-      "priority": 4,
-      "audience": [
-        "ranged slayers",
-        "ironman"
-      ],
-      "rationale": "Inference: only needed for ranged Turoth/Kurask tasks.",
-      "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Buy table StoreLine 'Broad bolts (x250)' sell=35"
-    },
-    {
-      "id": "broad_arrows_x250",
-      "name": "Broad arrows (x250)",
-      "tab": "Buy",
-      "category": "buy",
-      "cost": 35,
-      "toggle": "n/a (item purchase)",
-      "effect": "Arrows that can damage Turoths and Kurask. Level 55 Slayer and 50 Ranged, alongside a suitable bow, are required to fire these arrows.",
-      "requirements": [
-        "55 Slayer",
-        "50 Ranged",
-        "suitable bow"
-      ],
-      "affectsTasks": [
-        "Turoth",
-        "Kurask"
-      ],
-      "repeatable": true,
-      "priority": 4,
-      "audience": [
-        "ranged slayers",
-        "ironman"
-      ],
-      "rationale": "Inference: only needed for ranged Turoth/Kurask tasks.",
-      "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Buy table StoreLine 'Broad arrows (x250)' sell=35"
-    },
-    {
-      "id": "herb_sack",
-      "name": "Herb sack",
-      "tab": "Buy",
-      "category": "buy",
-      "cost": 750,
-      "toggle": "n/a (item purchase)",
-      "effect": "Stores up to 30 of each type of grimy herb (for a total of 450 herbs). Level 58 Herblore is required to use it.",
-      "requirements": [
-        "58 Herblore to use"
-      ],
-      "affectsTasks": [
-        "(all tasks)"
-      ],
-      "repeatable": true,
-      "priority": 2,
-      "audience": [
-        "ironman",
-        "everyone"
-      ],
-      "rationale": "Inference: quality-of-life for herb drops on long tasks; the wiki gives no ranking.",
-      "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Buy table StoreLine 'Herb sack' sell=750"
-    },
-    {
-      "id": "rune_pouch",
-      "name": "Rune pouch",
-      "tab": "Buy",
-      "category": "buy",
-      "cost": 750,
-      "toggle": "n/a (item purchase)",
-      "effect": "Stores up to 16,000 of three types of runes. Only one can be owned. Can also be obtained by exchanging a rune pouch note at a bank.",
-      "requirements": [
-        "None"
-      ],
-      "affectsTasks": [
-        "(all tasks)"
-      ],
-      "repeatable": true,
-      "priority": 2,
-      "audience": [
-        "everyone",
-        "ironman"
-      ],
-      "rationale": "Inference: one-time inventory-saving purchase for mages; note the alternative source 'exchanging a rune pouch note at a bank'. Cost 'reduced from 1,250 to 750' (7 Nov 2019).",
-      "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Buy table StoreLine 'Rune pouch' sell=750"
-    },
-    {
-      "id": "looting_bag",
-      "name": "Looting bag",
-      "tab": "Buy",
-      "category": "buy",
-      "cost": 10,
-      "toggle": "n/a (item purchase)",
-      "effect": "Within the Wilderness and certain other PvP areas, tradeable items can be stored in the looting bag, enabling you to carry more loot.",
-      "requirements": [
-        "None"
-      ],
-      "affectsTasks": [
-        "(all tasks)"
-      ],
-      "repeatable": true,
-      "priority": 3,
-      "audience": [
-        "wilderness slayers"
-      ],
-      "rationale": "Inference: cheap and useful only for Wilderness (Krystilia) tasks; added 3 May 2023.",
-      "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Buy table StoreLine 'Looting bag' sell=10"
-    },
-    {
-      "id": "cancel_task",
-      "name": "Cancel task",
-      "tab": "Tasks",
-      "category": "block",
-      "cost": "30-100 (30 at all masters; 100 at Mortimer)",
-      "toggle": "n/a (per action)",
-      "effect": "Cancels the player's current assignment without penalties.",
-      "requirements": [
-        "None"
-      ],
-      "affectsTasks": [
-        "(current task)"
-      ],
-      "repeatable": true,
-      "priority": 3,
-      "audience": [
-        "everyone"
-      ],
-      "rationale": "Wiki: 'players may cancel a task by spending 30 points' (Slayer page); Mortimer: 'skipping a task from Mortimer is significantly more expensive, costing 100 slayer points rather than the usual 30'. The Boss page adds that many 'consider the 30 Slayer point cost to be high' for boss tasks.",
-      "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Tasks table 'Cancel task | 30-100'; Slayer.wikitext line 908; Mortimer.wikitext line 21",
-      "costByMaster": {
-        "Turael/Aya": 30,
-        "Spria": 30,
-        "Mazchna/Achtryn": 30,
-        "Vannaka": 30,
-        "Chaeldar": 30,
-        "Konar quo Maten": 30,
-        "Nieve/Steve": 30,
-        "Duradel/Kuradal": 30,
-        "Krystilia": 30,
-        "Mortimer": 100
-      },
-      "costNote": "Per-master 30 is inferred from 'the usual 30' (Mortimer page) plus the 30-100 range; the Slayer Rewards page itself only gives the range."
-    },
-    {
-      "id": "block_task",
-      "name": "Block task",
-      "tab": "Tasks",
-      "category": "block",
-      "cost": "40-120 (varies by master)",
-      "toggle": "n/a (per action; unblocking is free but does not refund)",
-      "effect": "Skips the player's current assignment without penalties and permanently removes the assignment from that master's list of possible assignments until unblocked.",
-      "requirements": [
-        "Block slots: one per 50 quest points, max 7 total incl. the Elite Lumbridge & Draynor Diary slot; Mortimer has 2 slots"
-      ],
-      "affectsTasks": [
-        "(any task the selected master assigns)"
-      ],
-      "repeatable": true,
-      "priority": 2,
-      "audience": [
-        "everyone",
-        "point-boosting"
-      ],
-      "rationale": "Wiki-supported: 'When boosting with Turael or Mazchna, the player should seek to block tasks that are slow or tedious' (Slayer_reward_point) and 'Cancelling the removal of monsters allows the monster to be assigned again, but does not refund points'. Each master has its own list: 'Shared block lists only apply to Turael, Aya and Spria, with all other masters having unique block lists.'",
-      "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Tasks table 'Block task | 40-120' and 27 Aug 2025 change list; Mortimer.wikitext line 21; Slayer_reward_point.wikitext '==Point boosting=='",
-      "costByMaster": {
-        "Turael/Aya": 40,
-        "Spria": 40,
-        "Mazchna/Achtryn": 50,
-        "Vannaka": 60,
-        "Chaeldar": 70,
-        "Konar quo Maten": 80,
-        "Nieve/Steve": 90,
-        "Duradel/Kuradal": 100,
-        "Krystilia": 100,
-        "Mortimer": 120
-      },
-      "blockSlots": "'There is a maximum limit of 7 types of assignments that can be blocked on one account - one block slot is given for every 50 quest points the player has. For most slayer masters - with Mortimer being the exception - there are six slots for a total of 300 points needed to use all of them. Additionally, one block slot is available once the player has completed the Elite tier of the Lumbridge & Draynor Diary, which requires a quest cape. In Mortimer's case, there are two block slots available.'"
-    },
-    {
-      "id": "store_task",
-      "name": "Store task",
-      "tab": "Tasks",
-      "category": "block",
-      "cost": 0,
-      "toggle": "n/a (per action; requires Task Storage unlock)",
-      "effect": "With Task Storage unlocked, you may store your current Slayer task for free to use at a later date; a task may not be stored if you already have an existing stored task.",
-      "requirements": [
-        "Task Storage unlock (500 points)"
-      ],
-      "affectsTasks": [
-        "(current task)"
-      ],
-      "repeatable": true,
-      "priority": 2,
-      "audience": [
-        "everyone",
-        "point-boosting"
-      ],
-      "rationale": "Wiki-supported: free since 8 May 2024 ('Storing tasks with the Task Storage unlock is now free. Previously, it cost 50 Slayer reward points per task stored.'). Note: 'Blocking a task that is currently in Task Storage does not also skip it.'",
-      "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Tasks table 'Store task | 0' and note 'storage'"
-    },
-    {
-      "id": "unstore_swap_task",
-      "name": "Unstore/Swap task",
-      "tab": "Tasks",
-      "category": "block",
-      "cost": 0,
-      "toggle": "n/a (per action; requires Task Storage unlock)",
-      "effect": "If you have a stored task, it can be unstored (if the player has no current active task) or swapped with their current task for free.",
-      "requirements": [
-        "Task Storage unlock (500 points)"
-      ],
-      "affectsTasks": [
-        "(stored task)"
-      ],
-      "repeatable": true,
-      "priority": 2,
-      "audience": [
-        "everyone",
-        "point-boosting"
-      ],
-      "rationale": "Wiki-supported: 'Players can now unstore their stored task without needing to complete or cancel their current one' (15 May 2024).",
-      "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Tasks table 'Unstore/Swap task | 0'"
-    }
+  {
+   "affectsTasks": [
+    "(cosmetic only)"
+   ],
+   "audience": [
+    "cosmetic"
+   ],
+   "category": "cosmetic",
+   "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Cosmetics table row 'Unholy Helmet | 1,000 | Permanent'",
+   "cost": 1000,
+   "effect": "Learn how to combine a Abyssal Demon head with your Slayer helmet to make it red.",
+   "id": "unholy_helmet",
+   "name": "Unholy Helmet",
+   "priority": 5,
+   "rationale": "Wiki-supported that these are cosmetic only ('Learn how to combine certain items with your Slayer helmet to upgrade it into a cosmetic variant'); the Slayer_reward_point page treats the recolours as optional ('Excluding the slayer helmet recolours reduces this to 3,580 points').",
+   "repeatable": false,
+   "requirements": [
+    "Slayer helmet (Malevolent Masquerade)",
+    "The named head/item"
+   ],
+   "tab": "Cosmetics",
+   "toggle": "permanent (cannot be disabled; one-off purchase)"
+  },
+  {
+   "affectsTasks": [
+    "(cosmetic only)"
+   ],
+   "audience": [
+    "cosmetic"
+   ],
+   "category": "cosmetic",
+   "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Cosmetics table row 'Dark Mantle | 1,000 | Permanent'",
+   "cost": 1000,
+   "effect": "Learn how to combine a Dark Claw with your Slayer helmet to make it purple.",
+   "id": "dark_mantle",
+   "name": "Dark Mantle",
+   "priority": 5,
+   "rationale": "Wiki-supported that these are cosmetic only ('Learn how to combine certain items with your Slayer helmet to upgrade it into a cosmetic variant'); the Slayer_reward_point page treats the recolours as optional ('Excluding the slayer helmet recolours reduces this to 3,580 points').",
+   "repeatable": false,
+   "requirements": [
+    "Slayer helmet (Malevolent Masquerade)",
+    "The named head/item"
+   ],
+   "tab": "Cosmetics",
+   "toggle": "permanent (cannot be disabled; one-off purchase)"
+  },
+  {
+   "affectsTasks": [
+    "(cosmetic only)"
+   ],
+   "audience": [
+    "cosmetic"
+   ],
+   "category": "cosmetic",
+   "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Cosmetics table row 'Undead Head | 1,000 | Permanent'",
+   "cost": 1000,
+   "effect": "Learn how to combine a Vorkath's head with your Slayer helmet to make it turquoise.",
+   "id": "undead_head",
+   "name": "Undead Head",
+   "priority": 5,
+   "rationale": "Wiki-supported that these are cosmetic only ('Learn how to combine certain items with your Slayer helmet to upgrade it into a cosmetic variant'); the Slayer_reward_point page treats the recolours as optional ('Excluding the slayer helmet recolours reduces this to 3,580 points').",
+   "repeatable": false,
+   "requirements": [
+    "Slayer helmet (Malevolent Masquerade)",
+    "The named head/item"
+   ],
+   "tab": "Cosmetics",
+   "toggle": "permanent (cannot be disabled; one-off purchase)"
+  },
+  {
+   "affectsTasks": [
+    "(cosmetic only)"
+   ],
+   "audience": [
+    "cosmetic"
+   ],
+   "category": "cosmetic",
+   "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Cosmetics table row 'Use More Head | 1,000 | Permanent'",
+   "cost": 1000,
+   "effect": "Learn how to combine a Hydra head with your Slayer helmet to make it Alchemical Hydra-themed.",
+   "id": "use_more_head",
+   "name": "Use More Head",
+   "priority": 5,
+   "rationale": "Wiki-supported that these are cosmetic only ('Learn how to combine certain items with your Slayer helmet to upgrade it into a cosmetic variant'); the Slayer_reward_point page treats the recolours as optional ('Excluding the slayer helmet recolours reduces this to 3,580 points').",
+   "repeatable": false,
+   "requirements": [
+    "Slayer helmet (Malevolent Masquerade)",
+    "The named head/item"
+   ],
+   "tab": "Cosmetics",
+   "toggle": "permanent (cannot be disabled; one-off purchase)"
+  },
+  {
+   "affectsTasks": [
+    "(cosmetic only)"
+   ],
+   "audience": [
+    "cosmetic"
+   ],
+   "category": "cosmetic",
+   "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Cosmetics table row 'Eye see you | 1,000 | Permanent'",
+   "cost": 1000,
+   "effect": "Learn how to combine a Araxyte head with your Slayer helmet to make it Araxxor-themed.",
+   "id": "eye_see_you",
+   "name": "Eye see you",
+   "priority": 5,
+   "rationale": "Wiki-supported that these are cosmetic only ('Learn how to combine certain items with your Slayer helmet to upgrade it into a cosmetic variant'); the Slayer_reward_point page treats the recolours as optional ('Excluding the slayer helmet recolours reduces this to 3,580 points').",
+   "repeatable": false,
+   "requirements": [
+    "Slayer helmet (Malevolent Masquerade)",
+    "The named head/item"
+   ],
+   "tab": "Cosmetics",
+   "toggle": "permanent (cannot be disabled; one-off purchase)"
+  },
+  {
+   "affectsTasks": [
+    "(cosmetic only)"
+   ],
+   "audience": [
+    "cosmetic"
+   ],
+   "category": "cosmetic",
+   "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Cosmetics table row 'Twisted Vision | 200 | Permanent'",
+   "cost": 200,
+   "effect": "Learn how to combine a Twisted Horns with your Slayer helmet to make it Great Olm-themed.",
+   "id": "twisted_vision",
+   "name": "Twisted Vision",
+   "priority": 5,
+   "rationale": "Wiki-supported that these are cosmetic only ('Learn how to combine certain items with your Slayer helmet to upgrade it into a cosmetic variant'); the Slayer_reward_point page treats the recolours as optional ('Excluding the slayer helmet recolours reduces this to 3,580 points').",
+   "repeatable": false,
+   "requirements": [
+    "Slayer helmet (Malevolent Masquerade)",
+    "The named head/item"
+   ],
+   "tab": "Cosmetics",
+   "toggle": "permanent (cannot be disabled; one-off purchase)"
+  },
+  {
+   "affectsTasks": [
+    "(cosmetic only)"
+   ],
+   "audience": [
+    "cosmetic"
+   ],
+   "category": "cosmetic",
+   "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Cosmetics table row 'Absolutely Slayin' | 1,000 | Permanent'",
+   "cost": 1000,
+   "effect": "Learn how to combine a Slayer skillcape hood (level 99 Slayer) with your Slayer helmet to make it hooded (does not work with cosmetic variants).",
+   "id": "absolutely_slayin",
+   "name": "Absolutely Slayin'",
+   "priority": 5,
+   "rationale": "Wiki-supported that these are cosmetic only ('Learn how to combine certain items with your Slayer helmet to upgrade it into a cosmetic variant'); the Slayer_reward_point page treats the recolours as optional ('Excluding the slayer helmet recolours reduces this to 3,580 points').",
+   "repeatable": false,
+   "requirements": [
+    "Slayer helmet (Malevolent Masquerade)",
+    "The named head/item",
+    "99 Slayer"
+   ],
+   "tab": "Cosmetics",
+   "toggle": "permanent (cannot be disabled; one-off purchase)"
+  },
+  {
+   "affectsTasks": [
+    "(cosmetic only)"
+   ],
+   "audience": [
+    "cosmetic"
+   ],
+   "category": "cosmetic",
+   "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Cosmetics table row 'Oath Breaker | 200 | Permanent'",
+   "cost": 200,
+   "effect": "Learn how to combine a Demonic quill with your Slayer helmet to make it Oathplate-themed.",
+   "id": "oath_breaker",
+   "name": "Oath Breaker",
+   "priority": 5,
+   "rationale": "Wiki-supported that these are cosmetic only ('Learn how to combine certain items with your Slayer helmet to upgrade it into a cosmetic variant'); the Slayer_reward_point page treats the recolours as optional ('Excluding the slayer helmet recolours reduces this to 3,580 points').",
+   "repeatable": false,
+   "requirements": [
+    "Slayer helmet (Malevolent Masquerade)",
+    "The named head/item"
+   ],
+   "tab": "Cosmetics",
+   "toggle": "permanent (cannot be disabled; one-off purchase)"
+  }
+ ],
+ "meta": {
+  "affectsTasksNaming": "Task names use the RuneLite Task enum display name (task-enum.txt column 2). Rockslugs, Mutated zygomites and Gargoyles are absent from task-enum.txt but present in runelite Task.java (ROCKSLUGS 'Rockslugs', MUTATED_ZYGOMITES 'Mutated zygomites', GARGOYLES 'Gargoyles'); those names are taken from Task.java.",
+  "generatedBy": "build_unlocks.py (research task R3)",
+  "priorityLegend": "1 = buy first ... 5 = situational/skip. The priority/audience/rationale fields are judgement; each rationale states whether it is wiki-supported or an inference.",
+  "sources": [
+   "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page)",
+   "Slayer_reward_point.wikitext",
+   "Slayer_task.wikitext",
+   "Boss.wikitext",
+   "Superior_slayer_monster.wikitext",
+   "Slayer.wikitext",
+   "Mortimer.wikitext",
+   "Slayer_helmet.wikitext"
   ],
-  "cosmetics": [
-    {
-      "id": "king_black_bonnet",
-      "name": "King Black Bonnet",
-      "tab": "Cosmetics",
-      "category": "cosmetic",
-      "cost": 1000,
-      "toggle": "permanent (cannot be disabled; one-off purchase)",
-      "effect": "Learn how to combine a KBD head with your Slayer helmet to make it black.",
-      "requirements": [
-        "Slayer helmet (Malevolent Masquerade)",
-        "The named head/item"
-      ],
-      "affectsTasks": [
-        "(cosmetic only)"
-      ],
-      "repeatable": false,
-      "priority": 5,
-      "audience": [
-        "cosmetic"
-      ],
-      "rationale": "Wiki-supported that these are cosmetic only ('Learn how to combine certain items with your Slayer helmet to upgrade it into a cosmetic variant'); the Slayer_reward_point page treats the recolours as optional ('Excluding the slayer helmet recolours reduces this to 3,580 points').",
-      "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Cosmetics table row 'King Black Bonnet | 1,000 | Permanent'"
-    },
-    {
-      "id": "kalphite_khat",
-      "name": "Kalphite Khat",
-      "tab": "Cosmetics",
-      "category": "cosmetic",
-      "cost": 1000,
-      "toggle": "permanent (cannot be disabled; one-off purchase)",
-      "effect": "Learn how to combine a Kalphite Queen head with your Slayer helmet to make it green.",
-      "requirements": [
-        "Slayer helmet (Malevolent Masquerade)",
-        "The named head/item"
-      ],
-      "affectsTasks": [
-        "(cosmetic only)"
-      ],
-      "repeatable": false,
-      "priority": 5,
-      "audience": [
-        "cosmetic"
-      ],
-      "rationale": "Wiki-supported that these are cosmetic only ('Learn how to combine certain items with your Slayer helmet to upgrade it into a cosmetic variant'); the Slayer_reward_point page treats the recolours as optional ('Excluding the slayer helmet recolours reduces this to 3,580 points').",
-      "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Cosmetics table row 'Kalphite Khat | 1,000 | Permanent'"
-    },
-    {
-      "id": "unholy_helmet",
-      "name": "Unholy Helmet",
-      "tab": "Cosmetics",
-      "category": "cosmetic",
-      "cost": 1000,
-      "toggle": "permanent (cannot be disabled; one-off purchase)",
-      "effect": "Learn how to combine a Abyssal Demon head with your Slayer helmet to make it red.",
-      "requirements": [
-        "Slayer helmet (Malevolent Masquerade)",
-        "The named head/item"
-      ],
-      "affectsTasks": [
-        "(cosmetic only)"
-      ],
-      "repeatable": false,
-      "priority": 5,
-      "audience": [
-        "cosmetic"
-      ],
-      "rationale": "Wiki-supported that these are cosmetic only ('Learn how to combine certain items with your Slayer helmet to upgrade it into a cosmetic variant'); the Slayer_reward_point page treats the recolours as optional ('Excluding the slayer helmet recolours reduces this to 3,580 points').",
-      "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Cosmetics table row 'Unholy Helmet | 1,000 | Permanent'"
-    },
-    {
-      "id": "dark_mantle",
-      "name": "Dark Mantle",
-      "tab": "Cosmetics",
-      "category": "cosmetic",
-      "cost": 1000,
-      "toggle": "permanent (cannot be disabled; one-off purchase)",
-      "effect": "Learn how to combine a Dark Claw with your Slayer helmet to make it purple.",
-      "requirements": [
-        "Slayer helmet (Malevolent Masquerade)",
-        "The named head/item"
-      ],
-      "affectsTasks": [
-        "(cosmetic only)"
-      ],
-      "repeatable": false,
-      "priority": 5,
-      "audience": [
-        "cosmetic"
-      ],
-      "rationale": "Wiki-supported that these are cosmetic only ('Learn how to combine certain items with your Slayer helmet to upgrade it into a cosmetic variant'); the Slayer_reward_point page treats the recolours as optional ('Excluding the slayer helmet recolours reduces this to 3,580 points').",
-      "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Cosmetics table row 'Dark Mantle | 1,000 | Permanent'"
-    },
-    {
-      "id": "undead_head",
-      "name": "Undead Head",
-      "tab": "Cosmetics",
-      "category": "cosmetic",
-      "cost": 1000,
-      "toggle": "permanent (cannot be disabled; one-off purchase)",
-      "effect": "Learn how to combine a Vorkath's head with your Slayer helmet to make it turquoise.",
-      "requirements": [
-        "Slayer helmet (Malevolent Masquerade)",
-        "The named head/item"
-      ],
-      "affectsTasks": [
-        "(cosmetic only)"
-      ],
-      "repeatable": false,
-      "priority": 5,
-      "audience": [
-        "cosmetic"
-      ],
-      "rationale": "Wiki-supported that these are cosmetic only ('Learn how to combine certain items with your Slayer helmet to upgrade it into a cosmetic variant'); the Slayer_reward_point page treats the recolours as optional ('Excluding the slayer helmet recolours reduces this to 3,580 points').",
-      "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Cosmetics table row 'Undead Head | 1,000 | Permanent'"
-    },
-    {
-      "id": "use_more_head",
-      "name": "Use More Head",
-      "tab": "Cosmetics",
-      "category": "cosmetic",
-      "cost": 1000,
-      "toggle": "permanent (cannot be disabled; one-off purchase)",
-      "effect": "Learn how to combine a Hydra head with your Slayer helmet to make it Alchemical Hydra-themed.",
-      "requirements": [
-        "Slayer helmet (Malevolent Masquerade)",
-        "The named head/item"
-      ],
-      "affectsTasks": [
-        "(cosmetic only)"
-      ],
-      "repeatable": false,
-      "priority": 5,
-      "audience": [
-        "cosmetic"
-      ],
-      "rationale": "Wiki-supported that these are cosmetic only ('Learn how to combine certain items with your Slayer helmet to upgrade it into a cosmetic variant'); the Slayer_reward_point page treats the recolours as optional ('Excluding the slayer helmet recolours reduces this to 3,580 points').",
-      "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Cosmetics table row 'Use More Head | 1,000 | Permanent'"
-    },
-    {
-      "id": "eye_see_you",
-      "name": "Eye see you",
-      "tab": "Cosmetics",
-      "category": "cosmetic",
-      "cost": 1000,
-      "toggle": "permanent (cannot be disabled; one-off purchase)",
-      "effect": "Learn how to combine a Araxyte head with your Slayer helmet to make it Araxxor-themed.",
-      "requirements": [
-        "Slayer helmet (Malevolent Masquerade)",
-        "The named head/item"
-      ],
-      "affectsTasks": [
-        "(cosmetic only)"
-      ],
-      "repeatable": false,
-      "priority": 5,
-      "audience": [
-        "cosmetic"
-      ],
-      "rationale": "Wiki-supported that these are cosmetic only ('Learn how to combine certain items with your Slayer helmet to upgrade it into a cosmetic variant'); the Slayer_reward_point page treats the recolours as optional ('Excluding the slayer helmet recolours reduces this to 3,580 points').",
-      "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Cosmetics table row 'Eye see you | 1,000 | Permanent'"
-    },
-    {
-      "id": "twisted_vision",
-      "name": "Twisted Vision",
-      "tab": "Cosmetics",
-      "category": "cosmetic",
-      "cost": 200,
-      "toggle": "permanent (cannot be disabled; one-off purchase)",
-      "effect": "Learn how to combine a Twisted Horns with your Slayer helmet to make it Great Olm-themed.",
-      "requirements": [
-        "Slayer helmet (Malevolent Masquerade)",
-        "The named head/item"
-      ],
-      "affectsTasks": [
-        "(cosmetic only)"
-      ],
-      "repeatable": false,
-      "priority": 5,
-      "audience": [
-        "cosmetic"
-      ],
-      "rationale": "Wiki-supported that these are cosmetic only ('Learn how to combine certain items with your Slayer helmet to upgrade it into a cosmetic variant'); the Slayer_reward_point page treats the recolours as optional ('Excluding the slayer helmet recolours reduces this to 3,580 points').",
-      "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Cosmetics table row 'Twisted Vision | 200 | Permanent'"
-    },
-    {
-      "id": "absolutely_slayin",
-      "name": "Absolutely Slayin'",
-      "tab": "Cosmetics",
-      "category": "cosmetic",
-      "cost": 1000,
-      "toggle": "permanent (cannot be disabled; one-off purchase)",
-      "effect": "Learn how to combine a Slayer skillcape hood (level 99 Slayer) with your Slayer helmet to make it hooded (does not work with cosmetic variants).",
-      "requirements": [
-        "Slayer helmet (Malevolent Masquerade)",
-        "The named head/item",
-        "99 Slayer"
-      ],
-      "affectsTasks": [
-        "(cosmetic only)"
-      ],
-      "repeatable": false,
-      "priority": 5,
-      "audience": [
-        "cosmetic"
-      ],
-      "rationale": "Wiki-supported that these are cosmetic only ('Learn how to combine certain items with your Slayer helmet to upgrade it into a cosmetic variant'); the Slayer_reward_point page treats the recolours as optional ('Excluding the slayer helmet recolours reduces this to 3,580 points').",
-      "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Cosmetics table row 'Absolutely Slayin' | 1,000 | Permanent'"
-    },
-    {
-      "id": "oath_breaker",
-      "name": "Oath Breaker",
-      "tab": "Cosmetics",
-      "category": "cosmetic",
-      "cost": 200,
-      "toggle": "permanent (cannot be disabled; one-off purchase)",
-      "effect": "Learn how to combine a Demonic quill with your Slayer helmet to make it Oathplate-themed.",
-      "requirements": [
-        "Slayer helmet (Malevolent Masquerade)",
-        "The named head/item"
-      ],
-      "affectsTasks": [
-        "(cosmetic only)"
-      ],
-      "repeatable": false,
-      "priority": 5,
-      "audience": [
-        "cosmetic"
-      ],
-      "rationale": "Wiki-supported that these are cosmetic only ('Learn how to combine certain items with your Slayer helmet to upgrade it into a cosmetic variant'); the Slayer_reward_point page treats the recolours as optional ('Excluding the slayer helmet recolours reduces this to 3,580 points').",
-      "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Cosmetics table row 'Oath Breaker | 200 | Permanent'"
-    }
-  ]
+  "toggleLegend": {
+   "free": "free toggle (one-off purchase; can be switched off/on without repaying)",
+   "paid": "one-off purchase, but must be paid again to reactivate once disabled",
+   "perm": "permanent (cannot be disabled; one-off purchase)"
+  }
+ },
+ "totals": {
+  "cosmeticsTab": 8400,
+  "extendTab": 2875,
+  "note": "Computed sums of the table rows in this run do not match either wiki sentence; the wiki totals appear stale relative to the tables (which were repriced 27 Aug 2025 and 22 Jul 2026).",
+  "unlockPlusExtend": 6710,
+  "unlockPlusExtendPlusCosmetics": 15110,
+  "unlockTab": 3835,
+  "wikiClaims": {
+   "SlayerRewardPoint_page": "'A total of 11,580 points are required in order to obtain all the rewards and blocks at least once ... Excluding the slayer helmet recolours reduces this to 3,580 points'",
+   "SlayerRewards_page": "'Purchasing each unlock and extend reward once costs 15,510 points'"
+  }
+ },
+ "unlocks": [
+  {
+   "affectsTasks": [
+    "Gargoyles"
+   ],
+   "audience": [
+    "everyone"
+   ],
+   "category": "unlock",
+   "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Unlock table row 'Gargoyle Smasher | 120 | Permanent'",
+   "cost": 120,
+   "effect": "Gargoyles are automatically dealt the finishing blow if the player has a rock hammer in their inventory.",
+   "id": "gargoyle_smasher",
+   "name": "Gargoyle Smasher",
+   "priority": 2,
+   "rationale": "Inference: removes the manual rock-hammer finish on a common high-level task; wiki states only the mechanic: 'Gargoyles are automatically dealt the finishing blow if the player has a rock hammer in their inventory.'",
+   "repeatable": false,
+   "requirements": [
+    "Rock hammer in inventory (to trigger the effect)"
+   ],
+   "tab": "Unlock",
+   "toggle": "permanent (cannot be disabled; one-off purchase)"
+  },
+  {
+   "affectsTasks": [
+    "Rockslugs"
+   ],
+   "audience": [
+    "point-boosting",
+    "everyone"
+   ],
+   "category": "unlock",
+   "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Unlock table row 'Slug Salter | 10 | Permanent'; Slayer_reward_point.wikitext Mazchna boosting table",
+   "cost": 10,
+   "effect": "Rock slugs are automatically dealt the finishing blow if the player has a bag of salt in their inventory.",
+   "id": "slug_salter",
+   "name": "Slug Salter",
+   "priority": 3,
+   "rationale": "Inference: near-free at 10 points and Rockslug is a Mazchna task ('Require a bag of salt to kill', Slayer_reward_point Mazchna boosting table), so it speeds point-boosting streaks. Cost was 'reduced from 80 to 10 points' (27 Aug 2025 change).",
+   "repeatable": false,
+   "requirements": [
+    "Bag of salt in inventory (to trigger the effect)"
+   ],
+   "tab": "Unlock",
+   "toggle": "permanent (cannot be disabled; one-off purchase)"
+  },
+  {
+   "affectsTasks": [
+    "Lizards"
+   ],
+   "audience": [
+    "point-boosting",
+    "everyone"
+   ],
+   "category": "unlock",
+   "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Unlock table row 'Reptile Freezer | 10 | Permanent'; Slayer_reward_point.wikitext Turael boosting table",
+   "cost": 10,
+   "effect": "Desert lizards are automatically dealt the finishing blow if the player has an ice cooler in their inventory.",
+   "id": "reptile_freezer",
+   "name": "Reptile Freezer",
+   "priority": 3,
+   "rationale": "Inference: near-free at 10 points; Desert Lizard is a Turael task that 'Needs Ice cooler to kill' (Slayer_reward_point Turael boosting table). Cost 'reduced from 90 to 10 points' (27 Aug 2025 change).",
+   "repeatable": false,
+   "requirements": [
+    "Ice cooler in inventory (to trigger the effect)"
+   ],
+   "tab": "Unlock",
+   "toggle": "permanent (cannot be disabled; one-off purchase)"
+  },
+  {
+   "affectsTasks": [
+    "Mutated zygomites"
+   ],
+   "audience": [
+    "everyone"
+   ],
+   "category": "unlock",
+   "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Unlock table row ''Shroom Sprayer | 110 | Permanent'",
+   "cost": 110,
+   "effect": "Mutated zygomites are automatically dealt the finishing blow if the player has fungicide spray and fungicide in their inventory.",
+   "id": "shroom_sprayer",
+   "name": "'Shroom Sprayer",
+   "priority": 4,
+   "rationale": "Inference: convenience only; wiki gives the mechanic and no recommendation. Note in-game spelling begins with an apostrophe: 'Shroom Sprayer.",
+   "repeatable": false,
+   "requirements": [
+    "Fungicide spray and fungicide in inventory (to trigger the effect)"
+   ],
+   "tab": "Unlock",
+   "toggle": "permanent (cannot be disabled; one-off purchase)"
+  },
+  {
+   "affectsTasks": [
+    "(all tasks)"
+   ],
+   "audience": [
+    "everyone"
+   ],
+   "category": "unlock",
+   "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Unlock table row 'Malevolent Masquerade | 400 | Permanent'; Slayer.wikitext lines 200 and 1019; Slayer_helmet.wikitext line 25",
+   "cost": 400,
+   "effect": "Learn to assemble a Slayer helmet, which requires level 55 Crafting.",
+   "id": "malevolent_masquerade",
+   "name": "Malevolent Masquerade",
+   "priority": 1,
+   "rationale": "Wiki-supported: the Slayer helmet 'is therefore commonly worn by players on tasks' (Slayer page) and 'making it the best melee helmet option for slayers' (Slayer page).",
+   "repeatable": false,
+   "requirements": [
+    "55 Crafting to assemble (boosts work)",
+    "10 Defence to equip (Slayer_helmet page)",
+    "Components: nose peg, facemask, earmuffs, spiny helmet, enchanted gem, black mask (+ reinforced goggles if A Porcine of Interest is complete)"
+   ],
+   "tab": "Unlock",
+   "toggle": "permanent (cannot be disabled; one-off purchase)"
+  },
+  {
+   "affectsTasks": [
+    "(all tasks)"
+   ],
+   "audience": [
+    "ironman",
+    "everyone"
+   ],
+   "category": "unlock",
+   "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Unlock table row 'Ring Bling | 150 | Permanent' and Buy tab 'Slayer ring (8)'",
+   "cost": 150,
+   "effect": "Learn to craft a Slayer ring, which requires level 75 Crafting.",
+   "id": "ring_bling",
+   "name": "Ring Bling",
+   "priority": 3,
+   "rationale": "Inference: a Slayer ring 'provides 8 charges for teleporting to useful Slayer sites' (Buy tab note); crafting them is mainly valuable if you would otherwise spend 75 points per ring. Cost 'reduced from 300 to 150 points' (27 Aug 2025 change).",
+   "repeatable": false,
+   "requirements": [
+    "75 Crafting to craft"
+   ],
+   "tab": "Unlock",
+   "toggle": "permanent (cannot be disabled; one-off purchase)"
+  },
+  {
+   "affectsTasks": [
+    "Turoth",
+    "Kurask"
+   ],
+   "audience": [
+    "ironman",
+    "ranged slayers"
+   ],
+   "category": "unlock",
+   "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Unlock table row 'Broader Fletching | 300 | Permanent'",
+   "cost": 300,
+   "effect": "Learn to fletch broad arrows (level 52 Fletching), broad bolts (level 55 Fletching), and amethyst broad bolts (level 76 Fletching).",
+   "id": "broader_fletching",
+   "name": "Broader Fletching",
+   "priority": 3,
+   "rationale": "Inference: only matters if you use broad ammunition ('Bolts that can damage Turoths and Kurask' per the Buy tab) and prefer fletching over buying at 35 points per 250; the wiki gives no ranking.",
+   "repeatable": false,
+   "requirements": [
+    "52 Fletching (broad arrows)",
+    "55 Fletching (broad bolts)",
+    "76 Fletching (amethyst broad bolts)"
+   ],
+   "tab": "Unlock",
+   "toggle": "permanent (cannot be disabled; one-off purchase)"
+  },
+  {
+   "affectsTasks": [
+    "Red dragons"
+   ],
+   "audience": [
+    "situational"
+   ],
+   "category": "unlock",
+   "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Unlock table row 'Seeing Red | 50 | No'; Slayer_task.wikitext row 'Red dragons': '* Seeing red unlocked'",
+   "cost": 50,
+   "effect": "Konar, Duradel, and Nieve will be able to assign you red dragons as your task.",
+   "id": "seeing_red",
+   "name": "Seeing Red",
+   "priority": 5,
+   "rationale": "Inference: adds a task type rather than improving existing ones; the wiki gives no recommendation, and because the toggle is 'No' it must be paid again if disabled.",
+   "repeatable": false,
+   "requirements": [
+    "Dragon Slayer I (partially) (Slayer_task Red dragons row)"
+   ],
+   "tab": "Unlock",
+   "toggle": "one-off purchase, but must be paid again to reactivate once disabled"
+  },
+  {
+   "affectsTasks": [
+    "Aviansies"
+   ],
+   "audience": [
+    "situational",
+    "wilderness slayers"
+   ],
+   "category": "unlock",
+   "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Unlock table row 'Watch the Birdie | 80 | No'",
+   "cost": 80,
+   "effect": "Konar, Duradel, Nieve, Chaeldar, and Krystilia will be able to assign you Aviansie as your task. Requires level 60 Agility or 60 Strength to unlock.",
+   "id": "watch_the_birdie",
+   "name": "Watch the Birdie",
+   "priority": 4,
+   "rationale": "Inference: adds aviansie tasks (including Krystilia's Wilderness God Wars Dungeon); useful only if you want that task, no wiki ranking.",
+   "repeatable": false,
+   "requirements": [
+    "60 Agility or 60 Strength"
+   ],
+   "tab": "Unlock",
+   "toggle": "one-off purchase, but must be paid again to reactivate once disabled"
+  },
+  {
+   "affectsTasks": [
+    "Tzhaar",
+    "TzTok-Jad",
+    "TzKal-Zuk"
+   ],
+   "audience": [
+    "situational",
+    "fight-caves"
+   ],
+   "category": "unlock",
+   "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Unlock table row 'Hot Stuff | 100 | No' + note 'tzhaar task'",
+   "cost": 100,
+   "effect": "Duradel, Nieve, and Chaeldar will be able to assign TzHaar as your task; you will be offered a chance to slay TzTok-Jad instead.",
+   "id": "hot_stuff",
+   "name": "Hot Stuff",
+   "priority": 4,
+   "rationale": "Wiki note: 'When assigned a TzHaar task, there will be an option to kill TzTok-Jad instead of TzHaar ... all monsters in the challenge will grant Slayer experience and be affected by the Slayer helmet' - valuable for on-task Fight Caves/Inferno attempts, otherwise inference: skip.",
+   "repeatable": false,
+   "requirements": [
+    "None stated on the Slayer Rewards page; TzHaar row on Slayer_task lists only '* Hot stuff unlocked'"
+   ],
+   "tab": "Unlock",
+   "toggle": "one-off purchase, but must be paid again to reactivate once disabled"
+  },
+  {
+   "affectsTasks": [
+    "The Abyssal Sire",
+    "The Alchemical Hydra",
+    "Araxxor",
+    "Barrows Brothers",
+    "Callisto",
+    "Cerberus",
+    "The Chaos Elemental",
+    "The Chaos Fanatic",
+    "Commander Zilyana",
+    "Crazy Archaeologists",
+    "Dagannoth Kings",
+    "Duke Sucellus",
+    "General Graardor",
+    "The Giant Mole",
+    "Grotesque Guardians (Task enum: Gargoyles alt 'Dusk'/'Dawn')",
+    "K'ril Tsutsaroth",
+    "The Kalphite Queen",
+    "The King Black Dragon",
+    "The Cave Kraken Boss",
+    "Kree'arra",
+    "The Leviathan",
+    "The Maggot King",
+    "The Phantom Muspah",
+    "Sarachnis",
+    "Scorpia",
+    "The Shellbane Gryphon",
+    "The Thermonuclear Smoke Devil",
+    "Vardorvis",
+    "Venenatis",
+    "Vet'ion",
+    "Vorkath",
+    "The Whisperer",
+    "Zulrah"
+   ],
+   "audience": [
+    "bossers",
+    "wilderness slayers",
+    "everyone"
+   ],
+   "category": "unlock",
+   "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Unlock table row 'Like a Boss | 200 | No'; Boss.wikitext '==Boss slayer==' and its boss table; Slayer.wikitext line 794",
+   "cost": 200,
+   "effect": "Konar, Duradel, Krystilia, and Nieve will be able to assign various boss monsters as your task.",
+   "id": "like_a_boss",
+   "name": "Like a Boss",
+   "priority": 2,
+   "rationale": "Wiki-supported: 'This allows players to benefit from a black mask or slayer helmet (including imbued), making boss slayer more lucrative' and 'Upon finishing a boss task, the player will get an additional 5,000 Slayer experience regardless of task length' (Boss page). Caveat from wiki: 'The only way to \"block\" a boss is by toggling the ability off ... and the 200 point cost must be paid again to toggle it back on.'",
+   "repeatable": false,
+   "requirements": [
+    "Per-boss requirements are checked by the master, e.g. 85 Slayer for Abyssal Sire, 95 Slayer for Alchemical Hydra (Konar only), 91 Cerberus, 87 Kraken, 92 Araxxor, 93 Thermonuclear smoke devil, 75 Grotesque Guardians, quest completions per boss (Boss page table)"
+   ],
+   "tab": "Unlock",
+   "toggle": "one-off purchase, but must be paid again to reactivate once disabled"
+  },
+  {
+   "affectsTasks": [
+    "Lizardmen"
+   ],
+   "audience": [
+    "situational"
+   ],
+   "category": "unlock",
+   "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Unlock table row 'Reptile Got Ripped | 75 | No'",
+   "cost": 75,
+   "effect": "Konar, Duradel, Nieve, and Chaeldar will be able to assign Lizardmen as your task.",
+   "id": "reptile_got_ripped",
+   "name": "Reptile Got Ripped",
+   "priority": 5,
+   "rationale": "Inference: adds a task type only; the wiki gives no recommendation.",
+   "repeatable": false,
+   "requirements": [
+    "None stated; Slayer_task Lizardmen row lists only '* Reptile got ripped unlocked'"
+   ],
+   "tab": "Unlock",
+   "toggle": "one-off purchase, but must be paid again to reactivate once disabled"
+  },
+  {
+   "affectsTasks": [
+    "(all tasks with a superior variant)"
+   ],
+   "audience": [
+    "everyone"
+   ],
+   "category": "unlock",
+   "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Unlock table row 'Bigger and Badder | 50 | Yes'; Superior_slayer_monster.wikitext lead and '==Overview=='",
+   "cost": 50,
+   "effect": "Certain Slayer monsters will have the chance of spawning a superior version whilst on a Slayer task.",
+   "id": "bigger_and_badder",
+   "name": "Bigger and Badder",
+   "priority": 1,
+   "rationale": "Wiki-supported: 'Killing a superior Slayer monster rewards the player with a generous amount of Slayer experience - generally about ten times the hitpoints of the superior monster' and 'players may toggle ... on and off without loss of points ... although there generally isn't any benefit to this' (Superior slayer monster page). Cost 'reduced from 150 to 50 points' (27 Aug 2025 change).",
+   "repeatable": false,
+   "requirements": [
+    "None"
+   ],
+   "tab": "Unlock",
+   "toggle": "free toggle (one-off purchase; can be switched off/on without repaying)"
+  },
+  {
+   "affectsTasks": [
+    "Metal dragons"
+   ],
+   "audience": [
+    "situational"
+   ],
+   "category": "unlock",
+   "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Unlock table row 'Duly Noted | 200 | Permanent'",
+   "cost": 200,
+   "effect": "Mithril dragons drop mithril bars in banknote form while killed on assignment.",
+   "id": "duly_noted",
+   "name": "Duly Noted",
+   "priority": 5,
+   "rationale": "Inference: only affects mithril dragon kills on task; wiki gives no ranking.",
+   "repeatable": false,
+   "requirements": [
+    "Being on a metal dragon task at mithril dragons"
+   ],
+   "tab": "Unlock",
+   "toggle": "permanent (cannot be disabled; one-off purchase)"
+  },
+  {
+   "affectsTasks": [
+    "Fossil island wyverns"
+   ],
+   "audience": [
+    "task-blockers",
+    "situational"
+   ],
+   "category": "unlock",
+   "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Unlock table row 'Stop the Wyvern | 500 | Yes'",
+   "cost": 500,
+   "effect": "Stops you getting Fossil Island Wyvern tasks, without counting towards your blocked task limit. This does not cancel a current fossil wyvern task.",
+   "id": "stop_the_wyvern",
+   "name": "Stop the Wyvern",
+   "priority": 4,
+   "rationale": "Wiki-supported effect: acts like an extra block slot 'without counting towards your blocked task limit'; whether it is worth 500 points depends on how much you dislike the task (inference).",
+   "repeatable": false,
+   "requirements": [
+    "None"
+   ],
+   "tab": "Unlock",
+   "toggle": "free toggle (one-off purchase; can be switched off/on without repaying)"
+  },
+  {
+   "affectsTasks": [
+    "Gargoyles",
+    "Grotesque Guardians (Task enum: Gargoyles alt 'Dusk'/'Dawn')"
+   ],
+   "audience": [
+    "situational",
+    "bossers"
+   ],
+   "category": "unlock",
+   "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Unlock table row 'Double Trouble | 500 | No'",
+   "cost": 500,
+   "effect": "Slaying Dusk and Dawn now counts for two kills towards your task rather than one.",
+   "id": "double_trouble",
+   "name": "Double Trouble",
+   "priority": 5,
+   "rationale": "Inference: only useful if you routinely complete gargoyle tasks at the Grotesque Guardians; wiki gives no ranking.",
+   "repeatable": false,
+   "requirements": [
+    "Access to Grotesque Guardians (75 Slayer, Brittle key roof access, Priest in Peril per Boss page)"
+   ],
+   "tab": "Unlock",
+   "toggle": "one-off purchase, but must be paid again to reactivate once disabled"
+  },
+  {
+   "affectsTasks": [
+    "Basilisks"
+   ],
+   "audience": [
+    "situational"
+   ],
+   "category": "unlock",
+   "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Unlock table row 'Basilocked | 80 | No'; Slayer_task.wikitext Basilisks row efn UnlockKND",
+   "cost": 80,
+   "effect": "Konar, Duradel, and Nieve will be able to assign Basilisks as your task.",
+   "id": "basilocked",
+   "name": "Basilocked",
+   "priority": 3,
+   "rationale": "Inference: adds Basilisk Knights (listed as a task variant on Slayer_task) to high masters; no wiki ranking. Note: 'Task must be unlocked with Slayer reward points to be assigned by Konar, Nieve and Duradel.'",
+   "repeatable": false,
+   "requirements": [
+    "40 Combat (Slayer_task Basilisks row); 40 Slayer to kill basilisks (first column)"
+   ],
+   "tab": "Unlock",
+   "toggle": "one-off purchase, but must be paid again to reactivate once disabled"
+  },
+  {
+   "affectsTasks": [
+    "Vampyres"
+   ],
+   "audience": [
+    "situational"
+   ],
+   "category": "unlock",
+   "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Unlock table row 'Actual Vampyre Slayer | 80 | No'",
+   "cost": 80,
+   "effect": "Konar, Duradel, Nieve, and Chaeldar will be able to assign Vampyres as your task.",
+   "id": "actual_vampyre_slayer",
+   "name": "Actual Vampyre Slayer",
+   "priority": 4,
+   "rationale": "Inference: adds a task type; no wiki ranking. Wiki bug note: 'Although the ingame menu lists Mortimer, it doesn't affect him. He will assign venators regardless and doesn't assign vampyres'.",
+   "repeatable": false,
+   "requirements": [
+    "Priest in Peril; 35 Combat (Slayer_task Vampyres row)"
+   ],
+   "tab": "Unlock",
+   "toggle": "one-off purchase, but must be paid again to reactivate once disabled"
+  },
+  {
+   "affectsTasks": [
+    "(all tasks)"
+   ],
+   "audience": [
+    "everyone",
+    "point-boosting"
+   ],
+   "category": "unlock",
+   "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Unlock table row 'Task Storage | 500 | Permanent' and Tasks table 'Store task'/'Unstore/Swap task'",
+   "cost": 500,
+   "effect": "Gain the ability to store your task; once unlocked the operation is controlled by the Tasks tab, and you can freely swap between your current task and stored task.",
+   "id": "task_storage",
+   "name": "Task Storage",
+   "priority": 2,
+   "rationale": "Wiki-supported: 'you may store your current Slayer task for free' and 'it can be unstored ... or swapped with their current task for free'; also 'The Task Storage can now store Wilderness tasks' (27 Aug 2025). Cost 'reduced from 1000 points 500 points'.",
+   "repeatable": false,
+   "requirements": [
+    "None"
+   ],
+   "tab": "Unlock",
+   "toggle": "permanent (cannot be disabled; one-off purchase)"
+  },
+  {
+   "affectsTasks": [
+    "Jellies",
+    "Dust devils",
+    "Nechryael",
+    "Abyssal demons"
+   ],
+   "audience": [
+    "wilderness slayers"
+   ],
+   "category": "unlock",
+   "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Unlock table row 'I Wildy More Slayer | 0 | Yes' and 9 Feb 2022 change",
+   "cost": 0,
+   "effect": "Krystilia will be able to assign Jellies, Dust Devils, Nechryaels, and Abyssal Demons as your task.",
+   "id": "i_wildy_more_slayer",
+   "name": "I Wildy More Slayer",
+   "priority": 1,
+   "rationale": "Wiki-supported: costs 0 points and is a free toggle ('Added a free toggleable option ... to let players opt out of the new Wilderness tasks'); leave on unless you specifically want to avoid the Wilderness Slayer Cave tasks (inference).",
+   "repeatable": false,
+   "requirements": [
+    "None stated on the Slayer Rewards page (per-task reqs on Slayer_task: Jellies 57 Combat/52 Slayer; Dust devils Desert Treasure I partial, 70 Combat, 65 Slayer; Nechryael Priest in Peril, 85 Combat, 80 Slayer; Abyssal demons Priest in Peril or Fairytale II, 85 Combat, 85 Slayer)"
+   ],
+   "tab": "Unlock",
+   "toggle": "free toggle (one-off purchase; can be switched off/on without repaying)"
+  },
+  {
+   "affectsTasks": [
+    "Warped Creatures"
+   ],
+   "audience": [
+    "situational"
+   ],
+   "category": "unlock",
+   "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Unlock table row 'Warped Reality | 60 | No'",
+   "cost": 60,
+   "effect": "Konar, Duradel, Nieve, and Chaeldar will be able to assign Warped creatures as your task.",
+   "id": "warped_reality",
+   "name": "Warped Reality",
+   "priority": 4,
+   "rationale": "Inference: adds a task type; no wiki ranking.",
+   "repeatable": false,
+   "requirements": [
+    "The Path of Glouphrie (wiki note: 'After completion of The Path of Glouphrie')"
+   ],
+   "tab": "Unlock",
+   "toggle": "one-off purchase, but must be paid again to reactivate once disabled"
+  },
+  {
+   "affectsTasks": [
+    "Aquanites"
+   ],
+   "audience": [
+    "situational"
+   ],
+   "category": "unlock",
+   "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Unlock table row 'Lured In | 80 | No'; Slayer_task.wikitext Aquanites row",
+   "cost": 80,
+   "effect": "Nieve and Duradel will be able to assign Aquanites as your task.",
+   "id": "lured_in",
+   "name": "Lured In",
+   "priority": 4,
+   "rationale": "Inference: adds a task type; no wiki ranking. 'Task must be unlocked with Slayer reward points to be assigned by Nieve and Duradel.'",
+   "repeatable": false,
+   "requirements": [
+    "73 Sailing (Slayer_task Aquanites row); 78 Slayer (first column)"
+   ],
+   "tab": "Unlock",
+   "toggle": "one-off purchase, but must be paid again to reactivate once disabled"
+  },
+  {
+   "affectsTasks": [
+    "Gryphons"
+   ],
+   "audience": [
+    "situational"
+   ],
+   "category": "unlock",
+   "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Unlock table row 'Wings Spread | 80 | No'; Slayer_task.wikitext Gryphons row",
+   "cost": 80,
+   "effect": "Nieve and Duradel will be able to assign Gryphons as your task.",
+   "id": "wings_spread",
+   "name": "Wings Spread",
+   "priority": 4,
+   "rationale": "Inference: adds a task type; no wiki ranking.",
+   "repeatable": false,
+   "requirements": [
+    "Troubled Tortugans (wiki note 'After completion of Troubled Tortugans'); 50 Combat; 51 Slayer (Slayer_task Gryphons row)"
+   ],
+   "tab": "Unlock",
+   "toggle": "one-off purchase, but must be paid again to reactivate once disabled"
+  },
+  {
+   "affectsTasks": [
+    "Frost dragons"
+   ],
+   "audience": [
+    "situational"
+   ],
+   "category": "unlock",
+   "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Unlock table row 'Chance of Heavy Frost | 100 | No' and 17 June 2026 change; Slayer_task.wikitext Frost dragon row",
+   "cost": 100,
+   "effect": "Weighting increased from 5 to 8 for Frost dragon tasks from Nieve and Duradel.",
+   "id": "chance_of_heavy_frost",
+   "name": "Chance of Heavy Frost",
+   "priority": 5,
+   "rationale": "Inference: only increases the frequency of an already-available task; no wiki ranking. Added 17 June 2026.",
+   "repeatable": false,
+   "requirements": [
+    "85 Combat; 87 Sailing (Slayer_task Frost dragon row)"
+   ],
+   "tab": "Unlock",
+   "toggle": "one-off purchase, but must be paid again to reactivate once disabled"
+  },
+  {
+   "affectsTasks": [
+    "Dark beasts"
+   ],
+   "audience": [
+    "task-extenders"
+   ],
+   "category": "extend",
+   "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Extend table row 'Need More Darkness | 100 | No'",
+   "cost": 100,
+   "effect": "Number of dark beasts assigned is increased to 110-135.",
+   "id": "need_more_darkness",
+   "name": "Need More Darkness",
+   "priority": 3,
+   "rationale": "Inference: the wiki ranks no extensions; extending works 'across all slayer masters that can assign it regardless of the quantity they can originally assign' and the bulk button gives 'a 5% discount'. Priority reflects my judgement that this task is less commonly extended; no wiki text supports the ordering.",
+   "repeatable": false,
+   "requirements": [
+    "Must be able to receive the task"
+   ],
+   "tab": "Extend",
+   "toggle": "one-off purchase, but must be paid again to reactivate once disabled"
+  },
+  {
+   "affectsTasks": [
+    "Ankou"
+   ],
+   "audience": [
+    "task-extenders"
+   ],
+   "category": "extend",
+   "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Extend table row 'Ankou Very Much | 100 | No'",
+   "cost": 100,
+   "effect": "Number of ankou assigned is increased to 91-150.",
+   "id": "ankou_very_much",
+   "name": "Ankou Very Much",
+   "priority": 4,
+   "rationale": "Inference: the wiki ranks no extensions; extending works 'across all slayer masters that can assign it regardless of the quantity they can originally assign' and the bulk button gives 'a 5% discount'. Priority reflects my judgement that this task is less commonly extended; no wiki text supports the ordering.",
+   "repeatable": false,
+   "requirements": [
+    "Must be able to receive the task"
+   ],
+   "tab": "Extend",
+   "toggle": "one-off purchase, but must be paid again to reactivate once disabled"
+  },
+  {
+   "affectsTasks": [
+    "Suqahs"
+   ],
+   "audience": [
+    "task-extenders"
+   ],
+   "category": "extend",
+   "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Extend table row 'Suq-a-nother One | 100 | No'",
+   "cost": 100,
+   "effect": "Number of suqahs assigned is increased to 186-250.",
+   "id": "suq_a_nother_one",
+   "name": "Suq-a-nother One",
+   "priority": 4,
+   "rationale": "Inference: the wiki ranks no extensions; extending works 'across all slayer masters that can assign it regardless of the quantity they can originally assign' and the bulk button gives 'a 5% discount'. Priority reflects my judgement that this task is less commonly extended; no wiki text supports the ordering.",
+   "repeatable": false,
+   "requirements": [
+    "Must be able to receive the task"
+   ],
+   "tab": "Extend",
+   "toggle": "one-off purchase, but must be paid again to reactivate once disabled"
+  },
+  {
+   "affectsTasks": [
+    "Black dragons"
+   ],
+   "audience": [
+    "task-extenders"
+   ],
+   "category": "extend",
+   "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Extend table row 'Fire & Darkness | 50 | No'",
+   "cost": 50,
+   "effect": "Number of black dragons assigned is increased to 40-60.",
+   "id": "fire_darkness",
+   "name": "Fire & Darkness",
+   "priority": 5,
+   "rationale": "Inference: the wiki ranks no extensions; extending works 'across all slayer masters that can assign it regardless of the quantity they can originally assign' and the bulk button gives 'a 5% discount'. Priority reflects my judgement that this task is less commonly extended; no wiki text supports the ordering.",
+   "repeatable": false,
+   "requirements": [
+    "Must be able to receive the task"
+   ],
+   "tab": "Extend",
+   "toggle": "one-off purchase, but must be paid again to reactivate once disabled"
+  },
+  {
+   "affectsTasks": [
+    "Metal dragons"
+   ],
+   "audience": [
+    "task-extenders"
+   ],
+   "category": "extend",
+   "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Extend table row 'Pedal to the Metals | 200 | No'",
+   "cost": 200,
+   "effect": "Number of metal dragons assigned is increased to 150-200.",
+   "id": "pedal_to_the_metals",
+   "name": "Pedal to the Metals",
+   "priority": 4,
+   "rationale": "Inference: the wiki ranks no extensions; extending works 'across all slayer masters that can assign it regardless of the quantity they can originally assign' and the bulk button gives 'a 5% discount'. Priority reflects my judgement that this task is less commonly extended; no wiki text supports the ordering. Cost 'increased from 100 to 200 points, to account for all metal dragons now that they are under one task' (27 Aug 2025); amounts corrected to 150-200 (7 Jan 2026).",
+   "repeatable": false,
+   "requirements": [
+    "Must be able to receive the task"
+   ],
+   "tab": "Extend",
+   "toggle": "one-off purchase, but must be paid again to reactivate once disabled"
+  },
+  {
+   "affectsTasks": [
+    "Spiritual creatures"
+   ],
+   "audience": [
+    "task-extenders"
+   ],
+   "category": "extend",
+   "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Extend table row 'Spiritual Fervour | 100 | No'",
+   "cost": 100,
+   "effect": "Number of spiritual creatures assigned is increased to 181-250.",
+   "id": "spiritual_fervour",
+   "name": "Spiritual Fervour",
+   "priority": 4,
+   "rationale": "Inference: the wiki ranks no extensions; extending works 'across all slayer masters that can assign it regardless of the quantity they can originally assign' and the bulk button gives 'a 5% discount'. Priority reflects my judgement that this task is less commonly extended; no wiki text supports the ordering.",
+   "repeatable": false,
+   "requirements": [
+    "Must be able to receive the task"
+   ],
+   "tab": "Extend",
+   "toggle": "one-off purchase, but must be paid again to reactivate once disabled"
+  },
+  {
+   "affectsTasks": [
+    "Abyssal demons"
+   ],
+   "audience": [
+    "task-extenders",
+    "xp-focused"
+   ],
+   "category": "extend",
+   "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Extend table row 'Augment my Abbies | 100 | No'",
+   "cost": 100,
+   "effect": "Number of abyssal demons assigned is increased to 200-250.",
+   "id": "augment_my_abbies",
+   "name": "Augment my Abbies",
+   "priority": 2,
+   "rationale": "Inference: the wiki ranks no extensions; extending works 'across all slayer masters that can assign it regardless of the quantity they can originally assign' and the bulk button gives 'a 5% discount'. Priority 2 is my inference that this is a commonly-kept high-XP task type; no wiki text supports the ordering.",
+   "repeatable": false,
+   "requirements": [
+    "Must be able to receive the task"
+   ],
+   "tab": "Extend",
+   "toggle": "one-off purchase, but must be paid again to reactivate once disabled"
+  },
+  {
+   "affectsTasks": [
+    "Black demons"
+   ],
+   "audience": [
+    "task-extenders"
+   ],
+   "category": "extend",
+   "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Extend table row 'It's Dark in Here | 100 | No'",
+   "cost": 100,
+   "effect": "Number of black demons assigned is increased to 200-250.",
+   "id": "it_s_dark_in_here",
+   "name": "It's Dark in Here",
+   "priority": 3,
+   "rationale": "Inference: the wiki ranks no extensions; extending works 'across all slayer masters that can assign it regardless of the quantity they can originally assign' and the bulk button gives 'a 5% discount'. Priority reflects my judgement that this task is less commonly extended; no wiki text supports the ordering.",
+   "repeatable": false,
+   "requirements": [
+    "Must be able to receive the task"
+   ],
+   "tab": "Extend",
+   "toggle": "one-off purchase, but must be paid again to reactivate once disabled"
+  },
+  {
+   "affectsTasks": [
+    "Greater demons"
+   ],
+   "audience": [
+    "task-extenders"
+   ],
+   "category": "extend",
+   "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Extend table row 'Greater Challenge | 100 | No'",
+   "cost": 100,
+   "effect": "Number of greater demons assigned is increased to 200-250.",
+   "id": "greater_challenge",
+   "name": "Greater Challenge",
+   "priority": 3,
+   "rationale": "Inference: the wiki ranks no extensions; extending works 'across all slayer masters that can assign it regardless of the quantity they can originally assign' and the bulk button gives 'a 5% discount'. Priority reflects my judgement that this task is less commonly extended; no wiki text supports the ordering.",
+   "repeatable": false,
+   "requirements": [
+    "Must be able to receive the task"
+   ],
+   "tab": "Extend",
+   "toggle": "one-off purchase, but must be paid again to reactivate once disabled"
+  },
+  {
+   "affectsTasks": [
+    "Bloodveld"
+   ],
+   "audience": [
+    "task-extenders",
+    "xp-focused"
+   ],
+   "category": "extend",
+   "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Extend table row 'Bleed Me Dry | 75 | No'",
+   "cost": 75,
+   "effect": "Number of bloodveld assigned is increased to 200-250.",
+   "id": "bleed_me_dry",
+   "name": "Bleed Me Dry",
+   "priority": 2,
+   "rationale": "Inference: the wiki ranks no extensions; extending works 'across all slayer masters that can assign it regardless of the quantity they can originally assign' and the bulk button gives 'a 5% discount'. Priority 2 is my inference that this is a commonly-kept high-XP task type; no wiki text supports the ordering.",
+   "repeatable": false,
+   "requirements": [
+    "Must be able to receive the task"
+   ],
+   "tab": "Extend",
+   "toggle": "one-off purchase, but must be paid again to reactivate once disabled"
+  },
+  {
+   "affectsTasks": [
+    "Aberrant spectres"
+   ],
+   "audience": [
+    "task-extenders"
+   ],
+   "category": "extend",
+   "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Extend table row 'Smell Ya Later | 100 | No'",
+   "cost": 100,
+   "effect": "Number of aberrant spectres assigned is increased to 200-250.",
+   "id": "smell_ya_later",
+   "name": "Smell Ya Later",
+   "priority": 3,
+   "rationale": "Inference: the wiki ranks no extensions; extending works 'across all slayer masters that can assign it regardless of the quantity they can originally assign' and the bulk button gives 'a 5% discount'. Priority reflects my judgement that this task is less commonly extended; no wiki text supports the ordering.",
+   "repeatable": false,
+   "requirements": [
+    "Must be able to receive the task"
+   ],
+   "tab": "Extend",
+   "toggle": "one-off purchase, but must be paid again to reactivate once disabled"
+  },
+  {
+   "affectsTasks": [
+    "Aviansies"
+   ],
+   "audience": [
+    "task-extenders"
+   ],
+   "category": "extend",
+   "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Extend table row 'Birds of a Feather | 100 | No'",
+   "cost": 100,
+   "effect": "Number of aviansie assigned is increased to 200-250.",
+   "id": "birds_of_a_feather",
+   "name": "Birds of a Feather",
+   "priority": 4,
+   "rationale": "Inference: the wiki ranks no extensions; extending works 'across all slayer masters that can assign it regardless of the quantity they can originally assign' and the bulk button gives 'a 5% discount'. Priority reflects my judgement that this task is less commonly extended; no wiki text supports the ordering.",
+   "repeatable": false,
+   "requirements": [
+    "Must be able to receive the task"
+   ],
+   "tab": "Extend",
+   "toggle": "one-off purchase, but must be paid again to reactivate once disabled"
+  },
+  {
+   "affectsTasks": [
+    "Cave horrors"
+   ],
+   "audience": [
+    "task-extenders"
+   ],
+   "category": "extend",
+   "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Extend table row 'Horrorific | 100 | No'",
+   "cost": 100,
+   "effect": "Number of cave horrors assigned is increased to 200-250.",
+   "id": "horrorific",
+   "name": "Horrorific",
+   "priority": 4,
+   "rationale": "Inference: the wiki ranks no extensions; extending works 'across all slayer masters that can assign it regardless of the quantity they can originally assign' and the bulk button gives 'a 5% discount'. Priority reflects my judgement that this task is less commonly extended; no wiki text supports the ordering.",
+   "repeatable": false,
+   "requirements": [
+    "Must be able to receive the task"
+   ],
+   "tab": "Extend",
+   "toggle": "one-off purchase, but must be paid again to reactivate once disabled"
+  },
+  {
+   "affectsTasks": [
+    "Dust devils"
+   ],
+   "audience": [
+    "task-extenders",
+    "xp-focused"
+   ],
+   "category": "extend",
+   "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Extend table row 'To Dust You Shall Return | 100 | No'",
+   "cost": 100,
+   "effect": "Number of dust devils assigned is increased to 200-250.",
+   "id": "to_dust_you_shall_return",
+   "name": "To Dust You Shall Return",
+   "priority": 2,
+   "rationale": "Inference: the wiki ranks no extensions; extending works 'across all slayer masters that can assign it regardless of the quantity they can originally assign' and the bulk button gives 'a 5% discount'. Priority 2 is my inference that this is a commonly-kept high-XP task type; no wiki text supports the ordering.",
+   "repeatable": false,
+   "requirements": [
+    "Must be able to receive the task"
+   ],
+   "tab": "Extend",
+   "toggle": "one-off purchase, but must be paid again to reactivate once disabled"
+  },
+  {
+   "affectsTasks": [
+    "Skeletal wyverns"
+   ],
+   "audience": [
+    "task-extenders"
+   ],
+   "category": "extend",
+   "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Extend table row 'Wyver-nother One | 100 | No'",
+   "cost": 100,
+   "effect": "Number of Skeletal Wyverns assigned is increased to 50-75.",
+   "id": "wyver_nother_one",
+   "name": "Wyver-nother One",
+   "priority": 5,
+   "rationale": "Inference: the wiki ranks no extensions; extending works 'across all slayer masters that can assign it regardless of the quantity they can originally assign' and the bulk button gives 'a 5% discount'. Priority reflects my judgement that this task is less commonly extended; no wiki text supports the ordering.",
+   "repeatable": false,
+   "requirements": [
+    "Must be able to receive the task"
+   ],
+   "tab": "Extend",
+   "toggle": "one-off purchase, but must be paid again to reactivate once disabled"
+  },
+  {
+   "affectsTasks": [
+    "Gargoyles"
+   ],
+   "audience": [
+    "task-extenders",
+    "xp-focused"
+   ],
+   "category": "extend",
+   "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Extend table row 'Get Smashed | 100 | No'",
+   "cost": 100,
+   "effect": "Number of gargoyles assigned is increased to 200-250.",
+   "id": "get_smashed",
+   "name": "Get Smashed",
+   "priority": 2,
+   "rationale": "Inference: the wiki ranks no extensions; extending works 'across all slayer masters that can assign it regardless of the quantity they can originally assign' and the bulk button gives 'a 5% discount'. Priority 2 is my inference that this is a commonly-kept high-XP task type; no wiki text supports the ordering.",
+   "repeatable": false,
+   "requirements": [
+    "Must be able to receive the task"
+   ],
+   "tab": "Extend",
+   "toggle": "one-off purchase, but must be paid again to reactivate once disabled"
+  },
+  {
+   "affectsTasks": [
+    "Nechryael"
+   ],
+   "audience": [
+    "task-extenders",
+    "xp-focused"
+   ],
+   "category": "extend",
+   "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Extend table row 'Nechs Please | 100 | No'",
+   "cost": 100,
+   "effect": "Number of nechryael assigned is increased to 200-250.",
+   "id": "nechs_please",
+   "name": "Nechs Please",
+   "priority": 2,
+   "rationale": "Inference: the wiki ranks no extensions; extending works 'across all slayer masters that can assign it regardless of the quantity they can originally assign' and the bulk button gives 'a 5% discount'. Priority 2 is my inference that this is a commonly-kept high-XP task type; no wiki text supports the ordering.",
+   "repeatable": false,
+   "requirements": [
+    "Must be able to receive the task"
+   ],
+   "tab": "Extend",
+   "toggle": "one-off purchase, but must be paid again to reactivate once disabled"
+  },
+  {
+   "affectsTasks": [
+    "Cave kraken"
+   ],
+   "audience": [
+    "task-extenders"
+   ],
+   "category": "extend",
+   "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Extend table row 'Krack On | 100 | No'",
+   "cost": 100,
+   "effect": "Number of cave kraken assigned is increased to 150-200.",
+   "id": "krack_on",
+   "name": "Krack On",
+   "priority": 3,
+   "rationale": "Inference: the wiki ranks no extensions; extending works 'across all slayer masters that can assign it regardless of the quantity they can originally assign' and the bulk button gives 'a 5% discount'. Priority reflects my judgement that this task is less commonly extended; no wiki text supports the ordering.",
+   "repeatable": false,
+   "requirements": [
+    "Must be able to receive the task"
+   ],
+   "tab": "Extend",
+   "toggle": "one-off purchase, but must be paid again to reactivate once disabled"
+  },
+  {
+   "affectsTasks": [
+    "Scabarites"
+   ],
+   "audience": [
+    "task-extenders"
+   ],
+   "category": "extend",
+   "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Extend table row 'Get Scabaright on It | 50 | No'",
+   "cost": 50,
+   "effect": "Number of scabarites assigned is increased to 130-170.",
+   "id": "get_scabaright_on_it",
+   "name": "Get Scabaright on It",
+   "priority": 5,
+   "rationale": "Inference: the wiki ranks no extensions; extending works 'across all slayer masters that can assign it regardless of the quantity they can originally assign' and the bulk button gives 'a 5% discount'. Priority reflects my judgement that this task is less commonly extended; no wiki text supports the ordering.",
+   "repeatable": false,
+   "requirements": [
+    "Must be able to receive the task"
+   ],
+   "tab": "Extend",
+   "toggle": "one-off purchase, but must be paid again to reactivate once disabled"
+  },
+  {
+   "affectsTasks": [
+    "Fossil island wyverns"
+   ],
+   "audience": [
+    "task-extenders"
+   ],
+   "category": "extend",
+   "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Extend table row 'Wyver-nother Two | 100 | No'",
+   "cost": 100,
+   "effect": "Number of Fossil Island Wyverns assigned is increased to 55-75.",
+   "id": "wyver_nother_two",
+   "name": "Wyver-nother Two",
+   "priority": 5,
+   "rationale": "Inference: the wiki ranks no extensions; extending works 'across all slayer masters that can assign it regardless of the quantity they can originally assign' and the bulk button gives 'a 5% discount'. Priority reflects my judgement that this task is less commonly extended; no wiki text supports the ordering.",
+   "repeatable": false,
+   "requirements": [
+    "Must be able to receive the task"
+   ],
+   "tab": "Extend",
+   "toggle": "one-off purchase, but must be paid again to reactivate once disabled"
+  },
+  {
+   "affectsTasks": [
+    "Basilisks"
+   ],
+   "audience": [
+    "task-extenders"
+   ],
+   "category": "extend",
+   "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Extend table row 'Basilonger | 100 | No'",
+   "cost": 100,
+   "effect": "Number of basilisks assigned is increased to 200-250.",
+   "id": "basilonger",
+   "name": "Basilonger",
+   "priority": 3,
+   "rationale": "Inference: the wiki ranks no extensions; extending works 'across all slayer masters that can assign it regardless of the quantity they can originally assign' and the bulk button gives 'a 5% discount'. Priority reflects my judgement that this task is less commonly extended; no wiki text supports the ordering.",
+   "repeatable": false,
+   "requirements": [
+    "Must be able to receive the task"
+   ],
+   "tab": "Extend",
+   "toggle": "one-off purchase, but must be paid again to reactivate once disabled"
+  },
+  {
+   "affectsTasks": [
+    "Vampyres"
+   ],
+   "audience": [
+    "task-extenders"
+   ],
+   "category": "extend",
+   "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Extend table row 'More at Stake | 100 | No'",
+   "cost": 100,
+   "effect": "Number of vampyres assigned is increased to 200-250.",
+   "id": "more_at_stake",
+   "name": "More at Stake",
+   "priority": 4,
+   "rationale": "Inference: the wiki ranks no extensions; extending works 'across all slayer masters that can assign it regardless of the quantity they can originally assign' and the bulk button gives 'a 5% discount'. Priority reflects my judgement that this task is less commonly extended; no wiki text supports the ordering.",
+   "repeatable": false,
+   "requirements": [
+    "Must be able to receive the task"
+   ],
+   "tab": "Extend",
+   "toggle": "one-off purchase, but must be paid again to reactivate once disabled"
+  },
+  {
+   "affectsTasks": [
+    "Revenants"
+   ],
+   "audience": [
+    "wilderness slayers",
+    "task-extenders",
+    "ironman"
+   ],
+   "category": "extend",
+   "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Extend table row 'Revenenenenenants | 100 | Yes'",
+   "cost": 100,
+   "effect": "Number of revenants assigned is increased to 100-150.",
+   "id": "revenenenenenants",
+   "name": "Revenenenenenants",
+   "priority": 3,
+   "rationale": "Inference: the only free-toggle extension ('Yes'); the Slayer_reward_point page notes Ironmen use Krystilia 'looking for Revenant tasks to receive a wilderness weapon', which longer revenant tasks help. Amount 'up from 40 to 100' (12 Apr 2023 change).",
+   "repeatable": false,
+   "requirements": [
+    "Must be able to receive the task"
+   ],
+   "tab": "Extend",
+   "toggle": "free toggle (one-off purchase; can be switched off/on without repaying)"
+  },
+  {
+   "affectsTasks": [
+    "Araxytes"
+   ],
+   "audience": [
+    "task-extenders"
+   ],
+   "category": "extend",
+   "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Extend table row 'More eyes than sense | 150 | No'",
+   "cost": 150,
+   "effect": "Number of araxytes assigned is increased to 200-250.",
+   "id": "more_eyes_than_sense",
+   "name": "More eyes than sense",
+   "priority": 3,
+   "rationale": "Inference: the wiki ranks no extensions; extending works 'across all slayer masters that can assign it regardless of the quantity they can originally assign' and the bulk button gives 'a 5% discount'. Priority reflects my judgement that this task is less commonly extended; no wiki text supports the ordering.",
+   "repeatable": false,
+   "requirements": [
+    "Must be able to receive the task"
+   ],
+   "tab": "Extend",
+   "toggle": "one-off purchase, but must be paid again to reactivate once disabled"
+  },
+  {
+   "affectsTasks": [
+    "Custodian Stalkers"
+   ],
+   "audience": [
+    "task-extenders"
+   ],
+   "category": "extend",
+   "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Extend table row 'Un-restraining Order | 100 | No'",
+   "cost": 100,
+   "effect": "Number of custodian stalkers assigned is increased to 200-250.",
+   "id": "un_restraining_order",
+   "name": "Un-restraining Order",
+   "priority": 4,
+   "rationale": "Inference: the wiki ranks no extensions; extending works 'across all slayer masters that can assign it regardless of the quantity they can originally assign' and the bulk button gives 'a 5% discount'. Priority reflects my judgement that this task is less commonly extended; no wiki text supports the ordering.",
+   "repeatable": false,
+   "requirements": [
+    "Must be able to receive the task"
+   ],
+   "tab": "Extend",
+   "toggle": "one-off purchase, but must be paid again to reactivate once disabled"
+  },
+  {
+   "affectsTasks": [
+    "Aquanites"
+   ],
+   "audience": [
+    "task-extenders"
+   ],
+   "category": "extend",
+   "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Extend table row 'Let's Stay All Aquanite | 100 | No'",
+   "cost": 100,
+   "effect": "Number of aquanites assigned is increased to 150-200.",
+   "id": "let_s_stay_all_aquanite",
+   "name": "Let's Stay All Aquanite",
+   "priority": 4,
+   "rationale": "Inference: the wiki ranks no extensions; extending works 'across all slayer masters that can assign it regardless of the quantity they can originally assign' and the bulk button gives 'a 5% discount'. Priority reflects my judgement that this task is less commonly extended; no wiki text supports the ordering.",
+   "repeatable": false,
+   "requirements": [
+    "Must be able to receive the task"
+   ],
+   "tab": "Extend",
+   "toggle": "one-off purchase, but must be paid again to reactivate once disabled"
+  },
+  {
+   "affectsTasks": [
+    "Wyrms"
+   ],
+   "audience": [
+    "task-extenders"
+   ],
+   "category": "extend",
+   "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Extend table row 'Can of Wyrms | 100 | No'",
+   "cost": 100,
+   "effect": "Number of wyrms assigned is increased to 200-250.",
+   "id": "can_of_wyrms",
+   "name": "Can of Wyrms",
+   "priority": 3,
+   "rationale": "Inference: the wiki ranks no extensions; extending works 'across all slayer masters that can assign it regardless of the quantity they can originally assign' and the bulk button gives 'a 5% discount'. Priority reflects my judgement that this task is less commonly extended; no wiki text supports the ordering.",
+   "repeatable": false,
+   "requirements": [
+    "Must be able to receive the task"
+   ],
+   "tab": "Extend",
+   "toggle": "one-off purchase, but must be paid again to reactivate once disabled"
+  },
+  {
+   "affectsTasks": [
+    "Gryphons"
+   ],
+   "audience": [
+    "task-extenders"
+   ],
+   "category": "extend",
+   "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Extend table row 'Gryphon and on | 50 | No'",
+   "cost": 50,
+   "effect": "Number of gryphons assigned is increased by 80.",
+   "id": "gryphon_and_on",
+   "name": "Gryphon and on",
+   "priority": 4,
+   "rationale": "Inference: the wiki ranks no extensions; extending works 'across all slayer masters that can assign it regardless of the quantity they can originally assign' and the bulk button gives 'a 5% discount'. Priority reflects my judgement that this task is less commonly extended; no wiki text supports the ordering.",
+   "repeatable": false,
+   "requirements": [
+    "Must be able to receive the task"
+   ],
+   "tab": "Extend",
+   "toggle": "one-off purchase, but must be paid again to reactivate once disabled"
+  },
+  {
+   "affectsTasks": [
+    "Frost dragons"
+   ],
+   "audience": [
+    "task-extenders"
+   ],
+   "category": "extend",
+   "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Extend table row 'I see Dragons | 100 | No'",
+   "cost": 100,
+   "effect": "Number of frost dragons assigned is increased to 180-240.",
+   "id": "i_see_dragons",
+   "name": "I see Dragons",
+   "priority": 4,
+   "rationale": "Inference: the wiki ranks no extensions; extending works 'across all slayer masters that can assign it regardless of the quantity they can originally assign' and the bulk button gives 'a 5% discount'. Priority reflects my judgement that this task is less commonly extended; no wiki text supports the ordering.",
+   "repeatable": false,
+   "requirements": [
+    "Must be able to receive the task"
+   ],
+   "tab": "Extend",
+   "toggle": "one-off purchase, but must be paid again to reactivate once disabled"
+  },
+  {
+   "affectsTasks": [
+    "(all tasks)"
+   ],
+   "audience": [
+    "everyone",
+    "ironman"
+   ],
+   "category": "buy",
+   "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Buy table StoreLine 'Slayer ring (8)' sell=75",
+   "cost": 75,
+   "effect": "An equippable ring that provides all the functions of an Enchanted gem, and provides 8 charges for teleporting to useful Slayer sites.",
+   "id": "slayer_ring_8",
+   "name": "Slayer ring (8)",
+   "priority": 3,
+   "rationale": "Inference: convenience teleports; players with Ring Bling (75 Crafting) can craft instead of buying.",
+   "repeatable": true,
+   "requirements": [
+    "None"
+   ],
+   "tab": "Buy",
+   "toggle": "n/a (item purchase)"
+  },
+  {
+   "affectsTasks": [
+    "Turoth",
+    "Kurask"
+   ],
+   "audience": [
+    "ranged slayers",
+    "ironman"
+   ],
+   "category": "buy",
+   "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Buy table StoreLine 'Broad bolts (x250)' sell=35",
+   "cost": 35,
+   "effect": "Bolts that can damage Turoths and Kurask. Level 55 Slayer and 61 Ranged, alongside a suitable crossbow, are required to fire these bolts.",
+   "id": "broad_bolts_x250",
+   "name": "Broad bolts (x250)",
+   "priority": 4,
+   "rationale": "Inference: only needed for ranged Turoth/Kurask tasks.",
+   "repeatable": true,
+   "requirements": [
+    "55 Slayer",
+    "61 Ranged",
+    "suitable crossbow"
+   ],
+   "tab": "Buy",
+   "toggle": "n/a (item purchase)"
+  },
+  {
+   "affectsTasks": [
+    "Turoth",
+    "Kurask"
+   ],
+   "audience": [
+    "ranged slayers",
+    "ironman"
+   ],
+   "category": "buy",
+   "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Buy table StoreLine 'Broad arrows (x250)' sell=35",
+   "cost": 35,
+   "effect": "Arrows that can damage Turoths and Kurask. Level 55 Slayer and 50 Ranged, alongside a suitable bow, are required to fire these arrows.",
+   "id": "broad_arrows_x250",
+   "name": "Broad arrows (x250)",
+   "priority": 4,
+   "rationale": "Inference: only needed for ranged Turoth/Kurask tasks.",
+   "repeatable": true,
+   "requirements": [
+    "55 Slayer",
+    "50 Ranged",
+    "suitable bow"
+   ],
+   "tab": "Buy",
+   "toggle": "n/a (item purchase)"
+  },
+  {
+   "affectsTasks": [
+    "(all tasks)"
+   ],
+   "audience": [
+    "ironman",
+    "everyone"
+   ],
+   "category": "buy",
+   "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Buy table StoreLine 'Herb sack' sell=750",
+   "cost": 750,
+   "effect": "Stores up to 30 of each type of grimy herb (for a total of 450 herbs). Level 58 Herblore is required to use it.",
+   "id": "herb_sack",
+   "name": "Herb sack",
+   "priority": 2,
+   "rationale": "Inference: quality-of-life for herb drops on long tasks; the wiki gives no ranking.",
+   "repeatable": true,
+   "requirements": [
+    "58 Herblore to use"
+   ],
+   "tab": "Buy",
+   "toggle": "n/a (item purchase)"
+  },
+  {
+   "affectsTasks": [
+    "(all tasks)"
+   ],
+   "audience": [
+    "everyone",
+    "ironman"
+   ],
+   "category": "buy",
+   "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Buy table StoreLine 'Rune pouch' sell=750",
+   "cost": 750,
+   "effect": "Stores up to 16,000 of three types of runes. Only one can be owned. Can also be obtained by exchanging a rune pouch note at a bank.",
+   "id": "rune_pouch",
+   "name": "Rune pouch",
+   "priority": 2,
+   "rationale": "Inference: one-time inventory-saving purchase for mages; note the alternative source 'exchanging a rune pouch note at a bank'. Cost 'reduced from 1,250 to 750' (7 Nov 2019).",
+   "repeatable": true,
+   "requirements": [
+    "None"
+   ],
+   "tab": "Buy",
+   "toggle": "n/a (item purchase)"
+  },
+  {
+   "affectsTasks": [
+    "(all tasks)"
+   ],
+   "audience": [
+    "wilderness slayers"
+   ],
+   "category": "buy",
+   "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Buy table StoreLine 'Looting bag' sell=10",
+   "cost": 10,
+   "effect": "Within the Wilderness and certain other PvP areas, tradeable items can be stored in the looting bag, enabling you to carry more loot.",
+   "id": "looting_bag",
+   "name": "Looting bag",
+   "priority": 3,
+   "rationale": "Inference: cheap and useful only for Wilderness (Krystilia) tasks; added 3 May 2023.",
+   "repeatable": true,
+   "requirements": [
+    "None"
+   ],
+   "tab": "Buy",
+   "toggle": "n/a (item purchase)"
+  },
+  {
+   "affectsTasks": [
+    "(current task)"
+   ],
+   "audience": [
+    "everyone"
+   ],
+   "category": "block",
+   "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Tasks table 'Cancel task | 30-100'; Slayer.wikitext line 908; Mortimer.wikitext line 21",
+   "cost": 30,
+   "costByMaster": {
+    "Chaeldar": 30,
+    "Duradel/Kuradal": 30,
+    "Konar quo Maten": 30,
+    "Krystilia": 30,
+    "Mazchna/Achtryn": 30,
+    "Mortimer": 100,
+    "Nieve/Steve": 30,
+    "Spria": 30,
+    "Turael/Aya": 30,
+    "Vannaka": 30
+   },
+   "costNote": "Per-master 30 is inferred from 'the usual 30' (Mortimer page) plus the 30-100 range; the Slayer Rewards page itself only gives the range.",
+   "costText": "30-100 (30 at all masters; 100 at Mortimer)",
+   "effect": "Cancels the player's current assignment without penalties.",
+   "id": "cancel_task",
+   "name": "Cancel task",
+   "priority": 3,
+   "rationale": "Wiki: 'players may cancel a task by spending 30 points' (Slayer page); Mortimer: 'skipping a task from Mortimer is significantly more expensive, costing 100 slayer points rather than the usual 30'. The Boss page adds that many 'consider the 30 Slayer point cost to be high' for boss tasks.",
+   "repeatable": true,
+   "requirements": [
+    "None"
+   ],
+   "tab": "Tasks",
+   "toggle": "n/a (per action)"
+  },
+  {
+   "affectsTasks": [
+    "(any task the selected master assigns)"
+   ],
+   "audience": [
+    "everyone",
+    "point-boosting"
+   ],
+   "blockSlots": "'There is a maximum limit of 7 types of assignments that can be blocked on one account - one block slot is given for every 50 quest points the player has. For most slayer masters - with Mortimer being the exception - there are six slots for a total of 300 points needed to use all of them. Additionally, one block slot is available once the player has completed the Elite tier of the Lumbridge & Draynor Diary, which requires a quest cape. In Mortimer's case, there are two block slots available.'",
+   "category": "block",
+   "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Tasks table 'Block task | 40-120' and 27 Aug 2025 change list; Mortimer.wikitext line 21; Slayer_reward_point.wikitext '==Point boosting=='",
+   "cost": 40,
+   "costByMaster": {
+    "Chaeldar": 70,
+    "Duradel/Kuradal": 100,
+    "Konar quo Maten": 80,
+    "Krystilia": 100,
+    "Mazchna/Achtryn": 50,
+    "Mortimer": 120,
+    "Nieve/Steve": 90,
+    "Spria": 40,
+    "Turael/Aya": 40,
+    "Vannaka": 60
+   },
+   "costText": "40-120 (varies by master)",
+   "effect": "Skips the player's current assignment without penalties and permanently removes the assignment from that master's list of possible assignments until unblocked.",
+   "id": "block_task",
+   "name": "Block task",
+   "priority": 2,
+   "rationale": "Wiki-supported: 'When boosting with Turael or Mazchna, the player should seek to block tasks that are slow or tedious' (Slayer_reward_point) and 'Cancelling the removal of monsters allows the monster to be assigned again, but does not refund points'. Each master has its own list: 'Shared block lists only apply to Turael, Aya and Spria, with all other masters having unique block lists.'",
+   "repeatable": true,
+   "requirements": [
+    "Block slots: one per 50 quest points, max 7 total incl. the Elite Lumbridge & Draynor Diary slot; Mortimer has 2 slots"
+   ],
+   "tab": "Tasks",
+   "toggle": "n/a (per action; unblocking is free but does not refund)"
+  },
+  {
+   "affectsTasks": [
+    "(current task)"
+   ],
+   "audience": [
+    "everyone",
+    "point-boosting"
+   ],
+   "category": "block",
+   "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Tasks table 'Store task | 0' and note 'storage'",
+   "cost": 0,
+   "effect": "With Task Storage unlocked, you may store your current Slayer task for free to use at a later date; a task may not be stored if you already have an existing stored task.",
+   "id": "store_task",
+   "name": "Store task",
+   "priority": 2,
+   "rationale": "Wiki-supported: free since 8 May 2024 ('Storing tasks with the Task Storage unlock is now free. Previously, it cost 50 Slayer reward points per task stored.'). Note: 'Blocking a task that is currently in Task Storage does not also skip it.'",
+   "repeatable": true,
+   "requirements": [
+    "Task Storage unlock (500 points)"
+   ],
+   "tab": "Tasks",
+   "toggle": "n/a (per action; requires Task Storage unlock)"
+  },
+  {
+   "affectsTasks": [
+    "(stored task)"
+   ],
+   "audience": [
+    "everyone",
+    "point-boosting"
+   ],
+   "category": "block",
+   "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Tasks table 'Unstore/Swap task | 0'",
+   "cost": 0,
+   "effect": "If you have a stored task, it can be unstored (if the player has no current active task) or swapped with their current task for free.",
+   "id": "unstore_swap_task",
+   "name": "Unstore/Swap task",
+   "priority": 2,
+   "rationale": "Wiki-supported: 'Players can now unstore their stored task without needing to complete or cancel their current one' (15 May 2024).",
+   "repeatable": true,
+   "requirements": [
+    "Task Storage unlock (500 points)"
+   ],
+   "tab": "Tasks",
+   "toggle": "n/a (per action; requires Task Storage unlock)"
+  }
+ ]
 }
