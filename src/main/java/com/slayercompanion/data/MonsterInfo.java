@@ -25,24 +25,44 @@
 package com.slayercompanion.data;
 
 import java.util.List;
-import java.util.Map;
 import javax.annotation.Nullable;
 import lombok.Data;
 
-/**
- * A wiki "Recommended equipment" table: for each slot, tiers from best (index 0) to budget, each
- * tier holding one or more interchangeable item names.
- */
+/** Monster infobox facts for one of the task's monster pages. */
 @Data
-public class GearTable
+public class MonsterInfo
 {
+	private String name;
 	@Nullable
-	private String label;
-	/** "Melee", "Ranged", "Magic" or similar. */
+	private String page;
 	@Nullable
-	private String style;
-	/** Slot name (head, neck, cape, body, legs, weapon, shield, ammo, hands, feet, ring, special) -> tiers, best first. */
-	private Map<String, List<List<GearItem>>> slots;
+	private List<Integer> npcIds;
 	@Nullable
-	private Map<String, String> slotNotes;
+	private Integer combat;
+	@Nullable
+	private Integer hitpoints;
+	@Nullable
+	private List<String> attackStyles;
+	@Nullable
+	private String maxHit;
+	@Nullable
+	private String weakness;
+	@Nullable
+	private String aggressive;
+	@Nullable
+	private String poisonous;
+	@Nullable
+	private String immuneCannon;
+	@Nullable
+	private String immuneThrall;
+	@Nullable
+	private String attributes;
+	@Nullable
+	private Integer slayerLevel;
+	@Nullable
+	private Integer slayerXp;
+	@Nullable
+	private Integer attackSpeed;
+	@Nullable
+	private Integer size;
 }

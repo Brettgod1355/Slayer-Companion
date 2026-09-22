@@ -25,6 +25,7 @@
 package com.slayercompanion.gear;
 
 import com.slayercompanion.SlayerCompanionConfig;
+import com.slayercompanion.data.GearItem;
 import com.slayercompanion.data.GearTable;
 import com.slayercompanion.data.TaskInfo;
 import java.util.ArrayList;
@@ -100,7 +101,7 @@ public class GearAdvisor
 		}
 		for (String slot : slots)
 		{
-			List<List<String>> tiers = table.getSlots().get(slot);
+			List<List<GearItem>> tiers = table.getSlots().get(slot);
 			if (tiers == null || tiers.isEmpty())
 			{
 				continue;
@@ -110,7 +111,7 @@ public class GearAdvisor
 		return out;
 	}
 
-	private SlotAdvice adviseSlot(String slot, List<List<String>> tiers, @Nullable String note)
+	private SlotAdvice adviseSlot(String slot, List<List<GearItem>> tiers, @Nullable String note)
 	{
 		String ownedBest = null;
 		Integer ownedId = null;
@@ -118,21 +119,15 @@ public class GearAdvisor
 		boolean equipped = false;
 		for (int i = 0; i < tiers.size() && ownedBest == null; i++)
 		{
-			for (String name : tiers.get(i))
+			for (GearItem item : tiers.get(i))
 			{
-				for (int id : resolver.resolve(name))
+				Integer id = ownedId(item);
+				if (id != null)
 				{
-					if (owned.owns(id))
-					{
-						ownedBest = name;
-						ownedId = id;
-						ownedTier = i + 1;
-						equipped = owned.equipment().containsKey(id);
-						break;
-					}
-				}
-				if (ownedBest != null)
-				{
+					ownedBest = item.label();
+					ownedId = id;
+					ownedTier = i + 1;
+					equipped = owned.equipment().containsKey(id);
 					break;
 				}
 			}
@@ -141,10 +136,35 @@ public class GearAdvisor
 		int upTo = ownedBest == null ? tiers.size() : ownedTier - 1;
 		for (int i = 0; i < upTo; i++)
 		{
-			missing.addAll(tiers.get(i));
+			for (GearItem item : tiers.get(i))
+			{
+				missing.add(item.label());
+			}
 		}
-		return new SlotAdvice(slot, tiers.get(0), ownedBest, ownedId, ownedTier, equipped,
+		List<String> best = new ArrayList<>();
+		for (GearItem item : tiers.get(0))
+		{
+			best.add(item.label());
+		}
+		return new SlotAdvice(slot, best, ownedBest, ownedId, ownedTier, equipped,
 			Collections.unmodifiableList(missing), note);
+	}
+
+	/** Canonical id of an owned item matching any of the entry's names, else null. */
+	@Nullable
+	public Integer ownedId(GearItem item)
+	{
+		for (String candidate : item.candidates())
+		{
+			for (int id : resolver.resolve(candidate))
+			{
+				if (owned.owns(id))
+				{
+					return id;
+				}
+			}
+		}
+		return null;
 	}
 
 	/** Names of required/useful items the player does not own at all. */

@@ -25,6 +25,7 @@
 package com.slayercompanion.ui;
 
 import com.slayercompanion.data.MasterAssignmentInfo;
+import com.slayercompanion.data.MonsterInfo;
 import com.slayercompanion.data.TaskInfo;
 import com.slayercompanion.task.CurrentTask;
 import java.awt.Color;
@@ -74,7 +75,7 @@ class TaskTab extends JPanel
 				if (info.getStyleNotes() != null && !info.getStyleNotes().isEmpty())
 				{
 					card.add(Ui.gap(4));
-					card.add(Ui.wrap(info.getStyleNotes(), Ui.MUTED));
+					card.add(Ui.wrap(String.join(" \u2022 ", info.getStyleNotes()), Ui.MUTED));
 				}
 				col.add(card);
 				col.add(Ui.gap(4));
@@ -94,6 +95,45 @@ class TaskTab extends JPanel
 			if (info.getSlayerLevel() != null)
 			{
 				facts.add(Ui.keyValue("Slayer level", String.valueOf(info.getSlayerLevel())));
+			}
+			if (info.getRequirements() != null && info.getRequirements().getOther() != null
+				&& !info.getRequirements().getOther().isEmpty())
+			{
+				facts.add(Ui.keyValue("Requires", info.getRequirements().getOther()));
+			}
+			for (MonsterInfo mon : info.monstersOrEmpty())
+			{
+				if (mon.getCombat() == null && mon.getMaxHit() == null)
+				{
+					continue;
+				}
+				StringBuilder sb = new StringBuilder();
+				if (mon.getCombat() != null)
+				{
+					sb.append("lvl ").append(mon.getCombat());
+				}
+				if (mon.getHitpoints() != null)
+				{
+					sb.append(", ").append(mon.getHitpoints()).append(" hp");
+				}
+				if (mon.getAttackStyles() != null && !mon.getAttackStyles().isEmpty())
+				{
+					sb.append(", ").append(String.join("/", mon.getAttackStyles()));
+				}
+				if (mon.getMaxHit() != null)
+				{
+					sb.append(", max ").append(mon.getMaxHit());
+				}
+				if ("Yes".equalsIgnoreCase(mon.getImmuneCannon()))
+				{
+					sb.append(", cannon-immune");
+				}
+				if (mon.getWeakness() != null && !mon.getWeakness().isEmpty())
+				{
+					sb.append(", weak: ").append(mon.getWeakness());
+				}
+				facts.add(Ui.keyValue(mon.getName(), sb.toString()));
+				break;
 			}
 			if (info.getSuperior() != null && !info.getSuperior().isEmpty())
 			{

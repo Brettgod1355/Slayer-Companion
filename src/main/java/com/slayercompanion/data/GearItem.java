@@ -24,25 +24,47 @@
  */
 package com.slayercompanion.data;
 
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 import javax.annotation.Nullable;
 import lombok.Data;
 
 /**
- * A wiki "Recommended equipment" table: for each slot, tiers from best (index 0) to budget, each
- * tier holding one or more interchangeable item names.
+ * One entry in a wiki gear tier. {@code name} is the linked page, {@code pic} the pictured item
+ * (often the concrete variant, e.g. "Imbued Saradomin cape" for "God capes") and {@code txt} the
+ * displayed label.
  */
 @Data
-public class GearTable
+public class GearItem
 {
+	private String name;
 	@Nullable
-	private String label;
-	/** "Melee", "Ranged", "Magic" or similar. */
+	private String pic;
 	@Nullable
-	private String style;
-	/** Slot name (head, neck, cape, body, legs, weapon, shield, ammo, hands, feet, ring, special) -> tiers, best first. */
-	private Map<String, List<List<GearItem>>> slots;
-	@Nullable
-	private Map<String, String> slotNotes;
+	private String txt;
+
+	/** What to show the player. */
+	public String label()
+	{
+		return txt != null && !txt.isEmpty() ? txt : name;
+	}
+
+	/** Item names to try when resolving to an item id, most specific first. */
+	public List<String> candidates()
+	{
+		List<String> out = new ArrayList<>(3);
+		if (pic != null && !pic.isEmpty())
+		{
+			out.add(pic);
+		}
+		if (name != null && !name.isEmpty() && !out.contains(name))
+		{
+			out.add(name);
+		}
+		if (txt != null && !txt.isEmpty() && !out.contains(txt))
+		{
+			out.add(txt);
+		}
+		return out;
+	}
 }

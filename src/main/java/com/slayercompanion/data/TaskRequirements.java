@@ -25,24 +25,26 @@
 package com.slayercompanion.data;
 
 import java.util.List;
-import java.util.Map;
 import javax.annotation.Nullable;
 import lombok.Data;
 
-/**
- * A wiki "Recommended equipment" table: for each slot, tiers from best (index 0) to budget, each
- * tier holding one or more interchangeable item names.
- */
+/** Level and quest requirements from the task infobox. */
 @Data
-public class GearTable
+public class TaskRequirements
 {
+	@Data
+	public static class SkillLevel
+	{
+		private String skill;
+		private int level;
+	}
+
 	@Nullable
-	private String label;
-	/** "Melee", "Ranged", "Magic" or similar. */
+	private Integer combat;
 	@Nullable
-	private String style;
-	/** Slot name (head, neck, cape, body, legs, weapon, shield, ammo, hands, feet, ring, special) -> tiers, best first. */
-	private Map<String, List<List<GearItem>>> slots;
+	private Integer slayer;
 	@Nullable
-	private Map<String, String> slotNotes;
+	private String other;
+	@Nullable
+	private List<SkillLevel> skills;
 }

@@ -202,11 +202,14 @@ public class SlayerData
 			{
 				if (g.getSlots() != null)
 				{
-					for (List<List<String>> tiers : g.getSlots().values())
+					for (List<List<GearItem>> tiers : g.getSlots().values())
 					{
-						for (List<String> tier : tiers)
+						for (List<GearItem> tier : tiers)
 						{
-							addAll(names, tier);
+							for (GearItem item : tier)
+							{
+								addAll(names, item.candidates());
+							}
 						}
 					}
 				}

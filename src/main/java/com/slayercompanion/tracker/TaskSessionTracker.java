@@ -101,6 +101,8 @@ public class TaskSessionTracker
 	private int lastSlayerXp = -1;
 	private int dirtyWrites;
 	private Function<String, List<String>> alternativeNames = name -> Collections.emptyList();
+	private Function<String, java.util.Set<Integer>> targetNpcIds = name -> Collections.emptySet();
+	private java.util.Set<Integer> npcIds = Collections.emptySet();
 
 	@Inject
 	TaskSessionTracker(Client client, ItemManager itemManager, ConfigManager configManager, EventBus eventBus,
@@ -382,12 +384,19 @@ public class TaskSessionTracker
 	private void rebuildTargetNames(String taskName)
 	{
 		targetNames.clear();
+		npcIds = targetNpcIds.apply(taskName);
 		targetNames.add(targetNamePattern(taskName));
 		targetNames.add(targetNamePattern(taskName.replaceAll("s$", "")));
 		for (String alt : alternativeNames.apply(taskName))
 		{
 			targetNames.add(targetNamePattern(alt));
 		}
+	}
+
+	/** Supplies the wiki's NPC ids for a task, matched before the name patterns. Set by the plugin. */
+	public void setTargetNpcIds(Function<String, java.util.Set<Integer>> provider)
+	{
+		this.targetNpcIds = provider == null ? name -> Collections.emptySet() : provider;
 	}
 
 	/** Supplies extra NPC names that count for a task (superiors, boss variants). Set by the plugin. */
@@ -403,7 +412,15 @@ public class TaskSessionTracker
 
 	private boolean isTarget(NPCComposition composition)
 	{
-		if (composition == null || composition.getName() == null)
+		if (composition == null)
+		{
+			return false;
+		}
+		if (npcIds.contains(composition.getId()))
+		{
+			return true;
+		}
+		if (composition.getName() == null)
 		{
 			return false;
 		}

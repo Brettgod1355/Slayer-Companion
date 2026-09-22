@@ -175,6 +175,7 @@ public class SlayerCompanionPlugin extends Plugin
 		}
 
 		sessionTracker.setAlternativeNames(name -> data.task(name).map(TaskInfo::alternativesOrEmpty).orElse(Collections.emptyList()));
+		sessionTracker.setTargetNpcIds(name -> data.task(name).map(TaskInfo::npcIds).orElse(Collections.emptySet()));
 		itemIndex.startUp();
 		itemIndex.want(data.allItemNames());
 		ownedItems.startUp();

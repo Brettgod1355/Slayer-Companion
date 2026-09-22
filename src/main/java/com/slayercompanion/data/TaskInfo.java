@@ -55,7 +55,7 @@ public class TaskInfo
 	@Nullable
 	private String recommendedStyle;
 	@Nullable
-	private String styleNotes;
+	private List<String> styleNotes;
 	@Nullable
 	private List<String> requiredItems;
 	@Nullable
@@ -67,11 +67,9 @@ public class TaskInfo
 	@Nullable
 	private Integer xpPerKill;
 	@Nullable
-	private Integer slayerLevel;
+	private TaskRequirements requirements;
 	@Nullable
-	private Integer combatLevel;
-	@Nullable
-	private String otherRequirements;
+	private List<MonsterInfo> monsters;
 	@Nullable
 	private Map<String, MasterAssignmentInfo> masters;
 	@Nullable
@@ -83,7 +81,7 @@ public class TaskInfo
 	@Nullable
 	private List<TaskLocation> locations;
 	@Nullable
-	private List<ShopOption> shopOptions;
+	private List<ShopOption> unlocks;
 	@Nullable
 	private String notes;
 
@@ -100,5 +98,36 @@ public class TaskInfo
 	public List<String> alternativesOrEmpty()
 	{
 		return alternatives == null ? Collections.emptyList() : alternatives;
+	}
+
+	public List<MonsterInfo> monstersOrEmpty()
+	{
+		return monsters == null ? Collections.emptyList() : monsters;
+	}
+
+	/** All NPC ids the wiki lists for this task's monsters. */
+	public java.util.Set<Integer> npcIds()
+	{
+		java.util.Set<Integer> ids = new java.util.HashSet<>();
+		for (MonsterInfo m : monstersOrEmpty())
+		{
+			if (m.getNpcIds() != null)
+			{
+				ids.addAll(m.getNpcIds());
+			}
+		}
+		return ids;
+	}
+
+	@Nullable
+	public Integer getSlayerLevel()
+	{
+		return requirements == null ? null : requirements.getSlayer();
+	}
+
+	@Nullable
+	public Integer getCombatLevel()
+	{
+		return requirements == null ? null : requirements.getCombat();
 	}
 }

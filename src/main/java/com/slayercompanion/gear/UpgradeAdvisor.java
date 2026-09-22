@@ -24,6 +24,7 @@
  */
 package com.slayercompanion.gear;
 
+import com.slayercompanion.data.GearItem;
 import com.slayercompanion.data.GearTable;
 import com.slayercompanion.data.SlayerData;
 import com.slayercompanion.data.TaskInfo;
@@ -118,9 +119,9 @@ public class UpgradeAdvisor
 				{
 					continue;
 				}
-				for (Map.Entry<String, List<List<String>>> slot : table.getSlots().entrySet())
+				for (Map.Entry<String, List<List<GearItem>>> slot : table.getSlots().entrySet())
 				{
-					List<List<String>> tiers = slot.getValue();
+					List<List<GearItem>> tiers = slot.getValue();
 					int bestOwnedTier = ownedTier(tiers);
 					for (int t = 0; t < Math.min(TOP_TIERS, tiers.size()); t++)
 					{
@@ -129,12 +130,13 @@ public class UpgradeAdvisor
 							break;
 						}
 						double tierWeight = t == 0 ? 1.0 : 0.5;
-						for (String name : tiers.get(t))
+						for (GearItem item : tiers.get(t))
 						{
-							if (isOwned(name))
+							if (isOwned(item))
 							{
 								continue;
 							}
+							String name = item.label();
 							score.merge(name, w * tierWeight, Double::sum);
 							helps.computeIfAbsent(name, k -> new LinkedHashSet<>()).add(task.getTask());
 							slotOf.putIfAbsent(name, slot.getKey());
@@ -157,13 +159,13 @@ public class UpgradeAdvisor
 		return Collections.unmodifiableList(out.size() > MAX_RESULTS ? out.subList(0, MAX_RESULTS) : out);
 	}
 
-	private int ownedTier(List<List<String>> tiers)
+	private int ownedTier(List<List<GearItem>> tiers)
 	{
 		for (int i = 0; i < tiers.size(); i++)
 		{
-			for (String name : tiers.get(i))
+			for (GearItem item : tiers.get(i))
 			{
-				if (isOwned(name))
+				if (isOwned(item))
 				{
 					return i + 1;
 				}
@@ -172,13 +174,16 @@ public class UpgradeAdvisor
 		return 0;
 	}
 
-	private boolean isOwned(String name)
+	private boolean isOwned(GearItem item)
 	{
-		for (int id : resolver.resolve(name))
+		for (String candidate : item.candidates())
 		{
-			if (owned.owns(id))
+			for (int id : resolver.resolve(candidate))
 			{
-				return true;
+				if (owned.owns(id))
+				{
+					return true;
+				}
 			}
 		}
 		return false;
