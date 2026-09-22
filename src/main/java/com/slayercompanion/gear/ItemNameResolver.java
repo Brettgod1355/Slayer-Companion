@@ -50,12 +50,20 @@ public class ItemNameResolver
 	};
 
 	private final ItemManager itemManager;
+	private final ItemIndex index;
 	private final Map<String, List<Integer>> cache = new HashMap<>();
 
 	@Inject
-	ItemNameResolver(ItemManager itemManager)
+	ItemNameResolver(ItemManager itemManager, ItemIndex index)
 	{
 		this.itemManager = itemManager;
+		this.index = index;
+	}
+
+	/** Drop cached lookups (call when the item index finishes scanning). */
+	public synchronized void invalidate()
+	{
+		cache.clear();
 	}
 
 	/** All item ids whose name matches, exact name first. Empty when nothing matches. */
@@ -98,12 +106,23 @@ public class ItemNameResolver
 			}
 		}
 		List<Integer> result = Collections.unmodifiableList(ids);
-		cache.put(key, result);
+		if (index.isComplete() || !ids.isEmpty())
+		{
+			cache.put(key, result);
+		}
 		return result;
 	}
 
 	private void addExact(String name, List<Integer> into)
 	{
+		// The client's own item definitions cover untradeables; the price list covers the rest.
+		for (int id : index.ids(name))
+		{
+			if (!into.contains(id))
+			{
+				into.add(id);
+			}
+		}
 		for (ItemPrice p : itemManager.search(name))
 		{
 			if (p.getName().equalsIgnoreCase(name))

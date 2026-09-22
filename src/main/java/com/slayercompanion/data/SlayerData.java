@@ -190,6 +190,72 @@ public class SlayerData
 		return areaRules;
 	}
 
+	/** Every item name the bundled tasks mention (gear tables, example setups, required/useful items). */
+	public java.util.Set<String> allItemNames()
+	{
+		java.util.Set<String> names = new java.util.HashSet<>();
+		for (TaskInfo t : tasks())
+		{
+			addAll(names, t.getRequiredItems());
+			addAll(names, t.getUsefulItems());
+			for (GearTable g : t.gearTablesOrEmpty())
+			{
+				if (g.getSlots() != null)
+				{
+					for (List<List<String>> tiers : g.getSlots().values())
+					{
+						for (List<String> tier : tiers)
+						{
+							addAll(names, tier);
+						}
+					}
+				}
+			}
+			if (t.getExampleSetups() != null)
+			{
+				for (ExampleSetup e : t.getExampleSetups())
+				{
+					if (e.getEquipment() != null)
+					{
+						addAll(names, e.getEquipment().values());
+					}
+					addAll(names, e.getInventory());
+					addAll(names, e.getRunePouch());
+				}
+			}
+		}
+		return names;
+	}
+
+	private static void addAll(java.util.Set<String> into, @Nullable java.util.Collection<String> names)
+	{
+		if (names == null)
+		{
+			return;
+		}
+		for (String n : names)
+		{
+			if (n == null)
+			{
+				continue;
+			}
+			// "Nose peg or Slayer helmet" lists alternatives; index each.
+			for (String part : n.split("\\s+or\\s+"))
+			{
+				String p = part.trim();
+				if (!p.isEmpty())
+				{
+					into.add(p);
+					int paren = p.indexOf(" (");
+					if (paren > 0)
+					{
+						into.add(p.substring(0, paren));
+					}
+				}
+			}
+		}
+	}
+
 	public static String normalise(String s)
 	{
 		String n = s.toLowerCase().trim();

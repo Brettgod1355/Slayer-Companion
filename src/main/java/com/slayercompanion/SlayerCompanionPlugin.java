@@ -34,6 +34,8 @@ import com.slayercompanion.events.TaskChanged;
 import com.slayercompanion.game.LiveSlayerCatalog;
 import com.slayercompanion.gear.GearAdvisor;
 import com.slayercompanion.gear.GearSetup;
+import com.slayercompanion.gear.ItemIndex;
+import com.slayercompanion.gear.ItemNameResolver;
 import com.slayercompanion.gear.OwnedItems;
 import com.slayercompanion.gear.SetupStore;
 import com.slayercompanion.gear.SlotAdvice;
@@ -116,6 +118,10 @@ public class SlayerCompanionPlugin extends Plugin
 	@Inject
 	private OwnedItems ownedItems;
 	@Inject
+	private ItemIndex itemIndex;
+	@Inject
+	private ItemNameResolver itemNameResolver;
+	@Inject
 	private LiveSlayerCatalog catalog;
 	@Inject
 	private LocationService locationService;
@@ -147,6 +153,7 @@ public class SlayerCompanionPlugin extends Plugin
 	private volatile WildernessStatus overlayWilderness;
 	private int tickCounter;
 	private boolean refreshQueued;
+	private boolean indexWasComplete;
 
 	@Override
 	protected void startUp()
@@ -168,6 +175,8 @@ public class SlayerCompanionPlugin extends Plugin
 		}
 
 		sessionTracker.setAlternativeNames(name -> data.task(name).map(TaskInfo::alternativesOrEmpty).orElse(Collections.emptyList()));
+		itemIndex.startUp();
+		itemIndex.want(data.allItemNames());
 		ownedItems.startUp();
 		sessionTracker.startUp();
 		taskTracker.startUp();
@@ -181,6 +190,8 @@ public class SlayerCompanionPlugin extends Plugin
 		taskTracker.shutDown();
 		sessionTracker.shutDown();
 		ownedItems.shutDown();
+		itemIndex.shutDown();
+		itemNameResolver.invalidate();
 		mapMarkerService.clear();
 		overlayManager.remove(overlay);
 		clientToolbar.removeNavigation(navButton);
@@ -268,6 +279,13 @@ public class SlayerCompanionPlugin extends Plugin
 	@Subscribe
 	public void onGameTick(GameTick tick)
 	{
+		if (!indexWasComplete && itemIndex.isComplete())
+		{
+			// Names looked up before the scan finished may have missed untradeables; redo them.
+			indexWasComplete = true;
+			itemNameResolver.invalidate();
+			requestRefresh();
+		}
 		if (++tickCounter % WILDERNESS_REFRESH_TICKS != 0 || client.getGameState() != GameState.LOGGED_IN)
 		{
 			return;
