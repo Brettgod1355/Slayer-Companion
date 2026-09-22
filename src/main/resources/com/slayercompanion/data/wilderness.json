@@ -1,0 +1,1393 @@
+{
+  "meta": {
+    "generated": "2026-09-22",
+    "groundRule": "Every quoted string was verified verbatim against the named file at build time (assert in build_wilderness.py). Fields marked 'unknown' have no support in opened sources.",
+    "pluginPolicy": "Never emit skull or PKer warnings; RuneLite rejects PK/Skull warnings. Mechanics are for informational display only."
+  },
+  "itemsKeptOnDeath": {
+    "defaultKept": 3,
+    "protectItemBonus": 1,
+    "skulledKept": 0,
+    "skulledWithProtectItemKept": 1,
+    "unskulledWithProtectItemKept": 4,
+    "countsQuote": {
+      "quote": "Whenever an item is not in the limited amount of protected items (four without [[Skull (status)|skull]] and with [[protect item]], three without either skull or prayer, one with both skull and protect item, zero with skull and without prayer), it will be subject to varying rules, depending on what type of item it is.",
+      "source": "Items_Kept_on_Death.wikitext"
+    },
+    "protectItemQuote": {
+      "quote": "'''Protect Item''' is a prayer unlocked at level 25 [[Prayer]]. If the player is [[skulled]], it will allow the player to [[Items Kept on Death|keep one item upon death]], in most other situations it will allow four.",
+      "source": "Protect_Item.wikitext"
+    },
+    "protectItemHighRisk": {
+      "quote": "It cannot be used in [[high-risk world]]s. Though [[Ultimate Ironmen]] can activate this prayer, they will not benefit from it.",
+      "source": "Protect_Item.wikitext"
+    },
+    "valueBasis": "Highest effective Grand Exchange value first, then alchemy value if the item lacks an effective GE value (not a separate 'death value').",
+    "valueBasisQuote": {
+      "quote": "These items are decided selected in order of value, with the highest value determined first by effective [[Grand Exchange]] value, and then by [[alchemy]] [[value]] if the item lacks an effective Grand Exchange value.",
+      "source": "Items_Kept_on_Death.wikitext"
+    },
+    "valueBasisQuote2": {
+      "quote": "If a player is '''not''' [[File:Skull_(status)_icon.png]] [[Skull (status)|skulled]] , they keep the three most valuable items they are carrying, this is based upon the highest effective [[Grand Exchange]] or [[alchemy]] [[value]] in gold.",
+      "source": "Items_Kept_on_Death.wikitext"
+    },
+    "valueTieBreak": {
+      "quote": "When dying with two or more objects of the same value, the item kept on death is determined based on several aspects, among which is the location in the player's inventory.",
+      "source": "Items_Kept_on_Death.wikitext"
+    },
+    "barrowsValueNote": {
+      "quote": "[[Barrows equipment]] is protected upon a PvP death based on the broken version's value, not the value of the working version.",
+      "source": "Wilderness.wikitext"
+    },
+    "untradeableSlotNote": {
+      "quote": "If an item is both one of the three highest valued and an untradeable item, it will still take up one of the three slots for tradeable items.",
+      "source": "Items_Kept_on_Death.wikitext"
+    },
+    "untradeables": "Below 20 Wilderness: most untradeables go to the victim's grave; combat-useful untradeables break (kept broken, repair cost dropped as coins to killer) or convert to tradeable components/coins for the killer. Above 20 Wilderness: non-combat untradeables are kept; combat-useful untradeables break or become mangled (if Trouver-locked) or are converted to coins/tradeable components for the killer; some high-tier unlocked breakables are lost completely above 20.",
+    "untradeablesBelow20Quote": {
+      "quote": "If the player dies after taking any player damage below 20 Wilderness, the player will only [[Items Kept on Death|keep]] their three most valuable protected items. Any untradeable items will either be converted into their tradeable form and be offered to the killer, or break, and the repair cost will be offered to the killer in coins and the broken item will remain in the victim's inventory. Some untradeable quest reward items with notable combat stats that are purchasable from an NPC or shop, such as the [[barrelchest anchor]] or [[barrows gloves]], will also turn into coins for the killer. All other untradeable items that do not fit these special categories will be stored in a [[grave]] where the victim died.",
+      "source": "Items_Kept_on_Death.wikitext"
+    },
+    "untradeablesAbove20Quote": {
+      "quote": "If the player dies after taking player damage above 20 Wilderness, almost the same type of death as above occurs. However, [[(l)|some]] high tier broken items will be permanently lost, while the repair cost will be dropped for the killer. If these specific items have been locked via [[trouver parchment]], they will instead be kept upon death still locked but in mangled form, and the killer obtains the repair cost of 500,000 coins per mangled item. As is with under 20 Wilderness, low tier breakable items (which cannot be locked) will be kept in broken form, and other untradeable items will be stored in a [[grave]] where the victim died.",
+      "source": "Items_Kept_on_Death.wikitext"
+    },
+    "rulesOfThumbAbove20": {
+      "quote": "'''Warning''': All non-protected items are lost to the player that killed you. Any untradeable item without any combat use is kept on death. Untradeable items that have use in combat may become [[(broken)|broken]] or [[(mangled)|mangled]] requiring coins to repair, and some may be converted into the item's tradeable components and dropped for the killer.",
+      "source": "Items_Kept_on_Death.wikitext"
+    },
+    "trouverLock": {
+      "quote": "However, for [[(l)|'''some''']] of these breakable items that have high combat bonuses, if a player dies past level 20 Wilderness, they are lost completely. However, this can be avoided by bringing the item and a [[trouver parchment]] to Perdu, who will lock the item to the player. He will charge an additional 500,000 coins to do so. Once an item is locked, it will have an [[(l)]] suffix added to its name. Upon dying a PvP death, unprotected locked items will still become broken up to level 20 Wilderness, but will now become [[mangled]] above level 20 Wilderness instead of being lost completely. The repair fee of a mangled item is 500,000 coins. In all PvP death scenarios, the locked items '''keep''' their locked status.",
+      "source": "Items_Kept_on_Death.wikitext"
+    },
+    "coinConversionRule": {
+      "quote": "Players who kill another player with unprotected breakable items will receive coins equivalent to the repair cost for their broken items, or 500,000 coins each for mangled items.",
+      "source": "Items_Kept_on_Death.wikitext"
+    },
+    "coinConversionExampleInfernal": {
+      "quote": "Turns into a tiny pile of coins that is dropped to the PKer.",
+      "source": "Items_Kept_on_Death.wikitext"
+    },
+    "wildernessPageConversion": {
+      "quote": "'''Upon death in PvP combat above level 20 Wilderness, certain unprotected untradeable items (such as infernal capes) will be converted into [[coins]]''' if not [[locked]], and players must obtain the item again from its original source. Some untradeable items (such as fire capes) turn into [[(broken)#PvP_breakable_items|broken]] items in a PvP death, while other untradeable items, such as [[graceful clothing]], will go to the gravestone.",
+      "source": "Wilderness.wikitext"
+    },
+    "slayerHelmet": {
+      "quote": "Dropped to the PKer as a [[black mask]]. The imbue cost is refunded to the victim. The other parts are lost.",
+      "source": "Items_Kept_on_Death.wikitext"
+    },
+    "alwaysLost": {
+      "quote": "Certain items cannot be kept upon an unsafe death. This is regardless of whether the item is the most valuable item, or if [[Protect Item]] [[prayer]] is used. When the player dies, the item is lost forever and will not appear to other players.",
+      "source": "Items_Kept_on_Death.wikitext"
+    },
+    "alwaysLostExamples": [
+      "Clue box",
+      "Chronicle",
+      "Looting bag (contents treated as unprotected)",
+      "Rune pouch (if PvP death)",
+      "Bolt pouch (if PvP death)",
+      "League trophies",
+      "Items with no ground state",
+      "Most untradeable event rewards",
+      "Salamanders (run away)",
+      "Ancient artefacts"
+    ],
+    "alwaysKept": {
+      "quote": "The untradeable items in the following list are kept on death in the inventory on PvM '''and''' PvP death, regardless of if they were one of your 3 most valuable items.",
+      "source": "Items_Kept_on_Death.wikitext"
+    },
+    "alwaysKeptExamples": [
+      "Amulet of the Eye",
+      "Butler's uniform (top/bottom)",
+      "Crystal chime",
+      "Dark squall hood/robe top/robe bottom",
+      "Door key (Witch's House)",
+      "Emissary hood/robe top/robe bottom/sandals",
+      "Giantsoul amulet",
+      "Old school bond",
+      "Sapphire lantern",
+      "Skavid map",
+      "Steel key ring",
+      "Strange old lockpick",
+      "Captain's log",
+      "Spyglass",
+      "Crowbar",
+      "Current duck",
+      "Boat bottle (full)",
+      "Jeweller's chisel"
+    ],
+    "alwaysKeptAutoProtected": {
+      "quote": "Automatically protected (does not count towards the limited amount of kept items).",
+      "source": "Items_Kept_on_Death.wikitext"
+    },
+    "maxCapeException": {
+      "quote": "The [[Max cape]] and cosmetic versions with no [[(broken)]] state (i.e. [[Ardougne max cape]]) are always kept in inventory in PvP death. They are still sent to the gravestone on unprotected PvM death.",
+      "source": "Items_Kept_on_Death.wikitext"
+    },
+    "rowImbued": {
+      "quote": "The [[ring of wealth (i)]] will always lose its imbued status on death even when it is protected, and {{NoCoins|50,000}} coins will be dropped to the killer if it is a [[PvP]] death.",
+      "source": "Items_Kept_on_Death.wikitext"
+    },
+    "storageContainers2026": {
+      "quote": "Storage containers like the Seed Box or Fish Barrel (and all their variants) won't be lost on death in the Wilderness.",
+      "source": "Wilderness.wikitext"
+    },
+    "killerReceives": "All unprotected tradeable items drop for the player who dealt the most damage (visible only to them for one minute, then to everyone). Untradeable breakables yield their repair cost in coins (500,000 for mangled locked items); some untradeables convert to tradeable components/coins; slayer helmets drop as a black mask; Larran's keys and loot keys go to the killer.",
+    "killerReceivesQuote": {
+      "quote": "Upon death to another player within the [[Wilderness]] or outside a safe zone on a [[PvP world]], '''all non-protected items will drop for the killer''', and can be looted by them.",
+      "source": "Items_Kept_on_Death.wikitext"
+    },
+    "killerReceivesQuote2": {
+      "quote": "If the player dies to other players, all unprotected tradeable items will only be visible to the player who dealt the most damage, lasting for one minute before becoming visible to other players. After this, all other players can see the dropped items for 59 minutes.",
+      "source": "Wilderness.wikitext"
+    },
+    "killerReceivesQuote3": {
+      "quote": "When a player is killed within the Wilderness, all of their lost tradeable items will be dropped for the opponent that has dealt the most damage, and most of their untradeable items will be kept, although some will [[(broken)|break]] and be dropped as coins.",
+      "source": "Wilderness.wikitext"
+    },
+    "pvpDropVisibilityIKOD": {
+      "quote": "The rest of the tradeable items will only appear to the killer for one minute. After that period, they will become visible to all players for four minutes. After four minutes the items will disappear to everyone, and any remaining items will be removed from the game.",
+      "source": "Items_Kept_on_Death.wikitext"
+    },
+    "pvmDeathInWilderness": {
+      "quote": "If the player dies in the [[Wilderness]] without receiving any damage from other players recently, they will experience a normal PvM death as outside instances.",
+      "source": "Items_Kept_on_Death.wikitext"
+    },
+    "pvpVsPvmClassification30s": {
+      "quote": "If a player dies without having been in combat with another player within the last 30 seconds, their death will now be treated as a PvM death instead of a PvP death - even if they were attacked by another player earlier.",
+      "source": "Wilderness.wikitext"
+    },
+    "pvpDeathOutsideWilderness": {
+      "quote": "If a player receives damage from another player, but then exits the [[Wilderness]] and dies within 30 seconds after without banking, healing, or logging out either to a monster or poison, they will undergo a death that is considered a PvP death under 20 Wilderness.",
+      "source": "Items_Kept_on_Death.wikitext"
+    },
+    "revenantCavesRule": {
+      "quote": "If the player dies anywhere within the [[Revenant Caves]] without receiving any damage from other players, their death will be treated as a [[player-versus-player]] death (see below), and they will keep only their [[Items Kept on Death|three most valuable items]]. The rest of the items will be converted into their tradeable form or converted into a fraction of their value in coins if they have no tradeable form and will be visible to all players immediately. These items will sit for 60 minutes up for grabs by all players, after which point they will despawn permanently.",
+      "source": "Items_Kept_on_Death.wikitext"
+    },
+    "gravestoneWilderness": "A PvP death in the Wilderness drops unprotected tradeables for the killer rather than to a grave; untradeables not converted/broken still go to a grave at the death location. Food, potions and the Phoenix necklace are deleted rather than sent to the grave in the Wilderness.",
+    "gravestoneWildernessQuote": {
+      "quote": "Dying in the wilderness will not send food, potions, or the [[Phoenix Necklace]] to a [[Grave]], and they are instead deleted.",
+      "source": "Wilderness.wikitext"
+    },
+    "gravestoneWildernessQuote2": {
+      "quote": "Food, potions, and the Phoenix Necklace no longer go to the Gravestone in the Wilderness, preventing unintended access to an unlimited supply.",
+      "source": "Wilderness.wikitext"
+    },
+    "gravestonePvpVisibleToKiller": {
+      "quote": "Items lost on death will now be in your gravestone. They cost coins to reclaim and in PvP, the gravestone is visible and claimable freely to the player killer.",
+      "source": "Death.wikitext"
+    },
+    "gravestoneTimer": {
+      "quote": "Players have 15 minutes after [[Spawning#Respawn point|respawning]] to return to their grave and collect any items inside. The 15-minute timer does not count down when a player is logged out, [[idle]] for more than 10 seconds, or has the grave interface open.",
+      "source": "Items_Kept_on_Death.wikitext"
+    },
+    "gravestoneFees": {
+      "quote": "* No fee for items worth less than 100k\n* {{Coins|1000}} for each reclaimed item between 100k and 1m\n* {{Coins|10000}} for each reclaimed item between 1m and 10m\n* {{Coins|100000}} for each reclaimed item equal to or above 10m\n* The total combined fees are capped at {{Coins|500000}}",
+      "source": "Items_Kept_on_Death.wikitext"
+    },
+    "ultimateIronman": {
+      "quote": "'''Important note''': [[Ironman Mode|Ultimate Ironmen]] follow different item-loss rules to standard [[Ironmen]] and will drop '''all''' tradeable and untradeable items on the ground upon unsafe death. They are also unable to benefit from [[Protect Item]] despite being able to activate it. They have 60 minutes in game time to reclaim the items either on the tile they died on, or if that was in an instance, the tile other players would find their [[grave]]stone.",
+      "source": "Items_Kept_on_Death.wikitext"
+    },
+    "hardcoreIronman": {
+      "quote": "[[Hardcore ironmen]] will lose their status if they die to a player, just like they would in the event of any other unsafe death.",
+      "source": "Wilderness.wikitext"
+    },
+    "lastMajorChange": {
+      "quote": "Many untradeable items have been changed to be kept on death in the Wilderness. The [[Trouver parchment]] protection system was reworked, changing fees for certain untradeables on death and adding [[(broken)#PvP_breakable_items|(broken)]] and [[(mangled)]] items.",
+      "source": "Items_Kept_on_Death.wikitext"
+    },
+    "lastMajorChangeDate": "17 June 2026 (Bank Tags, Trouver System Rework & More!)",
+    "threeItemingNote": {
+      "quote": "'''3-iteming''' refers to a player limiting themself to only three items when going out into the [[Wilderness]]. In order for this to work, said player must remain [[unskulled]], which means they cannot be the aggressor in [[combat]] towards another player, nor enter the [[Abyss]] without wearing an [[abyssal bracelet]].",
+      "source": "Items_Kept_on_Death.wikitext"
+    }
+  },
+  "skull": {
+    "effect": {
+      "quote": "A '''skull''' is a status effect in ''Old School RuneScape'', where skulled players will drop '''all''' [[Items Kept on Death|items upon death]]. If the [[Protect Item]] prayer is used, players will get to keep their single most valuable item upon death.",
+      "source": "Skull_(status).wikitext"
+    },
+    "causes": [
+      "Attacking another player unprovoked in the Wilderness (a player who has not attacked you)",
+      "Entering the Abyss without an abyssal bracelet equipped",
+      "Asking the Emblem Trader to skull you",
+      "Equipping an amulet of avarice or cape of skulls (remain skulled until 20 minutes after unequipping)",
+      "Multi-target attacks (burst/barrage, chinchompas, specials) hitting players who have not attacked you, in multi-way areas, if PK Skull Prevention is disabled"
+    ],
+    "causesQuote": {
+      "quote": "The skull appears above players who attack other players unprovoked in the [[Wilderness]], or who enter the [[Abyss]] without an [[abyssal bracelet]] equipped. Players can also be skulled by asking the [[Emblem Trader]] to skull them or by equipping an [[amulet of avarice]] or [[cape of skulls]], by which they will remain skulled until 20 minutes after the amulet or cape is unequipped.",
+      "source": "Skull_(status).wikitext"
+    },
+    "multiTargetQuote": {
+      "quote": "In [[multi-way]] areas, players can unintentionally skull themselves with multi-target attacks (e.g. [[Burst spells|burst]] or [[barrage spells]], [[chinchompas]], [[special attacks]]) by using the spell against their aggressor and hitting other players that have not attacked them yet, but '''only if the skull prevention setting is disabled'''.",
+      "source": "Skull_(status).wikitext"
+    },
+    "wildernessPageCauses": {
+      "quote": "If the player obtains a [[skull (status)|skull]] (either by attacking other player(s), entering the [[Abyss]], or requesting one from NPCs like the [[Emblem Trader]]), they will '''lose all items''' on death. If the player is attacked by another player(s), they can fight them back without obtaining a skull.",
+      "source": "Wilderness.wikitext"
+    },
+    "durationMinutes": 30,
+    "durationByCause": {
+      "attackingPlayer": 30,
+      "abyss": 10,
+      "amuletOfAvariceOrCapeOfSkullsAfterUnequip": 20
+    },
+    "durationQuote": {
+      "quote": "The skull will disappear automatically after 10 or 30 minutes depending on how the player got it; it disappears 10 minutes after exiting the Abyss, and 30 minutes after attacking a player. If a player re-enters the Abyss or initiates combat with another player, the skull timer will reset. If a player needs to quickly remove their skull, they can die to another player or a [[monster]]. Skulls can also be removed by dying in [[Last Man Standing]], or by entering the [[Gauntlet]].",
+      "source": "Skull_(status).wikitext"
+    },
+    "durationChangeQuote": {
+      "quote": "Skull status is now active for 30 minutes after attacking a player, and cannot disappear during [[PvP]] combat. A new '''PK Skull Prevention''' setting was added, which restricts from attacking another player that would result in gaining a skull.",
+      "source": "Skull_(status).wikitext"
+    },
+    "refreshed": true,
+    "removal": [
+      "Automatically after 10 (Abyss) or 30 (attacking a player) minutes",
+      "Dying to another player or a monster",
+      "Dying in Last Man Standing",
+      "Entering the Gauntlet"
+    ],
+    "removalNote2026": {
+      "quote": "Entering the [[Last Man Standing]] game lobby and logging out or hopping worlds will no longer remove a player's skull.",
+      "source": "Skull_(status).wikitext"
+    },
+    "retaliation": {
+      "quote": "Players who are attacked by another player in the Wilderness can retaliate against that player without getting skulled themselves. Players might also turn on the '''PK Skull Prevention''' setting, which will restrict them from attacking players when it would result in gaining the skull status.",
+      "source": "Skull_(status).wikitext"
+    },
+    "skullPreventionCaveat": {
+      "quote": "Note that if the player is already skulled, the '''PK Skull Prevention''' setting does not prevent the player from attacking others unprovoked, potentially prolonging the existing skull.",
+      "source": "Skull_(status).wikitext"
+    },
+    "revenantCavesAvarice": {
+      "quote": "Players wearing an [[amulet of avarice]] gain a 20% bonus to damage and accuracy while fighting revenants in the cave, and will find that all their drops come in noted form, at the cost of being permanently [[Skull (status)|skulled]] while it is equipped.",
+      "source": "Revenant_Caves.wikitext"
+    },
+    "revenantCavesEntryNote": "The Revenant Caves page does not say that merely entering the caves skulls the player; the skull there comes from wearing the amulet of avarice (see revenantCavesAvarice). Entering the caves as a skull cause: unknown/not supported by opened sources.",
+    "highRiskWorld": {
+      "quote": "In the [[PvP world#High-risk worlds|high-risk PvP worlds]], the prayer effect is prevented.",
+      "source": "Skull_(status).wikitext"
+    },
+    "notes": "PLUGIN POLICY: the plugin must never warn about being skulled or about PKers (RuneLite rejects PK/Skull warnings). The text here is recorded as reference mechanics only, for informational display, not for alerts.",
+    "runeliteApiRefs": {
+      "skullWidget": "runelite-api WidgetInfo.PVP_WILDERNESS_SKULL_CONTAINER(InterfaceID.PvpIcons.ICONS) (WidgetInfo.java line 489)"
+    }
+  },
+  "wildernessLevel": {
+    "surfaceFormula": "unknown (no opened wiki page or source file states the y-coordinate formula explicitly). Derived-only candidate from shortest-path constants: 8 tiles per level, level-20 boundary at y=3680 and level-30 boundary at y=3760 above ground; consistent with level = floor((y - 3520) / 8) if the boundary tile belongs to level 20/30, or floor((y - 3520) / 8) + 1 if the boundary tile is the first tile ABOVE level 20/30. Which of the two is correct is not resolvable from opened sources; treat as unconfirmed.",
+    "undergroundFormula": "unknown (not stated explicitly in any opened source). Derived-only candidate from shortest-path constants: level-20 boundary at y=10075 and level-30 boundary at y=10155 underground (80 tiles = 10 levels apart), i.e. underground y is offset by 6395 from the surface boundaries (10075 - 3680). Unconfirmed.",
+    "levelsQuote": {
+      "quote": "The Wilderness contains different levels, starting at level 1 at the [[Wilderness ditch]], and increasing to level 56 in the far north. These levels are only indicated by a small screen overlay; there is no physical separation between levels.",
+      "source": "Wilderness.wikitext"
+    },
+    "maxLevel": 56,
+    "ditchLine": {
+      "quote": "|map = {{Map|2946,3522|3341,3522|mtype=line}}",
+      "source": "Wilderness_ditch.wikitext"
+    },
+    "safeTilesQuote": {
+      "quote": "The first two steps (squares/tiles) of the Wilderness are \"safe\" zones, in which players cannot attack or be attacked, thus making the Wilderness ditch not a strict reminder of where the Wilderness starts. Both players (or the player and monsters) must be outside the safe zone before any PVP or Wilderness Slayer tasks can take effect.",
+      "source": "Wilderness.wikitext"
+    },
+    "shortestPathConstants": [
+      {
+        "quote": "private static final WorldArea WILDERNESS_ABOVE_GROUND = new WorldArea(2944, 3525, 448, 448, 0);",
+        "source": "shortest-path/src/main/java/shortestpath/pathfinder/WildernessChecker.java"
+      },
+      {
+        "quote": "private static final WorldArea WILDERNESS_UNDERGROUND = new WorldArea(2944, 9918, 518, 458, 0);",
+        "source": "shortest-path/src/main/java/shortestpath/pathfinder/WildernessChecker.java"
+      },
+      {
+        "quote": "private static final WorldArea WILDERNESS_ABOVE_GROUND_LEVEL_20 = new WorldArea(2944, 3680, 448, 448, 0);",
+        "source": "shortest-path/src/main/java/shortestpath/pathfinder/WildernessChecker.java"
+      },
+      {
+        "quote": "private static final WorldArea WILDERNESS_ABOVE_GROUND_LEVEL_30 = new WorldArea(2944, 3760, 448, 448, 0);",
+        "source": "shortest-path/src/main/java/shortestpath/pathfinder/WildernessChecker.java"
+      },
+      {
+        "quote": "private static final WorldArea WILDERNESS_UNDERGROUND_LEVEL_20 = new WorldArea(2944, 10075, 518, 301, 0);",
+        "source": "shortest-path/src/main/java/shortestpath/pathfinder/WildernessChecker.java"
+      },
+      {
+        "quote": "private static final WorldArea WILDERNESS_UNDERGROUND_LEVEL_30 = new WorldArea(2944, 10155, 518, 221, 0);",
+        "source": "shortest-path/src/main/java/shortestpath/pathfinder/WildernessChecker.java"
+      },
+      {
+        "quote": "// These are overlapping boundaries, so if the node isn't in level 30, it's in 0-29\n\t\t\t// likewise, if the node isn't in level 20, it's in 0-19",
+        "source": "shortest-path/src/main/java/shortestpath/pathfinder/Pathfinder.java"
+      }
+    ],
+    "shortestPathFeroxExclusions": "WildernessChecker.isInWilderness excludes five FEROX_ENCLAVE_* WorldAreas and four NOT_WILDERNESS_* WorldAreas (see WildernessChecker.java lines 14-24).",
+    "runeliteReadDirectly": {
+      "note": "Rather than computing the level from coordinates, a RuneLite plugin can read the game's own values.",
+      "Varbits.IN_WILDERNESS": "runelite-api/src/main/java/net/runelite/api/Varbits.java line 346: public static final int IN_WILDERNESS = 5963;",
+      "VarbitID.TARGET_WILDERNESSLEVEL": "runelite-api/src/main/java/net/runelite/api/gameval/VarbitID.java line 5607: public static final int TARGET_WILDERNESSLEVEL = 9493;",
+      "ComponentID.PVP_WILDERNESS_LEVEL": "runelite-api/src/main/java/net/runelite/api/widgets/ComponentID.java line 133: public static final int PVP_WILDERNESS_LEVEL = InterfaceID.PvpIcons.WILDERNESSLEVEL; (InterfaceID.java line 4110: WILDERNESSLEVEL = 0x005a_0032)"
+    },
+    "combatRangeRule": "Attackable combat-level range = your combat level +/- current Wilderness level.",
+    "combatRangeQuote": {
+      "quote": "Players within [[combat level]] range of each other can attack each other in the Wilderness. This range is calculated by taking the [[combat]] level and adding or subtracting the current Wilderness level.",
+      "source": "Wilderness.wikitext"
+    },
+    "combatRangeExample": {
+      "quote": "For example, in level 1 Wilderness, a player who is level 100 can attack players who are level 99, level 101, or the same level. If a player is level 100 in level 24 Wilderness, they can attack players between level 76 and level 124 combat.",
+      "source": "Wilderness.wikitext"
+    },
+    "pvpWorldModifier": {
+      "quote": "In [[PvP world|PvP worlds]], anywhere outside of a safe zone (except for the Wilderness itself) is level 15 Wilderness. Inside the Wilderness, this is further increased by the regular Wilderness level; e.g., being in level 20 Wilderness in a PvP world will essentially act as if the player is in level 35 Wilderness. Death mechanics are still based on the actual Wilderness level without this 15 level modifier, however.",
+      "source": "Wilderness.wikitext"
+    },
+    "teleportLimit": 20,
+    "teleportLimitMembersItems": 30,
+    "teleportLimitNotes": "Teleports do not work above level 20; a listed set of member jewellery/items works up to level 30; nothing except the Deserted Keep, KBD and Mage Arena levers leaves the Wilderness above 30. Tele Block lasts 5 minutes (2.5 with Protect from Magic). Chronicle and minigame teleports do not work in the Wilderness.",
+    "teleportLimitQuote": {
+      "quote": "[[Teleportation|Teleports]] will not work above level 20 Wilderness, except for those methods listed below, which may be used by [[members]] up to level 30 Wilderness. However, the [[Teleport Block]] spell will prevent using nearly any means of teleportation for five minutes, or two and a half minutes if it is successfully cast on a player with [[Protect from Magic]] active. Also, you cannot teleport after using your [[special attacks]] on another player for a short duration. The [[chronicle]] and [[minigame teleports]] do not work in the Wilderness.",
+      "source": "Wilderness.wikitext"
+    },
+    "teleportUpTo30Items": [
+      "Amulet of glory",
+      "Amulet of eternal glory",
+      "Combat bracelet",
+      "Skills necklace",
+      "Ring of wealth",
+      "Pharaoh's sceptre",
+      "Grand seed pod",
+      "Royal seed pod",
+      "Slayer ring",
+      "Slayer ring (eternal)",
+      "Ring of life",
+      "Escape crystal",
+      "Defence cape (ring of life effect below 10% HP)",
+      "Max cape (ring of life effect below 10% HP)"
+    ],
+    "above30Quote": {
+      "quote": "However, nothing except members' [[Deserted Keep#Teleport lever|Deserted Keep]], [[King Black Dragon Lair|KBD]] and [[Mage Arena]] levers allow directly leaving the Wilderness above level 30, and pk-ers may tele-block the player below level 30.",
+      "source": "Wilderness.wikitext"
+    },
+    "above30Imp": {
+      "quote": "* Players are unable to use [[Imp-in-a-box]] to bank an item when in combat, teleblocked, or above level 30 Wilderness.",
+      "source": "Wilderness.wikitext"
+    },
+    "bossLairTeleport": {
+      "quote": "While inside the lairs of any of the weaker bosses, players that have not completed the [[Wilderness Diary#Hard|Hard Wilderness tasks]] have a {{Ticks|3}} delay before being able to teleport away. (The stronger versions are all located above level 30 Wilderness, and cannot be teleported out of in any way.)",
+      "source": "Wilderness.wikitext"
+    },
+    "revCavesTeleDelay": {
+      "quote": "In addition, there is a delay of 2 [[RuneScape clock|ticks]] (1.2 seconds) upon selecting any method of teleportation before it is activated, provided the player is in combat with an NPC while the attempt to teleport is made.",
+      "source": "Revenant_Caves.wikitext"
+    },
+    "combatTypes": {
+      "singleWay": {
+        "quote": "Anywhere else is a [[Single-way combat]] area, also known as a single-combat area, with an exception for the [[Revenant Caves]], [[Wilderness Agility Course]] and lesser Wilderness bosses, which are [[Singles-plus combat]] ([[File:Singles plus.png]]).",
+        "source": "Multicombat_area.wikitext"
+      },
+      "multi": {
+        "quote": "A '''multicombat area''', also known as a '''Multiway Combat area''' is an area of the ''[[Old School RuneScape]]'' world where a [[player]] or [[monster]] can be attacked by more than one player or monster at a time.",
+        "source": "Multicombat_area.wikitext"
+      },
+      "singlesPlus": {
+        "quote": "A '''singles-plus combat area''' is an area of [[Gielinor]] that functions similar to [[single-way combat]], with the exception that if a player is in combat with a [[monster]], another player attacking will take priority over fighting the monster.",
+        "source": "Singles-plus_combat.wikitext"
+      },
+      "singlesPlusList": {
+        "quote": "Currently, the only singles-plus combat areas are:\n* the [[Revenant Caves]]\n* the [[Wilderness Agility Course]] \nand the arenas for the weaker variants of the Wilderness bosses: \n* [[Hunter's End]] - the lair of [[Artio]]\n* [[Skeletal Tomb]] - the lair of [[Calvar'ion]]\n* [[Web Chasm]] - the lair of [[Spindel]]",
+        "source": "Singles-plus_combat.wikitext"
+      },
+      "multiWildernessList": {
+        "quote": "*Several places in the [[Wilderness]] including the areas at or around:\n**The [[Ruins (east)|Abandoned Farm]]\n**The [[Bandit Camp (Wilderness)|Wilderness Bandit Camp]]\n**The [[Chaos Temple (church)|Chaos Temple]] in the western Wilderness (not the [[Chaos Temple]] in the eastern Wilderness)\n**The [[Dark Warriors' Fortress]]\n**The [[Deadly red spider]]s\n**The [[Deep Wilderness Castle Ruins]]\n**The [[Demonic Ruins]]\n**The [[Graveyard of Shadows]]\n**The [[Lava Maze]]\n**[[Lava Dragon Isle]]\n**[[Rogues' Castle]]\n**The [[Scorpion Pit]]\n**The southern part of the [[Wilderness Agility Course]]",
+        "source": "Multicombat_area.wikitext"
+      },
+      "singleZonePjTimer": {
+        "quote": "In [[single-way combat]] areas, there is an extended [[PJ timer]]: a combat-interruption prevention and temporary trade restriction mechanic that somewhat lessens teams' abilities to dominate individual players.",
+        "source": "Wilderness.wikitext"
+      },
+      "cannonInSingles": {
+        "quote": "Technically, the [[Dwarf multicannon]] is not a multi-hitting weapon; it simply shoots at many opponents very rapidly given that the player is not under attack or is in a multi-combat area.",
+        "source": "Multicombat_area.wikitext"
+      }
+    }
+  },
+  "cave": {
+    "summary": {
+      "quote": "The '''Wilderness Slayer Cave''' is a cave located beneath the [[Wilderness]]. The chambers contain a diverse selection of monsters, located between level 17 to 32 Wilderness.",
+      "source": "Wilderness_Slayer_Cave.wikitext"
+    },
+    "wildernessLevelRange": "17-32 (cave page); Wilderness page's notable-locations table says '17- 31 (multicombat)'",
+    "wildernessPageEntry": {
+      "quote": "|[[Wilderness Slayer Cave]]\n|17- 31<br/>([[Multicombat area|multicombat]])\n|Two entrances - one east of the [[Dark Warriors' Fortress]] (low level), one south-west of the [[Silk Chasm]] (high level)\n|Home to various monsters assigned by [[Krystilia]], who have slightly improved drop tables over their standard variants.",
+      "source": "Wilderness.wikitext"
+    },
+    "entrances": [
+      {
+        "name": "Southern entrance",
+        "wildernessLevel": 18,
+        "description": "west of Larran's small chest",
+        "coords": {
+          "x": 3260,
+          "y": 3664,
+          "plane": 0
+        }
+      },
+      {
+        "name": "Northern entrance",
+        "wildernessLevel": 29,
+        "description": "south-west of the Silk Chasm",
+        "coords": {
+          "x": 3293,
+          "y": 3748,
+          "plane": 0
+        }
+      }
+    ],
+    "entrancesQuote": {
+      "quote": "*Level 18 Wilderness — west of [[Larran's small chest]]\n*Level 29 Wilderness — south-west of the [[Silk Chasm]]",
+      "source": "Wilderness_Slayer_Cave.wikitext"
+    },
+    "entrancesMapQuote": {
+      "quote": "{{Map|3293:3748,title:Northern entrance|3260,3664,title:Southern entrance|mtype=pin|width=300|height=200|align=left|caption=The two entrances to the Wilderness Slayer Cave.}}",
+      "source": "Wilderness_Slayer_Cave.wikitext"
+    },
+    "shortestPathTestPoints": "shortest-path WildernessCheckerTest.java: WILDERNESS_SLAYER_CAVE = packWorldPoint(3406, 10144, 0); WILDERNESS_SLAYER_CAVE_SOUTH = packWorldPoint(3385, 10054, 0) (both asserted in-Wilderness).",
+    "multi": "multicombat (Wilderness page table; cave page calls it 'the only multi-combat spot where the cannon can be used for some monsters')",
+    "cannonAllowed": true,
+    "cannonQuote": {
+      "quote": "The area is desirable to players wishing to quickly complete slayer tasks, as it's possible to use the [[Dwarf multicannon]] inside the dungeon. The cave is the only multi-combat spot where the cannon can be used for some monsters.",
+      "source": "Wilderness_Slayer_Cave.wikitext"
+    },
+    "taskOnlyMonsters": {
+      "quote": "Abyssal demons, Nechryaels, Dust devils, and Jellies can '''only''' be killed while on Slayer task.",
+      "source": "Wilderness_Slayer_Cave.wikitext"
+    },
+    "taskOnlyEnforcer": {
+      "quote": "If a player attempts to kill these monsters while not on the corresponding task, they will be stopped by [[Peeve]].",
+      "source": "Wilderness_Slayer_Cave.wikitext"
+    },
+    "shortcuts": {
+      "quote": "There are agility shortcuts connecting the Abyssal demons, Lesser demons, and Greater Nechryael, and shortcuts connecting the Dust devils, Jellies, and Hellhounds. These all require 77 [[Agility]]",
+      "source": "Wilderness_Slayer_Cave.wikitext"
+    },
+    "monsters": [
+      {
+        "name": "Abyssal demon",
+        "combat": 124,
+        "slayerReq": 85,
+        "slayerXp": 128,
+        "spawns": "8 (task-only)",
+        "caveWildLevel": "29-33"
+      },
+      {
+        "name": "Ankou",
+        "combat": 98,
+        "slayerReq": 1,
+        "slayerXp": 100,
+        "spawns": "16",
+        "caveWildLevel": "19-22"
+      },
+      {
+        "name": "Bandit",
+        "combat": 130,
+        "slayerReq": 1,
+        "slayerXp": 159,
+        "spawns": "1",
+        "caveWildLevel": "unknown (blank in table)"
+      },
+      {
+        "name": "Black demon",
+        "combat": 188,
+        "slayerReq": 1,
+        "slayerXp": 200,
+        "spawns": "4",
+        "caveWildLevel": "24-27"
+      },
+      {
+        "name": "Black dragon",
+        "combat": 247,
+        "slayerReq": 1,
+        "slayerXp": 262,
+        "spawns": "3",
+        "caveWildLevel": "30-32"
+      },
+      {
+        "name": "Dust devil",
+        "combat": 93,
+        "slayerReq": 65,
+        "slayerXp": 105,
+        "spawns": "9 (task-only)",
+        "caveWildLevel": "25-28"
+      },
+      {
+        "name": "Greater demon",
+        "combat": 104,
+        "slayerReq": 1,
+        "slayerXp": 120,
+        "spawns": "10",
+        "caveWildLevel": "29-32"
+      },
+      {
+        "name": "Greater Nechryael",
+        "combat": 200,
+        "slayerReq": 80,
+        "slayerXp": 210,
+        "spawns": "8 (task-only)",
+        "caveWildLevel": "22-25"
+      },
+      {
+        "name": "Green dragon",
+        "combat": 88,
+        "slayerReq": 1,
+        "slayerXp": 100,
+        "spawns": "6",
+        "caveWildLevel": "19-27"
+      },
+      {
+        "name": "Hellhound",
+        "combat": 136,
+        "slayerReq": 1,
+        "slayerXp": 150,
+        "spawns": "9",
+        "caveWildLevel": "21-24"
+      },
+      {
+        "name": "Ice giant",
+        "combat": 67,
+        "slayerReq": 1,
+        "slayerXp": 100,
+        "spawns": "10",
+        "caveWildLevel": "17-19"
+      },
+      {
+        "name": "Jelly",
+        "combat": 78,
+        "slayerReq": 52,
+        "slayerXp": 75,
+        "spawns": "14 (task-only)",
+        "caveWildLevel": "23-25"
+      },
+      {
+        "name": "Lesser demon",
+        "combat": 94,
+        "slayerReq": 1,
+        "slayerXp": 98,
+        "spawns": "7",
+        "caveWildLevel": "25-28"
+      }
+    ],
+    "monstersSource": "Wilderness_Slayer_Cave.wikitext LocationMonsterTableLine entries (wildernesslevel= field). NOTE: the Krystilia page's task table gives different wilderness-level ranges for the same cave monsters (e.g. Abyssal demon '35-39' on Krystilia page vs '29-33' on cave page); the two pages disagree and neither is confirmed.",
+    "caveTaskShareOfKrystiliaWeight": {
+      "quote": "| class=\"unsortable\" | '''68''' <small>/195</small>\n| class=\"unsortable\" | '''34.87%'''",
+      "source": "Wilderness_Slayer_Cave.wikitext"
+    },
+    "larransKey": {
+      "what": {
+        "quote": "'''Larran's key''' is a key obtained from killing monsters while on a [[Slayer task]] given by [[Krystilia]]. It is used to open [[Larran]]'s [[Larran's small chest|small]] and [[Larran's big chest|big chests]].",
+        "source": "Larran's_key.wikitext"
+      },
+      "dropRateQuote": {
+        "quote": "The exact odds of receiving a key scales with the monster's [[Combat level]]. For levels 1-80, the probability follows a curve between 1/1972 at level 1 to 1/100 at level 80.",
+        "source": "Larran's_key.wikitext"
+      },
+      "dropRateQuote2": {
+        "quote": "For levels 81 or higher, the odds are between 1/99 and 1/50, scaling linearly and capping at level 350, as reflected in the equation below.",
+        "source": "Larran's_key.wikitext"
+      },
+      "dropRateFormulaTex": {
+        "quote": "P = \\begin{cases} \\frac{1}{\\left \\lfloor \\frac{3}{10} \\times (80 - L)^2 \\right\\rfloor + 100} &\\text{if } L\\in (0,80] \\\\  \\frac{1}{\\left \\lfloor-\\frac{5}{27} \\times L \\right\\rfloor + 115} &\\text{if } L \\in (80, 350] \\\\ \\frac{1}{50} & L\\in (350,\\infty) \\end{cases}",
+        "source": "Larran's_key.wikitext"
+      },
+      "slayerMonsterBonus": {
+        "quote": "If it concerns a [[Slayer monsters|Slayer monster]] (meaning it requires a certain Slayer level to kill), the drop chance is increased by 20%.",
+        "source": "Larran's_key.wikitext"
+      },
+      "caveBonus": {
+        "quote": "In addition, any monster killed within the [[Wilderness Slayer Cave]] has a further 15% increased chance to drop a key.",
+        "source": "Larran's_key.wikitext"
+      },
+      "superiorAlwaysDrops": {
+        "quote": "[[Superior slayer monster]]s that spawn as part of Krystilia's tasks will always drop a key on death.",
+        "source": "Larran's_key.wikitext"
+      },
+      "deathRule": {
+        "quote": "Larran's keys are <b>always</b> dropped on player death, even if there are fewer than 3 [[Items Kept on Death|items kept on death]]. If killed by another player, keys are lost to the killer. If killed in PvM, the keys always go to your [[gravestone]].",
+        "source": "Larran's_key.wikitext"
+      },
+      "tradeable": {
+        "quote": "Larran's keys are now tradeable and sellable on the [[Grand Exchange]]. This was an unpolled change to combat scamming.",
+        "source": "Larran's_key.wikitext"
+      },
+      "storeValue": 90,
+      "storeValueQuote": {
+        "quote": "|value = 90",
+        "source": "Larran's_key.wikitext"
+      },
+      "gePrice": "unknown (live GE price not in the fetched wikitext)",
+      "chests": [
+        {
+          "name": "Larran's small chest",
+          "location": "North-east of the Chaos Temple (Wilderness)",
+          "coords": {
+            "x": 3281,
+            "y": 3659,
+            "plane": 0
+          },
+          "quote": {
+            "quote": "'''Larran's small chest''' can be found north-east of the [[Chaos Temple (Wilderness)|Chaos Temple]]. The chest is locked and can only be opened by using [[Larran's key]], which is obtained from killing monsters that [[Krystilia]] assigns the player.",
+            "source": "Larran's_small_chest.wikitext"
+          },
+          "coordsQuote": {
+            "quote": "|map = {{Map|name=Larran's small chest|x:3281,y:3659|plane=0|mapID=0|mtype=pin}}",
+            "source": "Larran's_small_chest.wikitext"
+          },
+          "lootNote": {
+            "quote": "Loot awarded to the player by opening the chest is around 30% less than that of [[Larran's big chest]], and gives no chance at [[Dagon'hai robes]]. However, the big chest is located in a much more dangerous part of the deep Wilderness and is more frequented by [[Player Killers]].",
+            "source": "Larran's_small_chest.wikitext"
+          }
+        },
+        {
+          "name": "Larran's big chest",
+          "location": "Ship west of Pirates' Hideout (upper floor)",
+          "coords": {
+            "x": 3018,
+            "y": 3955,
+            "plane": 1
+          },
+          "quote": {
+            "quote": "'''Larran's big chest''' can be found on the ship west of [[Pirates' Hideout]]. The chest is locked and can only be opened by using [[Larran's key]], which is obtained from killing monsters that [[Krystilia]] assigns the player, or from the [[muddy chest]].",
+            "source": "Larran's_big_chest.wikitext"
+          },
+          "coordsQuote": {
+            "quote": "|map = {{Map|name=Larran's big chest|x:3018,y:3955|plane=1|mapID=0|mtype=pin}}",
+            "source": "Larran's_big_chest.wikitext"
+          },
+          "announceNote": {
+            "quote": "The chest will announce the name of the player that opened it as well as the loot obtained to a large area around the ship on which it is found.",
+            "source": "Larran's_big_chest.wikitext"
+          }
+        }
+      ]
+    },
+    "krystiliaBonus": {
+      "pointsPerTask": 25,
+      "every10th": 125,
+      "every50th": 375,
+      "every100th": 625,
+      "every250th": 875,
+      "every1000th": 1250,
+      "pointsQuote": {
+        "quote": "Completion of a task assigned by Krystilia '''from 5th task streak and beyond''' will grant:",
+        "source": "Krystilia.wikitext"
+      },
+      "pointsTableQuote": {
+        "quote": "|[[Krystilia]]\n|25\n|125\n|375\n|625\n|875\n|1,250",
+        "source": "Slayer_reward_point.wikitext"
+      },
+      "separateStreak": {
+        "quote": "Unlike other slayer masters, Krystilia's tasks have a separate counter from the normal slayer masters, thus players must complete five tasks from her to begin their Wilderness point streak. Despite using two different counters, players '''cannot''' have both a normal and Wilderness slayer task at the same time.",
+        "source": "Krystilia.wikitext"
+      },
+      "turaelResetNote": {
+        "quote": "A task from Krystilia that is changed by Turael will only reset your Wilderness Slayer task streak.",
+        "source": "Slayer_reward_point.wikitext"
+      },
+      "blockCost": {
+        "quote": "Blocking a task with Krystilia costs 100 [[Slayer reward point|Slayer reward points]].",
+        "source": "Krystilia.wikitext"
+      },
+      "mostPoints": {
+        "quote": "She also awards significantly more slayer points than any other master.",
+        "source": "Krystilia.wikitext"
+      },
+      "dropsOnTask": {
+        "quote": "In return for completing her tasks in the Wilderness, players will have a chance to roll for [[Larran's key]] and [[Slayer's enchantment]] drops.",
+        "source": "Krystilia.wikitext"
+      },
+      "wildernessPageDrops": {
+        "quote": "they all have a chance at dropping [[Larran's key]]s, [[Slayer's enchantment]]s, [[ring of wealth scroll]]s and [[magic shortbow scroll]]s in addition to their regular [[drops]]. Also, whilst wearing a [[ring of wealth (i)]], players double their chances of receiving a [[clue scroll]].",
+        "source": "Wilderness.wikitext"
+      },
+      "slayersEnchantment": {
+        "quote": "The drop rate of an enchantment from a Wilderness Slayer assignment depends on the amount of [[hitpoints]] a monster has. The exact formula for regular monsters is <math>\\frac{1}{320 - \\lfloor Min(300,Hitpoints) \\times \\frac{8}{10} \\rfloor}</math>",
+        "source": "Slayer's_enchantment.wikitext"
+      },
+      "slayersEnchantmentBoss": {
+        "quote": "Bosses have a drop rate of 1/30.",
+        "source": "Slayer's_enchantment.wikitext"
+      },
+      "slayersEnchantmentUse": {
+        "quote": "The '''Slayer's enchantment''' is a parchment that is used on a [[Slayer's staff]] to enchant it into a [[Slayer's staff (e)]] with 2,500 charges.",
+        "source": "Slayer's_enchantment.wikitext"
+      },
+      "mossyKey2025": {
+        "quote": "Krystilia's Slayer assignments now boost the [[mossy key]] drop rate only within the [[Wilderness]].",
+        "source": "Krystilia.wikitext"
+      },
+      "killMustBeInWilderness": {
+        "quote": "For a kill to count towards a Krystilia task, the player must be physically located inside the Wilderness when the monster's death occurs.",
+        "source": "Krystilia.wikitext"
+      },
+      "feroxBuffer": {
+        "quote": "The safe zone buffer immediately outside the [[Ferox Enclave]] counts as the Wilderness for task purposes, but the Enclave itself does not.",
+        "source": "Krystilia.wikitext"
+      },
+      "cannonOutOfWildMessage": {
+        "quote": "A player who is using a [[dwarf multicannon]] will receive the standard \"As your slayer task is from Krystilia, you can only perform it inside the Wilderness\" message if they teleport out of the Wilderness to restock and remain outside of it when their cannon kills the monster.",
+        "source": "Krystilia.wikitext"
+      },
+      "level1Refusal": {
+        "quote": "She will refuse to assign tasks to players who are still Level 1 in Slayer, insisting that they first need to speak to the [[Burthorpe]] Slayer Master [[Turael]]",
+        "source": "Krystilia.wikitext"
+      },
+      "noCombatReq": {
+        "quote": "She has no minimum combat or Slayer level requirements, and doesn't factor in the player's combat level, meaning she may give players tasks much harder than their combat level would otherwise indicate.",
+        "source": "Slayer_Master.wikitext"
+      }
+    }
+  },
+  "krystiliaTasks": [
+    {
+      "task": "Abyssal demons",
+      "weight": 5,
+      "amount": "75-125",
+      "extendedAmount": "200-250",
+      "locations": [
+        "Wilderness Slayer Cave"
+      ],
+      "wildernessLevel": "35-39",
+      "multi": "yes",
+      "multiBasis": "Cave is multicombat (Wilderness page table)",
+      "requirements": "Priest in Peril + 85 Slayer; toggleable via 'I Wildy More Slayer'"
+    },
+    {
+      "task": "Ankou",
+      "weight": 6,
+      "amount": "75-125",
+      "extendedAmount": "91-150",
+      "locations": [
+        "The Forgotten Cemetery",
+        "Wilderness Slayer Cave"
+      ],
+      "wildernessLevel": "27-31, 34-36",
+      "multi": "partial",
+      "multiBasis": "Cave multi; Forgotten Cemetery not in multicombat list -> unknown",
+      "requirements": null
+    },
+    {
+      "task": "Aviansie",
+      "weight": 7,
+      "amount": "75-125",
+      "extendedAmount": "200-250",
+      "locations": [
+        "Wilderness God Wars Dungeon"
+      ],
+      "wildernessLevel": "26-29",
+      "multi": "yes",
+      "multiBasis": "Wilderness GWD listed '23 - 29 (multicombat)' on Wilderness page",
+      "requirements": "60 Agility or 60 Strength; 'Watch the birdie' unlock (80 pts); Armadylean guards count"
+    },
+    {
+      "task": "Bandits",
+      "weight": 4,
+      "amount": "75-125",
+      "extendedAmount": null,
+      "locations": [
+        "Bandit Camp"
+      ],
+      "wildernessLevel": "17-24",
+      "multi": "yes",
+      "multiBasis": "'The Wilderness Bandit Camp' in multicombat list",
+      "requirements": null
+    },
+    {
+      "task": "Bears",
+      "weight": 6,
+      "amount": "65-100",
+      "extendedAmount": null,
+      "locations": [
+        "North-west of the Ferox Enclave",
+        "west of the Graveyard of Shadows",
+        "south of the Western Ruins"
+      ],
+      "wildernessLevel": "18-22",
+      "multi": "partial",
+      "multiBasis": "Graveyard of Shadows area multi; other spots not listed -> unknown; Callisto (multi) and Artio (singles-plus) also count",
+      "requirements": "Callisto and Artio also count"
+    },
+    {
+      "task": "Black demons",
+      "weight": 7,
+      "amount": "100-150",
+      "extendedAmount": "200-250",
+      "locations": [
+        "Edgeville Dungeon",
+        "Wilderness Slayer Cave"
+      ],
+      "wildernessLevel": "5-6, 28-31",
+      "multi": "partial",
+      "multiBasis": "Cave multi; Edgeville Dungeon not in multicombat list -> unknown",
+      "requirements": "Kolodion's final form also counts"
+    },
+    {
+      "task": "Black dragons",
+      "weight": 4,
+      "amount": "8-16",
+      "extendedAmount": "40-60",
+      "locations": [
+        "Lava Maze Dungeon",
+        "Wilderness Slayer Cave"
+      ],
+      "wildernessLevel": "44-45; 30-31",
+      "multi": "partial",
+      "multiBasis": "Cave multi; 'The Lava Maze' is in multicombat list but the Dungeon specifically is not stated -> unknown",
+      "requirements": "Started Dragon Slayer I; KBD and lava dragons do NOT count"
+    },
+    {
+      "task": "Black Knights",
+      "weight": 3,
+      "amount": "75-125",
+      "extendedAmount": null,
+      "locations": [
+        "South of Silk Chasm",
+        "Lava Maze"
+      ],
+      "wildernessLevel": "~35, ~40",
+      "multi": "partial",
+      "multiBasis": "Lava Maze multi; south of Silk Chasm unknown",
+      "requirements": null
+    },
+    {
+      "task": "Bloodveld",
+      "weight": 4,
+      "amount": "70-110",
+      "extendedAmount": "200-250",
+      "locations": [
+        "Wilderness God Wars Dungeon"
+      ],
+      "wildernessLevel": "26-29",
+      "multi": "yes",
+      "multiBasis": "Wilderness GWD multicombat",
+      "requirements": "Priest in Peril + 50 Slayer; 60 Agility or 60 Strength"
+    },
+    {
+      "task": "Chaos druids",
+      "weight": 5,
+      "amount": "50-90",
+      "extendedAmount": null,
+      "locations": [
+        "Edgeville Dungeon",
+        "Chaos Temple (Wilderness) (Elder Chaos druids)"
+      ],
+      "wildernessLevel": "1-5, 11-12",
+      "multi": "unknown",
+      "multiBasis": "Edgeville Dungeon not listed; Multicombat page excludes 'the Chaos Temple in the eastern Wilderness' and includes the western Chaos Temple (church) - which one the level-13 temple is, is not stated unambiguously",
+      "requirements": null
+    },
+    {
+      "task": "Dark warriors",
+      "weight": 4,
+      "amount": "75-125",
+      "extendedAmount": null,
+      "locations": [
+        "Dark Warriors' Fortress"
+      ],
+      "wildernessLevel": "12-16",
+      "multi": "yes",
+      "multiBasis": "'The Dark Warriors' Fortress' in multicombat list",
+      "requirements": null
+    },
+    {
+      "task": "Dust devils",
+      "weight": 5,
+      "amount": "75-125",
+      "extendedAmount": "200-250",
+      "locations": [
+        "Wilderness Slayer Cave"
+      ],
+      "wildernessLevel": "18-24",
+      "multi": "yes",
+      "multiBasis": "Cave multi",
+      "requirements": "65 Slayer; Desert Treasure I per table (Mod Ash: no Priest in Peril check); toggleable"
+    },
+    {
+      "task": "Earth warriors",
+      "weight": 6,
+      "amount": "75-125",
+      "extendedAmount": null,
+      "locations": [
+        "Edgeville Dungeon"
+      ],
+      "wildernessLevel": "7-10",
+      "multi": "unknown",
+      "multiBasis": "Edgeville Dungeon not in multicombat list",
+      "requirements": null
+    },
+    {
+      "task": "Ents",
+      "weight": 5,
+      "amount": "35-60",
+      "extendedAmount": null,
+      "locations": [
+        "Forests north and east of the Chaos Temple (Wilderness)"
+      ],
+      "wildernessLevel": "9-14, 20-24",
+      "multi": "unknown",
+      "multiBasis": "not listed",
+      "requirements": null
+    },
+    {
+      "task": "Fire giants",
+      "weight": 7,
+      "amount": "75-125",
+      "extendedAmount": null,
+      "locations": [
+        "Deep Wilderness Dungeon"
+      ],
+      "wildernessLevel": "53",
+      "multi": "unknown",
+      "multiBasis": "not listed",
+      "requirements": null
+    },
+    {
+      "task": "Greater demons",
+      "weight": 8,
+      "amount": "100-150",
+      "extendedAmount": "200-250",
+      "locations": [
+        "Demonic Ruins",
+        "Lava Maze Dungeon",
+        "Wilderness Slayer Cave"
+      ],
+      "wildernessLevel": "41-43, 45-48; 25-29",
+      "multi": "partial",
+      "multiBasis": "Demonic Ruins multi; cave multi; Lava Maze Dungeon unknown",
+      "requirements": null
+    },
+    {
+      "task": "Green dragons",
+      "weight": 4,
+      "amount": "65-100",
+      "extendedAmount": null,
+      "locations": [
+        "West of the Dark Warriors' Fortress",
+        "north of the Graveyard of Shadows",
+        "south of the Lava Maze",
+        "south-west of the Bone Yard",
+        "Wilderness Slayer Cave"
+      ],
+      "wildernessLevel": "12-14, 24-26, 35-38; 18-24",
+      "multi": "partial",
+      "multiBasis": "Cave multi; Dark Warriors' Fortress / Graveyard of Shadows / Lava Maze areas multi; Bone Yard unknown",
+      "requirements": "Started Dragon Slayer I"
+    },
+    {
+      "task": "Hellhounds",
+      "weight": 7,
+      "amount": "75-125",
+      "extendedAmount": null,
+      "locations": [
+        "North-east of the Deserted Keep",
+        "Wilderness Slayer Cave"
+      ],
+      "wildernessLevel": "49-54; 18-20",
+      "multi": "partial",
+      "multiBasis": "Cave multi; Deserted Keep area unknown; (Greater) Skeleton Hellhounds also count",
+      "requirements": "(Greater) Skeleton Hellhounds also count"
+    },
+    {
+      "task": "Hill Giants",
+      "weight": 3,
+      "amount": "75-125",
+      "extendedAmount": null,
+      "locations": [
+        "Near the Bone Yard Hunter area",
+        "Deep Wilderness Dungeon"
+      ],
+      "wildernessLevel": "~20, ~50",
+      "multi": "unknown",
+      "multiBasis": "not listed",
+      "requirements": null
+    },
+    {
+      "task": "Ice giants",
+      "weight": 6,
+      "amount": "100-150",
+      "extendedAmount": null,
+      "locations": [
+        "Frozen Waste Plateau",
+        "Wilderness Slayer Cave"
+      ],
+      "wildernessLevel": "46-55; ~18",
+      "multi": "partial",
+      "multiBasis": "Cave multi; Frozen Waste Plateau unknown",
+      "requirements": null
+    },
+    {
+      "task": "Ice warriors",
+      "weight": 7,
+      "amount": "100-150",
+      "extendedAmount": null,
+      "locations": [
+        "Frozen Waste Plateau"
+      ],
+      "wildernessLevel": "44-55",
+      "multi": "unknown",
+      "multiBasis": "not listed",
+      "requirements": null
+    },
+    {
+      "task": "Jellies",
+      "weight": 5,
+      "amount": "100-150",
+      "extendedAmount": null,
+      "locations": [
+        "Wilderness Slayer Cave"
+      ],
+      "wildernessLevel": "19-22",
+      "multi": "yes",
+      "multiBasis": "Cave multi",
+      "requirements": "52 Slayer; toggleable"
+    },
+    {
+      "task": "Lava dragons",
+      "weight": 3,
+      "amount": "35-60",
+      "extendedAmount": null,
+      "locations": [
+        "Lava Dragon Isle"
+      ],
+      "wildernessLevel": "36-43",
+      "multi": "yes",
+      "multiBasis": "'Lava Dragon Isle' in multicombat list",
+      "requirements": "Started Dragon Slayer I"
+    },
+    {
+      "task": "Lesser demons",
+      "weight": 6,
+      "amount": "80-120",
+      "extendedAmount": null,
+      "locations": [
+        "Muddy chest",
+        "King Black Dragon Lair cage",
+        "south of the Demonic Ruins",
+        "Wilderness Slayer Cave"
+      ],
+      "wildernessLevel": "42-44; 24-26",
+      "multi": "partial",
+      "multiBasis": "Cave multi; Demonic Ruins area multi; Lava Maze (muddy chest) multi; KBD lair cage unknown",
+      "requirements": null
+    },
+    {
+      "task": "Magic axes",
+      "weight": 7,
+      "amount": "75-125",
+      "extendedAmount": null,
+      "locations": [
+        "Magic Axe Hut (bring a lockpick)"
+      ],
+      "wildernessLevel": "54-56",
+      "multi": "unknown",
+      "multiBasis": "not listed",
+      "requirements": "23 Thieving"
+    },
+    {
+      "task": "Mammoths",
+      "weight": 6,
+      "amount": "75-125",
+      "extendedAmount": null,
+      "locations": [
+        "West of the Chaos Temple (Wilderness)"
+      ],
+      "wildernessLevel": "7-14",
+      "multi": "unknown",
+      "multiBasis": "not listed",
+      "requirements": null
+    },
+    {
+      "task": "Moss giants",
+      "weight": 4,
+      "amount": "100-150",
+      "extendedAmount": null,
+      "locations": [
+        "South-east of the Lava Maze"
+      ],
+      "wildernessLevel": "~35",
+      "multi": "unknown",
+      "multiBasis": "not listed",
+      "requirements": null
+    },
+    {
+      "task": "Nechryael",
+      "weight": 5,
+      "amount": "75-125",
+      "extendedAmount": "200-250",
+      "locations": [
+        "Wilderness Slayer Cave (as Greater Nechryael)"
+      ],
+      "wildernessLevel": "19-22",
+      "multi": "yes",
+      "multiBasis": "Cave multi",
+      "requirements": "Priest in Peril + 80 Slayer; toggleable"
+    },
+    {
+      "task": "Pirates",
+      "weight": 3,
+      "amount": "62-75",
+      "extendedAmount": null,
+      "locations": [
+        "Pirates' Hideout (bring a lockpick)",
+        "Chaos Temple (Wilderness) (Zombie pirates)"
+      ],
+      "wildernessLevel": "~54",
+      "multi": "unknown",
+      "multiBasis": "not listed",
+      "requirements": "39 Thieving"
+    },
+    {
+      "task": "Revenants",
+      "weight": 5,
+      "amount": "40-100",
+      "extendedAmount": "100-150",
+      "locations": [
+        "Revenant Caves"
+      ],
+      "wildernessLevel": "19-38",
+      "multi": "no",
+      "multiBasis": "Revenant Caves are singles-plus (Singles-plus combat page); Revenant maledictus can be attacked by multiple players",
+      "requirements": null
+    },
+    {
+      "task": "Rogues",
+      "weight": 5,
+      "amount": "75-125",
+      "extendedAmount": null,
+      "locations": [
+        "Rogues' Castle",
+        "east of the Mage Arena"
+      ],
+      "wildernessLevel": "50-54",
+      "multi": "partial",
+      "multiBasis": "'Rogues' Castle' in multicombat list; east of Mage Arena unknown",
+      "requirements": null
+    },
+    {
+      "task": "Scorpions",
+      "weight": 6,
+      "amount": "65-100",
+      "extendedAmount": null,
+      "locations": [
+        "West of the Air Obelisk",
+        "Scorpion Pit",
+        "Lava Maze (King Scorpions)"
+      ],
+      "wildernessLevel": "5-9, 39-42, 53-54",
+      "multi": "partial",
+      "multiBasis": "Scorpion Pit and Lava Maze multi; Air Obelisk area unknown; Scorpia's cavern multi",
+      "requirements": "Scorpia, her guardians and offspring also count"
+    },
+    {
+      "task": "Skeletons",
+      "weight": 5,
+      "amount": "65-100",
+      "extendedAmount": null,
+      "locations": [
+        "Southern Wilderness mine",
+        "South-west Wilderness mine",
+        "Bone Yard",
+        "Edgeville Dungeon",
+        "Wilderness Agility Course"
+      ],
+      "wildernessLevel": "Varies",
+      "multi": "partial",
+      "multiBasis": "Southern part of Wilderness Agility Course multi (rest singles-plus); mines/Bone Yard/Edgeville Dungeon unknown; Vet'ion (multi) / Calvar'ion (singles-plus) also count",
+      "requirements": "Vet'ion, Calvar'ion and their Skeleton Hellhounds also count"
+    },
+    {
+      "task": "Spiders",
+      "weight": 6,
+      "amount": "65-100",
+      "extendedAmount": null,
+      "locations": [
+        "North-west of Lava Dragon Isle",
+        "south of Callisto",
+        "Eastern Ruins",
+        "Edgeville Dungeon",
+        "Lava Maze Dungeon (also by the KBD Lair lever)"
+      ],
+      "wildernessLevel": "Varies",
+      "multi": "partial",
+      "multiBasis": "Deadly red spiders and Abandoned Farm (Eastern Ruins) multi; Lava Dragon Isle multi; others unknown; Venenatis (multi) / Spindel (singles-plus) also count",
+      "requirements": "Venenatis and Spindel also count"
+    },
+    {
+      "task": "Spiritual creatures",
+      "weight": 6,
+      "amount": "100-150",
+      "extendedAmount": "181-250",
+      "locations": [
+        "Wilderness God Wars Dungeon"
+      ],
+      "wildernessLevel": "24-29",
+      "multi": "yes",
+      "multiBasis": "Wilderness GWD multicombat",
+      "requirements": "Death Plateau + 63 Slayer; 60 Agility or 60 Strength"
+    },
+    {
+      "task": "Zombies",
+      "weight": 3,
+      "amount": "75-125",
+      "extendedAmount": null,
+      "locations": [
+        "Graveyard of Shadows",
+        "Eastern Ruins",
+        "Chaos Temple (Wilderness) (Zombie pirates)"
+      ],
+      "wildernessLevel": "18-21, 25-28",
+      "multi": "partial",
+      "multiBasis": "Graveyard of Shadows and Abandoned Farm/Eastern Ruins multi; Chaos Temple unknown",
+      "requirements": null
+    },
+    {
+      "task": "Wilderness bosses / demi-bosses",
+      "weight": 8,
+      "amount": "3-35",
+      "extendedAmount": null,
+      "locations": [
+        "Callisto: South of the Demonic Ruins (Artio also counts)",
+        "Chaos Elemental: West of the Rogues' Castle",
+        "Chaos Fanatic: West of the Lava Maze",
+        "Crazy archaeologist: Western Ruins",
+        "Scorpia: Underneath the Scorpion Pit",
+        "Venenatis: East of the Bone Yard (Spindel also counts)",
+        "Vet'ion: North of the Bone Yard (Calvar'ion also counts)"
+      ],
+      "wildernessLevel": "42; 52-54; 40-42; 22-24; 52-54; 26-30; 34-36",
+      "multi": "partial",
+      "multiBasis": "Wilderness page boss table: Callisto/Vet'ion/Venenatis lairs multicombat; Artio/Calvar'ion/Spindel singles-plus; Chaos Elemental multi; Scorpia multi; Chaos Fanatic single; Crazy archaeologist single",
+      "requirements": "'Like a boss' unlock (200 pts)"
+    }
+  ],
+  "krystiliaTaskWeightTotal": 196,
+  "explainers": {
+    "riskUnskulled": "While unskulled, an unsafe death keeps the three most valuable items carried. Value is judged first by effective Grand Exchange price and then by alchemy value for items with no GE price. Everything else that is tradeable drops for the player who dealt the most damage; in a PvM death it goes to a gravestone instead.",
+    "riskSkulled": "While skulled, no items are kept on death by default. The Protect Item prayer keeps the single most valuable item. A skull from attacking another player lasts 30 minutes and is refreshed by attacking again; a skull from the Abyss lasts 10 minutes.",
+    "protectItem": "Protect Item is a level 25 Prayer that keeps one additional item on death: four items when unskulled, one item when skulled. It has no effect on high-risk worlds, and Ultimate Ironmen gain nothing from it even though they can activate it.",
+    "untradeables": "Below level 20 Wilderness, most untradeable items go to the gravestone, while combat-useful untradeables break (kept, but needing a repair fee) or convert into coins or tradeable parts for the killer. Above level 20, non-combat untradeables are kept, but certain high-tier untradeables are lost outright unless locked with a Trouver parchment, in which case they become mangled and cost 500,000 coins to repair. Larran's keys are always dropped on death and go to the killer in a PvP death or to the gravestone in a PvM death. Food, potions and the Phoenix necklace are deleted rather than sent to a grave in the Wilderness.",
+    "teleportLimits": "Ordinary teleports stop working above level 20 Wilderness. A specific set of members' items, such as the amulet of glory, ring of wealth, combat bracelet, skills necklace, slayer ring and royal seed pod, still works up to level 30. Above level 30 the only direct ways out are the Deserted Keep, King Black Dragon and Mage Arena levers. Tele Block prevents almost all teleports for five minutes, or two and a half minutes under Protect from Magic. The Wilderness Slayer Cave's entrances sit at levels 18 and 29, and the cave itself spans roughly levels 17 to 32.",
+    "skullCauses": "A skull appears after attacking a player who has not attacked you, after entering the Abyss without an abyssal bracelet, after asking the Emblem Trader for one, or while wearing an amulet of avarice or cape of skulls. In multi-way areas, multi-target attacks such as burst and barrage spells or chinchompas can also skull a player if they hit someone who has not attacked them, unless the PK Skull Prevention setting is on. Fighting back against someone who attacked you first does not cause a skull.",
+    "multiVsSingles": "In a multicombat area, more than one player or monster can attack the same target at once; the Wilderness Slayer Cave, Wilderness God Wars Dungeon, Bandit Camp, Lava Maze, Demonic Ruins and several other Wilderness spots are multicombat. In single-way areas only one opponent can attack at a time. Singles-plus areas, which include the Revenant Caves, the Wilderness Agility Course and the Artio, Calvar'ion and Spindel lairs, work like single-way except that a player attacking you takes priority over the monster you are fighting."
+  },
+  "citations": [
+    {
+      "file": "Items_Kept_on_Death.wikitext",
+      "page": "Items Kept on Death",
+      "usedFor": "kept-item counts, value basis, untradeable rules, PvP vs PvM death scenarios, always-kept / always-lost lists, Trouver lock, gravestone fees, UIM note"
+    },
+    {
+      "file": "Skull_(status).wikitext",
+      "page": "Skull (status)",
+      "usedFor": "skull causes, durations, removal, PK Skull Prevention, amulet of avarice"
+    },
+    {
+      "file": "Wilderness.wikitext",
+      "page": "Wilderness (also the redirect target of 'Wilderness level')",
+      "usedFor": "level range 1-56, combat range rule, teleport restrictions 20/30, death mechanics summary, notable-locations table, boss combat types"
+    },
+    {
+      "file": "Wilderness_Slayer_Cave.wikitext",
+      "page": "Wilderness Slayer Cave",
+      "usedFor": "entrances, cave level range, monsters, cannon, task-only monsters, shortcuts, key bonus"
+    },
+    {
+      "file": "Larran's_key.wikitext",
+      "page": "Larran's key",
+      "usedFor": "drop-rate formula, death rule, tradeability, store value"
+    },
+    {
+      "file": "Krystilia.wikitext",
+      "page": "Krystilia",
+      "usedFor": "full task table with weights and locations, point rates, streak rules, Wilderness-only kill rule"
+    },
+    {
+      "file": "Protect_Item.wikitext",
+      "page": "Protect Item",
+      "usedFor": "prayer level, effect, high-risk world and UIM caveats"
+    },
+    {
+      "file": "Death.wikitext",
+      "page": "Death",
+      "usedFor": "gravestone visibility to PKer, historical 20+ coin conversion change"
+    },
+    {
+      "file": "Singles-plus_combat.wikitext",
+      "page": "Singles-plus combat",
+      "usedFor": "definition and list of singles-plus areas"
+    },
+    {
+      "file": "Revenant_Caves.wikitext",
+      "page": "Revenant Caves",
+      "usedFor": "singles-plus status, entry fee, amulet of avarice skull, teleport delay, no cannon"
+    },
+    {
+      "file": "Multicombat_area.wikitext",
+      "page": "Multicombat area",
+      "usedFor": "list of Wilderness multicombat areas, cannon behaviour in singles"
+    },
+    {
+      "file": "Larran's_small_chest.wikitext",
+      "page": "Larran's small chest",
+      "usedFor": "chest location/coords"
+    },
+    {
+      "file": "Larran's_big_chest.wikitext",
+      "page": "Larran's big chest",
+      "usedFor": "chest location/coords"
+    },
+    {
+      "file": "Slayer's_enchantment.wikitext",
+      "page": "Slayer's enchantment",
+      "usedFor": "drop-rate formula"
+    },
+    {
+      "file": "Slayer_reward_point.wikitext",
+      "page": "Slayer reward point",
+      "usedFor": "Krystilia point table, Turael reset note"
+    },
+    {
+      "file": "Slayer_Master.wikitext",
+      "page": "Slayer Master",
+      "usedFor": "Krystilia no-requirement note"
+    },
+    {
+      "file": "Wilderness_ditch.wikitext",
+      "page": "Wilderness Ditch",
+      "usedFor": "ditch map line y=3522"
+    },
+    {
+      "file": "Teleportation.wikitext",
+      "page": "Transportation (redirect target of 'Teleportation')",
+      "usedFor": "checked for level-limit text; none found beyond Wilderness obelisk description"
+    },
+    {
+      "file": "shortest-path/src/main/java/shortestpath/pathfinder/WildernessChecker.java",
+      "usedFor": "WorldArea constants for Wilderness bounds and level 20/30 thresholds (surface and underground)"
+    },
+    {
+      "file": "shortest-path/src/main/java/shortestpath/pathfinder/Pathfinder.java",
+      "usedFor": "semantics of the level-20/30 checks"
+    },
+    {
+      "file": "runelite-api Varbits.java / gameval/VarbitID.java / widgets/ComponentID.java / gameval/InterfaceID.java",
+      "usedFor": "IN_WILDERNESS=5963, TARGET_WILDERNESSLEVEL=9493, PVP_WILDERNESS_LEVEL widget"
+    }
+  ],
+  "discrepancies": [
+    "Skull duration: the task schema example said 20 minutes; Skull_(status).wikitext says 30 minutes after attacking a player, 10 minutes after the Abyss, and 20 minutes after unequipping an amulet of avarice/cape of skulls. Recorded 30 as the PvP value.",
+    "Cave level range: cave page says 17 to 32; Wilderness page table says 17-31.",
+    "Cave monster wilderness levels differ between the cave page (e.g. Abyssal demon 29-33) and the Krystilia task table (Abyssal demon 35-39).",
+    "Items Kept on Death says PvP drops become visible to all for four minutes then vanish; the Wilderness page says 59 minutes after the killer's one minute. Both quoted.",
+    "y-coordinate to wilderness-level formula is not stated in any opened source; only shortest-path threshold constants exist.",
+    "Krystilia task weights: summing the 37 {{+=|weight|N}} echoes on Krystilia.wikitext gives 196; the Wilderness Slayer Cave page prints the cave share as 68/195 (34.87%). The two pages disagree by one."
+  ]
+}

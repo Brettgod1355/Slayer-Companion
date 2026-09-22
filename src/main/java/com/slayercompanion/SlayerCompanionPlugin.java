@@ -25,11 +25,61 @@
 package com.slayercompanion;
 
 import com.google.inject.Provides;
+import com.slayercompanion.data.SlayerData;
+import com.slayercompanion.data.TaskInfo;
+import com.slayercompanion.data.TaskLocation;
+import com.slayercompanion.events.OwnedItemsChanged;
+import com.slayercompanion.events.SessionUpdated;
+import com.slayercompanion.events.TaskChanged;
+import com.slayercompanion.game.LiveSlayerCatalog;
+import com.slayercompanion.gear.GearAdvisor;
+import com.slayercompanion.gear.GearSetup;
+import com.slayercompanion.gear.OwnedItems;
+import com.slayercompanion.gear.SetupStore;
+import com.slayercompanion.gear.SlotAdvice;
+import com.slayercompanion.gear.UpgradeAdvisor;
+import com.slayercompanion.location.LocationService;
+import com.slayercompanion.location.MapMarkerService;
+import com.slayercompanion.location.RouteService;
+import com.slayercompanion.points.PointsPlanner;
+import com.slayercompanion.task.CurrentTask;
+import com.slayercompanion.task.SlayerMaster;
+import com.slayercompanion.task.TaskTracker;
+import com.slayercompanion.tracker.TaskSession;
+import com.slayercompanion.tracker.TaskSessionTracker;
+import com.slayercompanion.ui.PanelActions;
+import com.slayercompanion.ui.PanelModel;
+import com.slayercompanion.ui.SlayerCompanionPanel;
+import com.slayercompanion.ui.TaskOverlay;
+import com.slayercompanion.unlocks.UnlockAdvisor;
+import com.slayercompanion.wilderness.WildernessAdvisor;
+import com.slayercompanion.wilderness.WildernessStatus;
+import java.awt.image.BufferedImage;
+import java.util.Collections;
+import java.util.List;
+import java.util.Optional;
+import javax.annotation.Nullable;
 import javax.inject.Inject;
+import javax.swing.SwingUtilities;
 import lombok.extern.slf4j.Slf4j;
+import net.runelite.api.Client;
+import net.runelite.api.GameState;
+import net.runelite.api.events.GameStateChanged;
+import net.runelite.api.events.GameTick;
+import net.runelite.api.gameval.VarPlayerID;
+import net.runelite.api.gameval.VarbitID;
+import net.runelite.client.callback.ClientThread;
 import net.runelite.client.config.ConfigManager;
+import net.runelite.client.eventbus.Subscribe;
+import net.runelite.client.events.ConfigChanged;
+import net.runelite.client.game.ItemManager;
 import net.runelite.client.plugins.Plugin;
 import net.runelite.client.plugins.PluginDescriptor;
+import net.runelite.client.ui.ClientToolbar;
+import net.runelite.client.ui.NavigationButton;
+import net.runelite.client.ui.overlay.OverlayManager;
+import net.runelite.client.util.ImageUtil;
+import net.runelite.client.util.LinkBrowser;
 
 @Slf4j
 @PluginDescriptor(
@@ -42,24 +92,354 @@ public class SlayerCompanionPlugin extends Plugin
 	/** Shown in the panel footer; bumped together with build.gradle and runelite-plugin.properties. */
 	public static final String VERSION = "0.1.0";
 
+	private static final String WIKI_BASE = "https://oldschool.runescape.wiki/w/";
+	/** Refresh the Wilderness numbers at most this often (game ticks). */
+	private static final int WILDERNESS_REFRESH_TICKS = 5;
+
+	@Inject
+	private Client client;
+	@Inject
+	private ClientThread clientThread;
+	@Inject
+	private ClientToolbar clientToolbar;
+	@Inject
+	private OverlayManager overlayManager;
+	@Inject
+	private ItemManager itemManager;
 	@Inject
 	private SlayerCompanionConfig config;
+
+	@Inject
+	private SlayerData data;
+	@Inject
+	private TaskTracker taskTracker;
+	@Inject
+	private OwnedItems ownedItems;
+	@Inject
+	private LiveSlayerCatalog catalog;
+	@Inject
+	private LocationService locationService;
+	@Inject
+	private RouteService routeService;
+	@Inject
+	private MapMarkerService mapMarkerService;
+	@Inject
+	private GearAdvisor gearAdvisor;
+	@Inject
+	private SetupStore setupStore;
+	@Inject
+	private UpgradeAdvisor upgradeAdvisor;
+	@Inject
+	private PointsPlanner pointsPlanner;
+	@Inject
+	private TaskSessionTracker sessionTracker;
+	@Inject
+	private WildernessAdvisor wildernessAdvisor;
+	@Inject
+	private UnlockAdvisor unlockAdvisor;
+	@Inject
+	private TaskOverlay overlay;
+
+	private SlayerCompanionPanel panel;
+	private NavigationButton navButton;
+	private volatile CurrentTask overlayTask;
+	private volatile TaskSession overlaySession;
+	private volatile WildernessStatus overlayWilderness;
+	private int tickCounter;
+	private boolean refreshQueued;
 
 	@Override
 	protected void startUp()
 	{
+		panel = new SlayerCompanionPanel(new Actions(), data.wilderness(), this::itemName);
+		BufferedImage icon = ImageUtil.loadImageResource(getClass(), "/com/slayercompanion/panel_icon.png");
+		navButton = NavigationButton.builder()
+			.tooltip("Slayer Companion")
+			.icon(icon)
+			.priority(6)
+			.panel(panel)
+			.build();
+		clientToolbar.addNavigation(navButton);
+
+		overlay.bind(() -> overlayTask, () -> overlaySession, () -> overlayWilderness);
+		if (config.showOverlay())
+		{
+			overlayManager.add(overlay);
+		}
+
+		sessionTracker.setAlternativeNames(name -> data.task(name).map(TaskInfo::alternativesOrEmpty).orElse(Collections.emptyList()));
+		ownedItems.startUp();
+		sessionTracker.startUp();
+		taskTracker.startUp();
+		requestRefresh();
 		log.debug("Slayer Companion {} started", VERSION);
 	}
 
 	@Override
 	protected void shutDown()
 	{
-		log.debug("Slayer Companion stopped");
+		taskTracker.shutDown();
+		sessionTracker.shutDown();
+		ownedItems.shutDown();
+		mapMarkerService.clear();
+		overlayManager.remove(overlay);
+		clientToolbar.removeNavigation(navButton);
+		catalog.reset();
+		panel = null;
+		overlayTask = null;
+		overlaySession = null;
+		overlayWilderness = null;
 	}
 
 	@Provides
 	SlayerCompanionConfig provideConfig(ConfigManager configManager)
 	{
 		return configManager.getConfig(SlayerCompanionConfig.class);
+	}
+
+	@Subscribe
+	public void onGameStateChanged(GameStateChanged event)
+	{
+		if (event.getGameState() == GameState.LOGGED_IN || event.getGameState() == GameState.LOGIN_SCREEN)
+		{
+			catalog.reset();
+			requestRefresh();
+		}
+	}
+
+	@Subscribe
+	public void onTaskChanged(TaskChanged event)
+	{
+		overlayTask = event.getCurrent();
+		CurrentTask task = event.getCurrent();
+		if (task == null)
+		{
+			mapMarkerService.clear();
+		}
+		else if (event.isNewAssignment())
+		{
+			data.task(task.getName()).ifPresent(info ->
+			{
+				updateMarkers(info);
+				if (config.autoRouteFavourite())
+				{
+					locationService.favouriteLocation(info).flatMap(LocationService::point).ifPresent(routeService::route);
+				}
+			});
+		}
+		requestRefresh();
+	}
+
+	@Subscribe
+	public void onOwnedItemsChanged(OwnedItemsChanged event)
+	{
+		requestRefresh();
+	}
+
+	@Subscribe
+	public void onSessionUpdated(SessionUpdated event)
+	{
+		overlaySession = event.getSession();
+		requestRefresh();
+	}
+
+	@Subscribe
+	public void onConfigChanged(ConfigChanged event)
+	{
+		if (!SlayerCompanionConfig.GROUP.equals(event.getGroup()))
+		{
+			return;
+		}
+		if ("showOverlay".equals(event.getKey()))
+		{
+			overlayManager.remove(overlay);
+			if (config.showOverlay())
+			{
+				overlayManager.add(overlay);
+			}
+		}
+		if ("showMapMarkers".equals(event.getKey()))
+		{
+			clientThread.invokeLater(() -> taskTracker.current().flatMap(t -> data.task(t.getName())).ifPresent(this::updateMarkers));
+		}
+		requestRefresh();
+	}
+
+	@Subscribe
+	public void onGameTick(GameTick tick)
+	{
+		if (++tickCounter % WILDERNESS_REFRESH_TICKS != 0 || client.getGameState() != GameState.LOGGED_IN)
+		{
+			return;
+		}
+		WildernessStatus w = wildernessAdvisor.status();
+		WildernessStatus prev = overlayWilderness;
+		overlayWilderness = w;
+		if (prev == null || prev.isInWilderness() != w.isInWilderness() || prev.getRiskValue() != w.getRiskValue()
+			|| prev.isSkulled() != w.isSkulled() || prev.getWildernessLevel() != w.getWildernessLevel())
+		{
+			requestRefresh();
+		}
+	}
+
+	/** Build a fresh model on the client thread and push it to the panel on the Swing thread. Coalesces bursts. */
+	private void requestRefresh()
+	{
+		if (refreshQueued)
+		{
+			return;
+		}
+		refreshQueued = true;
+		clientThread.invokeLater(() ->
+		{
+			refreshQueued = false;
+			PanelModel model = buildModel();
+			SwingUtilities.invokeLater(() ->
+			{
+				if (panel != null)
+				{
+					panel.update(model, config);
+				}
+			});
+		});
+	}
+
+	private PanelModel buildModel()
+	{
+		boolean loggedIn = client.getGameState() == GameState.LOGGED_IN;
+		CurrentTask task = taskTracker.current().orElse(null);
+		TaskInfo info = task == null ? null : data.task(task.getName()).orElse(null);
+		List<TaskLocation> locations = info == null ? Collections.emptyList() : locationService.forTask(info);
+		String favourite = task == null ? null : locationService.favourite(task.getName());
+		int points = loggedIn ? client.getVarbitValue(VarbitID.SLAYER_POINTS) : 0;
+		int shared = loggedIn ? client.getVarbitValue(VarbitID.SLAYER_TASKS_COMPLETED) : 0;
+		int wildStreak = loggedIn ? client.getVarbitValue(VarbitID.SLAYER_WILDERNESS_TASKS_COMPLETED) : 0;
+		int mortimerStreak = loggedIn ? client.getVarpValue(VarPlayerID.SLAYER_MORTIMER_TASKS_COMPLETED) : 0;
+
+		GearSetup setup = task == null ? null : setupStore.get(task.getName()).orElse(null);
+		List<SetupStore.Difference> diffs = setup == null ? Collections.emptyList() : setupStore.compare(setup);
+		List<String> missingRequired = info == null ? Collections.emptyList() : gearAdvisor.missingItems(info.getRequiredItems());
+		SlayerMaster master = task == null ? SlayerMaster.fromVarbit(loggedIn ? client.getVarbitValue(VarbitID.SLAYER_MASTER) : 0) : task.getMaster();
+		List<UpgradeAdvisor.UpgradeSuggestion> upgrades = loggedIn && ownedItems.isBankKnown()
+			? upgradeAdvisor.suggest(master, null) : Collections.emptyList();
+
+		WildernessStatus wilderness = loggedIn ? wildernessAdvisor.status() : null;
+		overlayWilderness = wilderness;
+		overlayTask = task;
+		overlaySession = sessionTracker.current().orElse(null);
+
+		return PanelModel.builder()
+			.loggedIn(loggedIn)
+			.task(task)
+			.info(info)
+			.locations(locations)
+			.favouriteLocationId(favourite)
+			.shortestPathAvailable(routeService.isShortestPathAvailable())
+			.bankKnown(ownedItems.isBankKnown())
+			.missingRequiredItems(missingRequired)
+			.savedSetup(setup)
+			.setupDifferences(diffs)
+			.upgrades(upgrades)
+			.pointsPlan(loggedIn ? pointsPlanner.plan(points, shared, task) : null)
+			.sharedStreak(shared)
+			.wildernessStreak(wildStreak)
+			.mortimerStreak(mortimerStreak)
+			.points(points)
+			.session(overlaySession)
+			.history(sessionTracker.history())
+			.wilderness(wilderness)
+			.unlocks(loggedIn ? unlockAdvisor.advise(points) : Collections.emptyList())
+			.build();
+	}
+
+	private void updateMarkers(TaskInfo info)
+	{
+		if (config.showMapMarkers())
+		{
+			mapMarkerService.show(locationService.forTask(info), locationService.favourite(info.getTask()));
+		}
+		else
+		{
+			mapMarkerService.clear();
+		}
+	}
+
+	private String itemName(int itemId)
+	{
+		return itemManager.getItemComposition(itemId).getName();
+	}
+
+	/** Panel callbacks; they run on the Swing thread and hop to the client thread where needed. */
+	private class Actions implements PanelActions
+	{
+		@Override
+		public void routeTo(TaskLocation location)
+		{
+			LocationService.point(location).ifPresent(p -> clientThread.invokeLater(() -> routeService.route(p)));
+		}
+
+		@Override
+		public void clearRoute()
+		{
+			clientThread.invokeLater(routeService::clear);
+		}
+
+		@Override
+		public void setFavourite(String taskName, @Nullable String locationId)
+		{
+			locationService.setFavourite(taskName, locationId);
+			clientThread.invokeLater(() ->
+			{
+				data.task(taskName).ifPresent(SlayerCompanionPlugin.this::updateMarkers);
+				requestRefresh();
+			});
+		}
+
+		@Override
+		public void saveCurrentSetup(String taskName)
+		{
+			clientThread.invokeLater(() ->
+			{
+				setupStore.saveCurrent(taskName);
+				requestRefresh();
+			});
+		}
+
+		@Override
+		public void deleteSetup(String taskName)
+		{
+			setupStore.delete(taskName);
+			requestRefresh();
+		}
+
+		@Override
+		public void resetSession()
+		{
+			clientThread.invokeLater(sessionTracker::resetCurrent);
+		}
+
+		@Override
+		public void refresh()
+		{
+			requestRefresh();
+		}
+
+		@Override
+		public List<SlotAdvice> advise(com.slayercompanion.data.GearTable table)
+		{
+			return gearAdvisor.advise(table);
+		}
+
+		@Override
+		public void openWiki(String pageTitle)
+		{
+			LinkBrowser.browse(WIKI_BASE + pageTitle.replace(' ', '_'));
+		}
+	}
+
+	/** For tests. */
+	Optional<CurrentTask> currentTask()
+	{
+		return taskTracker.current();
 	}
 }

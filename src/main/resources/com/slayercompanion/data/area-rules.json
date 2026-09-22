@@ -1,0 +1,1154 @@
+{
+  "cannonProhibited": [
+    {
+      "area": "Abyssal Area",
+      "message": "You can't set up a cannon here.",
+      "citation": "Dwarf multicannon#Prohibited areas",
+      "note": "Abyssal Area"
+    },
+    {
+      "area": "Abyssal Nexus",
+      "message": "You can't set up a cannon here.",
+      "citation": "Dwarf multicannon#Prohibited areas",
+      "note": "Abyssal Nexus"
+    },
+    {
+      "area": "Ancient Cavern",
+      "message": "It's far too damp for you to set up a cannon here.",
+      "citation": "Dwarf multicannon#Prohibited areas",
+      "note": "Ancient Cavern"
+    },
+    {
+      "area": "Ancient Guthixian Temple",
+      "message": "A strange magical force won't let you set up a cannon here",
+      "citation": "Dwarf multicannon#Prohibited areas",
+      "note": "Ancient Guthixian Temple"
+    },
+    {
+      "area": "Ancient Prison",
+      "message": "An ancient power won't let you set up a cannon here.",
+      "citation": "Dwarf multicannon#Prohibited areas",
+      "note": "Ancient Prison"
+    },
+    {
+      "area": "Barbarian Assault",
+      "message": null,
+      "citation": "Dwarf multicannon#Prohibited areas",
+      "note": "Barbarian Assault"
+    },
+    {
+      "area": "Black Knights' Fortress (location)",
+      "message": "It is not permitted to set up a cannon this close to the Dwarf Black Guard.",
+      "citation": "Dwarf multicannon#Prohibited areas",
+      "note": "Black Knights' Fortress (in and around)"
+    },
+    {
+      "area": "Brutus",
+      "message": "It's far too muddy for you to set up a cannon here.",
+      "citation": "Dwarf multicannon#Prohibited areas",
+      "note": "Brutus arena"
+    },
+    {
+      "area": "Bryophyta's lair",
+      "message": "You can't set up a cannon here.",
+      "citation": "Dwarf multicannon#Prohibited areas",
+      "note": "Bryophyta's lair"
+    },
+    {
+      "area": "Callisto's Den",
+      "message": "It doesn't seem safe to set up a cannon here.",
+      "citation": "Dwarf multicannon#Prohibited areas",
+      "note": "Callisto's Den"
+    },
+    {
+      "area": "Catacombs of Kourend",
+      "message": "An ancient power won't let you set up a cannon here.",
+      "citation": "Dwarf multicannon#Prohibited areas",
+      "note": "Catacombs of Kourend"
+    },
+    {
+      "area": "Castle Wars",
+      "message": null,
+      "citation": "Dwarf multicannon#Prohibited areas",
+      "note": "Castle Wars"
+    },
+    {
+      "area": "Cerberus' Lair",
+      "message": "Your cannon would melt if you set it up here.",
+      "citation": "Dwarf multicannon#Prohibited areas",
+      "note": "Cerberus' Lair"
+    },
+    {
+      "area": "Chambers of Xeric",
+      "message": "An ancient power won't let you set up a cannon here.",
+      "citation": "Dwarf multicannon#Prohibited areas",
+      "note": "Chambers of Xeric"
+    },
+    {
+      "area": "Clan Hall",
+      "message": "You can't set up a cannon here.",
+      "citation": "Dwarf multicannon#Prohibited areas",
+      "note": "Clan Hall"
+    },
+    {
+      "area": "Dwarven Mine",
+      "message": "The dwarves won't be happy if you set up a cannon here.",
+      "citation": "Dwarf multicannon#Prohibited areas",
+      "note": "Dwarven Mine"
+    },
+    {
+      "area": "Enchanted Valley",
+      "message": "You can't set up a cannon here.",
+      "citation": "Dwarf multicannon#Prohibited areas",
+      "note": "Enchanted Valley"
+    },
+    {
+      "area": "Entrana",
+      "message": null,
+      "citation": "Dwarf multicannon#Prohibited areas",
+      "note": "Entrana"
+    },
+    {
+      "area": "Feldip Hills",
+      "message": "You can't set up a cannon here.",
+      "citation": "Dwarf multicannon#Prohibited areas",
+      "note": "Feldip Hills jungle hunter area"
+    },
+    {
+      "area": "Fight Arena (location)",
+      "message": "The dwarves won't be happy if you set up a cannon here.",
+      "citation": "Dwarf multicannon#Prohibited areas",
+      "note": "Fight Arena interior"
+    },
+    {
+      "area": "Forthos Dungeon",
+      "message": "A mysterious presence won't let you set up a cannon here.",
+      "citation": "Dwarf multicannon#Prohibited areas",
+      "note": "Forthos Dungeon"
+    },
+    {
+      "area": "Fossil Island",
+      "message": "You can't set up a cannon here.",
+      "citation": "Dwarf multicannon#Prohibited areas",
+      "note": "Fossil Island bank chest island"
+    },
+    {
+      "area": "Fremennik Slayer Dungeon",
+      "message": "The air is too dank for you to set up a cannon here.",
+      "citation": "Dwarf multicannon#Prohibited areas",
+      "note": "Fremennik Slayer Dungeon"
+    },
+    {
+      "area": "Gilbert",
+      "message": "A colourful magical force won't let you set up a cannon here.",
+      "citation": "Dwarf multicannon#Prohibited areas",
+      "note": "Near Gilbert, south-east of Barbarian Village"
+    },
+    {
+      "area": "Gemstone Crab",
+      "message": "You can't set up a cannon here.",
+      "citation": "Dwarf multicannon#Prohibited areas",
+      "note": "Gemstone Crab's current location"
+    },
+    {
+      "area": "Grand Exchange",
+      "message": "The Grand Exchange staff prefer not to have heavy artillery operated around their premises.",
+      "citation": "Dwarf multicannon#Prohibited areas",
+      "note": "Grand Exchange"
+    },
+    {
+      "area": "Hair of the Dog",
+      "message": "Roavar won't be happy if you set up a cannon here.",
+      "citation": "Dwarf multicannon#Prohibited areas",
+      "note": "Hair of the Dog"
+    },
+    {
+      "area": "Hespori",
+      "message": "It's far too damp down here to set up a cannon.",
+      "citation": "Dwarf multicannon#Prohibited areas",
+      "note": "Hespori"
+    },
+    {
+      "area": "Ice Mountain",
+      "message": "The dwarves won't be happy if you set up a cannon here.",
+      "citation": "Dwarf multicannon#Prohibited areas",
+      "note": "Ice Mountain (except on the western tiles of the mountain)"
+    },
+    {
+      "area": "Jiggig",
+      "message": "The ogres won't be happy if you set up a cannon here.",
+      "citation": "Dwarf multicannon#Prohibited areas",
+      "note": "Jiggig"
+    },
+    {
+      "area": "Jiggig Dungeon",
+      "message": "The ground is too soft for you to set up a cannon here.",
+      "citation": "Dwarf multicannon#Prohibited areas",
+      "note": "Jiggig Dungeon"
+    },
+    {
+      "area": "Jormungand's Prison",
+      "message": "The ground is too soft for you to set up a cannon here.",
+      "citation": "Dwarf multicannon#Prohibited areas",
+      "note": "Jormungand's Prison basilisk areas"
+    },
+    {
+      "area": "Karuulm Slayer Dungeon",
+      "message": "The electricity bursting through this part of the cavern would render the cannon useless.",
+      "citation": "Dwarf multicannon#Prohibited areas",
+      "note": "Karuulm Slayer Dungeon (wyrm and Alchemical Hydra areas)"
+    },
+    {
+      "area": "Killerwatt Plane",
+      "message": "The electricity is too powerful for you to set up a cannon here.",
+      "citation": "Dwarf multicannon#Prohibited areas",
+      "note": "Killerwatt Plane"
+    },
+    {
+      "area": "Kraken Cove",
+      "message": null,
+      "citation": "Dwarf multicannon#Prohibited areas",
+      "note": "Kraken Cove"
+    },
+    {
+      "area": "Lair of Tarn Razorlor (dungeon)",
+      "message": "This temple is ancient and would probably collapse if you started firing a cannon.",
+      "citation": "Dwarf multicannon#Prohibited areas",
+      "note": "Lair of Tarn Razorlor"
+    },
+    {
+      "area": "Lizardman Caves",
+      "message": "The ground is too marshy here.",
+      "citation": "Dwarf multicannon#Prohibited areas",
+      "note": "Lizardman Caves"
+    },
+    {
+      "area": "Lizardman Temple",
+      "message": "This ancient structure is too unstable to handle the idea of a cannon firing at its walls.",
+      "citation": "Dwarf multicannon#Prohibited areas",
+      "note": "Lizardman Temple"
+    },
+    {
+      "area": "Mogre Camp",
+      "message": "It's just a little too damp for you to set up a cannon here.",
+      "citation": "Dwarf multicannon#Prohibited areas",
+      "note": "Mogre Camp"
+    },
+    {
+      "area": "Nightmare Zone",
+      "message": "Dominic won't be happy if you set up a cannon here.",
+      "citation": "Dwarf multicannon#Prohibited areas",
+      "note": "Nightmare Zone"
+    },
+    {
+      "area": "Ourania Cave",
+      "message": "Eniola won't be happy if you set up a cannon here.",
+      "citation": "Dwarf multicannon#Prohibited areas",
+      "note": "Ourania Cave bank area"
+    },
+    {
+      "area": "Pest Control",
+      "message": "You can't set up a cannon here.",
+      "citation": "Dwarf multicannon#Prohibited areas",
+      "note": "Pest Control"
+    },
+    {
+      "area": "Player-owned house",
+      "message": "You can't set up a cannon here.",
+      "citation": "Dwarf multicannon#Prohibited areas",
+      "note": "Player-owned houses"
+    },
+    {
+      "area": "Realm of Memories",
+      "message": "The creatures of this realm are neither truly canonical nor cannonable.",
+      "citation": "Dwarf multicannon#Prohibited areas",
+      "note": "Realm of Memories - (during the 20th Anniversary event); (during the 25th Anniversary event)",
+      "alternateMessages": [
+        "The archaic atmosphere won't let you set up a cannon here."
+      ]
+    },
+    {
+      "area": "Red chinchompa hunting ground",
+      "message": "You can't set up a cannon here.",
+      "citation": "Dwarf multicannon#Prohibited areas",
+      "note": "Red chinchompa hunting ground"
+    },
+    {
+      "area": "Revenant Caves",
+      "message": "You can't set up a cannon here.",
+      "citation": "Dwarf multicannon#Prohibited areas",
+      "note": "Revenant Caves"
+    },
+    {
+      "area": "Ruins of Tapoyauik",
+      "message": "An ancient magical force won't let you set up a cannon here.",
+      "citation": "Dwarf multicannon#Prohibited areas",
+      "note": "Ruins of Tapoyauik (including Doom of Mokhaiotl)"
+    },
+    {
+      "area": "Sailing",
+      "message": "The boat is too damp and unstable for you to set up a cannon here.",
+      "citation": "Dwarf multicannon#Prohibited areas",
+      "note": "Sailing boats"
+    },
+    {
+      "area": "Scabaras Dungeon",
+      "message": null,
+      "citation": "Dwarf multicannon#Prohibited areas",
+      "note": "Scabaras Dungeon"
+    },
+    {
+      "area": "Scurrius",
+      "message": "It's far too damp for you to set up a cannon here.",
+      "citation": "Dwarf multicannon#Prohibited areas",
+      "note": "Scurrius' Lair"
+    },
+    {
+      "area": "Sorceress's Garden",
+      "message": "You can't set up a cannon here.",
+      "citation": "Dwarf multicannon#Prohibited areas",
+      "note": "Sorceress's Garden"
+    },
+    {
+      "area": "Mort'ton",
+      "message": "You can't set up a cannon here.",
+      "citation": "Dwarf multicannon#Prohibited areas",
+      "note": "Mort'ton and Shades of Mort'ton (you can however set up a cannon in the Shade catacombs, but beware of the fact that the shades heal themselves to full health if they are not in combat anymore)"
+    },
+    {
+      "area": "Shellbane Gryphon Cave",
+      "message": "The ground is too unstable to set up a cannon here.",
+      "citation": "Dwarf multicannon#Prohibited areas",
+      "note": "Shellbane Gryphon Cave"
+    },
+    {
+      "area": "Silk Chasm",
+      "message": "It doesn't seem safe to set up a cannon here.",
+      "citation": "Dwarf multicannon#Prohibited areas",
+      "note": "Silk Chasm"
+    },
+    {
+      "area": "Slayer Tower",
+      "message": "A strange magical force won't let you set up a cannon here.",
+      "citation": "Dwarf multicannon#Prohibited areas",
+      "note": "Slayer Tower"
+    },
+    {
+      "area": "Smoke Dungeon",
+      "message": "Dusty Aliv won't be happy if you set up a cannon here.",
+      "citation": "Dwarf multicannon#Prohibited areas",
+      "note": "Smoke Dungeon (task-only area)"
+    },
+    {
+      "area": "Theatre of Blood",
+      "message": "The vampyres won't be happy if you set up a cannon here.",
+      "citation": "Dwarf multicannon#Prohibited areas",
+      "note": "Theatre of Blood"
+    },
+    {
+      "area": "Tombs of Amascut",
+      "message": "An ancient power won't let you set up a cannon here.",
+      "citation": "Dwarf multicannon#Prohibited areas",
+      "note": "Tombs of Amascut"
+    },
+    {
+      "area": "Tonali Cavern",
+      "message": "An ancient magical force won't let you set up a cannon here.",
+      "citation": "Dwarf multicannon#Prohibited areas",
+      "note": "Tonali Cavern"
+    },
+    {
+      "area": "Tower of Magic",
+      "message": null,
+      "citation": "Dwarf multicannon#Prohibited areas",
+      "note": "Tower of Magic (during quest only)"
+    },
+    {
+      "area": "Mor Ul Rek",
+      "message": "The TzHaar won't be happy if you set up a cannon here.",
+      "citation": "Dwarf multicannon#Prohibited areas",
+      "note": "Mor Ul Rek, TzHaar Fight Cave and TzHaar Fight Pit"
+    },
+    {
+      "area": "Ungael",
+      "message": "The intense cold threatens to crack the metal of your cannon. You probably shouldn't put it down here.",
+      "citation": "Dwarf multicannon#Prohibited areas",
+      "note": "Ungael (Vorkath area)"
+    },
+    {
+      "area": "Vanstrom Klause#Sins of the Father",
+      "message": "You can't set up a cannon here.",
+      "citation": "Dwarf multicannon#Prohibited areas",
+      "note": "Vanstrom Klause (Boss fight area in the Sins of the Father quest)"
+    },
+    {
+      "area": "Vet'ion's Rest",
+      "message": "It doesn't seem safe to set up a cannon here.",
+      "citation": "Dwarf multicannon#Prohibited areas",
+      "note": "Vet'ion's Rest"
+    },
+    {
+      "area": "Water mill cellar",
+      "message": "It is too damp for the cannon to function here.",
+      "citation": "Dwarf multicannon#Prohibited areas",
+      "note": "Water mill cellar (Death to the Dorgeshuun area)"
+    },
+    {
+      "area": "Warriors' Guild",
+      "message": "You can't set up a cannon here.",
+      "citation": "Dwarf multicannon#Prohibited areas",
+      "note": "Warriors' Guild"
+    },
+    {
+      "area": "Wintertodt",
+      "message": "It's far too cold for you to set up a cannon here.",
+      "citation": "Dwarf multicannon#Prohibited areas",
+      "note": "Wintertodt"
+    },
+    {
+      "area": "Wyvern Cave",
+      "message": "Fungi start eating into the legs of your cannon; you quickly decide not to set it up here.",
+      "citation": "Dwarf multicannon#Prohibited areas",
+      "note": "Wyvern Cave"
+    },
+    {
+      "area": "Zemouregal's Base",
+      "message": "A strange magical force won't let you set up a cannon here.",
+      "citation": "Dwarf multicannon#Prohibited areas",
+      "note": "Zemouregal's Base"
+    },
+    {
+      "area": "Zulrah's Shrine",
+      "message": "It's far too damp for you to set up a cannon here.",
+      "citation": "Dwarf multicannon#Prohibited areas",
+      "note": "Zulrah's Shrine"
+    },
+    {
+      "area": "Ynysdail Cavern",
+      "message": "The ground is too damp to set up a cannon here.",
+      "citation": "Ynysdail Cavern",
+      "note": "Quote: \"The entire dungeon is a single-combat zone and Dwarf multicannons cannot be set in the dungeon; attempting to do so will result in the message \\\"The ground is too damp to set up a cannon here.\\\"\" (not listed on Dwarf multicannon#Prohibited areas)"
+    },
+    {
+      "area": "Grimstone Dungeon",
+      "message": "It's far too cold for you to set up a cannon here.",
+      "citation": "Grimstone Dungeon",
+      "note": "Quote: \"Attempting to set up a Dwarf multicannon anywhere in the dungeon will result in the message It's far too cold for you to set up a cannon here.\" (not listed on Dwarf multicannon#Prohibited areas)"
+    }
+  ],
+  "cannonAllowed": [
+    {
+      "area": "Stronghold Slayer Cave",
+      "detail": "A dwarf multicannon can be used in the dungeon.",
+      "citation": "Stronghold Slayer Cave"
+    },
+    {
+      "area": "Karuulm Slayer Dungeon",
+      "detail": "A dwarf multicannon can be used in all areas here except the wyrm and Alchemical Hydra areas; the former states that the electricity the wyrms discharge would render the cannon useless (however, does not stop the cannon from working on the wyrms in Wyrmscraig Cavern), and the latter states that it would destroy the chemical containers.",
+      "citation": "Karuulm Slayer Dungeon"
+    },
+    {
+      "area": "Kraken Cove",
+      "detail": "A dwarf multicannon can be used within this dungeon, but not near the Waterfiends. [CONFLICT: Dwarf multicannon#Prohibited areas lists 'Kraken Cove' with no message]",
+      "citation": "Kraken Cove"
+    },
+    {
+      "area": "Brimhaven Dungeon",
+      "detail": "A Dwarf multicannon may be used within the dungeon, although it is a single way combat zone.",
+      "citation": "Brimhaven Dungeon"
+    },
+    {
+      "area": "Taverley Dungeon",
+      "detail": "Taverley Dungeon is entirely single combat (although cannons can still attack multiple targets if the player is not in direct combat).",
+      "citation": "Taverley Dungeon"
+    },
+    {
+      "area": "Chasm of Fire",
+      "detail": "A dwarf multicannon can be used in the chasm, although it is not a multi-combat area.",
+      "citation": "Chasm of Fire"
+    },
+    {
+      "area": "Jormungand's Prison",
+      "detail": "The dwarf multicannon cannot be used to kill the basilisks in the prison, but it can be set up in the dagannoth areas.",
+      "citation": "Jormungand's Prison"
+    },
+    {
+      "area": "Iorwerth Dungeon",
+      "detail": "A dwarf multicannon can be used in the dungeon. However, the whole dungeon is single-way combat. (Dwarf multicannon page: 'Iorwerth Dungeon in the kurask area because they are immune to cannon damage')",
+      "citation": "Iorwerth Dungeon"
+    },
+    {
+      "area": "Mos Le'Harmless Cave",
+      "detail": "The Dwarf multicannon can be used in the cave.",
+      "citation": "Mos Le'Harmless Cave"
+    },
+    {
+      "area": "Kalphite Lair",
+      "detail": "The cannon will be destroyed by the queen if used in her vicinity, however. (workers/soldiers upper level: 'popular and great spots for players with a dwarf multicannon on a Slayer task')",
+      "citation": "Kalphite Lair"
+    },
+    {
+      "area": "Kalphite Cave",
+      "detail": "A dwarf multicannon can be used here, and it is a multi-combat area.",
+      "citation": "Kalphite Cave"
+    },
+    {
+      "area": "Neypotzli",
+      "detail": "The area is not multi combat, but a dwarven cannon can be set up for Slayer tasks within the caverns.",
+      "citation": "Neypotzli"
+    },
+    {
+      "area": "Isle of Souls Dungeon",
+      "detail": "A dwarf multicannon can be used in the dungeon, though it is not a multicombat area.",
+      "citation": "Isle of Souls Dungeon"
+    },
+    {
+      "area": "Meiyerditch Laboratories",
+      "detail": "The entire area is also multicombat and the Dwarven multicannon can be used here thus making it an excellent place to kill bloodvelds with a cannon.",
+      "citation": "Meiyerditch Laboratories"
+    },
+    {
+      "area": "Ogre Enclave",
+      "detail": "A dwarf multicannon may be used here, but it is not a multi-combat area.",
+      "citation": "Ogre Enclave"
+    },
+    {
+      "area": "Mount Quidamortem",
+      "detail": "This makes the dwarf multicannon effective on troll Slayer tasks. The best cannon spot can be found across the bridge.",
+      "citation": "Mount Quidamortem"
+    },
+    {
+      "area": "Giants' Den",
+      "detail": "A dwarf multicannon can be used in the den; however, it is only single-way combat.",
+      "citation": "Giants' Den"
+    },
+    {
+      "area": "Wilderness Slayer Cave",
+      "detail": "The area is desirable to players wishing to quickly complete slayer tasks, as it's possible to use the Dwarf multicannon inside the dungeon.",
+      "citation": "Wilderness Slayer Cave"
+    },
+    {
+      "area": "Edgeville Dungeon",
+      "detail": "The Dwarf Multicannon can be used here.",
+      "citation": "Edgeville Dungeon"
+    },
+    {
+      "area": "Lumbridge Swamp Caves",
+      "detail": "A Dwarf multicannon can be used in the caves.",
+      "citation": "Lumbridge Swamp Caves"
+    },
+    {
+      "area": "Dorgesh-Kaan South Dungeon",
+      "detail": "You can use a dwarf multicannon in the dungeon, however it is not multicombat.",
+      "citation": "Dorgesh-Kaan South Dungeon"
+    },
+    {
+      "area": "Deep Wilderness Dungeon",
+      "detail": "A cannon can be used within the dungeon.",
+      "citation": "Deep Wilderness Dungeon"
+    },
+    {
+      "area": "Smoke Dungeon",
+      "detail": "Dusty Aliv will also stop players from placing a Dwarf multicannon in the task-only area. (i.e. prohibited only in the western task-only dust devil area)",
+      "citation": "Smoke Dungeon"
+    },
+    {
+      "area": "God Wars Dungeon",
+      "detail": "The Kalphite Queen, King Black Dragon, Thermonuclear smoke devil, and inhabitants of the God Wars Dungeon may also destroy a cannon if a player attempts to use it",
+      "citation": "Dwarf multicannon#Prohibited areas"
+    },
+    {
+      "area": "Wyrmscraig Cavern",
+      "detail": "(from Karuulm Slayer Dungeon page) ...does not stop the cannon from working on the wyrms in Wyrmscraig Cavern",
+      "citation": "Karuulm Slayer Dungeon"
+    }
+  ],
+  "multicombat": [
+    {
+      "area": "Revenant Caves",
+      "status": "singles-plus",
+      "detail": "Entire cave. Exception: Revenant maledictus can be attacked by multiple players as if in multicombat.",
+      "citation": "Singles-plus combat; Revenant Caves",
+      "quote": "Revenant Caves page: 'it is an extremely dangerous cave that ranges from level 17 to 40 Wilderness and is exclusively a singles-plus combat area.' Currently, the only singles-plus combat areas are: the Revenant Caves; the Wilderness Agility Course; and the arenas for the weaker variants of the Wilderness bosses: Hunter's End - the lair of Artio; Skeletal Tomb - the lair of Calvar'ion; Web Chasm - the lair of Spindel"
+    },
+    {
+      "area": "Wilderness Agility Course",
+      "status": "singles-plus",
+      "detail": "Listed as singles-plus. (Multicombat area page separately lists 'The southern part of the Wilderness Agility Course' as multi.)",
+      "citation": "Singles-plus combat; Multicombat area#List of multicombat areas",
+      "quote": "Currently, the only singles-plus combat areas are: the Revenant Caves; the Wilderness Agility Course; and the arenas for the weaker variants of the Wilderness bosses: Hunter's End - the lair of Artio; Skeletal Tomb - the lair of Calvar'ion; Web Chasm - the lair of Spindel"
+    },
+    {
+      "area": "Hunter's End",
+      "status": "singles-plus",
+      "detail": "Lair of Artio (weaker Callisto variant).",
+      "citation": "Singles-plus combat",
+      "quote": "Currently, the only singles-plus combat areas are: the Revenant Caves; the Wilderness Agility Course; and the arenas for the weaker variants of the Wilderness bosses: Hunter's End - the lair of Artio; Skeletal Tomb - the lair of Calvar'ion; Web Chasm - the lair of Spindel"
+    },
+    {
+      "area": "Skeletal Tomb",
+      "status": "singles-plus",
+      "detail": "Lair of Calvar'ion (weaker Vet'ion variant).",
+      "citation": "Singles-plus combat",
+      "quote": "Currently, the only singles-plus combat areas are: the Revenant Caves; the Wilderness Agility Course; and the arenas for the weaker variants of the Wilderness bosses: Hunter's End - the lair of Artio; Skeletal Tomb - the lair of Calvar'ion; Web Chasm - the lair of Spindel"
+    },
+    {
+      "area": "Web Chasm",
+      "status": "singles-plus",
+      "detail": "Lair of Spindel (weaker Venenatis variant).",
+      "citation": "Singles-plus combat",
+      "quote": "Currently, the only singles-plus combat areas are: the Revenant Caves; the Wilderness Agility Course; and the arenas for the weaker variants of the Wilderness bosses: Hunter's End - the lair of Artio; Skeletal Tomb - the lair of Calvar'ion; Web Chasm - the lair of Spindel"
+    },
+    {
+      "area": "Catacombs of Kourend",
+      "status": "partial",
+      "detail": "Multicombat everywhere except the brutal dragon area (Dragon's Den).",
+      "citation": "Catacombs of Kourend",
+      "quote": "As this particular dungeon is a multicombat area (excluding the brutal dragon area), it is generally recommended to use Prayer or high-healing methods for aggressive high-level monsters stacked against the player."
+    },
+    {
+      "area": "Slayer Tower",
+      "status": "single",
+      "detail": "Single-way combat (death spawns from nechryael are an exception that can still attack you).",
+      "citation": "Single-way combat",
+      "quote": "(Chaotic) death spawns summoned by nechryael or nechryarch in the Slayer Tower are able to attack the player even though it is single-way combat."
+    },
+    {
+      "area": "Karuulm Slayer Dungeon",
+      "status": "single",
+      "detail": "Whole dungeon single-way.",
+      "citation": "Karuulm Slayer Dungeon",
+      "quote": "The dungeon itself is single-way combat."
+    },
+    {
+      "area": "Kraken Cove",
+      "status": "partial",
+      "detail": "Inner Kraken Cove listed as multicombat by the Multicombat area page; the Kraken Cove page itself does not state which parts are multi.",
+      "citation": "Multicombat area#List of multicombat areas",
+      "quote": "Inner Kraken Cove"
+    },
+    {
+      "area": "Smoke Dungeon",
+      "status": "partial",
+      "detail": "Western task-only dust devil area is multi-combat; rest of dungeon not stated.",
+      "citation": "Smoke Dungeon",
+      "quote": "In the western portion of the dungeon is a multi-combat, task-only area for players to slay dust devils."
+    },
+    {
+      "area": "Brimhaven Dungeon",
+      "status": "single",
+      "detail": "Whole dungeon single-way.",
+      "citation": "Brimhaven Dungeon",
+      "quote": "A Dwarf multicannon may be used within the dungeon, although it is a single way combat zone."
+    },
+    {
+      "area": "Taverley Dungeon",
+      "status": "single",
+      "detail": "Entirely single combat.",
+      "citation": "Taverley Dungeon",
+      "quote": "Taverley Dungeon is entirely single combat (although cannons can still attack multiple targets if the player is not in direct combat)."
+    },
+    {
+      "area": "Chasm of Fire",
+      "status": "single",
+      "detail": "Not a multi-combat area.",
+      "citation": "Chasm of Fire",
+      "quote": "A dwarf multicannon can be used in the chasm, although it is not a multi-combat area."
+    },
+    {
+      "area": "Jormungand's Prison",
+      "status": "partial",
+      "detail": "Dagannoth areas multi-combat; basilisk area single-way. (Multicombat area page lists the prison as a whole.)",
+      "citation": "Jormungand's Prison; Multicombat area#List of multicombat areas",
+      "quote": "The dagannoth in Jormungand's Prison are in multi-combat, and only attack using melee. / Additionally, the player cannot resurrect thralls in the single-way combat area of the prison, meaning thralls cannot be used against basilisks, but can be used against dagannoth."
+    },
+    {
+      "area": "Iorwerth Dungeon",
+      "status": "single",
+      "detail": "Whole dungeon single-way.",
+      "citation": "Iorwerth Dungeon",
+      "quote": "However, the whole dungeon is single-way combat."
+    },
+    {
+      "area": "Lizardman Canyon",
+      "status": "partial",
+      "detail": "Eastern canyon: single-combat zone in the middle, rest multi-combat.",
+      "citation": "Lizardman Canyon",
+      "quote": "In the middle of this canyon there is a single-combat zone, while the rest is multi-combat."
+    },
+    {
+      "area": "Lizardman Temple",
+      "status": "single",
+      "detail": "Six lizardman shamans in a single-way area (entered from Molch).",
+      "citation": "Molch",
+      "quote": "In addition, there are four entrances to the Lizardman Temple, containing six lizardman shamans in a single-way combat area."
+    },
+    {
+      "area": "God Wars Dungeon",
+      "status": "multi",
+      "detail": "Listed as multicombat (whole dungeon per list; GWD page itself does not state combat type).",
+      "citation": "Multicombat area#List of multicombat areas",
+      "quote": "*God Wars Dungeon"
+    },
+    {
+      "area": "Kalphite Lair",
+      "status": "multi",
+      "detail": "Listed as multicombat.",
+      "citation": "Multicombat area#List of multicombat areas",
+      "quote": "*Kalphite Lair"
+    },
+    {
+      "area": "Kalphite Cave",
+      "status": "multi",
+      "detail": "Whole cave multi-combat.",
+      "citation": "Kalphite Cave",
+      "quote": "A dwarf multicannon can be used here, and it is a multi-combat area."
+    },
+    {
+      "area": "Waterbirth Island Dungeon",
+      "status": "multi",
+      "detail": "Listed as multicombat (dungeon page silent).",
+      "citation": "Multicombat area#List of multicombat areas",
+      "quote": "*Waterbirth Island Dungeon"
+    },
+    {
+      "area": "Forthos Dungeon",
+      "status": "partial",
+      "detail": "Spider's Den (temple spiders) is multi-combat; other parts not stated.",
+      "citation": "Forthos Dungeon",
+      "quote": "The Spider's Den, formerly a ritual circle for worshippers, is a multi-combat area containing 21 Temple Spiders, as well as 11 red spiders' eggs that spawn in the den."
+    },
+    {
+      "area": "Morytania Spider Cave",
+      "status": "partial",
+      "detail": "Entire cave multicombat except the north task-only cavern.",
+      "citation": "Morytania Spider Cave",
+      "quote": "The entire cave, apart from the north task-only cavern, is entirely multicombat."
+    },
+    {
+      "area": "Ynysdail Cavern",
+      "status": "single",
+      "detail": "Entire dungeon single-combat.",
+      "citation": "Ynysdail Cavern",
+      "quote": "The entire dungeon is a single-combat zone and Dwarf multicannons cannot be set in the dungeon"
+    },
+    {
+      "area": "Neypotzli",
+      "status": "single",
+      "detail": "Not multi combat.",
+      "citation": "Neypotzli",
+      "quote": "The area is not multi combat, but a dwarven cannon can be set up for Slayer tasks within the caverns."
+    },
+    {
+      "area": "Isle of Souls Dungeon",
+      "status": "single",
+      "detail": "Not a multicombat area.",
+      "citation": "Isle of Souls Dungeon",
+      "quote": "A dwarf multicannon can be used in the dungeon, though it is not a multicombat area."
+    },
+    {
+      "area": "Meiyerditch Laboratories",
+      "status": "multi",
+      "detail": "Entire area multicombat.",
+      "citation": "Meiyerditch Laboratories",
+      "quote": "The entire area is also multicombat and the Dwarven multicannon can be used here"
+    },
+    {
+      "area": "Ogre Enclave",
+      "status": "single",
+      "detail": "Not a multi-combat area.",
+      "citation": "Ogre Enclave",
+      "quote": "A dwarf multicannon may be used here, but it is not a multi-combat area."
+    },
+    {
+      "area": "Mount Quidamortem",
+      "status": "partial",
+      "detail": "Troll camp south of the peak is multicombat; rest not stated.",
+      "citation": "Mount Quidamortem",
+      "quote": "South of the mountain peak is a troll camp, featuring multiple spots with mountain trolls in a multicombat area."
+    },
+    {
+      "area": "Giants' Den",
+      "status": "single",
+      "detail": "Only single-way combat.",
+      "citation": "Giants' Den",
+      "quote": "A dwarf multicannon can be used in the den; however, it is only single-way combat."
+    },
+    {
+      "area": "Abyssal Area",
+      "status": "single",
+      "detail": "Not multi (unlike the Abyss, which is multi).",
+      "citation": "Abyssal Area",
+      "quote": "Unlike the Abyss, it is not a multi-combat area."
+    },
+    {
+      "area": "Asgarnian Ice Dungeon",
+      "status": "partial",
+      "detail": "Western area (ice giants, leads to Royal Titans) is multicombat; rest not stated.",
+      "citation": "Asgarnian Ice Dungeon",
+      "quote": "The western area of the dungeon leads to the Royal Titans encounter, and contains six ice giants and an iron longsword spawn. This area is a multicombat area."
+    },
+    {
+      "area": "Lava Maze",
+      "status": "multi",
+      "detail": "Listed among Wilderness multicombat areas.",
+      "citation": "Multicombat area#List of multicombat areas",
+      "quote": "**The Lava Maze"
+    },
+    {
+      "area": "Wilderness God Wars Dungeon",
+      "status": "partial",
+      "detail": "Entry cavern single-way; the large followers' cavern is multi-way (page intro calls it a multi-combat area).",
+      "citation": "Wilderness God Wars Dungeon",
+      "quote": "This empty cavern is a single-way combat zone. The large cavern in which the followers fight is a multi-way combat zone."
+    },
+    {
+      "area": "Wilderness Slayer Cave",
+      "status": "multi",
+      "detail": "Level 17-31 Wilderness, multicombat.",
+      "citation": "Wilderness; Wilderness Slayer Cave",
+      "quote": "Wilderness page dungeon table row: 'Wilderness Slayer Cave | 17- 31 (multicombat)'. Wilderness Slayer Cave page: 'The cave is the only multi-combat spot where the cannon can be used for some monsters.'"
+    },
+    {
+      "area": "Dorgesh-Kaan South Dungeon",
+      "status": "single",
+      "detail": "Not multicombat.",
+      "citation": "Dorgesh-Kaan South Dungeon",
+      "quote": "You can use a dwarf multicannon in the dungeon, however it is not multicombat."
+    },
+    {
+      "area": "Deep Wilderness Dungeon",
+      "status": "single",
+      "detail": "Entirely single-way, level 49-56 Wilderness.",
+      "citation": "Deep Wilderness Dungeon",
+      "quote": "It is entirely single-way combat and covers level 49 to 56 Wilderness."
+    },
+    {
+      "area": "Crash Site Cavern",
+      "status": "partial",
+      "detail": "Single-way zone near entrance/exit rope (demonic gorillas); past the archway exclusively multi-way.",
+      "citation": "Crash Site Cavern",
+      "quote": "The caverns consist of both single and multi-way combat zones... Past this archway, the entire area is exclusively multi-way."
+    },
+    {
+      "area": "Tonali Cavern",
+      "status": "multi",
+      "detail": "Moon chamber (grimy lizards) and Sun chamber (earthen nagua) are multicombat.",
+      "citation": "Tonali Cavern",
+      "quote": "The western Moon chamber contains grimy lizards, while the eastern Sun chamber contains earthen nagua, both of which are in a multicombat area and only appear after completion of the quest."
+    },
+    {
+      "area": "Ancient Guthixian Temple",
+      "status": "single",
+      "detail": "Game treats it as single-way but up to three Tormented Demons can be fought at once.",
+      "citation": "Multicombat area#List of multicombat areas",
+      "quote": "a unique multicombat arena; while the game considers it a Single-way combat zone, players can attack up to three Tormented Demons at once"
+    },
+    {
+      "area": "The Abyss",
+      "status": "multi",
+      "detail": "the Abyss (Runecraft)",
+      "citation": "Multicombat area#List of multicombat areas"
+    },
+    {
+      "area": "Al Kharid Palace",
+      "status": "multi",
+      "detail": "listed as multicombat",
+      "citation": "Multicombat area#List of multicombat areas"
+    },
+    {
+      "area": "Ape Atoll",
+      "status": "multi",
+      "detail": "listed as multicombat",
+      "citation": "Multicombat area#List of multicombat areas"
+    },
+    {
+      "area": "Bandit Camp (Kharidian Desert)",
+      "status": "multi",
+      "detail": "listed as multicombat",
+      "citation": "Multicombat area#List of multicombat areas"
+    },
+    {
+      "area": "Barbarian Assault",
+      "status": "multi",
+      "detail": "listed as multicombat",
+      "citation": "Multicombat area#List of multicombat areas"
+    },
+    {
+      "area": "Barbarian Village",
+      "status": "multi",
+      "detail": "listed as multicombat",
+      "citation": "Multicombat area#List of multicombat areas"
+    },
+    {
+      "area": "Battlefield",
+      "status": "multi",
+      "detail": "south of West Ardougne",
+      "citation": "Multicombat area#List of multicombat areas"
+    },
+    {
+      "area": "Castle Wars",
+      "status": "multi",
+      "detail": "listed as multicombat",
+      "citation": "Multicombat area#List of multicombat areas"
+    },
+    {
+      "area": "Emir's Arena",
+      "status": "multi",
+      "detail": "listed as multicombat",
+      "citation": "Multicombat area#List of multicombat areas"
+    },
+    {
+      "area": "Mole Hole",
+      "status": "multi",
+      "detail": "listed as multicombat",
+      "citation": "Multicombat area#List of multicombat areas"
+    },
+    {
+      "area": "Fight Pits",
+      "status": "multi",
+      "detail": "in Mor Ul Rek",
+      "citation": "Multicombat area#List of multicombat areas"
+    },
+    {
+      "area": "Hosidius",
+      "status": "multi",
+      "detail": "cow pen only",
+      "citation": "Multicombat area#List of multicombat areas"
+    },
+    {
+      "area": "Jatizso",
+      "status": "multi",
+      "detail": "ice troll area",
+      "citation": "Multicombat area#List of multicombat areas"
+    },
+    {
+      "area": "Lighthouse",
+      "status": "multi",
+      "detail": "Lighthouse Dungeon",
+      "citation": "Multicombat area#List of multicombat areas"
+    },
+    {
+      "area": "Neitiznot",
+      "status": "multi",
+      "detail": "ice troll area",
+      "citation": "Multicombat area#List of multicombat areas"
+    },
+    {
+      "area": "Pest Control",
+      "status": "multi",
+      "detail": "listed as multicombat",
+      "citation": "Multicombat area#List of multicombat areas"
+    },
+    {
+      "area": "Piscatoris Fishing Colony",
+      "status": "multi",
+      "detail": "listed as multicombat",
+      "citation": "Multicombat area#List of multicombat areas"
+    },
+    {
+      "area": "Ranging Guild",
+      "status": "multi",
+      "detail": "listed as multicombat",
+      "citation": "Multicombat area#List of multicombat areas"
+    },
+    {
+      "area": "Stronghold of Security",
+      "status": "multi",
+      "detail": "first level only",
+      "citation": "Multicombat area#List of multicombat areas"
+    },
+    {
+      "area": "Mor Ul Rek",
+      "status": "multi",
+      "detail": "listed as multicombat",
+      "citation": "Multicombat area#List of multicombat areas"
+    },
+    {
+      "area": "Varrock Sewers",
+      "status": "multi",
+      "detail": "listed as multicombat",
+      "citation": "Multicombat area#List of multicombat areas"
+    },
+    {
+      "area": "White Wolf Mountain",
+      "status": "multi",
+      "detail": "listed as multicombat",
+      "citation": "Multicombat area#List of multicombat areas"
+    },
+    {
+      "area": "Wizards' Tower",
+      "status": "multi",
+      "detail": "listed as multicombat",
+      "citation": "Multicombat area#List of multicombat areas"
+    },
+    {
+      "area": "Woodcutting Guild",
+      "status": "multi",
+      "detail": "listed as multicombat",
+      "citation": "Multicombat area#List of multicombat areas"
+    },
+    {
+      "area": "Kharazi Jungle",
+      "status": "multi",
+      "detail": "western part",
+      "citation": "Multicombat area#List of multicombat areas"
+    },
+    {
+      "area": "Falador",
+      "status": "multi",
+      "detail": "most sections incl. White Knights' Castle",
+      "citation": "Multicombat area#List of multicombat areas"
+    },
+    {
+      "area": "Draynor Village",
+      "status": "multi",
+      "detail": "jail area",
+      "citation": "Multicombat area#List of multicombat areas"
+    },
+    {
+      "area": "Ruins (east)",
+      "status": "multi",
+      "detail": "Abandoned Farm (Wilderness)",
+      "citation": "Multicombat area#List of multicombat areas"
+    },
+    {
+      "area": "Bandit Camp (Wilderness)",
+      "status": "multi",
+      "detail": "listed as multicombat",
+      "citation": "Multicombat area#List of multicombat areas"
+    },
+    {
+      "area": "Chaos Temple (church)",
+      "status": "multi",
+      "detail": "western Wilderness church, not the eastern Chaos Temple",
+      "citation": "Multicombat area#List of multicombat areas"
+    },
+    {
+      "area": "Dark Warriors' Fortress",
+      "status": "multi",
+      "detail": "listed as multicombat",
+      "citation": "Multicombat area#List of multicombat areas"
+    },
+    {
+      "area": "Deep Wilderness Castle Ruins",
+      "status": "multi",
+      "detail": "listed as multicombat",
+      "citation": "Multicombat area#List of multicombat areas"
+    },
+    {
+      "area": "Demonic Ruins",
+      "status": "multi",
+      "detail": "listed as multicombat",
+      "citation": "Multicombat area#List of multicombat areas"
+    },
+    {
+      "area": "Graveyard of Shadows",
+      "status": "multi",
+      "detail": "listed as multicombat",
+      "citation": "Multicombat area#List of multicombat areas"
+    },
+    {
+      "area": "Lava Dragon Isle",
+      "status": "multi",
+      "detail": "listed as multicombat",
+      "citation": "Multicombat area#List of multicombat areas"
+    },
+    {
+      "area": "Rogues' Castle",
+      "status": "multi",
+      "detail": "listed as multicombat",
+      "citation": "Multicombat area#List of multicombat areas"
+    },
+    {
+      "area": "Scorpion Pit",
+      "status": "multi",
+      "detail": "listed as multicombat",
+      "citation": "Multicombat area#List of multicombat areas"
+    },
+    {
+      "area": "Fremennik Province",
+      "status": "multi",
+      "detail": "northern coast",
+      "citation": "Multicombat area#List of multicombat areas"
+    }
+  ],
+  "unknownAreas": [
+    "Stronghold Slayer Cave (multi status not stated; cannon allowed)",
+    "Fremennik Slayer Dungeon (multi status not stated; cannon prohibited)",
+    "Smoke Devil Dungeon (page silent on multi and cannon; Dwarf multicannon page says the Thermonuclear smoke devil may destroy a cannon)",
+    "Ancient Cavern (multi status not stated; cannon prohibited)",
+    "Lithkren Vault (page silent)",
+    "Mos Le'Harmless Cave (multi status not stated; cannon allowed)",
+    "Molch (surface area not stated; only the Lizardman Temple is described as single-way)",
+    "Zanaris (page silent)",
+    "Myths' Guild (page silent; 'Myths' Guild dungeon' not fetched separately)",
+    "Wyrmscraig Cavern (multi status not stated; cannon works on wyrms there per Karuulm page)",
+    "Cam Torum (page silent)",
+    "Ruins of Camdozaal (page silent)",
+    "Slepe (page silent)",
+    "Darkmeyer (page silent)",
+    "Troll Stronghold (page silent)",
+    "Sophanem Slayer Dungeon (page does not exist on the wiki; Scarab Mine not fetched)",
+    "Abyssal Nexus (multi status not stated; cannon prohibited)",
+    "Cerberus' Lair (multi status not stated; cannon prohibited)",
+    "Chaos Tunnels (page does not exist on the OSRS wiki)",
+    "Ice Path (page silent)",
+    "Frozen Waste Plateau (page silent)",
+    "Hunter Guild (page silent; basement not described)",
+    "Custodia (redirects to 'Custodia Pass'; page silent)",
+    "Edgeville Dungeon (multi status not stated; cannon allowed)",
+    "Lumbridge Swamp Caves (multi status not stated; cannon allowed)",
+    "Wyvern Cave (multi status not stated; cannon prohibited)",
+    "Grimstone Dungeon (multi status not stated; cannon prohibited)",
+    "Kalphite Lair sub-areas / Kalphite Queen room (only whole-lair listing on Multicombat page)",
+    "God Wars Dungeon boss rooms individually (only whole-dungeon listing on Multicombat page)"
+  ],
+  "sources": [
+    "Dwarf_multicannon.wikitext",
+    "Multicombat_area.wikitext",
+    "Singles-plus_combat.wikitext",
+    "Single-way_combat.wikitext",
+    "Wilderness.wikitext",
+    "Abyssal Area",
+    "Asgarnian Ice Dungeon",
+    "Brimhaven Dungeon",
+    "Catacombs of Kourend",
+    "Chasm of Fire",
+    "Crash Site Cavern",
+    "Deep Wilderness Dungeon",
+    "Dorgesh-Kaan South Dungeon",
+    "Dwarf multicannon",
+    "Edgeville Dungeon",
+    "Forthos Dungeon",
+    "Giants' Den",
+    "Grimstone Dungeon",
+    "Iorwerth Dungeon",
+    "Isle of Souls Dungeon",
+    "Jormungand's Prison",
+    "Kalphite Cave",
+    "Kalphite Lair",
+    "Karuulm Slayer Dungeon",
+    "Kraken Cove",
+    "Lizardman Canyon",
+    "Lumbridge Swamp Caves",
+    "Meiyerditch Laboratories",
+    "Molch",
+    "Morytania Spider Cave",
+    "Mos Le'Harmless Cave",
+    "Mount Quidamortem",
+    "Multicombat area",
+    "Neypotzli",
+    "Ogre Enclave",
+    "Single-way combat",
+    "Singles-plus combat",
+    "Smoke Dungeon",
+    "Stronghold Slayer Cave",
+    "Taverley Dungeon",
+    "Tonali Cavern",
+    "Wilderness",
+    "Wilderness God Wars Dungeon",
+    "Wilderness Slayer Cave",
+    "Ynysdail Cavern"
+  ]
+}
