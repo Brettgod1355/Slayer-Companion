@@ -74,7 +74,7 @@ public class SlayerCompanionPanel extends PluginPanel
 		header.setBorder(new EmptyBorder(8, 8, 6, 8));
 		taskLabel.setFont(FontManager.getRunescapeBoldFont());
 		taskLabel.setForeground(Color.WHITE);
-		subLabel.setFont(FontManager.getRunescapeSmallFont());
+		subLabel.setFont(FontManager.getRunescapeFont());
 		subLabel.setForeground(ColorScheme.LIGHT_GRAY_COLOR);
 		progress.setMaximumSize(new Dimension(Integer.MAX_VALUE, 16));
 		progress.setForeground(ColorScheme.BRAND_ORANGE);
@@ -107,10 +107,15 @@ public class SlayerCompanionPanel extends PluginPanel
 		top.add(header, BorderLayout.NORTH);
 		top.add(tabs, BorderLayout.CENTER);
 
-		JScrollPane scroll = new JScrollPane(display);
+		JPanel displayNorth = new JPanel(new BorderLayout());
+		displayNorth.setBackground(ColorScheme.DARK_GRAY_COLOR);
+		displayNorth.add(display, BorderLayout.NORTH);
+		JScrollPane scroll = new JScrollPane(displayNorth);
 		scroll.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+		scroll.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED);
 		scroll.setBorder(null);
-		scroll.getVerticalScrollBar().setUnitIncrement(16);
+		scroll.getVerticalScrollBar().setUnitIncrement(24);
+		scroll.setWheelScrollingEnabled(true);
 		display.setBackground(ColorScheme.DARK_GRAY_COLOR);
 
 		add(top, BorderLayout.NORTH);
@@ -125,11 +130,8 @@ public class SlayerCompanionPanel extends PluginPanel
 
 	private MaterialTab addTab(String name, JPanel content)
 	{
-		JScrollPane sp = new JScrollPane(content);
-		sp.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
-		sp.setBorder(null);
-		sp.getVerticalScrollBar().setUnitIncrement(16);
-		MaterialTab tab = new MaterialTab(name, tabs, sp);
+		// The content goes straight into the shared scroll pane; nested scroll panes swallow the mouse wheel.
+		MaterialTab tab = new MaterialTab(name, tabs, content);
 		tab.setFont(FontManager.getRunescapeSmallFont());
 		tabs.addTab(tab);
 		return tab;
