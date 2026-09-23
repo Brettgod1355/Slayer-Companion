@@ -1,0 +1,542 @@
+{
+  "masters": [
+    {
+      "id": "turael",
+      "name": "Turael",
+      "alias": "Aya (replaces Turael during/after While Guthix Sleeps)",
+      "combatReq": 0,
+      "slayerReq": 0,
+      "quests": [],
+      "capeBypassesCombat": null,
+      "pointsPerTask": 0,
+      "pointsPerTaskBoosted": null,
+      "boostSource": null,
+      "milestones": {
+        "10": 0,
+        "50": 0,
+        "100": 0,
+        "250": 0,
+        "1000": 0
+      },
+      "milestonesBoosted": null,
+      "blockCost": 40,
+      "skipCost": 30,
+      "blockSlotsShared": "Turael/Aya/Spria share one block list",
+      "separateStreak": false,
+      "locationRestricted": false,
+      "keyDrop": null,
+      "location": {
+        "place": "Burthorpe, small house south of the general store",
+        "x": 2932,
+        "y": 3537,
+        "plane": 0,
+        "altCoordsFromNpcPage": {
+          "x": 2931,
+          "y": 3536
+        }
+      },
+      "travel": [
+        "Games necklace to the Burthorpe Games Room, down the stairs and run east",
+        "Combat bracelet to the Warriors' Guild and run east"
+      ],
+      "notes": [
+        "Completing his task grants 0 points; if it replaced another master's task the streak resets to 0",
+        "Cannot replace a task that he himself assigns; refuses to change his own tasks; cannot skip Spria's tasks; cannot skip Mortimer's tasks",
+        "Tasks assigned by Turael/Spria give no points but DO count toward the 4 tasks needed before points start",
+        "Aya: same rules (no reqs, 0 points, block 40, shared block list, task changing resets streak)"
+      ],
+      "citations": [
+        "Slayer_Master.wikitext table + '==Turael/Aya==' + '===Slayer points==='",
+        "Turael.wikitext '==Task changing=='",
+        "Aya.wikitext",
+        "Spria.wikitext",
+        "Mortimer.wikitext"
+      ]
+    },
+    {
+      "id": "spria",
+      "name": "Spria",
+      "alias": null,
+      "combatReq": 0,
+      "slayerReq": 0,
+      "quests": [
+        "A Porcine of Interest"
+      ],
+      "capeBypassesCombat": null,
+      "pointsPerTask": 0,
+      "pointsPerTaskBoosted": null,
+      "boostSource": null,
+      "milestones": {
+        "10": 0,
+        "50": 0,
+        "100": 0,
+        "250": 0,
+        "1000": 0
+      },
+      "milestonesBoosted": null,
+      "blockCost": 40,
+      "skipCost": 30,
+      "blockSlotsShared": "shares block list with Turael/Aya",
+      "separateStreak": false,
+      "locationRestricted": false,
+      "keyDrop": null,
+      "location": {
+        "place": "Draynor Village, small house",
+        "x": 3092,
+        "y": 3268,
+        "plane": 0,
+        "altCoordsFromNpcPage": {
+          "x": 3091,
+          "y": 3267
+        }
+      },
+      "travel": [
+        "Amulet of glory to Draynor Village",
+        "Explorer's ring to South Falador Farm and run south-east",
+        "Necklace of passage to the Wizards' Tower and run north",
+        "Lumbridge Teleport and run west"
+      ],
+      "notes": [
+        "Same task list as Turael plus sourhogs",
+        "Cannot change another master's task (sends you to Turael); Turael cannot skip Spria's tasks",
+        "0 points per task; Slayer page says she 'cannot reset the player's current task streak'"
+      ],
+      "citations": [
+        "Slayer_Master.wikitext '==Spria=='",
+        "Spria.wikitext lead",
+        "Slayer.wikitext line ~117"
+      ]
+    },
+    {
+      "id": "mazchna",
+      "name": "Mazchna",
+      "alias": "Achtryn (temporary replacement during While Guthix Sleeps)",
+      "combatReq": 20,
+      "slayerReq": 0,
+      "quests": [
+        "Priest in Peril"
+      ],
+      "capeBypassesCombat": null,
+      "pointsPerTask": 6,
+      "pointsPerTaskBoosted": null,
+      "boostSource": null,
+      "milestones": {
+        "10": 30,
+        "50": 90,
+        "100": 150,
+        "250": 210,
+        "1000": 300
+      },
+      "milestonesBoosted": null,
+      "blockCost": 50,
+      "skipCost": 30,
+      "separateStreak": false,
+      "locationRestricted": false,
+      "keyDrop": null,
+      "location": {
+        "place": "north-east Canifis",
+        "x": 3511,
+        "y": 3509,
+        "plane": 0
+      },
+      "travel": [
+        "Kharyrll teleport (Ancient Magicks)",
+        "Fairy ring CKS (west of Canifis)",
+        "Salve Graveyard Teleport or Fenkenstrain's Castle Teleport (Arceuus)",
+        "Ectophial to the Ectofuntus and run west",
+        "Charter ship to Port Phasmatys and run west"
+      ],
+      "notes": [
+        "Points buffed 27 Aug 2025 (Summer Sweep Up)",
+        "Achtryn has identical reqs/points and identical Map coords (3511,3509)"
+      ],
+      "citations": [
+        "Slayer_Master.wikitext table + '==Mazchna/Achtryn=='",
+        "Mazchna.wikitext",
+        "Achtryn.wikitext"
+      ]
+    },
+    {
+      "id": "vannaka",
+      "name": "Vannaka",
+      "alias": null,
+      "combatReq": 40,
+      "slayerReq": 0,
+      "quests": [],
+      "capeBypassesCombat": null,
+      "pointsPerTask": 8,
+      "pointsPerTaskBoosted": null,
+      "boostSource": null,
+      "milestones": {
+        "10": 40,
+        "50": 120,
+        "100": 200,
+        "250": 280,
+        "1000": 400
+      },
+      "milestonesBoosted": null,
+      "blockCost": 60,
+      "skipCost": 30,
+      "separateStreak": false,
+      "locationRestricted": false,
+      "keyDrop": null,
+      "location": {
+        "place": "Edgeville Dungeon, east of the Wilderness gate",
+        "x": 3147,
+        "y": 9914,
+        "plane": 0,
+        "mapID": 12
+      },
+      "travel": [
+        "Giantsoul amulet to Bryophyta, run west, obstacle pipe (51 Agility)",
+        "Amulet of glory to Edgeville (north of the dungeon entrance)",
+        "Fairy ring DKR (east of Edgeville)",
+        "Paddewwa Teleport (arrives inside the dungeon)",
+        "Minigame teleport to Soul Wars",
+        "Brass key needed if entering via the entrance west of the Cooks' Guild"
+      ],
+      "notes": [
+        "Points buffed 27 Aug 2025"
+      ],
+      "citations": [
+        "Slayer_Master.wikitext '==Vannaka=='",
+        "Vannaka.wikitext"
+      ]
+    },
+    {
+      "id": "chaeldar",
+      "name": "Chaeldar",
+      "alias": null,
+      "combatReq": 70,
+      "slayerReq": 0,
+      "quests": [
+        "Lost City"
+      ],
+      "capeBypassesCombat": null,
+      "pointsPerTask": 10,
+      "pointsPerTaskBoosted": null,
+      "boostSource": null,
+      "milestones": {
+        "10": 50,
+        "50": 150,
+        "100": 250,
+        "250": 350,
+        "1000": 500
+      },
+      "milestonesBoosted": null,
+      "blockCost": 70,
+      "skipCost": 30,
+      "separateStreak": false,
+      "locationRestricted": false,
+      "keyDrop": null,
+      "location": {
+        "place": "Zanaris, by the Fairy Queen's throne",
+        "x": 2444,
+        "y": 4431,
+        "plane": null,
+        "mapID": 28
+      },
+      "travel": [
+        "Any fairy ring to Zanaris",
+        "Shed in Lumbridge Swamp while wielding a Dramen staff or Lunar staff"
+      ],
+      "notes": [
+        "Map template has no plane= parameter (mapID=28 only)"
+      ],
+      "citations": [
+        "Slayer_Master.wikitext '==Chaeldar=='",
+        "Chaeldar.wikitext"
+      ]
+    },
+    {
+      "id": "konar",
+      "name": "Konar quo Maten",
+      "alias": null,
+      "combatReq": 75,
+      "slayerReq": 0,
+      "quests": [],
+      "capeBypassesCombat": null,
+      "pointsPerTask": 18,
+      "pointsPerTaskBoosted": 20,
+      "boostSource": "Elite Kourend & Kebos Diary",
+      "milestones": {
+        "10": 90,
+        "50": 270,
+        "100": 450,
+        "250": 630,
+        "1000": 900
+      },
+      "milestonesBoosted": {
+        "10": 100,
+        "50": 300,
+        "100": 500,
+        "250": 700,
+        "1000": 1000
+      },
+      "blockCost": 80,
+      "skipCost": 30,
+      "separateStreak": false,
+      "locationRestricted": true,
+      "keyDrop": "brimstone key",
+      "location": {
+        "place": "Summit of Mount Karuulm (Kahlith settlement)",
+        "x": 1309,
+        "y": 3785,
+        "plane": 0
+      },
+      "travel": [
+        "Rada's blessing 3 or 4 teleport to Mount Karuulm",
+        "Fairy ring CIR (south of Mount Karuulm)",
+        "Skills necklace / Farming cape to the Farming Guild and run north-east",
+        "Battlefront teleport and go north",
+        "Astral Contact (only after speaking to her in person via Talk-to once)"
+      ],
+      "notes": [
+        "Assigns a location; entire task must be done there; never the Wilderness unless part of a boss task",
+        "Location roll is equal chance per eligible location",
+        "Slayer cape perk keeps the same location",
+        "Only she assigns Alchemical Hydra boss task"
+      ],
+      "citations": [
+        "Slayer_Master.wikitext '==Konar quo Maten=='",
+        "Konar_quo_Maten.wikitext '==Slayer points==' and '==Tasks=='"
+      ]
+    },
+    {
+      "id": "nieve",
+      "name": "Nieve",
+      "alias": "Steve (replaces Nieve after Monkey Madness II)",
+      "combatReq": 85,
+      "slayerReq": 0,
+      "quests": [],
+      "capeBypassesCombat": null,
+      "pointsPerTask": 12,
+      "pointsPerTaskBoosted": 15,
+      "boostSource": "Elite Western Provinces Diary (matches Duradel)",
+      "milestones": {
+        "10": 60,
+        "50": 180,
+        "100": 300,
+        "250": 420,
+        "1000": 600
+      },
+      "milestonesBoosted": {
+        "10": 75,
+        "50": 225,
+        "100": 375,
+        "250": 525,
+        "1000": 750
+      },
+      "blockCost": 90,
+      "skipCost": 30,
+      "separateStreak": false,
+      "locationRestricted": false,
+      "keyDrop": null,
+      "location": {
+        "place": "Tree Gnome Stronghold, near the yew/magic trees and the southern bank",
+        "x": 2432,
+        "y": 3424,
+        "plane": null,
+        "altCoordsFromNpcPage": {
+          "x": 2432,
+          "y": 3423
+        }
+      },
+      "travel": [
+        "Slayer ring teleport to the Stronghold Slayer Cave",
+        "Necklace of passage to Jorral's Outpost, then north",
+        "Balloon Transport System to the Grand Tree",
+        "Spirit tree to the Stronghold, run south-west",
+        "Gnome glider to the Grand Tree, run south-west",
+        "Steve page adds: Achievement diary cape teleport to Western Provinces then south-west"
+      ],
+      "notes": [
+        "Map template on Slayer Master page has no plane= parameter",
+        "Steve: same coords (2432,3423 pin), block 90, same points table"
+      ],
+      "citations": [
+        "Slayer_Master.wikitext '==Nieve/Steve=='",
+        "Nieve.wikitext",
+        "Steve.wikitext"
+      ]
+    },
+    {
+      "id": "duradel",
+      "name": "Duradel",
+      "alias": "Kuradal (replaces Duradel after While Guthix Sleeps)",
+      "combatReq": 100,
+      "slayerReq": 50,
+      "quests": [
+        "Shilo Village"
+      ],
+      "capeBypassesCombat": true,
+      "pointsPerTask": 15,
+      "pointsPerTaskBoosted": null,
+      "boostSource": null,
+      "milestones": {
+        "10": 75,
+        "50": 225,
+        "100": 375,
+        "250": 525,
+        "1000": 750
+      },
+      "milestonesBoosted": null,
+      "blockCost": 100,
+      "skipCost": 30,
+      "separateStreak": false,
+      "locationRestricted": false,
+      "keyDrop": null,
+      "location": {
+        "place": "Shilo Village, platform bridging the river above the fishing shop (enter shop south of river, climb ladder, cross bridge)",
+        "x": 2869,
+        "y": 2982,
+        "plane": 1
+      },
+      "travel": [
+        "Karamja gloves 4 teleport directly to Duradel",
+        "Karamja gloves 3 to the Shilo Village mine, up ladder, cross bridge south, head east",
+        "Shilo Village cart system from Brimhaven (200 coins)",
+        "Fairy ring CKR (west of Shilo Village)"
+      ],
+      "notes": [
+        "Slayer page: Duradel/Kuradal and Mortimer are the only masters with a Slayer level requirement",
+        "Sells the Slayer cape (99,000 coins)"
+      ],
+      "citations": [
+        "Slayer_Master.wikitext '==Duradel/Kuradal=='",
+        "Duradel.wikitext",
+        "Kuradal.wikitext"
+      ]
+    },
+    {
+      "id": "krystilia",
+      "name": "Krystilia",
+      "alias": null,
+      "combatReq": 0,
+      "slayerReq": 0,
+      "quests": [],
+      "capeBypassesCombat": null,
+      "pointsPerTask": 25,
+      "pointsPerTaskBoosted": null,
+      "boostSource": null,
+      "milestones": {
+        "10": 125,
+        "50": 375,
+        "100": 625,
+        "250": 875,
+        "1000": 1250
+      },
+      "milestonesBoosted": null,
+      "blockCost": 100,
+      "skipCost": 30,
+      "separateStreak": true,
+      "locationRestricted": true,
+      "keyDrop": "Larran's key",
+      "location": {
+        "place": "Edgeville jail/guardhouse, north-east of the bank",
+        "x": 3110,
+        "y": 3516,
+        "plane": 0,
+        "altCoordsFromNpcPage": {
+          "x": 3109,
+          "y": 3516
+        }
+      },
+      "travel": [
+        "Amulet of glory to Edgeville",
+        "Fairy ring DKR, run west over the river",
+        "Paddewwa Teleport, exit dungeon, run north",
+        "Canoe on the River Lum",
+        "Lesser Fanatic teleport (Achievement diary cape) - closest"
+      ],
+      "notes": [
+        "Ignores combat level (assigns any monster)",
+        "Refuses players at 1 Slayer (must see Turael first)",
+        "Wilderness streak counter separate from normal; need 5 of her tasks before points",
+        "Turael-skipping a Krystilia task resets only the Wilderness streak",
+        "Cannot hold a normal and a Wilderness task at once",
+        "Kill counts only if player is physically inside the Wilderness at the moment of death; Ferox Enclave interior does not count"
+      ],
+      "citations": [
+        "Slayer_Master.wikitext '==Krystilia=='",
+        "Krystilia.wikitext '==Slayer=='",
+        "Slayer_reward_point.wikitext table + 'Combining Turael boosting to skip at Krystilia'",
+        "Turael.wikitext '==Task changing=='"
+      ]
+    },
+    {
+      "id": "mortimer",
+      "name": "Mortimer",
+      "alias": null,
+      "combatReq": 100,
+      "slayerReq": 70,
+      "quests": [
+        "Fallen From Grace (partial, for Wyrmscraig Cavern access)"
+      ],
+      "capeBypassesCombat": true,
+      "pointsPerTask": 0,
+      "pointsPerTaskBoosted": null,
+      "boostSource": "Slayer Point Modifier (5-40 points, task-dependent; not increased by milestones)",
+      "milestones": null,
+      "milestonesBoosted": null,
+      "blockCost": 120,
+      "skipCost": 100,
+      "blockSlots": 2,
+      "separateStreak": true,
+      "locationRestricted": false,
+      "keyDrop": null,
+      "location": {
+        "place": "Wyrmscraig Cavern, next to the mooring point",
+        "x": 2589,
+        "y": 8614,
+        "plane": 0,
+        "mapID": -1,
+        "coordSource": "Mortimer.wikitext infobox (Slayer_Master page has no Map template for him)"
+      },
+      "travel": [
+        "Teleport to Boat with a boat docked in the cavern with a greater teleport focus (arrives next to Mortimer)",
+        "Slayer ring to the northern end of the cavern (after completing Fallen From Grace)",
+        "Run from a surface teleport: Necklace of passage, Ardeaglais teleport, Teleport to Boat"
+      ],
+      "notes": [
+        "Choice of 2 tasks (3 after 50 Mortimer tasks); each option offered once per prompt",
+        "Modifiers ('Mortifiers'): 0 tasks Slayer Point + Task Quantity; 15 Clue Scroll; 25 Superior Drop Rate; 40 Slayer XP; 50 Third Task Choice",
+        "Only assigns monsters with superior variants; only master to assign venators",
+        "Cannot be skipped via Turael",
+        "Mortimer tasks do not contribute to other masters' counters; his streak counted separately (Krystilia-like)",
+        "If Mortimer has offered a task choice you cannot get a task elsewhere until you pick",
+        "Task storage shared with all masters"
+      ],
+      "citations": [
+        "Slayer_Master.wikitext table + '==Mortimer=='",
+        "Mortimer.wikitext lead + '==Tasks=='",
+        "Slayer_reward_point.wikitext table"
+      ]
+    }
+  ],
+  "rules": {
+    "milestoneIntervals": "Slayer_reward_point: 'bonus points are awarded after every 10th, 50th, 100th, 250th, and 1,000th completed task. For example, completing 20 tasks in a row awards bonus points on both the 10th and the 20th consecutive tasks.' and '5x points every 10th task / 15x points every 50th task / 25x points every 100th task / 35x points every 250th task / 50x points every 1,000th task'",
+    "milestoneOrder": "NOT EXPLICITLY STATED on any fetched page. Every per-master table lists a single value per interval (e.g. Konar 'Every 100th 450'), and Slayer_reward_point says the average over a 1000-task streak is '1.775x the base points' / '44,375 points' for Krystilia, which is consistent with the highest applicable multiplier replacing (not stacking with) the lower ones, but no sentence says so. Treat as unknown.",
+    "pointsStart": "Slayer_reward_point: 'Slayer points are not awarded for the first four tasks a player completes but are rewarded for their fifth and further tasks.' Krystilia: 'players will have to complete five of her Slayer assignments to begin earning Slayer reward points.'",
+    "turaelReset": "Slayer_Master '===Slayer points===' (Turael): 'Completion of a task assigned by Turael will not grant any Slayer points. As well, if it was a task replacing one from another Master your task streak will be reset. So, if you're on the 48th task and take a replacement one from Turael, your completed tasks will be set to 0.' Turael page: 'Warning: After a task change is processed, your task streak will also be reset to zero!' Slayer_reward_point table: 'This will reset the player's task streak to zero, and the player will have to complete four more tasks to begin earning points again. Tasks assigned by Turael/Spria give no points but do contribute to the four needed to start gaining points.'",
+    "turaelCannotReplace": "Slayer_Master: 'this only works if the assignment is something that he doesn't assign. For example, if Chaeldar assigns a player Desert Lizards, then the Burthorpe Slayer Master cannot change their task, as he too assigns Desert Lizards. Note that it is impossible for a player to get Turael to reassign a task that he gave out.' Turael page: 'Tasks may be blocked at Turael to remove them from his list of assignments, allowing them to be changed if assigned by other Slayer masters.' Spria page: 'players cannot skip Spria's tasks using Turael.' Mortimer page: 'Mortimer's tasks cannot be skipped by receiving a replacement assignment from Turael.'",
+    "turaelSkipKrystilia": "Slayer_reward_point: 'A task from Krystilia that is changed by Turael will only reset your Wilderness Slayer task streak.'",
+    "otherStreakResets": "Slayer_Master Notes: 'If a player becomes ineligible to receive their existing Slayer task, they can cancel it for free without losing their streak by speaking to a Slayer Master.' Krystilia page: 'If the player chooses to reset an assignment Krystilia gives before the five assignments are completed, the counter will reset to zero'. Slayer page (partner): 'If a player hasn't killed at least 20% of the monsters on their task, they will not receive any reward points and their task will not count towards their streak.' No other reset cause found.",
+    "skipCost": "Slayer page: 'players may cancel a task by spending 30 points.' Slayer Rewards page Tasks table: 'Cancel task | 30-100 | Cancels the player's current assignment without penalties.' Mortimer: 'skipping a task from Mortimer is significantly more expensive, costing 100 slayer points rather than the usual 30'.",
+    "blockSlots": "Slayer Rewards page: 'There is a maximum limit of 7 types of assignments that can be blocked on one account - one block slot is given for every 50 quest points the player has. For most slayer masters - with Mortimer being the exception - there are six slots for a total of 300 points needed to use all of them. Additionally, one block slot is available once the player has completed the Elite tier of the Lumbridge & Draynor Diary, which requires a quest cape. In Mortimer's case, there are two block slots available.' Also: 'Blocking a task that is currently in Task Storage does not also skip it.' 'Cancelling the removal of monsters ... does not refund points'.",
+    "blockLists": "Slayer Rewards changes 27 Aug 2025: each master has own block list; 'Shared block lists only apply to Turael, Aya and Spria'. Costs: Turael/Aya/Spria 40, Mazchna/Achtryn 50, Vannaka 60, Chaeldar 70, Konar 80, Nieve/Steve 90, Duradel/Kuradal 100, Krystilia 100; Mortimer 120 (Slayer_Master table).",
+    "capeBypass": "Slayer_Master table footnote: 'The combat level requirements can be bypassed by achieving 99 Slayer and showing the Slayer Master the Slayer cape.' Slayer_cape: 'Showing the cape to a master also bypasses combat level restrictions on tasks for lower-levelled accounts.' Changes 1 Oct 2025: 'Slayer Masters will now respect combat level, if enabled, even with a Slayer cape equipped.' Duradel/Kuradal/Mortimer pages explicitly say the cape substitutes for the combat req (Slayer level req still applies).",
+    "pointsCap": "No cap on points found on any fetched page (searched Slayer, Slayer_reward_point, Slayer_task, Slayer Rewards for 'cap', 'maximum', '65,535'). Only related note: streak change 1 Mar 2023: 'Players with a slayer task streak of 16,000 will no longer receive the max amount of slayer points for every task'. Unknown.",
+    "spending": "Slayer_reward_point '==Rewards==': 'Slayer reward points can be spent to extend or block tasks, to purchase items useful for Slayer tasks, and on several unlocks such as automatic finishing blows, crafting Slayer equipment, and unlocking new tasks.' Totals: 'A total of 11,580 points are required in order to obtain all the rewards and blocks at least once ... Excluding the slayer helmet recolours reduces this to 3,580 points'. Buy examples (Slayer Rewards page): Slayer ring (8) 75, Broad bolts x250 35, Broad arrows x250 35, Herb sack 750, Rune pouch 750, Looting bag 10. Unlock examples cited on Konar/Krystilia pages: Like a boss 200, Watch the birdie 80, Basilocked 80, Reptile got ripped 75, Seeing red 50, Actual Vampyre Slayer 80, Warped Reality 60, Task Storage 500 (reduced from 1000, 27 Aug 2025), Ring Bling 150, Bigger and Badder 50, Slug Salter 10, Reptile Freezer 10, Pedal to the Metals 200.",
+    "partnerSlayer": "Slayer page: 'Task streaks are counted individually for each player, and milestone bonuses are seperated from the regular reward points on partner tasks. For example, completing an assignment from Duradel as the 10th slayer task in a row normally grants you 75 reward points if done alone. If done with a partner, you'll instead receive 60 points as a streak bonus and up to 15 points from the shared task.' (i.e. milestone bonus = milestone value minus base).",
+    "runeliteCounters": "RuneLite SlayerPlugin.java (~line 679): streak = SLAYER_WILDERNESS_TASKS_COMPLETED for KRYSTILIA_SLAYER_MASTER, VarPlayerID.SLAYER_MORTIMER_TASKS_COMPLETED for MORTIMER_SLAYER_MASTER, else VarbitID.SLAYER_TASKS_COMPLETED; points = VarbitID.SLAYER_POINTS."
+  },
+  "unknowns": [
+    "Milestone precedence when several intervals coincide (e.g. task 100 = 10th+50th+100th) is not stated in words on any fetched page",
+    "Cap on stored Slayer points not found",
+    "Whether the Slayer cape bypass applies to Krystilia/Turael/Spria is moot (no combat req); pages for Mazchna/Vannaka/Chaeldar/Konar/Nieve do not individually mention the cape (only the general Slayer_Master footnote + Slayer_cape page)",
+    "Chaeldar and Nieve Map templates on Slayer_Master page carry no plane= value",
+    "Mortimer Slayer Point Modifier exact per-task values are ranges (5-15, 10-25, 25-40 etc., see Mortimer.wikitext table), never a single milestone-style value",
+    "Whether Spria's tasks reset the streak when replacing a task from another master: Slayer page says she 'cannot reset the player's current task streak' and Spria page says she cannot change tasks at all; Slayer_reward_point only says Turael resets"
+  ]
+}

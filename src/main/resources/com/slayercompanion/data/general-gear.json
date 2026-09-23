@@ -1,0 +1,1495 @@
+{
+  "exampleSetups": [
+    {
+      "equipment": {
+        "ammo": "Rada's blessing 4",
+        "boots": "Avernic treads (max)",
+        "cape": "Infernal cape",
+        "gloves": "Ferocious gloves",
+        "head": "Slayer helmet (i)",
+        "legs": "Torva platelegs",
+        "neck": "Amulet of rancour",
+        "ring": "Ultor ring",
+        "shield": "Avernic defender",
+        "torso": "Torva platebody",
+        "weapon": "Ghrazi rapier"
+      },
+      "inventory": [],
+      "inventoryGrid": [],
+      "label": "Melee",
+      "notes": "For Melee tasks, use equipment that offers the highest strength and accuracy bonuses, such as Amulet of rancour, the Ultor ring, and Ferocious gloves in combination with Torva armour and primordial boots. Sunfire fanatic armour can be used instead to give a higher Prayer bonus, reducing the amount of Prayer points drained per second.\n\nThe abyssal whip is a strong and easily obtainable weapon that can be used for melee tasks, with the more expensive Ghrazi rapier being an even better alternative for melee combat. Avernic or dragon defenders should always be used with these weapons, except against wyverns. For dragon tasks, players should use extended super antifire potions so they can hold their defender.\n\nThe charged scythe of Vitur offers the best damage output against monsters that are 3x3 or larger, such as dark beasts, kalphite, and gargoyles. This weapon can be quite expensive to use, however. The dragon hunter lance is the best weapon to use against draconic enemies, and emberlight should be used against demons. If the player cannot afford a dragon hunter lance or Ghrazi rapier for dragons, a stab weapon such as Zamorakian hasta or Osmumten's fang should be used.\n\nThe Soulreaper axe is the strongest melee weapon available for most 1x1 and 2x2 slayer targets. When slaying conventional (e.g., non-dragon, non-demon) 1x1 targets such as ankou, earth warriors, small dagannoth, trolls, etc., the axe is a drastically more expensive option than the second-best melee weapon for…",
+      "runePouch": []
+    },
+    {
+      "equipment": {
+        "ammo": "Rada's blessing 4",
+        "boots": "Avernic treads (max)",
+        "cape": "Infernal cape",
+        "gloves": "Ferocious gloves",
+        "head": "Slayer helmet (i)",
+        "legs": "Torva platelegs",
+        "neck": "Amulet of rancour",
+        "ring": "Lightbearer",
+        "torso": "Torva platebody",
+        "weapon": "Hallowfell"
+      },
+      "inventory": [],
+      "inventoryGrid": [],
+      "label": "Melee (Hallowfell)",
+      "notes": "The same general idea of maximizing strength and accuracy bonuses or prayer bonus to reduce Prayer point drain holds true from single target melee tasks\n\nHallowfell offers a strong melee option for tasks that would traditionally be done with bursting/barraging such as jellies or dust devils\n\nDinh's bulwark is useful to draw aggression, however this can also be achieved with the use of a goading potion, darts, or knives, freeing up special attack energy to be used for a weapon like the crystal halberd which can hit multiple targets. Alternatively, players can use Saradomin godsword or Ancient mace to restore Prayer points during a task.",
+      "runePouch": []
+    },
+    {
+      "equipment": {
+        "ammo": "Rada's blessing 4",
+        "boots": "Avernic treads (max)",
+        "cape": "Imbued Saradomin cape",
+        "gloves": "Confliction gauntlets",
+        "head": "Slayer helmet (i)",
+        "legs": "Virtus robe bottom",
+        "neck": "Occult necklace",
+        "ring": "Magus ring",
+        "shield": "Elidinis' ward (f)",
+        "torso": "Virtus robe top",
+        "weapon": "Kodai wand"
+      },
+      "inventory": [],
+      "inventoryGrid": [],
+      "label": "Magic (Barrage)",
+      "notes": "Magic is commonly used to barrage or burst multiple monsters at once for fast Slayer experience. The Slayer helmet must be imbued to gain the accuracy and damage benefits on an assigned Slayer monster.\n\nUse equipment that gives the highest Magic damage bonuses, such as kodai wand, occult necklace, imbued god cape, and virtus robes.\n\nUse a weapon that can autocast Ancient Magicks. The cheapest of these is the ancient staff. The ancient sceptre, Nightmare staff, and Kodai wand are progressively stronger alternatives.\n\nMost Slayer monsters which are commonly barraged (such as greater Nechryael and dust devils) have very low Magic defence, so having a higher Magic accuracy makes negligible difference on damage output. For those tasks players may wear equipment with high Prayer bonus, such as ring of the gods (i), devout boots and book of darkness. Certain monsters (such as smoke devils and warped jellies) do have Magic defence however, so Magic accuracy will matter against them and players should wear equipment with high Magic accuracy bonuses.\n\nDinh's bulwark special attack, fast attacking ranged weapon such as a toxic blowpipe, dwarf multicannon, or a goading potion can be used to draw aggression of monsters into a barrage pile. If additional Melee experience is desired, using a Crystal halberd on stacked monsters is a solid option.",
+      "runePouch": []
+    },
+    {
+      "equipment": {
+        "ammo": "Dragon arrow",
+        "boots": "Avernic treads (max)",
+        "cape": "Blessed Dizana's quiver",
+        "gloves": "Zaryte vambraces",
+        "head": "Slayer helmet (i)",
+        "legs": "Masori chaps (f)",
+        "neck": "Necklace of rupture",
+        "ring": "Venator ring",
+        "torso": "Masori body (f)",
+        "weapon": "Venator bow"
+      },
+      "inventory": [],
+      "inventoryGrid": [],
+      "label": "Ranged",
+      "notes": "The venator bow is commonly used by players who desire a less intense form of Slayer training. The bow's ricochet effect easily grabs the aggression of multiple monsters, allowing it to be used on tasks that are commonly bursted/barraged at the cost of less Slayer experience per hour. On the other hand, the toxic blowpipe is the best option for players using Turael to boost Slayer points and for those do not value gaining Melee experience, as the blowpipe is usually faster than using Melee on most Turael tasks but at a higher cost.\n\nIf players do not have either of these weapons, then it is not recommended to use Ranged in general Slayer training, as Ranged can be comfortably trained without a slayer task, and minor amount of experience can be gained through use of a dwarf multicannon regardless. However, some tasks may be preferable to be safespotted using Ranged if the target is vulnerable to it and the player wishes to conserve supplies.\n\nIf using Ranged, the slayer helmet must be imbued to gain the accuracy and damage benefits on an assigned Slayer monster.",
+      "runePouch": []
+    },
+    {
+      "equipment": {
+        "ammo": "Rada's blessing 4",
+        "boots": "Mixed hide boots",
+        "cape": "Ava's assembler",
+        "gloves": "Barrows gloves",
+        "head": "Slayer helmet (i)",
+        "legs": "Black d'hide chaps",
+        "neck": "Necklace of rupture",
+        "ring": "Ring of wealth",
+        "torso": "Black d'hide body",
+        "weapon": "Webweaver bow"
+      },
+      "inventory": [
+        "Cannonball",
+        "Divine ranging potion(4)",
+        "Anti-venom+(4)",
+        "Stamina potion(4)",
+        "Cannon base",
+        "Cannon stand",
+        "Cannon barrels",
+        "Cannon furnace",
+        "Super restore(4)",
+        "Super restore(4)",
+        "Manta ray",
+        "Manta ray",
+        "Super restore(4)",
+        "Super restore(4)",
+        "Saradomin brew(4)",
+        "Saradomin brew(4)",
+        "Super restore(4)",
+        "Super restore(4)",
+        "Saradomin brew(4)",
+        "Saradomin brew(4)",
+        "Super restore(4)",
+        "Super restore(4)",
+        "Saradomin brew(4)",
+        "Saradomin brew(4)",
+        "Expeditious bracelet",
+        "Expeditious bracelet",
+        "Teleport to house (tablet)",
+        "Royal seed pod"
+      ],
+      "inventoryGrid": [
+        "Cannonball",
+        "Divine ranging potion(4)",
+        "Anti-venom+(4)",
+        "Stamina potion(4)",
+        "Cannon base",
+        "Cannon stand",
+        "Cannon barrels",
+        "Cannon furnace",
+        "Super restore(4)",
+        "Super restore(4)",
+        "Manta ray",
+        "Manta ray",
+        "Super restore(4)",
+        "Super restore(4)",
+        "Saradomin brew(4)",
+        "Saradomin brew(4)",
+        "Super restore(4)",
+        "Super restore(4)",
+        "Saradomin brew(4)",
+        "Saradomin brew(4)",
+        "Super restore(4)",
+        "Super restore(4)",
+        "Saradomin brew(4)",
+        "Saradomin brew(4)",
+        "Expeditious bracelet",
+        "Expeditious bracelet",
+        "Teleport to house (tablet)",
+        "Royal seed pod"
+      ],
+      "label": "Ranged (Wilderness Slayer)",
+      "notes": "Ranged is primarily used for Wilderness Slayer to boost Slayer points. The Webweaver bow and Craw's bow are the best weapons to use for most tasks, but for some tasks the toxic blowpipe is better due to its higher attack speed, and may be additionally preferred for the lesser risk. Players should bring 4 strong items, while the rest of the equipment should be cheap and replaceable items that the player will not mind losing. Notably, ether in the Webweaver and Craw's bow are always lost on death so players should not bring more than they are willing to lose.\n\nIf using Ranged, the slayer helmet must be imbued to gain the accuracy and damage benefits on an assigned Slayer monster.\n\nInventory:\n\n- Dwarf multicannon and some cannonballs (not all of your cannonballs, as they will be lost upon death to a PKer)\n- Spare expeditious bracelets\n- 1-2 divine ranging potions, 1 stamina potion and 1 anti-venom+\n- Saradomin brews and super restores to survive player killers\n- A teleport out of Wilderness such as royal seed pod or amulet of glory\n- Teleport to house tablets or ring of dueling to restore stats\n- 1 extended super antifire (when needed)",
+      "runePouch": []
+    }
+  ],
+  "gearTables": [
+    {
+      "label": "Melee",
+      "slotNotes": {},
+      "slots": {
+        "ammo": [
+          [
+            {
+              "name": "Rada's blessing 4"
+            }
+          ],
+          [
+            {
+              "name": "God blessing",
+              "pic": "Peaceful blessing"
+            },
+            {
+              "name": "Rada's blessing 3",
+              "txt": "Rada's blessing 3/2"
+            }
+          ]
+        ],
+        "body": [
+          [
+            {
+              "name": "Torva platebody"
+            },
+            {
+              "name": "Oathplate chest"
+            }
+          ],
+          [
+            {
+              "name": "Bandos chestplate"
+            }
+          ],
+          [
+            {
+              "name": "Blood Moon chestplate"
+            },
+            {
+              "name": "Fighter torso"
+            }
+          ],
+          [
+            {
+              "name": "Obsidian platebody"
+            }
+          ],
+          [
+            {
+              "name": "Proselyte hauberk"
+            }
+          ]
+        ],
+        "cape": [
+          [
+            {
+              "name": "Infernal cape"
+            }
+          ],
+          [
+            {
+              "name": "Fire cape"
+            }
+          ],
+          [
+            {
+              "name": "Mythical cape"
+            },
+            {
+              "name": "Mixed hide cape"
+            }
+          ],
+          [
+            {
+              "name": "Ardougne cloak 4"
+            }
+          ],
+          [
+            {
+              "name": "Cape of Accomplishment",
+              "pic": "Strength cape"
+            }
+          ]
+        ],
+        "feet": [
+          [
+            {
+              "name": "Avernic treads (max)"
+            }
+          ],
+          [
+            {
+              "name": "Primordial boots"
+            }
+          ],
+          [
+            {
+              "name": "Dragon boots"
+            },
+            {
+              "name": "Aranea boots"
+            }
+          ],
+          [
+            {
+              "name": "Echo boots"
+            },
+            {
+              "name": "Guardian boots"
+            }
+          ],
+          [
+            {
+              "name": "Rune boots"
+            },
+            {
+              "name": "Mixed hide boots"
+            },
+            {
+              "name": "Climbing boots"
+            }
+          ]
+        ],
+        "hands": [
+          [
+            {
+              "name": "Expeditious bracelet"
+            },
+            {
+              "name": "Bracelet of slaughter"
+            }
+          ],
+          [
+            {
+              "name": "Ferocious gloves"
+            }
+          ],
+          [
+            {
+              "name": "Barrows gloves"
+            }
+          ],
+          [
+            {
+              "name": "Regen bracelet"
+            }
+          ],
+          [
+            {
+              "name": "Combat bracelet"
+            }
+          ]
+        ],
+        "head": [
+          [
+            {
+              "name": "Slayer helmet (i)"
+            }
+          ],
+          [
+            {
+              "name": "Black mask (i)"
+            }
+          ]
+        ],
+        "legs": [
+          [
+            {
+              "name": "Torva platelegs"
+            },
+            {
+              "name": "Oathplate legs"
+            }
+          ],
+          [
+            {
+              "name": "Bandos tassets"
+            }
+          ],
+          [
+            {
+              "name": "Blood Moon tassets"
+            }
+          ],
+          [
+            {
+              "name": "Obsidian platelegs"
+            }
+          ],
+          [
+            {
+              "name": "Proselyte cuisse"
+            },
+            {
+              "name": "Proselyte tasset"
+            },
+            {
+              "name": "Verac's plateskirt"
+            }
+          ]
+        ],
+        "neck": [
+          [
+            {
+              "name": "Amulet of rancour"
+            }
+          ],
+          [
+            {
+              "name": "Amulet of torture"
+            }
+          ],
+          [
+            {
+              "name": "Amulet of fury"
+            }
+          ],
+          [
+            {
+              "name": "Amulet of strength"
+            }
+          ]
+        ],
+        "ring": [
+          [
+            {
+              "name": "Ultor ring"
+            }
+          ],
+          [
+            {
+              "name": "Berserker ring (i)"
+            }
+          ],
+          [
+            {
+              "name": "Brimstone ring"
+            }
+          ]
+        ],
+        "shield": [
+          [
+            {
+              "name": "Avernic defender"
+            }
+          ],
+          [
+            {
+              "name": "Dragon defender"
+            }
+          ],
+          [
+            {
+              "name": "Dragonfire shield"
+            }
+          ],
+          [
+            {
+              "name": "Toktz-ket-xil"
+            }
+          ],
+          [
+            {
+              "name": "Book of War"
+            }
+          ]
+        ],
+        "special": [
+          [
+            {
+              "name": "Dragon claws"
+            },
+            {
+              "name": "Burning claws"
+            },
+            {
+              "name": "Dinh's bulwark"
+            }
+          ],
+          [
+            {
+              "name": "Dragon dagger"
+            },
+            {
+              "name": "Crystal halberd"
+            }
+          ],
+          [
+            {
+              "name": "Saradomin godsword"
+            }
+          ]
+        ],
+        "weapon": [
+          [
+            {
+              "name": "Soulreaper axe"
+            },
+            {
+              "name": "Scythe of Vitur"
+            }
+          ],
+          [
+            {
+              "name": "Ghrazi rapier"
+            },
+            {
+              "name": "Noxious halberd"
+            }
+          ],
+          [
+            {
+              "name": "Abyssal whip"
+            }
+          ],
+          [
+            {
+              "name": "Abyssal bludgeon"
+            }
+          ],
+          [
+            {
+              "name": "Zamorakian hasta"
+            }
+          ]
+        ]
+      },
+      "style": "Melee"
+    },
+    {
+      "label": "Melee (Hallowfell)",
+      "slotNotes": {},
+      "slots": {
+        "ammo": [
+          [
+            {
+              "name": "Rada's blessing 4"
+            }
+          ],
+          [
+            {
+              "name": "God blessing",
+              "pic": "Peaceful blessing"
+            },
+            {
+              "name": "Rada's blessing 3",
+              "txt": "Rada's blessing 3/2"
+            }
+          ]
+        ],
+        "body": [
+          [
+            {
+              "name": "Torva platebody"
+            },
+            {
+              "name": "Oathplate chest"
+            }
+          ],
+          [
+            {
+              "name": "Bandos chestplate"
+            }
+          ],
+          [
+            {
+              "name": "Blood Moon chestplate"
+            },
+            {
+              "name": "Fighter torso"
+            }
+          ],
+          [
+            {
+              "name": "Obsidian platebody"
+            }
+          ],
+          [
+            {
+              "name": "Proselyte hauberk"
+            }
+          ]
+        ],
+        "cape": [
+          [
+            {
+              "name": "Infernal cape"
+            }
+          ],
+          [
+            {
+              "name": "Fire cape"
+            }
+          ],
+          [
+            {
+              "name": "Mythical cape"
+            },
+            {
+              "name": "Mixed hide cape"
+            }
+          ],
+          [
+            {
+              "name": "Ardougne cloak 4"
+            }
+          ],
+          [
+            {
+              "name": "Cape of Accomplishment",
+              "pic": "Strength cape"
+            }
+          ]
+        ],
+        "feet": [
+          [
+            {
+              "name": "Avernic treads (max)"
+            }
+          ],
+          [
+            {
+              "name": "Primordial boots"
+            }
+          ],
+          [
+            {
+              "name": "Dragon boots"
+            },
+            {
+              "name": "Aranea boots"
+            }
+          ],
+          [
+            {
+              "name": "Echo boots"
+            },
+            {
+              "name": "Guardian boots"
+            }
+          ],
+          [
+            {
+              "name": "Rune boots"
+            },
+            {
+              "name": "Mixed hide boots"
+            },
+            {
+              "name": "Climbing boots"
+            }
+          ]
+        ],
+        "hands": [
+          [
+            {
+              "name": "Expeditious bracelet"
+            },
+            {
+              "name": "Bracelet of slaughter"
+            }
+          ],
+          [
+            {
+              "name": "Ferocious gloves"
+            }
+          ],
+          [
+            {
+              "name": "Barrows gloves"
+            }
+          ],
+          [
+            {
+              "name": "Regen bracelet"
+            }
+          ],
+          [
+            {
+              "name": "Combat bracelet"
+            }
+          ]
+        ],
+        "head": [
+          [
+            {
+              "name": "Slayer helmet (i)"
+            }
+          ],
+          [
+            {
+              "name": "Black mask (i)"
+            }
+          ]
+        ],
+        "legs": [
+          [
+            {
+              "name": "Torva platelegs"
+            },
+            {
+              "name": "Oathplate legs"
+            }
+          ],
+          [
+            {
+              "name": "Bandos tassets"
+            }
+          ],
+          [
+            {
+              "name": "Blood Moon tassets"
+            }
+          ],
+          [
+            {
+              "name": "Obsidian platelegs"
+            }
+          ],
+          [
+            {
+              "name": "Proselyte cuisse"
+            },
+            {
+              "name": "Proselyte tasset"
+            },
+            {
+              "name": "Verac's plateskirt"
+            }
+          ]
+        ],
+        "neck": [
+          [
+            {
+              "name": "Amulet of rancour"
+            }
+          ],
+          [
+            {
+              "name": "Amulet of torture"
+            }
+          ],
+          [
+            {
+              "name": "Amulet of fury"
+            }
+          ],
+          [
+            {
+              "name": "Amulet of strength"
+            }
+          ]
+        ],
+        "ring": [
+          [
+            {
+              "name": "Lightbearer"
+            }
+          ],
+          [
+            {
+              "name": "Ultor ring"
+            }
+          ],
+          [
+            {
+              "name": "Berserker ring (i)"
+            }
+          ],
+          [
+            {
+              "name": "Brimstone ring"
+            }
+          ]
+        ],
+        "shield": [],
+        "special": [
+          [
+            {
+              "name": "Crystal halberd"
+            }
+          ],
+          [
+            {
+              "name": "Dinh's bulwark"
+            }
+          ],
+          [
+            {
+              "name": "Saradomin godsword"
+            }
+          ],
+          [
+            {
+              "name": "Ancient mace"
+            }
+          ]
+        ],
+        "weapon": [
+          [
+            {
+              "name": "Hallowfell"
+            }
+          ]
+        ]
+      },
+      "style": "Melee"
+    },
+    {
+      "label": "Magic (Barrage)",
+      "slotNotes": {
+        "body": "tier 4: Better than Ahrim's if the monster has a low Magic level (e.g. dust devils).",
+        "legs": "tier 4: Better than Ahrim's if the monster has a low Magic level (e.g. dust devils).",
+        "weapon": "tier 3: Two-handed weapon."
+      },
+      "slots": {
+        "ammo": [
+          [
+            {
+              "name": "Rada's blessing 4"
+            }
+          ],
+          [
+            {
+              "name": "God blessing",
+              "pic": "Peaceful blessing"
+            },
+            {
+              "name": "Rada's blessing 3",
+              "txt": "Rada's blessing 3/2"
+            }
+          ]
+        ],
+        "body": [
+          [
+            {
+              "name": "Virtus robe top"
+            }
+          ],
+          [
+            {
+              "name": "Ancestral robe top"
+            }
+          ],
+          [
+            {
+              "name": "Ahrim's robetop"
+            },
+            {
+              "name": "Dagon'hai robe top"
+            }
+          ],
+          [
+            {
+              "name": "Proselyte hauberk"
+            },
+            {
+              "name": "Vestment robe top",
+              "pic": "Zamorak robe top"
+            }
+          ],
+          [
+            {
+              "name": "Monk's robe top"
+            }
+          ]
+        ],
+        "cape": [
+          [
+            {
+              "name": "God capes",
+              "pic": "Imbued Saradomin cape",
+              "txt": "Imbued god cape"
+            }
+          ],
+          [
+            {
+              "name": "God capes",
+              "pic": "Saradomin cape"
+            }
+          ],
+          [
+            {
+              "name": "Ardougne cloak 4"
+            }
+          ],
+          [
+            {
+              "name": "Cape of Accomplishment",
+              "pic": "Strength cape"
+            }
+          ],
+          [
+            {
+              "name": "Vestment cloak",
+              "pic": "Saradomin cloak"
+            }
+          ]
+        ],
+        "feet": [
+          [
+            {
+              "name": "Avernic treads (max)"
+            }
+          ],
+          [
+            {
+              "name": "Eternal boots"
+            },
+            {
+              "name": "Devout boots"
+            }
+          ],
+          [
+            {
+              "name": "Holy sandals"
+            }
+          ],
+          [
+            {
+              "name": "Aranea boots"
+            },
+            {
+              "name": "Ancient ceremonial boots"
+            }
+          ],
+          [
+            {
+              "name": "Mystic boots"
+            }
+          ]
+        ],
+        "hands": [
+          [
+            {
+              "name": "Bracelet of slaughter"
+            },
+            {
+              "name": "Expeditious bracelet"
+            }
+          ],
+          [
+            {
+              "name": "Confliction gauntlets"
+            }
+          ],
+          [
+            {
+              "name": "Tormented bracelet"
+            }
+          ],
+          [
+            {
+              "name": "Barrows gloves"
+            }
+          ]
+        ],
+        "head": [
+          [
+            {
+              "name": "Slayer helmet (i)"
+            }
+          ],
+          [
+            {
+              "name": "Black mask (i)"
+            }
+          ]
+        ],
+        "legs": [
+          [
+            {
+              "name": "Virtus robe bottom"
+            }
+          ],
+          [
+            {
+              "name": "Ancestral robe bottom"
+            }
+          ],
+          [
+            {
+              "name": "Ahrim's robeskirt"
+            },
+            {
+              "name": "Dagon'hai robe bottom"
+            }
+          ],
+          [
+            {
+              "name": "Proselyte cuisse"
+            },
+            {
+              "name": "Vestment robe legs",
+              "pic": "Zamorak robe legs"
+            }
+          ],
+          [
+            {
+              "name": "Monk's robe"
+            }
+          ]
+        ],
+        "neck": [
+          [
+            {
+              "name": "Occult necklace"
+            }
+          ],
+          [
+            {
+              "name": "Bonecrusher necklace"
+            }
+          ]
+        ],
+        "ring": [
+          [
+            {
+              "name": "Magus ring"
+            }
+          ],
+          [
+            {
+              "name": "Ring of the gods (i)"
+            }
+          ],
+          [
+            {
+              "name": "Seers ring (i)"
+            },
+            {
+              "name": "Brimstone ring"
+            }
+          ],
+          [
+            {
+              "name": "Ring of wealth"
+            }
+          ]
+        ],
+        "shield": [
+          [
+            {
+              "name": "Elidinis' ward (f)"
+            }
+          ],
+          [
+            {
+              "name": "Elidinis' ward"
+            },
+            {
+              "name": "Arcane spirit shield"
+            }
+          ],
+          [
+            {
+              "name": "Ancient wyvern shield"
+            },
+            {
+              "name": "Malediction ward"
+            },
+            {
+              "name": "Mage's book"
+            }
+          ],
+          [
+            {
+              "name": "Book of Darkness"
+            }
+          ],
+          [
+            {
+              "name": "Unholy book"
+            }
+          ]
+        ],
+        "special": [
+          [
+            {
+              "name": "Dinh's bulwark"
+            },
+            {
+              "name": "Crystal halberd"
+            }
+          ]
+        ],
+        "weapon": [
+          [
+            {
+              "name": "Kodai wand"
+            },
+            {
+              "name": "Nightmare staff"
+            }
+          ],
+          [
+            {
+              "name": "Ancient sceptre"
+            },
+            {
+              "name": "Dragon hunter wand"
+            },
+            {
+              "name": "Master wand"
+            }
+          ],
+          [
+            {
+              "name": "Blue Moon spear"
+            }
+          ],
+          [
+            {
+              "name": "Ancient staff"
+            }
+          ]
+        ]
+      },
+      "style": "Magic (Barrage)"
+    },
+    {
+      "label": "Ranged",
+      "slotNotes": {
+        "ammo": "tier 1: Only with a bow. | tier 1: Only with the hunters' sunlight crossbow."
+      },
+      "slots": {
+        "ammo": [
+          [
+            {
+              "name": "Amethyst arrow"
+            },
+            {
+              "name": "Moonlight antler bolts"
+            }
+          ],
+          [
+            {
+              "name": "Rada's blessing 4"
+            }
+          ],
+          [
+            {
+              "name": "God blessing",
+              "pic": "Peaceful blessing"
+            },
+            {
+              "name": "Rada's blessing 3",
+              "txt": "Rada's blessing 3/2"
+            }
+          ]
+        ],
+        "body": [
+          [
+            {
+              "name": "Masori body (f)"
+            },
+            {
+              "name": "Masori body"
+            }
+          ],
+          [
+            {
+              "name": "Hueycoatl hide body"
+            }
+          ],
+          [
+            {
+              "name": "Blessed body",
+              "pic": "Armadyl d'hide body"
+            }
+          ],
+          [
+            {
+              "name": "Black d'hide body"
+            }
+          ]
+        ],
+        "cape": [
+          [
+            {
+              "name": "Dizana's quiver"
+            }
+          ],
+          [
+            {
+              "name": "Ava's assembler"
+            }
+          ],
+          [
+            {
+              "name": "Ava's accumulator"
+            }
+          ],
+          [
+            {
+              "name": "Ranging cape"
+            }
+          ],
+          [
+            {
+              "name": "Ava's attractor"
+            }
+          ]
+        ],
+        "feet": [
+          [
+            {
+              "name": "Avernic treads (max)"
+            }
+          ],
+          [
+            {
+              "name": "Pegasian boots"
+            }
+          ],
+          [
+            {
+              "name": "Blessed boots",
+              "pic": "Armadyl d'hide boots"
+            }
+          ],
+          [
+            {
+              "name": "Aranea boots"
+            }
+          ],
+          [
+            {
+              "name": "Boots of Brimstone"
+            }
+          ]
+        ],
+        "hands": [
+          [
+            {
+              "name": "Expeditious bracelet"
+            },
+            {
+              "name": "Bracelet of slaughter"
+            }
+          ],
+          [
+            {
+              "name": "Zaryte vambraces"
+            }
+          ],
+          [
+            {
+              "name": "Barrows gloves"
+            }
+          ],
+          [
+            {
+              "name": "Blessed vambraces",
+              "pic": "Armadyl bracers"
+            }
+          ],
+          [
+            {
+              "name": "Hueycoatl hide vambraces"
+            }
+          ]
+        ],
+        "head": [
+          [
+            {
+              "name": "Slayer helmet (i)"
+            }
+          ],
+          [
+            {
+              "name": "Black mask (i)"
+            }
+          ]
+        ],
+        "legs": [
+          [
+            {
+              "name": "Masori chaps (f)"
+            },
+            {
+              "name": "Masori chaps"
+            }
+          ],
+          [
+            {
+              "name": "Hueycoatl hide chaps"
+            }
+          ],
+          [
+            {
+              "name": "Blessed chaps",
+              "pic": "Armadyl chaps"
+            }
+          ],
+          [
+            {
+              "name": "Black d'hide chaps"
+            }
+          ]
+        ],
+        "neck": [
+          [
+            {
+              "name": "Necklace of rupture"
+            }
+          ],
+          [
+            {
+              "name": "Necklace of anguish"
+            }
+          ],
+          [
+            {
+              "name": "Bonecrusher necklace"
+            },
+            {
+              "name": "Dragonbone necklace"
+            }
+          ],
+          [
+            {
+              "name": "Amulet of fury"
+            }
+          ],
+          [
+            {
+              "name": "Amulet of glory"
+            }
+          ]
+        ],
+        "ring": [
+          [
+            {
+              "name": "Venator ring"
+            }
+          ],
+          [
+            {
+              "name": "Ring of the gods (i)"
+            }
+          ],
+          [
+            {
+              "name": "Ring of suffering (i)"
+            }
+          ],
+          [
+            {
+              "name": "Archers ring (i)"
+            }
+          ],
+          [
+            {
+              "name": "Ring of wealth"
+            }
+          ]
+        ],
+        "special": [
+          [
+            {
+              "name": "Toxic blowpipe"
+            }
+          ]
+        ],
+        "weapon": [
+          [
+            {
+              "name": "Venator bow"
+            }
+          ],
+          [
+            {
+              "name": "Toxic blowpipe"
+            }
+          ],
+          [
+            {
+              "name": "Magic shortbow (i)"
+            },
+            {
+              "name": "Hunters' sunlight crossbow"
+            }
+          ]
+        ]
+      },
+      "style": "Ranged"
+    },
+    {
+      "label": "Ranged (Wilderness Slayer)",
+      "slotNotes": {},
+      "slots": {
+        "ammo": [
+          [
+            {
+              "name": "Rada's blessing 4"
+            }
+          ],
+          [
+            {
+              "name": "God blessing",
+              "pic": "Peaceful blessing"
+            },
+            {
+              "name": "Rada's blessing 3",
+              "txt": "Rada's blessing 3/2"
+            }
+          ]
+        ],
+        "body": [
+          [
+            {
+              "name": "Black d'hide body"
+            }
+          ]
+        ],
+        "cape": [
+          [
+            {
+              "name": "Ava's assembler"
+            }
+          ],
+          [
+            {
+              "name": "Ava's accumulator"
+            }
+          ],
+          [
+            {
+              "name": "Ranging cape"
+            }
+          ]
+        ],
+        "feet": [
+          [
+            {
+              "name": "Mixed hide boots"
+            }
+          ],
+          [
+            {
+              "name": "Snakeskin boots"
+            }
+          ]
+        ],
+        "hands": [
+          [
+            {
+              "name": "Expeditious bracelet"
+            }
+          ]
+        ],
+        "head": [
+          [
+            {
+              "name": "Slayer helmet (i)"
+            }
+          ],
+          [
+            {
+              "name": "Black mask (i)"
+            }
+          ]
+        ],
+        "legs": [
+          [
+            {
+              "name": "Black d'hide chaps"
+            }
+          ]
+        ],
+        "neck": [
+          [
+            {
+              "name": "Necklace of rupture"
+            }
+          ],
+          [
+            {
+              "name": "Necklace of anguish"
+            }
+          ],
+          [
+            {
+              "name": "Amulet of glory"
+            }
+          ]
+        ],
+        "ring": [
+          [
+            {
+              "name": "Ring of wealth"
+            }
+          ],
+          [
+            {
+              "name": "Explorer's ring 4"
+            }
+          ],
+          [
+            {
+              "name": "Ring of dueling"
+            }
+          ]
+        ],
+        "weapon": [
+          [
+            {
+              "name": "Webweaver bow"
+            }
+          ],
+          [
+            {
+              "name": "Craw's bow"
+            }
+          ],
+          [
+            {
+              "name": "Toxic blowpipe"
+            }
+          ]
+        ]
+      },
+      "style": "Ranged (Wilderness)"
+    }
+  ],
+  "notes": [
+    "Use the best equipment available for the fastest rates. If the player cannot afford best-in-slot equipment, it is best to prioritise melee strength and magic damage upgrades, with neck slot and ring slot items typically offering the most efficient upgrades by cost, followed by other armour upgrades.",
+    "The black mask is a very useful item for training Slayer, as it provides significant boosts to melee accuracy and strength when killing monsters on the player's current Slayer task. When imbued through the Nightmare Zone, it provides additional bonuses to ranged accuracy and strength as well as magic accuracy and damage. Both versions of the black mask can be turned into a Slayer helmet after the ability to do so is unlocked from a Slayer master for 400 reward points. It is highly recommended that this upgrade be prioritised as soon as possible, as doing so will allow the player to enjoy the bonuses while killing Slayer monsters requiring special headgear, such as aberrant spectres, banshees, wall beasts, dust devils and smoke devils.",
+    "The bracelet of slaughter and expeditious bracelet are popular choices for extending good tasks and quickening bad tasks respectively. Bracelets of slaughter are commonly used for extending barrage tasks like smoke devils which provide valuable experience; expeditious bracelets are often used for tasks which players might otherwise skip, such as waterfiends. Due to their limited charges, it is often helpful to bring more than one per task. As they provide no combat bonuses, they are commonly equipped only as monsters die (if practical), with gloves with better bonuses being used for the rest of the kill, to maximize damage.",
+    "Slayer rings can be used to access the Stronghold Slayer Cave, Slayer Tower and the Fremennik Slayer Dungeon. The first teleport also leads directly to Nieve, making her easily accessible to players using her as their current Slayer master. The ability to craft Slayer rings may be unlocked for 150 reward points. After completing the Haunted Mine and Mourning's End Part II quests, the ring will also have teleports to Tarn's Lair and the Mourner Tunnels, providing quick access to terror dogs and dark beasts respectively.",
+    "If the player acquires an eternal gem, they may instead use that to create the eternal slayer ring, sharing all of the benefits of a normal slayer ring but with unlimited teleports."
+  ],
+  "source": "Slayer training"
+}

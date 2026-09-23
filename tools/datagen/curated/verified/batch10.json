@@ -1,0 +1,1225 @@
+[
+  {
+    "task": "Smoke devils",
+    "wikiTaskPage": "Slayer task/Smoke devils",
+    "monsterPages": [
+      "Smoke devil",
+      "Nuclear smoke devil",
+      "Thermonuclear smoke devil",
+      "Smoke Devil Dungeon"
+    ],
+    "bossTask": false,
+    "summary": "A 93 Slayer task done only in the task-only Smoke Devil Dungeon south of Castle Wars (fairy ring BKP). You must wear a facemask or slayer helmet or their attacks always hit and drain stats; they attack with magical ranged, which Protect from Missiles fully negates. The cave is multicombat, so the usual method is to set a cannon in the centre to lure the devils, stack them behind the piles of remains and barrage them. Players wanting profit can instead kill the Thermonuclear smoke devil boss in its side room.",
+    "recommendedStyle": "Magic",
+    "styleNotes": "High defence but a low Magic level, so barrage spells are accurate (Slayer task/Smoke devils); infobox elementalweaknesstype = Air, elementalweaknesspercent = 30; their magical-ranged attack is negated by Protect from Missiles ('using Protect from Missiles will negate their attacks' - Smoke devil); infobox immunecannon = No, immunethrall = No.",
+    "requiredItems": [
+      "Facemask or Slayer helmet"
+    ],
+    "usefulItems": [
+      "Dwarf multicannon and cannonballs",
+      "Ice Barrage / Blood Barrage runes",
+      "Prayer potions for Protect from Missiles"
+    ],
+    "superior": "Nuclear smoke devil",
+    "alternatives": [
+      "Thermonuclear smoke devil"
+    ],
+    "xpPerKill": 185,
+    "locations": [
+      {
+        "name": "Smoke Devil Dungeon",
+        "displayName": "Smoke Devil Dungeon (task-only, south of Castle Wars)",
+        "rank": 1,
+        "multi": true,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "93 Slayer",
+          "Active smoke devil (or Thermonuclear smoke devil) task",
+          "Facemask or Slayer helmet"
+        ],
+        "notes": "Only location; 30 smoke devils in the main room and 6 in the boss room, none safespottable. Fairy ring BKP or a ring of dueling to Castle Wars then run south-west. Place the cannon in the centre and stack the devils behind the remains; the cannon is destroyed if set up in the boss room.",
+        "evidence": {
+          "multi": "'Smoke devils reside in a multi-combat area, so players can burst/barrage or use chinchompas on them' (Smoke devil); Location Comparison row 'Smoke Devil Dungeon' Multicombat {{Yes}} (Slayer task/Smoke devils).",
+          "cannon": "'A cannon is strongly recommended to lure the smoke devils, as their cave is extremely large' (Slayer task/Smoke devils); Location Comparison row 'Smoke Devil Dungeon' Cannonable '{{Yes}}/No' with footnote 'If placed in the boss room, it will be destroyed.' (Slayer task/Smoke devils); Smoke devil infobox immunecannon = No.",
+          "requirements": "'These require a minimum of 93 Slayer and an active Slayer task to be harmed. A slayer helmet, slayer helmet (i), or a facemask is required to kill these.' (Smoke devil); 'Attempting to enter the dungeon without a facemask (or Slayer helm) will result in Breive warning the player that they should get some protection first before entering. The gas mask also works.' and 'a facemask or slayer helm is still needed to fight the smoke devils' (Smoke Devil Dungeon)."
+        }
+      }
+    ],
+    "notes": "Assigned by Konar, Nieve/Steve, Duradel/Kuradal and Mortimer (Slayer task list row). Konar's location for this task is the Smoke Devil Dungeon (Konar quo Maten table). Smoke devils do not count for dust devil tasks. Occult necklace is dropped by the smoke devil, its superior and the boss; the superior has a high chance of rolling the imbued heart / eternal gem table.",
+    "_verification": {
+      "corrections": [
+        "No factual changes. Confirmed: page 'Slayer task/Smoke devils' exists (skillreq 93, combatreq 85, konar/nieve/duradel/mortimer); Smoke devil LocLine list is exactly 'Smoke Devil Dungeon' (level 160); infobox slayxp = 185, assignedby = konar,nieve,duradel, Mortimer, elementalweaknesstype Air 30, immunecannon No; Nuclear smoke devil cat = Smoke Devils (superior); Konar quo Maten table lists Smoke Devil Dungeon with Thermonuclear smoke devil as accepted variant; Slayer task list row: Facemask/Slayer helmet, Combat 85.",
+        "Evidence tightened: the cannon evidence now quotes the table cell exactly ('{{Yes}}/No' plus footnote); the Smoke Devil Dungeon page also says the gas mask stops the smoke damage but a facemask or slayer helm is still needed to fight the devils.",
+        "'Smoke devils do not count for dust devil tasks' confirmed ('they do not count for dust devil tasks' - Smoke devil); 'second only to the Colossal Hydra' imbued heart/eternal gem claim confirmed on the task page."
+      ],
+      "confirmed": 15,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Sourhogs",
+    "wikiTaskPage": "Sourhog (no 'Slayer task/Sourhogs' or 'Slayer task/Sourhog' page exists - API missingtitle this run; monster page and Sourhog Cave page used)",
+    "monsterPages": [
+      "Sourhog",
+      "Sourhog Cave"
+    ],
+    "bossTask": false,
+    "summary": "A Spria-only beginner task fought in the Sourhog Cave just east of Draynor Manor after completing A Porcine of Interest. Wear reinforced goggles or a slayer helmet, otherwise their caustic spit hits 20-30 and drains Attack and Defence by 90%. They are level 37, aggressive regardless of combat level and use crush melee and ranged attacks, and a dwarf multicannon can be used in the cave.",
+    "recommendedStyle": "Any",
+    "styleNotes": "Level 37 with 0 stab defence (30 slash, 10 crush, 30 magic), so stab weapons hit most reliably; attacks with crush and ranged; not immune to cannon or thralls.",
+    "requiredItems": [
+      "Reinforced goggles or Slayer helmet"
+    ],
+    "usefulItems": [
+      "Dwarf multicannon and cannonballs",
+      "Food"
+    ],
+    "superior": null,
+    "alternatives": [],
+    "xpPerKill": 40,
+    "locations": [
+      {
+        "name": "Sourhog Cave",
+        "displayName": "Sourhog Cave (east of Draynor Manor)",
+        "rank": 1,
+        "multi": "unknown",
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "A Porcine of Interest",
+          "Reinforced goggles or Slayer helmet"
+        ],
+        "notes": "Only location, 8 sourhog spawns; the cave entrance is just east of Draynor Manor. Sourhogs are aggressive to players of any combat level.",
+        "evidence": {
+          "multi": "not stated (neither Sourhog, Sourhog Cave nor the Multicombat area list mention combat type)",
+          "cannon": "'A Dwarf multicannon can be used here.' (Sourhog Cave); Sourhog infobox immunecannon = No.",
+          "requirements": "'It requires reinforced goggles to kill, or a Slayer helmet after the quest.' (Sourhog); Slayer task list row 'Sourhogs': Required items Reinforced goggles / Slayer helmet, Other requirements 'A Porcine of Interest', master Spria; infobox assignedby = spria; changelog 8 May 2024 'Sourhogs are now only assigned by Spria.' (Sourhog)."
+        }
+      }
+    ],
+    "notes": "Only Spria assigns sourhogs (Slayer task list row). No superior variant. 100% big bones drop.",
+    "_verification": {
+      "corrections": [
+        "No factual changes. Confirmed: no task page (fetched 'Slayer task/Sourhogs' and 'Slayer task/Sourhog' - both missingtitle); LocLine list is exactly 'Sourhog Cave' (level 37, 8 pins); infobox slayxp = 40, slaylvl 1, assignedby spria, attack style Crush/Ranged, aggressive Yes, max hit '6, 20-30 (without Reinforced goggles)', dstab 0 / dslash 30 / dcrush 10 / dmagic 30, immunecannon No, immunethrall No; 'draining the player's current Attack and Defence by 90% and cause 20-30 damage' and 'aggressive to players regardless of their combat level' (Sourhog); 100% Big bones drop.",
+        "multi left 'unknown': neither Sourhog, Sourhog Cave nor the Multicombat area page mention the cave's combat type."
+      ],
+      "confirmed": 13,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Spiders",
+    "wikiTaskPage": "Slayer task/Spiders",
+    "monsterPages": [
+      "Spider",
+      "Giant spider",
+      "Sarachnis",
+      "Araxyte",
+      "Spindel",
+      "Forthos Dungeon",
+      "Morytania Spider Cave",
+      "Web Chasm"
+    ],
+    "bossTask": false,
+    "summary": "A no-requirement task from Turael, Spria or Krystilia, normally finished quickly with any combat style on the giant spiders around Lumbridge or in the Stronghold of Security. Most spiders only use melee and are weak to everything, with the stronger ones weaker to crush. Krystilia tasks are usually done at the Wilderness spider hill around level 46 with a cannon, or on the bosses Venenatis or Spindel, and higher-level players can substitute araxytes (92 Slayer) or Sarachnis.",
+    "recommendedStyle": "Any",
+    "styleNotes": "'Low-levelled spiders are generally weak to all forms of combat, though higher-levelled spiders are weaker to crush'; most use melee only, a few stronger ones add Ranged or Magic; araxytes are venomous with a 50% fire weakness.",
+    "requiredItems": [],
+    "usefulItems": [
+      "Dwarf multicannon (Wilderness spider hill or Stronghold of Security)",
+      "Fast Ranged weapon such as darts or knives for 2 HP spiderlings",
+      "Antivenom if killing araxytes"
+    ],
+    "superior": "Dreadborn Araxyte",
+    "alternatives": [
+      "Sarachnis",
+      "Venenatis",
+      "Spindel",
+      "Araxyte",
+      "Araxxor"
+    ],
+    "xpPerKill": null,
+    "locations": [
+      {
+        "name": "East side of Lumbridge",
+        "displayName": "Lumbridge surroundings (giant spiders, beginner)",
+        "rank": 1,
+        "multi": "unknown",
+        "cannon": "unknown",
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "Level 2 giant spiders spawn east and west of Lumbridge (Giant spider LocLines); the task page calls the spiders around Lumbridge a reasonable spot for low levels. Aggressive but very weak.",
+        "evidence": {
+          "multi": "not stated",
+          "cannon": "not stated",
+          "requirements": "'for low-levels, the spiders around Lumbridge are a reasonable spot' (Slayer task/Spiders); Giant spider LocLines 'East side of Lumbridge', 'West of Lumbridge', 'Lumbridge' (level 2); 'Giant spiders are very large spiders most commonly seen around Lumbridge.' (Giant spider)."
+        }
+      },
+      {
+        "name": "Stronghold of Security, Pit of Pestilence (level 3)",
+        "displayName": "Stronghold of Security - Pit of Pestilence (level 3)",
+        "rank": 2,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "35 level 24 spiders and 45 level 50 giant spiders (Stronghold of Security monster table); the giant spiders are aggressive to any level; entered from the Barbarian Village mine and taken down to the third level.",
+        "evidence": {
+          "multi": "Location Comparison row 'Stronghold of Security, Pit of Pestilence (level 3)' Multicombat {{No}} (Slayer task/Spiders); the Multicombat area list names only 'The first level of the Stronghold of Security'.",
+          "cannon": "'Note: A cannon can be placed in the stronghold.' (Stronghold of Security); Location Comparison row 'Stronghold of Security, Pit of Pestilence (level 3)' Cannonable {{Yes}} (Slayer task/Spiders).",
+          "requirements": "not stated; 'The giant spiders are useful to train against as they are aggressive towards any level.' (Stronghold of Security)."
+        }
+      },
+      {
+        "name": "Forthos Dungeon",
+        "displayName": "Forthos Dungeon - Spider's Den / Sarachnis",
+        "rank": 3,
+        "multi": true,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Access to Great Kourend (Boss page: 'Accessed Great Kourend at least once by boat' for the Sarachnis boss task)"
+        ],
+        "notes": "21 level 75 temple spiders in the multi-combat Spider's Den, with Sarachnis in the tomb further south. Do not kill Sarachnis' four spawns if you want the task to last, as they count toward it.",
+        "evidence": {
+          "multi": "'The Spider's Den, formerly a ritual circle for worshippers, is a multi-combat area containing 21 Temple Spiders' (Forthos Dungeon); Location Comparison row 'Forthos Dungeon' Multicombat {{Yes}} (Slayer task/Spiders).",
+          "cannon": "'Dwarf multicannons cannot be placed inside the Forthos Dungeon.' (Forthos Dungeon); Location Comparison row 'Forthos Dungeon' Cannonable {{No}} (Slayer task/Spiders); Dwarf multicannon prohibited list: 'Forthos Dungeon - A mysterious presence won't let you set up a cannon here.'",
+          "requirements": "'She can be killed as part of a spider Slayer task.' (Sarachnis); 'it is generally recommended to not kill the minions when fighting Sarachnis if choosing to fight her for the task, as she spawns four minions per fight when faced solo, which can quickly end the task.' (Slayer task/Spiders); Boss slayer table row Sarachnis / Forthos Dungeon / Slayer 1 / 'Accessed Great Kourend at least once by boat' (Boss)."
+        }
+      },
+      {
+        "name": "Wilderness spider nest holding a Sapphire spawn",
+        "displayName": "Wilderness 'spider hill' (~level 46) - Krystilia",
+        "rank": 4,
+        "multi": "unknown",
+        "cannon": true,
+        "wilderness": true,
+        "wildernessLevelMin": 46,
+        "wildernessLevelMax": 46,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "Aggressive low-HP spiders around a cut sapphire spawn at roughly level 46 Wilderness (Spider LocLine pins around 3168,3886); a cannon or fast darts/knives on the 2 HP spiderlings finishes even a 100 task in about 5 minutes. Player killers can arrive.",
+        "evidence": {
+          "multi": "not stated",
+          "cannon": "'head to the \"spider hill\" (located around level 46 Wilderness, with a cut sapphire being the location's landmark) and place a cannon there with very little risk' (Slayer task/Spiders); Spider infobox immunecannon = No.",
+          "requirements": "'If the player is assigned spiders by Krystilia but does not want to kill the spider bosses, it is recommended they head to the \"spider hill\"' (Slayer task/Spiders); Spider LocLine 'Wilderness spider nest holding a Sapphire spawn' (level 1, members No)."
+        }
+      },
+      {
+        "name": "Web Chasm",
+        "displayName": "Web Chasm (Spindel, level 29 Wilderness) - Krystilia",
+        "rank": 5,
+        "multi": false,
+        "cannon": "unknown",
+        "wilderness": true,
+        "wildernessLevelMin": 29,
+        "wildernessLevelMax": 29,
+        "konarAssignable": false,
+        "requirements": [
+          "Hard Wilderness Diary (a spider task does not bypass this; only a Venenatis boss task does)",
+          "50,000 coin lair fee"
+        ],
+        "notes": "Singles-plus lair in the eastern ruins north of the Graveyard of Shadows; Spindel counts toward a spider task and the spiderlings do not decrement it. Without the hard diary you cannot teleport for 3 ticks after entering if you have recently attacked Spindel.",
+        "evidence": {
+          "multi": "'It is a singles-plus combat dungeon located in the eastern ruins north of the Graveyard of Shadows.' (Web Chasm) - singles-plus recorded as not multi.",
+          "cannon": "not stated (Spindel infobox immunecannon = No, but no statement about placing a cannon in the Web Chasm)",
+          "requirements": "'To enter the lair, players must have completed the hard Wilderness diary, OR they must have a Venenatis boss Slayer task' (Web Chasm); 'a spider Slayer task does not bypass the diary requirement' (Spindel); 'Entering the boss lairs requires players to pay a fee of 50,000 coins' and 'The entrance and lair itself is in level 29 Wilderness' (Web Chasm); 'if players have recently attacked Spindel, they will be unable to teleport for 3 ticks unless they have completed the hard Wilderness diary' (Web Chasm)."
+        }
+      },
+      {
+        "name": "Silk Chasm",
+        "displayName": "Silk Chasm (Venenatis, level 35 Wilderness) - Krystilia",
+        "rank": 6,
+        "multi": true,
+        "cannon": false,
+        "wilderness": true,
+        "wildernessLevelMin": 35,
+        "wildernessLevelMax": 35,
+        "konarAssignable": false,
+        "requirements": [
+          "Medium Wilderness Diary",
+          "50,000 coin lair fee"
+        ],
+        "notes": "Venenatis counts for the task and her spiderlings do not decrement it; the Silk Chasm is a multicombat lair at level 35 Wilderness just south-east of Callisto's Den, deeper than Spindel, so do not bring anything you cannot afford to lose. The task page's Monster Variants table gives her location as 'East of the Bone Yard'.",
+        "evidence": {
+          "multi": "'Venenatis only requires the Medium Wilderness Diary but is located in significantly deeper Wilderness that is a multicombat area.' (Slayer task/Spiders); 'It is a multi-combat dungeon located in the Wilderness, just south-east of Callisto's Den.' (Silk Chasm).",
+          "cannon": "'A dwarf multicannon cannot be set up in the Silk Chasm; if attempted, you will receive the message: It doesn't seem safe to set up a cannon here.' (Venenatis); Dwarf multicannon prohibited list 'Silk Chasm - It doesn't seem safe to set up a cannon here.'",
+          "requirements": "'A one-time fee of 50,000 coins is required to access the boss, which must be paid again if the player dies to another player within any of the wilderness bosses respective lairs.' (Slayer task/Spiders); 'the player must have completed the medium Wilderness Diary tasks, OR they must have a Venenatis boss Slayer task (a spider Slayer task does not bypass the diary requirement)' (Venenatis); Silk Chasm infobox wilderness = 35 and 'Venenatis is a large spider that resides in the Silk Chasm, at level 35 Wilderness.' (Venenatis); Venenatis LocLine 'Silk Chasm'."
+        }
+      },
+      {
+        "name": "Morytania Spider Cave",
+        "displayName": "Morytania Spider Cave (araxytes, 92 Slayer)",
+        "rank": 7,
+        "multi": "partial",
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "92 Slayer (boostable with wild pie from 87)"
+        ],
+        "notes": "Araxytes are venomous and abundant in a multicombat cave, so bring prayer and venom protection; the level 146 variants can spawn the Dreadborn Araxyte superior. Araxxor's minions give Slayer XP but do not decrement the task.",
+        "evidence": {
+          "multi": "'The entire cave, apart from the north task-only cavern, is entirely multicombat.' (Morytania Spider Cave); Monster Variants: 'Able to be fought in both single combat and multi-way combat. Cannonable and barragable.' and Location Comparison row 'Morytania Spider Cave' Multicombat {{Yes}} (Slayer task/Spiders); 'As they are abundant in numbers, able to inflict venom, and in a multicombat area, it is dangerous to fight them without prayer and a method to stave off venom.' (Araxyte).",
+          "cannon": "'Cannonable and barragable. Requires 92 Slayer.' and Location Comparison row 'Morytania Spider Cave' Cannonable {{Yes}} (Slayer task/Spiders).",
+          "requirements": "'Araxytes can be killed in place of a spider task, though this option requires 92 Slayer in order to fight them. A boost from wild pie can be used at 87 Slayer' (Slayer task/Spiders); Araxyte infobox slaylvl = 92; 'the dreadborn araxyte can only spawn if the level 146 araxytes are killed' (Dreadborn Araxyte)."
+        }
+      },
+      {
+        "name": "Lovakengj",
+        "displayName": "Lovakengj (level 1 spiders)",
+        "rank": 8,
+        "multi": true,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "41 level 1 spiders (task page table); Spider LocLine 'Lovakengj'.",
+        "evidence": {
+          "multi": "Location Comparison row 'Lovakengj' Multicombat {{Yes}} (Slayer task/Spiders).",
+          "cannon": "Location Comparison row 'Lovakengj' Cannonable {{Yes}} (Slayer task/Spiders).",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Underground Pass (dungeon)",
+        "displayName": "Underground Pass (level 1 spiders)",
+        "rank": 9,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "49 level 1 spiders (task page table); Spider LocLine 'Underground Pass (dungeon)'; blessed spiders (level 39, 32 xp) live in Kalrag's lair here.",
+        "evidence": {
+          "multi": "Location Comparison row 'Underground Pass' Multicombat {{No}} (Slayer task/Spiders).",
+          "cannon": "Location Comparison row 'Underground Pass' Cannonable {{Yes}} (Slayer task/Spiders).",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Arceuus, outside the Tower of Magic",
+        "displayName": "Arceuus - outside the Tower of Magic",
+        "rank": 10,
+        "multi": true,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "8 level 1 spiders (task page table); Spider LocLine 'Arceuus, outside the Tower of Magic'.",
+        "evidence": {
+          "multi": "Location Comparison row 'Arceuus, outside the Tower of Magic' Multicombat {{Yes}} (Slayer task/Spiders).",
+          "cannon": "Location Comparison row 'Arceuus, outside the Tower of Magic' Cannonable {{Yes}} (Slayer task/Spiders).",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Sisterhood Sanctuary",
+        "displayName": "Sisterhood Sanctuary (level 1 spiders)",
+        "rank": 11,
+        "multi": true,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "11 level 1 spiders (task page table); Spider LocLine 'Sisterhood Sanctuary'. Access requirements not checked in this run.",
+        "evidence": {
+          "multi": "Location Comparison row 'Sisterhood Sanctuary' Multicombat {{Yes}} (Slayer task/Spiders).",
+          "cannon": "Location Comparison row 'Sisterhood Sanctuary' Cannonable {{Yes}} (Slayer task/Spiders).",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Ogre Enclave",
+        "displayName": "Ogre Enclave (level 1 spiders)",
+        "rank": 12,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "10 level 1 spiders (task page table); Spider LocLine 'Ogre Enclave'. Access requirements not checked in this run.",
+        "evidence": {
+          "multi": "Ogre Enclave page: 'A dwarf multicannon may be used here, but it is not a multi-combat area.' (Ogre Enclave) - the area's own page overrides the Slayer task/Spiders Location Comparison row Multicombat {{Yes}}; Ogre Enclave is also absent from the Multicombat area list. Changed True -> False in the consolidation pass (2026-09-23).",
+          "cannon": "Location Comparison row 'Ogre Enclave' Cannonable {{Yes}} (Slayer task/Spiders).",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Port Piscarilius",
+        "displayName": "Port Piscarilius (level 1 spiders)",
+        "rank": 13,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "10 level 1 spiders (task page table); Spider LocLine 'Port Piscarilius'.",
+        "evidence": {
+          "multi": "Location Comparison row 'Port Piscarilius' Multicombat {{No}} (Slayer task/Spiders).",
+          "cannon": "Location Comparison row 'Port Piscarilius' Cannonable {{Yes}} (Slayer task/Spiders).",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Gnome Maze",
+        "displayName": "Gnome Maze (level 1 spiders)",
+        "rank": 14,
+        "multi": false,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "9 level 1 spiders (task page table); Spider LocLine 'Gnome Maze'.",
+        "evidence": {
+          "multi": "Location Comparison row 'Gnome Maze' Multicombat {{No}} (Slayer task/Spiders).",
+          "cannon": "Location Comparison row 'Gnome Maze' Cannonable {{No}} (Slayer task/Spiders).",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Hosidius",
+        "displayName": "Hosidius (level 1 spiders)",
+        "rank": 15,
+        "multi": false,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "6 level 1 spiders (task page table); Spider LocLine 'Hosidius'.",
+        "evidence": {
+          "multi": "Location Comparison row 'Hosidius' Multicombat {{No}} (Slayer task/Spiders).",
+          "cannon": "Location Comparison row 'Hosidius' Cannonable {{No}} (Slayer task/Spiders).",
+          "requirements": "not stated"
+        }
+      }
+    ],
+    "notes": "Assigned by Turael and Spria (15-30) and Krystilia (65-100; research/wilderness.json lists weight 6). Krystilia's own location list is Wilderness spots only: north-west of Lava Dragon Isle, south of Callisto, Eastern Ruins, Edgeville Dungeon, Lava Maze Dungeon. Araxxor 'may only be killed while on a spider or araxyte Slayer task' (Araxxor). The Dreadborn Araxyte superior only comes from level 146 araxytes. Slayer XP varies from 2 (spider) to 1,708 (Araxxor), so xpPerKill is null. The Spider and Giant spider pages list about 50 LocLines in total (towns, sewers, dungeons); the locations here are the task page's own Location Comparison rows plus the boss lairs, the araxyte cave and the Lumbridge/Wilderness spots the task page recommends.",
+    "_verification": {
+      "corrections": [
+        "Venenatis location renamed 'East of the Bone Yard' -> 'Silk Chasm' (her LocLine on the Venenatis page is 'Silk Chasm'; 'East of the Bone Yard' is only the task page's Monster Variants cell) and wildernessLevelMin/Max set to 35 (Silk Chasm infobox wilderness = 35; 'resides in the Silk Chasm, at level 35 Wilderness' - Venenatis). Removed the note that the level was not found.",
+        "Web Chasm note corrected: the 3-tick teleport block applies only 'if players have recently attacked Spindel' and without the hard diary (Web Chasm), not on every entry.",
+        "Morytania Spider Cave multi evidence re-attributed to the Morytania Spider Cave page itself (sentence verified there), dropping the 'via research/area-rules.json' reference.",
+        "Added the 8 remaining rows of the task page's Location Comparison table (Lovakengj 41, Underground Pass 49, Arceuus 8, Sisterhood Sanctuary 11, Ogre Enclave 10, Port Piscarilius 10, Gnome Maze 9, Hosidius 6) with their Multicombat/Cannonable values so the list is complete against the task page; access requirements for those were not checked.",
+        "Stronghold note now gives both counts from the Stronghold monster table (35 spiders level 24, 45 giant spiders level 50); spider-hill map pin corrected to a real LocLine pin (3168,3886).",
+        "Confirmed: page 'Slayer task/Spiders' (no reqs; Turael/Spria 15-30, Krystilia 65-100); every quoted sentence found on its page; Stronghold multi No / cannon Yes, Forthos multi Yes / cannon No, Morytania Spider Cave Yes/Yes per the table; Spindel singles-plus + hard diary OR Venenatis boss task + 50,000 fee + level 29 (Web Chasm, Spindel); Sarachnis 'can be killed as part of a spider Slayer task'; superior Dreadborn Araxyte (cat Spiders, Araxytes; assignedby includes turael, spria); alternatives Sarachnis/Venenatis/Spindel/Araxyte/Araxxor all in the Slayer task list row's monster column; xpPerKill null justified (2 to 1,708)."
+      ],
+      "confirmed": 26,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Spiritual creatures",
+    "wikiTaskPage": "Slayer task/Spiritual creatures",
+    "monsterPages": [
+      "Spiritual ranger",
+      "Spiritual warrior",
+      "Spiritual mage",
+      "God Wars Dungeon",
+      "Wilderness God Wars Dungeon"
+    ],
+    "bossTask": false,
+    "summary": "Rangers (63 Slayer), warriors (68) and mages (83) found only in the God Wars Dungeon and the Wilderness God Wars Dungeon, both multicombat areas where nothing can be cannoned. Wear an item for each god whose followers you pass (at least Zamorak plus the god you are killing) so the dungeon stays tolerant, or you will be swarmed. The wiki suggests skipping or blocking rangers, killing warriors in Zamorak's Fortress and mages in Armadyl's Eyrie or the Ancient Prison, the latter being where the dragon boots-dropping mages are most concentrated. Many players block this task because it is slow, not AFKable and drops poorly.",
+    "recommendedStyle": "Any",
+    "styleNotes": "Rangers use Ranged, warriors mostly melee (Armadyl warriors use Ranged, infobox attack style4) and mages Magic; all three infoboxes give elementalweaknesstype Air (30%) for the Zamorak/Saradomin/Bandos/Armadyl variants and Fire (200%) for the Zaros variants; Zamorak mages' Flames of Zamorak drains Magic; Zaros creatures are much stronger; infobox immunecannon = Yes on ranger, warrior and mage.",
+    "requiredItems": [],
+    "usefulItems": [
+      "God-aligned items (Zamorak plus the target god; Zaros item for the Ancient Prison)",
+      "Rope (first GWD entry; two more for Saradomin's Encampment)",
+      "Climbing boots (if not using Trollheim Teleport)",
+      "Mithril grapple and crossbow for Armadyl's Eyrie",
+      "Hammer for Bandos' Stronghold"
+    ],
+    "superior": null,
+    "alternatives": [],
+    "xpPerKill": null,
+    "locations": [
+      {
+        "name": "God Wars Dungeon",
+        "displayName": "God Wars Dungeon - main dungeon and god strongholds",
+        "rank": 1,
+        "multi": true,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Partial Troll Stronghold (defeat Dad) or Easy Combat Achievements (Ghommal's hilt teleport)",
+          "60 Strength or 60 Agility",
+          "Rope on first entry",
+          "Zamorak's Fortress: 70 Hitpoints (prayer drained on entry)",
+          "Armadyl's Eyrie: 70 Ranged and a mithril grapple crossbow",
+          "Bandos' Stronghold: 70 Strength and a hammer",
+          "Saradomin's Encampment: 70 Agility and 2 ropes first time"
+        ],
+        "notes": "Saradomin rangers can be safespotted using the small piles of bricks near the dungeon entrance (task page Safespots section); the task page recommends Zamorak's Fortress for warriors and Armadyl's Eyrie or the Ancient Prison for mages. Reach it via Trollheim Teleport (61 Magic, Eadgar's Ruse) or from Burthorpe past Death Plateau with climbing boots and a rope; if you have done Making Friends with My Arm, build the Fire of Unseasonal Warmth so stats and run energy are not drained on entry.",
+        "evidence": {
+          "multi": "'the dungeons are multicombat areas with many monsters, likely resulting in a swift death if this is not met' (Slayer task/Spiritual creatures); 'God Wars Dungeon' is in the Multicombat area list.",
+          "cannon": "Location Comparison Cannonable {{No}} for every God Wars Dungeon row (Slayer task/Spiritual creatures); Spiritual ranger, Spiritual warrior and Spiritual mage infoboxes immunecannon = Yes; 'inhabitants of the God Wars Dungeon may also destroy a cannon if a player attempts to use it' (Dwarf multicannon).",
+          "requirements": "'Accessing it requires partial completion of Troll Stronghold (defeating Dad) or full completion of the Easy Combat Achievements (in order to use the teleport on Ghommal's hilt 1)' and 'either 60 Strength or 60 Agility' and 'Rope (to access the dungeon itself for the first time) - two more ropes will be needed if venturing into Saradomin's Encampment on the first visit.' (God Wars Dungeon); 'Accessing the bases requires 70 in their respective stat, which cannot be boosted.' (God Wars Dungeon); Armadyl 70 Ranged + mithril grapple crossbow, Bandos 70 Strength + hammer, Zamorak 70 Hitpoints + prayer drained on entry (Slayer task/Spiritual creatures)."
+        }
+      },
+      {
+        "name": "God Wars Dungeon - Ancient Prison",
+        "displayName": "God Wars Dungeon - Ancient Prison (Zaros variants)",
+        "rank": 2,
+        "multi": true,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "The Frozen Door miniquest (frozen key used on the door)",
+          "70 Agility, 70 Hitpoints, 70 Ranged and 70 Strength",
+          "A Zaros-aligned item"
+        ],
+        "notes": "9 rangers, 9 warriors and 5 mages, all far stronger than the other gods' versions (mages use Ancient Magicks; rangers fire a prayer-disabling arrow; warriors drop smoke clouds). Only Zarosian followers live here, so a single Zaros item keeps it tolerant.",
+        "evidence": {
+          "multi": "Location Comparison rows 'God Wars Dungeon' with note 'Ancient Prison (Zaros) variant' Multicombat {{Yes}} for rangers (9), warriors (9) and mages (5) (Slayer task/Spiritual creatures); Spiritual ranger/warrior/mage LocLine 'God Wars Dungeon - Ancient Prison'.",
+          "cannon": "Location Comparison Cannonable {{No}} for the Ancient Prison rows (Slayer task/Spiritual creatures); 'Ancient Prison - An ancient power won't let you set up a cannon here.' (Dwarf multicannon prohibited list); infobox immunecannon = Yes.",
+          "requirements": "'The player must complete the miniquest The Frozen Door, which has a requirement of 70 Strength, Hitpoints, Ranged, and Agility.' (Slayer task/Spiritual creatures); 'In the Ancient Prison, only a Zaros-affiliated item is required' (Slayer task/Spiritual creatures)."
+        }
+      },
+      {
+        "name": "Wilderness God Wars Dungeon",
+        "displayName": "Wilderness God Wars Dungeon (level 28-32) - Krystilia",
+        "rank": 3,
+        "multi": true,
+        "cannon": false,
+        "wilderness": true,
+        "wildernessLevelMin": 28,
+        "wildernessLevelMax": 32,
+        "konarAssignable": false,
+        "requirements": [
+          "60 Strength (boulder) or 60 Agility (jutting wall)",
+          "Three god items recommended: Armadyl or Bandos, Saradomin and Zamorak"
+        ],
+        "notes": "Cave east of the Forgotten Cemetery; 12 rangers, 11 warriors and 12 mages. The entry cavern is single-way but the followers' cavern is multi-way, so player killers can pile in; do not bring items you are unwilling to lose. Nearest access is the level 27 Wilderness Obelisk, Dareeyak Teleport or the 64 Agility shortcut from Trollheim.",
+        "evidence": {
+          "multi": "'The Wilderness God Wars Dungeon is a multi-combat area located within a cave east of The Forgotten Cemetery at level 28 Wilderness.' and 'This empty cavern is a single-way combat zone. The large cavern in which the followers fight is a multi-way combat zone.' (Wilderness God Wars Dungeon).",
+          "cannon": "Location Comparison Cannonable {{No}} for the Wilderness God Wars Dungeon rows (Slayer task/Spiritual creatures); infobox immunecannon = Yes on all three spiritual creatures.",
+          "requirements": "'the north-west one will lead to a large boulder which can be moved with 60 Strength, or the south-east which passes through a jutting wall which requires 60 Agility' (Wilderness God Wars Dungeon); 'Located in moderate (level 28-32 Wilderness), do not bring items you are unwilling to lose' (Slayer task/Spiritual creatures)."
+        }
+      }
+    ],
+    "notes": "Assigned by Krystilia, Vannaka, Chaeldar, Nieve/Steve and Duradel/Kuradal (infobox assignedby; Slayer task list row); not by Konar. Requires completion of Death Plateau to be assigned ('To get Slayer assignments related to the God Wars Dungeon, such as boss tasks, players must complete the Death Plateau quest.' - God Wars Dungeon). Combat requirement: the Slayer task list row ('Combat 60') and the task page prose ('a combat level of 60') say 60 combat while the task infobox shows combatreq 80. Spiritual fervour unlock (100 points) raises the assignment to 181-250. Slayer XP varies by god and type (75-137.5 per the infoboxes), so xpPerKill is null. 'Slaying a Spiritual mage in the God Wars Dungeon is a requirement for the Elite Fremennik Diary and slaying a Spiritual mage in the Wilderness God Wars Dungeon is a requirement for the Elite Wilderness Diary.' (Spiritual mage).",
+    "_verification": {
+      "corrections": [
+        "God Wars Dungeon location notes downgraded: the 'ruins south-east of the entrance behind the L-shaped wall' ranger safespot and the 'stone-pile safespots' for warriors outside the Zamorak boss chamber are on none of the fetched pages; replaced with the task page's own Safespots section ('use the small piles of bricks to block the spiritual ranger's') and its per-type recommendations. The 'chill effect' wording replaced by the task page sentence about the Fire of Unseasonal Warmth preventing stat and run-energy drain.",
+        "Cannon evidence strengthened: all three monster infoboxes carry immunecannon = Yes, added alongside the table values.",
+        "Ancient Prison multi evidence reworded: the Location Comparison rows are titled 'God Wars Dungeon' with the note 'Ancient Prison (Zaros) variant' (9 rangers, 9 warriors, 5 mages), and the monster LocLine is 'God Wars Dungeon - Ancient Prison'.",
+        "Confirmed: page title; LocLines (God Wars Dungeon, God Wars Dungeon - Ancient Prison, Wilderness God Wars Dungeon) all present; slaylvl 63/68/83; slayxp 75-137.5; assignedby krystilia,vannaka,chaeldar,nieve,duradel; elemental types Air (main) / Fire (Zaros) on all three pages; Wilderness GWD level 28, multi cavern / single entry cavern, 60 Strength boulder or 60 Agility jutting wall, level 27 obelisk, Dareeyak Teleport, 64 Agility Trollheim shortcut; 12/11/12 counts; combat 60 vs infobox 80 discrepancy is real."
+      ],
+      "confirmed": 22,
+      "downgraded": 2
+    }
+  },
+  {
+    "task": "Suqahs",
+    "wikiTaskPage": "Slayer task/Suqah",
+    "monsterPages": [
+      "Suqah",
+      "Lunar Isle"
+    ],
+    "bossTask": false,
+    "summary": "An 85 combat task from Nieve or Duradel done on Lunar Isle after starting Lunar Diplomacy. The northern suqahs are dense and multicombat, so most players cannon them from the safespot by the hill with Ranged while praying Protect from Magic against their Ice Barrage-style attacks; the sparser southern suqahs are melee-only and can be safespotted or meleed in Guthan's with no prayer. Drops are poor, so the wiki suggests blocking the task unless you want AFK experience, and a Seal of Passage is needed to bank unless you have done Dream Mentor or the elite Fremennik diary.",
+    "recommendedStyle": "Any",
+    "styleNotes": "Northern suqahs use stab melee plus magic (infobox attack style Stab, Magic; 'When they successfully cast Ice Barrage and the player is not using Protect from Magic, it is guaranteed to hit 10 damage.' - Suqah); the melee-only variety dual-wields; infobox elementalweaknesstype Earth 20%; immunecannon No, immunethrall No.",
+    "requiredItems": [],
+    "usefulItems": [
+      "Dwarf multicannon and cannonballs",
+      "Prayer potions for Protect from Magic (north)",
+      "Seal of Passage (for the bank without Dream Mentor / elite Fremennik diary)",
+      "Guthan's set (south, melee)",
+      "Bonecrusher necklace"
+    ],
+    "superior": null,
+    "alternatives": [],
+    "xpPerKill": 107.6,
+    "locations": [
+      {
+        "name": "North Lunar Isle",
+        "displayName": "Lunar Isle - north (cannon + safespot, pray Magic)",
+        "rank": 1,
+        "multi": true,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Lunar Diplomacy started far enough to reach Lunar Isle",
+          "85 combat to be assigned"
+        ],
+        "notes": "16 suqahs; safespot next to the hill and range them while the cannon fires. These attack with melee and magic, so use Protect from Magic and high melee defence.",
+        "evidence": {
+          "multi": "Location Comparison row 'North Lunar Isle' (16) Multicombat {{Yes}} (Slayer task/Suqah).",
+          "cannon": "Location Comparison Cannonable 'Yes'; 'It is possible to cannon and safespot suqahs on the northern part of Lunar isle.' (Slayer task/Suqah).",
+          "requirements": "'Players must have at least started Lunar Diplomacy to have access to Lunar Isle.' (Suqah); Slayer task list row: 'Lunar Diplomacy (partially)', 'Combat 85'; task infobox otherreq 'Partial completion of Lunar Diplomacy', combatreq 85."
+        }
+      },
+      {
+        "name": "South Lunar Isle",
+        "displayName": "Lunar Isle - south (melee-only suqahs, safespots)",
+        "rank": 2,
+        "multi": "partial",
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Lunar Diplomacy started far enough to reach Lunar Isle",
+          "85 combat to be assigned"
+        ],
+        "notes": "Four suqahs south-east (multi) and six south-west across the bridge (single-way). Three suqahs on the south-west part by the city wall are melee-only, so no prayer is needed for them, but one magic-using suqah is nearby; a cannon placed directly north-west of the dead tree targets the melee-only ones. They can be safespotted on the bridge or against trees.",
+        "evidence": {
+          "multi": "Location Comparison rows 'South-east Lunar Isle' (4) Multicombat {{Yes}} and 'South-west Lunar Isle' (6) Multicombat {{No}} (Slayer task/Suqah).",
+          "cannon": "Location Comparison Cannonable {{Yes}} for the South-east and South-west Lunar Isle rows; 'There are also three melee-only suqah on the south-west part of the island, over the bridge (abutting the city wall); specifically, a cannon can be placed directly north-west of the dead tree to target the melee-only suqah while avoiding the single mage-dealing suqah in the vicinity.' (Slayer task/Suqah).",
+          "requirements": "'Players must have at least started Lunar Diplomacy to have access to Lunar Isle.' (Suqah)."
+        }
+      },
+      {
+        "name": "Lady Zay - Cage on the bottom floor",
+        "displayName": "Lady Zay (ship) - caged suqah below deck (not a task spot)",
+        "rank": 3,
+        "multi": "unknown",
+        "cannon": "unknown",
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Lunar Diplomacy started far enough to board the Lady Zay"
+        ],
+        "notes": "Listed as a Suqah LocLine: a single 27th suqah kept in a cage below the deck of the Lady Zay; not a practical task location.",
+        "evidence": {
+          "multi": "not stated",
+          "cannon": "not stated",
+          "requirements": "Suqah LocLine 'Lady Zay - Cage on the bottom floor' (level 111); 'There are a total of 26 suqahs on Lunar Isle, with a 27th in a cage below the deck of the Lady Zay.' (Suqah)."
+        }
+      }
+    ],
+    "notes": "Assigned only by Nieve/Steve (120-185, 186-250 extended) and Duradel/Kuradal (60-90, 162-250 extended); not by Konar. 'A Seal of Passage is required to use the bank located on the Lunar Isle unless the player has completed the Dream Mentor quest ... or the Elite Fremennik Diary' (Suqah). Task page: 'It's definitely worth considering adding this task to your slayer block list due to their poor drops and relatively slow kill time.'",
+    "_verification": {
+      "corrections": [
+        "South Lunar Isle note corrected: the task page says three melee-only suqah stand by the city wall with 'the single mage-dealing suqah in the vicinity', so the whole south-west group is not melee-only.",
+        "Added the third Suqah LocLine 'Lady Zay - Cage on the bottom floor' (a single caged suqah below the ship's deck, per the Suqah page) as a rank-3 non-task location so the location list matches the LocLine list; multi/cannon 'unknown'.",
+        "Confirmed: page 'Slayer task/Suqah' (combatreq 85, partial Lunar Diplomacy, Nieve 120-185 (186-250), Duradel 60-90 (162-250)); infobox slayxp 107.6, assignedby nieve,duradel, elementalweaknesstype Earth 20, attack style Stab/Magic; North 16 multi Yes cannon Yes safespot by the hill; Seal of Passage sentence verbatim on the Suqah page; block-list quote verbatim on the task page; no superior; Konar table has no suqah row."
+      ],
+      "confirmed": 18,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Terror dogs",
+    "wikiTaskPage": "Terror dog (no 'Slayer task/Terror dogs' or 'Slayer task/Terror dog' page exists - API missingtitle this run; monster page and Tarn's Lair page used)",
+    "monsterPages": [
+      "Terror dog",
+      "Tarn's Lair"
+    ],
+    "bossTask": false,
+    "summary": "A Vannaka-only task at 40 Slayer (not boostable) fought in the multicombat room at the end of Tarn's Lair, reached fastest with a Slayer ring teleport; access needs the Haunted Mine quest. They hit accurately with melee and several can attack at once, so the usual approach is to wait in Tarn's room until they become tolerant, or safespot them from that doorway with Ranged or Magic. Cannons cannot be set up in the lair.",
+    "recommendedStyle": "Any",
+    "styleNotes": "Melee-only (crush) attackers with 1 Magic and 1 Ranged and no listed defence bonuses or immunities, so they can be ranged or maged from the Tarn's-room safespot; no elemental weakness is listed.",
+    "requiredItems": [],
+    "usefulItems": [
+      "Slayer ring (teleport straight to Tarn's room)",
+      "Food and prayer potions (the room drains prayer)",
+      "Salve amulet (Tarn's Lair page says the lair 'requires a Salve amulet to enter')"
+    ],
+    "superior": null,
+    "alternatives": [],
+    "xpPerKill": null,
+    "locations": [
+      {
+        "name": "Tarn's Lair",
+        "displayName": "Tarn's Lair - terror dog room (multi, no cannon)",
+        "rank": 1,
+        "multi": true,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Haunted Mine",
+          "40 Slayer (not boostable)",
+          "Lair of Tarn Razorlor miniquest completed for more dogs to spawn"
+        ],
+        "notes": "Hide in Tarn's room north of the dogs until they lose aggression (log out to check), then fight; a dog standing on the tile directly in front of the doorway can be safespotted with magic or ranged. The terror dog room drains prayer at 1 point per two game ticks (50 points per minute). The lair has traps and skeleton mages on the walk in; the banker Odovacar charges 100 coins per use.",
+        "evidence": {
+          "multi": "'As the room they are fought in is a multi-combat area, fighting them can become very dangerous quickly, as multiple terror dogs can attack the player all at once.' (Terror dog).",
+          "cannon": "'Players cannot set up a dwarf multicannon within the lair. If players attempt to do so, a chatbox message will state This temple is ancient and would probably collapse if you started firing a cannon.' (Tarn's Lair); 'Players cannot set up a cannon in the room.' (Terror dog); Dwarf multicannon prohibited list 'Lair of Tarn Razorlor - This temple is ancient and would probably collapse if you started firing a cannon.'; Terror dog infobox immunecannon = No.",
+          "requirements": "'The Haunted Mine quest is required to access Tarn's Lair.' (Tarn's Lair); 'Terror dogs are Slayer monsters that require a Slayer level of 40 (not boostable) to kill.' and infobox slaylvl = 40 (Terror dog); 'Upon completion of the miniquest, more terror dogs can be found in the room.' (Terror dog); Slayer task list row: 40 Slayer, Haunted Mine, Combat 60, Vannaka."
+        }
+      }
+    ],
+    "notes": "Only Vannaka assigns terror dogs (Slayer task list row: 40 Slayer, Haunted Mine, 60 combat). Two versions give 82 (level 100) and 87 (level 110) Slayer XP, so xpPerKill is null. They do not count for a dogs task and are the only source of the granite helm; killing one is a Medium Morytania Diary task.",
+    "_verification": {
+      "corrections": [
+        "Removed 'Keep Auto Retaliate off because of the lair's traps' - not on the Terror dog or Tarn's Lair pages.",
+        "40 Slayer (not boostable) re-attributed to the Terror dog page and infobox (slaylvl 40); the Tarn's Lair sentence quoted before ('Level 40 Slayer (cannot be boosted) if you wish to fight against Tarn Razorlor') is about fighting Tarn, not the dogs.",
+        "Added the prayer drain from the Terror dog page ('will drain prayer at a rate of 1 point per two game ticks, or 50 points per minute') and its own 'Players cannot set up a cannon in the room.' sentence.",
+        "Confirmed: no task page (fetched 'Slayer task/Terror dogs' and 'Slayer task/Terror dog' - both missingtitle); LocLine list is exactly \"Tarn's Lair\" (levels 100, 110); slayxp 82 / 87 so xpPerKill null; assignedby vannaka; multi-combat room quote verbatim; Slayer ring fastest (Terror dog, Tarn's Lair); Odovacar 100 coins; granite helm only source; Medium Morytania Diary; 'do not count toward fulfilling a Slayer task for dogs'."
+      ],
+      "confirmed": 14,
+      "downgraded": 1
+    }
+  },
+  {
+    "task": "The Leviathan",
+    "wikiTaskPage": "The Leviathan",
+    "monsterPages": [
+      "The Leviathan",
+      "The Scar",
+      "Boss"
+    ],
+    "bossTask": true,
+    "summary": "A boss Slayer task (Like a boss unlock) for the Desert Treasure II sea creature fought on the island in the Scar, an area of Abyssal Space reached through the Catalytic Guardian in the Temple of the Eye.",
+    "recommendedStyle": "Any",
+    "styleNotes": "Immune to cannon (infobox immunecannon = Yes); no further mechanics recorded here by design.",
+    "requiredItems": [],
+    "usefulItems": [],
+    "superior": null,
+    "alternatives": [],
+    "xpPerKill": 1777.4,
+    "locations": [
+      {
+        "name": "The Scar",
+        "displayName": "The Scar (Abyssal Space, via Temple of the Eye)",
+        "rank": 1,
+        "multi": "unknown",
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Completion of Desert Treasure II - The Fallen Empire",
+          "Like a boss unlock (200 Slayer reward points)"
+        ],
+        "notes": "Talk to the Catalytic Guardian in the Temple of the Eye, go east past the Abyssal Rift to Wizard Persten's camp and take the rowboat to the island; 'Climbing the handholds onto the platform initiates the fight momentarily.' (The Leviathan).",
+        "evidence": {
+          "multi": "not stated",
+          "cannon": "The Leviathan infobox 'immunecannon = Yes' (The Leviathan); no cannon placement statement for the Scar found.",
+          "requirements": "Boss slayer table row: The Leviathan / The Scar / Slayer 1 / 'Completion of Desert Treasure II - The Fallen Empire' (Boss); 'The Leviathan can no longer be received as a boss slayer task prior to completing Desert Treasure II.' (The Leviathan); 'Players who have unlocked the Like a boss ability via spending 200 Slayer reward points can be assigned bosses by Konar, Nieve/Steve, Duradel/Kuradal, or Krystilia.' (Boss)."
+        }
+      }
+    ],
+    "notes": "Assigned by Konar, Nieve/Steve and Duradel/Kuradal (infobox assignedby = konar,nieve,duradel). 'Slayer tasks no longer apply to the Awakened version.' (The Leviathan). Slayer XP: 1,777.4 post-quest, 720 quest version, 2,700 awakened. Boss tasks award an extra 5,000 Slayer XP on completion (Boss).",
+    "_verification": {
+      "corrections": [
+        "No factual changes. Confirmed: task page is the monster page 'The Leviathan' (cat Bosses); LocLine 'The Scar' (593, 798, 1,157); slayxp1 = 1777.4 (post-quest), 720 quest, 2700 awakened; assignedby konar,nieve,duradel; immunecannon Yes; changelog lines 'can no longer be received as a boss slayer task prior to completing Desert Treasure II' and 'Slayer tasks no longer apply to the Awakened version'; Boss page 'additional 5,000 Slayer experience regardless of task length'; route sentence verbatim (Catalytic Guardian, Abyssal Rift, Wizard Persten's camp, rowboat, handholds).",
+        "Note: the Boss page's Desert Treasure II table lists the Leviathan's Slayer XP as '900 (normal)', which conflicts with the monster infobox slayxp 1777.4; the infobox value is kept as instructed (xpPerKill = infobox slayxp)."
+      ],
+      "confirmed": 12,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "The Whisperer",
+    "wikiTaskPage": "The Whisperer",
+    "monsterPages": [
+      "The Whisperer",
+      "Lassar Undercity",
+      "Boss"
+    ],
+    "bossTask": true,
+    "summary": "A boss Slayer task (Like a boss unlock) for the Desert Treasure II siren found in the sunken cathedral of the Lassar Undercity beneath the Ruins of Camdozaal under Ice Mountain; the blackstone fragment must be brought to start the fight.",
+    "recommendedStyle": "Any",
+    "styleNotes": "Immune to cannon (infobox immunecannon = Yes); no further mechanics recorded here by design.",
+    "requiredItems": [
+      "Blackstone fragment (needed to initiate the fight)"
+    ],
+    "usefulItems": [],
+    "superior": null,
+    "alternatives": [],
+    "xpPerKill": 900,
+    "locations": [
+      {
+        "name": "Lassar Undercity - Sunken Cathedral",
+        "displayName": "Lassar Undercity - sunken cathedral (under Ice Mountain)",
+        "rank": 1,
+        "multi": "unknown",
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Completion of Desert Treasure II - The Fallen Empire",
+          "Like a boss unlock (200 Slayer reward points)",
+          "Blackstone fragment"
+        ],
+        "notes": "'The undercity is accessible from the sinkhole north-west of Ruins of Camdozaal, located under Ice Mountain.' (The Whisperer); 'Players can access this area by climbing down the Bottomless Pit north of the Camdozaal Mines. Both the pre- and post-quest versions of the Undercity are instanced, and logging out in either version will bring players back to the rope leading to the palace.' (Lassar Undercity).",
+        "evidence": {
+          "multi": "not stated",
+          "cannon": "The Whisperer infobox 'immunecannon = Yes' (The Whisperer); no cannon placement statement for the Lassar Undercity found.",
+          "requirements": "Boss slayer table row: The Whisperer / Lassar Undercity / Slayer 1 / 'Completion of Desert Treasure II - The Fallen Empire' (Boss); 'The player must bring the blackstone fragment to initiate the fight' (The Whisperer); 'can no longer be received as a boss slayer task prior to completing Desert Treasure II' (The Whisperer)."
+        }
+      }
+    ],
+    "notes": "Assigned by Konar, Nieve/Steve and Duradel/Kuradal (infobox assignedby = konar,nieve,duradel). 'The Whisperer can no longer be received as a boss slayer task prior to completing Desert Treasure II.' (The Whisperer changelog). Slayer helmets 'have no effect on the awakened versions of the post-quest Desert Treasure II bosses' (Boss). Slayer XP: 900 post-quest, 660 quest version, 2,700 awakened. Boss tasks award an extra 5,000 Slayer XP on completion (Boss).",
+    "_verification": {
+      "corrections": [
+        "Notes: the sentence 'Slayer tasks no longer apply to the Awakened version.' is NOT on the Whisperer page (it is on the Leviathan page); replaced with the Whisperer's own changelog line ('can no longer be received as a boss slayer task prior to completing Desert Treasure II') and the Boss page statement that slayer helmets have no effect on the awakened DT2 versions.",
+        "Confirmed: task page is the monster page 'The Whisperer' (cat Bosses); LocLine 'Lassar Undercity - Sunken Cathedral' (587, 791, 1146); slayxp1 = 900, 660 quest, 2700 awakened; assignedby konar,nieve,duradel; immunecannon Yes; blackstone fragment sentence verbatim; Bottomless Pit / instanced / rope sentences verbatim on Lassar Undercity; Boss row Slayer 1 + DT2; 5,000 XP bonus."
+      ],
+      "confirmed": 12,
+      "downgraded": 1
+    }
+  },
+  {
+    "task": "The Thermonuclear Smoke Devil",
+    "wikiTaskPage": "Thermonuclear smoke devil",
+    "monsterPages": [
+      "Thermonuclear smoke devil",
+      "Smoke Devil Dungeon",
+      "Slayer task/Smoke devils",
+      "Boss"
+    ],
+    "bossTask": true,
+    "summary": "The boss version of the smoke devil, fought in its side room of the task-only Smoke Devil Dungeon south of Castle Wars; it needs 93 Slayer and either a smoke devil task or a boss task, plus a facemask or slayer helmet.",
+    "recommendedStyle": "Any",
+    "styleNotes": "Not cannon-immune but a cannon set up in its room is destroyed; walks through other monsters so it cannot be safespotted behind smoke devils; no further mechanics recorded here by design.",
+    "requiredItems": [
+      "Facemask or Slayer helmet"
+    ],
+    "usefulItems": [],
+    "superior": null,
+    "alternatives": [
+      "Smoke devil (the regular task alternative)"
+    ],
+    "xpPerKill": 240,
+    "locations": [
+      {
+        "name": "Smoke Devil Dungeon",
+        "displayName": "Smoke Devil Dungeon - boss room (task-only)",
+        "rank": 1,
+        "multi": true,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "93 Slayer (not boostable)",
+          "Smoke devil task or Thermonuclear smoke devil boss task (one off-task kill allowed for the Western Provinces Diary)",
+          "Facemask or Slayer helmet"
+        ],
+        "notes": "Fairy ring BKP lands just south-west of the dungeon, or ring of dueling to Castle Wars and run south-west. Six smoke devils share the boss room; a peek option on the room entrance shows how many players are inside.",
+        "evidence": {
+          "multi": "'The thermonuclear smoke devil and the Kraken are the only slayer bosses that can be fought with another player.' (Thermonuclear smoke devil); Location Comparison for the dungeon lists Multicombat 'Yes' (Slayer task/Smoke devils).",
+          "cannon": "'A dwarf multicannon cannot be used inside the boss room. If it is set up, the cannon will be destroyed.' (Thermonuclear smoke devil).",
+          "requirements": "'It requires a minimum of 93 Slayer to damage. Located at the Smoke Devil Dungeon south of Castle Wars, the Thermonuclear smoke devil can only be attacked on a smoke devil task, with the exception of one kill for the Western Provinces Diary' (Thermonuclear smoke devil); 'Although Brieve will allow you to kill this boss off-task for the Achievement Diary, the level 93 requirement still applies. Stat-boosts are not accepted.' (Thermonuclear smoke devil); Boss slayer table row: Thermonuclear smoke devil / Smoke Devil Dungeon / Slayer 93 (Boss); Konar quo Maten table lists Thermonuclear smoke devil under Smoke devils."
+        }
+      }
+    ],
+    "notes": "Assigned as a boss task by Konar, Nieve/Steve, Duradel/Kuradal and Mortimer (infobox assignedby = konar,nieve,duradel, Mortimer), and can also be killed in place of regular smoke devils on that task ('Players may choose between killing smoke devils or their boss variant' - Slayer task/Smoke devils). Only source of the smoke battlestaff, jar of smoke and pet smoke devil.",
+    "_verification": {
+      "corrections": [
+        "No factual changes. Confirmed: task page is the monster page (cat Bosses, Smoke Devils); LocLine 'Smoke Devil Dungeon' (301); slayxp 240; assignedby konar,nieve,duradel, Mortimer; immunecannon No but 'A dwarf multicannon cannot be used inside the boss room. If it is set up, the cannon will be destroyed.'; 'always able to walk through other monsters/players'; 'the only slayer bosses that can be fought with another player'; only source of smoke battlestaff, jar of smoke, pet smoke devil; fairy ring BKP / ring of dueling; 'peek' option; not boostable (trivia message quoted); 'Players may choose between killing smoke devils or their boss variant' on the task page.",
+        "Requirement evidence extended with the trivia message showing the 93 level cannot be boosted."
+      ],
+      "confirmed": 13,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Trolls",
+    "wikiTaskPage": "Slayer task/Trolls",
+    "monsterPages": [
+      "Troll",
+      "Mountain troll",
+      "Ice troll",
+      "Fremennik Isles",
+      "Death Plateau (location)",
+      "Mount Quidamortem",
+      "Trollweiss Dungeon",
+      "Ice Path"
+    ],
+    "bossTask": false,
+    "summary": "A 60 combat task usually done with melee under Protect from Melee, and a dwarf multicannon is highly recommended because trolls have a low aggression range. The wiki's preferred spot is the ice trolls on the islands north of Jatizso and Neitiznot (Fremennik Trials needed), an open multicombat area with better drops where guards help kill them, but bring a Neitiznot shield and prayer for the ranged-attacking females. Mountain trolls at Death Plateau, the Troll Stronghold or south of Mount Quidamortem are the easy no-quest option; the Ice Path trolls are not worth killing.",
+    "recommendedStyle": "Melee",
+    "styleNotes": "Mountain trolls are slightly resistant to crush but equally weak to stab and slash with a 50% fire weakness; ice trolls are slightly resistant to slash, favouring stab or crush, and have a 100% fire weakness, so fire spells are strong on them; neither is immune to cannon.",
+    "requiredItems": [],
+    "usefulItems": [
+      "Dwarf multicannon and cannonballs",
+      "Prayer potions for Protect from Melee",
+      "Neitiznot shield (ice trolls)",
+      "Bonecrusher necklace or bonecrusher",
+      "Herb sack and seed box",
+      "Xeric's talisman (Mount Quidamortem)"
+    ],
+    "superior": null,
+    "alternatives": [
+      "Ice troll runt / male / female / grunt",
+      "Thrower troll",
+      "Troll general",
+      "Troll bosses in the Nightmare Zone"
+    ],
+    "xpPerKill": null,
+    "locations": [
+      {
+        "name": "Northern Jatizso and Neitiznot",
+        "displayName": "Fremennik Isles - ice troll islands north of Jatizso / Neitiznot",
+        "rank": 1,
+        "multi": true,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "The Fremennik Trials (boat from Mord Gunnars / Maria Gunnars in Rellekka)",
+          "Neitiznot shield and prayer recommended against ice troll females"
+        ],
+        "notes": "15 females, 14 males, 4 grunts and 19 runts (task page table); 'the trolls there will often focus on the guards fighting them' and 'the bank on Jatizso is slightly closer to the troll area than it is on Neitiznot' (Slayer task/Trolls). Runts on the first island north of Neitiznot are a quick non-cannon option, but 'if guards deal the finishing blow, the Slayer experience received is halved'.",
+        "evidence": {
+          "multi": "'they are weaker, have a slightly better drop table, and are found in larger quantities in an open multicombat area' and Location Comparison row 'Northern Jatizso and Neitiznot' Multicombat {{Yes}} (Slayer task/Trolls); 'The ice trolls north of Jatizso are commonly killed on slayer task due to their valuable drops and the island being multicombat.' (Fremennik Isles); Multicombat area list: 'Jatizso ice troll area', 'Neitiznot ice troll area'.",
+          "cannon": "Location Comparison: Northern Jatizso and Neitiznot Cannonable 'Yes' (Slayer task/Trolls); 'Regardless of the troll being killed, a dwarf multicannon is highly recommended as trolls have low aggression range.'",
+          "requirements": "'Completion of The Fremennik Trials to be able to speak to Mord Gunnars for access to Jatizso for ice trolls.' and 'prayer and a Neitiznot shield are required in order to reduce damage taken from the ice troll females' (Slayer task/Trolls); 'The Fremennik Isles does not need to be completed to access Jatizso as Mord takes the player at the start of the quest.' (Slayer task/Trolls)."
+        }
+      },
+      {
+        "name": "Death Plateau",
+        "displayName": "Death Plateau (north-west of Burthorpe)",
+        "rank": 2,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [],
+        "notes": "15 mountain trolls plus thrower trolls (level 67) and the named trolls Pee Hat, Kraka, Stick and Rock; one of the fastest to reach via a games necklace or combat bracelet to Burthorpe. Protect from Missiles is recommended running up the canyon; 'Shooting through the troll buildings consisting of rocks is possible making safespotting easier' (task page) and the Death Plateau page shows a cannon safespot.",
+        "evidence": {
+          "multi": "Location Comparison: Death Plateau Multicombat 'No' (Slayer task/Trolls).",
+          "cannon": "'A dwarf multicannon may be used here.' (Death Plateau (location)); Location Comparison Cannonable 'Yes'.",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "South of Mount Quidamortem",
+        "displayName": "Mount Quidamortem troll camp (Kourend)",
+        "rank": 3,
+        "multi": true,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [],
+        "notes": "14 mountain trolls in two groups south of the peak; the north-east group is more open for luring and closer to the bank, the south-west group has more obstacles for safespotting. Reach it with Xeric's talisman (Xeric's Honour), the Lovakengj minecart or a nearby fairy ring.",
+        "evidence": {
+          "multi": "'South of the mountain peak is a troll camp, featuring multiple spots with mountain trolls in a multicombat area.' (Mount Quidamortem); Location Comparison Multicombat 'Yes' for both Quidamortem rows.",
+          "cannon": "'This makes the dwarf multicannon effective on troll Slayer tasks. The best cannon spot can be found across the bridge.' (Mount Quidamortem).",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Troll Stronghold (Surface)",
+        "displayName": "Troll Stronghold - outside",
+        "rank": 4,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Partial Troll Stronghold quest to reach Trollheim by foot (or Trollheim Teleport with 61 Magic and Eadgar's Ruse)"
+        ],
+        "notes": "8 mountain trolls outside (task page table); a cannon with a bonecrusher necklace lets you keep Protect from Melee up with almost no prayer potions. Troll generals (level 113, aggressive, hit up to 38, safespottable per the Troll Stronghold quest page ('can be safespotted' - Troll Stronghold)) live inside and are a Konar-accepted variant.",
+        "evidence": {
+          "multi": "Location Comparison: Troll Stronghold (location) (Outside) Multicombat 'No' (Slayer task/Trolls).",
+          "cannon": "Location Comparison Cannonable 'Yes'; 'Dwarf multicannon and a Bonecrusher necklace allows for effectively zero Prayer potion usage while using Protect from Melee.' (Slayer task/Trolls).",
+          "requirements": "'All other methods of travelling to Trollheim require at least partial completion of the Troll Stronghold quest.' (Trollheim)."
+        }
+      },
+      {
+        "name": "Tunnel entrance to Keldagrim",
+        "displayName": "Keldagrim entrance tunnel (east of Rellekka)",
+        "rank": 5,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [],
+        "notes": "7 level 69 melee-only mountain trolls in a narrow passage; the rocks at the sides can be used to safespot but cannon placement is awkward.",
+        "evidence": {
+          "multi": "Location Comparison: Keldagrim (Entrance tunnel) Multicombat 'No' (Slayer task/Trolls).",
+          "cannon": "Location Comparison Cannonable 'Yes' with note 'Narrow passage makes cannon placement difficult' (Slayer task/Trolls).",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Trollweiss Dungeon",
+        "displayName": "Trollweiss Dungeon (ice trolls, singles, not recommended)",
+        "rank": 6,
+        "multi": false,
+        "cannon": "unknown",
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "Level 120-124 ice trolls that 'always appear in groups of four and can hit very high'; entrance by the Ice Gate north-west of the troll child. The task page says the Ice Path/Trollweiss trolls are not worth killing because their drops are poor for their level, though they have a 100% fire weakness and can be maged without a Neitiznot shield.",
+        "evidence": {
+          "multi": "Trollweiss Dungeon changelog, newest first: 23 May 2024 'The cave was reverted to singles combat.' after 21 February 2024 'The cave was changed from singles combat to multi combat.' (Trollweiss Dungeon) - current state singles.",
+          "cannon": "not stated",
+          "requirements": "'The trolls in the Ice Path are not worth killing, as these are far stronger than other trolls and have incredibly poor drops for their level.' and 'Ice trolls in the Trollweiss dungeon can comfortably be fought without a Neitiznot shield and have a 100% elemental weakness to fire spells' (Slayer task/Trolls); Ice troll LocLine 'Trollweiss Dungeon' (120, 121, 123, 124)."
+        }
+      },
+      {
+        "name": "Ice Path",
+        "displayName": "Ice Path (ice trolls beyond the Ice Gate, not recommended)",
+        "rank": 7,
+        "multi": "unknown",
+        "cannon": "unknown",
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "Ice troll LocLine; 'players cannot run after passing the Ice Gate' and the chill 'drains your Hitpoints periodically by 1-2 and other stats' (Ice Path). Task page: not worth killing.",
+        "evidence": {
+          "multi": "not stated",
+          "cannon": "not stated",
+          "requirements": "'The trolls in the Ice Path are not worth killing' (Slayer task/Trolls); 'Because of the extremely cold conditions, players cannot run after passing the Ice Gate' (Ice Path); Ice troll LocLine 'Ice Path' (120, 121, 123, 124)."
+        }
+      },
+      {
+        "name": "Wyrmscraig Cavern",
+        "displayName": "Wyrmscraig Cavern (7 mountain trolls) - Konar",
+        "rank": 8,
+        "multi": "unknown",
+        "cannon": "unknown",
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Partial completion of Fallen From Grace"
+        ],
+        "notes": "Mountain troll LocLine and one of Konar's troll locations; 7 mountain trolls; a Slayer ring can teleport to the cavern after completing Fallen From Grace.",
+        "evidence": {
+          "multi": "not stated",
+          "cannon": "not stated",
+          "requirements": "'accessible after partial completion of Fallen From Grace' and '7 Mountain trolls' and 'A Slayer ring can teleport to the cavern, after completion of Fallen From Grace.' (Wyrmscraig Cavern); Konar quo Maten table lists Wyrmscraig Cavern under Trolls; Mountain troll LocLine 'Wyrmscraig Cavern' (69)."
+        }
+      },
+      {
+        "name": "North of the Troll arena",
+        "displayName": "Trollheim - north of the Troll arena / tunnel to Trollheim",
+        "rank": 9,
+        "multi": "unknown",
+        "cannon": "unknown",
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Partial Troll Stronghold quest (or Trollheim Teleport with 61 Magic and Eadgar's Ruse)"
+        ],
+        "notes": "Mountain troll LocLines 'North of the Troll arena' and 'Tunnel between Troll arena and Trollheim' (levels 69, 71); level 68 thrower trolls range players on the northern part of the mountain (Troll Stronghold quest page). Trollheim is one of the Slayer task list row's locations.",
+        "evidence": {
+          "multi": "not stated",
+          "cannon": "not stated",
+          "requirements": "'All other methods of travelling to Trollheim require at least partial completion of the Troll Stronghold quest.' (Trollheim); Mountain troll LocLines 'North of the Troll arena' and 'Tunnel between Troll arena and Trollheim'."
+        }
+      },
+      {
+        "name": "Troll Stronghold (Underground)",
+        "displayName": "Troll Stronghold - inside (mountain trolls and troll generals)",
+        "rank": 10,
+        "multi": "unknown",
+        "cannon": "unknown",
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Partial Troll Stronghold quest"
+        ],
+        "notes": "Second Mountain troll LocLine for the Troll Stronghold (levels 69, 71) - the task page's Monster Variants lists 'Troll Stronghold (Underground)'; 'Inside are some more level 69 and 71 mountain trolls' and aggressive level 113 troll generals that 'can hit up to 38' (Troll Stronghold).",
+        "evidence": {
+          "multi": "not stated",
+          "cannon": "not stated",
+          "requirements": "'All other methods of travelling to Trollheim require at least partial completion of the Troll Stronghold quest.' (Trollheim); Mountain troll LocLine 'Troll Stronghold (location)' (69, 71)."
+        }
+      }
+    ],
+    "notes": "Assigned by Vannaka, Chaeldar, Konar, Nieve/Steve and Duradel/Kuradal (task infobox; Slayer task list row). Konar's locations: Troll Stronghold, Keldagrim, Death Plateau, South of Mount Quidamortem, Fremennik Isles and Wyrmscraig Cavern, with troll generals and the Death Plateau named trolls (Pee Hat, Kraka, Stick, Rock, Thrower troll) accepted (Konar quo Maten table). 'Trolls fought in quests all count towards the Slayer task, with the exception of sea trolls. The bosses can be fought again in the Nightmare Zone.' (Slayer task/Trolls). Slayer XP varies by variant from 63 (ice troll runt) to 161 (Ice Troll King) per the task page's Monster Variants table, so xpPerKill is null. River trolls in the Enchanted Valley 'provide severely reduced experience for both combat and slayer' and are not recommended.",
+    "_verification": {
+      "corrections": [
+        "Trollweiss Dungeon multi: true -> false. The changelog's newest entry (23 May 2024) is 'The cave was reverted to singles combat.'; the earlier 21 February 2024 entry 'changed from singles combat to multi combat' that the batch quoted has been superseded.",
+        "Split the 'Trollweiss Dungeon / Ice Path' row: Ice Path is its own Ice troll LocLine and is now a separate location (multi/cannon 'unknown'; no-run and chill-drain sentences from the Ice Path page).",
+        "Added missing Mountain troll LocLines: 'Wyrmscraig Cavern' (also a Konar location; 7 trolls; partial Fallen From Grace), 'North of the Troll arena' + 'Tunnel between Troll arena and Trollheim' (merged into one Trollheim entry) and the second 'Troll Stronghold (location)' LocLine as 'Troll Stronghold (Underground)'; multi/cannon 'unknown' for all of them (not stated on any fetched page).",
+        "Death Plateau note: 'a marked cannon spot for the throwers' downgraded to what the pages show (a cannon safespot image on the Death Plateau page; the task page's rock-building safespot sentence); named trolls listed from the task page.",
+        "Ice troll islands note re-attributed to the exact task page sentences (guards focus, Jatizso bank closer, XP halved on guard killing blow).",
+        "Confirmed: page 'Slayer task/Trolls' (combatreq 60, vannaka/chaeldar/konar/nieve/duradel); Location Comparison values for Northern Jatizso and Neitiznot (Yes/Yes), Keldagrim entrance tunnel (No/Yes, 7, 'Narrow passage makes cannon placement difficult'), Mount Quidamortem NE and SW (Yes/Yes, 7+7), Death Plateau (No/Yes, 15), Troll Stronghold Outside (No/Yes, 8); Mount Quidamortem multicombat/cannon/bridge sentences verbatim; Death Plateau 'A dwarf multicannon may be used here.'; Trollheim partial-quest sentence verbatim; Fremennik Trials/Mord Gunnars sentence verbatim; Mountain troll slayxp 90, fire 50%; Ice troll fire 100%, dslash 60; 63-161 XP range matches the task page table; alternatives (ice troll runt/male/female/grunt, thrower troll, troll general, NMZ troll bosses) all in the task page's Monster Variants; no superior."
+      ],
+      "confirmed": 24,
+      "downgraded": 2
+    }
+  },
+  {
+    "task": "Turoth",
+    "wikiTaskPage": "Slayer task/Turoth",
+    "monsterPages": [
+      "Turoth",
+      "Spiked Turoth",
+      "Fremennik Slayer Dungeon"
+    ],
+    "bossTask": false,
+    "summary": "A 55 Slayer task found only in the seventh chamber of the Fremennik Slayer Dungeon (fairy ring AJR or Slayer ring), which can only be damaged with leaf-bladed weapons, broad arrows or bolts, or Magic Dart. They are melee-only, so Protect from Melee negates all damage, and the rocks on the east wall and the path to the kurask chamber give easy safespots for Ranged or Magic. The area is single-way and cannons cannot be set up in the dungeon; bring a herb sack for their frequent herb and seed drops.",
+    "recommendedStyle": "Melee",
+    "styleNotes": "Immune to everything except leaf-bladed weapons, broad arrows/bolts and Magic Dart (task page ranks leaf-bladed battleaxe > sword > spear); melee-only stab attackers (infobox attack style Stab) so Protect from Melee negates all damage; infobox immunecannon = Yes, immunethrall = Yes; 'Although turoth are invulnerable to any damage from the eldritch Nightmare staff, Saradomin godsword, and toxic blowpipe special attacks, they will still heal the player as if it would have dealt damage' and the ancient mace special still restores prayer (Turoth).",
+    "requiredItems": [
+      "Leaf-bladed weapon (battleaxe, sword or spear), broad arrows, broad or amethyst broad bolts, or Magic Dart (Slayer staff / staff of the dead)"
+    ],
+    "usefulItems": [
+      "Herb sack",
+      "Nature runes and fire staff for High Alchemy",
+      "Bones to peaches tablets or food",
+      "Slayer helmet (i) / black mask (i) for Ranged or Magic"
+    ],
+    "superior": "Spiked Turoth",
+    "alternatives": [],
+    "xpPerKill": null,
+    "locations": [
+      {
+        "name": "Fremennik Slayer Dungeon",
+        "displayName": "Fremennik Slayer Dungeon - turoth chamber (AJR)",
+        "rank": 1,
+        "multi": false,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "55 Slayer",
+          "60 combat to be assigned",
+          "A leaf-bladed weapon, broad ammunition or Magic Dart"
+        ],
+        "notes": "22 turoths (levels 83, 85, 87, 89) in the seventh chamber, passive (infobox aggressive = No) and safespottable (task page table Safespottable Yes; 'Safespot is easy to use'); a 61 Agility crevice links the chamber back to the basilisk room. Only location.",
+        "evidence": {
+          "multi": "Location comparison: Fremennik Slayer Dungeon, 22, Multicombat 'No' (Slayer task/Turoth).",
+          "cannon": "'Players cannot set up a dwarf multicannon within the caves. Attempting to do so yields the chatbox message: The air is too dank for you to set up a cannon here.' (Fremennik Slayer Dungeon); also in the Dwarf multicannon prohibited list; Turoth infobox immunecannon = Yes.",
+          "requirements": "'Turoth can only be damaged with leaf-bladed weapons, broad arrows and bolts, or the Magic Dart spell. Attacking with any other weapons or spells will always deal 0 damage.' and 'requiring 55 Slayer and 60 combat' (Slayer task/Turoth); 'The seventh chamber contains twenty two turoths, requiring level 55 Slayer to kill.' and 'The Agility shortcut requires level 61 Agility and leads back to the' basilisk chamber (Crevice) (Fremennik Slayer Dungeon); Slayer task list row: Combat 60, leaf-bladed weapons / Magic Dart / broad arrows / broad bolts."
+        }
+      }
+    ],
+    "notes": "Assigned by Vannaka, Chaeldar, Konar, Nieve/Steve and Mortimer (Slayer task list row); Konar's only location is the Fremennik Slayer Dungeon. Slayer XP is 76, 77, 79 or 81 depending on the level 83/85/87/89 variant, so xpPerKill is null. Superior spiked turoth needs the Bigger and Badder unlock. Drops the leaf-bladed sword and necklace of fangs.",
+    "_verification": {
+      "corrections": [
+        "Removed 'Guthan's does not work' - not on the Turoth page or task page (only the special-attack healing sentence is).",
+        "Safespot detail downgraded: 'rocks on the east wall and the path to the kurask chamber' is on none of the fetched pages; kept only the task page's Safespottable Yes / 'Safespot is easy to use'.",
+        "'mostly level 83 and 85' downgraded to 'levels 83, 85, 87, 89' (the Fremennik Slayer Dungeon monster table gives the four levels with no distribution).",
+        "Added the 60 combat assignment requirement (task infobox combatreq 60; Slayer task list row; task page prose).",
+        "Confirmed: page 'Slayer task/Turoth' (skillreq 55; Vannaka/Chaeldar/Konar/Nieve/Mortimer - matches the Slayer task list row and infobox assignedby); Turoth LocLine is only 'Fremennik Slayer Dungeon'; slayxp 76/77/79/81 so xpPerKill null; immunecannon Yes, immunethrall Yes; superior Spiked Turoth (cat Turoth, slayxp 1998, Bigger and Badder); cannon message verbatim on the dungeon page and in the Dwarf multicannon list; table Multicombat No; 22 turoths in the seventh chamber; crevice 61 Agility; Konar table lists Fremennik Slayer Dungeon for Turoth."
+      ],
+      "confirmed": 15,
+      "downgraded": 3
+    }
+  },
+  {
+    "task": "Tzhaar",
+    "wikiTaskPage": "Slayer task/TzHaar",
+    "monsterPages": [
+      "TzHaar",
+      "TzHaar-Ket",
+      "Mor Ul Rek"
+    ],
+    "bossTask": false,
+    "summary": "An unlockable task (Hot stuff, 100 Slayer reward points) from Chaeldar, Nieve or Duradel, done in Mor Ul Rek under the Karamja Volcano. Players normally kill TzHaar-Ket or melee-using TzHaar-Xil because they can be safespotted through the vents, while attacking a Hur or Mej draws the surrounding TzHaar onto you. With a fire cape you can enter the inner city and burst or barrage the level 221 Ket near TzHaar-Ket-Rak's Challenges under Protect from Melee; the master may instead offer TzTok-Jad or TzKal-Zuk as the task.",
+    "recommendedStyle": "Any",
+    "styleNotes": "Hur and Ket use melee (crush), Xil melee or ranged depending on weapon, Mej magic; TzHaar-Ket have a low Magic level and +0 magic defence so they barrage well; a charged ring of wealth improves gem drops; cannons are not allowed.",
+    "requiredItems": [],
+    "usefulItems": [
+      "Ring of wealth (charged) for gem and onyx bolt tip drops",
+      "Fire cape (access to the inner city and level 221 Ket)",
+      "Ice/Blood Barrage runes and cheap darts for grouping Ket",
+      "Prayer potions for Protect from Melee"
+    ],
+    "superior": null,
+    "alternatives": [
+      "TzTok-Jad",
+      "TzKal-Zuk"
+    ],
+    "xpPerKill": null,
+    "locations": [
+      {
+        "name": "Mor Ul Rek",
+        "displayName": "Mor Ul Rek (TzHaar City) - outer and inner city",
+        "rank": 1,
+        "multi": true,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Hot stuff unlock (100 Slayer reward points) to be assigned",
+          "Fire cape or fire max cape shown to the Ket guards for the inner city and level 221 Ket"
+        ],
+        "notes": "Enter through the cave in the Karamja Volcano (via the Crandor and Karamja Dungeon). Level 149 Ket in the outer city, 221 Ket inside; the best barrage spot is by TzHaar-Ket-Rak's Challenges where Ket outnumber Mej and Xil. Banks in the north and inner east of the city.",
+        "evidence": {
+          "multi": "'Mor Ul Rek' is listed in the Multicombat area list ('Fight Pits in Mor Ul Rek' and 'Mor Ul Rek').",
+          "cannon": "'Mor Ul Rek, TzHaar Fight Cave and TzHaar Fight Pit - The TzHaar won't be happy if you set up a cannon here.' (Dwarf multicannon prohibited list).",
+          "requirements": "'TzHaar are an ancient race dwelling underneath the Karamja Volcano in Mor Ul Rek that can be assigned as a Slayer task if the player has unlocked the perk Hot Stuff for 100 slayer points.' (Slayer task/TzHaar); 'Having a fire cape or fire max cape is required to enter the interior portion of the city.' and 'The TzHaar will only allow JalYt who show a fire cape to the TzHaar-Ket guarding the entrance to enter this area.' (Mor Ul Rek); entrance listed as 'Cave entrance' from the 'Crandor and Karamja Dungeon' (Mor Ul Rek)."
+        }
+      }
+    ],
+    "notes": "Assigned by Chaeldar (90-150), Nieve/Steve (110-180) and Duradel/Kuradal (130-199); not by Konar. TzKal-Zuk can only be offered after one Zuk kill, and Jad/Zuk tasks give Slayer XP for every volcanic creature in the run (about 37,010 for a Jad run, ~125,000 for Zuk) and boost pet rates by 50% and 25%; dying or leaving cancels the task with no points used. Slayer XP per kill varies from 80 (Hur) to 200 (level 221 Ket), so xpPerKill is null.",
+    "_verification": {
+      "corrections": [
+        "No factual changes. Confirmed: page 'Slayer task/TzHaar' (no reqs; Chaeldar 90-150, Nieve 110-180, Duradel 130-199); TzHaar-Ket LocLines 'Mor Ul Rek' (149, 221); TzHaar-Ket slayxp 140 / 200 and the task page variants table 80 (Hur) to 200 (221 Ket) so xpPerKill null; assignedby chaeldar,nieve,duradel (no Konar); Multicombat area list has 'Fight Pits in Mor Ul Rek' and 'Mor Ul Rek'; Dwarf multicannon list 'Mor Ul Rek, TzHaar Fight Cave and TzHaar Fight Pit - The TzHaar won't be happy if you set up a cannon here.'; Jad/Zuk alternatives, Zuk kill-count condition, 37,010 / ~125,000 XP, 50%/25% pet rates, cancel-on-death sentences all verbatim on the task page; vents safespot, Hur/Mej aggression, ring of wealth gem/onyx bolt tip bonus, Ket-Rak's Challenges barrage spot, Protect from Melee all verbatim; north and inner-east banks on the Mor Ul Rek page; no superior; Konar table has no TzHaar row.",
+        "Requirement evidence extended with the Mor Ul Rek inner-area sentence and the Crandor and Karamja Dungeon entrance."
+      ],
+      "confirmed": 16,
+      "downgraded": 0
+    }
+  }
+]

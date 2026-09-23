@@ -1,0 +1,1136 @@
+[
+  {
+    "task": "Vampyres",
+    "wikiTaskPage": "Slayer task/Vampyres",
+    "monsterPages": [
+      "Feral Vampyre",
+      "Vampyre Juvinate",
+      "Vyrewatch",
+      "Vyrewatch Sentinel",
+      "Venator",
+      "Blood-starved venator"
+    ],
+    "bossTask": false,
+    "summary": "Vampyres are usually done as vyrewatch sentinels in Darkmeyer after Sins of the Father, using melee with a tier 3 vampyrebane weapon (Ivandis flail, blisterwood flail, hallowed flail or sunspear) and Protect from Melee, since sentinels only use melee and are aggressive without a vyre noble disguise. Efaritay's aid stacks with the slayer helmet and is recommended. The Darkmeyer area west of the Arboretum has an altar and bank next to the Drakan's medallion teleport, and sentinels drop the valuable blood shard; after The Blood Moon Rises, venators in Vampyrium are the harder but more lucrative alternative. Low-level tasks (Mazchna or Vannaka, before the Actual Vampyre Slayer unlock) are done on feral vampyres in the Haunted Woods.",
+    "recommendedStyle": "Melee",
+    "styleNotes": "Tier 1 feral vampyres take damage from anything; tier 2 juvinates need silver weapons or Efaritay's aid; tier 3 vyrewatch, sentinels and venators can only be damaged by tier 3 vampyrebane weapons or blisterwood stakes; vyrewatch, sentinels and venators are immune to poison, venom and cannon.",
+    "requiredItems": [
+      "Tier 3 vampyrebane weapon (Ivandis flail, blisterwood flail, hallowed flail, sunspear or blisterwood stakes) for vyrewatch, sentinels and venators",
+      "Silver weaponry or Efaritay's aid for vampyre juvinates"
+    ],
+    "usefulItems": [
+      "Efaritay's aid",
+      "Vyre noble clothing (disguise to stop aggression)",
+      "Drakan's medallion",
+      "Garlic cocktail (re-enables sentinel aggression after The Blood Moon Rises)",
+      "Nature and fire runes for alching juvinate drops"
+    ],
+    "superior": "Blood-starved venator",
+    "alternatives": [
+      "Venators (Vampyrium, after The Blood Moon Rises)",
+      "Vyrewatch Sentinel",
+      "Vyrewatch",
+      "Vampyre Juvinate",
+      "Feral Vampyre"
+    ],
+    "xpPerKill": null,
+    "locations": [
+      {
+        "name": "Darkmeyer",
+        "displayName": "Darkmeyer (vyrewatch sentinels, west of the Arboretum)",
+        "rank": 1,
+        "multi": false,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Sins of the Father started (city entry); completed to kill vyrewatch sentinels",
+          "50 Slayer to start Sins of the Father",
+          "Priest in Peril"
+        ],
+        "notes": "Only location with vyrewatch sentinels; the area west of the Arboretum has an altar, bank and the Drakan's medallion teleport nearby. Sentinels are aggressive unless wearing vyre noble clothing (tolerant after The Blood Moon Rises unless carrying a garlic cocktail). Bank tellers refuse service without a disguise before the third Drakan fight; use the Hallowed Sepulchre lobby chest instead.",
+        "evidence": {
+          "multi": "Slayer task/Vampyres Location Comparison: Darkmeyer | Multicombat {{No}}",
+          "cannon": "Slayer task/Vampyres Location Comparison: Darkmeyer | Cannonable {{No}}; Vyrewatch Sentinel infobox: immunecannon = Yes",
+          "requirements": "Slayer task/Vampyres: 'Requires starting Sins of the Father.' and 'Only found in Darkmeyer, which is accessed in the quest Sins of the Father. Completion of the quest is required to kill them. Sins of the Father has a level 50 Slayer requirement to begin'"
+        }
+      },
+      {
+        "name": "Apsul Hunting Ground",
+        "displayName": "Vampyrium – Apsul / Virer hunting grounds (venators)",
+        "rank": 2,
+        "multi": false,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "The Blood Moon Rises completed",
+          "74 Slayer to harm venators",
+          "Tier 3 vampyrebane weapon"
+        ],
+        "notes": "Venators are found only in the hunting grounds south of the Vampyrium entrance portal; Apsul has 7 spawns close to an altar, Virer has 12 but is further from the altar. Not aggressive. Venators heal from melee hits and have a screech that damages players using protection prayers.",
+        "evidence": {
+          "multi": "Slayer task/Venators Location Comparison: Apsul Hunting Ground | Multicombat {{No}}; Virer Hunting Ground | Multicombat {{No}}",
+          "cannon": "Slayer task/Venators Location Comparison: Cannonable {{No}} for both hunting grounds; Venator infobox: immunecannon = Yes",
+          "requirements": "Slayer task/Vampyres: 'Only found in Vampyrium, which is accessed in the quest The Blood Moon Rises. Completion of the quest is required to kill them.'; Venator: 'require 74 Slayer and completion of the quest The Blood Moon Rises to fight'"
+        }
+      },
+      {
+        "name": "Meiyerditch",
+        "displayName": "Meiyerditch (vyrewatch)",
+        "rank": 3,
+        "multi": false,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Darkness of Hallowvale started",
+          "A Taste of Hope started for a weapon that can damage vyrewatch (38 Slayer to begin)"
+        ],
+        "notes": "61 flying vyrewatch and 4 juvinates; vyrewatch are not aggressive but will stop players for a blood tithe unless wearing the vyrewatch outfit or vyre noble clothing.",
+        "evidence": {
+          "multi": "Slayer task/Vampyres Location Comparison: Meiyerditch | Multicombat {{No}}",
+          "cannon": "Slayer task/Vampyres Location Comparison: Meiyerditch | Cannonable {{No}}; Vyrewatch infobox: immunecannon = Yes",
+          "requirements": "Slayer task/Vampyres: 'Requires starting Darkness of Hallowvale.' and 'Finding a weapon capable of killing vyrewatch requires beginning A Taste of Hope, which has a level 38 Slayer requirement to begin.'"
+        }
+      },
+      {
+        "name": "Slepe",
+        "displayName": "Slepe (grounded vyrewatch, north of Crombwick Manor)",
+        "rank": 4,
+        "multi": false,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Priest in Peril",
+          "A Taste of Hope recommended for Drakan's medallion"
+        ],
+        "notes": "10 grounded level 105 vyrewatch that behave like normal monsters and attack faster than the flying variant; safespottable.",
+        "evidence": {
+          "multi": "Slayer task/Vampyres Location Comparison: Slepe | Multicombat {{No}}",
+          "cannon": "Slayer task/Vampyres Location Comparison: Slepe | Cannonable {{No}}; Vyrewatch infobox: immunecannon = Yes",
+          "requirements": "Slayer task/Vampyres: 'Recommended the player completes A Taste of Hope for access to Drakan's medallion.'"
+        }
+      },
+      {
+        "name": "Haunted Woods",
+        "displayName": "Haunted Woods – feral vampyres (fairy ring ALQ)",
+        "rank": 5,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Priest in Peril"
+        ],
+        "notes": "19 always-aggressive level 61 feral vampyres (any weapon works); the fairy ring ALQ is in the middle of the woods and there is a safespot near it. Leeches drain stats and do not show on the minimap; the small spiders spawn extra feral vampyres. Best for low-level Mazchna/Vannaka tasks and vampyre dust.",
+        "evidence": {
+          "multi": "Slayer task/Vampyres Location Comparison: Haunted Woods | Multicombat {{No}}",
+          "cannon": "Slayer task/Vampyres Location Comparison: Haunted Woods | Cannonable {{Yes}}",
+          "requirements": "Slayer task/Vampyres: 'Requires completing Priest in Peril.'"
+        }
+      },
+      {
+        "name": "West of Burgh De Rott",
+        "displayName": "Burgh de Rott – feral vampyres (west) and juvinates (east)",
+        "rank": 6,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "In Aid of the Myreque"
+        ],
+        "notes": "6 feral vampyres and 15 vampyre juvinates; juvinates need silver weaponry or Efaritay's aid. Safespottable.",
+        "evidence": {
+          "multi": "Slayer task/Vampyres Location Comparison: Burgh de Rott | Multicombat {{No}}",
+          "cannon": "Slayer task/Vampyres Location Comparison: Burgh de Rott | Cannonable {{Yes}}",
+          "requirements": "Slayer task/Vampyres: 'Requires completion of In Aid of the Myreque.'"
+        }
+      },
+      {
+        "name": "God Wars Dungeon",
+        "displayName": "God Wars Dungeon – feral vampyres (Zamorak followers)",
+        "rank": 7,
+        "multi": true,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Troll Stronghold partial (defeat Dad) or Easy Combat Achievements (Ghommal's hilt teleport)",
+          "60 Strength or 60 Agility (dungeon entrance obstacle)",
+          "Rope for first entry",
+          "Zamorak item to avoid aggression"
+        ],
+        "notes": "13 level 77 feral vampyres spread out through the dungeon; not recommended because access is inconvenient, god-affiliated items are needed and spawns are spread. One of the few vampyre spots not behind Priest in Peril. GWD inhabitants may destroy a cannon.",
+        "evidence": {
+          "multi": "Slayer task/Vampyres Location Comparison: God Wars Dungeon | Multicombat {{Yes}}; Multicombat area list: '*God Wars Dungeon'",
+          "cannon": "Slayer task/Vampyres Location Comparison: God Wars Dungeon | Cannonable {{Yes}}; caveat from Dwarf multicannon: 'inhabitants of the God Wars Dungeon may also destroy a cannon if a player attempts to use it'",
+          "requirements": "God Wars Dungeon: 'Accessing it requires partial completion of Troll Stronghold (defeating Dad) or full completion of the Easy Combat Achievements (in order to use the teleport on Ghommal's hilt 1) and either 60 Strength or 60 Agility. A rope is also required the first time.'; Slayer task/Vampyres: 'Feral Vampyres are followers of Zamorak, and will be aggressive to the player unless they wear a Zamorak item.'"
+        }
+      },
+      {
+        "name": "Wilderness God Wars Dungeon",
+        "displayName": "Wilderness God Wars Dungeon – feral vampyres (level 28 Wilderness)",
+        "rank": 8,
+        "multi": true,
+        "cannon": true,
+        "wilderness": true,
+        "wildernessLevelMin": 28,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "60 Strength (boulder) or 60 Agility (jutting wall) to reach the main cavern",
+          "Zamorak item to avoid aggression"
+        ],
+        "notes": "Only 2 feral vampyres. Entry cavern is single-way, the main followers' cavern is multi-way. The entrance cave is at level 28 Wilderness and the task page says most of the dungeon is below level 30, so bring an emergency teleport; the exact upper Wilderness level is not stated.",
+        "evidence": {
+          "multi": "Wilderness God Wars Dungeon: 'This empty cavern is a single-way combat zone. The large cavern in which the followers fight is a multi-way combat zone.'; Slayer task/Vampyres Location Comparison: Wilderness God Wars Dungeon | Multicombat {{Yes}}",
+          "cannon": "Slayer task/Vampyres Location Comparison: Wilderness God Wars Dungeon | Cannonable {{Yes}}",
+          "requirements": "Slayer task/Vampyres: 'Requires either 60 strength or 60 agility to access. Most of the dungeon is below level 30 wilderness, so players should bring an emergency teleport.'; Wilderness God Wars Dungeon: 'a multi-combat area located within a cave east of The Forgotten Cemetery at level 28 Wilderness' and 'a large boulder which can be moved with 60 Strength, or the south-east which passes through a jutting wall which requires 60 Agility'"
+        }
+      }
+    ],
+    "notes": "Slayer task list row: Priest in Peril and 35 Combat; assigned by Mazchna and Vannaka by default (10-20), and by Chaeldar, Konar, Nieve and Duradel only after the 80-point 'Actual Vampyre Slayer' unlock; 'More at stake' (100 points) raises the amount to 200-250. Konar location roll (Konar quo Maten table): Darkmeyer, Meiyerditch, Slepe or Vampyrium (Venator). Slayer XP varies by monster (Feral Vampyre infobox slayxp 40/80/80/75/50/60/135/185, Vampyre Juvinate 50-150, Vyrewatch 90-110, Vyrewatch Sentinel 150, Venator 405, Blood-starved venator 3622.5) so xpPerKill is null. Vampyre Juveniles do not give XP or task progress unless the dose of Guthix balance kills them instantly or the resulting feral vampyre is slain. Quest bosses Dessous, Ranis Drakan, Damien Leucurte and Kroy count toward the task; Vanstrom Klause does not (black mask/slayer helmet bonus still applies). The Slayer task list row also lists 'Near Abandoned Mine' (the feral vampyre area west of Burgh de Rott, covered by the Burgh de Rott entry); the task page's Monster Variants table additionally names Temple Trekking/Burgh de Rott Ramble (feral vampyres) and Meiyerditch Mine and Ver Sinhaza (juvinates), which are not in its Location Comparison and are omitted here. The Wilderness God Wars Dungeon upper Wilderness level is not stated on the pages read (entrance at level 28; 'most of the dungeon is below level 30').",
+    "_verification": {
+      "corrections": [
+        "God Wars Dungeon requirements: added '60 Strength or 60 Agility' (God Wars Dungeon page: 'and either 60 Strength or 60 Agility. A rope is also required the first time.').",
+        "Wilderness God Wars Dungeon wildernessLevelMax 30 -> null: the task page only says 'Most of the dungeon is below level 30 wilderness', no maximum is stated; entrance level 28 kept as min.",
+        "Notes: added the Slayer task list's 'Near Abandoned Mine' location and the Monster Variants table's Temple Trekking / Meiyerditch Mine / Ver Sinhaza locations that the Location Comparison omits; feral vampyre XP corrected to the infobox list (40/80/80/75/50/60/135/185).",
+        "Confirmed: all 8 Location Comparison rows (multi/cannon/requirements quotes present on Slayer task/Vampyres), Vyrewatch/Sentinel/Venator immunecannon = Yes and poisonresistance = 100, superior Blood-starved venator, Venator page quote 'require 74 Slayer and completion of the quest The Blood Moon Rises to fight', Slayer task row (Priest in Peril, Combat 35, Mazchna/Vannaka + unlock masters)."
+      ],
+      "confirmed": 34,
+      "downgraded": 1
+    }
+  },
+  {
+    "task": "Vardorvis",
+    "wikiTaskPage": "Vardorvis",
+    "monsterPages": [
+      "Vardorvis",
+      "The Stranglewood"
+    ],
+    "bossTask": true,
+    "summary": "Vardorvis is the Desert Treasure II boss fought at the Ritual Site in the Stranglewood (fairy ring BLS, or the ring of shadows teleport once a strangled tablet has been used on it); the boss task needs Desert Treasure II - The Fallen Empire completed and the 'Like a boss' unlock.",
+    "recommendedStyle": "Any",
+    "styleNotes": "Melee-only boss; immune to cannon per infobox (immunecannon = Yes).",
+    "requiredItems": [],
+    "usefulItems": [
+      "Ring of shadows with strangled tablet (direct teleport)",
+      "Fairy ring BLS to the Kebos rowboat"
+    ],
+    "superior": null,
+    "alternatives": [],
+    "xpPerKill": 1085,
+    "locations": [
+      {
+        "name": "The Stranglewood - Ritual Site",
+        "displayName": "The Stranglewood – Ritual Site",
+        "rank": 1,
+        "multi": "unknown",
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Desert Treasure II - The Fallen Empire completed",
+          "Like a boss unlock (200 Slayer reward points)"
+        ],
+        "notes": "Ritual Site is north-west of the forest, reached by climbing over rocks; after one visit a shortcut north-west of the temple is available. Fastest access is the ring of shadows teleport (needs the strangled tablet, a 1/25.5 drop) or fairy ring BLS then the rowboat.",
+        "evidence": {
+          "multi": "not stated (Vardorvis and The Stranglewood pages do not state single or multi; not on the Multicombat area list)",
+          "cannon": "Vardorvis infobox: immunecannon = Yes (Stranglewood is not on the Dwarf multicannon prohibited list)",
+          "requirements": "Boss (Boss slayer table): 'Vardorvis | The Stranglewood | Slayer 1 | Completion of Desert Treasure II - The Fallen Empire'; Vardorvis: 'The fastest way to get to Vardorvis is the teleport to \"The Stranglewood\" on the ring of shadows, once it has been unlocked with the strangled tablet. Other fast options include the bls fairy ring'"
+        }
+      }
+    ],
+    "notes": "Boss task; identity and location only. Vardorvis infobox: assignedby = konar,nieve,duradel; cat = Bosses. Slayer XP per kill: 1085 (post-quest), 1400 (awakened), 500 (quest variant). Boss (Boss slayer table): 'Vardorvis | The Stranglewood | Slayer 1 | Completion of Desert Treasure II - The Fallen Empire'. Boss page: 'Upon finishing a boss task, the player will get an additional 5,000 Slayer experience regardless of task length.' Strangled tablet: the Vardorvis drop table lists 1/25.5 (the drop-sequence note says 'roll 1/25'). Multi/single status of the Ritual Site is not stated on the Vardorvis or Stranglewood pages.",
+    "_verification": {
+      "corrections": [
+        "Strangled tablet rate: drop table lists 1/25.5 (batch said 1/25; the page's roll comment says 1/25) - wording adjusted to cite the drop table.",
+        "Confirmed: xpPerKill 1085 (slayxp1), immunecannon = Yes, assignedby konar/nieve/duradel, Boss table row, Vardorvis access quotes ('fastest way ... ring of shadows', 'bls fairy ring', 'climbing over rocks', shortcut), multi left 'unknown' (not stated), no fight mechanics in summary."
+      ],
+      "confirmed": 12,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Venators",
+    "wikiTaskPage": "Slayer task/Venators",
+    "monsterPages": [
+      "Venator",
+      "Blood-starved venator",
+      "Vampyrium"
+    ],
+    "bossTask": false,
+    "summary": "Venators are killed with melee using a tier 3 vampyrebane weapon (Ivandis, blisterwood or hallowed flail, sunspear, or blisterwood stakes) in the Apsul or Virer hunting grounds of Vampyrium, which need The Blood Moon Rises completed and 74 Slayer. They melee when adjacent and range otherwise, so pray the matching protection prayer, but turn prayer off during their screech, which damages and drains prayer from anyone using a protection prayer. Efaritay's aid is highly recommended because its accuracy and damage stack with the slayer helmet. Apsul has spawns closer to the altar; Virer has more spawns and is less crowded.",
+    "recommendedStyle": "Melee",
+    "styleNotes": "Tier 3 vampyre: only damaged by blisterwood stakes, sunspear, Ivandis flail, blisterwood flail or hallowed flail; immune to poison, venom, cannon and thralls; heals from its melee hits.",
+    "requiredItems": [
+      "Ivandis flail or better (blisterwood flail, hallowed flail, sunspear, blisterwood stakes)"
+    ],
+    "usefulItems": [
+      "Efaritay's aid",
+      "Earmuffs or slayer helmet (screech)",
+      "Sunspear (special attack yields a venator heart for the Aranei shrine)",
+      "Stymphike feathers for off-task kills (30 per kill)"
+    ],
+    "superior": "Blood-starved venator",
+    "alternatives": [],
+    "xpPerKill": 405,
+    "locations": [
+      {
+        "name": "Apsul Hunting Ground",
+        "displayName": "Vampyrium – Apsul Hunting Ground (near the altar)",
+        "rank": 1,
+        "multi": false,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "The Blood Moon Rises completed",
+          "74 Slayer",
+          "100 Combat for a Mortimer venator task (Slayer task list and task infobox; the Mortimer page's own table says Combat 60)"
+        ],
+        "notes": "7 venators, more of them close to the altar. Hunting grounds are south of the Vampyrium entrance portal. Not aggressive; not safespottable.",
+        "evidence": {
+          "multi": "Slayer task/Venators Location Comparison: Apsul Hunting Ground | Multicombat {{No}}",
+          "cannon": "Slayer task/Venators Location Comparison: Apsul Hunting Ground | Cannonable {{No}}; Venator infobox: immunecannon = Yes",
+          "requirements": "Slayer task/Venators infobox: skillreq Slayer 74, combatreq Combat 100, otherreq Completion of The Blood Moon Rises; 'Venators can only be found in Vampyrium, in the designated hunting grounds to the south of the entrance portal.'; Mortimer table row: 'Slayer 74, Combat 60, completion of The Blood Moon Rises' (conflicts on combat level)"
+        }
+      },
+      {
+        "name": "Virer Hunting Ground",
+        "displayName": "Vampyrium – Virer Hunting Ground (more spawns, further from altar)",
+        "rank": 2,
+        "multi": false,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "The Blood Moon Rises completed",
+          "74 Slayer"
+        ],
+        "notes": "12 venators (one only reachable with Ranged); less crowded but many spawns are further from the altar.",
+        "evidence": {
+          "multi": "Slayer task/Venators Location Comparison: Virer Hunting Ground | Multicombat {{No}}",
+          "cannon": "Slayer task/Venators Location Comparison: Virer Hunting Ground | Cannonable {{No}}; Venator infobox: immunecannon = Yes",
+          "requirements": "Slayer task/Venators: 'More venators are found here and is less crowded, however many spawns are further away from the altar.'"
+        }
+      }
+    ],
+    "notes": "Slayer task list row: 74 Slayer, The Blood Moon Rises, 100 Combat; assigned as a dedicated task only by Mortimer. Slayer task/Venators infobox: mortimer = 120-180 (170-280); the Mortimer page's own table gives 120-180 with no extended range and lists Combat 60 rather than 100, so the amounts/combat requirement conflict between pages. Venators also count on a Vampyres task from Konar, Duradel, Nieve or Chaeldar (after the Actual Vampyre Slayer unlock) or from Mazchna/Vannaka. Konar's Vampyres location roll includes 'Vampyrium: Venator'. Off-task kills cost 30 Stymphike feathers each. Superior Blood-starved venator: slayxp 3622.5.",
+    "_verification": {
+      "corrections": [
+        "Combat requirement: Slayer task list and Slayer task/Venators infobox say Combat 100, but the Mortimer page table says Combat 60 for Venators - conflict recorded, both cited.",
+        "Extended amount 170-280 comes from the Slayer task/Venators infobox; the Mortimer page table shows no extended range ({{NA}}) - conflict recorded.",
+        "Confirmed: xpPerKill 405, superior Blood-starved venator, immunecannon/immunethrall = Yes, poisonresistance 100, both hunting-ground rows (Multicombat No, Cannonable No, 7 and 12 spawns, altar notes), screech/earmuffs/heal/sunspear heart/30 feathers quotes on Venator page, aggressive = No."
+      ],
+      "confirmed": 20,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Venenatis",
+    "wikiTaskPage": "Venenatis",
+    "monsterPages": [
+      "Venenatis",
+      "Silk Chasm",
+      "Spindel"
+    ],
+    "bossTask": true,
+    "summary": "Venenatis is the Wilderness spider boss in the Silk Chasm, a level 35 Wilderness multi-combat lair south-east of Callisto's Den that needs the medium Wilderness diary or a Venenatis boss task plus a shared 50,000 coin lair fee; Spindel can be killed instead.",
+    "recommendedStyle": "Any",
+    "styleNotes": "Uses melee when adjacent and magic or ranged at range; not immune to cannon per infobox but cannons cannot be set up in the Silk Chasm.",
+    "requiredItems": [],
+    "usefulItems": [
+      "50,000 coins lair fee (can be taken from the bank)",
+      "Protect Item"
+    ],
+    "superior": null,
+    "alternatives": [
+      "Spindel"
+    ],
+    "xpPerKill": 956.2,
+    "locations": [
+      {
+        "name": "Silk Chasm",
+        "displayName": "Silk Chasm – Wilderness boss lair (level 35, multi, PvP)",
+        "rank": 1,
+        "multi": true,
+        "cannon": false,
+        "wilderness": true,
+        "wildernessLevelMin": 26,
+        "wildernessLevelMax": 35,
+        "konarAssignable": true,
+        "requirements": [
+          "Medium Wilderness diary OR a Venenatis boss Slayer task",
+          "50,000 coin fee shared across the Wilderness boss lairs (lost only if killed by a player before leaving the Wilderness)",
+          "Like a boss unlock (200 Slayer reward points)"
+        ],
+        "notes": "Exiting always drops you at one of three random points in the Escape Caves; player killers can follow. A 3-tick teleport block applies on entry until the hard Wilderness diary. Krystilia lists the location as east of the Bone Yard at Wilderness level 26-30, while the boss page says level 35.",
+        "evidence": {
+          "multi": "Silk Chasm: 'It is a multi-combat dungeon located in the Wilderness, just south-east of Callisto's Den.'",
+          "cannon": "Venenatis: 'A dwarf multicannon cannot be set up in the Silk Chasm; if attempted, you will receive the message: It doesn't seem safe to set up a cannon here.'; also on the Dwarf multicannon prohibited list",
+          "requirements": "Silk Chasm: 'Entering the boss lair requires completion of the medium Wilderness diary OR a Venenatis boss Slayer task, and a fee of 50,000 coins; this fee does not need to be brought along in the inventory, and can be deducted from the bank.'; Venenatis: 'a spider Slayer task does not bypass the diary requirement'"
+        }
+      }
+    ],
+    "notes": "Boss task; identity and location only. Venenatis infobox: assignedby = turael,spria,krystilia,konar,nieve,duradel (Turael/Spria/Mazchna entries reflect spider tasks). Boss slayer table: 'Venenatis | Silk Chasm | Slayer 1 | Spindel may be killed instead'. Krystilia boss row: 'Venenatis (Spindel also counts): East of the Bone Yard | Wilderness level 26-30 | Slayer Exp 388.8', whereas the Venenatis infobox gives slayxp 956.2; the infobox value is used. Wilderness level min 26 from Krystilia, max 35 from the boss page intro. Boss tasks give an extra 5,000 Slayer XP on completion (Boss page).",
+    "_verification": {
+      "corrections": [
+        "No factual changes. Confirmed: slayxp 956.2, immunecannon = No with the Silk Chasm cannon message on the Venenatis page and the Dwarf multicannon prohibited list, Silk Chasm 'multi-combat dungeon ... south-east of Callisto's Den', entry requirement and 50,000 fee quote, Escape Caves and 3-tick quotes, 'a spider Slayer task does not bypass the diary requirement', Boss table 'Spindel may be killed instead', Krystilia row 'East of the Bone Yard | 26-30 | 388.8', Venenatis page 'at level 35 Wilderness'.",
+        "Wilderness level range 26-35 mixes Krystilia's 26-30 with the boss page's level 35; both sources kept and noted."
+      ],
+      "confirmed": 16,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Vet'ion",
+    "wikiTaskPage": "Vet'ion",
+    "monsterPages": [
+      "Vet'ion",
+      "Vet'ion's Rest",
+      "Calvar'ion"
+    ],
+    "bossTask": true,
+    "summary": "Vet'ion is the undead Wilderness skeleton boss in Vet'ion's Rest, a level 35 Wilderness multi-combat lair south of Lava Dragon Isle that needs the medium Wilderness diary or a Vet'ion boss task plus a shared 50,000 coin lair fee; Calvar'ion can be killed instead.",
+    "recommendedStyle": "Melee",
+    "styleNotes": "Highly resistant to every style except crush; undead, so the salve amulet works; not immune to cannon per infobox but cannons cannot be placed in the lair.",
+    "requiredItems": [],
+    "usefulItems": [
+      "Crush weapon",
+      "Salve amulet (e)",
+      "50,000 coins lair fee (can be taken from the bank)",
+      "Protect Item"
+    ],
+    "superior": null,
+    "alternatives": [
+      "Calvar'ion"
+    ],
+    "xpPerKill": 624,
+    "locations": [
+      {
+        "name": "Vet'ion's Rest",
+        "displayName": "Vet'ion's Rest – Wilderness boss lair (level 35, multi, PvP)",
+        "rank": 1,
+        "multi": true,
+        "cannon": false,
+        "wilderness": true,
+        "wildernessLevelMin": 34,
+        "wildernessLevelMax": 36,
+        "konarAssignable": true,
+        "requirements": [
+          "Medium Wilderness diary OR a Vet'ion boss Slayer task",
+          "50,000 coin fee shared across the Wilderness boss lairs (lost only if killed by a player before leaving the Wilderness)",
+          "Like a boss unlock (200 Slayer reward points)"
+        ],
+        "notes": "Exiting always drops you at one of three random points in the Escape Caves; player killers can follow. A 3-tick teleport block applies on entry until the hard Wilderness diary. Krystilia lists the location as north of the Bone Yard at Wilderness level 34-36.",
+        "evidence": {
+          "multi": "Vet'ion's Rest: 'It is a multi-combat dungeon located in the Wilderness, just south of Lava Dragon Isle.'",
+          "cannon": "Vet'ion's Rest: 'You cannot set up a dwarven multicannon within the boss lair.'; Dwarf multicannon prohibited list: 'Vet'ion's Rest - It doesn't seem safe to set up a cannon here.'",
+          "requirements": "Vet'ion's Rest: 'Entering the boss lair requires completion of the medium Wilderness diary OR a Vet'ion boss Slayer task, and pay a fee of 50,000 coins'; Vet'ion: 'a skeleton Slayer task does not bypass the diary requirement'"
+        }
+      }
+    ],
+    "notes": "Boss task; identity and location only. Vet'ion infobox: assignedby = turael,spria,krystilia,mazchna,konar,nieve,duradel (the low-level masters reflect skeleton tasks). Boss slayer table: 'Vet'ion | Vet'ion's Rest | Slayer 1 | Calvar'ion may be killed instead'; Boss page: 'if assigned a Vet'ion task, players may alternatively kill Calvar'ion in his place.' Slayer XP: infobox slayxp1 = 624 (Normal form), slayxp2 = 322 (Enraged form); Krystilia's table lists 454. Wilderness level 34-36 from Krystilia's table; the boss page intro says level 35. Skeleton hellhounds count for Krystilia hellhound and skeleton tasks. Boss tasks give an extra 5,000 Slayer XP on completion (Boss page).",
+    "_verification": {
+      "corrections": [
+        "No factual changes. Confirmed: slayxp1 624 / slayxp2 322, attributes undead, 'highly resistant to any combat style other than crush' and Salve amulet sentence, immunecannon = No with 'You cannot set up a dwarven multicannon within the boss lair' and the prohibited-list entry, Vet'ion's Rest multi-combat/entry/fee/Escape Caves/3-tick quotes, 'a skeleton Slayer task does not bypass the diary requirement', Boss table and Boss page 'Calvar'ion in his place', Krystilia row 'North of the Bone Yard | 34-36 | 454', Krystilia hellhound/skeleton footnotes for skeleton hellhounds."
+      ],
+      "confirmed": 17,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Vorkath",
+    "wikiTaskPage": "Vorkath",
+    "monsterPages": [
+      "Vorkath",
+      "Ungael"
+    ],
+    "bossTask": true,
+    "summary": "Vorkath is the post-Dragon Slayer II dragon boss in the crater on Ungael, reached by Torfinn's boat north of the Rellekka marketplace; the boss task needs 18 Slayer, Dragon Slayer II completed and the 'Like a boss' unlock, and Vorkath also counts as a blue dragon and a zombie for those tasks.",
+    "recommendedStyle": "Any",
+    "styleNotes": "Dragon, undead and fiery attributes; salve amulet works but does not stack with the slayer helmet; immune to cannon and recoil damage; dragonfire protection needed.",
+    "requiredItems": [],
+    "usefulItems": [
+      "Anti-dragon shield or dragonfire ward",
+      "Extended antifire",
+      "Salve amulet (ei) or slayer helmet"
+    ],
+    "superior": null,
+    "alternatives": [],
+    "xpPerKill": 750,
+    "locations": [
+      {
+        "name": "Ungael",
+        "displayName": "Ungael – Vorkath's crater (Torfinn's boat from Rellekka)",
+        "rank": 1,
+        "multi": "unknown",
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Dragon Slayer II completed",
+          "18 Slayer for the boss task",
+          "Like a boss unlock (200 Slayer reward points)"
+        ],
+        "notes": "Talk to Torfinn on the third dock from the west in Rellekka (or use the Ungael/Travel option on his boat after the first visit); climb over the ice chunks to enter the crater. Vorkath is not aggressive.",
+        "evidence": {
+          "multi": "not stated (Vorkath and Ungael pages do not state single or multi; Ungael is not on the Multicombat area list)",
+          "cannon": "Dwarf multicannon prohibited list: 'Ungael (Vorkath area) - The intense cold threatens to crack the metal of your cannon. You probably shouldn't put it down here.'; Vorkath infobox: immunecannon = Yes",
+          "requirements": "Boss (Boss slayer table): 'Vorkath | Ungael | Slayer 18 | Completion of Dragon Slayer II'; Vorkath: 'The island is accessible by talking to Torfinn the sailor on the third dock from west in Rellekka.'"
+        }
+      }
+    ],
+    "notes": "Boss task; identity and location only. Vorkath: 'Vorkath is considered a blue dragon and zombie for the purpose of a Slayer task.' Infobox assignedby = turael,spria,mazchna,vannaka,chaeldar,konar,nieve,duradel (reflects blue dragon/zombie tasks; boss tasks come from Konar, Nieve/Steve, Duradel/Kuradal per the Boss page). Slayer XP: 750 post-quest, 460 for the quest variant. Boss tasks give an extra 5,000 Slayer XP on completion (Boss page).",
+    "_verification": {
+      "corrections": [
+        "No factual changes. Confirmed: slayxp1 750 / slayxp2 460, attributes dragon,undead,fiery, 'considered a blue dragon and zombie for the purpose of a Slayer task', Salve amulet 'does not stack with the Slayer helmet', 'immune to recoil damage', immunecannon = Yes plus the Ungael prohibited-list message, Torfinn 'third dock from west in Rellekka' and Ungael/Travel option, ice chunks, aggressive = No, Boss table 'Vorkath | Ungael | Slayer 18 | Completion of Dragon Slayer II', assignedby list; multi left 'unknown' (Ungael/Vorkath pages do not state it)."
+      ],
+      "confirmed": 15,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Wall beasts",
+    "wikiTaskPage": "Slayer task/Wall beast",
+    "monsterPages": [
+      "Wall beast",
+      "Lumbridge Swamp Caves"
+    ],
+    "bossTask": false,
+    "summary": "Wall beasts are a low-level Mazchna task done in the Lumbridge Swamp Caves with melee. A spiny helmet or slayer helmet must be worn to repel the first grab, after which a black mask can be swapped in. A light source is needed in the caves (a bullseye lantern is safest because open flames can ignite swamp gas), and an antipoison is worth carrying in case a cave slime or cave crawler is attacked. The south-west corner has two spawns close together; killing one respawns the others.",
+    "recommendedStyle": "Melee",
+    "styleNotes": "Attacks with crush; immune to poison and venom (poisonresistance 100); not immune to cannon or thralls.",
+    "requiredItems": [
+      "Spiny helmet or Slayer helmet",
+      "Light source (bullseye lantern recommended)"
+    ],
+    "usefulItems": [
+      "Antipoison",
+      "Rope (first entry)",
+      "Black mask to swap to after the initial grab"
+    ],
+    "superior": null,
+    "alternatives": [],
+    "xpPerKill": 105,
+    "locations": [
+      {
+        "name": "Lumbridge Swamp Caves",
+        "displayName": "Lumbridge Swamp Caves (south-west corner spawns)",
+        "rank": 1,
+        "multi": "unknown",
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Spiny helmet or Slayer helmet",
+          "5 Defence (to wear the spiny helmet)",
+          "35 Slayer",
+          "Light source; rope for the swamp entrance on first use"
+        ],
+        "notes": "Only location. Enter by rope from the swamp near the candle seller, or from the Lumbridge castle cellar after starting The Lost Tribe. Wall beasts are aggressive holes in the wall; skip the tile in front of a hole to avoid being grabbed. The beast by the entrance respawns if you exit and re-enter.",
+        "evidence": {
+          "multi": "not stated (Lumbridge Swamp Caves page does not state single or multi; not on the Multicombat area list)",
+          "cannon": "Lumbridge Swamp Caves: 'A Dwarf multicannon can be used in the caves.'; Wall beast infobox: immunecannon = No",
+          "requirements": "Slayer task/Wall beast: 'Wall beasts can be assigned as a Slayer task by Mazchna at 35 Slayer and 5 Defence in order to equip a Spiny helmet. They are only found in the Lumbridge Swamp Caves.'; Wall beast: 'A light source is required to fight wall beasts.'"
+        }
+      }
+    ],
+    "notes": "Slayer task list row: 35 Slayer, 5 Defence, 35 Combat, spiny helmet or slayer helmet; assigned only by Mazchna (10-20). Wall beast: 'The spiny helmet is only required to initiate combat with a wall beast. Once it has started attacking normally, it can no longer grab the player's head, allowing a black mask to be used.'",
+    "_verification": {
+      "corrections": [
+        "No factual changes. Confirmed: task page title 'Slayer task/Wall beast', slayxp 105, slaylvl 35, assignedby mazchna only, poisonresistance 100, immunecannon/immunethrall = No, attack style Crush, 'A light source is required to fight wall beasts' with the bullseye lantern/swamp gas sentence and the antipoison/cave slime/cave crawler sentence, 'The spiny helmet is only required to initiate combat ... allowing a black mask to be used', south-west corner two spawns and respawn behaviour, Lumbridge Swamp Caves 'A Dwarf multicannon can be used in the caves', rope entrance and Lost Tribe cellar entrance, Slayer task row (Combat 35, Defence 5, spiny/slayer helmet)."
+      ],
+      "confirmed": 16,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Warped Creatures",
+    "wikiTaskPage": "Slayer task/Warped creatures",
+    "monsterPages": [
+      "Warped Tortoise",
+      "Warped Terrorbird",
+      "Mutated Tortoise",
+      "Mutated Terrorbird",
+      "Poison Waste Dungeon"
+    ],
+    "bossTask": false,
+    "summary": "Warped creatures live only in the Poison Waste Dungeon (partial The Path of Glouphrie, reached via the spirit tree) and are invulnerable unless a crystal chime is in the inventory. Warped tortoises are melee-only, non-aggressive and weak to crush, so they are usually meleed under Protect from Melee at the entrance or safespotted with Ranged or Magic further in; warped terrorbirds are permanently aggressive, attack with melee and ranged, switch styles against your protection prayer, and are best fought wearing earmuffs or a slayer helmet with Protect from Missiles. The whole dungeon is multi-combat and cannonable; the second large chamber with a cannon on the north-western tortoise spawn is the recommended spot for killing both.",
+    "recommendedStyle": "Melee",
+    "styleNotes": "Tortoises are weak to crush and heavy ranged (20% earth weakness); terrorbirds have no elemental weakness and switch between melee and ranged based on your prayer; both are cannonable; a crystal chime is required to damage either.",
+    "requiredItems": [
+      "Crystal chime",
+      "Earmuffs or Slayer helmet (terrorbirds)"
+    ],
+    "usefulItems": [
+      "Dwarf multicannon",
+      "Prayer potions",
+      "Nature and fire runes for High Level Alchemy",
+      "Grand seed pod or ring of wealth for banking via spirit tree",
+      "Telekinetic Grab for drops across the pits",
+      "9+ tile range weapon (crystal bow, Craw's bow) for terrorbird safespots"
+    ],
+    "superior": "Mutated Tortoise / Mutated Terrorbird",
+    "alternatives": [
+      "Warped Tortoise",
+      "Warped Terrorbird"
+    ],
+    "xpPerKill": null,
+    "locations": [
+      {
+        "name": "Poison Waste Dungeon - main level",
+        "displayName": "Poison Waste Dungeon – main level (tortoises at the entrance, terrorbirds further in)",
+        "rank": 1,
+        "multi": true,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "The Path of Glouphrie (partial completion to enter the dungeon)",
+          "56 Slayer",
+          "Crystal chime in inventory"
+        ],
+        "notes": "14 tortoises and 33 terrorbirds on the main level. Tortoises sit right at the entrance for short spirit-tree banking trips; terrorbirds never lose aggression. Best cannon spot is in the second large chamber standing against a wall or waste pit. A tortoise safespot behind pillars is about halfway in; terrorbirds can be safespotted through the doors at the entrance with a 9-tile weapon.",
+        "evidence": {
+          "multi": "Slayer task/Warped creatures Location table: Poison Waste Dungeon - main level tortoises | Multicombat {{Yes}}; main level terrorbirds | Multicombat {{Yes}}",
+          "cannon": "Slayer task/Warped creatures Location table: Cannonable {{Yes}} for all four rows; Poison Waste Dungeon: 'A dwarf multicannon can be used in the dungeon.'",
+          "requirements": "Slayer task/Warped creatures: 'Warped creatures are found exclusively in the Poison Waste Dungeon, requiring completion of The Path of Glouphrie. Players must have the crystal chime in their inventory to fight them, otherwise they will be invulnerable.'; Poison Waste Dungeon: 'Partial completion of The Path of Glouphrie is required to access the dungeon.'"
+        }
+      },
+      {
+        "name": "Poison Waste Dungeon - lower level",
+        "displayName": "Poison Waste Dungeon – lower level (few spawns)",
+        "rank": 2,
+        "multi": true,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "The Path of Glouphrie (partial)",
+          "56 Slayer",
+          "Crystal chime in inventory"
+        ],
+        "notes": "Only 3 tortoises and 3 terrorbirds; the main level is far better populated.",
+        "evidence": {
+          "multi": "Slayer task/Warped creatures Location table: Poison Waste Dungeon - lower level tortoises | Multicombat {{Yes}}; lower level terrorbirds | Multicombat {{Yes}}",
+          "cannon": "Slayer task/Warped creatures Location table: lower level rows | Cannonable {{Yes}}",
+          "requirements": "same as main level (Slayer task/Warped creatures)"
+        }
+      }
+    ],
+    "notes": "Slayer task list row: 56 Slayer, The Path of Glouphrie; assigned by Chaeldar, Konar, Nieve and Duradel only after the 60-point 'Warped Reality' unlock, and by Mortimer regardless. The Slayer task list links the page as 'Slayer task/Warped creature' (singular); it resolves to the same content as 'Slayer task/Warped creatures'. The task page says the dungeon requires 'completion of The Path of Glouphrie' while the Poison Waste Dungeon page says 'Partial completion of The Path of Glouphrie is required to access the dungeon.' Slayer XP: Warped Tortoise 200, Warped Terrorbird 150 (level 96) or 200 (level 138), Mutated Tortoise 4510, Mutated Terrorbird 3200, so xpPerKill is null. Two superiors exist (Mutated Tortoise and Mutated Terrorbird) with the Bigger and Badder unlock. Warped Tortoise infobox: elementalweaknesstype Earth 20%; Warped Terrorbird has no elemental weakness field.",
+    "_verification": {
+      "corrections": [
+        "Task page name: the Slayer task list links 'Slayer task/Warped creature' (singular); both titles return identical wikitext, so 'Slayer task/Warped creatures' is kept and the alias noted.",
+        "Requirement wording: task page says 'requiring completion of The Path of Glouphrie', Poison Waste Dungeon page says partial completion suffices for dungeon access; both quoted in notes.",
+        "Confirmed: all four Location table rows Multicombat Yes / Cannonable Yes (14+33 main level, 3+3 lower level), 'A dwarf multicannon can be used in the dungeon', crystal chime invulnerability sentence, earmuffs/slayer helmet and prayer-switching behaviour, terrorbirds never lose aggression, second-chamber cannon spot on the north-western tortoise spawn, 9-tile weapons for terrorbird safespots, Telekinetic Grab, grand seed pod/ring of wealth, superiors and their XP, tortoise 20% earth weakness."
+      ],
+      "confirmed": 22,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Waterfiends",
+    "wikiTaskPage": "Slayer task/Waterfiends",
+    "monsterPages": [
+      "Waterfiend",
+      "Ancient Cavern",
+      "Kraken Cove",
+      "Iorwerth Dungeon"
+    ],
+    "bossTask": false,
+    "summary": "Waterfiends are a rare Konar or Duradel task fought with crush melee (or earth spells, which they are 100% weak to) while wearing magic-defence armour such as dragonhide, since both their magic and magical ranged attacks roll against magic defence and no single prayer blocks everything. Protect from Missiles helps most if damage is high. The Ancient Cavern (games necklace to Barbarian Assault, then the whirlpool) is the usual spot and lets you safespot across the river with Ranged or Magic because their attack range is only 4 tiles; Iorwerth Dungeon has 20 spawns and allows a cannon but needs Song of the Elves. Many players skip the task because the drops are poor.",
+    "recommendedStyle": "Melee",
+    "styleNotes": "Low crush defence (use crush weapons or heavy ranged); 100% weakness to earth spells; immune to poison and venom; attacks with magic and magical ranged; not immune to cannon.",
+    "requiredItems": [],
+    "usefulItems": [
+      "Crush weapon (inquisitor's mace, abyssal bludgeon, soulreaper axe on crush)",
+      "Dragonhide or other magic-defence armour",
+      "Runes for High Level Alchemy",
+      "Games necklace (Barbarian Assault) for the Ancient Cavern",
+      "Tome of earth / earth spells if maging"
+    ],
+    "superior": null,
+    "alternatives": [],
+    "xpPerKill": 128,
+    "locations": [
+      {
+        "name": "Ancient Cavern",
+        "displayName": "Ancient Cavern – lower level (safespot across the river)",
+        "rank": 1,
+        "multi": false,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Barbarian Training progressed to the pyre ships section (Barbarian Firemaking, 35 Firemaking)",
+          "75 Combat for the task"
+        ],
+        "notes": "16 waterfiends on the lower level beside brutal green dragons. Enter via the whirlpool on the Baxtorian Falls lake; games necklace to Barbarian Assault is quick. Attack across the river with Ranged or Magic to safespot, or wait out the 10-minute aggression timer on the landing platform and use the stalagmite to the north-west.",
+        "evidence": {
+          "multi": "Slayer task/Waterfiends Location Comparison: Ancient Cavern | Multicombat {{No}}",
+          "cannon": "Ancient Cavern: 'Dwarf multicannons cannot be used here. If attempted, players will receive the message: It's far too damp for you to set up a cannon here.'; Slayer task/Waterfiends: Ancient Cavern | Cannonable {{No}}",
+          "requirements": "Waterfiend: 'players must have at least level 75 combat ... and have progressed Barbarian training up to being prompted to access to the Ancient Cavern as part of Barbarian Firemaking training'; Ancient Cavern: 'The cavern can only be accessed after the player has completed the first part of Barbarian Firemaking, requiring level 35 Firemaking.'"
+        }
+      },
+      {
+        "name": "Iorwerth Dungeon",
+        "displayName": "Iorwerth Dungeon (20 spawns, cannonable, needs Song of the Elves)",
+        "rank": 2,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Song of the Elves completed"
+        ],
+        "notes": "20 waterfiends; quick access with a teleport crystal; they can drop crystal shards here. Not safespottable.",
+        "evidence": {
+          "multi": "Iorwerth Dungeon: 'However, the whole dungeon is single-way combat.'; Slayer task/Waterfiends: Iorwerth Dungeon | Multicombat {{No}}",
+          "cannon": "Iorwerth Dungeon: 'A dwarf multicannon can be used in the dungeon.'; Slayer task/Waterfiends: Iorwerth Dungeon | Cannonable {{Yes}}",
+          "requirements": "Slayer task/Waterfiends: 'Requires completion of Song of the Elves'"
+        }
+      },
+      {
+        "name": "Kraken Cove (Slayer Task Only)",
+        "displayName": "Kraken Cove (task-only, fairy ring AKQ)",
+        "rank": 3,
+        "multi": false,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Must be on a waterfiend Slayer task"
+        ],
+        "notes": "15 waterfiends; fast access via fairy ring AKQ. Lieve McCracken stops anyone attacking without a task. Not safespottable.",
+        "evidence": {
+          "multi": "Slayer task/Waterfiends Location Comparison: Kraken Cove | Multicombat {{No}} (the Multicombat area list names 'Inner Kraken Cove' as multi, but the task page marks the waterfiend area as not multi)",
+          "cannon": "Slayer task/Waterfiends Location Comparison: Kraken Cove | Cannonable {{No}}; Kraken Cove: 'A dwarf multicannon can be used within this dungeon, but not near the Waterfiends.'",
+          "requirements": "Kraken Cove: 'All of the creatures can only be killed while on a Slayer task.'"
+        }
+      }
+    ],
+    "notes": "Slayer task list row: 75 Combat; assigned by Konar (120-170) and Duradel (130-200) only. Task page: 'It is not advised to block waterfiends, as they have an incredibly low weight value of 2'. Konar location roll: Ancient Cavern, Iorwerth Dungeon or Kraken Cove.",
+    "_verification": {
+      "corrections": [
+        "No factual changes. Confirmed: slayxp 128, assignedby konar,duradel, poisonresistance 100, immunecannon = No, attack style Magic + Magical ranged, task page magic-defence/dragonhide/Protect from Missiles/crush/100% earth weakness/alchemy runes/low weight 2 sentences, Ancient Cavern row (16, Multicombat No, Cannonable No, 4-tile range safespot, 10 min aggression timer, games necklace), Ancient Cavern 'far too damp' cannon message and 35 Firemaking/Barbarian Firemaking access, Kraken Cove row (15, task only, AKQ) and 'All of the creatures can only be killed while on a Slayer task' plus Lieve McCracken, Iorwerth row (20, Cannonable Yes, Song of the Elves, crystal shards) and 'the whole dungeon is single-way combat' / 'A dwarf multicannon can be used in the dungeon', Konar location roll Ancient Cavern/Iorwerth Dungeon/Kraken Cove, Slayer task row Combat 75."
+      ],
+      "confirmed": 24,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Werewolves",
+    "wikiTaskPage": "Werewolf (no 'Slayer task/Werewolves' page exists; the Slayer task list links the monster page)",
+    "monsterPages": [
+      "Werewolf",
+      "Canifis"
+    ],
+    "bossTask": false,
+    "summary": "Werewolves are a Vannaka-only task done in Canifis, where they walk around as level 24 humans and transform into level 88 werewolves when attacked; kills only count once they have transformed, so do not finish them with Wolfbane equipped. Melee with Protect from Melee is standard, and they can be safespotted over the STASH unit in the village centre or from behind the bar and tables in the pub. A popular method is to set up a cannon in the middle of Canifis and run the rooftop course, or hide inside a building with the door closed so the cannon hits the stacked werewolves. Stronger, aggressive versions exist in the God Wars Dungeon and its Wilderness counterpart.",
+    "recommendedStyle": "Melee",
+    "styleNotes": "Slash attackers with no poison or venom resistance; not immune to cannon; Wolfbane keeps them in human form, which does not count for the task.",
+    "requiredItems": [],
+    "usefulItems": [
+      "Dwarf multicannon",
+      "Wolfbane (optional, to lower incoming damage while in human form)"
+    ],
+    "superior": null,
+    "alternatives": [],
+    "xpPerKill": 100,
+    "locations": [
+      {
+        "name": "Canifis",
+        "displayName": "Canifis (human-form werewolves that transform when attacked)",
+        "rank": 1,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Priest in Peril",
+          "60 Combat for the task"
+        ],
+        "notes": "Not aggressive until attacked. Safespots over the STASH unit in the village centre and behind the pub bar or tables (4 werewolves inside the pub); safespotting stops when the human transforms. Cannon plus the Canifis Rooftop Course (40 Agility) or a closed building door are the common AFK methods.",
+        "evidence": {
+          "multi": "Werewolf (Strategy): 'This not only allows the cannon to fire at every Werewolf within range as if it were a multicombat area' (page treats Canifis as not multicombat; Canifis is not on the Multicombat area list)",
+          "cannon": "Werewolf (Strategy): 'Players with an Agility level of 40 or higher can set up a dwarf multicannon in the middle of Canifis'; Werewolf infobox: immunecannon = No",
+          "requirements": "Canifis: 'The town is only accessible to players who have completed the Priest in Peril quest.'; Slayer task list row: Priest in Peril, Combat 60"
+        }
+      },
+      {
+        "name": "God Wars Dungeon",
+        "displayName": "God Wars Dungeon – level 93 werewolves (Zamorak followers)",
+        "rank": 2,
+        "multi": true,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Troll Stronghold partial (defeat Dad) or Easy Combat Achievements (Ghommal's hilt teleport)",
+          "60 Strength or 60 Agility (dungeon entrance obstacle)",
+          "Rope for first entry",
+          "Zamorak item to avoid aggression"
+        ],
+        "notes": "Slightly stronger than the Canifis variant and aggressive unless a Zamorak item is worn. The werewolf bone for Rag and Bone Man II drops only in Canifis. GWD inhabitants may destroy a cannon.",
+        "evidence": {
+          "multi": "Multicombat area list: '*God Wars Dungeon'",
+          "cannon": "Werewolf infobox: immunecannon = No; Slayer task/Vampyres Location Comparison marks God Wars Dungeon Cannonable {{Yes}} (same dungeon); caveat from Dwarf multicannon: 'inhabitants of the God Wars Dungeon may also destroy a cannon if a player attempts to use it'",
+          "requirements": "God Wars Dungeon: 'Accessing it requires partial completion of Troll Stronghold (defeating Dad) or full completion of the Easy Combat Achievements (in order to use the teleport on Ghommal's hilt 1) and either 60 Strength or 60 Agility. A rope is also required the first time.'; Werewolf: 'aggressive to those not wearing an item of Zamorak'"
+        }
+      },
+      {
+        "name": "Wilderness God Wars Dungeon",
+        "displayName": "Wilderness God Wars Dungeon – werewolves (level 28 Wilderness)",
+        "rank": 3,
+        "multi": true,
+        "cannon": true,
+        "wilderness": true,
+        "wildernessLevelMin": 28,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "60 Strength (boulder) or 60 Agility (jutting wall) to reach the main cavern",
+          "Zamorak item to avoid aggression"
+        ],
+        "notes": "Entry cavern is single-way, the large followers' cavern is multi-way. The entrance cave is at level 28 Wilderness; the exact upper Wilderness level is not stated on the pages read. Bring an emergency teleport.",
+        "evidence": {
+          "multi": "Wilderness God Wars Dungeon: 'This empty cavern is a single-way combat zone. The large cavern in which the followers fight is a multi-way combat zone.'",
+          "cannon": "Werewolf infobox: immunecannon = No; Slayer task/Vampyres Location Comparison marks Wilderness God Wars Dungeon Cannonable {{Yes}} (same dungeon)",
+          "requirements": "Wilderness God Wars Dungeon: 'a large boulder which can be moved with 60 Strength, or the south-east which passes through a jutting wall which requires 60 Agility'; 'located within a cave east of The Forgotten Cemetery at level 28 Wilderness'"
+        }
+      }
+    ],
+    "notes": "Slayer task list row: Priest in Peril, 60 Combat; assigned only by Vannaka (Werewolf infobox assignedby = vannaka; slayxp = 100). Werewolf: 'they will only count towards a werewolf Slayer task if killed after transforming: killing them in their human form with Wolfbane will not award experience or decrease the slayer task counter.' and 'Werewolves do not count towards a regular wolf slayer task.' God Wars Dungeon werewolves are level 93 (infobox versions 21-22). The Wilderness God Wars Dungeon upper Wilderness level is not stated on the pages read (entrance at level 28).",
+    "_verification": {
+      "corrections": [
+        "God Wars Dungeon requirements: added '60 Strength or 60 Agility' (God Wars Dungeon page quote).",
+        "Wilderness God Wars Dungeon wildernessLevelMax 30 -> null: the value was borrowed from the Vampyres task page's 'below level 30' wording, which states no maximum.",
+        "Cannon evidence for both GWD entries now cites the Werewolf infobox immunecannon = No first; the Vampyres-page row is a same-dungeon proxy.",
+        "Confirmed: xpPerKill 100, assignedby vannaka, poisonresistance 0, immunecannon = No, level 24 human / level 88 transform, Wolfbane/task-count sentence, STASH and pub safespots (4 werewolves inside), 40 Agility cannon + Canifis Rooftop Course and closed-door cannon method, GWD variant 'slightly stronger ... aggressive to those not wearing an item of Zamorak', werewolf bone Canifis-only, Canifis 'only accessible to players who have completed the Priest in Peril quest', Slayer task row Priest in Peril + Combat 60."
+      ],
+      "confirmed": 20,
+      "downgraded": 1
+    }
+  },
+  {
+    "task": "Wolves",
+    "wikiTaskPage": "Slayer task/Wolves",
+    "monsterPages": [
+      "Wolf",
+      "Big Wolf",
+      "White wolf",
+      "Dire Wolf",
+      "Ice wolf",
+      "Jungle Wolf",
+      "Desert Wolf"
+    ],
+    "bossTask": false,
+    "summary": "Wolves are a Turael, Spria or Mazchna beginner task; regular wolves only bite with fairly accurate melee, so safespot them or keep Protect from Melee on. The fastest method is a dwarf multicannon on the first level of the Stronghold of Security, which is multi-combat, free-to-play and holds 16 level 11 and 14 wolves with ranging safespots. White Wolf Mountain (multi, cannonable, big wolf on the peak) and Feldip Hills are the main alternatives.",
+    "recommendedStyle": "Any",
+    "styleNotes": "Melee-only stab attackers with a fire weakness (20-25%); not immune to cannon or poison; werewolves and Soul Wars wolves do not count.",
+    "requiredItems": [],
+    "usefulItems": [
+      "Dwarf multicannon"
+    ],
+    "superior": null,
+    "alternatives": [
+      "Big Wolf",
+      "White wolf",
+      "Dire Wolf",
+      "Ice wolf",
+      "Jungle Wolf",
+      "Desert Wolf"
+    ],
+    "xpPerKill": null,
+    "locations": [
+      {
+        "name": "Stronghold of Security first level",
+        "displayName": "Stronghold of Security – first level (Vault of War, F2P)",
+        "rank": 1,
+        "multi": true,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "None (free-to-play)"
+        ],
+        "notes": "16 level 11 and 14 wolves alongside rats, goblins and minotaurs; ranging safespots; enter via the hole in Barbarian Village. On free-to-play worlds wolves drop no bones.",
+        "evidence": {
+          "multi": "Multicombat area list: 'The first level of the Stronghold of Security'; Slayer task/Wolves Location Comparison: Stronghold of Security first level | Multicombat {{Yes}}",
+          "cannon": "Stronghold of Security: 'Note: A cannon can be placed in the stronghold.'; Slayer task/Wolves: 'One fast way to complete a wolves Slayer task is with a Dwarf multicannon in the Stronghold of Security, as it has a large amount of wolves.'",
+          "requirements": "Wolf LocLine: Stronghold of Security first level | levels 11, 14 | members No"
+        }
+      },
+      {
+        "name": "White Wolf Mountain",
+        "displayName": "White Wolf Mountain (wolves, white wolves and a big wolf on the peak)",
+        "rank": 2,
+        "multi": true,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Members"
+        ],
+        "notes": "6 level 25 wolves (Wolf LocLine: White Wolf Mountain, level 25) plus level 25/38 white wolves and the level 73 big wolf that leads packs at the peak; white wolves and the big wolf are aggressive. Safespottable. Between Taverley and Catherby; gnome glider at the peak after The Grand Tree.",
+        "evidence": {
+          "multi": "Multicombat area list: '*White Wolf Mountain'; Slayer task/Wolves Location Comparison: White Wolf Mountain | Multicombat {{Yes}}",
+          "cannon": "Slayer task/Wolves Location Comparison: White Wolf Mountain | Cannonable {{Yes}}",
+          "requirements": "White Wolf Mountain: 'a natural region in the members-only area'"
+        }
+      },
+      {
+        "name": "Feldip Hills",
+        "displayName": "Feldip Hills (wolves and big wolves)",
+        "rank": 3,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Members"
+        ],
+        "notes": "15 level 64 wolves plus big wolves; safespottable. The jungle hunter area within Feldip Hills does not allow cannons.",
+        "evidence": {
+          "multi": "Slayer task/Wolves Location Comparison: Feldip Hills | Multicombat {{No}}",
+          "cannon": "Slayer task/Wolves Location Comparison: Feldip Hills | Cannonable {{Yes}}; Dwarf multicannon prohibited list: 'Feldip Hills jungle hunter area - You can't set up a cannon here.'",
+          "requirements": "not stated (Wolf LocLine: Feldip Hills | members Yes)"
+        }
+      },
+      {
+        "name": "Wilderness, south-east of the Deserted Keep",
+        "displayName": "Wilderness – south-east of the Deserted Keep (level 64 wolves)",
+        "rank": 4,
+        "multi": true,
+        "cannon": true,
+        "wilderness": true,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Members"
+        ],
+        "notes": "Only 4 wolves in deep Wilderness; not recommended for a task because of player killers.",
+        "evidence": {
+          "multi": "Slayer task/Wolves Location Comparison: Wilderness, south-east of the Deserted Keep | Multicombat {{Yes}}",
+          "cannon": "Slayer task/Wolves Location Comparison: Wilderness, south-east of the Deserted Keep | Cannonable {{Yes}}",
+          "requirements": "not stated"
+        }
+      }
+    ],
+    "notes": "Slayer task list row: 20 Combat; assigned by Turael and Spria (15-30) and Mazchna (30-50). Slayer XP varies by variant (Wolf infobox 10/15/34/69; Big Wolf 74; Dire wolf 85/74/10; Ice Wolf 70; Jungle wolf 70 on its infobox but 69 in the task page's variant table; Desert Wolf 34; White wolf 34/44), so xpPerKill is null. Exceptions (task page): 'Killing wolves in Soul Wars will not count as a Slayer task' and 'Killing Werewolves in Canifis will not count as a Slayer task'. Wolf page: 'On free-to-play worlds, wolves do not drop any bones.' Wilderness level for the Deserted Keep spot is not stated on the pages read. Other task-page Location Comparison rows (Arandar entrance 4, Ardougne Zoo 2, Tree Gnome Village maze 2, Seers' Village-Rellekka path 1, south of Forthos Dungeon 4, south of Rellekka 6, south of West Ardougne 6, west of Sinclair Mansion 4, west of the Outpost 5) have 1-6 wolves each and are omitted; the Wolf page LocLines additionally list the northern side of the Hailstorm Mountains and north of Gloomthorn Trail (level 64, members), which the task page does not list.",
+    "_verification": {
+      "corrections": [
+        "Jungle wolf XP: Jungle wolf infobox slayxp = 70, task page variant table says 69 - both recorded.",
+        "White Wolf Mountain note: the regular wolves there are level 25 per the Wolf LocLine (batch implied only white wolves are level 25).",
+        "Omitted-location list now matches the task page's Location Comparison ('West of the Outpost', 'Tree Gnome Village maze') and adds the two Wolf-page LocLines (Hailstorm Mountains, Gloomthorn Trail) absent from the task page.",
+        "Confirmed: all four kept rows (Stronghold first level 16 Multi Yes Cannon Yes; White Wolf Mountain 6 Multi Yes Cannon Yes; Feldip Hills 15 Multi No Cannon Yes; Wilderness SE of Deserted Keep 4 Multi Yes Cannon Yes), Multicombat area list entries, Stronghold 'A cannon can be placed in the stronghold', task page cannon sentence, Feldip jungle hunter cannon ban, White Wolf Mountain 'natural region in the members-only area' and gnome glider after The Grand Tree, Stronghold LocLine members No, Slayer task row Combat 20 and Turael/Spria/Mazchna, alternatives list (Big Wolf, Dire wolf, Jungle wolf, Desert Wolf, Ice Wolf; White wolf on task page)."
+      ],
+      "confirmed": 22,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Wyrms",
+    "wikiTaskPage": "Slayer task/Wyrms",
+    "monsterPages": [
+      "Wyrm",
+      "Wyrmling",
+      "Lava Strykewyrm",
+      "Shadow Wyrm",
+      "Magma strykewyrm",
+      "Karuulm Slayer Dungeon",
+      "Wyrmscraig Cavern",
+      "Neypotzli",
+      "Charred Dungeon"
+    ],
+    "bossTask": false,
+    "summary": "Wyrms (62 Slayer) can be completed on adult wyrms, wyrmlings or lava strykewyrms. Adult wyrms use melee up close and magic from range, so Ranged with Protect from Magic from outside melee distance, or melee with a dragonbane weapon such as the dragon hunter lance, are standard; wyrmlings are melee-only with half the health; lava strykewyrms are aggressive, use melee and ranged and are immune to cannon. The wiki recommends Wyrmscraig (62 Sailing, partial Fallen From Grace) because the surface wyrmling nest is multi-combat, cannonable and beside a bank and the necklace of passage teleport, and the Wyrmscraig Cavern below holds adult wyrms and strykewyrms with a slayer ring teleport. In the Karuulm Slayer Dungeon you need boots of stone, brimstone or granite boots unless the elite Kourend and Kebos diary is done, and cannons cannot be placed in the wyrm area.",
+    "recommendedStyle": "Ranged",
+    "styleNotes": "Draconic, so dragonbane weapons (dragon hunter lance, crossbow, wand) are strong; adult wyrms have 1 flat armour, are immune to poison and venom and are 50% weak to earth spells; lava strykewyrms are 50% weak to water spells and immune to cannon but not to poison; the Shadow Wyrm superior cannot be safespotted.",
+    "requiredItems": [],
+    "usefulItems": [
+      "Boots of stone, boots of brimstone or granite boots (Karuulm, unless elite Kourend and Kebos diary)",
+      "Dragon hunter lance / dragon hunter crossbow",
+      "Slayer ring (Wyrmscraig Cavern teleport after Fallen From Grace)",
+      "Necklace of passage (Wyrmscraig)",
+      "Dwarf multicannon (Wyrmscraig, Neypotzli)",
+      "Tome of earth / tome of water for elemental spells"
+    ],
+    "superior": "Shadow Wyrm (adult wyrms) / Magma strykewyrm (lava strykewyrms)",
+    "alternatives": [
+      "Wyrmling",
+      "Lava Strykewyrm"
+    ],
+    "xpPerKill": 123,
+    "locations": [
+      {
+        "name": "Wyrmscraig",
+        "displayName": "Wyrmscraig – surface wyrmling nest (multi, cannon, bank nearby)",
+        "rank": 1,
+        "multi": true,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "62 Sailing to reach the island",
+          "Fallen From Grace: the task page's location table says the wyrmling nest 'Requires partial completion of Fallen From Grace to access', while its prose says surface wyrmlings are accessible before partial completion; full completion unlocks the buildable bank and slayer ring/necklace of passage teleports"
+        ],
+        "notes": "6 wyrmlings with half the health and defence of adult wyrms; melee-only and only drop wyrmling bones. Recommended for the quickest task because it is multi-combat, cannonable and next to the bank and necklace of passage teleport.",
+        "evidence": {
+          "multi": "Slayer task/Wyrms: 'the wyrmlings have lower health, reside in a multicombat area where a dwarf multicannon can be used, and are close to a bank'; Location comparison: Wyrmscraig | Multicombat {{Yes}}",
+          "cannon": "Slayer task/Wyrms: 'reside in a multicombat area where a dwarf multicannon can be used'; Location comparison: Wyrmscraig | Cannonable {{Yes}}",
+          "requirements": "Slayer task/Wyrms: 'The island requires level 62 Sailing to access. Before partially completing Fallen From Grace, only the wyrmlings on the island's surface are accessible'; location table row Wyrmscraig: 'Requires partial completion of Fallen From Grace to access.'; Wyrmscraig: 'an island ... that requires 62 Sailing to access'"
+        }
+      },
+      {
+        "name": "Wyrmscraig Cavern",
+        "displayName": "Wyrmscraig Cavern – adult wyrms and lava strykewyrms (slayer ring teleport)",
+        "rank": 2,
+        "multi": false,
+        "cannon": "partial",
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "62 Sailing",
+          "Partial completion of Fallen From Grace"
+        ],
+        "notes": "5 adult wyrms and 3 lava strykewyrms. Single-way, but a cannon can be set up to draw aggression from the adult wyrms; lava strykewyrms are immune to cannon damage. Wyrm safespots exist from a marked south-west tile; strykewyrm safespot needs a long-range weapon. Konar's wyrm location list names 'Wyrmscraig: Wyrmling and Lava Strykewyrm' rather than the cavern by name.",
+        "evidence": {
+          "multi": "Slayer task/Wyrms: 'The cavern is a single-way combat area, but a multicannon can be used to draw aggression from the adult wyrms'",
+          "cannon": "Slayer task/Wyrms: 'Although a multicannon can be set up near the Lava Strykewyrms, they are immune to cannon damage.'; Location comparison: Wyrmscraig Cavern (Wyrm) | Cannonable {{Yes}}, Wyrmscraig Cavern (Lava Strykewyrm) | Cannonable {{No}}; Karuulm Slayer Dungeon: 'does not stop the cannon from working on the wyrms in Wyrmscraig Cavern'",
+          "requirements": "Wyrmscraig Cavern: 'accessible after partial completion of Fallen From Grace'; Slayer task/Wyrms: 'Adult wyrms and Lava Strykewyrms can both be found in the Wyrmscraig Cavern which can be easily reached using the slayer ring teleport.'"
+        }
+      },
+      {
+        "name": "Karuulm Slayer Dungeon - lower level (task-only)",
+        "displayName": "Karuulm Slayer Dungeon – lower level wyrms (task-only alcove, no cannon)",
+        "rank": 3,
+        "multi": false,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Boots of stone, boots of brimstone or granite boots unless the elite Kourend & Kebos diary is complete",
+          "62 Slayer"
+        ],
+        "notes": "16 wyrms: 9 normal plus 7 in a task-only area just south. Wyrms can be lured to a corner of the task-only area and ranged from outside their 6-tile magic range; Shadow Wyrms cannot be safespotted. Not aggressive.",
+        "evidence": {
+          "multi": "Karuulm Slayer Dungeon: 'The dungeon itself is single-way combat.'; Slayer task/Wyrms Location comparison: Karuulm Slayer Dungeon | Multicombat {{No}}",
+          "cannon": "Wyrm: 'In the Karuulm Slayer Dungeon, a dwarf multicannon cannot be set up, as the message \"The electricity here is too powerful for you to set up a cannon here\" will appear'; Dwarf multicannon prohibited list: 'Karuulm Slayer Dungeon (wyrm and Alchemical Hydra areas) - The electricity bursting through this part of the cavern would render the cannon useless.' (the two pages give different message wording); Karuulm Slayer Dungeon: 'A dwarf multicannon can be used in all areas here except the wyrm and Alchemical Hydra areas'",
+          "requirements": "Slayer task/Wyrms: 'Unless the elite tier of the Kourend & Kebos Diary has been completed, players must wear boots of stone, boots of brimstone, or granite boots to prevent taking rapid damage from the overheated floor.'; 'Seven of the wyrms are in a task-only area just south of the main batch of nine wyrms.'"
+        }
+      },
+      {
+        "name": "Neypotzli - Earthbound Cavern",
+        "displayName": "Neypotzli – Earthbound Cavern wyrmlings (cannon allowed, free supplies)",
+        "rank": 4,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Partial completion of Perilous Moons",
+          "62 Slayer"
+        ],
+        "notes": "6 wyrmlings that only drop wyrmling bones. Far from a bank with no convenient transport, but cooked bream, moss lizards and moonlight potions in the cavern sustain trips. Safespot between the statue and the top of the stairs.",
+        "evidence": {
+          "multi": "Neypotzli: 'The area is not multi combat, but a dwarven cannon can be set up for Slayer tasks within the caverns.'; Slayer task/Wyrms: Neypotzli | Multicombat {{No}}",
+          "cannon": "Neypotzli: 'a dwarven cannon can be set up for Slayer tasks within the caverns'; Slayer task/Wyrms: Neypotzli | Cannonable {{Yes}}",
+          "requirements": "Slayer task/Wyrms: 'This location requires partial completion of Perilous Moons to access and is generally not recommended due to its distance from a bank'"
+        }
+      },
+      {
+        "name": "Charred Dungeon",
+        "displayName": "Charred Dungeon – lava strykewyrms (60 Sailing)",
+        "rank": 5,
+        "multi": false,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "60 Sailing (not boostable) to dock at Charred Island",
+          "Rope for first entry (a rope item spawn exists on the island)"
+        ],
+        "notes": "12 aggressive lava strykewyrms that use melee and ranged; safespottable with a 9-tile weapon. Strykewyrms drop dragon metal sheets at an increased rate on task. Magma strykewyrm superior burrows and hits 20+ if you do not move two tiles.",
+        "evidence": {
+          "multi": "Charred Dungeon: 'The entire dungeon, barring the lava strykewyrms, is a multicombat area.'; Slayer task/Wyrms: Charred Dungeon | Multicombat {{No}}",
+          "cannon": "Charred Dungeon: 'A dwarf multicannon can be used throughout the dungeon, although it will not target the strykewyrms.'; Lava Strykewyrm infobox: immunecannon = Yes; Slayer task/Wyrms: Charred Dungeon | Cannonable {{No}}",
+          "requirements": "Slayer task/Wyrms: 'Requires 60 Sailing to dock at Charred Island for access to the dungeon.'; Charred Dungeon: 'requires level 60 Sailing to dock at. Rope is required when entering the dungeon the first time. However, there is a rope item spawn on the island so one doesn't need to be brought to the island.'"
+        }
+      }
+    ],
+    "notes": "Slayer task list row: 62 Slayer; assigned by Chaeldar, Konar, Nieve, Duradel and Mortimer (task infobox: Konar 125-190, extended 200-250; Mortimer 80-120 (200-250) or 130-220 (250-350)). Konar: 'Compared to other Slayer masters, Konar assigns wyrms and drakes more frequently and in higher amounts'; her location roll is Karuulm Slayer Dungeon, Neypotzli (Wyrmling), Charred Dungeon (Lava Strykewyrm) or Wyrmscraig (Wyrmling and Lava Strykewyrm). Slayer XP: wyrm 123, wyrmling 65, lava strykewyrm 154, Shadow Wyrm 3520, Magma strykewyrm 3655 (the Karuulm Slayer Dungeon page's monster table lists 133.3 for wyrms); xpPerKill uses the adult wyrm infobox value. Noxious halberd range forces wyrms to only mage and strykewyrms to only range. The Slayer task list row lists 'Charred Island Dungeon' as a location name; the dungeon page title is Charred Dungeon.",
+    "_verification": {
+      "corrections": [
+        "Wyrmscraig surface requirement: the task page contradicts itself (prose: surface wyrmlings accessible before partial Fallen From Grace; table: 'Requires partial completion of Fallen From Grace to access') - both quoted instead of asserting one.",
+        "Karuulm cannon evidence: the Wyrm page quote exists as written, but the Dwarf multicannon prohibited list gives different wording ('The electricity bursting through this part of the cavern would render the cannon useless'); both cited.",
+        "Charred Dungeon rope requirement softened: page says a rope item spawn exists on the island.",
+        "Wyrmscraig Cavern konarAssignable kept true with a note: Konar's table names 'Wyrmscraig: Wyrmling and Lava Strykewyrm', not the cavern by name.",
+        "Confirmed: xpPerKill 123, superiors Shadow Wyrm / Magma strykewyrm, alternatives Wyrmling and Lava Strykewyrm (Slayer task row), all six location-table rows (Karuulm 16 No/No; Neypotzli 6 No/Yes; Wyrmscraig 6 Yes/Yes; Wyrmscraig Cavern wyrms 5 No/Yes and strykewyrms 3 No/No; Charred Dungeon 12 No/No), Karuulm 'The dungeon itself is single-way combat' and boots requirement, Neypotzli 'not multi combat, but a dwarven cannon can be set up', Charred Dungeon 'barring the lava strykewyrms, is a multicombat area' and cannon 'will not target the strykewyrms', Lava Strykewyrm immunecannon = Yes, wyrm poisonresistance 100 vs strykewyrm 0, 50% earth / 50% water weaknesses, Wyrmscraig Cavern 'accessible after partial completion of Fallen From Grace' and slayer ring teleport, Wyrmscraig 62 Sailing and 6 wyrmlings."
+      ],
+      "confirmed": 30,
+      "downgraded": 0
+    }
+  }
+]

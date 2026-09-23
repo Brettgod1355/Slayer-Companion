@@ -1,0 +1,1299 @@
+[
+  {
+    "task": "Dust devils",
+    "wikiTaskPage": "Slayer task/Dust devils",
+    "monsterPages": [
+      "Dust devil",
+      "Choke devil"
+    ],
+    "bossTask": false,
+    "summary": "A very popular 65 Slayer task. A facemask or Slayer helmet must be worn or dust devils always hit 16 and drain your stats; with it they attack with ranged-based melee, so Protect from Melee or high ranged defence protects you. Most players burst or barrage (or chin) them in the multicombat south-east section of the Catacombs of Kourend, which is the easiest place to reach and has the catacombs drop table; the Smoke Dungeon has a quieter multi task-only area, and the Wilderness Slayer Cave is multi and cannonable but sits in level 25-28 Wilderness.",
+    "recommendedStyle": "Magic",
+    "styleNotes": "Low Defence, 35% elemental weakness to air spells, attacks are ranged-based melee; not immune to cannon or thralls.",
+    "requiredItems": [
+      "Facemask or Slayer helmet"
+    ],
+    "usefulItems": [
+      "Bracelet of slaughter or expeditious bracelet",
+      "Rune pouch with Ancient Magicks runes",
+      "Prayer potions",
+      "Herb sack",
+      "Gem bag",
+      "Bonecrusher"
+    ],
+    "superior": "Choke devil",
+    "alternatives": [],
+    "xpPerKill": 105,
+    "locations": [
+      {
+        "name": "Catacombs of Kourend",
+        "displayName": "Catacombs of Kourend – south-east section (level 110)",
+        "rank": 1,
+        "multi": true,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [],
+        "notes": "13 spawns (task page Location comparison); the catacombs variant is level 110 with 130 Slayer XP and 'more health and hit harder than those elsewhere'. Ranged can safespot across the water; the two north spawns can be lured to the western-most arch for a melee safespot. Fastest route is Xeric's talisman (Xeric's Heart) or the Kourend Castle Teleport spell (needs Client of Kourend).",
+        "evidence": {
+          "multi": "'Dust devils can be found in the multicombat south-east section of the catacombs.' (Dust devil); Location comparison Multicombat=Yes (Slayer task/Dust devils)",
+          "cannon": "'dwarf multicannons cannot be placed inside the Catacombs' (Catacombs of Kourend); Dwarf multicannon prohibited list: Catacombs of Kourend",
+          "requirements": "not stated; route: 'The fastest way to the main entrance is through Xeric's talisman with the \"Xeric's Heart\" function ... the Kourend Castle Teleport spell, which requires completion of Client of Kourend' (Catacombs of Kourend)"
+        }
+      },
+      {
+        "name": "Smoke Dungeon",
+        "displayName": "Smoke Dungeon – western task-only area (multi)",
+        "rank": 2,
+        "multi": true,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Desert Treasure I started (reached the search for the four diamonds)",
+          "Facemask, Slayer helmet or Slayer helmet (i) for the smoke (a gas mask also protects from the smoke but not from the dust devils' stat drain)"
+        ],
+        "notes": "Dusty Aliv guards the far western area and only admits players on a dust devil task; the Dust devil page says it 'has a much higher density of dust devils'. Enter via the smokey well in the desert. The task page calls the Smoke Dungeon 'a more remote, quiet location'.",
+        "evidence": {
+          "multi": "'In the western portion of the dungeon is a multi-combat, task-only area for players to slay dust devils.' (Smoke Dungeon)",
+          "cannon": "'Dusty Aliv will also stop players from placing a Dwarf multicannon in the task-only area.' (Smoke Dungeon); Dwarf multicannon prohibited list: Smoke Dungeon (task-only area)",
+          "requirements": "'It is visited during the Desert Treasure I (must have progressed until beginning the search for the four diamonds to enter) quest'; 'the player must wear a facemask, Slayer helmet, or Slayer helmet (i) to protect themselves from the smoke. A gas mask from the Plague City quest will also serve as adequate protection from the dungeon's smoke, however the dust devils inside the dungeon will still rapidly drain the player's stats despite the gas mask's protection.' (Smoke Dungeon)"
+        }
+      },
+      {
+        "name": "Smoke Dungeon",
+        "displayName": "Smoke Dungeon – main dungeon (single-way, cannonable)",
+        "rank": 3,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Desert Treasure I started (reached the search for the four diamonds)",
+          "Facemask, Slayer helmet or Slayer helmet (i) for the smoke (gas mask protects from smoke only)"
+        ],
+        "notes": "Dust devils are 'scattered throughout the western half of the dungeon'; 44 pins in total for the Smoke Dungeon on the task page (task-only area included). A cannon can be used in the single-way main dungeon.",
+        "evidence": {
+          "multi": "'The remaining locations are single-way combat and allow for a cannon.' (Slayer task/Dust devils)",
+          "cannon": "'A cannon cannot be used in the task-only area, though one can be used in the single-combat main dungeon area.' (Dust devil)",
+          "requirements": "'Entry into the Smoke Dungeon requires partial completion of Desert Treasure I. A facemask (or Slayer helmet) is required' (Dust devil)"
+        }
+      },
+      {
+        "name": "Wilderness Slayer Cave",
+        "displayName": "Wilderness Slayer Cave – north-east chamber (task-only, level 25-28 Wilderness)",
+        "rank": 4,
+        "multi": true,
+        "cannon": true,
+        "wilderness": true,
+        "wildernessLevelMin": 25,
+        "wildernessLevelMax": 28,
+        "konarAssignable": false,
+        "requirements": [
+          "Must be on a dust devil task (Peeve stops off-task kills)"
+        ],
+        "notes": "9 spawns in a chamber just south of the greater demons; nearest entrance is in level 29 Wilderness. Dust devils here have the Wilderness Slayer Cave drop table and, on a Krystilia task, Larran's keys (boosted chance in the cave). Do not bring items you are unwilling to lose. A 77 Agility (boostable) shortcut links the dust devils, jellies and hellhounds.",
+        "evidence": {
+          "multi": "'Dust devils can be found in the north-eastern quadrant of this multicombat dungeon' (Dust devil)",
+          "cannon": "'Multicombat area that additionally allows the use of a dwarf multicannon.' (Slayer task/Dust devils)",
+          "requirements": "'Abyssal demons, Nechryaels, Dust devils, and Jellies can only be killed while on Slayer task.' (Wilderness Slayer Cave); 'they will be stopped by Peeve' (Wilderness Slayer Cave); 'the dust devils here have access to the Wilderness Slayer Cave drop table' (Slayer task/Dust devils); 'All the creatures in the Wilderness Slayer Cave will have a boosted chance to drop Larran's Keys.' (Larran's key)"
+        }
+      }
+    ],
+    "notes": "Requires Desert Treasure I started, 65 Slayer and 70 combat to be assigned (task infobox; Slayer task list row). Konar assigns only the Catacombs of Kourend or Smoke Dungeon (Konar quo Maten table, 120-170); Krystilia assigns them in the Wilderness Slayer Cave only (75-125, level 18-24 per her table). Killing one in the Smoke Dungeon with a Slayer helmet is a Hard Desert Diary task. Dust devil infobox: slayxp 105 (Smoke Dungeon and Wilderness Slayer Cave), 130 (Catacombs); assignedby krystilia, vannaka, chaeldar, konar, nieve, duradel, mortimer.",
+    "_verification": {
+      "corrections": [
+        "Wilderness Slayer Cave notes: 'Larran's keys' qualified - Larran's key page says they drop only on a Krystilia task, with a boosted chance in the cave; the Dust devil/WSC pages do not mention keys directly.",
+        "Smoke Dungeon requirements: 'gas mask' clarified - the Smoke Dungeon page says a gas mask protects from the smoke but the dust devils still drain stats through it, so only facemask/Slayer helmet/Slayer helmet (i) are listed as the effective options.",
+        "Catacombs route attributed to the Catacombs of Kourend page (Xeric's Heart / Kourend Castle Teleport, which needs Client of Kourend).",
+        "All other fields confirmed: task page 'Slayer task/Dust devils' exists (skillreq 65, combatreq 70, otherreq Desert Treasure I partial); Dust devil infobox versions Smoke Dungeon/Wilderness Slayer Cave/Catacombs (93/93/110, slayxp 105/105/130, cat Dust Devils, elementalweaknesstype Air 35, immunecannon No, immunethrall No, attack style Ranged melee, max hit 16 without Facemask); Choke devil cat Dust Devils slayxp 3000; task page Location comparison rows Catacombs 13 Multi Yes Cannon No, Wilderness Slayer Cave 9 Multi Yes Cannon Yes, Smoke Dungeon 44 Multi Yes Cannon Maybe with the task-only/cannon note; all quoted sentences found verbatim on Dust devil, Smoke Dungeon, Wilderness Slayer Cave and Catacombs pages; Catacombs and Smoke Dungeon (task-only area) on the Dwarf multicannon prohibited list; Konar and Krystilia table rows as stated; Hard Desert Diary sentence verbatim."
+      ],
+      "confirmed": 18,
+      "downgraded": 1
+    }
+  },
+  {
+    "task": "Dwarves",
+    "wikiTaskPage": "Slayer task/Dwarves",
+    "monsterPages": [
+      "Dwarf",
+      "Black Guard",
+      "Chaos dwarf"
+    ],
+    "bossTask": false,
+    "summary": "A beginner task from Turael and Spria at 6 combat. Regular dwarves are level 7-20 and not aggressive, so any combat style works; the task page says they lack valuable drops and give only 10-61 Slayer XP, and advises lower-level players to stick to the lower-levelled dwarves. The Dwarven Mine under Ice Mountain has the most spawns (39) and Ice Mountain itself has 18 more, both just north of Falador; Lovakengj has 29 dwarves in a multicombat, cannonable area. Black Guards, dwarf gang members, chaos dwarves and Black Guard Berserkers also count.",
+    "recommendedStyle": "Any",
+    "styleNotes": "No elemental weakness listed for regular dwarves; stab (level 10) or crush (level 20) attackers with a max hit of 2-3; not aggressive; not immune to cannon or thralls.",
+    "requiredItems": [],
+    "usefulItems": [],
+    "superior": null,
+    "alternatives": [
+      "Black Guard",
+      "Chaos dwarf",
+      "Dwarf gang member",
+      "Black Guard Berserker"
+    ],
+    "xpPerKill": 16,
+    "locations": [
+      {
+        "name": "Ice Mountain",
+        "displayName": "Ice Mountain (dwarves and Black Guard)",
+        "rank": 1,
+        "multi": false,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "18 spawns of level 7-11 dwarves plus level 25 Black Guards on and around the mountain north of Falador; three more level 10 guards stand at the Dwarven Mine entrance.",
+        "evidence": {
+          "multi": "Location comparison: Ice Mountain Multicombat=No (Slayer task/Dwarves)",
+          "cannon": "Dwarf multicannon prohibited list: 'Ice Mountain (except on the western tiles of the mountain) - The dwarves won't be happy if you set up a cannon here.'; Location comparison Cannonable=No (Slayer task/Dwarves)",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Dwarven Mine",
+        "displayName": "Dwarven Mine (36 dwarves plus dwarf gang members)",
+        "rank": 2,
+        "multi": false,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "39 spawns: 36 level 10 dwarves plus 3 dwarf gang members (level 44, 48, 49), which drop only bones. Reached from the entrance south of Ice Mountain or the two entrances in Falador (north-east Falador building and the Mining Guild).",
+        "evidence": {
+          "multi": "Location comparison: Dwarven Mine Multicombat=No (Slayer task/Dwarves)",
+          "cannon": "Dwarf multicannon prohibited list: 'Dwarven Mine - The dwarves won't be happy if you set up a cannon here.'",
+          "requirements": "not stated; access: 'can be accessed from the entrance south of Ice Mountain or from the two entrances located in Falador' (Dwarven Mine); spawns 'Dwarf levels=10 spawns=36', 'Dwarf gang member levels=44, 48, 49 spawns=3' (Dwarven Mine); gang member drops table lists only Bones (Dwarf gang member)"
+        }
+      },
+      {
+        "name": "Lovakengj",
+        "displayName": "Lovakengj – dwarves around the furnace and 1st-floor buildings (multi, cannonable)",
+        "rank": 3,
+        "multi": true,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "21 level 7-11 dwarves on the ground (south from Xeric's Inferno, around the furnace building) plus 8 more in the 1st-floor buildings; the only multicombat dwarf area and a cannon is allowed.",
+        "evidence": {
+          "multi": "Location comparison: Lovakengj Multicombat=Yes; Lovakengj (1st floor Buildings) Multicombat=Yes (Slayer task/Dwarves)",
+          "cannon": "Location comparison: Lovakengj Cannonable=Yes; Lovakengj (1st floor Buildings) Cannonable=Yes (Slayer task/Dwarves); Lovakengj is not on the Dwarf multicannon prohibited list",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Keldagrim",
+        "displayName": "Keldagrim (dwarves, Black Guard and Black Guard Berserkers)",
+        "rank": 4,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "The Giant Dwarf started"
+        ],
+        "notes": "17 spawns in the city plus 1 Black Guard Berserker upstairs in the building west of the bank: level 20 dwarves (26 XP, 'Highest level normal dwarves'), level 48 Black Guards (40 XP) and level 66 Black Guard Berserkers (50 XP, max hit 13).",
+        "evidence": {
+          "multi": "Location comparison: Keldagrim Multicombat=No (Slayer task/Dwarves)",
+          "cannon": "Location comparison: Keldagrim Cannonable=Yes (Slayer task/Dwarves)",
+          "requirements": "'Travelling to Keldagrim requires starting The Giant Dwarf quest.' (Keldagrim)"
+        }
+      },
+      {
+        "name": "Surface of Mining Guild",
+        "displayName": "Falador – Mining Guild 1st floor and near the guild ladders",
+        "rank": 5,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "Only five level 10-11 dwarves (2 on the guild's first floor, where a cannon is allowed; 3 by the ladders, where it is not), but close to the Falador bank.",
+        "evidence": {
+          "multi": "Location comparison: Falador Mining Guild (1st floor) Multicombat=No (Slayer task/Dwarves)",
+          "cannon": "Location comparison: Falador Mining Guild (1st floor) Cannonable=Yes; near the ladders Cannonable=No (Slayer task/Dwarves)",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "White Wolf Mountain Tunnels",
+        "displayName": "White Wolf Mountain tunnels (level 20 dwarves)",
+        "rank": 6,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Fishing Contest completed (opens the tunnel)"
+        ],
+        "notes": "8 level 20 dwarves in the tunnels beneath the mountain between Taverley and Catherby.",
+        "evidence": {
+          "multi": "Location comparison: White Wolf Mountain tunnels Multicombat=No (Slayer task/Dwarves). Note the Multicombat area list names 'White Wolf Mountain' (surface) as multicombat.",
+          "cannon": "Location comparison: White Wolf Mountain tunnels Cannonable=Yes (Slayer task/Dwarves)",
+          "requirements": "'Once a player has completed the Fishing Contest quest, a tunnel that travels underneath the mountain becomes accessible.' (White Wolf Mountain)"
+        }
+      },
+      {
+        "name": "Taverley Dungeon",
+        "displayName": "Taverley Dungeon (dwarves and chaos dwarves)",
+        "rank": 7,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "8 spawns: 2 level 10 dwarves and 6 level 48 chaos dwarves (61 XP, aggressive) among the chaos druids near the entrance.",
+        "evidence": {
+          "multi": "'Taverley Dungeon is entirely single combat' (Taverley Dungeon); Location comparison: Taverley Dungeon Multicombat=No (Slayer task/Dwarves)",
+          "cannon": "Location comparison: Taverley Dungeon Cannonable=Yes (Slayer task/Dwarves)",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "South of Yanille",
+        "displayName": "South of Yanille (4 dwarves)",
+        "rank": 8,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "Four level 10 dwarves just south of Yanille; convenient with a Watchtower teleport.",
+        "evidence": {
+          "multi": "Location comparison: South of Yanille Multicombat=No (Slayer task/Dwarves)",
+          "cannon": "Location comparison: South of Yanille Cannonable=Yes (Slayer task/Dwarves)",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Deep Wilderness Dungeon",
+        "displayName": "Deep Wilderness Dungeon – chaos dwarves (level 49-56 Wilderness)",
+        "rank": 9,
+        "multi": false,
+        "cannon": true,
+        "wilderness": true,
+        "wildernessLevelMin": 49,
+        "wildernessLevelMax": 56,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "4 level 48 chaos dwarves (task page lists them as level 49; the Chaos dwarf infobox says 48); deep Wilderness, only worth it if already there.",
+        "evidence": {
+          "multi": "'It is entirely single-way combat and covers level 49 to 56 Wilderness.' (Deep Wilderness Dungeon)",
+          "cannon": "'A cannon can be used within the dungeon.' (Deep Wilderness Dungeon)",
+          "requirements": "not stated"
+        }
+      }
+    ],
+    "notes": "Assigned only by Turael and Spria (10-25) at 6 combat. xpPerKill is for the common level 10 dwarf (Dwarf infobox slayxp1 = 16); the task page says kills give 10-61 XP depending on variant. Other spots on the monster pages: Black Knights' Base jail (level 10, jail key required), Guard (dwarf) level 10 at the Dwarven Mine entrance (3) and south of the Coal Trucks (4), and Wilderness chaos dwarves north of the Bandit Camp (4) and south-east of Lava Dragon Isle (3), all listed on the task page's Location Comparison. Not assignable by Konar.",
+    "_verification": {
+      "corrections": [
+        "Added Lovakengj as a location (Dwarf LocLine; task page Location Comparison: 21 ground + 8 first-floor spawns, Multicombat Yes, Cannonable Yes) - it was only mentioned in the notes.",
+        "Keldagrim requirements: added 'The Giant Dwarf started' ('Travelling to Keldagrim requires starting The Giant Dwarf quest.').",
+        "White Wolf Mountain tunnels requirements: added Fishing Contest ('Once a player has completed the Fishing Contest quest, a tunnel ... becomes accessible.').",
+        "Taverley/Deep Wilderness chaos dwarves: level corrected to 48 per the Chaos dwarf infobox (combat = 48) and the Taverley monster table; the task page's variant table says 49, noted.",
+        "Dwarven Mine notes: access reworded to the page's wording (entrance south of Ice Mountain or two entrances in Falador); spawn split 36 dwarves + 3 gang members sourced from the Dwarven Mine monster table.",
+        "Notes: added the remaining monster-page locations (Black Knights' Base jail, Guard (dwarf) at the mine entrance and Coal Trucks, Wilderness chaos dwarves) so the list is complete against the Dwarf/Chaos dwarf LocLines.",
+        "All other fields confirmed: task page 'Slayer task/Dwarves' (combatreq 6, turael/spria 10-25); Dwarf LocLines (Lovakengj, Ice Mountain, Surface of Mining Guild, South of Yanille, Lovakengj 1st floor, Falador Mining Guild 1st floor, Dwarven Mine, Keldagrim, Black Knights' Base, White Wolf Mountain Tunnels); Black Guard LocLines Ice Mountain (25) and Keldagrim (48); Black Guard Berserker Keldagrim (66); Dwarf gang member Dwarven Mine (44, 48, 49, bones only); Chaos dwarf LocLines; all variants cat = Dwarves, assignedby turael,spria, immunecannon No, immunethrall No; Location Comparison Multicombat/Cannonable values for Ice Mountain (18, No/No), Dwarven Mine (39, No/No), Keldagrim (17, No/Yes), Falador Mining Guild 1st floor (2, No/Yes), near the ladders (3, No/No), White Wolf Mountain tunnels (8, No/Yes), Taverley (8, No/Yes), South of Yanille (4, No/Yes), Deep Wilderness Dungeon (4, No/Yes); Dwarf multicannon prohibited list entries for Ice Mountain (except western tiles) and Dwarven Mine; Deep Wilderness Dungeon quotes ('It is entirely single-way combat and covers level 49 to 56 Wilderness.', 'A cannon can be used within the dungeon.') verbatim; Taverley 'entirely single combat' verbatim; 'Lower level players may find it in their best interest to stick to fighting the lower leveled dwarves.' verbatim."
+      ],
+      "confirmed": 40,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Earth warriors",
+    "wikiTaskPage": "Slayer task/Earth warriors",
+    "monsterPages": [
+      "Earth warrior"
+    ],
+    "bossTask": false,
+    "summary": "A Krystilia-only Wilderness task. Level 51 earth warriors live in a dirt-lined chamber of the Edgeville Dungeon reached over monkey bars that need 15 Agility; the chamber spans level 7-10 Wilderness. They hit up to 5 with crush attacks and are slightly weaker to crush weapons and magic, and can be safespotted in the bottom-right corner or top of the first chamber. Bring food and an emergency teleport, and enable PK skull prevention in the settings so you cannot be skulled by mistake.",
+    "recommendedStyle": "Melee",
+    "styleNotes": "Slightly weaker to crush attacks and magic; crush attackers with a max hit of 5; aggressive; not immune to cannon or thralls.",
+    "requiredItems": [],
+    "usefulItems": [
+      "Crush weapon",
+      "Food",
+      "Emergency teleport",
+      "Wilderness weapons (costly but very effective)"
+    ],
+    "superior": null,
+    "alternatives": [],
+    "xpPerKill": 54,
+    "locations": [
+      {
+        "name": "Edgeville Dungeon (Wilderness)",
+        "displayName": "Edgeville Dungeon – earth warrior chamber (level 7-10 Wilderness)",
+        "rank": 1,
+        "multi": false,
+        "cannon": true,
+        "wilderness": true,
+        "wildernessLevelMin": 7,
+        "wildernessLevelMax": 10,
+        "konarAssignable": false,
+        "requirements": [
+          "15 Agility for the monkey bars"
+        ],
+        "notes": "11 spawns; the only place earth warriors exist. You cannot fail the monkey bars, but damage taken while crossing them stacks until you finish. Teleports still work here.",
+        "evidence": {
+          "multi": "Location comparison: Edgeville Dungeon (Wilderness) Amount 11, Multicombat=No, Cannonable=Yes (Slayer task/Earth warriors)",
+          "cannon": "'The Dwarf Multicannon can be used here.' (Edgeville Dungeon); Location comparison Cannonable=Yes (Slayer task/Earth warriors)",
+          "requirements": "'Their chamber requires the player to climb across a set of monkey bars, which requires 15 Agility.'; 'The chamber in which they are located stretches from level 7 to level 10 Wilderness.' (Earth warrior); task infobox skillreq = Agility 15 (Slayer task/Earth warriors)"
+        }
+      }
+    ],
+    "notes": "Assigned only by Krystilia (75-125, Wilderness level 7-10 per her table) at 35 combat; the task infobox lists 15 Agility as the skill requirement. The Earth Warrior Champion does not count. Infobox: slayxp 54, cat Earth Warriors, assignedby krystilia, immunecannon No, immunethrall No, attack style Crush, max hit 5. Not assignable by Konar.",
+    "_verification": {
+      "corrections": [
+        "Summary and location notes: removed the warnings about player killers disguised in bronze armour and about staying by the monkey bars to escape player killers (warnings about other players are not allowed); the PK skull prevention setting is kept as a settings tip.",
+        "Evidence split into two verbatim sentences (the combined quote had been joined with 'and').",
+        "All other fields confirmed: task page 'Slayer task/Earth warriors' (skillreq Agility 15, combatreq 35, krystilia 75-125); Earth warrior LocLine only 'Edgeville Dungeon (Wilderness)' level 51; Location Comparison Amount 11, Multicombat No, Cannonable Yes; Edgeville Dungeon 'The Dwarf Multicannon can be used here.' and 'Earth warrior ... spawns=11' verbatim; 'It is recommended to use crush weapons or magic ... slightly weaker to those attack styles.' verbatim; safespot sentence verbatim; Earth Warrior Champion exception verbatim; Krystilia table row 'Earth warriors | 75-125 | 51 | 54 | Edgeville Dungeon | 7-10'; Slayer task list row Combat 35, Krystilia only."
+      ],
+      "confirmed": 14,
+      "downgraded": 2
+    }
+  },
+  {
+    "task": "Elves",
+    "wikiTaskPage": "Slayer task/Elves",
+    "monsterPages": [
+      "Elf",
+      "Iorwerth Warrior",
+      "Elf Archer",
+      "Mourner"
+    ],
+    "bossTask": false,
+    "summary": "Assigned at 70 combat after Regicide by Vannaka, Chaeldar, Nieve and Duradel. Elves fight with a crystal bow or a crystal halberd that reaches two tiles, so keep at least two tiles between you and a warrior when safespotting. After Song of the Elves the Iorwerth Dungeon is the best spot: 13 Iorwerth Warriors that can be cannoned and trapped around the fabric panels in the west of the room, and they drop crystal shards and enhanced crystal teleport seeds. Before that only the Iorwerth Camp (and Lletya once Mourning's End Part I is started) is available; the task page recommends skipping elf tasks when possible because of their lower weight and the rarity of the seed drop.",
+    "recommendedStyle": "Any",
+    "styleNotes": "Iorwerth Warriors use melee with a two-tile halberd reach and archers use ranged; no elemental weakness listed; not immune to cannon or thralls.",
+    "requiredItems": [],
+    "usefulItems": [
+      "Iorwerth camp teleport",
+      "Crystal teleport seed (Lletya)",
+      "Dwarf multicannon (Iorwerth Dungeon)",
+      "Mourner gear (Mourner Headquarters basement)"
+    ],
+    "superior": null,
+    "alternatives": [
+      "Mourner (level 108 only)",
+      "Reanimated elf (35 XP)",
+      "Iorwerth Archer",
+      "Elf Archer",
+      "Elf Warrior",
+      "Guard (Prifddinas)"
+    ],
+    "xpPerKill": 107.5,
+    "locations": [
+      {
+        "name": "Iorwerth Dungeon",
+        "displayName": "Iorwerth Dungeon – Iorwerth Warriors (Prifddinas)",
+        "rank": 1,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Song of the Elves"
+        ],
+        "notes": "13 Iorwerth Warriors that drop crystal shards and enhanced crystal teleport seeds; monsters here do not need a task to be killed. Use the spaces around the fabric panels in the west of the room to trap the warriors north or south of you; they reach two tiles.",
+        "evidence": {
+          "multi": "'A dwarf multicannon can be used in the dungeon. However, the whole dungeon is single-way combat.' (Iorwerth Dungeon)",
+          "cannon": "'The dungeon contains 13 Iorwerth Warriors and allows the use of a cannon.' (Slayer task/Elves)",
+          "requirements": "'Players have access to the dungeon after the completion of Song of the Elves quest' (Iorwerth Dungeon); 'Requires completion of Song of the Elves.' (Slayer task/Elves)"
+        }
+      },
+      {
+        "name": "Prifddinas",
+        "displayName": "Prifddinas – guards at the four gates, Tower of Voices and market place",
+        "rank": 2,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Song of the Elves"
+        ],
+        "notes": "Pairs of halberd-wielding guards at the north, east, south and west gates (the east and north gates are close to a bank), 4 at the Tower of Voices entrances, 8 on the walkways above it and 3 in the market place. Gate guards can be safespotted by attacking from outside their wander radius and pushing them against the gate; market guards by shooting over Glenda or the spice stall bush. They drop crystal shards and enhanced crystal teleport seeds.",
+        "evidence": {
+          "multi": "Location comparison: Prifddinas South/East/North/West Gate, Tower of Voices, market place Multicombat=No (Slayer task/Elves)",
+          "cannon": "Location comparison: Prifddinas gates, Tower of Voices, market place Cannonable=Yes (Slayer task/Elves)",
+          "requirements": "'Elves wielding halberds, available after Song of the Elves.' (Slayer task/Elves)"
+        }
+      },
+      {
+        "name": "Iorwerth Camp",
+        "displayName": "Iorwerth Camp – Iorwerth Archers and Warriors",
+        "rank": 3,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Regicide started",
+          "45 Agility (boostable) for the forest obstacles"
+        ],
+        "notes": "6 archers and 6 warriors; the only option before Lletya is unlocked. Use an Iorwerth camp teleport, as the walk is tedious. Safespot warriors with the stools around the camp. Cannon use is discouraged because tents, barrels and crates block it.",
+        "evidence": {
+          "multi": "Location comparison: Iorwerth Camp Multicombat=No (Slayer task/Elves)",
+          "cannon": "Location comparison: Iorwerth Camp Cannonable=Yes (Slayer task/Elves); 'players intending to use a dwarf multicannon are discouraged from doing so as the camp is impeded by tents, barrels, and crates' (Slayer task/Elves)",
+          "requirements": "'The Regicide quest needs to be started to access it, as well as at least 45 Agility'; 'to pass obstacles along the way through the forest.' (Iorwerth Camp); the Agility figure carries a Boostable template on the page"
+        }
+      },
+      {
+        "name": "Lletya",
+        "displayName": "Lletya – Elf Archers and Warriors",
+        "rank": 4,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Mourning's End Part I started"
+        ],
+        "notes": "1 Elf Archer and 2 Elf Warriors on the ground plus 1 more archer upstairs; teleport with a charged crystal teleport seed. Use the bench near the entrance or the poles in the village to trap the warriors. No notable drops besides crystal teleport seeds, but there is a bank and an altar.",
+        "evidence": {
+          "multi": "Location comparison: Lletya Multicombat=No (Slayer task/Elves)",
+          "cannon": "Location comparison: Lletya Cannonable=Yes (Slayer task/Elves)",
+          "requirements": "'is a small village that can be accessed after starting Mourning's End Part I' (Lletya); 'only available after starting Mourning's End Part I' (Slayer task/Elves)"
+        }
+      },
+      {
+        "name": "Mourner Headquarters",
+        "displayName": "Mourner Headquarters basement – level 108 mourners (West Ardougne)",
+        "rank": 5,
+        "multi": false,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Mourning's End Part I started",
+          "Full mourner gear, or Mourning's End Part II for the Slayer ring dark beast teleport",
+          "Not available after Song of the Elves"
+        ],
+        "notes": "4 level 108 mourners downstairs count; the mourners upstairs do not despite being elves. After Song of the Elves they are gone.",
+        "evidence": {
+          "multi": "Location comparison: Mourner Headquarters (downstairs) Multicombat=No (Slayer task/Elves)",
+          "cannon": "Location comparison: Mourner Headquarters (downstairs) Cannonable=No (Slayer task/Elves)",
+          "requirements": "'Mourner Gear must be equipped at all times to access this area unless you have completed Mourning's End Part II, after which you can use the Dark Beast teleport of the Slayer ring'; 'Only available after starting Mourning's End Part I and until the Ardougne Revolution during Song of the Elves.' (Slayer task/Elves)"
+        }
+      }
+    ],
+    "notes": "Requires Regicide and 70 combat to be assigned (task infobox otherreq 'Completion of Regicide'); not assignable by Konar (Iorwerth Warrior/Elf Archer/Mourner infoboxes: assignedby vannaka, chaeldar, nieve, duradel). Mourners at any level other than 108 and the elves fought during Song of the Elves do not count. Reanimated elves (Adept Reanimation on ensouled elf heads) give 35 Slayer XP but 754 Prayer XP. Iorwerth Warriors at the camp do not drop crystal shards or enhanced seeds; those in the dungeon do.",
+    "_verification": {
+      "corrections": [
+        "Summary: removed 'use Protect from Missiles against archers' (not on the task page or the Elf Archer page) and the Iorwerth Dungeon 'fire pit' safespot (not on the Iorwerth Dungeon page or the task page, which describes the fabric-panel trap).",
+        "Prifddinas location broadened to include the Tower of Voices (4 + 8 guards) and market place (3 guards) rows of the task page's Location comparison, not only the gates.",
+        "Lletya notes: 'more upstairs' corrected to one archer upstairs (Location comparison 'Lletya (upstairs) | 1 Archer').",
+        "Mourner Headquarters notes: added the 4 spawns from the Location comparison.",
+        "Alternatives: added the other variants named on the task page (Iorwerth Archer, Elf Archer, Elf Warrior, Guard (Prifddinas)) and the reanimated elf XP.",
+        "Evidence quotes fixed to verbatim page text (Iorwerth Camp Agility sentence split around the Boostable template; Lletya quote without ellipsis; Mourner HQ two sentences separated).",
+        "All other fields confirmed: 'Slayer task/Elves' (combatreq 70, otherreq Regicide, vannaka/chaeldar/nieve/duradel); Iorwerth Warrior slayxp 107.5 cat Elves, Elf Archer 105, Mourner level 108 107.5; Location comparison rows Iorwerth Camp 6/6 No/Yes, Iorwerth Dungeon 13 No/Yes, Lletya No/Yes, Mourner HQ downstairs 4 No/No, Prifddinas rows No/Yes; Iorwerth Dungeon 'A dwarf multicannon can be used in the dungeon. However, the whole dungeon is single-way combat.' verbatim; stools/two-tile sentence verbatim; Lletya crystal teleport sentence; Mourner page 'They will also count towards an elf slayer task.'; reanimated elf 754 Prayer XP sentence; exceptions verbatim; Slayer task list row Regicide, Combat 70, Mourner (Lvl 108 variant only)."
+      ],
+      "confirmed": 26,
+      "downgraded": 2
+    }
+  },
+  {
+    "task": "Ents",
+    "wikiTaskPage": "Ent",
+    "monsterPages": [
+      "Ent"
+    ],
+    "bossTask": false,
+    "summary": "A Krystilia-only Wilderness task. Level 101 ents stand in the forests north and east of the Chaos Temple in the eastern Wilderness (Krystilia lists them at level 9-14 and 20-24). They are aggressive crush attackers that hit up to 10 with an attack range of 1 and have a 40% weakness to fire spells. Bring an axe: a dead ent's trunk can be chopped for noted logs for a minute (two logs per success in the Wilderness), and the medium Wilderness diary raises the chop success chance by 15%.",
+    "recommendedStyle": "Any",
+    "styleNotes": "40% elemental weakness to fire spells; crush melee attackers with attack range 1 and max hit 10; aggressive. The level 86 (Woodcutting Guild) infobox says not immune to cannon or thralls; the level 101 infobox does not state cannon or thrall immunity.",
+    "requiredItems": [],
+    "usefulItems": [
+      "Axe (any you can use) to chop the trunk for noted logs",
+      "Emergency teleport"
+    ],
+    "superior": null,
+    "alternatives": [],
+    "xpPerKill": 107.5,
+    "locations": [
+      {
+        "name": "East of Chaos Temple (Wilderness)",
+        "displayName": "Forest east of the Chaos Temple (Wilderness, about level 9-14)",
+        "rank": 1,
+        "multi": "unknown",
+        "cannon": "unknown",
+        "wilderness": true,
+        "wildernessLevelMin": 9,
+        "wildernessLevelMax": 14,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "4 spawns (Ent LocLine pins). Reach with a burning amulet teleport to the Chaos Temple's north entrance in level 15 Wilderness and walk east. Elder chaos druids in the temple itself can teleblock players who get too close. In the Wilderness the trunk gives two noted logs per success.",
+        "evidence": {
+          "multi": "not stated for the forests; the Chaos Temple (Wilderness) page says 'The area is also multi-combat', while the Multicombat area list names only 'The Chaos Temple (church) in the western Wilderness (not the Chaos Temple in the eastern Wilderness)'",
+          "cannon": "not stated",
+          "requirements": "not stated; route: 'Burning amulet teleport to the north entrance in level 15 Wilderness.' (Chaos Temple (Wilderness))"
+        }
+      },
+      {
+        "name": "North of Chaos Temple (Wilderness)",
+        "displayName": "Forest north of the Chaos Temple (Wilderness, about level 20-24)",
+        "rank": 2,
+        "multi": "unknown",
+        "cannon": "unknown",
+        "wilderness": true,
+        "wildernessLevelMin": 20,
+        "wildernessLevelMax": 24,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "6 spawns (Ent LocLine pins), deeper than the eastern forest; same trunk-chopping mechanics. Do not bring anything you cannot afford to lose.",
+        "evidence": {
+          "multi": "not stated for the forests (see east forest evidence)",
+          "cannon": "not stated",
+          "requirements": "not stated"
+        }
+      }
+    ],
+    "notes": "No Slayer task/Ents page exists (fetch returned missingtitle); data taken from the Ent monster page, Krystilia's task table ('Forests north and east of the Chaos Temple', Wilderness level '9-14, 20-24', 35-60 assigned, level 101, 107.5 XP) and the Slayer task list row (Krystilia only). Ents only appear on members' worlds. The level 86 ents beneath the Woodcutting Guild are outside the Wilderness. While on a Wilderness task ents drop slayer's enchantments but not looting bags or Larran's keys. Trunks can only be chopped by the killer. Not assignable by Konar (infobox assignedby krystilia).",
+    "_verification": {
+      "corrections": [
+        "Summary: removed the safespot advice ('standing one to three tiles from a tree and using ranged, a halberd or magic') - not on the Ent page; replaced with the infobox attack range of 1.",
+        "styleNotes: cannon/thrall immunity downgraded - only the level 86 infobox carries immunecannon/immunethrall = No; the level 101 (Wilderness) infobox has no such fields.",
+        "Location notes: added spawn counts from the LocLine pins (east 4, north 6) and the burning amulet route with its level-15 wording from the Chaos Temple (Wilderness) page.",
+        "All other fields confirmed: Ent LocLines are exactly East of Chaos Temple (101), North of Chaos Temple (101), Woodcutting Guild Ent Dungeon (86); level 101 infobox slayxp 107.5, cat Ents, assignedby krystilia, elementalweaknesstype Fire 40, attack style Crush, max hit 10; trunk/1 minute, medium Wilderness Diary 15%, 2 noted logs in the Wilderness, slayer's enchantment/looting bag/Larran's key sentences and members-only sentence all verbatim; Krystilia table row and Slayer task list row as stated; Chaos Temple (Wilderness) teleblock sentence verbatim; multi/cannon remain unknown (the Chaos Temple page's 'The area is also multi-combat' describes the temple, and the Multicombat area list names only the western Chaos Temple)."
+      ],
+      "confirmed": 14,
+      "downgraded": 2
+    }
+  },
+  {
+    "task": "Fever spiders",
+    "wikiTaskPage": "Fever spider",
+    "monsterPages": [
+      "Fever spider"
+    ],
+    "bossTask": false,
+    "summary": "A 42 Slayer task from Vannaka and Chaeldar, done in the brewery basement of Braindeath Island, which needs Rum Deal started and is reached via Pirate Pete north of Port Phasmatys. Slayer gloves must be worn when the spiders hit you or you take 12.5% of your Hitpoints and become diseased; rangers and magers can safespot on the crate edges in the south-west corner and wear better gloves, carrying Relicym's balm in case of disease. The spiders have low Defence and there are many of them, so the task is quick.",
+    "recommendedStyle": "Any",
+    "styleNotes": "Low Defence, 25% elemental weakness to fire spells, stab attackers (max hit 4, or 1-12 without slayer gloves) that inflict disease; not aggressive; not immune to cannon or thralls.",
+    "requiredItems": [
+      "Slayer gloves (when being hit by the spiders)"
+    ],
+    "usefulItems": [
+      "Relicym's balm (if safespotting without slayer gloves)",
+      "Ectophial to reach Pirate Pete quickly"
+    ],
+    "superior": null,
+    "alternatives": [],
+    "xpPerKill": 40,
+    "locations": [
+      {
+        "name": "Braindeath Island",
+        "displayName": "Braindeath Island – brewery basement",
+        "rank": 1,
+        "multi": "unknown",
+        "cannon": "unknown",
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Rum Deal started",
+          "42 Slayer",
+          "Slayer gloves"
+        ],
+        "notes": "The only place fever spiders exist. Talk to Pirate Pete at the dock north-east of Port Phasmatys (Ectophial then run north); the spiders are two tiles wide so many crate-edge safespots exist.",
+        "evidence": {
+          "multi": "not stated (Fever spider and Braindeath Island pages say nothing; not on the Multicombat area list)",
+          "cannon": "not stated (not on the Dwarf multicannon prohibited list; no page read says a cannon can be used)",
+          "requirements": "'found only on Braindeath Island, in the brewery basement. This indirectly means players must also have started the Rum Deal quest in order to access them. Players must wear slayer gloves while fighting them, or face being damaged for 12.5% of their Hitpoints level and becoming diseased.' (Fever spider)"
+        }
+      }
+    ],
+    "notes": "No Slayer task/Fever spiders page exists (fetch returned missingtitle); data taken from the Fever spider monster page (slaylvl 42, slayxp 40, cat Fever Spiders, assignedby vannaka, chaeldar, elementalweaknesstype Fire 25, immunecannon No, immunethrall No), the Braindeath Island page and the Slayer task list row (42 Slayer, 40 combat, Rum Deal partially, Slayer gloves; Vannaka and Chaeldar). Not assignable by Konar.",
+    "_verification": {
+      "corrections": [
+        "No changes to the data. Added max hit/attack style from the infobox to styleNotes and the fetch result confirming no task page exists.",
+        "All fields confirmed: Fever spider infobox as listed; 'found only on Braindeath Island, in the brewery basement ... Rum Deal ... slayer gloves ... 12.5% of their Hitpoints level and becoming diseased' verbatim; safespot/crate/two-tile/Relicym's balm sentences verbatim; Braindeath Island 'can only be accessed after starting Rum Deal. It is the only location of Fever spiders' and Pirate Pete/Ectophial route verbatim; Slayer task list row as stated. Multi/cannon stay unknown (not stated on any page read; Braindeath Island is on neither the Multicombat area list nor the Dwarf multicannon prohibited list)."
+      ],
+      "confirmed": 12,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Fire giants",
+    "wikiTaskPage": "Slayer task/Fire giants",
+    "monsterPages": [
+      "Fire giant",
+      "Branda the Fire Queen"
+    ],
+    "bossTask": false,
+    "summary": "Assigned at 65 combat by many masters. Fire giants are aggressive slash attackers hitting up to 11-13 that can be safespotted at every listed location and are 100% weak to water spells. The task page recommends the multicombat Catacombs of Kourend for relatively AFK kills with the catacombs drop table, or the Giants' Den next door where the same level 104/109 giants can be cannoned in single-way combat; kill the level 109s first because they have more Hitpoints but much lower Defence. Krystilia tasks must be done in the Deep Wilderness Dungeon around level 53 Wilderness.",
+    "recommendedStyle": "Melee",
+    "styleNotes": "100% elemental weakness to water spells; slash attackers, max hit 11 (level 86), 10 (104), 13 (109); aggressive; not immune to cannon or thralls; immune to weak burns.",
+    "requiredItems": [],
+    "usefulItems": [
+      "Dwarf multicannon (everywhere except the Catacombs)",
+      "Boots of stone, brimstone or granite (Karuulm)",
+      "Rope (Waterfall Dungeon)",
+      "Axe and 875 coins (Brimhaven)",
+      "Facemask, Slayer helmet or gas mask (Smoke Dungeon)"
+    ],
+    "superior": null,
+    "alternatives": [
+      "Branda the Fire Queen (not for Konar or Krystilia tasks)"
+    ],
+    "xpPerKill": 111,
+    "locations": [
+      {
+        "name": "Catacombs of Kourend",
+        "displayName": "Catacombs of Kourend – level 104/109 fire giants (multi)",
+        "rank": 1,
+        "multi": true,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [],
+        "notes": "12 spawns of the stronger variants (133.5 / 153.5 XP) that drop ancient shards and dark totem pieces. Safespots exist both while the giants are aggressive and after they lose aggression.",
+        "evidence": {
+          "multi": "'The lone exception is the Catacombs of Kourend, which does not allow a cannon but is a multicombat area.' (Slayer task/Fire giants)",
+          "cannon": "'dwarf multicannons cannot be placed inside the Catacombs' (Catacombs of Kourend); Dwarf multicannon prohibited list: Catacombs of Kourend",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Giants' Den",
+        "displayName": "Giants' Den – level 104/109 fire giants (cannonable)",
+        "rank": 2,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [],
+        "notes": "8 spawns of the same catacombs variants with the catacombs drop table (dark totem pieces, ancient shards) and the bone-burying prayer restore. First unlock the strange passage via the vine ladder near the skeletons in the catacombs; afterwards fairy ring DJR and run south-west along the coast. Kills here do not count for a Konar Catacombs assignment.",
+        "evidence": {
+          "multi": "'A dwarf multicannon can be used in the den; however, it is only single-way combat.' (Giants' Den)",
+          "cannon": "'A dwarf multicannon can be used in the den' (Giants' Den)",
+          "requirements": "not stated; 'the Fire Giants in the Giants' Den do not count towards a slayer task required to be completed within the Catacombs of Kourend, assigned by Konar quo Maten.' (Giants' Den)"
+        }
+      },
+      {
+        "name": "Waterfall Dungeon",
+        "displayName": "Waterfall Dungeon (11 fire giants)",
+        "rank": 3,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Waterfall Quest completed (or Glarial's amulet during it)",
+          "Rope, unless the medium Kandarin Diary is done"
+        ],
+        "notes": "Rooms of seven and four giants; use the rope on the rock and the dead tree rather than the left-click options or you fall down the waterfall and lose 8 Hitpoints. Place a cannon in the middle and stand by the single door in the western room as a safespot.",
+        "evidence": {
+          "multi": "Location comparison: Waterfall Dungeon Multicombat=No (Slayer task/Fire giants)",
+          "cannon": "'Cannon can AoE Fire Giants by placing it in the middle and running to the safespot(s).' (Slayer task/Fire giants)",
+          "requirements": "'Players must use a rope to reach the dungeon's entrance unless they have completed the medium Kandarin Diary. Players who have not completed Waterfall Quest must also have Glarial's amulet in their inventory' (Waterfall Dungeon)"
+        }
+      },
+      {
+        "name": "Stronghold Slayer Dungeon",
+        "displayName": "Stronghold Slayer Cave – task-only (12 fire giants)",
+        "rank": 4,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Must be on a fire giant task"
+        ],
+        "notes": "Groups of three giants each separated by a safespot; the entrance is beside Nieve/Steve and the Slayer ring teleports there.",
+        "evidence": {
+          "multi": "Location comparison: Stronghold Slayer Cave Multicombat=No (Slayer task/Fire giants)",
+          "cannon": "'A dwarf multicannon can be used in the dungeon.' (Stronghold Slayer Cave)",
+          "requirements": "'players can only attack the Slayer monster they were assigned, and only while the task has not been completed.' (Stronghold Slayer Cave)"
+        }
+      },
+      {
+        "name": "Karuulm Slayer Dungeon",
+        "displayName": "Karuulm Slayer Dungeon (13 fire giants)",
+        "rank": 5,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Boots of stone, boots of brimstone or granite boots (not needed with the Elite Kourend & Kebos Diary)"
+        ],
+        "notes": "Set up a cannon in the middle of the room and stand in the entrance hallway as a safespot; stamina potions help with reloading.",
+        "evidence": {
+          "multi": "'The dungeon itself is single-way combat.' (Karuulm Slayer Dungeon)",
+          "cannon": "'A dwarf multicannon can be used in all areas here except the wyrm and Alchemical Hydra areas' (Karuulm Slayer Dungeon)",
+          "requirements": "'players who wish to explore further beyond the entrance chamber must wear the boots of stone, boots of brimstone or granite boots' (Karuulm Slayer Dungeon)"
+        }
+      },
+      {
+        "name": "Isle of Souls Dungeon",
+        "displayName": "Isle of Souls Dungeon (8 fire giants)",
+        "rank": 6,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [],
+        "notes": "Minigame teleport to Soul Wars and run north-east; cannon in the middle and safespot at the hall entrance.",
+        "evidence": {
+          "multi": "'A dwarf multicannon can be used in the dungeon, though it is not a multicombat area.' (Isle of Souls Dungeon)",
+          "cannon": "'A dwarf multicannon can be used in the dungeon' (Isle of Souls Dungeon)",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Brimhaven Dungeon",
+        "displayName": "Brimhaven Dungeon (13 fire giants across two floors)",
+        "rank": 7,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "875 coins per entry or a one-off 1,000,000 coins to Saniboch",
+          "Axe to cut the vines"
+        ],
+        "notes": "8 giants on the first floor and 5 on the ground floor; the wiki calls it inefficient for a Konar task because the spawns are spread between floors.",
+        "evidence": {
+          "multi": "'A Dwarf multicannon may be used within the dungeon, although it is a single way combat zone.' (Brimhaven Dungeon)",
+          "cannon": "'A Dwarf multicannon may be used within the dungeon' (Brimhaven Dungeon)",
+          "requirements": "'players must pay Saniboch, who is outside the entrance, 875 coins each time they wish to enter the dungeon. Alternatively, a one-off fee of 1,000,000 coins can be paid for permanent access. A player will also need an axe to cut the vines' (Brimhaven Dungeon)"
+        }
+      },
+      {
+        "name": "Deep Wilderness Dungeon",
+        "displayName": "Deep Wilderness Dungeon – Krystilia location (level 49-56 Wilderness)",
+        "rank": 8,
+        "multi": false,
+        "cannon": true,
+        "wilderness": true,
+        "wildernessLevelMin": 49,
+        "wildernessLevelMax": 56,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "5 giants around level 53 Wilderness west of the Mage Arena; the only Wilderness fire giants. The medium Wilderness Diary plus 46 Agility unlocks a crevice shortcut straight to them, avoiding the prayer-draining shadow spiders. Cannon tiles along the west side of the lava pool; safespot in the south-east tunnel near the Monk of Zamorak.",
+        "evidence": {
+          "multi": "'It is entirely single-way combat and covers level 49 to 56 Wilderness.' (Deep Wilderness Dungeon)",
+          "cannon": "'A cannon can be used within the dungeon.' (Deep Wilderness Dungeon)",
+          "requirements": "none required; 'A crevice can be found near the staircase, requiring level 46 Agility and completion of the medium Wilderness Diary, that will take the player directly to the fire giant area.' (Deep Wilderness Dungeon); 'this being their only location in the Wilderness' (Deep Wilderness Dungeon)"
+        }
+      },
+      {
+        "name": "Charred Dungeon",
+        "displayName": "Charred Dungeon (6 fire giants, multi and cannonable)",
+        "rank": 9,
+        "multi": true,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "60 Sailing"
+        ],
+        "notes": "The only multicombat fire giants that also allow a cannon, but only six spawns and needs Sailing access.",
+        "evidence": {
+          "multi": "'The entire dungeon, barring the lava strykewyrms, is a multicombat area.' (Charred Dungeon); Location comparison Charred Dungeon Multicombat=Yes (Slayer task/Fire giants); 'only the Charred Dungeon spawns are in a multicombat area.' (Fire giant)",
+          "cannon": "'A dwarf multicannon can be used throughout the dungeon' (Charred Dungeon); Location comparison: Charred Dungeon Cannonable=Yes (Slayer task/Fire giants)",
+          "requirements": "'Requires level 60 Sailing to access.' (Slayer task/Fire giants)"
+        }
+      },
+      {
+        "name": "Smoke Dungeon",
+        "displayName": "Smoke Dungeon (6 fire giants, not recommended)",
+        "rank": 10,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Desert Treasure I started",
+          "Facemask, Slayer helmet or gas mask"
+        ],
+        "notes": "Too few scattered giants to be worthwhile; the northern wall of the entrance safespots only the north-west giant.",
+        "evidence": {
+          "multi": "Location comparison: Smoke Dungeon Multicombat=No (Slayer task/Fire giants)",
+          "cannon": "Location comparison: Smoke Dungeon Cannonable=Yes (Slayer task/Fire giants)",
+          "requirements": "'Requires wearing a Facemask, Slayer Helmet, or Gas mask to avoid taking damage from the dungeon's smoke effect.' (Slayer task/Fire giants)"
+        }
+      }
+    ],
+    "notes": "Konar assigns Brimhaven Dungeon, Catacombs of Kourend, Isle of Souls Dungeon, Giants' Den, Karuulm Slayer Dungeon, Stronghold Slayer Dungeon and Waterfall Dungeon (Konar table, 120-175; Waterfall only once the quest is done per the Konar page's update note); she does not assign the Smoke Dungeon. Krystilia assigns only the Deep Wilderness Dungeon (75-125, level 53). Branda the Fire Queen (Royal Titans, infobox slayxp 735, cat Fire Giants, assignedby vannaka, chaeldar, nieve, duradel) counts for those masters' tasks and the Slayer helmet bonus applies to her but not Eldric. xpPerKill is for the level 86 variant; the catacombs/Giants' Den variants give 133.5 and 153.5. The Fire giant page's sentence that only the Charred Dungeon is multicombat conflicts with the task page and Catacombs page, which call the Catacombs multicombat; the task page is followed. The Fire giant LocLine list also names a 'Crandor and Karamja Dungeon (Unreachable)' spawn.",
+    "_verification": {
+      "corrections": [
+        "Brimhaven requirements: dropped the unsupported '10 Woodcutting' figure - the pages only say an axe is needed for the vines.",
+        "Summary/notes: 'safespotted almost everywhere' tightened to the task table (every listed location Safespottable Yes); the level 109 advice reworded to the task page ('more HP, yet significantly lower Defence'); removed the 'player-killer hotspot' warning about other players from the summary.",
+        "Giants' Den notes: access order fixed per the page (the vine ladder from the catacombs must be used once to unlock the strange passage) and the Konar-task exception quoted.",
+        "Notes: recorded the Fire giant page's contradictory 'only the Charred Dungeon spawns are in a multicombat area' sentence and the unreachable Crandor LocLine.",
+        "All other fields confirmed: 'Slayer task/Fire giants' (combatreq 65, six masters); Fire giant infobox (slayxp 111/133.5/153.5, elementalweaknesstype Water 100, immunecannon No, immunethrall No, immuneburn weak burns, attack style Slash, max hit 11/10/13); LocLines match the ten listed locations; Location comparisons Brimhaven 8+5 No/Yes, Charred 6 Yes/Yes, Stronghold Slayer Cave 12 No/Yes, Deep Wilderness 5 No/Yes, Catacombs 12 Yes/No, Giants' Den 8 No/Yes, Karuulm 13 No/Yes, Smoke Dungeon 6 No/Yes, Waterfall 11 No/Yes, Isle of Souls 8 No/Yes; every quoted sentence found verbatim on the Giants' Den, Waterfall Dungeon (rope/Glarial's amulet, 8 Hitpoints fall, rooms of seven and four), Stronghold Slayer Cave, Karuulm, Isle of Souls, Brimhaven, Deep Wilderness Dungeon, Charred Dungeon and task pages; Catacombs on the Dwarf multicannon prohibited list; Konar table row and Krystilia row as stated; Branda infobox as stated; 'The helmet boost will work for her, but not against her counterpart, Eldric the Ice King.' verbatim."
+      ],
+      "confirmed": 48,
+      "downgraded": 1
+    }
+  },
+  {
+    "task": "Fleshcrawlers",
+    "wikiTaskPage": "Flesh Crawler",
+    "monsterPages": [
+      "Flesh Crawler"
+    ],
+    "bossTask": false,
+    "summary": "A low-level Mazchna task done on the second level of the Stronghold of Security (the Catacomb of Famine). Flesh crawlers are aggressive to everyone but max hit 1 with a fast three-tick attack, so turn on auto-retaliate and let them come to you, moving rooms when they stop being aggressive; a regen bracelet offsets the chip damage. They are 2x2 so they can get stuck on each other. They drop herbs often, including grimy ranarr, which makes them a popular low-level money maker.",
+    "recommendedStyle": "Any",
+    "styleNotes": "Max hit 1 with a 3-tick slash attack, 20% elemental weakness to fire spells, aggressive to all levels; not immune to cannon or thralls.",
+    "requiredItems": [],
+    "usefulItems": [
+      "Regen bracelet",
+      "Herb sack"
+    ],
+    "superior": null,
+    "alternatives": [],
+    "xpPerKill": 25,
+    "locations": [
+      {
+        "name": "Stronghold of Security: Catacomb of Famine",
+        "displayName": "Stronghold of Security – level 2 (Catacomb of Famine)",
+        "rank": 1,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "26 spawns of level 28, 35 and 41 crawlers in the rooms of the second level (Catacomb of Famine), reached through the Stronghold entrance in the Barbarian Village mine. Ranged safespots exist, such as the south-west corner of the south-east room, or hide behind non-aggressive giant rats. Count Check in the Lumbridge graveyard can teleport you to the entrance once.",
+        "evidence": {
+          "multi": "Multicombat area list names only 'The first level of the Stronghold of Security' (Multicombat area); the Stronghold of Security page itself does not state the combat type of level 2",
+          "cannon": "'Note: A cannon can be placed in the stronghold.' (Stronghold of Security)",
+          "requirements": "not stated"
+        }
+      }
+    ],
+    "notes": "No Slayer task/Flesh Crawlers page exists (fetch returned missingtitle for 'Slayer task/Flesh Crawlers' and 'Slayer task/Fleshcrawlers'); data taken from the Flesh Crawler monster page (slayxp 25, cat Flesh Crawlers, assignedby mazchna, elementalweaknesstype Fire 20, immunecannon No, immunethrall No, attack speed 3, max hit 1), the Stronghold of Security page (Flesh Crawler levels 28, 35, 41, spawns 26) and the Slayer task list row (Stronghold of Security level 2, Combat 15, Mazchna). The only location for flesh crawlers. Not assignable by Konar.",
+    "_verification": {
+      "corrections": [
+        "Multi evidence corrected: the quote 'Unlike the other levels, the first is a multicombat area.' is NOT on the Stronghold of Security page; single-way status for level 2 now rests on the Multicombat area list, which names only the first level. multi=false kept as an inference from that list.",
+        "All other fields confirmed: Flesh Crawler infobox as listed; 'Note: A cannon can be placed in the stronghold.' verbatim; 'Flesh crawlers are aggressive to any level players', south-west corner safespot, giant rat trick, three-tick attack, max 1 damage/regen bracelet, auto retaliate/move rooms, 2x2 stuck sentences all verbatim; grimy ranarr money-making sentence verbatim; Stronghold 'found at the heart of the Barbarian Village mine' and Count Check teleport verbatim; monster table spawns=26; Slayer task list row Combat 15, Mazchna."
+      ],
+      "confirmed": 13,
+      "downgraded": 1
+    }
+  },
+  {
+    "task": "Fossil island wyverns",
+    "wikiTaskPage": "Slayer task/Fossil Island wyverns",
+    "monsterPages": [
+      "Spitting Wyvern",
+      "Taloned Wyvern",
+      "Long-tailed Wyvern",
+      "Ancient Wyvern"
+    ],
+    "bossTask": false,
+    "summary": "A 66 Slayer task in the Wyvern Cave on Fossil Island, requiring Bone Voyage and Elemental Workshop to be assigned. The wyverns use melee and an icy breath that must be reduced with an elemental, mind, dragonfire or ancient wyvern shield (antifire and the anti-dragon shield do nothing); only the ancient wyvern shield stops the freeze. Tank them with high ranged defence and Protect from Melee, prioritising Spitting Wyverns and Long-tailed Wyverns (fight the latter in melee range) and avoiding Taloned and Ancient Wyverns, which use a typeless ranged attack from any distance. The task is unprofitable and many players buy the Stop the Wyvern unlock to block it.",
+    "recommendedStyle": "Melee",
+    "styleNotes": "25-35% elemental weakness to air spells (Spitting/Long-tailed 25, Taloned/Ancient 35); slash melee plus icy breath that ignores antifire; the Taloned, Long-tailed and Ancient ranged attacks are typeless and hit through prayer; not immune to cannon or thralls (but the cave forbids cannons).",
+    "requiredItems": [
+      "Elemental shield, mind shield, dragonfire shield, dragonfire ward or ancient wyvern shield"
+    ],
+    "usefulItems": [
+      "Ancient wyvern shield (freeze immunity)",
+      "Prayer potions",
+      "High-healing food",
+      "Digsite pendant",
+      "Fossil Storage box at the cave entrances"
+    ],
+    "superior": null,
+    "alternatives": [
+      "Spitting Wyvern",
+      "Taloned Wyvern",
+      "Long-tailed Wyvern",
+      "Ancient Wyvern (82 Slayer)"
+    ],
+    "xpPerKill": 205,
+    "locations": [
+      {
+        "name": "Wyvern Cave",
+        "displayName": "Wyvern Cave – northern task-only cave (Mushroom Forest)",
+        "rank": 1,
+        "multi": false,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Bone Voyage",
+          "Must be on a Fossil Island wyvern task (Weve guards the entrance)",
+          "66 Slayer (82 for Ancient Wyverns)"
+        ],
+        "notes": "4 Spitting, 4 Taloned, 4 Long-tailed and 3 Ancient Wyverns. Digsite pendant to Fossil Island, Magic Mushtree to Mushroom Meadow, then run south to the trapdoor in the Mushroom Forest. Not safespottable (task table). Fossil Storage box at the entrance.",
+        "evidence": {
+          "multi": "Location comparison: Task-only Wyvern Cave Multicombat=No (Slayer task/Fossil Island wyverns)",
+          "cannon": "'A dwarf multicannon cannot be set up; attempting to do so will result in \"Fungi start eating into the legs of your cannon; you quickly decide not to set it up here.\"' (Wyvern Cave); Dwarf multicannon prohibited list: Wyvern Cave",
+          "requirements": "'The northern cavern is monitored by Weve (Steve's son) who only allows players on a Slayer task to kill the wyverns inside' (Wyvern Cave)"
+        }
+      },
+      {
+        "name": "Wyvern Cave",
+        "displayName": "Wyvern Cave – southern cave east of the Museum Camp",
+        "rank": 2,
+        "multi": false,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Bone Voyage",
+          "66 Slayer (82 for Ancient Wyverns)"
+        ],
+        "notes": "4 Spitting, 4 Taloned, 4 Long-tailed and 2 Ancient Wyverns; can be killed off-task. Teleport to the Digsite, take the barge, run east past the bank then south-east into the cave. Not safespottable (task table). Fossil Storage box at the entrance.",
+        "evidence": {
+          "multi": "Location comparison: Wyvern Cave, east of Museum Camp Multicombat=No (Slayer task/Fossil Island wyverns)",
+          "cannon": "'A dwarf multicannon cannot be set up' (Wyvern Cave); Dwarf multicannon prohibited list: Wyvern Cave",
+          "requirements": "'the wyverns in the southern cavern can be killed at any time.' (Wyvern Cave)"
+        }
+      }
+    ],
+    "notes": "The wiki does not rank the two caves; the task-only cave is listed first here because it has one more Ancient Wyvern and cannot be used off-task. Konar assigns the Wyvern Cave (15-30, 55-75 extended) and requires 66 Slayer, 60 combat, Bone Voyage and Elemental Workshop I. Unlocks: Stop the Wyvern (500 points, blocks without a block slot) and Wyver-nother two (100 points, 55-75 per task). Ancient Wyverns give 315 XP. All four wyvern infoboxes: cat Fossil Island Wyverns, assignedby chaeldar, konar, nieve, duradel, immunecannon No, immunethrall No. Protect from Magic halves the icy breath damage reduction compared with a shield.",
+    "_verification": {
+      "corrections": [
+        "No data changes; styleNotes now give the per-variant air weakness (25/35) and the evidence for typeless attacks from the infoboxes; location notes name the Fossil Storage boxes and the 'Not safespottable' source.",
+        "All fields confirmed: 'Slayer task/Fossil Island wyverns' (skillreq 66, combatreq 60, otherreq Bone Voyage; Elemental Workshop and Bone Voyage sentence); Location Comparison rows (southern 4/4/4/2, task-only 4/4/4/3, Multicombat No, Cannonable No, Safespottable No, 'Requires a Fossil Island Wyverns slayer task'); Wyvern Cave 'Weve (Steve's son) who only allows players on a Slayer task', 'the wyverns in the southern cavern can be killed at any time', fungi cannon message and both routes verbatim; Wyvern Cave on the Dwarf multicannon prohibited list; infoboxes slayxp 205/205/205/315, slaylvl 66/66/66/82, elementalweaknesstype Air; shield table (anti-dragon shield No/No, ancient wyvern shield prevents freeze); Spitting/Long-tailed/Taloned/Ancient tactics and Stop the Wyvern sentences verbatim; Konar row as stated; Slayer task list row Bone Voyage, Combat 60, four masters."
+      ],
+      "confirmed": 20,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Frost dragons",
+    "wikiTaskPage": "Frost dragon",
+    "monsterPages": [
+      "Frost dragon"
+    ],
+    "bossTask": false,
+    "summary": "Assigned by Nieve and Duradel at 85 combat, but you need 87 Sailing to reach Grimstone; after mooring there once, fairy ring DLP takes you straight into the Grimstone Dungeon. Frost dragons use melee and a short-range icy dragonfire that freezes you unless fully protected by an antifire potion with an anti-dragon shield or a super antifire alone, and because both attacks are short range they can be safespotted. They are 100% weak to fire spells, weakest to crush then stab, and take extra damage from dragonbane weapons; a task-only cave to the west of the main area has extra spawns.",
+    "recommendedStyle": "Magic",
+    "styleNotes": "100% elemental weakness to fire spells; melee defence weakest to crush then stab; weak to dragonbane weapons; more resistant to ranged; immune to cannon damage.",
+    "requiredItems": [
+      "Anti-dragon shield with antifire potion, or super antifire potion (dragonfire shield/ward or ancient wyvern shield also listed)"
+    ],
+    "usefulItems": [
+      "Dragonbane weapon",
+      "Fire spells",
+      "Fairy ring access (DLP)"
+    ],
+    "superior": null,
+    "alternatives": [],
+    "xpPerKill": 235.5,
+    "locations": [
+      {
+        "name": "Grimstone Dungeon",
+        "displayName": "Grimstone Dungeon – central area and western task-only cave",
+        "rank": 1,
+        "multi": "unknown",
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "87 Sailing to reach Grimstone (fairy ring DLP after mooring once)",
+          "Western cave is task-only"
+        ],
+        "notes": "The only location for frost dragons. The dragons are in the centre of the dungeon, reached by climbing up the rock face from the north or south (the south climb needs 83 Agility, boostable). Loot spawns on the dragon's central north-eastern tile. Off-task attacks on the western cave give the message 'You feel a strange coldness wash over you'.",
+        "evidence": {
+          "multi": "not stated (Frost dragon and Grimstone Dungeon pages say nothing; not on the Multicombat area list)",
+          "cannon": "'Attempting to set up a Dwarf multicannon anywhere in the dungeon will result in the message It's far too cold for you to set up a cannon here.' (Grimstone Dungeon); Frost dragon infobox immunecannon = yes",
+          "requirements": "'requiring 87 Sailing to access. A combat level of 85 is required to be assigned them as a slayer task, along with the Sailing requirement to access the island. Once players have moored on the island at least once, it can also be accessed via fairy ring code' DLP (Frost dragon); 'To the west of this area is another cave with frost dragons, though these can only be killed on a slayer task.' (Grimstone Dungeon)"
+        }
+      }
+    ],
+    "notes": "No Slayer task/Frost dragons page exists (the title redirects to Frost dragon); data taken from the monster page (slayxp 235.5, cat Frost Dragons, assignedby Nieve, Duradel, elementalweaknesstype Fire 100, immunecannon yes, immunethrall No, max hit 16 stab / 50 dragonfire), the Grimstone Dungeon page and the Slayer task list row (85 combat, 87 Sailing; anti-dragon shield or dragonfire ward/ancient wyvern shield/dragonfire shield plus antifire potion; Nieve and Duradel). Frost dragons do not count as blue or metal dragons. The Chance of Heavy Frost unlock raises the task weighting from 5 to 8 (the page calls it 60%) and I see Dragons extends the amount to 180-240. Not assignable by Konar.",
+    "_verification": {
+      "corrections": [
+        "Evidence quote trimmed so it matches the page text around the fairy-ring template; no data changes. Notes now carry the exact unlock numbers from the page's changes list (weighting 5 to 8; 180-240).",
+        "All fields confirmed: Frost dragon page sentences on 87 Sailing/85 combat/DLP, melee + short-ranged icy dragonfire, crush then stab, 100% fire weakness, more resistant to ranged, dragonbane, antifire + anti-dragon shield or super antifire, safespottable, loot tile, not blue/metal dragons, Chance of Heavy Frost 60%, I see Dragons, task-only area message all verbatim; infobox immunecannon = yes; Grimstone Dungeon cannon message, 83 Agility (boostable) south climb, task-only western cave and DLP-after-mooring sentences verbatim; Slayer task list row as stated. Multi stays unknown (not stated on either page; Grimstone is not on the Multicombat area list)."
+      ],
+      "confirmed": 16,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "General Graardor",
+    "wikiTaskPage": "General Graardor",
+    "monsterPages": [
+      "General Graardor"
+    ],
+    "bossTask": true,
+    "summary": "A boss task (Like a Boss unlock) from Konar, Nieve and Duradel: General Graardor, the level 624 Bandos general in Bandos' Stronghold inside the God Wars Dungeon, worth 338 Slayer XP per kill.",
+    "recommendedStyle": "Any",
+    "styleNotes": "Infobox: elemental weakness Earth 40%; not immune to cannon or thralls.",
+    "requiredItems": [
+      "Hammer (to enter Bandos' Stronghold)",
+      "Rope (first visit to the dungeon)"
+    ],
+    "usefulItems": [
+      "Ecumenical key (skips the 40 kill count)",
+      "An item devoted to Bandos so his followers are not aggressive",
+      "Climbing boots or Trollheim Teleport (61 Magic, Eadgar's Ruse) for the walk"
+    ],
+    "superior": null,
+    "alternatives": [],
+    "xpPerKill": 338,
+    "locations": [
+      {
+        "name": "God Wars Dungeon (Bandos boss room)",
+        "displayName": "God Wars Dungeon – Bandos' Stronghold",
+        "rank": 1,
+        "multi": true,
+        "cannon": "unknown",
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Death Plateau (to be assigned God Wars tasks)",
+          "Troll Stronghold started (Dad defeated) or Easy Combat Achievements for Ghommal's hilt teleport",
+          "60 Strength or 60 Agility to enter the dungeon",
+          "70 Strength and a hammer for Bandos' Stronghold",
+          "40 Bandos kill count or an ecumenical key (lower with Combat Achievement tiers)"
+        ],
+        "notes": "Entrance north of Trollheim. Goblins are the easiest Bandos followers for kill count; the count needed drops to 35/30/25/15 with the hard/elite/master/grandmaster Combat Achievement tiers.",
+        "evidence": {
+          "multi": "Multicombat area list: 'God Wars Dungeon' (Multicombat area)",
+          "cannon": "not stated as prohibited; Dwarf multicannon page: 'The Kalphite Queen, King Black Dragon, Thermonuclear smoke devil, and inhabitants of the God Wars Dungeon may also destroy a cannon if a player attempts to use it'",
+          "requirements": "'He is found in Bandos' Stronghold, which requires a Strength level of 70 and a hammer to access. To enter his quarters, players must have an ecumenical key in their inventory or have killed 40' of Bandos' followers (General Graardor); 'To get Slayer assignments related to the God Wars Dungeon, such as boss tasks, players must complete the Death Plateau quest.'; 'Accessing it requires partial completion of Troll Stronghold (defeating Dad) or full completion of the Easy Combat Achievements (in order to use the teleport on Ghommal's hilt 1)'; 'and either 60 Strength or 60 Agility. A rope is also required the first time.' (God Wars Dungeon)"
+        }
+      }
+    ],
+    "notes": "Boss task only: rolled from the Bosses category after unlocking Like a Boss (200 points); assigned by Konar, Nieve and Duradel (infobox assignedby konar,nieve,duradel; slayxp 338; cat Bosses). The Boss page's Slayer table lists General Graardor at the God Wars Dungeon with 1 Slayer, 70 Strength and Death Plateau. Brimstone keys drop only on a Konar task. Followers of a god are not aggressive if at least one item devoted to that god is equipped. No fight mechanics recorded by design.",
+    "_verification": {
+      "corrections": [
+        "Location notes: removed the 'dungeon's chill drains stats and run energy unless the Fire of Unseasonal Warmth is lit' claim - not on the God Wars Dungeon page.",
+        "usefulItems: 'Bandos-aligned item' reworded to the page's wording ('at least one item that is devoted to their god'); Trollheim Teleport requirement (61 Magic, Eadgar's Ruse) added from the page.",
+        "Requirements evidence split into verbatim fragments (the Death Plateau and access sentences were joined with 'and' before).",
+        "All other fields confirmed: General Graardor infobox slayxp 338, cat Bosses, assignedby konar,nieve,duradel, immunecannon No, immunethrall No, combat 624; 70 Strength/hammer/ecumenical key/40 kills (35/30/25/15 by CA tier)/goblins sentence verbatim; God Wars Dungeon Death Plateau, Troll Stronghold (Dad)/Easy CA, 60 Strength or 60 Agility, rope first time verbatim; God Wars Dungeon on the Multicombat area list; Dwarf multicannon 'inhabitants of the God Wars Dungeon may also destroy a cannon' verbatim (cannon stays unknown); Boss page 'Like a boss' 200-point sentence and Graardor row verbatim; brimstone key note verbatim; no fight mechanics in summary/notes."
+      ],
+      "confirmed": 16,
+      "downgraded": 1
+    }
+  },
+  {
+    "task": "Ghosts",
+    "wikiTaskPage": "Slayer task/Ghosts",
+    "monsterPages": [
+      "Ghost",
+      "Tortured soul"
+    ],
+    "bossTask": false,
+    "summary": "A beginner task from Turael, Spria and Mazchna at 13 combat. Ghosts are undead, so Crumble Undead and the salve amulet work well, and they drop nothing in most places. Level 19-29 ghosts are scattered across many areas; the Catacombs of Kourend has 17 in a multicombat area and the Sepulchre of Death at the bottom of the Stronghold of Security has 31 level 76-77 ghosts for the most XP per kill. Tortured souls near the Ectofuntus are the task page's pick for mid-levels with Morytania access. Spectres, ghasts, banshees and shades do not count.",
+    "recommendedStyle": "Any",
+    "styleNotes": "Undead and spectral attributes (salve amulet and Crumble Undead effective); 50% elemental weakness to air spells; aggressive; not immune to cannon or thralls.",
+    "requiredItems": [],
+    "usefulItems": [
+      "Salve amulet",
+      "Crumble Undead runes"
+    ],
+    "superior": null,
+    "alternatives": [
+      "Tortured soul",
+      "Forgotten Soul",
+      "Death wing",
+      "Revenants"
+    ],
+    "xpPerKill": 25,
+    "locations": [
+      {
+        "name": "Catacombs of Kourend",
+        "displayName": "Catacombs of Kourend – ghost chambers (multi)",
+        "rank": 1,
+        "multi": true,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "17 level 19 ghosts (10 + 7 in the Catacombs monster tables) split between two chambers with about equal amounts; safespottable. Catacombs ghosts are excluded from dark totem drops.",
+        "evidence": {
+          "multi": "Location comparison: Catacombs of Kourend Multicombat=Yes (Slayer task/Ghosts); 'this particular dungeon is a multicombat area (excluding the brutal dragon area)' (Catacombs of Kourend)",
+          "cannon": "'dwarf multicannons cannot be placed inside the Catacombs' (Catacombs of Kourend); Dwarf multicannon prohibited list: Catacombs of Kourend",
+          "requirements": "not stated; 'Components for the dark totem are obtained by killing the monsters (excluding ghosts) throughout the catacombs.' (Catacombs of Kourend)"
+        }
+      },
+      {
+        "name": "Stronghold of Security: Sepulchre of Death",
+        "displayName": "Stronghold of Security – level 4 (Sepulchre of Death), level 76-77 ghosts",
+        "rank": 2,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "31 level 76-77 ghosts giving 75-80 XP each, mixed with 32 ankou; not safespottable. The only place for the level 76 and 77 ghosts.",
+        "evidence": {
+          "multi": "Location comparison: Stronghold of Security: Sepulchre of Death Multicombat=No (Slayer task/Ghosts); Multicombat area list names only 'The first level of the Stronghold of Security' (Multicombat area)",
+          "cannon": "'Note: A cannon can be placed in the stronghold.' (Stronghold of Security); Location comparison Cannonable=Yes (Slayer task/Ghosts)",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Varrock Sewers",
+        "displayName": "Varrock Sewers (3 ghosts, multi, F2P)",
+        "rank": 3,
+        "multi": true,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "Only three level 19 ghosts but available in free-to-play (the sewers are one of the largest free-to-play dungeons) and entered by the manhole east of Varrock Palace; not safespottable per the task table.",
+        "evidence": {
+          "multi": "'It is a fairly large multi-combat underground area' (Varrock Sewers); Multicombat area list: Varrock Sewers",
+          "cannon": "'The dwarf multicannon can be used here' (Varrock Sewers)",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Draynor Manor",
+        "displayName": "Draynor Manor – 1st floor (5 ghosts)",
+        "rank": 4,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "Three ghosts in one room and two in other rooms upstairs; safespottable.",
+        "evidence": {
+          "multi": "Location comparison: Draynor Manor (1st floor) Multicombat=No (Slayer task/Ghosts)",
+          "cannon": "Location comparison: Draynor Manor (1st floor) Cannonable=Yes (Slayer task/Ghosts)",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Taverley Dungeon",
+        "displayName": "Taverley Dungeon (14 ghosts)",
+        "rank": 5,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "14 ghosts; not safespottable per the task table.",
+        "evidence": {
+          "multi": "'Taverley Dungeon is entirely single combat' (Taverley Dungeon)",
+          "cannon": "Location comparison: Taverley Dungeon Cannonable=Yes (Slayer task/Ghosts)",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Outside Ectofuntus",
+        "displayName": "Outside the Ectofuntus – tortured souls (level 59)",
+        "rank": 6,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Priest in Peril"
+        ],
+        "notes": "6 tortured souls (level 59) giving 51 XP each; not aggressive, count as ghosts and can be safespotted by hiding behind plants and fences. Two more are west of Port Phasmatys (also Priest in Peril).",
+        "evidence": {
+          "multi": "Location comparison: Outside Ectofuntus Multicombat=No (Slayer task/Ghosts)",
+          "cannon": "Location comparison: Outside Ectofuntus Cannonable=Yes (Slayer task/Ghosts)",
+          "requirements": "'Completion of Priest in Peril required.' (Slayer task/Ghosts)"
+        }
+      },
+      {
+        "name": "The Forgotten Cemetery",
+        "displayName": "The Forgotten Cemetery (Wilderness, about level 30)",
+        "rank": 7,
+        "multi": false,
+        "cannon": true,
+        "wilderness": true,
+        "wildernessLevelMin": 30,
+        "wildernessLevelMax": 30,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "6 ghosts among 'many' ankou; Wilderness, so do not bring anything you cannot afford to lose.",
+        "evidence": {
+          "multi": "Location comparison: The Forgotten Cemetery Multicombat=No (Slayer task/Ghosts)",
+          "cannon": "Location comparison: The Forgotten Cemetery Cannonable=Yes (Slayer task/Ghosts)",
+          "requirements": "not stated; 'The Forgotten Cemetery is a minor area in the Wilderness at around level 30.' (The Forgotten Cemetery)"
+        }
+      }
+    ],
+    "notes": "The wiki does not name a single best location; ranking here follows spawn count, multi status and XP. Other Location Comparison rows on the task page: Crumbling Tower (10 forgotten souls, No/Yes), Death Altar (17, Mourning's End Part II, No/No), Grave of Scorpius (6, No/Yes), Melzar's Maze 1st floor (5, Dragon Slayer I partial), Mynydd (5), north-east of the dense essence mine (5), north-east of the Chaos Temple (Wilderness) (6, Multicombat Yes, Cannonable Yes), north-west of Ferox Enclave (5, Wilderness), Temple in The Golem / Ruins of Uzer (5), Revenant Caves (30, No/No), Shaman Caves (8 death wings, Legends' Quest partial), West Ardougne (2, Plague City partial) and west of Port Phasmatys (2 tortured souls). Ghost infobox: slayxp 25/75/80 (levels 19/76/77), cat Ghosts, assignedby turael, spria, mazchna; Forgotten Soul 50 XP, Tortured soul 51, Death wing 80 (cat Bats, Ghosts). Assigned only by Turael, Spria and Mazchna; not assignable by Konar.",
+    "_verification": {
+      "corrections": [
+        "Notes: location list completed against the Ghost LocLines and the task page's Location Comparison (added north-east of the dense essence mine, north-east of the Chaos Temple (Wilderness) - multi and cannonable - north-west of Ferox Enclave, Temple in The Golem/Ruins of Uzer, and the Revenant Caves/Crumbling Tower/Death Altar amounts).",
+        "Catacombs notes: dark totem claim sourced to the Catacombs page ('excluding ghosts'); spawn split 10 + 7 from its monster tables.",
+        "Stronghold evidence corrected: the 'Unlike the other levels, the first is a multicombat area.' quote is NOT on the Stronghold of Security page; replaced with the task-page row and the Multicombat area list entry.",
+        "All other fields confirmed: 'Slayer task/Ghosts' (combatreq 13, turael/spria 15-30, mazchna 30-50); 'Only regular ghosts, forgotten souls, tortured souls, death wings and Revenants can be killed to satisfy the task' and the spectres/ghasts/banshees/shades exclusion verbatim; Ghost page 'As they are undead, Crumble Undead and the salve amulet work well on them. Ghosts are rarely used for training, because they drop nothing in most locations.' verbatim, attributes undead, spectral, elementalweaknesstype Air 50; Location Comparison rows Catacombs 17 Yes/No, Sepulchre 31 No/Yes (Safespottable No), Varrock Sewers 3 Yes/Yes, Draynor Manor 1st floor 5 No/Yes, Taverley 14 No/Yes, Outside Ectofuntus 6 No/Yes (Priest in Peril), Forgotten Cemetery 6 No/Yes; Varrock Sewers 'It is a fairly large multi-combat underground area' and 'The dwarf multicannon can be used here' verbatim; Tortured soul 'They count as ghosts for slayer tasks ... safespot them by hiding behind plants and fences.' verbatim, aggressive No; The Forgotten Cemetery 'at around level 30' verbatim; Stronghold Ghost levels 76, 77 spawns 31 and Ankou spawns 32; Catacombs on the Dwarf multicannon prohibited list; 'Taverley Dungeon is entirely single combat' verbatim."
+      ],
+      "confirmed": 30,
+      "downgraded": 1
+    }
+  }
+]

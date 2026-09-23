@@ -1,0 +1,1024 @@
+[
+  {
+    "task": "Aberrant spectres",
+    "wikiTaskPage": "Slayer task/Aberrant spectres",
+    "monsterPages": [
+      "Aberrant spectre",
+      "Deviant spectre"
+    ],
+    "bossTask": false,
+    "summary": "Aberrant spectres use a magic attack with a max hit of 8 that Protect from Magic fully negates, but without a nose peg or Slayer helmet they use a special attack that hits through prayer and drains stats fast. They are undead, so a Salve amulet (ei) beats the Slayer helmet bonus, and they drop lots of herbs and seeds so a herb sack and seed box are recommended. The Stronghold Slayer Cave is the usual choice because a cannon can be used there, Nieve or Steve is right outside and a bank is close; the Slayer Tower gives bonus Slayer XP from the Morytania Diary. Deviant spectres in the Catacombs count too but have much higher defence and give lower XP rates.",
+    "recommendedStyle": "Any",
+    "styleNotes": "Undead (Salve amulet works, does not stack with Slayer helmet); 50% elemental weakness to air spells; not poisonous; not immune to cannon.",
+    "requiredItems": [
+      "Nose peg or Slayer helmet"
+    ],
+    "usefulItems": [
+      "Salve amulet (ei)",
+      "Herb sack",
+      "Seed box",
+      "Ectoplasmator",
+      "Dwarf multicannon (Stronghold Slayer Cave or Deepfin Mine)"
+    ],
+    "superior": "Abhorrent spectre",
+    "alternatives": [
+      "Deviant spectre",
+      "Repugnant spectre (superior of Deviant spectre)"
+    ],
+    "xpPerKill": 90,
+    "locations": [
+      {
+        "name": "Stronghold Slayer Cave",
+        "displayName": "Stronghold Slayer Cave (task-only, cannon)",
+        "rank": 1,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Task-only area",
+          "Optional: 72 Agility shortcut to reach spectres faster"
+        ],
+        "notes": "Not aggressive-safespottable until the aggression timer runs out; entrance is next to Nieve/Steve in the Tree Gnome Stronghold and the Slayer ring teleports to it. Can be crowded.",
+        "evidence": {
+          "multi": "Slayer task/Aberrant spectres Location Comparison: Stronghold Slayer Cave, Multicombat = No; \"A Cannon can be used in the Stronghold Slayer Cave and the Deepfin Mine, although these are not Multicombat areas\".",
+          "cannon": "Slayer task/Aberrant spectres: \"A Cannon can be used in the Stronghold Slayer Cave and the Deepfin Mine\". Aberrant spectre: \"It is possible to use a dwarf multicannon inside the Stronghold Slayer Cave. This is recommended for the fastest Slayer experience.\" Stronghold Slayer Cave: \"A dwarf multicannon can be used in the dungeon.\"",
+          "requirements": "Stronghold Slayer Cave: \"Anyone can enter the dungeon, but players can only attack the Slayer monster they were assigned, and only while the task has not been completed.\" Stronghold Slayer Cave: \"There is a shortcut in the dungeon requiring 72 Agility (can be boosted) to use. This allows the player to reach aberrant spectres and ankou more quickly.\""
+        }
+      },
+      {
+        "name": "Slayer Tower (1st floor)",
+        "displayName": "Slayer Tower - 1st floor (Morytania Diary XP bonus)",
+        "rank": 2,
+        "multi": false,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Priest in Peril"
+        ],
+        "notes": "Safespot using walls, brick piles and suits of armour; keep 6 tiles away to stay out of their attack range. Kills here get 2.5-10% bonus Slayer XP depending on Morytania Diary tier.",
+        "evidence": {
+          "multi": "Slayer task/Aberrant spectres Location Comparison: Slayer Tower (1st floor), Multicombat = No. Single-way combat page: \"(Chaotic) death spawns summoned by nechryael or nechryarch in the Slayer Tower are able to attack the player even though it is single-way combat.\"",
+          "cannon": "Slayer task/Aberrant spectres Location Comparison: Slayer Tower, Cannonable = No. Dwarf multicannon prohibited list: \"Slayer Tower - A strange magical force won't let you set up a cannon here.\" Slayer Tower: \"Dwarf multicannons cannot be used here.\"",
+          "requirements": "Slayer task (List of assignments row, Other requirements): \"Priest in Peril\"; Slayer Tower: \"Players may also earn bonus Slayer experience depending on their progress on the Morytania Diary. The amount of bonus experience gained starts at 2.5% with the easy tasks completed, increasing by 2.5% for each set complete, up to 10% with the elite tasks completed.\""
+        }
+      },
+      {
+        "name": "Catacombs of Kourend",
+        "displayName": "Catacombs of Kourend - Deviant spectres (multi, no cannon)",
+        "rank": 3,
+        "multi": true,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [],
+        "notes": "Deviant spectres are aggressive and in multi-combat, so Protect from Magic is near-mandatory; they can be safespotted from north of the western spawns or across the water south of the arch. Higher defence means lower XP/hr than aberrant spectres, but they drop ancient shards and dark totem pieces. Quick access via fairy ring DJR once the north-west exit has been used.",
+        "evidence": {
+          "multi": "Slayer task/Aberrant spectres Location Comparison: Catacombs of Kourend, Multicombat = Yes. Deviant spectre: \"they are aggressive and found in a multi-combat zone\". Catacombs of Kourend: \"As this particular dungeon is a multicombat area (excluding the brutal dragon area), it is generally recommended to use Prayer or high-healing methods for aggressive high-level monsters stacked against the player.\"",
+          "cannon": "Slayer task/Aberrant spectres Location Comparison: Catacombs of Kourend, Cannonable = No. Dwarf multicannon prohibited list: \"Catacombs of Kourend - An ancient power won't let you set up a cannon here.\"",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Deepfin Mine",
+        "displayName": "Deepfin Mine (Sailing 67, cannon, single-way)",
+        "rank": 4,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "67 Sailing to dock at Deepfin Point (unboostable)",
+          "Optional: 84 Agility shortcut to a buildable bank chest"
+        ],
+        "notes": "7 spectres; can be safespotted from the eastern side near the standing torch. A bank chest can be built in the mine and reached via an 84 Agility shortcut.",
+        "evidence": {
+          "multi": "Slayer task/Aberrant spectres Location Comparison: Deepfin Mine, Multicombat = No. Deepfin Mine: \"A dwarf multicannon can be used in this dungeon, but the areas are single-way combat.\"",
+          "cannon": "Slayer task/Aberrant spectres Location Comparison: Deepfin Mine, Cannonable = Yes. Deepfin Mine: \"A dwarf multicannon can be used in this dungeon, but the areas are single-way combat.\"",
+          "requirements": "Deepfin Mine: \"It is accessible by entering the cave on Deepfin Point, which requires level 67 Sailing to dock at (unboostable).\" Slayer task/Aberrant spectres: \"A bank chest can be built in a hotspot within the Deepfin Mine and accessed quickly via a shortcut requiring 84 Agility.\""
+        }
+      }
+    ],
+    "notes": "Konar assigns aberrant spectres at the Slayer Tower, Stronghold Slayer Cave or Catacombs of Kourend (Deviant spectre) only (Konar quo Maten task table); Deepfin Mine is not in her list. The Slayer task list page omits Deepfin Mine but the task page and monster page both list it. Spectral attribute: Ectoplasmator gives Prayer XP per kill. Extension unlock: Smell ya later (100 points, 200-250 assigned).",
+    "_verification": {
+      "corrections": [
+        "Re-attributed 1 evidence quotes from 'research/area-rules.md' to the wiki pages where the sentences were verified (Single-way combat page)."
+      ],
+      "confirmed": 34,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Abyssal demons",
+    "wikiTaskPage": "Slayer task/Abyssal demons",
+    "monsterPages": [
+      "Abyssal demon",
+      "Greater abyssal demon"
+    ],
+    "bossTask": false,
+    "summary": "Abyssal demons hit with an accurate melee stab attack but only max 8, and Protect from Melee negates all damage from them and from the Greater abyssal demon superior. They teleport themselves and can teleport the player up to 20 tiles away, so reading a Teleport anchoring scroll first is strongly recommended. They are 1x1 and ideal for area-of-effect (Ancient Magicks smoke spells, Venator bow) in the two multi-combat spots: the Catacombs of Kourend and the Wilderness Slayer Cave, the latter also allowing a cannon. In single-combat areas such as the Slayer Tower a melee setup with an Expeditious bracelet is recommended. Extend this task as early as possible.",
+    "recommendedStyle": "Magic",
+    "styleNotes": "Demon (demonbane weapons and spells apply, but AoE is usually preferred); not immune to cannon; not aggressive, so Dinh's bulwark or a goading potion helps in multi; use melee with an Expeditious bracelet in single-combat areas; Smoke Barrage/Burst preferred over Ice because frozen demons that teleport do not walk back.",
+    "requiredItems": [],
+    "usefulItems": [
+      "Teleport anchoring scroll",
+      "Herb sack",
+      "Soul bearer",
+      "Explorer's ring 4",
+      "Dinh's bulwark or Goading potion",
+      "Expeditious bracelet (single-combat areas)",
+      "Dwarf multicannon (Wilderness Slayer Cave only)"
+    ],
+    "superior": "Greater abyssal demon",
+    "alternatives": [
+      "Abyssal Sire"
+    ],
+    "xpPerKill": 150,
+    "locations": [
+      {
+        "name": "Catacombs of Kourend",
+        "displayName": "Catacombs of Kourend (multi, barrage)",
+        "rank": 1,
+        "multi": true,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [],
+        "notes": "Multi-combat allows barraging in the primary rooms and AFK melee in both rooms; 13 demons. Also drops ancient shards and dark totem pieces (greater abyssal demons here always drop a totem piece).",
+        "evidence": {
+          "multi": "Slayer task/Abyssal demons: \"The Catacombs and Wilderness Slayer Cave are the only two Multicombat areas with Abyssal demons.\" Locations table: Catacombs of Kourend, Multicombat = Yes.",
+          "cannon": "Slayer task/Abyssal demons Locations table: Catacombs of Kourend, Cannonable = No; \"The Wilderness Slayer Cave is the only location in which a Cannon can be used against Abyssal demons\". Dwarf multicannon prohibited list: \"Catacombs of Kourend - An ancient power won't let you set up a cannon here.\"",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Wilderness Slayer Cave",
+        "displayName": "Wilderness Slayer Cave - level 29-33 Wilderness (task-only, cannon, multi)",
+        "rank": 2,
+        "multi": true,
+        "cannon": true,
+        "wilderness": true,
+        "wildernessLevelMin": 29,
+        "wildernessLevelMax": 33,
+        "konarAssignable": false,
+        "requirements": [
+          "Task-only area",
+          "Optional: 77 Agility (boostable) escape shortcuts"
+        ],
+        "notes": "Best Slayer XP rates in the game for this task but a player-killing hotspot; blighted supplies and revenant-ether weapons usable. 8 demons, level 29-33 Wilderness (task page says 29-32). Enter from the level 18 (west of Larran's small chest) or level 29 entrance.",
+        "evidence": {
+          "multi": "Slayer task/Abyssal demons: \"The Catacombs and Wilderness Slayer Cave are the only two Multicombat areas with Abyssal demons.\" Wilderness Slayer Cave: \"The cave is the only multi-combat spot where the cannon can be used for some monsters.\" Wilderness page (Dungeons table): \"Wilderness Slayer Cave | 17- 31 (multicombat)\".",
+          "cannon": "Slayer task/Abyssal demons: \"The Wilderness Slayer Cave is the only location in which a Cannon can be used against Abyssal demons\". Wilderness Slayer Cave: \"The area is desirable to players wishing to quickly complete slayer tasks, as it's possible to use the Dwarf multicannon inside the dungeon.\"",
+          "requirements": "Wilderness Slayer Cave: \"Abyssal demons, Nechryaels, Dust devils, and Jellies can only be killed while on Slayer task.\" Wilderness Slayer Cave monster table: Abyssal demon wildernesslevel=29-33. Wilderness Slayer Cave: \"These all require 77 Agility ... and are useful for players wishing to escape a player killer.\""
+        }
+      },
+      {
+        "name": "Slayer Tower (basement)",
+        "displayName": "Slayer Tower - basement (task-only, single, safespot)",
+        "rank": 3,
+        "multi": false,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Priest in Peril",
+          "Task-only area (Raulyn blocks off-task attacks)"
+        ],
+        "notes": "Ladder near the tower entrance on the ground floor; 14 demons; a safespot works only with the Teleport anchoring scroll unlock. Counts for the Morytania elite diary. Recommended over the 2nd floor for slayer.",
+        "evidence": {
+          "multi": "Slayer task/Abyssal demons Locations table: Slayer Tower (Basement), Multicombat = No. Single-way combat page: \"(Chaotic) death spawns summoned by nechryael or nechryarch in the Slayer Tower are able to attack the player even though it is single-way combat.\"",
+          "cannon": "Slayer task/Abyssal demons Locations table: Slayer Tower (Basement), Cannonable = No. Dwarf multicannon prohibited list: \"Slayer Tower - A strange magical force won't let you set up a cannon here.\" Slayer Tower: \"Dwarf multicannons cannot be used here.\"",
+          "requirements": "Slayer task (List of assignments row, Other requirements): \"Priest in Peril\" or Fairytale II - Cure a Queen; Slayer Tower: \"Monsters here can only be killed on a Slayer task. Raulyn will stop players who attempt to attack monsters that are not on their Slayer task.\""
+        }
+      },
+      {
+        "name": "Slayer Tower (2nd floor)",
+        "displayName": "Slayer Tower - 2nd floor (single)",
+        "rank": 4,
+        "multi": false,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Priest in Peril",
+          "Optional: 71 Agility shortcut"
+        ],
+        "notes": "Very far to reach without the 71 Agility shortcut; the basement is recommended instead.",
+        "evidence": {
+          "multi": "Slayer task/Abyssal demons Locations table: Slayer Tower (2nd floor), Multicombat = No. Single-way combat page: \"(Chaotic) death spawns summoned by nechryael or nechryarch in the Slayer Tower are able to attack the player even though it is single-way combat.\"",
+          "cannon": "Slayer task/Abyssal demons Locations table: Slayer Tower (2nd floor), Cannonable = No. Dwarf multicannon prohibited list: \"Slayer Tower - A strange magical force won't let you set up a cannon here.\" Slayer Tower: \"Dwarf multicannons cannot be used here.\"",
+          "requirements": "Slayer task (List of assignments row, Other requirements): \"Priest in Peril\"; Slayer task/Abyssal demons: \"It is very far to reach without 71 Agility; recommended to use basement instead for slayer purposes.\""
+        }
+      },
+      {
+        "name": "Abyssal Area",
+        "displayName": "Abyssal Area - fairy ring ALR (Konar only, single)",
+        "rank": 5,
+        "multi": false,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Fairytale II - Cure a Queen started (fairy ring ALR)"
+        ],
+        "notes": "Only worth it on a Konar 'Abyss' assignment: demons are spread out and the other abyssal creatures are aggressive. Entering by fairy ring does not skull or drain prayer. On a Konar Abyss task the Abyssal Sire may be killed instead.",
+        "evidence": {
+          "multi": "Abyssal Area: \"Unlike the Abyss, it is not a multi-combat area.\" Slayer task/Abyssal demons Locations table: Abyssal Area, Multicombat = No.",
+          "cannon": "Abyssal Area: \"A dwarf multicannon cannot be used in the Abyssal Area.\" Dwarf multicannon prohibited list: \"Abyssal Area - You can't set up a cannon here.\"",
+          "requirements": "Abyssal Area: \"can be accessed by using the code ALR in the fairy rings network (must have started Fairytale II - Cure a Queen)\"."
+        }
+      }
+    ],
+    "notes": "Requires 85 Slayer and 85 combat plus Priest in Peril or Fairytale II. Konar assigns at the Catacombs, the Abyss (Abyssal Area) or the Slayer Tower; if assigned in the Abyss the Abyssal Sire is an eligible substitute, but not if assigned at the Catacombs (Konar quo Maten). Krystilia assigns this only when it is toggled on: Krystilia page says \"Slayer task assignments of abyssal demons, dust devils, jellies, and nechryaels from Krystilia can be enabled or disabled for free. This is done via the Rewards Shop's \\\"I Wildy More Slayer\\\" unlock\"; the Slayer task list footnote instead says \"Task must be unlocked with Slayer reward points to be assigned by Krystilia\". Extension: Augment my abbies (100 points). Unholy Helmet unlock (1,000 points) lets an abyssal head colour the Slayer helmet red.",
+    "_verification": {
+      "corrections": [
+        "Re-attributed 3 evidence quotes to the Single-way combat / Wilderness pages.",
+        "Removed the 'PK hotspot' warning about other players from the summary (kept in the Wilderness Slayer Cave location notes).",
+        "Krystilia unlock: the Krystilia page says the toggle is free ('I Wildy More Slayer'); the Slayer task list says reward points. Recorded both instead of asserting a cost."
+      ],
+      "confirmed": 36,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "The Abyssal Sire",
+    "wikiTaskPage": "Abyssal Sire",
+    "monsterPages": [
+      "Abyssal Sire"
+    ],
+    "bossTask": true,
+    "summary": "The Abyssal Sire is the abyssal demon Slayer boss in the Abyssal Nexus (fairy ring DIP); it needs 85 Slayer and prior access to the Abyss, and can only be fought on an abyssal demon task (outside of Krystilia) or a boss task.",
+    "recommendedStyle": "Any",
+    "styleNotes": "Demon attribute; poisonous; not immune to cannon per infobox but cannons cannot be set up in the Abyssal Nexus.",
+    "requiredItems": [],
+    "usefulItems": [],
+    "superior": null,
+    "alternatives": [
+      "Abyssal demons (standard task substitute)"
+    ],
+    "xpPerKill": 478,
+    "locations": [
+      {
+        "name": "Abyssal Nexus",
+        "displayName": "Abyssal Nexus - fairy ring DIP",
+        "rank": 1,
+        "multi": true,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "85 Slayer",
+          "Enter the Abyss miniquest or partial Fairytale II - Cure a Queen (fairy rings unlocked)",
+          "Must have visited the Abyss at least once"
+        ],
+        "notes": "Four Sire chambers per world; peek at the eyes at each chamber entrance to see if one is in use. Entering via the Abyss (Mage of Zamorak) skulls you and drains prayer unless wearing an abyssal bracelet; fairy ring DIP is the safe route.",
+        "evidence": {
+          "multi": "Abyssal Sire: \"Although it resides in a multi-combat area, it is a solo-only boss.\"",
+          "cannon": "Dwarf multicannon prohibited list: \"Abyssal Nexus - You can't set up a cannon here.\"",
+          "requirements": "Abyssal Sire: \"requires level 85 Slayer to kill. To access the boss, the player must have visited the Abyss at least once, either through the Mage of Zamorak or the Fairy Ring network.\" Boss (boss slayer table): \"Abyssal Sire | Abyssal Nexus | Slayer 85 | Enter the Abyss miniquest or partial completion of Fairytale II - Cure a Queen\"."
+        }
+      }
+    ],
+    "notes": "Boss task; identity and location only. Abyssal Sire: \"As with all other Slayer bosses, the Sire can only be fought when assigned abyssal demons (outside of Krystilia) or itself as a Slayer task.\" Konar: \"Abyssal Nexus|Abyss: Abyssal Sire\" is listed as the alternative for her Abyss-located abyssal demon task; whether the Konar page treats the Nexus as part of the 'Abyssal Plane' is unknown (no such sentence found on the Konar quo Maten page). Boss tasks grant an extra 5,000 Slayer XP on completion (Slayer page).",
+    "_verification": {
+      "corrections": [
+        "Downgraded the claim that the Nexus 'counts as part of the Abyssal Plane for Konar tasks' to unknown: not found on the Konar quo Maten page (only the row '*[[Abyssal Nexus|Abyss]]: [[Abyssal Sire]]').",
+        "Summary: added the '(outside of Krystilia)' qualifier that the Abyssal Sire page attaches to the abyssal-demon-task rule."
+      ],
+      "confirmed": 13,
+      "downgraded": 1
+    }
+  },
+  {
+    "task": "The Alchemical Hydra",
+    "wikiTaskPage": "Alchemical Hydra",
+    "monsterPages": [
+      "Alchemical Hydra"
+    ],
+    "bossTask": true,
+    "summary": "The Alchemical Hydra is the hydra boss on the lower level of the Karuulm Slayer Dungeon, requiring 95 Slayer; it can only be killed on a hydra task (Konar or Mortimer) or a Konar boss task, and boots of stone, brimstone or granite boots are needed in the dungeon without the elite Kourend & Kebos Diary.",
+    "recommendedStyle": "Any",
+    "styleNotes": "Dragon attribute; assigned only by Konar and Mortimer; single-way dungeon.",
+    "requiredItems": [
+      "Boots of stone, Boots of brimstone or Granite boots (not needed after the elite Kourend & Kebos Diary)"
+    ],
+    "usefulItems": [],
+    "superior": null,
+    "alternatives": [
+      "Hydras (standard task substitute)"
+    ],
+    "xpPerKill": 1320,
+    "locations": [
+      {
+        "name": "Karuulm Slayer Dungeon (lower level)",
+        "displayName": "Karuulm Slayer Dungeon - lower level (Mount Karuulm)",
+        "rank": 1,
+        "multi": false,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "95 Slayer",
+          "Boots of stone / brimstone / granite boots unless elite Kourend & Kebos Diary is complete"
+        ],
+        "notes": "Without heat-protecting boots you take 4 damage every tick beyond the entrance chamber; this also applies when using the item retrieval service after a death.",
+        "evidence": {
+          "multi": "Karuulm Slayer Dungeon: \"The dungeon itself is single-way combat.\"",
+          "cannon": "Karuulm Slayer Dungeon: \"A dwarf multicannon can be used in all areas here except the wyrm and Alchemical Hydra areas\". Dwarf multicannon prohibited list: \"Karuulm Slayer Dungeon (wyrm and Alchemical Hydra areas)\".",
+          "requirements": "Alchemical Hydra: \"requiring level 95 Slayer to kill\" and \"players who have not completed the elite Kourend & Kebos Diary must wear boots of stone, boots of brimstone, or granite boots to protect themselves from the extreme heat of the dungeon floor.\""
+        }
+      }
+    ],
+    "notes": "Boss task; identity and location only. Alchemical Hydra: \"Unlike normal hydras, the Alchemical Hydra can only be killed while on a hydra Slayer task, which are only assigned by Konar quo Maten and Mortimer. Likewise, it can be assigned for boss slayer, but only by Konar.\" Boss table lists it under 'Mount Karuulm Dungeon'. Brimstone keys drop when killed on a Konar task. Boss slayer table row: 'Alchemical Hydra | Mount Karuulm Dungeon | Slayer 95 | Only assigned by Konar'. Karuulm Slayer Dungeon: 'taking 4 damage every tick' without heat-protecting boots.",
+    "_verification": {
+      "corrections": [
+        "No errors found; added the Boss slayer table row and the Karuulm '4 damage every tick' sentence as explicit evidence for existing claims."
+      ],
+      "confirmed": 12,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Ankou",
+    "wikiTaskPage": "Slayer task/Ankou",
+    "monsterPages": [
+      "Ankou"
+    ],
+    "bossTask": false,
+    "summary": "Ankou use an inaccurate melee attack with a max hit of 8-10 that Protect from Melee fully negates. They are undead, so a Salve amulet works (but not stacked with the Slayer helmet), and they are aggressive. Unextended tasks are fast with melee even in single combat; in the multi-combat Catacombs of Kourend or Wilderness Slayer Cave they can be bursted or barraged, and a cannon works everywhere except the Catacombs. The Stronghold Slayer Cave is the convenient default (cannon, task-only, near Nieve).",
+    "recommendedStyle": "Melee",
+    "styleNotes": "Undead and spectral (Salve amulet, Ectoplasmator and Bonecrusher all apply); elemental weakness to air; not immune to cannon; Protect from Melee negates all damage.",
+    "requiredItems": [],
+    "usefulItems": [
+      "Salve amulet",
+      "Ectoplasmator",
+      "Bonecrusher or Bonecrusher necklace",
+      "Dwarf multicannon",
+      "Royal seed pod or other one-click teleport (Wilderness locations)"
+    ],
+    "superior": null,
+    "alternatives": [],
+    "xpPerKill": null,
+    "locations": [
+      {
+        "name": "Stronghold Slayer Cave",
+        "displayName": "Stronghold Slayer Cave (task-only, cannon)",
+        "rank": 1,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Task-only area",
+          "Optional: 72 Agility shortcut"
+        ],
+        "notes": "8 ankou; may be crowded because it is easy to reach and allows a cannon. Entrance next to Nieve/Steve; Slayer ring teleports there.",
+        "evidence": {
+          "multi": "Slayer task/Ankou Location comparison: Stronghold Slayer Cave, Multicombat = No.",
+          "cannon": "Slayer task/Ankou: \"A dwarf multicannon can be used in the Wilderness Slayer Cave and Stronghold Slayer Cave to speed up the task.\" Stronghold Slayer Cave: \"A dwarf multicannon can be used in the dungeon.\"",
+          "requirements": "Stronghold Slayer Cave: \"Anyone can enter the dungeon, but players can only attack the Slayer monster they were assigned, and only while the task has not been completed.\""
+        }
+      },
+      {
+        "name": "Catacombs of Kourend",
+        "displayName": "Catacombs of Kourend (multi, burst/barrage, no cannon)",
+        "rank": 2,
+        "multi": true,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [],
+        "notes": "10 ankou; burying bones here restores prayer points so a Bonecrusher keeps prayer topped up. Ankou must be danced to stack them for bursting. Also drops ancient shards and dark totem pieces.",
+        "evidence": {
+          "multi": "Slayer task/Ankou: \"In the Multicombat areas of the Wilderness Slayer Cave and the Catacombs of Kourend, they are potentially viable as a Burst, Barrage, or Venator Bow task\". Catacombs of Kourend: \"As this particular dungeon is a multicombat area (excluding the brutal dragon area), it is generally recommended to use Prayer or high-healing methods for aggressive high-level monsters stacked against the player.\"",
+          "cannon": "Slayer task/Ankou: \"A Cannon may used against Ankou in all locations except the Catacombs of Kourend\". Dwarf multicannon prohibited list: \"Catacombs of Kourend - An ancient power won't let you set up a cannon here.\"",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Stronghold of Security: Sepulchre of Death",
+        "displayName": "Stronghold of Security - Sepulchre of Death (level 4, free-to-play area, cannon)",
+        "rank": 3,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [],
+        "notes": "32 ankou across the fourth level; the north-east room contains only ankou for AFK melee, and a ranged safespot exists in the large south-west room on the south side of the south-easternmost skeleton.",
+        "evidence": {
+          "multi": "Slayer task/Ankou Location comparison: Stronghold of Security: Sepulchre of Death, Multicombat = No. Stronghold of Security: \"Unlike the other levels, the first is a multicombat area.\"",
+          "cannon": "Slayer task/Ankou Location comparison: Sepulchre of Death, Cannonable = Yes. Stronghold of Security: \"Note: A cannon can be placed in the stronghold.\"",
+          "requirements": "Stronghold of Security infobox: members = No. Ankou page: \"The north east corner of the Stronghold of Security has a room with only ankou for easy afking with melee (no safespots for ranged).\""
+        }
+      },
+      {
+        "name": "Wilderness Slayer Cave",
+        "displayName": "Wilderness Slayer Cave - level 19-22 Wilderness (multi, cannon)",
+        "rank": 4,
+        "multi": true,
+        "cannon": true,
+        "wilderness": true,
+        "wildernessLevelMin": 19,
+        "wildernessLevelMax": 22,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "10 level-98 ankou straddling level 20 Wilderness; expect PKers, lower your risk and bring a one-click 30-Wilderness teleport such as a Royal seed pod. Level 18 entrance is west of Larran's small chest.",
+        "evidence": {
+          "multi": "Slayer task/Ankou Location comparison: Wilderness Slayer Cave, Multicombat = Yes. Wilderness Slayer Cave: \"The cave is the only multi-combat spot where the cannon can be used for some monsters.\" Wilderness page (Dungeons table): \"Wilderness Slayer Cave | 17- 31 (multicombat)\".",
+          "cannon": "Slayer task/Ankou: \"A dwarf multicannon can be used in the Wilderness Slayer Cave and Stronghold Slayer Cave to speed up the task.\" Wilderness Slayer Cave: \"The area is desirable to players wishing to quickly complete slayer tasks, as it's possible to use the Dwarf multicannon inside the dungeon.\"",
+          "requirements": "not stated; Wilderness Slayer Cave monster table: Ankou wildernesslevel=19-22."
+        }
+      },
+      {
+        "name": "The Forgotten Cemetery",
+        "displayName": "The Forgotten Cemetery - about level 30 Wilderness (single, cannon, safespot)",
+        "rank": 5,
+        "multi": false,
+        "cannon": true,
+        "wilderness": true,
+        "wildernessLevelMin": 30,
+        "wildernessLevelMax": 30,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "21 level-86 ankou; safespot behind the south-west coffin on the square between the bone spawns. PK hotspot around level 30 Wilderness; reach via the level 27 Wilderness Obelisk and run west. Killing an ankou here (or in the cave) is a Wilderness medium diary task.",
+        "evidence": {
+          "multi": "Slayer task/Ankou Location comparison: The Forgotten Cemetery, Multicombat = No.",
+          "cannon": "Slayer task/Ankou Location comparison: The Forgotten Cemetery, Cannonable = Yes; \"A Cannon may used against Ankou in all locations except the Catacombs of Kourend\".",
+          "requirements": "not stated; The Forgotten Cemetery: \"is a minor area in the Wilderness at around level 30\" (exact level range not stated)."
+        }
+      },
+      {
+        "name": "Deepfin Mine",
+        "displayName": "Deepfin Mine (Sailing 67, cannon, single-way)",
+        "rank": 6,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "67 Sailing to dock at Deepfin Point (unboostable)"
+        ],
+        "notes": "Level 95 ankou in the eastern part of the mine; a bank chest can be built in the mine (84 Agility shortcut between the eastern sections).",
+        "evidence": {
+          "multi": "Deepfin Mine: \"A dwarf multicannon can be used in this dungeon, but the areas are single-way combat.\"",
+          "cannon": "Deepfin Mine: \"A dwarf multicannon can be used in this dungeon, but the areas are single-way combat.\"",
+          "requirements": "Deepfin Mine: \"It is accessible by entering the cave on Deepfin Point, which requires level 67 Sailing to dock at (unboostable).\""
+        }
+      }
+    ],
+    "notes": "Slayer XP varies by ankou level: 60, 65, 70, 60 and 100 for the level 75, 82, 86, 95 and 98 variants (Slayer task/Ankou Monster variants). Konar assigns ankou at the Stronghold of Security, Stronghold Slayer Dungeon and Catacombs of Kourend only. Dark Ankou (Skotizo fight) count only if you kill them yourself; those that auto-die after Skotizo do not count. Requires 40 combat. Extension: Ankou very much (100 points, 91-150).",
+    "_verification": {
+      "corrections": [
+        "Re-attributed 1 evidence quote(s) to the Wilderness page (Dungeons table).",
+        "Removed the PK-hotspot warning about other players from the summary (retained in the two Wilderness location notes).",
+        "Sepulchre of Death: added the Ankou-page sentence supporting the 'north-east room contains only ankou' note."
+      ],
+      "confirmed": 33,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Aquanites",
+    "wikiTaskPage": "Slayer task/Aquanites",
+    "monsterPages": [
+      "Aquanite"
+    ],
+    "bossTask": false,
+    "summary": "Aquanites are accurate magic attackers found only in the Ynysdail Cavern, so Protect from Magic is strongly recommended; alternatively they can be safespotted with a 9-10 tile attack range. Hitting one with a slash attack severs its lure and drops its stab defence from 60 to 10, so the usual method is a fast slash weapon followed by a strong stab weapon. The cavern is single-way and a cannon cannot be placed. Reaching Ynysdail needs 73 Sailing and a boat with an adamant keel or better; building the rowboat there (70 Construction) gives a fast route from Gwenith after Song of the Elves.",
+    "recommendedStyle": "Melee",
+    "styleNotes": "Attacks with Magic; slash attack severs the lure (stab defence 60 to 10), so use slash then stab; Ranged with a longrange safespot also works; immune to cannon per infobox and cannons cannot be placed anyway.",
+    "requiredItems": [],
+    "usefulItems": [
+      "Slash weapon (scimitar or abyssal whip) to sever the lure",
+      "Strong stab weapon",
+      "Reagent pouch",
+      "Seed box",
+      "Rune pouch with High Level Alchemy runes",
+      "Bonecrusher",
+      "Emergency food for Elder aquanites"
+    ],
+    "superior": "Elder aquanite",
+    "alternatives": [],
+    "xpPerKill": 180,
+    "locations": [
+      {
+        "name": "Ynysdail Cavern",
+        "displayName": "Ynysdail Cavern (Sailing 73, single-way, no cannon)",
+        "rank": 1,
+        "multi": false,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "73 Sailing and a boat with an adamant keel or better to reach Ynysdail",
+          "70 Construction, hammer, saw, 10 swamp paste and 8 camphor planks to build the rowboat (optional but recommended)",
+          "Song of the Elves to use the Gwenith rowboat"
+        ],
+        "notes": "Only place aquanites exist. Elder aquanites hit 50 through a long-held Protect from Magic, so flick the prayer between their attacks. Safespot tiles with a longrange weapon are shown on the task page.",
+        "evidence": {
+          "multi": "Slayer task/Aquanites: \"They are located in a single-way combat area\". Ynysdail Cavern: \"The entire dungeon is a single-combat zone\".",
+          "cannon": "Slayer task/Aquanites: \"a Dwarf multicannon cannot be used as the ground is too damp to place one.\" Ynysdail Cavern: \"Dwarf multicannons cannot be set in the dungeon; attempting to do so will result in the message 'The ground is too damp to set up a cannon here.'\"",
+          "requirements": "Slayer task/Aquanites: \"accessing Ynysdail itself requires 73 Sailing and a boat equipped with an adamant keel or better\"; \"70 Construction is needed to construct the rowboat\"; \"Using this rowboat requires completion of Song of the Elves.\""
+        }
+      }
+    ],
+    "notes": "Requires 78 Slayer. Mortimer assigns by default; Nieve and Duradel only after the 'Lured In' unlock (80 Slayer reward points). Extension: Let's Stay All Aquanite (100 points, 150-200). Not assigned by Konar. Elder aquanite superior gives 4,200 Slayer XP.",
+    "_verification": {
+      "corrections": [
+        "No errors found. Infobox slayxp = 180, immunecannon = Yes, superior 'Elder aquanite' (Otheruses hatnote), slaylvl 78, Konar table has no Aquanite row; all requirement quotes verified on Slayer task/Aquanites."
+      ],
+      "confirmed": 16,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Araxxor",
+    "wikiTaskPage": "Araxxor",
+    "monsterPages": [
+      "Araxxor"
+    ],
+    "bossTask": true,
+    "summary": "Araxxor is the araxyte Slayer boss in his own cavern of the Morytania Spider Cave; he needs 92 Slayer (boostable from 87 on a spiders task) and Morytania access, and can only be killed on a spider or araxyte task or a boss task.",
+    "recommendedStyle": "Melee",
+    "styleNotes": "Slayer task/Araxytes: a strong crush weapon is highly recommended; infobox immunecannon = Yes; elemental weakness to fire (50%); inflicts venom (infobox poisonous = Yes (venom)). Poison/venom immunity of Araxxor: unknown (no immunepoison field in the infobox).",
+    "requiredItems": [],
+    "usefulItems": [
+      "Strong crush weapon",
+      "Spider cave teleport"
+    ],
+    "superior": null,
+    "alternatives": [
+      "Araxytes (standard task substitute)",
+      "Spiders (standard task substitute)"
+    ],
+    "xpPerKill": 1708,
+    "locations": [
+      {
+        "name": "Morytania Spider Cave",
+        "displayName": "Morytania Spider Cave - Araxxor's cavern (instanced)",
+        "rank": 1,
+        "multi": true,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "92 Slayer (87 boosted on a spiders task, boost must be maintained)",
+          "Priest in Peril (Morytania access)"
+        ],
+        "notes": "Reached by a tunnel away from the others in the main cave (Araxxor page: \"The lair can be entered via a web tunnel just north-west of the cave entrance.\"); a spider cave teleport lands at the cave entrance, or use fairy ring ALQ / Ectophial and run south past the small bridge. Minions killed in the lair give XP but do not count toward the task count.",
+        "evidence": {
+          "multi": "Slayer task/Araxytes Location Comparison: Araxxor boss lair, Multicombat = Yes.",
+          "cannon": "Slayer task/Araxytes Location Comparison: Araxxor boss lair, Cannonable = No. Araxxor infobox: immunecannon = Yes.",
+          "requirements": "Araxxor: \"requiring level 92 Slayer and access to Morytania to kill. As a Slayer boss, he may only be killed while on a spider or araxyte Slayer task.\" Boss table: \"Araxxor | Morytania Spider Cave | Slayer 92 | Completion of Priest in Peril\". Slayer task/Araxytes: \"Players can also boost from level 87 Slayer to kill Araxxor with a spiders task, but the boost must be maintained for the entire kill.\""
+        }
+      }
+    ],
+    "notes": "Boss task; identity and location only. Araxxor: \"Konar quo Maten can also assign Araxxor specifically when she assigns a boss task.\" Boss page: \"She can also assign Araxxor despite not offering araxytes\". Solo-only, instanced encounter.",
+    "_verification": {
+      "corrections": [
+        "Downgraded 'immune to poison' to unknown: the Araxxor infobox has immunecannon and immunethrall fields only, no immunepoison; added the verified 'poisonous = Yes (venom)' fact.",
+        "Location note: added the Araxxor-page description of the web tunnel position; ALQ/Ectophial route verified on Morytania Spider Cave."
+      ],
+      "confirmed": 13,
+      "downgraded": 1
+    }
+  },
+  {
+    "task": "Araxytes",
+    "wikiTaskPage": "Slayer task/Araxytes",
+    "monsterPages": [
+      "Araxyte"
+    ],
+    "bossTask": false,
+    "summary": "Araxytes are melee attackers in the Morytania Spider Cave that inflict venom, so bring venom immunity (extended anti-venom+ for long trips) and prayer. Kill only the level 146 variant: it has the better drop table and is the only one that can spawn the Dreadborn Araxyte superior. A cannon works throughout the cave and, combined with a Venator bow in the multi-combat rooms, kills them very quickly; barraging is possible if you stack the 2x2 larger araxytes by running through them. The task is very profitable so bring a seed box and herb sack; a spider cave teleport lands at the entrance.",
+    "recommendedStyle": "Any",
+    "styleNotes": "Melee attackers that inflict venom; elemental weakness to fire; level 146 araxytes are 2x2 so barrages are harder to land; cannon plus Venator bow recommended in multi rooms.",
+    "requiredItems": [],
+    "usefulItems": [
+      "Extended anti-venom+",
+      "Dwarf multicannon",
+      "Venator bow",
+      "Seed box",
+      "Herb sack",
+      "Bracelet of slaughter",
+      "Spider cave teleport"
+    ],
+    "superior": "Dreadborn Araxyte",
+    "alternatives": [
+      "Araxxor"
+    ],
+    "xpPerKill": 100,
+    "locations": [
+      {
+        "name": "Morytania Spider Cave (task-only area)",
+        "displayName": "Morytania Spider Cave - south-eastern task-only room (level 146 only, multi, cannon, safespots)",
+        "rank": 1,
+        "multi": true,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Priest in Peril (Morytania access)",
+          "Task-only area"
+        ],
+        "notes": "9 level-146 araxytes; safespots along the eastern wall and south-eastern corner. Level 146 only, so every kill can roll the Dreadborn Araxyte.",
+        "evidence": {
+          "multi": "Slayer task/Araxytes Location Comparison: south-eastern room, Multicombat = Yes; \"the eastern and southern caves are multi-way zones with level 96 and 146 variants respectively\". Morytania Spider Cave: \"The entire cave, apart from the north task-only cavern, is entirely multicombat.\"",
+          "cannon": "Slayer task/Araxytes: \"A dwarf multicannon can also be used throughout the cave, and can kill araxytes very quickly in multicombat areas.\" Location Comparison: south-eastern room, Cannonable = Yes.",
+          "requirements": "Slayer task (List of assignments row, Other requirements): \"Priest in Peril\"; Slayer task/Araxytes: \"there are three on-task caves east from it\"; Morytania Spider Cave: \"The cave is divided into three sections; the main cavern, a task-only cavern and Araxxor's cavern.\""
+        }
+      },
+      {
+        "name": "Morytania Spider Cave",
+        "displayName": "Morytania Spider Cave - main cavern (mixed level 96/146, multi, cannon)",
+        "rank": 2,
+        "multi": true,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Priest in Peril (Morytania access)"
+        ],
+        "notes": "22 araxytes of both levels; avoid the level 96 ones. No safespots listed.",
+        "evidence": {
+          "multi": "Slayer task/Araxytes Location Comparison: main room, Multicombat = Yes. Morytania Spider Cave: \"The entire cave, apart from the north task-only cavern, is entirely multicombat.\"",
+          "cannon": "Slayer task/Araxytes Location Comparison: main room, Cannonable = Yes; \"A dwarf multicannon can also be used throughout the cave\".",
+          "requirements": "Slayer task (List of assignments row, Other requirements): \"Priest in Peril\""
+        }
+      },
+      {
+        "name": "Morytania Spider Cave (task-only area)",
+        "displayName": "Morytania Spider Cave - northern task-only room (level 146, single-way, cannon, safespots)",
+        "rank": 3,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Priest in Peril (Morytania access)",
+          "Task-only area"
+        ],
+        "notes": "12 level-146 araxytes; safespot in the easternmost corner but line of sight is less reliable than in the multi room.",
+        "evidence": {
+          "multi": "Slayer task/Araxytes: \"the northern cave is a single-way zone with level 146 araxytes\"; Location Comparison: northern room, Multicombat = No. Morytania Spider Cave: \"The entire cave, apart from the north task-only cavern, is entirely multicombat.\"",
+          "cannon": "Slayer task/Araxytes Location Comparison: northern room, Cannonable = Yes.",
+          "requirements": "Slayer task (List of assignments row, Other requirements): \"Priest in Peril\"; Morytania Spider Cave: \"a task-only cavern\"."
+        }
+      },
+      {
+        "name": "Morytania Spider Cave (task-only area)",
+        "displayName": "Morytania Spider Cave - eastern task-only room (level 96 only, avoid)",
+        "rank": 4,
+        "multi": true,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Priest in Peril (Morytania access)",
+          "Task-only area"
+        ],
+        "notes": "12 level-96 araxytes only; worse drops and cannot spawn the superior, so the task page says to avoid them.",
+        "evidence": {
+          "multi": "Slayer task/Araxytes Location Comparison: eastern room, Multicombat = Yes.",
+          "cannon": "Slayer task/Araxytes Location Comparison: eastern room, Cannonable = Yes.",
+          "requirements": "Slayer task (List of assignments row, Other requirements): \"Priest in Peril\""
+        }
+      }
+    ],
+    "notes": "Requires 92 Slayer. Slayer XP is 60 for level 96 and 100 for level 146 araxytes; xpPerKill given for the recommended level 146 variant. Assigned by Nieve/Steve, Duradel/Kuradal and Mortimer, and indirectly by Turael/Aya and Spria as a spiders task; not assigned by Konar (though she can assign Araxxor as a boss). Extension: More eyes than sense (150 points, 200-250). Dreadborn Araxyte gives 4,462.5 Slayer XP (monster page) / 4,658 (task page table). Morytania Spider Cave no longer requires A Night at the Theatre.",
+    "_verification": {
+      "corrections": [
+        "No errors found. Location Comparison rows (main 22 multi/cannon; south-eastern 9 multi/cannon/safespots; eastern 12 multi/cannon; northern 12 single/cannon/safespots) and all quotes verified; infobox slayxp1=60, slayxp2=100; Dreadborn Araxyte 4462.5 (monster page) vs 4,658 (task page) discrepancy already recorded."
+      ],
+      "confirmed": 24,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Aviansies",
+    "wikiTaskPage": "Slayer task/Aviansie",
+    "monsterPages": [
+      "Aviansie"
+    ],
+    "bossTask": false,
+    "summary": "Aviansies fly, so they can only be hit with Ranged or Magic (halberds and salamanders are the melee exceptions), and they attack with Ranged. They are Armadylean followers: an Armadyl-aligned item makes them tolerant, but they will still turn on you the moment you attack one. The task must be unlocked with Watch the birdie (80 points) and needs God Wars Dungeon access; the God Wars Dungeon is the normal spot (multi, no cannon, Hard Fremennik Diary notes the adamant bars), while the Wilderness God Wars Dungeon (entrance at level 28 Wilderness) drops bars noted regardless of diary. Many players kill Kree'arra and his bodyguards instead, banking at Nex.",
+    "recommendedStyle": "Ranged",
+    "styleNotes": "Immune to direct melee except halberds and salamanders; attack with Ranged; elemental weakness to air; not immune to cannon per infobox but cannons are not usable in either dungeon.",
+    "requiredItems": [
+      "Ranged or Magic weapon (or a halberd / salamander)"
+    ],
+    "usefulItems": [
+      "Armadyl-aligned item for tolerance",
+      "Crossbow and mith grapple (Kree'arra access, 70 Ranged)",
+      "Ecumenical key (skip kill count)",
+      "Zarosian item to bank at Nex"
+    ],
+    "superior": null,
+    "alternatives": [
+      "Kree'arra",
+      "Flight Kilisa",
+      "Flockleader Geerin",
+      "Wingman Skree",
+      "Reanimated aviansie"
+    ],
+    "xpPerKill": null,
+    "locations": [
+      {
+        "name": "God Wars Dungeon",
+        "displayName": "God Wars Dungeon - Armadyl area (multi, no cannon)",
+        "rank": 1,
+        "multi": true,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Death Plateau (to receive GWD tasks)",
+          "Partial Troll Stronghold (defeat Dad) or Easy Combat Achievements for Ghommal's hilt teleport",
+          "60 Agility or 60 Strength (unlock requirement)",
+          "Watch the birdie unlock (80 Slayer reward points)"
+        ],
+        "notes": "36 aviansie; kills count toward Armadylean kill count. Adamant bars drop noted only with the Hard Fremennik Diary. Kree'arra's chamber additionally needs 70 Ranged, a crossbow and a mith grapple.",
+        "evidence": {
+          "multi": "Slayer task/Aviansie Location Comparisons: God Wars Dungeon, Multicombat = Yes. Multicombat area list: \"God Wars Dungeon\".",
+          "cannon": "Slayer task/Aviansie Location Comparisons: God Wars Dungeon, Cannonable = No. Dwarf multicannon: \"inhabitants of the God Wars Dungeon may also destroy a cannon if a player attempts to use it\".",
+          "requirements": "God Wars Dungeon: \"To get Slayer assignments related to the God Wars Dungeon, such as boss tasks, players must complete the Death Plateau quest.\" and \"Accessing it requires partial completion of Troll Stronghold (defeating Dad) or full completion of the Easy Combat Achievements\". Slayer task/Aviansie: \"provided that players have access to the God Wars Dungeon (requiring completion of Death Plateau) and has unlocked Watch the birdie slayer perk for 80 Slayer reward points\"; unlock \"Requires level 60 Agility or 60 Strength\"."
+        }
+      },
+      {
+        "name": "Wilderness God Wars Dungeon",
+        "displayName": "Wilderness God Wars Dungeon - level 23-29 Wilderness, entrance at 28 (multi, no cannon)",
+        "rank": 2,
+        "multi": true,
+        "cannon": false,
+        "wilderness": true,
+        "wildernessLevelMin": 23,
+        "wildernessLevelMax": 29,
+        "konarAssignable": false,
+        "requirements": [
+          "60 Strength (boulder) or 60 Agility (jutting wall), boostable"
+        ],
+        "notes": "8 aviansie; adamant bars drop noted regardless of diary but PK risk forces lower-value gear. Entrance east of the Forgotten Cemetery; nearest Wilderness Obelisk is level 27. All monsters here can drop ecumenical keys.",
+        "evidence": {
+          "multi": "Slayer task/Aviansie Location Comparisons: Wilderness God Wars Dungeon, Multicombat = Yes; \"Multicombat area and player killing in this area makes it a very dangerous location.\" Wilderness God Wars Dungeon: \"This empty cavern is a single-way combat zone. The large cavern in which the followers fight is a multi-way combat zone.\"",
+          "cannon": "Slayer task/Aviansie Location Comparisons: Wilderness God Wars Dungeon, Cannonable = No.",
+          "requirements": "Wilderness God Wars Dungeon: \"is a multi-combat area located within a cave east of The Forgotten Cemetery at level 28 Wilderness\" and \"a large boulder which can be moved with 60 Strength, or the south-east which passes through a jutting wall which requires 60 Agility. Temporary skill boosts can be used\". Wilderness page (Dungeons table): \"Wilderness God Wars Dungeon | 23 - 29 (multicombat)\"."
+        }
+      }
+    ],
+    "notes": "Slayer XP varies by aviansie level from 70 to 139 in the God Wars Dungeon and 70 to 124 in the Wilderness God Wars Dungeon (Slayer task/Aviansie Monster Variants). The wiki page title is 'Slayer task/Aviansie' (redirect from 'Aviansies'). Assigned by Krystilia, Chaeldar, Konar, Nieve and Duradel only once Watch the birdie is bought; toggling it off requires re-buying to turn back on. Kree'arra and bodyguards count, but Armadylean spiritual creatures do not. Extension: Birds of a Feather (100 points, 200-250). Konar location: God Wars Dungeon. Krystilia page: \"Armadylean guards also count if fought in the Wilderness.\"",
+    "_verification": {
+      "corrections": [
+        "Removed the 'PK risk' warning about other players from the summary (kept in the Wilderness God Wars Dungeon location notes).",
+        "Wilderness God Wars Dungeon level range changed from 28-28 to 23-29 per the Wilderness page Dungeons table; the WGWD page's 'level 28' is the entrance.",
+        "Notes: added the Krystilia-page footnote that Armadylean guards count when fought in the Wilderness."
+      ],
+      "confirmed": 24,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Bandits",
+    "wikiTaskPage": "Slayer task/Bandits",
+    "monsterPages": [
+      "Bandit"
+    ],
+    "bossTask": false,
+    "summary": "Bandits are a Krystilia-only Wilderness task done at the Bandit Camp in level 17-24 Wilderness, a multi-combat area where a cannon makes the task go very quickly. The level 22 guard bandits and level 130 bandits at the southern entrance are aggressive, so enter from the safer eastern entrance (guarded only by giant rats) and consider trapping five of the level 130s inside the pizza shop and general store houses. Guard Bandits, Speedy Keith, Donny the lad and Black Heather all count. A single level 130 bandit in the Wilderness Slayer Cave also counts but is not recommended.",
+    "recommendedStyle": "Any",
+    "styleNotes": "Stab attackers; not immune to cannon; guard bandits are aggressive, camp leaders are not.",
+    "requiredItems": [],
+    "usefulItems": [
+      "Dwarf multicannon",
+      "Burning amulet (teleport to the southern camp entrance)",
+      "Halberd (safespot from the north side of the table at Fat Tony's)"
+    ],
+    "superior": null,
+    "alternatives": [
+      "Guard Bandit",
+      "Speedy Keith",
+      "Donny the lad",
+      "Black Heather"
+    ],
+    "xpPerKill": null,
+    "locations": [
+      {
+        "name": "Bandit Camp (Wilderness)",
+        "displayName": "Bandit Camp - level 17-24 Wilderness (multi, cannon)",
+        "rank": 1,
+        "multi": true,
+        "cannon": true,
+        "wilderness": true,
+        "wildernessLevelMin": 17,
+        "wildernessLevelMax": 24,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "16 bandits; well populated. Southern entrance is guarded by aggressive level 22 and 130 bandits, the eastern entrance only by two giant rats. Five of the level 130s can be trapped in the pizza shop and general store houses; one in the north cannot be.",
+        "evidence": {
+          "multi": "Slayer task/Bandits Location Comparison: Bandit Camp (Wilderness), Multicombat = Yes. Multicombat area list: \"The Wilderness Bandit Camp\".",
+          "cannon": "Slayer task/Bandits Location Comparison: Bandit Camp (Wilderness), Cannonable = Yes. Bandit Camp (Wilderness): \"The area has a number of bandits, making a bandit Slayer task go very quickly when using a cannon.\"",
+          "requirements": "not stated; Bandit Camp (Wilderness): \"is an outlaw stronghold located within levels 17-24 Wilderness.\""
+        }
+      },
+      {
+        "name": "Wilderness Slayer Cave",
+        "displayName": "Wilderness Slayer Cave - single level 130 bandit (not recommended)",
+        "rank": 2,
+        "multi": true,
+        "cannon": true,
+        "wilderness": true,
+        "wildernessLevelMin": 17,
+        "wildernessLevelMax": 32,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "Only one bandit here (level 130), but it respawns almost instantly instead of the normal ~60 seconds. The cave page leaves the bandit's own Wilderness level blank; the cave as a whole spans level 17-32.",
+        "evidence": {
+          "multi": "Slayer task/Bandits Location Comparison: Wilderness Slayer Cave, Multicombat = Yes. Wilderness Slayer Cave: \"The cave is the only multi-combat spot where the cannon can be used for some monsters.\" Wilderness page (Dungeons table): \"Wilderness Slayer Cave | 17- 31 (multicombat)\".",
+          "cannon": "Slayer task/Bandits Location Comparison: Wilderness Slayer Cave, Cannonable = Yes. Wilderness Slayer Cave: \"The area is desirable to players wishing to quickly complete slayer tasks, as it's possible to use the Dwarf multicannon inside the dungeon.\"",
+          "requirements": "not stated; Wilderness Slayer Cave: \"The chambers contain a diverse selection of monsters, located between level 17 to 32 Wilderness.\""
+        }
+      }
+    ],
+    "notes": "Krystilia only (75-125 assigned). Slayer XP: 29 (level 22) and 159 (level 130) per the task page; the Bandit monster infobox lists 27 and 158.8. Requirement conflict: the Slayer task list row lists Priest in Peril and 40 combat, while the task page infobox shows combat 40, other requirements none, and its prose says it has no combat requirement from Krystilia; treat Priest in Peril as unverified. The task page's safespot section notes it is out of date because bandits now stand on both sides of the entrance.",
+    "_verification": {
+      "corrections": [
+        "Re-attributed 1 evidence quote(s) to the Wilderness page (Dungeons table).",
+        "No factual errors found: Bandit page \"If using a halberd you can safe spot bandits by standing on the north side of the table at fat Tony's.\" and \"he will respawn almost instantly, as opposed to the 60s it may normally take.\" verified; Bandit Camp eastern-entrance giant rats verified; XP 29/159 (task page) vs 27/158.8 (infobox) discrepancy already recorded."
+      ],
+      "confirmed": 18,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Banshees",
+    "wikiTaskPage": "Slayer task/Banshees",
+    "monsterPages": [
+      "Banshee",
+      "Twisted Banshee"
+    ],
+    "bossTask": false,
+    "summary": "Banshees are a low-level task that requires earmuffs or a Slayer helmet, otherwise their scream deals damage and heavily drains stats. They are undead, so a Salve amulet works for players without a Slayer helmet. Normal banshees are on the ground floor of the Slayer Tower (single-way, safespot south of the stairs); Twisted Banshees in the Catacombs of Kourend are usually preferred because they are still easy, safespottable on the bridge between their rooms, and drop far better loot (battlestaves, rune items, herbs, pure essence). Neither location allows a cannon.",
+    "recommendedStyle": "Any",
+    "styleNotes": "Undead and spectral (Salve amulet and Crumble Undead work; Salve does not stack with Slayer helmet); magical melee attack; elemental weakness to air; banshees regenerate 1 HP every 5 ticks so focus one at a time.",
+    "requiredItems": [
+      "Earmuffs or Slayer helmet"
+    ],
+    "usefulItems": [
+      "Salve amulet (if no Slayer helmet)"
+    ],
+    "superior": "Screaming banshee",
+    "alternatives": [
+      "Twisted Banshee",
+      "Screaming twisted banshee (superior of Twisted Banshee)"
+    ],
+    "xpPerKill": 22,
+    "locations": [
+      {
+        "name": "Catacombs of Kourend",
+        "displayName": "Catacombs of Kourend - Twisted Banshees (multi, safespot, better drops)",
+        "rank": 1,
+        "multi": true,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "6 Twisted Banshees (100 Slayer XP each); aggressive, in multi-combat. Safespot on the path from the ankou to the banshees and on the 3x1 bridge in the banshee area. Popular with Ironmen for herbs, pure essence and rune gear.",
+        "evidence": {
+          "multi": "Twisted Banshee: \"They are found exclusively within the Catacombs of Kourend, in a multicombat area.\" Slayer task/Banshees Location comparison: Catacombs of Kourend, Multicombat = Yes.",
+          "cannon": "Twisted Banshee: \"A dwarf multi-cannon cannot be used to kill twisted banshees.\" Slayer task/Banshees Location comparison: Catacombs of Kourend, Cannonable = No. Dwarf multicannon prohibited list: \"Catacombs of Kourend - An ancient power won't let you set up a cannon here.\"",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Slayer Tower (ground floor)",
+        "displayName": "Slayer Tower - ground floor, east side (single, safespot)",
+        "rank": 2,
+        "multi": false,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Priest in Peril"
+        ],
+        "notes": "8 banshees on the eastern side of the ground floor; safespot 2 squares south of the torch at the south side of the stairs with the banshees east of the stairs. Killing one here is a Morytania easy diary task, and Slayer Tower kills get the Morytania Diary XP bonus.",
+        "evidence": {
+          "multi": "Slayer task/Banshees Location comparison: Slayer Tower (ground floor), Multicombat = No. Single-way combat page: \"(Chaotic) death spawns summoned by nechryael or nechryarch in the Slayer Tower are able to attack the player even though it is single-way combat.\"",
+          "cannon": "Slayer task/Banshees Location comparison: Slayer Tower, Cannonable = No. Dwarf multicannon prohibited list: \"Slayer Tower - A strange magical force won't let you set up a cannon here.\" Slayer Tower: \"Dwarf multicannons cannot be used here.\"",
+          "requirements": "Slayer task (List of assignments row, Other requirements): \"Priest in Peril\"; Banshee: \"Killing a Banshee in the Slayer Tower is an easy task for the Morytania Diary.\""
+        }
+      }
+    ],
+    "notes": "Requires 15 Slayer and 20 combat plus Priest in Peril. Assigned by Turael/Aya, Spria, Mazchna and Mortimer only; not by Konar. Screaming banshee superior gives 610 Slayer XP; Screaming twisted banshee gives 2,200. Twisted Banshee kills give 100 Slayer XP versus 22 for normal banshees.",
+    "_verification": {
+      "corrections": [
+        "Re-attributed 1 evidence quote(s) to the Single-way combat page.",
+        "No factual errors found: Catacombs row 6 / multi Yes / cannon No / safespot 'in the path from Ankou to Banshees and on the 3x1 bridge'; Slayer Tower row 8 / single / no cannon / torch safespot; Konar table has no Banshee row; Banshee page: regenerate 1 hp every 5 ticks, Crumble Undead works."
+      ],
+      "confirmed": 22,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Barrows Brothers",
+    "wikiTaskPage": "Barrows brothers",
+    "monsterPages": [
+      "Barrows brothers",
+      "Barrows",
+      "Ahrim the Blighted",
+      "Dharok the Wretched",
+      "Guthan the Infested",
+      "Karil the Tainted",
+      "Torag the Corrupted",
+      "Verac the Defiled"
+    ],
+    "bossTask": true,
+    "summary": "The six Barrows brothers (Ahrim, Dharok, Guthan, Karil, Torag and Verac) are fought in their burial mounds at the Barrows east of Mort'ton and can be assigned as a boss Slayer task with no Slayer level requirement beyond Priest in Peril for Morytania access; only brother kills count, not chests.",
+    "recommendedStyle": "Any",
+    "styleNotes": "Per the Barrows brothers table: Ahrim is weak to Ranged and Attack (melee), Karil to Magic and Attack, and Dharok, Guthan, Torag and Verac to Magic.",
+    "requiredItems": [],
+    "usefulItems": [
+      "Barrows teleport tablet"
+    ],
+    "superior": null,
+    "alternatives": [],
+    "xpPerKill": null,
+    "locations": [
+      {
+        "name": "East of Mort'ton",
+        "displayName": "Barrows - burial mounds east of Mort'ton",
+        "rank": 1,
+        "multi": "unknown",
+        "cannon": "unknown",
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Priest in Peril (Morytania access)"
+        ],
+        "notes": "Reach by Barrows Teleport (Arceuus, 83 Magic) or a Barrows teleport tablet / house portal, the Shades of Mort'ton minigame teleport, fairy ring BIP with the 50 Agility stepping stone, Kharyrll teleport, or Drakan's medallion to Ver Sinhaza then the boat to Burgh de Rott.",
+        "evidence": {
+          "multi": "not stated (Barrows page does not state combat type; Barrows is not on the Multicombat area list).",
+          "cannon": "not stated (Dwarf multicannon prohibited list names 'Mort'ton and Shades of Mort'ton' but not the Barrows mounds or crypts).",
+          "requirements": "Barrows Requirements: \"Completion of Priest in Peril is required to enter Morytania.\" Boss table: \"Barrows brothers (not chests) | Morytania | Slayer 1 | Completion of Priest in Peril\". Boss page (Boss slayer): \"can be assigned bosses by Konar, Nieve/Steve, Duradel/Kuradal, or Krystilia\" with Barrows brothers in the 'Only the following bosses can be assigned' table and no Konar exclusion; Ahrim the Blighted drop table: \"Brimstone keys are only dropped if killed on a Slayer task given by Konar quo Maten.\""
+        }
+      }
+    ],
+    "notes": "Boss task; identity and location only. Barrows brothers: \"Barrows brothers can be assigned as a boss Slayer task.\" Slayer page: boss tasks range 3-35 kills, \"(up to 36 for Barrows)\", with Combat Achievement tiers adding +6 per tier for Barrows up to 72 at Grandmaster (Boss page). Barrows page: brothers \"do not count toward ghost Slayer tasks. Instead, they count toward boss tasks.\" Per-brother infobox slayxp: Ahrim 102.5, Karil 100, Dharok 115, Guthan 115, Torag 112.5, Verac 112.5 (each brother's page); xpPerKill left null because the six values differ. No 'Slayer task/Barrows Brothers' page exists; Konar can assign it (Boss page boss-slayer list; Konar-task Brimstone key drop on the brothers' pages).",
+    "_verification": {
+      "corrections": [
+        "konarAssignable upgraded from unknown to true: the Boss page lists Konar among boss-task masters with Barrows brothers in the assignable table (only exclusions stated are Krystilia=Wilderness-only and Hydra=Konar-only), and the Ahrim/Dharok/Karil pages carry the Konar-task Brimstone key drop line.",
+        "Fetched the six brothers' pages: slayxp differs per brother (100-115), so xpPerKill stays null with the breakdown in notes; the Boss page's '98 | 100' columns are Level and Hitpoints, not Slayer XP.",
+        "multi and cannon remain unknown: neither the Barrows page nor the brothers' pages state the combat type or whether a cannon can be set up (brothers' infoboxes only say immunecannon = No)."
+      ],
+      "confirmed": 9,
+      "downgraded": 0
+    }
+  }
+]

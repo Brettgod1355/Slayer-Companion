@@ -1,0 +1,1109 @@
+[
+  {
+    "task": "Revenants",
+    "wikiTaskPage": "Revenants (no 'Slayer task/Revenants' page exists; monster page used, plus Krystilia and Revenant Caves pages)",
+    "monsterPages": [
+      "Revenants",
+      "Revenants/Strategies",
+      "Revenant Caves",
+      "Krystilia"
+    ],
+    "bossTask": false,
+    "summary": "A Krystilia-only Wilderness task done in the Revenant Caves, usually with Ranged (Craw's or Webweaver bow) while wearing a charged bracelet of ethereum, which cuts revenant damage by 75% and removes their aggression. Pray Protect from Magic and Protect Item, since magic is their most accurate style. Revenants are undead, so a salve amulet or amulet of avarice boosts damage, and Wilderness weapon drop rates are 5x while on a Krystilia task.",
+    "recommendedStyle": "Ranged",
+    "styleNotes": "Undead (salve amulet and amulet of avarice work); they use all three combat styles and adapt to your prayers and defensive bonuses; they heal below 50% health; a charged bracelet of ethereum is effectively required.",
+    "requiredItems": [],
+    "usefulItems": [
+      "Bracelet of ethereum (charged)",
+      "Amulet of avarice or Salve amulet(ei)",
+      "Craw's bow / Webweaver bow",
+      "Revenant cave teleport or Burning amulet",
+      "Saradomin brews and super restores",
+      "Royal seed pod (one-click escape at level 30 or below)"
+    ],
+    "superior": null,
+    "alternatives": [],
+    "xpPerKill": null,
+    "locations": [
+      {
+        "name": "Revenant Caves",
+        "displayName": "Revenant Caves (Wilderness 17-40, singles-plus, 100k entry fee)",
+        "rank": 1,
+        "multi": false,
+        "cannon": false,
+        "wilderness": true,
+        "wildernessLevelMin": 17,
+        "wildernessLevelMax": 40,
+        "konarAssignable": false,
+        "requirements": [
+          "100,000 coin entry fee (repaid only if you die)",
+          "Members"
+        ],
+        "notes": "Three one-way entrances: level 17 (east of Dark Warriors' Fortress), level 26 (north of Bandit Camp) and level 40 (south-east of Lava Maze); Revenant cave teleport goes to the level 40 entrance. Singles-plus: another player can attack you while you fight a revenant. Agility shortcuts at 65/75/89. The Revenants page itself gives the revenants' range as 'levels 19 to 40' and Krystilia's table lists 19-38; the 17-40 range is the whole cave (Revenant Caves page).",
+        "evidence": {
+          "multi": "'it is an extremely dangerous cave that ranges from level 17 to 40 Wilderness and is exclusively a singles-plus combat area.' (Revenant Caves). Singles-plus means only one monster fights you but PvP overrides PvM; recorded as false (not multi) with this caveat.",
+          "cannon": "'A dwarf multicannon cannot be placed in the caves.' (Revenant Caves); also listed under Revenant Caves in the Dwarf multicannon prohibited list.",
+          "requirements": "'Before entering the caves, players must pay a fee of 100,000 coins. The fee can be taken from the bank ... Upon dying to anything inside the caves (including monsters) or to another player anywhere in the Wilderness, the fee will be lost' (Revenant Caves)."
+        }
+      }
+    ],
+    "notes": "Assigned only by Krystilia (Slayer task list row: Krystilia; Krystilia table: 40-100 assigned, 100-150 extended). Slayer XP varies by revenant (Krystilia table lists 10-140 per kill), so xpPerKill is null. 'The drop rates for the Wilderness weapons are increased by 5 times the normal rate when assigned a revenants Slayer task from Krystilia' (Revenants). 'several revenants cannot be killed for a task (e.g. the revenant pyrefiend cannot be killed in place of normal pyrefiends)' (Revenants, Trivia). Player killers are common in the caves (Revenants).",
+    "_verification": {
+      "corrections": [
+        "summary: removed the player-killer warning sentence (summaries must not warn about other players); moved the PK note to task notes",
+        "location notes: recorded that the Revenants page gives the monsters' range as 'levels 19 to 40' and Krystilia's table 19-38, while the 17-40 figure is the Revenant Caves page's range for the cave itself",
+        "notes: pyrefiend example now quoted from the Revenants Trivia section"
+      ],
+      "confirmed": 20,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Rogues",
+    "wikiTaskPage": "Rogue (no 'Slayer task/Rogues' page exists; monster page used, plus Rogues' Castle and Krystilia pages)",
+    "monsterPages": [
+      "Rogue",
+      "Rogues' Castle",
+      "Krystilia"
+    ],
+    "bossTask": false,
+    "summary": "A Krystilia-only task completed at the Rogues' Castle in level 52-56 Wilderness, where the level 15 rogues are killed quickly with any style; the level 135 rogues also count but are much tougher. Rogues are not aggressive unless you loot the castle chests. The Chaos Elemental lurks around and inside the castle and can bind and unequip players, so bring only what you can afford to lose.",
+    "recommendedStyle": "Any",
+    "styleNotes": "Level 15 rogues have 17 hitpoints and negligible defence; not immune to cannon or thralls; no poison immunity noted.",
+    "requiredItems": [],
+    "usefulItems": [
+      "Wilderness Obelisk or Ardougne/Edgeville lever for travel",
+      "Looting bag"
+    ],
+    "superior": null,
+    "alternatives": [],
+    "xpPerKill": 17,
+    "locations": [
+      {
+        "name": "Rogues' Castle",
+        "displayName": "Rogues' Castle (Wilderness 52-56, multicombat)",
+        "rank": 1,
+        "multi": true,
+        "cannon": "unknown",
+        "wilderness": true,
+        "wildernessLevelMin": 52,
+        "wildernessLevelMax": 56,
+        "konarAssignable": false,
+        "requirements": [
+          "Members"
+        ],
+        "notes": "Level 15 rogues spawn on the ground floor and all three upper floors (Rogue LocLines); level 135 rogues on the ground floor become aggressive only when a chest is looted. The Chaos Elemental 'can be found lurking around or inside the castle' and 'can bind and unequip players' (Rogues' Castle). A Wilderness Obelisk is nearby for escape.",
+        "evidence": {
+          "multi": "'Rogues' Castle' is listed under 'Several places in the Wilderness' in the List of multicombat areas (Multicombat area).",
+          "cannon": "not stated (Rogues' Castle is not in the Dwarf multicannon prohibited list and no page read says a cannon can be used there)",
+          "requirements": "'The Rogues' Castle is a building located in the deep Wilderness, specifically in levels 52-56.' (Rogues' Castle)"
+        }
+      },
+      {
+        "name": "South-west of Mage Arena",
+        "displayName": "South-west of the Mage Arena (deep Wilderness, 2 level-15 rogues)",
+        "rank": 2,
+        "multi": "unknown",
+        "cannon": "unknown",
+        "wilderness": true,
+        "wildernessLevelMin": 50,
+        "wildernessLevelMax": 54,
+        "konarAssignable": false,
+        "requirements": [
+          "Members"
+        ],
+        "notes": "Only two level 15 rogue spawns (Rogue LocLine 'South-west of Mage Arena'). The Mage Arena bank is nearby ('The nearby Mage Arena bank is one of only two banks in the entire Wilderness', Mage Arena). Wilderness level taken from Krystilia's task-wide '50-54' range, not from a page about this exact spot.",
+        "evidence": {
+          "multi": "not stated for this spot on any page read",
+          "cannon": "not stated",
+          "requirements": "Krystilia task table gives rogues' Wilderness level as '50-54' for 'Rogues' Castle, east of the Mage Arena' (Krystilia); 'located at Level 52 Wilderness' refers to the arena interior (Mage Arena)."
+        }
+      }
+    ],
+    "notes": "Assigned only by Krystilia (75-125 per task, Krystilia page; Slayer task list row lists 'Rogues' Castle' and 'south-west of Mage Arena'). 'The level 15 rogues are often killed to quickly complete rogue slayer tasks for Krystilia.' (Rogues' Castle). 'Improved the quantity of rogues at the Rogue's Castle for Wilderness Slayer Tasks' (Rogue, 10 April 2024 change). Level 135 rogues give 125 Slayer XP (infobox slayxp2); xpPerKill 17 is the level 15 variant (slayxp1). Deep Wilderness: player killers are a risk (Rogues' Castle).",
+    "_verification": {
+      "corrections": [
+        "summary: removed the unsupported claim that the Chaos Elemental 'can attack through walls' (not on the Rogues' Castle page) and the player-killer warning",
+        "usefulItems: removed 'Emergency teleport (below level 30 only)' - not supported by any page read and irrelevant at level 52-56",
+        "South-west of Mage Arena: flagged that the 50-54 Wilderness level comes from Krystilia's task-wide range; added the Mage Arena bank quote"
+      ],
+      "confirmed": 17,
+      "downgraded": 1
+    }
+  },
+  {
+    "task": "Sarachnis",
+    "wikiTaskPage": "Sarachnis",
+    "monsterPages": [
+      "Sarachnis",
+      "Forthos Dungeon",
+      "Boss"
+    ],
+    "bossTask": true,
+    "summary": "Sarachnis is a mid-level spider boss in the burial tomb at the southern end of the Forthos Dungeon and can be assigned as a boss task (Like a Boss unlock) or killed on a spider task.",
+    "recommendedStyle": "Any",
+    "styleNotes": "Infobox: poison and venom resistance 100 (immune), elemental weakness Fire 40%, crush defence 10 (lowest melee defence; stab 60, slash 40, magic 150).",
+    "requiredItems": [
+      "Slash weapon or knife (to cut the webs), or Aranea boots"
+    ],
+    "usefulItems": [
+      "Aranea boots",
+      "25,000 coins for an optional instance (12,500 after Hard Combat Achievements)"
+    ],
+    "superior": null,
+    "alternatives": [],
+    "xpPerKill": 430,
+    "locations": [
+      {
+        "name": "Forthos Dungeon — Burial tomb",
+        "displayName": "Forthos Dungeon - burial tomb (south end, instance optional)",
+        "rank": 1,
+        "multi": true,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Accessed Great Kourend at least once by boat (boss task requirement, Boss page)",
+          "Slash weapon, knife or Aranea boots to pass the webs"
+        ],
+        "notes": "Reached via the entrance across the river east of the Forthos Ruin; go to the southern-most part of the dungeon. An optional instance costs 25,000 coins from the bank.",
+        "evidence": {
+          "multi": "'Sarachnis was originally going to be an instanced solo boss, but was reworked into a non-instanced boss in a multicombat area' (Sarachnis, Trivia). The Forthos Dungeon page only calls the Spider's Den multi explicitly: 'The Spider's Den ... is a multi-combat area containing 21 Temple Spiders' (Forthos Dungeon).",
+          "cannon": "'Dwarf multicannons cannot be placed inside the Forthos Dungeon.' (Forthos Dungeon); Forthos Dungeon is in the Dwarf multicannon prohibited list.",
+          "requirements": "Boss slayer table: 'Sarachnis | Forthos Dungeon | Slayer 1 | Accessed Great Kourend at least once by boat' (Boss). 'Players will need a slash weapon or a knife to be able to pass through the webs that block access to where Sarachnis is located, unless using Aranea Boots.' (Sarachnis)"
+        }
+      }
+    ],
+    "notes": "Boss task assignable by Konar, Nieve/Steve or Duradel/Kuradal after unlocking Like a Boss (Boss page: 'can be assigned bosses by Konar, Nieve/Steve, Duradel/Kuradal, or Krystilia'; Krystilia only rolls Wilderness bosses). Infobox assignedby also lists turael and spria because 'She can be killed as part of a spider Slayer task.' (Sarachnis). Boss slayer table: 'Sarachnis | Forthos Dungeon | Slayer 1 | Accessed Great Kourend at least once by boat' (Boss). 'Upon finishing a boss task, the player will get an additional 5,000 Slayer experience regardless of task length.' (Boss). Optional instance: 25,000 coins, 12,500 after hard Combat Achievements (Sarachnis).",
+    "_verification": {
+      "corrections": [
+        "styleNotes: removed the attack-pattern description (boss tasks must not contain fight mechanics)",
+        "multi: upgraded from unknown to true using the Sarachnis Trivia statement that she is 'a non-instanced boss in a multicombat area'"
+      ],
+      "confirmed": 14,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Scabarites",
+    "wikiTaskPage": "Slayer task/Scabarites",
+    "monsterPages": [
+      "Scabarites",
+      "Locust rider",
+      "Scarab Mage",
+      "Sophanem Dungeon"
+    ],
+    "bossTask": false,
+    "summary": "Nieve-only task done in the Sophanem Dungeon, where locust riders (ranged/melee) and scarab mages (magic) sit near the entrance of the maze level, or in the multicombat cavern level for a cannon and melee. Pray Protect from Missiles against locust riders or Protect from Magic against scarab mages; Guthan's makes the task sustainable, and a keris or keris partisan hits scabarites harder. Bring a light source and a tinderbox, watch for floor traps and trapdoors, and carry an emergency teleport because the cavern level uses all three styles at once. Low-level players can instead kill small scarabs in the Uzer Mastaba.",
+    "recommendedStyle": "Melee",
+    "styleNotes": "All scabarites are susceptible to the keris and keris partisan; locust riders and scarab mages have no poison immunity and are not immune to cannon or thralls (infoboxes).",
+    "requiredItems": [
+      "Light source (e.g. Kandarin headgear or lantern)"
+    ],
+    "usefulItems": [
+      "Keris partisan / Keris",
+      "Guthan's equipment",
+      "Tinderbox",
+      "Prayer potions",
+      "Emergency teleport",
+      "Dwarf multicannon (cavern level only)"
+    ],
+    "superior": null,
+    "alternatives": [
+      "Giant Scarab (Nightmare Zone)",
+      "Small scarab (Uzer Mastaba)",
+      "Scarab swarm"
+    ],
+    "xpPerKill": 92.5,
+    "locations": [
+      {
+        "name": "Sophanem Dungeon (maze level)",
+        "displayName": "Sophanem Dungeon - maze level, west of the entrance (scarab mages and locust riders)",
+        "rank": 1,
+        "multi": true,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Partial completion of Contact! (to enter the dungeon)",
+          "Light source"
+        ],
+        "notes": "Two scarab mages spawn on the north-west side near the maze entrance, close to the Sophanem bank and altar, so the task can be done with minimal supplies; locust riders just west of the entrance suit Guthan's. Beware the floor trap at the entrance and hidden trapdoors.",
+        "evidence": {
+          "multi": "Location Comparison table: 'Sophanem Dungeon (maze level) ... Multicombat: Yes' (Slayer task/Scabarites)",
+          "cannon": "Location Comparison table: 'Sophanem Dungeon (maze level) ... Cannonable: No' (Slayer task/Scabarites)",
+          "requirements": "'Players must have partially completed Contact! to enter the dungeon, with access to the bank itself requiring full completion of the quest.' and 'A light source is required for the full dungeon.' (Sophanem Dungeon)"
+        }
+      },
+      {
+        "name": "Sophanem Dungeon (cavern level)",
+        "displayName": "Sophanem Dungeon - cavern level (cannon + melee, dangerous)",
+        "rank": 2,
+        "multi": true,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Partial completion of Contact!",
+          "Light source"
+        ],
+        "notes": "Fastest XP: set a cannon in the room reached via ladders 2, 1 then 7 on the map and pray Protect from Missiles, keeping HP above 50; monsters here are level 100+, use all three styles and are ruthless.",
+        "evidence": {
+          "multi": "'the monsters in this multicombat section are level 100+ and they are ruthless.' (Sophanem Dungeon); table 'Sophanem Dungeon (cavern level) ... Multicombat: Yes' (Slayer task/Scabarites)",
+          "cannon": "'A fast, but more dangerous method, is to to use the dwarf multicannon and melee in the Sophanem Dungeon lower floors.' and table 'Cannonable: Yes' (Slayer task/Scabarites). Conflict: the Dwarf multicannon prohibited list contains an unexplained entry 'Scabaras Dungeon' with no message; the task page's explicit statement is used.",
+          "requirements": "'Players must have partially completed Contact! to enter the dungeon' (Sophanem Dungeon)"
+        }
+      },
+      {
+        "name": "Uzer Mastaba - lower level",
+        "displayName": "Uzer Mastaba (small scarabs, safest low-level option)",
+        "rank": 3,
+        "multi": false,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Partial completion of The Curse of Arrav"
+        ],
+        "notes": "19 small scarabs with 40 hitpoints and no Strength; safe and fast but they drop nothing.",
+        "evidence": {
+          "multi": "table 'Uzer Mastaba ... Multicombat: No' (Slayer task/Scabarites)",
+          "cannon": "table 'Uzer Mastaba ... Cannonable: No' (Slayer task/Scabarites)",
+          "requirements": "'kill small scarabs in the Uzer Mastaba, which requires partial completion of The Curse of Arrav.' (Slayer task/Scabarites)"
+        }
+      }
+    ],
+    "notes": "Only Nieve/Steve assigns scabarites (infobox: 30-60, or 130-170 with the 'Get scabaright on it' unlock for 50 points). Requires 85 combat and partial completion of Contact! (Slayer task/Scabarites infobox; Slayer task list row: Contact! partially, Combat 85). Only small scarabs, scarab swarms, locust riders, scarab mages and the NMZ Giant Scarab count. xpPerKill 92.5 is a locust rider (infobox slayxp); scarab mages give 51.2, small scarabs 40, scarab swarms 1, Giant Scarab 137/280.5.",
+    "_verification": {
+      "corrections": [
+        "notes: added the XP for every counting variant from the task page's variant table; no factual corrections needed"
+      ],
+      "confirmed": 22,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Scorpia",
+    "wikiTaskPage": "Scorpia",
+    "monsterPages": [
+      "Scorpia",
+      "Scorpion Pit",
+      "Boss",
+      "Krystilia"
+    ],
+    "bossTask": true,
+    "summary": "Scorpia is the scorpion boss in the cave beneath the Scorpion Pit in level 53-55 Wilderness, assignable as a Wilderness boss task or killed as part of a scorpions task.",
+    "recommendedStyle": "Magic",
+    "styleNotes": "'Scorpia is weak to Magic attacks due to her low Magic offensive stats' (Scorpia); magic defence 44, elemental weakness Fire 35%; poisonous (starts at 20); not immune to cannon or thralls (infobox).",
+    "requiredItems": [],
+    "usefulItems": [
+      "Antipoison",
+      "Ancient Magicks (freezing spells)",
+      "Wilderness Obelisk / lever teleport for travel"
+    ],
+    "superior": null,
+    "alternatives": [],
+    "xpPerKill": 260,
+    "locations": [
+      {
+        "name": "Cave in the Scorpion Pit (north-east Wilderness)",
+        "displayName": "Scorpia's cave under the Scorpion Pit (Wilderness 53-55, multicombat)",
+        "rank": 1,
+        "multi": true,
+        "cannon": true,
+        "wilderness": true,
+        "wildernessLevelMin": 53,
+        "wildernessLevelMax": 55,
+        "konarAssignable": true,
+        "requirements": [
+          "Members"
+        ],
+        "notes": "Enter via the cave entrances in the Scorpion Pit (3 north, 3 south). Get there by the Ardougne/Edgeville lever to the Deserted Keep then north through the web and east, or a Wilderness Obelisk to level 50 and west past the Rogues' Castle. PKers and the Chaos Elemental are the main dangers.",
+        "evidence": {
+          "multi": "'The Scorpion Pit and the surrounding area is a multi-combat area in level 50+ Wilderness' (Scorpia); 'The Scorpion Pit (both inside and outside), along with the surrounding area is multi-combat' (Scorpion Pit); 'The Scorpion Pit' is in the Multicombat area list.",
+          "cannon": "Slayer task/Scorpions Location Comparison row 'Scorpion Pit (Cave)' notes: 'With a cannon, a scorpion task can be completed in less than a minute as there are many spawns with low hitpoints.' (the same row's Cannonable cell is marked Unknown); Scorpia infobox immunecannon = No; not in the prohibited list.",
+          "requirements": "'Scorpia is a large female scorpion boss that resides in a cave beneath the Scorpion Pit located in Wilderness level 53-55.' (Scorpia); Boss page boss slayer table lists Scorpia with Slayer 1 and no other requirement."
+        }
+      }
+    ],
+    "notes": "Boss task from Krystilia, Konar, Nieve/Steve or Duradel/Kuradal (infobox assignedby includes krystilia,konar,nieve,duradel; Boss page: Krystilia 'will only roll boss tasks in the Wilderness' and Konar 'can also assign Wilderness bosses'). Also counts for scorpions: 'Scorpia, her guardians, and her offspring also count.' (Krystilia). Krystilia's boss row gives Scorpia 260 Slayer XP at Wilderness 52-54; the Scorpia page says level 53-55. 'Killing all three at least once is a hard Wilderness Diary task.' (Scorpia, with the Crazy archaeologist and Chaos Fanatic). The Scorpion Pit is a player-killing hotspot (Scorpion Pit).",
+    "_verification": {
+      "corrections": [
+        "styleNotes: removed the guardian-healing/freeze mechanic (boss tasks must not contain fight mechanics)",
+        "notes: the hard Wilderness Diary task is killing all three ward-shard bosses at least once, not Scorpia alone",
+        "notes: recorded the Krystilia table's 52-54 Wilderness level alongside the Scorpia page's 53-55"
+      ],
+      "confirmed": 14,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Scorpions",
+    "wikiTaskPage": "Slayer task/Scorpions",
+    "monsterPages": [
+      "Scorpion",
+      "Scorpia",
+      "Scorpion Pit",
+      "Krystilia"
+    ],
+    "bossTask": false,
+    "summary": "A beginner task from Turael, Spria and Mazchna (or Krystilia in the Wilderness) done with any combat style against level 14 scorpions, most conveniently in the Al Kharid Mine or the Ardougne Zoo enclosure. Scorpions only melee; a few variants (poison scorpions, Scorpia and her offspring) can poison. Krystilia's version is done west of the Air Obelisk, at the Scorpion Pit or on King Scorpions in the Lava Maze, and a cannon in Scorpia's cave can finish the task in under a minute.",
+    "recommendedStyle": "Any",
+    "styleNotes": "Melee-only attackers with tiny drop tables; not immune to cannon; poison scorpions (Taverley Dungeon) and Scorpia's brood can poison; lobstrosities underwater only take limited weapons.",
+    "requiredItems": [],
+    "usefulItems": [
+      "Antipoison (for poison scorpions or Scorpia's cave)",
+      "Dwarf multicannon (Al Kharid Mine, Ardougne Zoo, Scorpion Pit)"
+    ],
+    "superior": null,
+    "alternatives": [
+      "Scorpia",
+      "Scorpia's offspring",
+      "Scorpia's guardian",
+      "King Scorpion",
+      "Poison Scorpion",
+      "Pit Scorpion",
+      "Lobstrosity"
+    ],
+    "xpPerKill": 17,
+    "locations": [
+      {
+        "name": "Al Kharid mine",
+        "displayName": "Al Kharid Mine (9 scorpions, safespottable, cannon)",
+        "rank": 1,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "Nine level 14 scorpions scattered through the mine, close to the Al Kharid bank; can be safespotted and cannoned.",
+        "evidence": {
+          "multi": "Location Comparison: 'Al Kharid Mine ... Multicombat: No' (Slayer task/Scorpions)",
+          "cannon": "Location Comparison: 'Al Kharid Mine ... Cannonable: Yes' (Slayer task/Scorpions)",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Ardougne Zoo",
+        "displayName": "Ardougne Zoo scorpion enclosure (3 scorpions + 4 pit scorpions)",
+        "rank": 2,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "Scorpions are kept in an enclosure; pit scorpions here also count.",
+        "evidence": {
+          "multi": "Location Comparison: 'Ardougne Zoo ... Multicombat: No' (Slayer task/Scorpions)",
+          "cannon": "Location Comparison: 'Ardougne Zoo ... Cannonable: Yes' (Slayer task/Scorpions)",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Stonecutter Outpost temple",
+        "displayName": "West of the Stonecutter Outpost temple, east of the Colossal Wyrm Remains (11 scorpions, multi + cannon)",
+        "rank": 3,
+        "multi": true,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Members (Varlamore)"
+        ],
+        "notes": "Eleven level 14 scorpions in Varlamore; the only non-Wilderness spot the task page marks as both multicombat and cannonable.",
+        "evidence": {
+          "multi": "Location Comparison: 'Stonecutter Outpost temple, East of Colossal Wyrm Remains ... 11 Scorpions (level 14) ... Multicombat: Yes' (Slayer task/Scorpions)",
+          "cannon": "Location Comparison: 'Stonecutter Outpost temple ... Cannonable: Yes' (Slayer task/Scorpions)",
+          "requirements": "'members = Yes' (Stonecutter Outpost temple infobox); Scorpion LocLine 'South-west of Stonecutter Outpost'"
+        }
+      },
+      {
+        "name": "Dwarven Mine",
+        "displayName": "Dwarven Mine (13 scorpions + 2 King Scorpions, no cannon)",
+        "rank": 4,
+        "multi": false,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "Safespottable; cannon is prohibited here.",
+        "evidence": {
+          "multi": "Location Comparison: 'Dwarven Mine ... Multicombat: No' (Slayer task/Scorpions)",
+          "cannon": "'Dwarven Mine - The dwarves won't be happy if you set up a cannon here.' (Dwarf multicannon prohibited list); table 'Cannonable: No' (Slayer task/Scorpions)",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Scorpion Pit",
+        "displayName": "Scorpion Pit surface (Wilderness 53-55, 7 scorpions, multi) - Krystilia",
+        "rank": 5,
+        "multi": true,
+        "cannon": true,
+        "wilderness": true,
+        "wildernessLevelMin": 53,
+        "wildernessLevelMax": 55,
+        "konarAssignable": false,
+        "requirements": [
+          "Members"
+        ],
+        "notes": "Deep Wilderness; 'the Chaos Elemental can also wander into the Scorpion Pit' (Scorpion Pit). Reach it via the Ardougne/Edgeville lever and web, or a level 50 Wilderness Obelisk then west past the Rogues' Castle.",
+        "evidence": {
+          "multi": "Location Comparison: 'Scorpion Pit ... Multicombat: Yes' (Slayer task/Scorpions); 'The Scorpion Pit' is in the Multicombat area list.",
+          "cannon": "Location Comparison: 'Scorpion Pit ... Cannonable: Yes' (Slayer task/Scorpions)",
+          "requirements": "'The Scorpion Pit is a valley in the northern portion of the Wilderness extending from level 53 to 55.' (Scorpion Pit)"
+        }
+      },
+      {
+        "name": "Cave in the Scorpion Pit (north-east Wilderness)",
+        "displayName": "Scorpia's cave (Scorpia + 27 offspring, Wilderness 53-55) - Krystilia",
+        "rank": 6,
+        "multi": true,
+        "cannon": true,
+        "wilderness": true,
+        "wildernessLevelMin": 53,
+        "wildernessLevelMax": 55,
+        "konarAssignable": false,
+        "requirements": [
+          "Members"
+        ],
+        "notes": "Many low-hitpoint offspring spawns make a cannon extremely fast; offspring use accurate ranged attacks that drain prayer and poison from 6. Scorpia and her guardians also count.",
+        "evidence": {
+          "multi": "'The Scorpion Pit (both inside and outside), along with the surrounding area is multi-combat' (Scorpion Pit); table 'Scorpion Pit (Cave) ... Multicombat: Yes' (Slayer task/Scorpions)",
+          "cannon": "'With a cannon, a scorpion task can be completed in less than a minute as there are many spawns with low hitpoints.' (Slayer task/Scorpions; the same row's Cannonable cell reads Unknown)",
+          "requirements": "'located in extremely deep (50+) Wilderness' (Slayer task/Scorpions)"
+        }
+      },
+      {
+        "name": "Wilderness (West of the Air Obelisk)",
+        "displayName": "West of the Air Obelisk (Wilderness 5-9) - Krystilia",
+        "rank": 7,
+        "multi": "unknown",
+        "cannon": "unknown",
+        "wilderness": true,
+        "wildernessLevelMin": 5,
+        "wildernessLevelMax": 9,
+        "konarAssignable": false,
+        "requirements": [
+          "Members"
+        ],
+        "notes": "Low-level Wilderness scorpions listed by Krystilia; levels 5-9 per Krystilia's table.",
+        "evidence": {
+          "multi": "not stated",
+          "cannon": "not stated",
+          "requirements": "Krystilia task table: Scorpions ... 'West of the Air Obelisk, Scorpion Pit, Lava Maze (King Scorpions)' with Wilderness levels '5-9, 39-42, 53-54' (Krystilia)"
+        }
+      },
+      {
+        "name": "Lava Maze",
+        "displayName": "Lava Maze King Scorpions (Wilderness 39-42, multi) - Krystilia",
+        "rank": 8,
+        "multi": true,
+        "cannon": "unknown",
+        "wilderness": true,
+        "wildernessLevelMin": 39,
+        "wildernessLevelMax": 42,
+        "konarAssignable": false,
+        "requirements": [
+          "Members"
+        ],
+        "notes": "King Scorpions (level 32, 30 Slayer XP, LocLine 'Lava Maze' on the King Scorpion page) count for Krystilia's task.",
+        "evidence": {
+          "multi": "'The Lava Maze' is in the Multicombat area list (Multicombat area).",
+          "cannon": "not stated",
+          "requirements": "Krystilia task table Wilderness levels '5-9, 39-42, 53-54' for scorpions (Krystilia); King Scorpion page: 'King Scorpions are aggressive monsters found in the Dwarven Mine, the Lava Maze, in the Wilderness'."
+        }
+      }
+    ],
+    "notes": "Assigned by Krystilia (65-100), Turael/Spria (15-30) and Mazchna (30-50); 7 combat required (Slayer task/Scorpions infobox). 'Interestingly various fightable lobsters also counts as scorpions.' Other Scorpion LocLine spots not in the comparison table: south of the Al Kharid bank, Cairn Isle, Karamja Volcano, Kharazi Jungle, Temple of Ikov, Varrock Sewers, Ruins of Unkah, Ralos' Rise mine, Pit of Pestilence (levels 37/59), Taverley Dungeon and North Brimhaven mine (poison scorpions), Legends' Guild dungeon (pit scorpions). The Scorpion Pit is a player-killing hotspot (Scorpion Pit page).",
+    "_verification": {
+      "corrections": [
+        "locations: added 'Stonecutter Outpost temple' (11 scorpions, Multicombat Yes, Cannonable Yes in the task page's Location Comparison) which was missing; ranks renumbered",
+        "alternatives: added Scorpia's offspring and Scorpia's guardian per the Krystilia footnote",
+        "summary: removed the player-killer warning",
+        "Scorpia cave cannon kept as true (page note says a cannon finishes the task in under a minute; not on the prohibited list) although the table cell reads Unknown"
+      ],
+      "confirmed": 38,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Sea snakes",
+    "wikiTaskPage": "Slayer task/Sea snakes",
+    "monsterPages": [
+      "Sea Snake Hatchling",
+      "Sea Snake Young",
+      "Giant Sea Snake",
+      "Miscellania and Etceteria dungeon"
+    ],
+    "bossTask": false,
+    "summary": "Vannaka-only task at 40 Slayer done in the Miscellania and Etceteria Dungeon after Royal Trouble, best entered from Etceteria which is closest to the snakes. Both variants melee and poison, so bring antipoison; they are weak to Magic, especially earth spells, and can be safespotted from the blue eggs halfway through the tunnel. A cannon works but the area is single combat.",
+    "recommendedStyle": "Magic",
+    "styleNotes": "Vulnerable to Magic, particularly earth spells (elemental weakness Earth 20%); poisonous (hatchling 5, young 7); not immune to cannon or thralls.",
+    "requiredItems": [],
+    "usefulItems": [
+      "Antipoison / superantipoison",
+      "Earth spells or trident",
+      "Dwarf multicannon"
+    ],
+    "superior": null,
+    "alternatives": [],
+    "xpPerKill": 85,
+    "locations": [
+      {
+        "name": "Miscellania and Etceteria dungeon",
+        "displayName": "Miscellania & Etceteria Dungeon (Etceteria entrance, single combat)",
+        "rank": 1,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Royal Trouble (to be assigned; the dungeon can be entered during and after the quest, but 'The full cave system cannot be accessed until after the boss fight')"
+        ],
+        "notes": "'the Etceteria entrance is closest to the sea snakes' (Miscellania and Etceteria dungeon); hatchlings (7 spawns) then young (10 spawns) further in (task page maplinks). 'Players can use the blue eggs halfway through the tunnel as a safespot' (Sea Snake Young). The Giant Sea Snake 'cannot be fought after completion of the Royal Trouble quest, so it cannot be killed on a sea snake task' (Giant Sea Snake).",
+        "evidence": {
+          "multi": "'Dwarven multicannons can be used in the dungeon, although it is in single combat.' (Slayer task/Sea snakes); 'reduced effectiveness due to the area being single-way combat' (Miscellania and Etceteria dungeon)",
+          "cannon": "'A Dwarf multicannon can be set up here to kill the sea snakes, but with reduced effectiveness due to the area being single-way combat.' (Miscellania and Etceteria dungeon)",
+          "requirements": "'They are found in the Miscellania and Etceteria Dungeon, which can be entered during and after the quest.' (Slayer task/Sea snakes); 'The full cave system cannot be accessed until after the boss fight of the same quest' (Miscellania and Etceteria dungeon); Slayer task list row: Royal Trouble, Combat 50."
+        }
+      }
+    ],
+    "notes": "Only Vannaka assigns (40-90); requires 40 Slayer, 50 combat and Royal Trouble. xpPerKill 85 is for sea snake young; hatchlings give 50.",
+    "_verification": {
+      "corrections": [
+        "requirements: clarified that the full cave system only opens after the Royal Trouble boss fight (Miscellania and Etceteria dungeon page)"
+      ],
+      "confirmed": 16,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Shades",
+    "wikiTaskPage": "Slayer task/Shades",
+    "monsterPages": [
+      "Shade",
+      "Loar Shade",
+      "Mort'ton",
+      "Stronghold of Security",
+      "Catacombs of Kourend"
+    ],
+    "bossTask": false,
+    "summary": "Assigned by Mazchna and Vannaka; the fastest way is killing the 25 aggressive level 40 Loar shades around Mort'ton with melee or magic, since they die far quicker than the level 159/140 shades in the Stronghold of Security or Catacombs of Kourend. Shades are undead, so a salve amulet works, and wind spells hit their 40% air weakness; the Stronghold shades give drastically reduced XP and should be avoided.",
+    "recommendedStyle": "Any",
+    "styleNotes": "Undead (salve amulet and Crumble Undead work); Catacombs shades are 40% weak to wind spells; Stronghold shades give almost no XP; not immune to cannon or thralls.",
+    "requiredItems": [],
+    "usefulItems": [
+      "Salve amulet (e)",
+      "Mort'ton teleport",
+      "Wind spells"
+    ],
+    "superior": null,
+    "alternatives": [
+      "Phrin Shade",
+      "Riyl Shade",
+      "Asyn Shade",
+      "Fiyr Shade",
+      "Urium Shade"
+    ],
+    "xpPerKill": 38,
+    "locations": [
+      {
+        "name": "Mort'ton",
+        "displayName": "Mort'ton (25 Loar shades, fastest)",
+        "rank": 1,
+        "multi": false,
+        "cannon": "unknown",
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Priest in Peril (to access Mort'ton)"
+        ],
+        "notes": "Loar shades are aggressive and roam the town; Mort'ton teleport lands in the centre. Cannon placement is limited to the eastern boundary per the task page, but the Dwarf multicannon page lists Mort'ton as prohibited.",
+        "evidence": {
+          "multi": "Location Comparison: 'Mort'ton ... Multicombat: No' (Slayer task/Shades)",
+          "cannon": "Conflict: 'Cannon placement is limited, but it is possible to set one up along the eastern boundary of Mort'ton.' and table 'Cannonable: Yes' (Slayer task/Shades) versus 'Mort'ton and Shades of Mort'ton ... You can't set up a cannon here.' (Dwarf multicannon prohibited list); recorded as unknown.",
+          "requirements": "'Priest in Peril is required to access Mort'ton.' (Slayer task/Shades)"
+        }
+      },
+      {
+        "name": "Shade Catacombs",
+        "displayName": "Shade Catacombs (Phrin/Riyl/Asyn/Fiyr/Urium shades, cannon allowed)",
+        "rank": 2,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Priest in Peril (Mort'ton access)",
+          "Shades of Mort'ton (completed) and a bronze shade key or better to enter",
+          "Higher-tier shade keys for deeper sections"
+        ],
+        "notes": "'The entrance is directly north of the general store and west of the temple' (Shade Catacombs). Higher shades drop remains for the Shades of Mort'ton minigame. Shades heal to full if they leave combat. Riyl shades can be safespotted west of the entrance in a steel chest room (task page).",
+        "evidence": {
+          "multi": "Location Comparison: 'Shade Catacombs ... Multicombat: No' (Slayer task/Shades)",
+          "cannon": "'you can however set up a cannon in the Shade catacombs, but beware of the fact that the shades heal themselves to full health if they are not in combat anymore' (Dwarf multicannon); table 'Cannonable: Yes' (Slayer task/Shades)",
+          "requirements": "'To access it you need to have completed Shades of Mort'ton and have a bronze shade key or better.' (Shade Catacombs); 'Keys required to access certain parts of dungeon' (Slayer task/Shades)"
+        }
+      },
+      {
+        "name": "Catacombs of Kourend",
+        "displayName": "Catacombs of Kourend (level-140 shades: 11 per the Catacombs page, 6 per the task table; multi, safespottable)",
+        "rank": 3,
+        "multi": true,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "In the Reeking Cove (south-western section) with twisted banshees and deviant spectres; the exit leads up to the hole north-west of the Shayzien Encampment bank. Safespot using a corner just south of the steel dragons (task page); kills give ancient shards and dark totem pieces (Catacombs of Kourend). The Catacombs page lists 11 shade spawns (LocationMonsterTableLine spawns=11) while the task table says 6.",
+        "evidence": {
+          "multi": "'As this particular dungeon is a multicombat area (excluding the brutal dragon area)' (Catacombs of Kourend); table 'Multicombat: Yes' (Slayer task/Shades)",
+          "cannon": "'Catacombs of Kourend - An ancient power won't let you set up a cannon here.' (Dwarf multicannon prohibited list); table 'Cannonable: No' (Slayer task/Shades)",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Sepulchre of Death in Stronghold of Security",
+        "displayName": "Stronghold of Security - Sepulchre of Death (4 shades, avoid: 1/10 XP)",
+        "rank": 4,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "Next to the ladder onto the fourth level; safespot with a skeleton on the eastern side. Experience (including Slayer XP) is drastically reduced here.",
+        "evidence": {
+          "multi": "Location Comparison: 'Sepulchre of Death in Stronghold of Security ... Multicombat: No' (Slayer task/Shades); Multicombat area list only names 'The first level of the Stronghold of Security'.",
+          "cannon": "'Note: A cannon can be placed in the stronghold.' (Stronghold of Security); table 'Cannonable: Yes' (Slayer task/Shades)",
+          "requirements": "not stated"
+        }
+      }
+    ],
+    "notes": "Mazchna (30-70) and Vannaka (40-90); 30 combat, no Slayer level (task infobox). Temple Trekking shades also count per the Slayer task list row. Loar shades give 38 XP (infobox); Catacombs shades 115 (slayxp2); Stronghold shades 4.2 per the Shade infobox (the task page's variant table rounds this to 5) - avoid.",
+    "_verification": {
+      "corrections": [
+        "Shade Catacombs requirements: added completion of Shades of Mort'ton and a bronze shade key (Shade Catacombs page); replaced the unsupported 'east of the funeral pyres' entrance with the page's 'directly north of the general store and west of the temple'",
+        "Catacombs of Kourend: recorded the 11-vs-6 spawn conflict between the Catacombs page and the task table; replaced the unverified 'northernmost part' wording with the Reeking Cove description",
+        "notes: Stronghold shade XP 4.2 is from the infobox; the task table says 5"
+      ],
+      "confirmed": 23,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Shadow warriors",
+    "wikiTaskPage": "Shadow warrior (no 'Slayer task/Shadow warriors' page exists; monster page and Legends' Guild page used)",
+    "monsterPages": [
+      "Shadow warrior",
+      "Legends' Guild"
+    ],
+    "bossTask": false,
+    "summary": "A Vannaka/Chaeldar task after Legends' Quest, done in the dungeon beneath the Legends' Guild where 19 aggressive level 48 shadow warriors spawn. They are melee attackers with high stab defence and low crush and magic defence, so use crush weapons or magic, or safespot them through the fence by the pit scorpions; a cannon can be used in the dungeon. They are not classed as undead, so the salve amulet does nothing.",
+    "recommendedStyle": "Melee",
+    "styleNotes": "Not undead (salve amulet has no effect); attack style Slash; defences stab 43, slash 31, crush 19, magic 15, and a Slayer master says 'crush weapons and magic will give them trouble'; not immune to cannon or thralls (infobox).",
+    "requiredItems": [],
+    "usefulItems": [
+      "Crush weapon",
+      "Dwarf multicannon",
+      "Fairy ring BLR or Quest point cape teleport to the guild"
+    ],
+    "superior": null,
+    "alternatives": [],
+    "xpPerKill": 67,
+    "locations": [
+      {
+        "name": "Legends' Guild Dungeon",
+        "displayName": "Legends' Guild basement (19 shadow warriors, cannon allowed)",
+        "rank": 1,
+        "multi": "unknown",
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Legends' Quest (completed; started only lets you onto the guild grounds, the building needs the whole quest)"
+        ],
+        "notes": "Take the stairs down inside the guild; giant bats and pit scorpions share the dungeon. Safespot through the fence separating them from the pit scorpions, or behind the fungus near the cavern wall once they lose aggression. Fairy ring BLR is just east of the entrance.",
+        "evidence": {
+          "multi": "not stated (Legends' Guild page and Shadow warrior page do not state single/multi; not in the Multicombat area list)",
+          "cannon": "'A dwarf multicannon can be used.' (Legends' Guild, Dungeon section)",
+          "requirements": "'to enter the actual building, players must have completed the entire quest.' (Legends' Guild); Slayer task list row: Legends' Quest, Combat 60."
+        }
+      }
+    ],
+    "notes": "Assigned by Vannaka and Chaeldar only, after Legends' Quest ('After completion of Legends' Quest, shadow warriors are a possible Slayer task from Chaeldar and Vannaka.' - Shadow warrior). Hidden on the minimap.",
+    "_verification": {
+      "corrections": [
+        "styleNotes: added the Slayer master quote supporting crush/magic; requirement wording now distinguishes started (grounds) from completed (building). 19 spawns confirmed by counting the LocLine coordinates."
+      ],
+      "confirmed": 15,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "The Shellbane Gryphon",
+    "wikiTaskPage": "Shellbane gryphon",
+    "monsterPages": [
+      "Shellbane gryphon",
+      "Shellbane Gryphon Cave",
+      "Slayer task/Gryphons",
+      "Boss"
+    ],
+    "bossTask": true,
+    "summary": "The shellbane gryphon is the solo-instanced Slayer boss version of gryphons, fought in the Shellbane Gryphon Cave in the centre of the Great Conch and only attackable while on a gryphon or shellbane gryphon task.",
+    "recommendedStyle": "Melee",
+    "styleNotes": "'primarily weak to melee' (Shellbane gryphon); elemental weakness Air 50%; 'A tortugan shield is required for the fight'; immune to cannon (immunecannon = Yes), poison/venom resistance 100.",
+    "requiredItems": [
+      "Tortugan shield"
+    ],
+    "usefulItems": [
+      "Equipment weighing 40 kg or more when equipped (Slayer task/Gryphons recommends 40 kg for the shellbane gryphon)",
+      "Fairy ring CJQ (cave entrance is just north)"
+    ],
+    "superior": null,
+    "alternatives": [],
+    "xpPerKill": 400,
+    "locations": [
+      {
+        "name": "Shellbane Gryphon Cave",
+        "displayName": "Shellbane Gryphon Cave - centre of the Great Conch (task-only, solo instance)",
+        "rank": 1,
+        "multi": "partial",
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "51 Slayer",
+          "Troubled Tortugans (completed)",
+          "Gryphon or shellbane gryphon Slayer task (Elder Nama blocks entry otherwise)",
+          "Tortugan shield"
+        ],
+        "notes": "'The entrance to the cave is north of the fairy ring CJQ.' Elder Nama 'prevents players from entering unless they have an appropriate slayer task or an elite clue scroll directing them to kill the shellbane gryphon' and acts as the scoreboard. 'Once a Slayer task has been completed, it will no longer respawn' (Shellbane gryphon).",
+        "evidence": {
+          "multi": "'Although the cave is a multicombat area, the boss fight takes place in a solo instance.' (Shellbane Gryphon Cave); the Slayer task/Gryphons Location Comparison marks the cave Multicombat: No.",
+          "cannon": "'Players may not place a dwarf multicannon or light a fire within the cave' (Shellbane Gryphon Cave); Shellbane Gryphon Cave is in the Dwarf multicannon prohibited list; infobox immunecannon = Yes.",
+          "requirements": "'requiring level 51 Slayer and completion of Troubled Tortugans to kill. As a Slayer boss, it may only be killed while on a gryphons Slayer task.' (Shellbane gryphon); 'A tortugan shield is required for the fight' (Shellbane gryphon)"
+        }
+      }
+    ],
+    "notes": "Boss task from Nieve/Steve, Duradel/Kuradal and Konar; 'this unlock [Wings Spread] is not required for the shellbane gryphon to be assigned as a boss task from those Slayer masters' (Shellbane gryphon). Infobox assignedby: vannaka, chaeldar, konar, nieve, duradel, Mortimer - i.e. also killable on a normal gryphon task. Boss page: 'Shellbane gryphon | Shellbane Gryphon Cave | Slayer 51 | Completed Troubled Tortugans'. Slayer XP 400 (infobox).",
+    "_verification": {
+      "corrections": [
+        "styleNotes: removed the knockback/weight mechanic (boss tasks must not contain fight mechanics); added the Air 50% elemental weakness from the infobox",
+        "usefulItems: weight item reworded as a plain equipment recommendation sourced to Slayer task/Gryphons"
+      ],
+      "confirmed": 17,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Skeletal wyverns",
+    "wikiTaskPage": "Slayer task/Skeletal Wyvern (fetches the same content as Skeletal Wyvern/Strategies)",
+    "monsterPages": [
+      "Skeletal Wyvern",
+      "Skeletal Wyvern/Strategies",
+      "Asgarnian Ice Dungeon",
+      "Konar quo Maten"
+    ],
+    "bossTask": false,
+    "summary": "A 72 Slayer task from Chaeldar, Konar, Nieve and Duradel done at the end of the Asgarnian Ice Dungeon, where an elemental, mind, dragonfire or ancient wyvern shield cuts their icy breath from 50+ to 10. They are draconic, so a dragon hunter lance (pound/swipe) or dragon hunter crossbow is best; pray Protect from Melee in melee range or Protect from Missiles otherwise, and a cannon is allowed in the lower cave. Many players safespot them with a crossbow after they lose aggression, using the cave door or a tile north-west of Steve; a task-only upper area exists but is a no-cannon zone.",
+    "recommendedStyle": "Melee",
+    "styleNotes": "Draconic (dragonbane weapons and enchanted dragonstone bolts work) but NOT undead (salve amulet does nothing); high stab defence so use the lance's pound/swipe styles; regenerate 1 HP per 10 ticks; not immune to cannon or thralls; elemental weakness Fire 25%.",
+    "requiredItems": [
+      "Elemental shield, Mind shield, Dragonfire shield, Dragonfire ward or Ancient wyvern shield"
+    ],
+    "usefulItems": [
+      "Dragon hunter lance",
+      "Dragon hunter crossbow with diamond dragon bolts (e)",
+      "Prayer potions",
+      "Fairy ring AIQ"
+    ],
+    "superior": null,
+    "alternatives": [],
+    "xpPerKill": 210,
+    "locations": [
+      {
+        "name": "Asgarnian Ice Dungeon (AIQ)",
+        "displayName": "Asgarnian Ice Dungeon - wyvern cave (lower area, 22 wyverns in the dungeon, cannon allowed)",
+        "rank": 1,
+        "multi": "unknown",
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "72 Slayer",
+          "Elemental Workshop I (needed to be assigned)",
+          "Agility shortcuts optional: 82 Agility (77 with a Summer pie) right from the dungeon entrance, or 72 Agility before the icy area; otherwise walk through the dungeon"
+        ],
+        "notes": "South of Port Sarim under a trapdoor (fairy ring AIQ); the wyverns are at the far end of the dungeon. Safespot by trapping a wyvern on the cave entrance after 10 minutes of tolerance, or stand one tile north-west of Steve/Pieve during a task.",
+        "evidence": {
+          "multi": "not stated for the wyvern area; the only multi statement on the page concerns the ice giant area: 'The western area of the dungeon leads to the Royal Titans encounter ... This area is a multicombat area.' (Asgarnian Ice Dungeon)",
+          "cannon": "'Dwarf multicannon are allowed in the Asgarnian Ice Dungeon, however only in the lower part of the cave; the upper Slayer-exclusive part is a no cannon zone.' (Skeletal Wyvern/Strategies)",
+          "requirements": "'they will only assign them if the player has completed the Elemental Workshop I quest.' and 'There is a shortcut at the ladder to the Ice Dungeon leading to the skeletal wyverns requiring level 82 Agility (or level 77 Agility with a Summer pie).' (Skeletal Wyvern); 'Players with level 72 or 82 Agility may use a shortcut before the icy area or right from the dungeon entrance, respectively.' (Skeletal Wyvern/Strategies)"
+        }
+      },
+      {
+        "name": "Asgarnian Ice Dungeon (task-only upper area)",
+        "displayName": "Asgarnian Ice Dungeon - task-only upper wyvern area (14 extra wyverns, no cannon)",
+        "rank": 2,
+        "multi": "unknown",
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "72 Slayer",
+          "Skeletal wyvern task (Steve/Pieve block off-task attacks)"
+        ],
+        "notes": "Accessed via icy steps by the exit of the wyvern area; fourteen additional wyverns; a safespot exists in this area.",
+        "evidence": {
+          "multi": "not stated",
+          "cannon": "'the upper Slayer-exclusive part is a no cannon zone.' (Skeletal Wyvern/Strategies)",
+          "requirements": "'A task-only area near the entrance can be accessed, though players will only be able to attack them while on task; otherwise, Steve or Pieve will stop them from doing so.' (Asgarnian Ice Dungeon)"
+        }
+      }
+    ],
+    "notes": "Konar assigns them at the Asgarnian Ice Dungeon (Konar page row: Skeletal Wyverns - Asgarnian Ice Dungeon - 5-12, extended 50-70 - Slayer 72, Combat 70, completion of Elemental Workshop I). 'Killing a wyvern is also a requirement for the Hard Falador Diary.' The shield is 'not required to be slain' but reduces icy breath from 50+ to 10; 'The ancient wyvern shield also makes the player immune to the freezing effect'. The dungeon lists 22 skeletal wyvern spawns (Asgarnian Ice Dungeon).",
+    "_verification": {
+      "corrections": [
+        "requirements: added the 72 Agility shortcut option from the Strategies page; wikiTaskPage note corrected (the Slayer task page fetches identical content to the Strategies page); notes clarify the shield is not strictly required"
+      ],
+      "confirmed": 20,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Skeletons",
+    "wikiTaskPage": "Slayer task/Skeletons",
+    "monsterPages": [
+      "Skeleton",
+      "Edgeville Dungeon",
+      "Stronghold of Security",
+      "Catacombs of Kourend",
+      "Krystilia"
+    ],
+    "bossTask": false,
+    "summary": "A beginner task from Turael, Spria and Mazchna (or Krystilia in the Wilderness) against undead skeletons, best killed with a crush weapon and a salve amulet because of their low crush defence, or with earth spells which exploit their elemental weakness. The Edgeville Dungeon has a good cluster that can be cannoned with a quick escape; the Catacombs of Kourend are multicombat with bonus shard and totem drops. Krystilia's version can be done in the Wilderness part of Edgeville Dungeon, the Wilderness mines, or by killing Vet'ion or Calvar'ion.",
+    "recommendedStyle": "Melee",
+    "styleNotes": "Undead (salve amulet and Crumble Undead work); low crush defence; many have an Earth elemental weakness (35%); not immune to cannon; skeletal wyverns are NOT skeletons for the salve amulet.",
+    "requiredItems": [],
+    "usefulItems": [
+      "Salve amulet (e)",
+      "Crush weapon (e.g. Viggora's chainmace)",
+      "Earth spells",
+      "Dwarf multicannon",
+      "Bonecrusher (Catacombs)"
+    ],
+    "superior": null,
+    "alternatives": [
+      "Vet'ion",
+      "Calvar'ion",
+      "Skeleton Hellhound / Greater Skeleton Hellhound (summoned by Vet'ion and Calvar'ion)",
+      "Skogre",
+      "Skeleton Mage",
+      "Monkey skeleton (Ape Atoll)"
+    ],
+    "xpPerKill": 29,
+    "locations": [
+      {
+        "name": "Edgeville Dungeon",
+        "displayName": "Edgeville Dungeon (19 skeletons south, cannon, safespot at the mine gate)",
+        "rank": 1,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "Southern (non-Wilderness) half has 19 level 21-25 skeletons; safespot from behind the gate east of the mine. The northern half is Wilderness with 7 level-45 skeletons and is a PK zone.",
+        "evidence": {
+          "multi": "Location Comparison: 'Edgeville Dungeon ... Multicombat: No' (Slayer task/Skeletons)",
+          "cannon": "'The Dwarf Multicannon can be used here.' (Edgeville Dungeon); table 'Cannonable: Yes' (Slayer task/Skeletons)",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Edgeville Dungeon (Wilderness area)",
+        "displayName": "Edgeville Dungeon - Wilderness half (7 level-45 skeletons) - Krystilia",
+        "rank": 2,
+        "multi": false,
+        "cannon": true,
+        "wilderness": true,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Members"
+        ],
+        "notes": "'Killing skeletons in the northern part of the Edgeville dungeon represents a high risk ... because it is a pk zone' but it has a quick escape; recommended for Krystilia tasks if not killing Vet'ion.",
+        "evidence": {
+          "multi": "Location Comparison: 'Edgeville Dungeon ... Multicombat: No' (Slayer task/Skeletons)",
+          "cannon": "'The Dwarf Multicannon can be used here.' (Edgeville Dungeon)",
+          "requirements": "'The northern half is members-only, and is in the Wilderness' (Edgeville Dungeon); Wilderness level not stated (Krystilia lists skeleton levels as 'Varies')."
+        }
+      },
+      {
+        "name": "Catacombs of Kourend",
+        "displayName": "Catacombs of Kourend (6 skeletons, multi, shards/totems)",
+        "rank": 3,
+        "multi": true,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "Bones can be buried for prayer; kills give ancient shards and dark totem pieces. A pickaxe shortcut sits between the skeletons and possessed pickaxes.",
+        "evidence": {
+          "multi": "Location Comparison: 'Catacombs of Kourend ... Multicombat: Yes' (Slayer task/Skeletons); 'As this particular dungeon is a multicombat area (excluding the brutal dragon area)' (Catacombs of Kourend)",
+          "cannon": "'Catacombs of Kourend - An ancient power won't let you set up a cannon here.' (Dwarf multicannon prohibited list); table 'Cannonable: No' (Slayer task/Skeletons)",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Stronghold of Security",
+        "displayName": "Stronghold of Security - Sepulchre of Death (26 skeletons, cannon, safespot)",
+        "rank": 4,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "Fourth floor; safespot between the bones in the south-western room. Shades and ankou share the level.",
+        "evidence": {
+          "multi": "Location Comparison: 'Stronghold of Security ... Multicombat: No' (Slayer task/Skeletons); the Multicombat area list names only the first level.",
+          "cannon": "'Note: A cannon can be placed in the stronghold.' (Stronghold of Security); table 'Cannonable: Yes' (Slayer task/Skeletons)",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Varrock Sewers",
+        "displayName": "Varrock Sewers (skeletons: 9 per the Varrock Sewers page, 7 per the task table; multi, cannon)",
+        "rank": 5,
+        "multi": true,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "Free-to-play multicombat dungeon; 'The dwarf multicannon can be used here' (Varrock Sewers). The Varrock Sewers page lists 9 skeleton spawns (levels 21, 25) while the task table says 7.",
+        "evidence": {
+          "multi": "'Varrock Sewers' is in the List of multicombat areas (Multicombat area); table 'Multicombat: Yes' (Slayer task/Skeletons)",
+          "cannon": "'The dwarf multicannon can be used here' (Varrock Sewers); table 'Varrock Sewers ... Cannonable: Yes' (Slayer task/Skeletons)",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Ape Atoll Dungeon",
+        "displayName": "Ape Atoll Dungeon (monkey skeletons, level 142, multi + cannon)",
+        "rank": 6,
+        "multi": true,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Monkey Madness I (access to Ape Atoll)",
+          "Monkey greegree to avoid aggression"
+        ],
+        "notes": "Multicombat with rapid respawns; popular for chinchompas or burst/barrage training. Aggressive to humans but not to players in greegree form.",
+        "evidence": {
+          "multi": "'As the dungeon is a multicombat zone and the skeletons respawn rapidly' (Slayer task/Skeletons); 'Ape Atoll' is in the Multicombat area list.",
+          "cannon": "table 'Ape Atoll Dungeon ... Cannonable: Yes' (Slayer task/Skeletons)",
+          "requirements": "'Access to the island Ape Atoll is obtained through the quest Monkey Madness I.' and 'Monsters will not be aggressive to you if you are in any monkey form (i.e. wielding a monkey greegree)' (Ape Atoll Dungeon); 'aggressive to humans but not to players disguised using a monkey greegree' (Slayer task/Skeletons)"
+        }
+      },
+      {
+        "name": "Skeletal Tomb",
+        "displayName": "Skeletal Tomb - Calvar'ion (Wilderness 21, singles-plus) - Krystilia",
+        "rank": 7,
+        "multi": false,
+        "cannon": "unknown",
+        "wilderness": true,
+        "wildernessLevelMin": 21,
+        "wildernessLevelMax": 21,
+        "konarAssignable": false,
+        "requirements": [
+          "Hard Wilderness Diary (a skeleton task does not bypass it; only a Vet'ion boss task does)",
+          "50,000 coin lair fee (shared across the Wilderness boss lairs, repaid only after dying to a player)"
+        ],
+        "notes": "Weaker Vet'ion variant (322.5 Slayer XP, Calvar'ion infobox) in a singles-plus arena in the Graveyard of Shadows north of Ferox Enclave. Its summoned skeleton hellhounds also count.",
+        "evidence": {
+          "multi": "'It is a singles-plus combat dungeon' (Skeletal Tomb); 'a singles-plus combat area in level 21 Wilderness' (Slayer task/Skeletons); singles-plus recorded as not multi.",
+          "cannon": "not stated",
+          "requirements": "'To enter the lair, players must have completed the hard Wilderness diary, OR they must have a Vet'ion boss Slayer task (a skeleton Slayer task does not bypass the diary requirement).' and 'Entering the boss lairs requires players to pay a fee of 50,000 coins' (Skeletal Tomb)"
+        }
+      },
+      {
+        "name": "Vet'ion's Rest",
+        "displayName": "Vet'ion's Rest - Vet'ion (Wilderness 35, multicombat, no cannon) - Krystilia",
+        "rank": 8,
+        "multi": true,
+        "cannon": false,
+        "wilderness": true,
+        "wildernessLevelMin": 35,
+        "wildernessLevelMax": 35,
+        "konarAssignable": false,
+        "requirements": [
+          "Medium Wilderness Diary (or a Vet'ion boss task)",
+          "50,000 coin lair fee (shared across the Wilderness boss lairs)"
+        ],
+        "notes": "Vet'ion (454, 624 Slayer XP) and his skeleton hellhounds count for a Krystilia skeleton task; the lair is just south of Lava Dragon Isle. Krystilia's table gives Wilderness 34-36.",
+        "evidence": {
+          "multi": "'It is a multi-combat dungeon located in the Wilderness, just south of Lava Dragon Isle.' (Vet'ion's Rest)",
+          "cannon": "'You cannot set up a dwarven multicannon within the boss lair.' (Vet'ion's Rest)",
+          "requirements": "'Entering the boss lair requires completion of the medium Wilderness diary OR a Vet'ion boss Slayer task, and pay a fee of 50,000 coins' (Vet'ion's Rest); infobox wilderness = 35"
+        }
+      }
+    ],
+    "notes": "Assigned by Krystilia (65-100), Turael/Spria (15-30) and Mazchna (30-50); 15 combat (task infobox). Krystilia's locations: Southern Wilderness mine, South-west Wilderness mine, Bone Yard, Edgeville Dungeon, Wilderness Agility Course; 'Vet'ion, Calvar'ion, and their (Greater) Skeleton Hellhounds also count' (Krystilia). xpPerKill 29 is the level 22 skeleton (infobox slayxp); level 21 gives 24, level 25 gives 17, level 45 gives 59. Other task-table spots not listed here: Digsite Dungeon (10, cannon, safespot), Draynor Sewers (4), Waterfall Dungeon (7), Melzar's Maze (6), Taverley Dungeon, Jiggig/Jiggig Dungeon (skogres), Shayzien Crypts, Tarn's Lair.",
+    "_verification": {
+      "corrections": [
+        "notes: XP mapping corrected - the level 25 skeleton gives 17 Slayer XP, not 29 (only the level 22 gives 29; level 21 gives 24)",
+        "locations: added Vet'ion's Rest (Vet'ion counts for Krystilia's task; multi, no cannon, Medium diary or boss task, 50k fee) which was missing",
+        "Skeletal Tomb: requirement now states a skeleton task does not bypass the Hard diary; fee wording corrected (shared fee, repaid only after dying to a player)",
+        "Varrock Sewers: recorded the 9-vs-7 spawn conflict; cannon evidence now quoted from the Varrock Sewers page",
+        "Ape Atoll Dungeon: Monkey Madness I requirement now sourced to the Ape Atoll Dungeon page",
+        "alternatives: added the skeleton hellhounds summoned by Vet'ion/Calvar'ion (task page: 'the skeletal hellhounds they summon also count')"
+      ],
+      "confirmed": 41,
+      "downgraded": 0
+    }
+  }
+]

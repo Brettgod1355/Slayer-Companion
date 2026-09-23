@@ -1,0 +1,1129 @@
+[
+  {
+    "task": "K'ril Tsutsaroth",
+    "wikiTaskPage": "K'ril Tsutsaroth",
+    "monsterPages": [
+      "K'ril Tsutsaroth"
+    ],
+    "bossTask": true,
+    "summary": "K'ril Tsutsaroth is the Zamorak general of the God Wars Dungeon and counts as a greater demon, so a boss task for him is completed in Zamorak's Fortress and benefits from the Slayer helmet and demonbane weapons.",
+    "recommendedStyle": "Any",
+    "styleNotes": "Classified as a greater demon (susceptible to demonbane weapons and spells); poison and venom resistance 100, not immune to cannon or thralls; elemental weakness water 30% (K'ril Tsutsaroth infobox).",
+    "requiredItems": [],
+    "usefulItems": [
+      "Zamorak-aligned item (God Wars Dungeon god-related protection)",
+      "Ecumenical key (skips the 40 Zamorakian kill count)"
+    ],
+    "superior": null,
+    "alternatives": [],
+    "xpPerKill": 350.5,
+    "locations": [
+      {
+        "name": "God Wars Dungeon (Zamorak boss room)",
+        "displayName": "God Wars Dungeon - Zamorak's Fortress (K'ril's chamber)",
+        "rank": 1,
+        "multi": true,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Death Plateau (required for God Wars Dungeon Slayer assignments)",
+          "Troll Stronghold started (defeat Dad) or Easy Combat Achievements (Ghommal's hilt teleport)",
+          "60 Strength or 60 Agility",
+          "70 Hitpoints to cross the river into Zamorak's Fortress",
+          "Ecumenical key or 40 Zamorakian kills for the chamber door"
+        ],
+        "notes": "Reach the dungeon north of Trollheim (Trollheim Teleport needs 61 Magic and Eadgar's Ruse; a rope is needed the first time). Bring a Zamorak item so the fortress followers stay passive; optional instance available.",
+        "evidence": {
+          "multi": "'God Wars Dungeon' is listed under 'List of multicombat areas' (Multicombat area); area-rules.json records God Wars Dungeon as multi from the same list.",
+          "cannon": "'The Kalphite Queen, King Black Dragon, Thermonuclear smoke devil, and inhabitants of the God Wars Dungeon may also destroy a cannon if a player attempts to use it' (Dwarf multicannon); infobox immunecannon = No (K'ril Tsutsaroth).",
+          "requirements": "'To get Slayer assignments related to the God Wars Dungeon, such as boss tasks, players must complete the Death Plateau quest.' and 'Accessing it requires partial completion of Troll Stronghold (defeating Dad) or full completion of the Easy Combat Achievements ... and either 60 Strength or 60 Agility. A rope is also required the first time.' (God Wars Dungeon); 'He is located in Zamorak's Fortress, which requires 70 Hitpoints to cross the river to access. To gain access to his chamber, players must use an ecumenical key or have slain 40 Zamorakians throughout the dungeon.' (K'ril Tsutsaroth); Boss page Slayer bosses row: 'K'ril Tsutsaroth | God Wars Dungeon | Slayer 1 | 70 Hitpoints, completion of Death Plateau, 60 Strength or 60 Agility' (Boss). konarAssignable true: infobox assignedby = chaeldar,konar,nieve,duradel (K'ril Tsutsaroth) and 'Players who have unlocked the Like a boss ability via spending 200 Slayer reward points can be assigned bosses by Konar, Nieve/Steve, Duradel/Kuradal, or Krystilia' (Boss). Note: Konar's greater demon location list (Catacombs of Kourend, Chasm of Fire, Isle of Souls Dungeon, Karuulm Slayer Dungeon, Brimhaven Dungeon) does not include the God Wars Dungeon, so a Konar greater demon task is not completed here (Konar quo Maten)."
+        }
+      }
+    ],
+    "notes": "Boss task: kills also count toward a greater demons task ('K'ril Tsutsaroth is classified as a greater demon, and thus killing him counts towards any greater demon Slayer task', K'ril Tsutsaroth). No 'Slayer task/K'ril Tsutsaroth' page; the boss page and the Boss page 'Slayer bosses' table were used. Optionally instanced ({{Instance|optional=yes}}). Brimstone keys only drop on a Konar-assigned task.",
+    "_verification": {
+      "corrections": [
+        "konarAssignable: 'unknown' -> true for the K'ril boss task itself (K'ril infobox assignedby = chaeldar,konar,nieve,duradel; Boss page: Konar can assign bosses once 'Like a boss' is unlocked). The earlier 'unknown' conflated this with Konar's greater-demon location list, which does not include the God Wars Dungeon; that caveat is kept in the evidence.",
+        "Confirmed: page title K'ril Tsutsaroth (no 'Slayer task/K'ril Tsutsaroth' page - API missingtitle this run); LocLine 'God Wars Dungeon (Zamorak boss room)'; slayxp 350.5; cat Bosses, Greater Demons; attributes demon; poisonresistance 100, venomresistance 100; immunecannon No, immunethrall No; elemental weakness Water 30; {{Instance|optional=yes}}; 'K'ril Tsutsaroth is classified as a greater demon, and thus killing him counts towards any greater demon Slayer task' verbatim; God Wars Dungeon in the 'List of multicombat areas'; Dwarf multicannon sentence about God Wars Dungeon inhabitants destroying a cannon verbatim; Death Plateau / Troll Stronghold / 60 Strength or Agility / rope sentences verbatim on God Wars Dungeon; brimstone key footnote verbatim.",
+        "Summary contains no fight mechanics (boss task)."
+      ],
+      "confirmed": 17,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Kurask",
+    "wikiTaskPage": "Slayer task/Kurasks",
+    "monsterPages": [
+      "Kurask",
+      "King kurask"
+    ],
+    "bossTask": false,
+    "summary": "Kurask require 70 Slayer and can only be damaged with leaf-bladed weapons, broad arrows or bolts, or Magic Dart; everything else (including cannons and thralls) deals no damage. They hit inaccurately with crush up to 11, so most players melee with a leaf-bladed battleaxe under Protect from Melee, or skip prayer and heal with Bones to Peaches. The Fremennik Slayer Dungeon (fairy ring AJR) has 5 kurask plus a 9-spawn task-only area; the Iorwerth Dungeon (Song of the Elves) has 14 tightly grouped kurask that also drop crystal shards. Bring an herb sack and alch runes since the task is profitable.",
+    "recommendedStyle": "Melee",
+    "styleNotes": "Leafy attribute: only leaf-bladed weapons, broad-tipped ammunition or Magic Dart can damage them; immune to cannon and thrall damage (immunecannon = yes, immunethrall = yes); weakest to stab, ranged and magic but the leaf-bladed battleaxe is best due to its max hit; king kurask superior hits up to 33.",
+    "requiredItems": [
+      "Leaf-bladed sword, battleaxe or spear, or broad arrows/bolts, or Magic Dart"
+    ],
+    "usefulItems": [
+      "Herb sack (always three herbs per herb roll)",
+      "Nature runes for High Level Alchemy",
+      "Prayer potion in case the king kurask spawns",
+      "Ring of wealth to auto-pick coin drops"
+    ],
+    "superior": "King kurask",
+    "alternatives": [],
+    "xpPerKill": 97,
+    "locations": [
+      {
+        "name": "Fremennik Slayer Dungeon (Slayer task only)",
+        "displayName": "Fremennik Slayer Dungeon - task-only kurask area (9 spawns, fairy ring AJR)",
+        "rank": 1,
+        "multi": false,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Kurask Slayer task (task-only area guarded by Jelly)"
+        ],
+        "notes": "Up the steps from the main kurask chamber; 'There is a task-only area located above the steps. If players attempt to attack any of the kurasks upstairs without a kurask Slayer task, Jelly will forbid them from doing so.' Safespot on the east side of the task-only area (Kurask page safespot gallery caption). Fairy ring AJR is right outside.",
+        "evidence": {
+          "multi": "Location comparison row 'Fremennik Slayer Dungeon': Multicombat = No (Slayer task/Kurasks).",
+          "cannon": "Location comparison row 'Fremennik Slayer Dungeon': Cannonable = No (Slayer task/Kurasks); 'Players cannot set up a dwarf multicannon within the caves. Attempting to do so yields the chatbox message: The air is too dank for you to set up a cannon here.' (Fremennik Slayer Dungeon); also on the Dwarf multicannon prohibited list.",
+          "requirements": "'5 kurask in main dungeon, while 9 more can be found in a task-only section overseen by Jelly.' (Slayer task/Kurasks); Konar row lists Fremennik Slayer Dungeon (Konar quo Maten)."
+        }
+      },
+      {
+        "name": "Fremennik Slayer Dungeon",
+        "displayName": "Fremennik Slayer Dungeon - main kurask chamber (5 spawns, fairy ring AJR)",
+        "rank": 2,
+        "multi": false,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [],
+        "notes": "Eighth chamber of the dungeon; no task needed for these 5. Safespot in the north-west corner of the lower level (Kurask page safespot gallery caption).",
+        "evidence": {
+          "multi": "Location comparison row 'Fremennik Slayer Dungeon': Multicombat = No (Slayer task/Kurasks).",
+          "cannon": "Location comparison row: Cannonable = No (Slayer task/Kurasks); 'The air is too dank for you to set up a cannon here.' (Fremennik Slayer Dungeon).",
+          "requirements": "not stated (no quest requirement given; Kurask row in Slayer task list: 'Combat 65', 'Ability to use Leaf-bladed weapons')"
+        }
+      },
+      {
+        "name": "Iorwerth Dungeon",
+        "displayName": "Iorwerth Dungeon, Prifddinas (14 spawns, crystal shard drops)",
+        "rank": 3,
+        "multi": false,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Song of the Elves"
+        ],
+        "notes": "'Kurask here have a chance of dropping crystal shards on death. This drop is guaranteed from king kurask.' A cannon can be placed but kurask are immune to its damage. Safespot on the northern wall of the southern-most kurask section (Kurask page safespot gallery caption).",
+        "evidence": {
+          "multi": "'However, the whole dungeon is single-way combat.' (Iorwerth Dungeon); Location comparison row: Multicombat = No (Slayer task/Kurasks).",
+          "cannon": "'A cannon can be set up here, but kurask are immune to damage from cannons' (Slayer task/Kurasks, Cannonable footnote); 'Iorwerth Dungeon in the kurask area because they are immune to cannon damage' (Dwarf multicannon).",
+          "requirements": "'Players have access to the dungeon after the completion of Song of the Elves quest' (Iorwerth Dungeon); Konar row: 'completion of Song of the Elves for access to Iorwerth Dungeon' (Konar quo Maten)."
+        }
+      },
+      {
+        "name": "Kurask Lair",
+        "displayName": "Kurask Lair on Laguna Aurorae (8 spawns, needs 58 Sailing)",
+        "rank": 4,
+        "multi": false,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "58 Sailing (not boostable) to dock on Laguna Aurorae the first time"
+        ],
+        "notes": "'It is a small cave that contains eight kurasks.' and 'Four of the kurasks in the lair are large kurasks' (Kurask Lair). 'Kurasks are clumped tighter in this dungeon.' Docking is not required once the island's spirit tree has been spoken to, which is much closer to the lair than the dock (Slayer task/Kurasks).",
+        "evidence": {
+          "multi": "Location comparison row 'Kurask Lair': Multicombat = No (Slayer task/Kurasks); 'The entire dungeon is single-way combat.' (Kurask Lair).",
+          "cannon": "Location comparison row 'Kurask Lair': Cannonable = No with footnote 'A cannon can be set up here, but kurask are immune to damage from cannons' (Slayer task/Kurasks); 'A dwarf multicannon can be used in the dungeon, although cannonballs don't damage kurasks.' (Kurask Lair).",
+          "requirements": "'Requires 58 Sailing to dock on Laguna Aurorae for the first time. Docking is not required once the spirit tree on the island has been spoken to' (Slayer task/Kurasks). Not in Konar's Kurask location list (Konar quo Maten)."
+        }
+      }
+    ],
+    "notes": "Assigned by Vannaka, Chaeldar, Konar, Nieve, Duradel and Mortimer (infobox assignedby). Konar assigns only Fremennik Slayer Dungeon and Iorwerth Dungeon. Special attacks of the Saradomin godsword, ancient godsword and toxic blowpipe still heal as if they hit; Guthan's set effect does not work. Burning claws burn still applies.",
+    "_verification": {
+      "corrections": [
+        "No factual corrections. Added the Kurask Lair page's own sentences ('The entire dungeon is single-way combat.', 'A dwarf multicannon can be used in the dungeon, although cannonballs don't damage kurasks.') to that location's evidence and its 8-kurask / 4-large-kurask counts to the notes; safespot captions re-attributed to the Kurask page gallery.",
+        "Confirmed: task page Slayer task/Kurasks (skillreq 70, combatreq 65, otherreq 'Ability to use Leaf-bladed weapons', vannaka 40-90, chaeldar 70-130, konar 120-170, nieve 120-185, duradel 130-200, mortimer 40-60); Kurask LocLines exactly Fremennik Slayer Dungeon (AJR), Fremennik Slayer Dungeon (Slayer task only), Iorwerth Dungeon, Kurask Lair - all four present; slayxp 97; cat Kurask; attributes leafy; max hit 11 Crush; immunecannon yes, immunethrall yes; assignedby vannaka,chaeldar,konar,nieve,duradel, Mortimer; King kurask cat Kurask, max hit 33, slayxp 2767.4; Location comparison rows (Fremennik 14 No/No, Iorwerth 14 No/No with footnote, Kurask Lair 8 No/No) and every quoted sentence found verbatim (task page, Fremennik Slayer Dungeon 'too dank', Iorwerth Dungeon 'whole dungeon is single-way combat', Dwarf multicannon prohibited list lines 189 and 245, Konar row Fremennik Slayer Dungeon + Iorwerth Dungeon with Song of the Elves)."
+      ],
+      "confirmed": 38,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Lava Dragons",
+    "wikiTaskPage": "Lava dragon",
+    "monsterPages": [
+      "Lava dragon"
+    ],
+    "bossTask": false,
+    "summary": "A Krystilia-only Wilderness task at Lava Dragon Isle (level 36-42 Wilderness), a multicombat area with 8 dragons. They melee up to 23 and breathe dragonfire up to 50, so bring an anti-dragon shield or dragonfire shield plus antifire, and use Magic (they have 1 Magic level and a 50% water weakness) or Ranged from the many skeleton-pile safespots inside the isle or from the southern spawns outside it. The isle is above level 30 Wilderness, so no teleports work; 74 Agility unlocks the southern stepping-stone shortcut.",
+    "recommendedStyle": "Magic",
+    "styleNotes": "Magic level 1 with a 50% water elemental weakness (water bolt is slow but profitable); stab defence 20 vs 90 slash/crush; immune to normal burns; not immune to poison, venom or cannon; do not count as black dragons for a task.",
+    "requiredItems": [
+      "Anti-dragon shield, dragonfire shield, dragonfire ward or ancient wyvern shield, and/or antifire potion"
+    ],
+    "usefulItems": [
+      "Pestle and mortar (grind lava scales)",
+      "High Level Alchemy runes",
+      "Telekinetic Grab runes if killing from outside the isle"
+    ],
+    "superior": null,
+    "alternatives": [],
+    "xpPerKill": 248,
+    "locations": [
+      {
+        "name": "Lava Dragon Isle",
+        "displayName": "Lava Dragon Isle, Wilderness 36-42 (multicombat, PKer hotspot)",
+        "rank": 1,
+        "multi": true,
+        "cannon": "unknown",
+        "wilderness": true,
+        "wildernessLevelMin": 36,
+        "wildernessLevelMax": 42,
+        "konarAssignable": false,
+        "requirements": [
+          "Dragon Slayer I started (Krystilia only assigns dragons to players who have started it)"
+        ],
+        "notes": "Main entrance at the north point; get there via a Revenant cave teleport heading north-east or Annakarl Teleport to the Demonic Ruins then south-west. A 74 Agility shortcut at the southern point (canoe to the Wilderness Pond with 57 Woodcutting, then run east) doubles as an escape; the hard Wilderness Diary requirement on it was removed (Lava Dragon Isle changelog). Safespots inside behind skeleton piles and edges, or camp the southern spawns from outside the isle. 'Teleports will not work above level 20 Wilderness, except for those methods listed below, which may be used by members up to level 30 Wilderness.' (Wilderness), so nothing teleports out of the isle. The Lava dragon page advises banking every 10-20 minutes because the isle is commonly targeted by player killers. Burying lava dragon bones on the isle gives 340 Prayer XP.",
+        "evidence": {
+          "multi": "'It is a Multicombat area, and the only place where lava dragons spawn.' (Lava Dragon Isle); 'Lava Dragon Isle' listed under 'List of multicombat areas' (Multicombat area).",
+          "cannon": "not stated on Lava dragon or Lava Dragon Isle pages; not in the Dwarf multicannon prohibited list (immunecannon = No in the Lava dragon infobox).",
+          "requirements": "Krystilia's Lava dragons row carries the dragon footnote 'Only assigned to players who have started Dragon Slayer I.' (Krystilia); Slayer task list row: 'Dragon Slayer I (partially)' (Slayer task); wilderness levels 'which stretches from level 36 to level 42' (Lava Dragon Isle) and '36-43' (Krystilia)."
+        }
+      }
+    ],
+    "notes": "No 'Slayer task/Lava dragons' page exists (also tried the singular); data comes from the Lava dragon and Lava Dragon Isle pages and the Krystilia and Slayer task rows. Krystilia is the only assigner (assignedby = krystilia), 35-60 assigned. Cannon status is unknown because no page states it.",
+    "_verification": {
+      "corrections": [
+        "Summary: removed the warning about other players ('PKer hotspot, bank every 10-20 minutes'); the Lava dragon page's banking advice is kept in the location notes only.",
+        "usefulItems: removed the pseudo-item 'Royal seed pod or similar teleport below level 30 is not usable here'; replaced by the Wilderness page teleport rule in the location notes.",
+        "Location notes: the 74 Agility shortcut no longer needs the hard Wilderness Diary ('The Achievement Diary requirement has been removed from the shortcut.', Lava Dragon Isle changelog); canoe route needs 57 Woodcutting (Lava Dragon Isle).",
+        "Confirmed: no 'Slayer task/Lava dragons' page (API missingtitle); LocLine only 'Lava Dragon Isle'; slayxp 248; assignedby krystilia; attributes dragon,fiery; max hit 23 Melee / 50 Dragonfire; mage 1; dstab 20, dslash 90, dcrush 90; Water 50%; poison/venom resistance 0; immunecannon No; immuneburn 'Immune to normal burns'; 'they do not count as black dragons for a Slayer task' verbatim; isle 'stretches from level 36 to level 42' and 'It is a Multicombat area, and the only place where lava dragons spawn.' verbatim; Lava Dragon Isle in 'List of multicombat areas'; Krystilia row 'Lava dragons | 35-60 | Lava Dragon Isle | 36-43' with the Dragon Slayer I footnote; Slayer task list row 'Dragon Slayer I (partially)'; cannon left unknown (no page states it)."
+      ],
+      "confirmed": 17,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Lesser demons",
+    "wikiTaskPage": "Slayer task/Lesser demon",
+    "monsterPages": [
+      "Lesser demon",
+      "Zakl'n Gritch"
+    ],
+    "bossTask": false,
+    "summary": "A low-value task from Krystilia, Vannaka or Chaeldar; lesser demons hit with slash only, have low Defence and are weak to demonbane weapons. Outside the Wilderness the Chasm of Fire (fairy ring DJR, 9 demons, cannonable, safespots, Yama contracts after A Kingdom Divided) and the Catacombs of Kourend (8 demons, multicombat, no cannon, ancient shards and totem pieces) are the usual picks. For a Krystilia task the Wilderness Slayer Cave is the only reasonable spot: 7 demons with a better drop table, cannonable and multicombat, below level 30 so a one-click teleport escapes.",
+    "recommendedStyle": "Any",
+    "styleNotes": "Demon attribute (demonbane weapons and spells work); slash attacks only; poison resistance 0, not immune to cannon or thralls; no prayer needed beyond Protect from Melee if meleed.",
+    "requiredItems": [],
+    "usefulItems": [
+      "Dwarf multicannon (Chasm of Fire or Wilderness Slayer Cave)",
+      "Royal seed pod or other one-click teleport for the Wilderness Slayer Cave",
+      "Demonbane weapon"
+    ],
+    "superior": null,
+    "alternatives": [
+      "Zakl'n Gritch (K'ril Tsutsaroth's bodyguard, God Wars Dungeon)"
+    ],
+    "xpPerKill": 79,
+    "locations": [
+      {
+        "name": "Chasm of Fire",
+        "displayName": "Chasm of Fire, Kourend (9 demons, cannon + safespots, fairy ring DJR)",
+        "rank": 1,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "'The Chasm of Fire is one of the best locations for slaying lesser demons. The fairy ring (DJR) is very close, and a Dwarf Multicannon can be used to speed up the task; players can also safespot in this location.' (Lesser demon page). 'A chasm teleport scroll brings players inside the dungeon on the bottom floor' (Chasm of Fire). 'Resurrection spells cannot be cast whilst within the Chasm of Fire' (Chasm of Fire). Contracts can drop 'if the player has spoken to Yama after A Kingdom Divided' (Slayer task/Lesser demon). Note: the task page prose says 'There are four demons in a very small area' while its Location Comparison table lists 9 spawns.",
+        "evidence": {
+          "multi": "'A dwarf multicannon can be used in the chasm, although it is not a multi-combat area.' (Chasm of Fire); Location Comparison row 'Chasm of Fire': Multicombat = No (Slayer task/Lesser demon).",
+          "cannon": "Location Comparison row 'Chasm of Fire': Cannonable = Yes (Slayer task/Lesser demon); 'A dwarf multicannon can be used in the chasm' (Chasm of Fire).",
+          "requirements": "not stated (Slayer task list row: Combat 60 only). Konar does not assign lesser demons (assignedby = krystilia,vannaka,chaeldar)."
+        }
+      },
+      {
+        "name": "Catacombs of Kourend",
+        "displayName": "Catacombs of Kourend (8 demons, multicombat, no cannon)",
+        "rank": 2,
+        "multi": true,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "'The demons in the Catacombs are in a multicombat area and can be AFK'ed with access to the catacombs table, but a dwarf multicannon is not allowed.' Level 87 and 94 variants give 85/98 Slayer XP and drop ancient shards and dark totem pieces. Enter via Xeric's talisman 'Xeric's Heart' or Kourend Castle Teleport.",
+        "evidence": {
+          "multi": "Location Comparison row 'Catacombs of Kourend': Multicombat = Yes (Slayer task/Lesser demon); 'As this particular dungeon is a multicombat area (excluding the brutal dragon area)' (Catacombs of Kourend).",
+          "cannon": "Location Comparison row: Cannonable = No (Slayer task/Lesser demon); 'dwarf multicannons cannot be placed inside the Catacombs' (Catacombs of Kourend); on the Dwarf multicannon prohibited list.",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Wilderness Slayer Cave",
+        "displayName": "Wilderness Slayer Cave, level 24-27 Wilderness (7 demons, multi, cannon; Krystilia)",
+        "rank": 3,
+        "multi": true,
+        "cannon": true,
+        "wilderness": true,
+        "wildernessLevelMin": 24,
+        "wildernessLevelMax": 27,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "'The only reasonable location is the Wilderness Slayer Cave, as the demons have better drops, allows a cannon and is a multicombat area. The demons are below level 30 Wilderness, so a one-click teleport such as a royal seed pod will allow for an easy escape.' Two 77 Agility (boostable) shortcuts also serve as escapes. Level 94 variant gives 110 Slayer XP.",
+        "evidence": {
+          "multi": "Location Comparison row 'Wilderness Slayer Cave': Multicombat = Yes (Slayer task/Lesser demon); 'The cave is the only multi-combat spot where the cannon can be used for some monsters.' (Wilderness Slayer Cave).",
+          "cannon": "Location Comparison row: Cannonable = Yes (Slayer task/Lesser demon); 'it's possible to use the Dwarf multicannon inside the dungeon' (Wilderness Slayer Cave).",
+          "requirements": "not stated. Wilderness level: 'Level 27 wilderness' (Slayer task/Lesser demon) and '24-26' for the cave in Krystilia's row (Krystilia)."
+        }
+      },
+      {
+        "name": "Crandor and Karamja Dungeon",
+        "displayName": "Crandor and Karamja Dungeon, southern area (6-11 demons, cannon, safespots)",
+        "rank": 4,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Dragon Slayer I progressed to Crandor for the Crandor side (the Karamja side needs nothing)"
+        ],
+        "notes": "'If none of these locations are available, it is best to kill them in the Crandor and Karamja Dungeon; the southern area contains six lesser demons with a fair amount of safespots and allows a cannon.'",
+        "evidence": {
+          "multi": "Location Comparison row 'Crandor and Karamja Dungeon': Multicombat = No (Slayer task/Lesser demon); 'No part of the dungeons are multicombat zones.' (Crandor and Karamja Dungeon).",
+          "cannon": "Location Comparison row: Cannonable = Yes (Slayer task/Lesser demon).",
+          "requirements": "'The Crandor side of the dungeon must first be unlocked during Dragon Slayer I.' and 'No part of the dungeons are multicombat zones.' (Crandor and Karamja Dungeon)."
+        }
+      },
+      {
+        "name": "Wilderness - King Black Dragon Lair entrance",
+        "displayName": "King Black Dragon Lair cage, level 42 Wilderness (4 demons, multi, cannon; Krystilia)",
+        "rank": 5,
+        "multi": true,
+        "cannon": true,
+        "wilderness": true,
+        "wildernessLevelMin": 42,
+        "wildernessLevelMax": 44,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "Past level 40 Wilderness so teleports do not work; 'The other locations where they can be found are past level 40 Wilderness, making it impossible to teleport away in the event of an attack, and are near high-traffic areas'.",
+        "evidence": {
+          "multi": "Location Comparison row 'King Black Dragon Lair': Multicombat = Yes (Slayer task/Lesser demon); the KBD Lair page describes the 'fenced area on the west end of the Lava Maze containing four lesser demons' but gives no combat type for the cage itself.",
+          "cannon": "Location Comparison row 'King Black Dragon Lair': Cannonable = Yes (Slayer task/Lesser demon).",
+          "requirements": "not stated. 'Level 42 wilderness' (Slayer task/Lesser demon); 'the western entrance to the Lava Maze Dungeon in level 42 Wilderness' (King Black Dragon Lair); Krystilia row gives '42-44' for the surface spots (Krystilia)."
+        }
+      },
+      {
+        "name": "Wilderness - south-east of the Demonic Ruins",
+        "displayName": "South-east of the Demonic Ruins, level 41 Wilderness (2 demons; Krystilia)",
+        "rank": 6,
+        "multi": true,
+        "cannon": true,
+        "wilderness": true,
+        "wildernessLevelMin": 41,
+        "wildernessLevelMax": 44,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "Deep Wilderness, no teleports; only 2 demons.",
+        "evidence": {
+          "multi": "Location Comparison row 'Demonic Ruins': Multicombat = Yes (Slayer task/Lesser demon); 'Demonic Ruins' listed under 'List of multicombat areas' (Multicombat area).",
+          "cannon": "Location Comparison row 'Demonic Ruins': Cannonable = Yes (Slayer task/Lesser demon).",
+          "requirements": "not stated. 'Level 41 wilderness' (Slayer task/Lesser demon); Krystilia row gives '42-44' for the surface spots (Krystilia). The Demonic Ruins themselves are 'level 44-48 Wilderness' and 'The entire area is multicombat.' (Demonic Ruins); the two demons are south-east of the ruins."
+        }
+      },
+      {
+        "name": "Wilderness - by the muddy chest in the Lava Maze",
+        "displayName": "Lava Maze muddy chest, level 40-45 Wilderness (2 demons; Krystilia)",
+        "rank": 7,
+        "multi": "unknown",
+        "cannon": true,
+        "wilderness": true,
+        "wildernessLevelMin": 40,
+        "wildernessLevelMax": 45,
+        "konarAssignable": false,
+        "requirements": [
+          "Slash weapon or knife for the webs"
+        ],
+        "notes": "'Slash weapon or knife needed', 'Level 40-45 wilderness'. Only 2 demons; deep Wilderness.",
+        "evidence": {
+          "multi": "CONFLICT, recorded as unknown: Location Comparison row 'Lava Maze': Multicombat = No (Slayer task/Lesser demon) but 'The Lava Maze' is listed under 'List of multicombat areas' (Multicombat area); the Lava Maze page itself does not state combat type.",
+          "cannon": "Location Comparison row 'Lava Maze': Cannonable = Yes (Slayer task/Lesser demon).",
+          "requirements": "'Slash weapon or knife needed' and 'Level 40-45 wilderness' (Slayer task/Lesser demon); Lava Maze infobox wilderness = 40-45 and 'spiderwebs that must be cut with a slash weapon or a knife' (Lava Maze)."
+        }
+      }
+    ],
+    "notes": "Other listed spots (Crandor surface 2, Taverley Dungeon 5, Sisterhood Sanctuary 9, Isle of Souls Dungeon 4, Temple of Ikov 3 with shiny key, Viyeldi caves 3, Charred Dungeon 6 needing 60 Sailing, single caged demons at Wizards' Tower, Kourend Castle and Kingstown) are all in the task page's Location Comparison but not recommended; these match the Lesser demon LocLine list. Krystilia lists 'Muddy chest, King Black Dragon Lair cage, south of the Demonic Ruins, Wilderness Slayer Cave' with levels '42-44; 24-26'. Zakl'n Gritch (God Wars Dungeon, Zamorak boss room) 'is considered a lesser demon for the purpose of a Slayer task' (Zakl'n Gritch; cat Lesser Demons, slayxp 150, assignedby vannaka,chaeldar).",
+    "_verification": {
+      "corrections": [
+        "Lava Maze multi: 'partial' -> 'unknown' (task page table says No, Multicombat area page lists the Lava Maze; the Lava Maze page does not say).",
+        "Chasm of Fire notes: the 'one of the best locations' quote is on the Lesser demon monster page, not the task page - re-attributed; recorded the task page's internal inconsistency (prose 'four demons in a very small area' vs table 9).",
+        "Crandor and Karamja Dungeon: requirement reworded to the page's own sentence ('The Crandor side of the dungeon must first be unlocked during Dragon Slayer I.') and 'No part of the dungeons are multicombat zones.' added.",
+        "Demonic Ruins / KBD Lair evidence: added the area pages' own wilderness levels (Demonic Ruins 44-48 for the ruins proper, KBD Lair entrance level 42).",
+        "Confirmed: task page Slayer task/Lesser demon (skillreq None, combatreq 60, krystilia 80-120, vannaka 40-90, chaeldar 70-130); all 7 curated locations are in the Lesser demon LocLine list and the Location Comparison table with the stated Multicombat/Cannonable values (Chasm 9 No/Yes, Catacombs 8 Yes/No, WSC 7 Yes/Yes, Crandor and Karamja Dungeon 11 No/Yes, KBD Lair 4 Yes/Yes, Demonic Ruins 2 Yes/Yes, Lava Maze 2 No/Yes); slayxp1 79 (85/98/110 for the other versions); attributes demon; attack style Slash; poisonresistance 0; immunecannon No, immunethrall No; assignedby krystilia,vannaka,chaeldar; task page sentences ('The only reasonable location is the Wilderness Slayer Cave...', 'The other locations ... past level 40 Wilderness...', 'If none of these locations are available...') verbatim; Chasm of Fire 'A dwarf multicannon can be used in the chasm, although it is not a multi-combat area.' verbatim; Catacombs quotes verbatim and Catacombs on the Dwarf multicannon prohibited list; 77 Agility boostable shortcuts (Wilderness Slayer Cave); Zakl'n Gritch alternative sentence verbatim."
+      ],
+      "confirmed": 58,
+      "downgraded": 1
+    }
+  },
+  {
+    "task": "Lesser Nagua",
+    "wikiTaskPage": "Slayer task/Lesser Nagua",
+    "monsterPages": [
+      "Sulphur Nagua",
+      "Frost Nagua",
+      "Earthen Nagua",
+      "Amoxliatl"
+    ],
+    "bossTask": false,
+    "summary": "A 48 Slayer task from Chaeldar or Konar after Perilous Moons, popular as AFK melee. All lesser nagua have -4 flat armour so every hit deals 4 extra damage, making fast or multi-hit weapons like the dual macuahuitl ideal. Sulphur nagua at Neypotzli are the default: supplies are free there (moonlight potions restore prayer and boost melee, bream and moss lizard are food), a cannon can be placed and there are safespots, though they drain 5 prayer if you stand in melee range during their wind-up. Frost nagua (Ruins of Tapoyauik, The Heart of Darkness) are magic attackers negated by Protect from Magic, and earthen nagua (Tonali Cavern, The Final Dawn) become weak to crush below 60% health.",
+    "recommendedStyle": "Melee",
+    "styleNotes": "-4 flat armour (multi-hit and fast weapons excel); sulphur nagua attack with slash and earthen nagua with stab (Protect from Melee), frost nagua use magic (Protect from Magic); earthen nagua shift to crush-weak armour below 60% health; spectral but not undead; poison resistance 0 (Amoxliatl 100).",
+    "requiredItems": [],
+    "usefulItems": [
+      "Dual macuahuitl or other multi-hit weapon",
+      "Moonlight potions (made in Neypotzli)",
+      "Butterfly net (75 Hunter) to catch moonlight moths for 22 prayer points"
+    ],
+    "superior": null,
+    "alternatives": [
+      "Amoxliatl (boss variant of frost nagua at the Ruins of Tapoyauik, better drops; cannon-immune, 100 poison resistance, -2 flat armour)"
+    ],
+    "xpPerKill": 105,
+    "locations": [
+      {
+        "name": "Neypotzli - Ancient Prison",
+        "displayName": "Neypotzli (Cam Torum) - Ancient Prison, 14 sulphur nagua, free supplies",
+        "rank": 1,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Perilous Moons (partial completion for access)"
+        ],
+        "notes": "Accessed from the south-west entrance of the antechamber. Respawn spots are marked by sun icons on the floor. Safespot behind the cooking stove skeleton, or better one south-east near the rubble and chain; 'Players can cannon multiple naguas at the same time provided they are not getting attacked while behind a safespot.'",
+        "evidence": {
+          "multi": "'The area is not multi combat, but a dwarven cannon can be set up for Slayer tasks within the caverns.' (Neypotzli); Location Comparison row 'Neypotzli': Multicombat = No (Slayer task/Lesser Nagua).",
+          "cannon": "'Cannonable, but not multicombat.' (Slayer task/Lesser Nagua monster variants); 'a dwarven cannon can be set up for Slayer tasks within the caverns' (Neypotzli).",
+          "requirements": "'Partial completion of Perilous Moons is required for access.' (Sulphur Nagua); Konar row: 'Neypotzli: Sulphur Nagua' (Konar quo Maten)."
+        }
+      },
+      {
+        "name": "Ruins of Tapoyauik",
+        "displayName": "Ruins of Tapoyauik bottom floor, 11 frost nagua + Amoxliatl (no cannon)",
+        "rank": 2,
+        "multi": false,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "The Heart of Darkness"
+        ],
+        "notes": "Use the lift platform at the Tower of Ascension to reach the bottom floor. 'Cannons cannot be placed in the Frost Nagua room and it is also single way combat.' Frost nagua mark your tile; step off it or lose prayer. Moonlight moths in the corners restore prayer. Amoxliatl can be killed instead for profit.",
+        "evidence": {
+          "multi": "Location Comparison row 'Ruins of Tapoyauik': Multicombat = No; 'it is also single way combat' (Slayer task/Lesser Nagua).",
+          "cannon": "'A Dwarven multicannon cannot be placed inside the ruins.' (Ruins of Tapoyauik); Location Comparison row: Cannonable = No (Slayer task/Lesser Nagua); on the Dwarf multicannon prohibited list.",
+          "requirements": "'They are found in the Ruins of Tapoyauik, accessed from the Twilight Temple, after completion of the The Heart of Darkness quest.' (Frost Nagua); Konar row: 'Ruins of Tapoyauik: Amoxliatl, Frost Nagua' (Konar quo Maten)."
+        }
+      },
+      {
+        "name": "Tonali Cavern - Sun Chamber",
+        "displayName": "Crypt of Tonali / Tonali Cavern - Sun Chamber earthen nagua (multi, no cannon)",
+        "rank": 3,
+        "multi": "partial",
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "The Final Dawn"
+        ],
+        "notes": "'Cannons cannot be setup in the crypt. The Naguas in the Sun Chambers are multiway combat, while the ones outside are singleway.' Earthen nagua also spawn in the Southern Cavern (middle and bottom floors). Moonlight moths available for prayer.",
+        "evidence": {
+          "multi": "'The western Moon chamber contains grimy lizards, while the eastern Sun chamber contains earthen nagua, both of which are in a multicombat area' (Tonali Cavern); 'The Naguas in the Sun Chambers are multiway combat, while the ones outside are singleway.' (Slayer task/Lesser Nagua).",
+          "cannon": "'Players cannot set up a dwarf multicannon within the cavern. Attempting to do so yields the chatbox message: \"An ancient magical force won't let you set up a cannon here.\"' (Tonali Cavern); Location Comparison row 'Crypt of Tonali': Cannonable = No (Slayer task/Lesser Nagua); Tonali Cavern on the Dwarf multicannon prohibited list.",
+          "requirements": "'Accessing it requires completion of the The Final Dawn quest.' (Tonali Cavern); Konar row: 'Crypt of Tonali: Earthen Nagua' (Konar quo Maten)."
+        }
+      }
+    ],
+    "notes": "Konar's location list is Neypotzli, Ruins of Tapoyauik and Crypt of Tonali; Chaeldar 50-100, Konar 55-120. XP per kill varies: sulphur 105, frost 120, earthen 165, Amoxliatl 546. Lesser Nagua are 'rarely assigned' (task page).",
+    "_verification": {
+      "corrections": [
+        "No factual corrections. styleNotes now gives the infobox attack styles (sulphur Slash, earthen Stab, frost Magic) and Amoxliatl's 100 poison resistance; alternatives entry notes Amoxliatl is cannon-immune (immunecannon Yes) with -2 flat armour.",
+        "Confirmed: task page Slayer task/Lesser Nagua (skillreq 48, combatreq 70, otherreq Perilous Moons, chaeldar 50-100, konar 55-120, 'rarely assigned'); LocLines Sulphur 'Neypotzli - Ancient Prison', Frost 'Ruins of Tapoyauik', Earthen 'Tonali Cavern - Southern Cavern (middle floor)/(bottom floor)/Sun Chamber', Amoxliatl 'Ruins of Tapoyauik' - all covered; slayxp 105/120/165/546 (Amoxliatl 420 for version 2); cat Lesser Nagua on all four; assignedby chaeldar,konar; flatarmour -4/-4/-4/-2; attributes spectral; Location Comparison rows Neypotzli 14 No/Yes, Ruins of Tapoyauik 11 + 1 boss No/No, Crypt of Tonali Yes/No; every quoted sentence found verbatim (Neypotzli 'The area is not multi combat, but a dwarven cannon can be set up...', Ruins of Tapoyauik 'A Dwarven multicannon cannot be placed inside the ruins.', Tonali Cavern multicombat and cannon sentences, task page 'Cannonable, but not multicombat.', 'Cannons cannot be placed in the Frost Nagua room and it is also single way combat.', 'Cannons cannot be setup in the crypt. The Naguas in the Sun Chambers are multiway combat, while the ones outside are singleway.'); Konar row Neypotzli / Ruins of Tapoyauik / Crypt of Tonali; Ruins of Tapoyauik and Tonali Cavern on the Dwarf multicannon prohibited list; earthen 60% crush shift and frost Protect from Magic sentences verbatim; moonlight moth 75 Hunter / 22 prayer points (task page and Tonali Cavern).",
+        "Tonali multi kept as 'partial' because both sources state it explicitly (Sun Chamber multi, outside single)."
+      ],
+      "confirmed": 31,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Lizardmen",
+    "wikiTaskPage": "Slayer task/Lizardmen",
+    "monsterPages": [
+      "Lizardman",
+      "Lizardman brute",
+      "Lizardman shaman"
+    ],
+    "bossTask": false,
+    "summary": "Only assignable after buying 'Reptile got ripped' for 75 points from Chaeldar, Konar, Nieve or Duradel. Plain lizardmen and brutes are weak, poisonous (3) crush/ranged attackers with poor drops, so the task is usually blitzed with a cannon at the multicombat Lizardman Canyon east side (34 lizardmen plus 28 brutes). Players hunting the dragon warhammer kill lizardman shamans instead, ideally in the Lizardman Temple under Molch where the spawn explosions and jump AoE are smaller; shamans need Shayzien armour (tier 5 fully blocks the 25-30 acid spit) and Protect from Missiles at range. Killing lizardmen does not progress a normal Lizards task.",
+    "recommendedStyle": "Ranged",
+    "styleNotes": "All three variants have 100 poison and venom resistance but are not immune to cannon or thralls; lizardmen/brutes attack with crush and ranged; shamans spit acid for 25-30 (blocked by tier 5 Shayzien armour, or the Slayer helmet with the hard Kourend & Kebos Diary toggle) and never become tolerant.",
+    "requiredItems": [],
+    "usefulItems": [
+      "Dwarf multicannon (Lizardman Canyon)",
+      "Shayzien armour tier 5 or Slayer helmet with Captain Cleive's hard-diary toggle (shamans)",
+      "Antipoison"
+    ],
+    "superior": null,
+    "alternatives": [
+      "Lizardman shaman (dragon warhammer drops)"
+    ],
+    "xpPerKill": 60,
+    "locations": [
+      {
+        "name": "Lizardman Canyon, east side",
+        "displayName": "Lizardman Canyon - east side (34 lizardmen; 28 brutes across the whole canyon; cannon, mostly multi)",
+        "rank": 1,
+        "multi": "partial",
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [],
+        "notes": "'These are simple enemies ... primarily killed for the sake of speeding through a task with a cannon, often at the Lizardman Canyon due to it being a multicombat area.' (Slayer task/Lizardmen). 'The eastern canyon contains only lizardmen and lizardmen brutes. In the middle of this canyon there is a single-combat zone, while the rest is multi-combat.' (Lizardman Canyon). The brute row on the task page covers the whole canyon (28 spawns, one of them on the west side). Kourend Favour no longer required.",
+        "evidence": {
+          "multi": "'In the middle of this canyon there is a single-combat zone, while the rest is multi-combat.' (Lizardman Canyon); Location Comparison row 'Lizardman Canyon, east side': Multicombat = Yes (Slayer task/Lizardmen).",
+          "cannon": "Location Comparison row 'Lizardman Canyon, east side': Cannonable = Yes (Slayer task/Lizardmen).",
+          "requirements": "'As Kourend Favour has been removed, accessing either side of the canyon no longer requires it.' (Lizardman Canyon); Konar row lists Lizardman Canyon (Konar quo Maten)."
+        }
+      },
+      {
+        "name": "Lizardman Temple, beneath Molch",
+        "displayName": "Lizardman Temple under Molch (6 shamans, single-way, no cannon)",
+        "rank": 2,
+        "multi": false,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Shayzien armour (tier 5 for full acid protection) or Slayer helmet with the hard Kourend & Kebos Diary toggle"
+        ],
+        "notes": "'When killing shamans it is highly recommended to do so at the Lizardman Temple as the AoE explosion from their spawns are reduced from 5x5 to 3x3 due to the small size of the temple chambers.' (Slayer task/Lizardmen); the jump attack's AoE is 3x3 (2x2 in the temple) (Lizardman shaman). 'Six shamans can be found in the area beyond the mystic barrier, with two in each chamber.' Entered via the four lizard dwellings in Molch; the entrances are one-way, exit via the strange hole in the south-west corner (Lizardman Temple).",
+        "evidence": {
+          "multi": "'four entrances to the Lizardman Temple, containing six lizardman shamans in a single-way combat area' (Molch); Location Comparison row: Multicombat = No (Slayer task/Lizardmen).",
+          "cannon": "'A Dwarf multicannon cannot be placed within the temple.' (Lizardman Temple); 'Lizardman Temple' on the Dwarf multicannon prohibited list; Location Comparison row: Cannonable = No (Slayer task/Lizardmen).",
+          "requirements": "'wearing a full set of tier 5 Shayzien armour will completely negate this damage' and 'Players who have completed the hard Kourend & Kebos Diary can talk to Captain Cleive to be able to wear their Slayer helmet ... instead of a Shayzien helm (5)' (Lizardman shaman); Konar row: 'Molch (Lizardman Temple included)' (Konar quo Maten)."
+        }
+      },
+      {
+        "name": "Lizardman Canyon, west side",
+        "displayName": "Lizardman Canyon - west side via handholds (3 shamans, 4 lizardmen; multi, cannon)",
+        "rank": 3,
+        "multi": true,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Shayzien armour or Slayer helmet toggle recommended for the shamans"
+        ],
+        "notes": "'The western canyon is accessible via the handholds and contains all three lizardmen types including the dangerous shamans. Three shamans can be found in the western canyon, one spawn in the north-west, east and south-west quadrants.' 'These three shamans are present in a multi-combat area.'",
+        "evidence": {
+          "multi": "'These three shamans are present in a multi-combat area.' (Lizardman shaman); Location Comparison rows 'Lizardman Canyon, west side': Multicombat = Yes (Slayer task/Lizardmen).",
+          "cannon": "Location Comparison rows 'Lizardman Canyon, west side': Cannonable = Yes (Slayer task/Lizardmen).",
+          "requirements": "not stated beyond the shaman gear notes; Konar row lists Lizardman Canyon (Konar quo Maten)."
+        }
+      },
+      {
+        "name": "Lizardman Caves, underneath Lizardman Settlement (Slayer task only)",
+        "displayName": "Lizardman Caves under the Lizardman Settlement (8 shamans, task-only, single, no cannon)",
+        "rank": 4,
+        "multi": false,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Lizardmen Slayer task (task-only area)"
+        ],
+        "notes": "'The Lizardman Caves are a series of caves located at the north-west corner of the Lizardman Settlement in the Kebos Lowlands.' Routes: Xeric's talisman to Lookout and run west, or the Mountain Guide (Xeric's Honour / Lovakengj Minecart Network) to the swamp just east of the caves (Lizardman Caves). 'there are 4 combat areas with 2 lizardman shamans each' (Lizardman shaman).",
+        "evidence": {
+          "multi": "'It is a single-combat area, but all eight of the shamans can only be killed while on a Slayer task.' (Lizardman Caves); Location Comparison row 'Lizardman Caves': Multicombat = No (Slayer task/Lizardmen).",
+          "cannon": "'A dwarf multicannon cannot be set up in the caves; attempting to do so will display the following message in the player's chatbox: \"The ground is too marshy here.\"' (Lizardman Caves); on the Dwarf multicannon prohibited list; Location Comparison row: Cannonable = No (Slayer task/Lizardmen).",
+          "requirements": "'Slayer task only' (Slayer task/Lizardmen, Lizardman shaman LocLine); Konar row: 'Lizardman Settlement (Lizardman Caves included)' (Konar quo Maten)."
+        }
+      },
+      {
+        "name": "Shayziens' Wall",
+        "displayName": "Shayziens' Wall (16 lizardmen, 6 brutes; multi, no cannon)",
+        "rank": 5,
+        "multi": true,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "Surface spawns along the wall east of the Lizardman Settlement.",
+        "evidence": {
+          "multi": "Location Comparison row 'Shayziens' Wall': Multicombat = Yes (Slayer task/Lizardmen).",
+          "cannon": "Location Comparison row 'Shayziens' Wall': Cannonable = No (Slayer task/Lizardmen).",
+          "requirements": "not stated. Not in Konar's Lizardmen location list (Konar quo Maten)."
+        }
+      },
+      {
+        "name": "Battlefront",
+        "displayName": "Battlefront (24 lizardmen, 14 brutes; single, no cannon)",
+        "rank": 6,
+        "multi": false,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [],
+        "notes": "Large surface population but single-way and not cannonable per the task page. Reach it by 'casting Battlefront Teleport, or running south-east from the fairy ring (code CIR)' (Battlefront).",
+        "evidence": {
+          "multi": "Location Comparison row 'Battlefront': Multicombat = No (Slayer task/Lizardmen); 'Unlike the Lizardman Canyon, the battlefield is single-combat.' (Battlefront).",
+          "cannon": "Location Comparison row 'Battlefront': Cannonable = No (Slayer task/Lizardmen).",
+          "requirements": "not stated; Konar row lists Battlefront (Konar quo Maten)."
+        }
+      }
+    ],
+    "notes": "Minor spots from the task page: Lizardman Settlement (4 + 5 brutes), Kebos Swamp (7 + 3), Molch surface (6 + 7), south of Xeric's Shrine (5 brutes) - all single-way and not cannonable. Konar assigns Battlefront, Lizardman Canyon, Lizardman Settlement (Lizardman Caves included), Kebos Swamp (around Xeric's Shrine) and Molch (Lizardman Temple included). Shaman Slayer XP is 157.5; lizardmen and brutes give 60.",
+    "_verification": {
+      "corrections": [
+        "East side displayName/notes: the 28-brute figure is the task page's 'Lizardman Canyon' brute row for the whole canyon (one pin is on the west side), not the east side alone - reworded.",
+        "Lizardman Caves notes: the earlier route text ('via the Mountain Guide to Shayziens' Outpost then over the bridge'; 'Xeric's Shrine is due north past the bridge') was not found on the Lizardman Caves page; replaced with that page's own routes.",
+        "Evidence strengthened with the area pages' own sentences (Lizardman Temple 'A Dwarf multicannon cannot be placed within the temple.'; Lizardman Caves single-combat / task-only / marshy-ground sentences; Battlefront 'the battlefield is single-combat').",
+        "Confirmed: task page Slayer task/Lizardmen (otherreq 'Reptile got ripped' unlocked, chaeldar 50-90, konar 90-110, nieve 90-120, duradel 130-210; 75 points); all Lizardman/brute/shaman LocLines (Shayziens' Wall, Canyon west/east, Settlement, Kebos Swamp, Battlefront, Molch, South of Xeric's Shrine, Lizardman Caves task-only, Lizardman Temple) covered by the six locations plus notes; Location Comparison values (east side 34 Yes/Yes, west side 4 Yes/Yes, Shayziens' Wall 16 Yes/No, Battlefront 24 No/No, Temple 6 No/No, Caves 8 No/No, Settlement 4 No/No, Kebos Swamp 7 No/No, Molch 6 No/No); slayxp 60/60/157.5; cat Lizardmen; poison/venom resistance 100; immunecannon No, immunethrall No; attack style Crush, Ranged; poisonous Yes (3); 'never become tolerant', tier 5 Shayzien and Captain Cleive hard-diary sentences verbatim; 'These three shamans are present in a multi-combat area.' verbatim; 'Killing any variant of lizardmen while on a normal Lizard task will NOT progress the task.' verbatim; Konar row lists Battlefront, Lizardman Canyon, Lizardman Settlement (Caves), Kebos Swamp, Molch (Temple)."
+      ],
+      "confirmed": 52,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Lizards",
+    "wikiTaskPage": "Slayer task/Lizards",
+    "monsterPages": [
+      "Lizard",
+      "Desert Lizard",
+      "Small Lizard",
+      "Sulphur Lizard",
+      "Grimy Lizard"
+    ],
+    "bossTask": false,
+    "summary": "A 22 Slayer beginner task from Turael, Spria or Mazchna. Desert, small and regular lizards live north of Nardah (fairy ring DLQ) in the Kharidian Desert and must be finished with an ice cooler once below 5 hitpoints (the 10-point 'Reptile freezer' unlock does this automatically); bring waterskins for desert heat. With 44 Slayer you can instead kill sulphur lizards on the middle level of the Karuulm Slayer Dungeon (boots of stone, brimstone or granite unless the elite Kourend & Kebos Diary is done) or grimy lizards in Neypotzli after starting Perilous Moons, neither of which needs ice coolers.",
+    "recommendedStyle": "Any",
+    "styleNotes": "Weak crush melee attackers (max hit 2-5); desert-type lizards need an ice cooler for the killing blow and Ancient Magicks ice spells do not substitute; grimy lizards are poisonous and have -2 flat armour; none are cannon-immune.",
+    "requiredItems": [
+      "Ice coolers (desert, small and regular lizards)",
+      "Boots of stone, boots of brimstone or granite boots for sulphur lizards (unless elite Kourend & Kebos Diary)"
+    ],
+    "usefulItems": [
+      "Waterskins (desert heat)",
+      "Reptile freezer unlock (10 points)",
+      "Dwarf multicannon (all three locations are cannonable)"
+    ],
+    "superior": null,
+    "alternatives": [
+      "Sulphur lizard (44 Slayer, no ice cooler)",
+      "Grimy lizard (44 Slayer, Perilous Moons, no ice cooler)"
+    ],
+    "xpPerKill": 25,
+    "locations": [
+      {
+        "name": "Kharidian Desert (fairy ring DLQ)",
+        "displayName": "Kharidian Desert north of Nardah, fairy ring DLQ (31 small, 7 desert, 5 regular lizards; ice coolers)",
+        "rank": 1,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Ice coolers"
+        ],
+        "notes": "Task page table lists '31 Small, 7 Regular, 5 Giant' (the 5 'Giant' are the level 42 Lizard, whose LocLine has 5 pins here; 'Regular' are desert lizards). Fairy ring DLQ lands right beside them; 'Those with access to the fairy ring system can easily refill waterskins by re-entering Zanaris and using the water fountain located north of the fairy ring.' and 'there are two Desert Lizards and two Small Lizards that spawn on the edge of Uzer Oasis, south-west of the tea shop. You will not lose health due to the desert heat when attacking these lizards.' (Desert Lizard). Regular lizards (level 42) give 40 Slayer XP vs 25 for desert lizards and 15 for small lizards.",
+        "evidence": {
+          "multi": "Location comparison row 'Kharidian Desert, north of Nardah': Multicombat = No (Slayer task/Lizards).",
+          "cannon": "Location comparison row 'Kharidian Desert, north of Nardah': Cannonable = Yes (Slayer task/Lizards).",
+          "requirements": "'Ice coolers required, waterskins recommended.' (Slayer task/Lizards); Slayer task list row: 'Ice cooler (Desert Lizards)' (Slayer task). Konar does not assign lizards (assignedby = turael,spria,mazchna)."
+        }
+      },
+      {
+        "name": "Karuulm Slayer Dungeon (middle level)",
+        "displayName": "Karuulm Slayer Dungeon middle level (13 sulphur lizards; 44 Slayer, stone boots)",
+        "rank": 2,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "44 Slayer",
+          "Boots of stone, boots of brimstone or granite boots unless the elite Kourend & Kebos Diary is complete"
+        ],
+        "notes": "'Can be safespotted by standing by the corner of the entrance to their room. A cannon placed nearby can easily draw the lizards in.' Frequent gem drop table access (6/128).",
+        "evidence": {
+          "multi": "'The dungeon itself is single-way combat.' (Karuulm Slayer Dungeon via area-rules.json); Location comparison row: Multicombat = No (Slayer task/Lizards).",
+          "cannon": "Location comparison row 'Karuulm Slayer Dungeon': Cannonable = Yes (Slayer task/Lizards); 'A dwarf multicannon can be used in all areas here except the wyrm and Alchemical Hydra areas' (Karuulm Slayer Dungeon via area-rules.json).",
+          "requirements": "'Requires 44 Slayer. Players must wear boots of stone, boots of brimstone, or granite boots to protect themselves from the extreme heat (unless the elite Kourend & Kebos Diary has been completed).' (Slayer task/Lizards)."
+        }
+      },
+      {
+        "name": "Neypotzli - Streambound Cavern",
+        "displayName": "Neypotzli - Streambound Cavern (7 grimy lizards; 44 Slayer, Perilous Moons)",
+        "rank": 3,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "44 Slayer",
+          "Perilous Moons (partial completion)"
+        ],
+        "notes": "'Easy access to free food and prayer/combat potions in the form of cooked bream/cooked moss lizard and moonlight potions, respectively.' (Slayer task/Lizards). Grimy lizards are poisonous. 'While quest completion isn't necessary, the room remains instanced until progressing further in the quest.' (Grimy Lizard).",
+        "evidence": {
+          "multi": "'The area is not multi combat' (Neypotzli); Location comparison row 'Neypotzli - Streambound Cavern': Multicombat = No (Slayer task/Lizards).",
+          "cannon": "Location comparison row 'Neypotzli - Streambound Cavern': Cannonable = Yes (Slayer task/Lizards); 'a dwarven cannon can be set up for Slayer tasks within the caverns' (Neypotzli).",
+          "requirements": "'Requires 44 Slayer and completion of Perilous Moons.' (Slayer task/Lizards); 'partial completion of the Perilous Moons quest is required' (Grimy Lizard)."
+        }
+      },
+      {
+        "name": "West of Ruins of Ullek",
+        "displayName": "West of the Ruins of Ullek (4 desert, 5 small lizards; ice coolers)",
+        "rank": 4,
+        "multi": "unknown",
+        "cannon": "unknown",
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Ice coolers"
+        ],
+        "notes": "Second desert cluster listed on the Desert Lizard and Small Lizard monster pages (4 desert-lizard pins at level 24, 5 small-lizard pins at level 12). Not in the task page's location comparison, so combat type and cannon use are not stated.",
+        "evidence": {
+          "multi": "not stated (this spot is not in the Slayer task/Lizards Location comparison table).",
+          "cannon": "not stated.",
+          "requirements": "Desert Lizard LocLine 'West of Ruins of Ullek' (levels 24, 4 pins) and Small Lizard LocLine 'West of Ruins of Ullek' (levels 12, 5 pins); ice coolers per 'In order to kill a desert lizard, an ice cooler must be used when it has less than 5 Hitpoints.' (Desert Lizard). Konar does not assign lizards (assignedby = turael,spria,mazchna)."
+        }
+      }
+    ],
+    "notes": "Assigned by Turael/Spria (15-30) and Mazchna (30-50) only. Slayer XP: small 15, desert 25, lizard 40, sulphur 50, grimy 75. Grimy lizards also appear in the Tonali Cavern Moon Chamber (multicombat, The Final Dawn) and the Tonali Cavern Southern Chamber (middle floor) per the Grimy Lizard LocLines and Tonali Cavern page, but the task page does not list them. Desert Lizard LocLines are 'South-east of Shantay Pass' (the same DLQ area: 'The lizards are located south-east of the Shantay Pass, across the River Elid ... fairy rings ... dlq') and 'West of Ruins of Ullek'. 'Killing any variant of lizardmen while on a normal Lizard task will NOT progress the task.' (Lizardman). Grimy Lizard cat is 'Lizard' (singular) on its infobox.",
+    "_verification": {
+      "corrections": [
+        "Added the 'West of Ruins of Ullek' cluster (Desert Lizard and Small Lizard LocLines: 4 + 5 pins) as a low-rank location with multi/cannon unknown - it was missing versus the monster pages' LocLine lists.",
+        "Kharidian Desert displayName/notes: the task page table wording is '31 Small, 7 Regular, 5 Giant'; mapped to small/desert/level-42 Lizard with the reasoning recorded.",
+        "Notes: added the Grimy Lizard 'Tonali Cavern - Southern Chamber (middle floor)' LocLine and the Desert Lizard 'South-east of Shantay Pass' LocLine (same area as DLQ).",
+        "Confirmed: task page Slayer task/Lizards (skillreq 22, turael/spria 15-30, mazchna 30-50); Reptile freezer 10 points; slayxp 25 (Desert Lizard), 15 small, 40 lizard, 50 sulphur, 75 grimy; cat Lizards; assignedby turael,spria,mazchna; immunecannon No on lizard/desert/small/sulphur; grimy poisonous Yes (3), flatarmour -2, poisonresistance 100; sulphur flatarmour -1; Location comparison rows (Kharidian Desert No/Yes, Karuulm middle 13 No/Yes, Neypotzli Streambound 7 No/Yes) and their notes verbatim; Karuulm 'The dungeon itself is single-way combat. A dwarf multicannon can be used in all areas here except the wyrm and Alchemical Hydra areas' verbatim; boots of stone/brimstone/granite unless elite Kourend & Kebos Diary (Sulphur Lizard, Karuulm Slayer Dungeon); 'Ancient Magicks ice spells do not count in place of using an ice cooler' verbatim; Grimy Lizard 'partial completion of the Perilous Moons quest is required. While quest completion isn't necessary, the room remains instanced until progressing further in the quest.' verbatim; Neypotzli 'The area is not multi combat, but a dwarven cannon can be set up' verbatim.",
+        "Karuulm notes: the '6/128' gem table is on the Sulphur Lizard page ('This monster has a 6/128 chance of accessing the gem drop table'). Neypotzli notes: the '38 Herblore, 30 Cooking' figures were not found on the Neypotzli, Grimy Lizard or task pages - removed."
+      ],
+      "confirmed": 36,
+      "downgraded": 2
+    }
+  },
+  {
+    "task": "The Maggot King",
+    "wikiTaskPage": "Maggot King",
+    "monsterPages": [
+      "Maggot King"
+    ],
+    "bossTask": true,
+    "summary": "The Maggot King is a solo, instanced boss in Vampyrium (east of Sangvesti near the Ruined Village) that requires The Blood Moon Rises and 74 Slayer, assigned as a boss task by Konar, Nieve and Duradel.",
+    "recommendedStyle": "Any",
+    "styleNotes": "Attacks with ranged, magic and melee; poison resistance 200 (Maggot King infobox); 'a mix of melee and either magic or ranged is required'.",
+    "requiredItems": [],
+    "usefulItems": [
+      "Drakan's medallion (teleport to Castle Drakan portal)",
+      "Pickaxe to clear the rubble for the Vampyrium agility shortcut"
+    ],
+    "superior": null,
+    "alternatives": [],
+    "xpPerKill": 3675,
+    "locations": [
+      {
+        "name": "Vampyrium",
+        "displayName": "Vampyrium - Maggot King's lair east of Sangvesti (solo instance)",
+        "rank": 1,
+        "multi": "unknown",
+        "cannon": "unknown",
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "The Blood Moon Rises",
+          "74 Slayer"
+        ],
+        "notes": "'Use Drakan's medallion to get to Castle Drakan, enter Vampyrium, and then run east. Before fighting the boss, players should unlock a quick-travel method by rescuing an aranei scout south-east of Sangvesti.' (Maggot King). 'a pickaxe is required to clear rubble south of the shortcut' for the Agility shortcut to the Hunting Grounds (Vampyrium); the two woodland shortcuts need 64 Agility (Maggot King). 'If players die anywhere in Vampyrium post quest ... it is an unsafe death but they will respawn next to the portal in the Vampyrium castle courtyard' (Vampyrium).",
+        "evidence": {
+          "multi": "not stated; 'Players may only fight the boss by themselves, and the fight takes place inside an instance.' (Maggot King). Not in 'List of multicombat areas' (Multicombat area).",
+          "cannon": "not stated: the Maggot King infobox has immunethrall = No but no immunecannon line; the Maggot King and Vampyrium pages do not mention a cannon; not in the Dwarf multicannon prohibited list.",
+          "requirements": "'requires completion of The Blood Moon Rises to kill' (Maggot King); Boss page Slayer bosses row: 'Maggot King | Vampyrium | Slayer 74 | Completion of The Blood Moon Rises' (Boss); infobox assignedby = konar,nieve,duradel (Maggot King)."
+        }
+      }
+    ],
+    "notes": "Boss task. No 'Slayer task/Maggot King' page and no row in the Slayer task list table; identity, location and requirements come from the Maggot King, Vampyrium and Boss pages. Fight mechanics intentionally omitted.",
+    "_verification": {
+      "corrections": [
+        "No factual corrections. Added the 64 Agility woodland shortcuts (Maggot King page) and clarified that the infobox carries no immunecannon field (cannon stays unknown).",
+        "Confirmed: page Maggot King (no 'Slayer task/Maggot King' page - API missingtitle); LocLine 'Vampyrium'; slayxp 3675; cat Bosses; assignedby konar,nieve,duradel; attack style Ranged, Magic, Melee; poisonresistance 200; immunethrall No; 'requires completion of The Blood Moon Rises to kill', 'east of Sangvesti, near the Ruined Village', 'Players may only fight the boss by themselves, and the fight takes place inside an instance.', 'a mix of melee and either magic or ranged is required' verbatim; Boss page Slayer bosses row 'Maggot King | Vampyrium | Slayer 74 | Completion of The Blood Moon Rises'; brimstone key footnote (Konar task only); Vampyrium not in the 'List of multicombat areas'.",
+        "Summary and notes contain no fight mechanics (boss task); the styleNotes quote 'a mix of melee and either magic or ranged is required' is a style recommendation, kept."
+      ],
+      "confirmed": 17,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Magic axes",
+    "wikiTaskPage": "Magic axe",
+    "monsterPages": [
+      "Magic axe"
+    ],
+    "bossTask": false,
+    "summary": "A Krystilia-only task at the Magic Axe Hut in level 54 Wilderness, which needs 23 Thieving and a lockpick to open either door. The hut is full of aggressive level 42 magic axes that slash for up to 5; it is single-way combat but a cannon can be placed inside. Get there via the Ardougne or Edgeville lever to the Deserted Keep, run north, slash the web and go east, or take a Wilderness Obelisk to level 50 and run west past the Rogues' Castle and Chaos Elemental. It is above level 30 Wilderness, so no teleports work from the hut.",
+    "recommendedStyle": "Any",
+    "styleNotes": "Weak slash attackers (max hit 5), poison resistance 0, not immune to cannon; low combat level so any style works.",
+    "requiredItems": [
+      "Lockpick",
+      "23 Thieving"
+    ],
+    "usefulItems": [
+      "Dwarf multicannon (allowed inside the hut)",
+      "Knife or slash weapon for the Deserted Keep web"
+    ],
+    "superior": null,
+    "alternatives": [],
+    "xpPerKill": 44,
+    "locations": [
+      {
+        "name": "Magic axe hut (23 Thieving and lockpick required)",
+        "displayName": "Magic Axe Hut, level 54 Wilderness (lockpick + 23 Thieving; single, cannon ok)",
+        "rank": 1,
+        "multi": false,
+        "cannon": true,
+        "wilderness": true,
+        "wildernessLevelMin": 54,
+        "wildernessLevelMax": 56,
+        "konarAssignable": false,
+        "requirements": [
+          "23 Thieving",
+          "Lockpick"
+        ],
+        "notes": "'A lockpick and level 23 Thieving are required to unlock either of the doors to the hut. It is infested with aggressive magic axes' (Magic axe hut). Routes from the same page: 'Pull the lever in either Ardougne or Edgeville to teleport to the Deserted Keep. Run north and slash the web, then run east to the hut.' or 'Use a Wilderness Obelisk to travel to level 50 Wilderness. Run west past the Rogues' Castle and the Chaos Elemental, then north-west to the hut.' 'Teleports will not work above level 20 Wilderness, except for those methods listed below, which may be used by members up to level 30 Wilderness.' (Wilderness).",
+        "evidence": {
+          "multi": "'A Dwarf multicannon may be put down within the hut, but the area is single-way combat.' (Magic axe hut).",
+          "cannon": "'A Dwarf multicannon may be put down within the hut, but the area is single-way combat.' (Magic axe hut).",
+          "requirements": "'Players require 23 Thieving for magic axes to be assigned as a task.' (Magic axe); Krystilia row: 'Only assigned to players if they have at least 23 Thieving', location 'Magic Axe Hut (Bring a lockpick!)', levels '54-56' (Krystilia); hut infobox wilderness = 54 (Magic axe hut)."
+        }
+      }
+    ],
+    "notes": "No 'Slayer task/Magic axes' page exists (also tried singular). Magic axes also spawn in Taverley Dungeon and the Catacombs of Kourend per the Magic axe LocLines, but only 'The axes in the magic axe hut can be given as a wilderness Slayer assignment by Krystilia.' Slayer XP conflict: monster infobox slayxp = 44, Krystilia's table says 45; 44 used.",
+    "_verification": {
+      "corrections": [
+        "Summary: replaced the vague risk advice ('deep Wilderness with no teleports, so risk little') with the Wilderness page's teleport rule; no warning about other players remains.",
+        "Confirmed: page Magic axe (no 'Slayer task/Magic axes' page - API missingtitle); LocLines 'Magic axe hut (23 Thieving and lockpick required)', 'Taverley Dungeon', 'Catacombs of Kourend' with 'The axes in the magic axe hut can be given as a wilderness Slayer assignment by Krystilia. Players require 23 Thieving for magic axes to be assigned as a task.' verbatim; combat 42; max hit 5 Slash; slayxp 44 (Krystilia table 45 - conflict kept in notes); cat Magic Axes; assignedby krystilia; poisonresistance 0; immunecannon No, immunethrall No; hut infobox wilderness = 54 and both route sentences verbatim (Magic Axe Hut); Krystilia row 'Magic axes | 75-125 | Magic Axe Hut (Bring a lockpick!) | 54-56' with the 23 Thieving footnote; Slayer task list row Lockpick + Thieving 23 + Krystilia."
+      ],
+      "confirmed": 17,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Mammoths",
+    "wikiTaskPage": "Mammoth",
+    "monsterPages": [
+      "Mammoth"
+    ],
+    "bossTask": false,
+    "summary": "A Krystilia-only task in low Wilderness (level 7-14) south-east of Ferox Enclave, west of the Chaos Temple. Mammoths are big 3x3 stab attackers with only a 7 max hit and lots of hitpoints, so they are trivially safespotted behind the trees and stumps and are an excellent cannon target; the nearby altar restores prayer and Ferox Enclave is a short walk for resupply.",
+    "recommendedStyle": "Any",
+    "styleNotes": "Stab melee only, max hit 7; poison resistance 0; not cannon-immune; large 3x3 size makes them easy to trap on terrain and hit from afar.",
+    "requiredItems": [],
+    "usefulItems": [
+      "Dwarf multicannon",
+      "Ranged or magic gear for tree safespots"
+    ],
+    "superior": null,
+    "alternatives": [],
+    "xpPerKill": 130,
+    "locations": [
+      {
+        "name": "South-east of Ferox Enclave",
+        "displayName": "West of the Chaos Temple / south-east of Ferox Enclave, Wilderness 7-14 (cannon, safespots)",
+        "rank": 1,
+        "multi": "unknown",
+        "cannon": true,
+        "wilderness": true,
+        "wildernessLevelMin": 7,
+        "wildernessLevelMax": 14,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "'Mammoths can be easily safespotted due to their large size (3x3). Players can use the many trees or tree stumps in the area to safespot them from behind.' 'a nearby altar providing unlimited Prayer for boosts, and the short walk to the Enclave for resupplying.' The Mammoth page adds that players 'are therefore advised not to carry too many supplies on them at once' because of player killers. 'Killing a Mammoth is a task in the Easy Wilderness Diary.' (Mammoth).",
+        "evidence": {
+          "multi": "not stated on the Mammoth page; the mammoth area is not in 'List of multicombat areas' (Multicombat area). The Chaos Temple (Wilderness) page says 'The area is also multi-combat' about the temple itself (level 11), but the mammoths are 'West of the Chaos Temple' (Krystilia) / 'south-east of the Ferox Enclave' (Mammoth), so this is left unknown.",
+          "cannon": "'It is an efficient place to train with a Dwarf multicannon due to the high hitpoints of the Mammoths' (Mammoth).",
+          "requirements": "not stated (Slayer task list row: no required items, no requirements). Wilderness levels '7-14' from Krystilia's Mammoths row, location 'West of the Chaos Temple' (Krystilia)."
+        }
+      }
+    ],
+    "notes": "No 'Slayer task/Mammoths' page exists (also tried singular). Krystilia only (assignedby = krystilia), 75-125 assigned.",
+    "_verification": {
+      "corrections": [
+        "Summary: removed the warning about other players ('PKers do visit, so carry only what you need'); the Mammoth page's supply advice is kept in the location notes.",
+        "Confirmed: page Mammoth (no 'Slayer task/Mammoths' page - API missingtitle); LocLine only 'South-east of Ferox Enclave'; size 3; max hit 7; attack style Stab; slayxp 130; cat Mammoths; assignedby krystilia; poisonresistance 0; immunecannon No, immunethrall No; safespot / cannon / altar / Enclave sentences verbatim; Easy Wilderness Diary sentence verbatim; Krystilia row 'Mammoths | 75-125 | West of the Chaos Temple | 7-14'; Slayer task list row 'West of the Chaos Temple', Krystilia only, no requirements. Multi stays unknown (no page states it for the mammoth area)."
+      ],
+      "confirmed": 17,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Metal dragons",
+    "wikiTaskPage": "Slayer task/Metal dragons",
+    "monsterPages": [
+      "Bronze dragon",
+      "Iron dragon",
+      "Steel dragon",
+      "Mithril dragon",
+      "Adamant dragon",
+      "Rune dragon"
+    ],
+    "bossTask": false,
+    "summary": "An 85 combat task from Konar, Nieve or Duradel that needs Dragon Slayer I started. All metal dragons breathe long-range dragonfire that Protect from Magic does not reduce, so full protection needs an antifire potion plus an anti-dragon or dragonfire shield, or a super antifire; they are draconic (dragon hunter lance/crossbow) and weakest to stab and earth spells. The quickest task is bronze dragons in the Brimhaven Dungeon task-only area (5 in a small cannonable room), or iron dragons if you want a visage chance; rune dragons at Lithkren Vault (Dragon Slayer II) are the profitable choice. Only mithril dragons (Ancient Cavern) cannot be cannoned.",
+    "recommendedStyle": "Melee",
+    "styleNotes": "Draconic attribute (dragon hunter lance/crossbow/wand); weakest to stab and 50% vulnerable to earth spells; long-range dragonfire ignores Protect from Magic so shield + antifire or super antifire is mandatory; mithril, adamant and rune dragons also use magic and ranged; mithril/adamant/rune have 100 poison resistance while bronze/iron/steel have 0; bronze, iron, steel, mithril and rune infoboxes say immunecannon = No (the adamant infobox has no cannon field, but the task page says 'only mithril dragons cannot be cannoned' and lists Lithkren Vault as cannonable).",
+    "requiredItems": [
+      "Anti-dragon shield, dragonfire shield, dragonfire ward or ancient wyvern shield with an antifire potion, or a super antifire potion"
+    ],
+    "usefulItems": [
+      "Dragon hunter lance or dragon hunter crossbow",
+      "Dwarf multicannon (Brimhaven, Isle of Souls, Lithkren)",
+      "875 coins or trading sticks for Brimhaven Dungeon entry",
+      "Insulated boots (rune dragon lightning)",
+      "Antipoison (adamant dragon poison spit)"
+    ],
+    "superior": null,
+    "alternatives": [],
+    "xpPerKill": 125,
+    "locations": [
+      {
+        "name": "Brimhaven Dungeon (Task only area)",
+        "displayName": "Brimhaven Dungeon - Hieve's task-only metal dragon area (5 bronze, 9 iron, 9 steel; cannon)",
+        "rank": 1,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Metal dragon Slayer task (task-only area)",
+          "875 coins per entry (or 1,000,000 once) to Saniboch, or 5,000 trading sticks once at the Tai Bwo Wannai entrance",
+          "Axe and 10 Woodcutting for the vines at the north entrance"
+        ],
+        "notes": "'If players are seeking a fast task of dragons, they are recommended to kill bronze dragons at Brimhaven Dungeon's slayer-only area, where five of them can be found in a small area which is cannonable.' Hieve 'guards a massive metal dragon chamber and only allows those with the appropriate Slayer task to enter.' Fairy ring CKR then north. Elite Karamja Diary lets you toggle noted bars.",
+        "evidence": {
+          "multi": "'A Dwarf multicannon may be used within the dungeon, although it is a single way combat zone.' (Brimhaven Dungeon); Location comparison row 'Brimhaven Dungeon (task only area)': Multicombat = No (Slayer task/Metal dragons).",
+          "cannon": "Location comparison row 'Brimhaven Dungeon (task only area)': Cannonable = Yes (Slayer task/Metal dragons); 'A Dwarf multicannon may be used within the dungeon' (Brimhaven Dungeon).",
+          "requirements": "'An axe is needed if entering via the north entrance, requiring 10 Woodcutting. A blessed axe will not work.' and '875 coins entry for each time, a one-time fee of 1,000,000 coins or alternate entry of one-off fee of 5000 trading sticks.' (Slayer task/Metal dragons); Konar row lists Brimhaven Dungeon: Bronze, Iron, Steel (Konar quo Maten)."
+        }
+      },
+      {
+        "name": "Brimhaven Dungeon",
+        "displayName": "Brimhaven Dungeon - open metal dragon areas (3 bronze, 13 iron, 4 steel; cannon)",
+        "rank": 2,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "875 coins per entry (or 1,000,000 once) to Saniboch, or 5,000 trading sticks once at the Tai Bwo Wannai entrance",
+          "Axe and 10 Woodcutting for the vines at the north entrance"
+        ],
+        "notes": "The Tai Bwo Wannai entrance (Banisoch, 5,000 trading sticks once) 'takes players to the bronze dragon area' (Brimhaven Dungeon). Iron dragons are the visage option: 'iron dragons may be cannoned instead if seeking the draconic visage, as bronze dragons do not drop them' (Slayer task/Metal dragons). Elite Karamja Diary lets you toggle noted bar drops via Pirate Jackie the Fruit (task page).",
+        "evidence": {
+          "multi": "'A Dwarf multicannon may be used within the dungeon, although it is a single way combat zone.' (Brimhaven Dungeon); Location comparison row 'Brimhaven Dungeon': Multicombat = No (Slayer task/Metal dragons).",
+          "cannon": "Location comparison row 'Brimhaven Dungeon': Cannonable = Yes (Slayer task/Metal dragons).",
+          "requirements": "'players must pay Saniboch, who is outside the entrance, 875 coins each time they wish to enter the dungeon. Alternatively, a one-off fee of 1,000,000 coins can be paid for permanent access. A player will also need an axe to cut the vines blocking the path (requiring level 10 Woodcutting).' (Brimhaven Dungeon)."
+        }
+      },
+      {
+        "name": "Lithkren Vault",
+        "displayName": "Lithkren Vault (5 adamant, 5 rune dragons; Dragon Slayer II; cannon)",
+        "rank": 3,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Dragon Slayer II"
+        ],
+        "notes": "'If seeking profit, kill rune dragons instead.' (Slayer task/Metal dragons). Adamant dragons are in the west wing and rune dragons in the east wing behind red barriers; 'Use a digsite pendant on the strange machine in Lithkren Vault (north of the rune dragons) to unlock the teleport' (Lithkren Vault). Rune dragons' electric bolts do 4-7 per tick, 'If a player is wearing insulated boots, this damage is reduced to 1-2 per tick' (Rune dragon); adamant dragons' poison projectile hits 14-25, 'reduced to 4-8 by being under the effect of any poison protection' (Adamant dragon).",
+        "evidence": {
+          "multi": "Location comparison row 'Lithkren Vault': Multicombat = No (Slayer task/Metal dragons).",
+          "cannon": "Location comparison row 'Lithkren Vault': Cannonable = Yes (Slayer task/Metal dragons).",
+          "requirements": "'Only accessible after the completion of Dragon Slayer II.' (Slayer task/Metal dragons); 'Adamant and rune dragons can also be found roaming the west and east wings of the facility, respectively, behind the red barriers. These barriers can only be entered once Dragon Slayer II has been completed.' (Lithkren Vault); Konar row: 'Lithkren Vault: Adamant dragon, Rune dragon' with completion of Dragon Slayer II (Konar quo Maten)."
+        }
+      },
+      {
+        "name": "Catacombs of Kourend",
+        "displayName": "Catacombs of Kourend (5 bronze, 2 iron, 2 steel; multi, no cannon)",
+        "rank": 4,
+        "multi": true,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [],
+        "notes": "'Monsters in the Catacombs of Kourend are stronger than their normal counterparts.' Drops ancient shards and dark totem pieces. Enter via Xeric's talisman 'Xeric's Heart' or Kourend Castle Teleport (Client of Kourend). A 28 Agility stepping-stone shortcut links the steel dragon and brutal red dragon areas.",
+        "evidence": {
+          "multi": "Location comparison row 'Catacombs of Kourend': Multicombat = Yes (Slayer task/Metal dragons); 'As this particular dungeon is a multicombat area (excluding the brutal dragon area)' (Catacombs of Kourend).",
+          "cannon": "Location comparison row: Cannonable = No (Slayer task/Metal dragons); 'dwarf multicannons cannot be placed inside the Catacombs' (Catacombs of Kourend); on the Dwarf multicannon prohibited list.",
+          "requirements": "not stated; Konar row lists Catacombs of Kourend: Bronze, Iron, Steel (Konar quo Maten)."
+        }
+      },
+      {
+        "name": "Isle of Souls Dungeon",
+        "displayName": "Isle of Souls Dungeon (3 iron dragons; single, cannon)",
+        "rank": 5,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [],
+        "notes": "Reach it via the Soul Wars minigame teleport and run north-east. 'the iron dragons cannot be [safespotted] due to their long-range dragonfire attack.' Only 3 dragons.",
+        "evidence": {
+          "multi": "'A dwarf multicannon can be used in the dungeon, though it is not a multicombat area.' (Isle of Souls Dungeon); Location comparison row: Multicombat = No (Slayer task/Metal dragons).",
+          "cannon": "Location comparison row 'Isle of Souls Dungeon': Cannonable = Yes (Slayer task/Metal dragons); 'A dwarf multicannon can be used in the dungeon' (Isle of Souls Dungeon).",
+          "requirements": "not stated; Konar row lists Isle of Souls Dungeon: Iron dragon (Konar quo Maten)."
+        }
+      },
+      {
+        "name": "Ancient Cavern (upper level)",
+        "displayName": "Ancient Cavern upper level (7 mithril dragons; no cannon; Barbarian Firemaking)",
+        "rank": 6,
+        "multi": false,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "First part of Barbarian Firemaking (35 Firemaking, pyre ships) to enter the whirlpool"
+        ],
+        "notes": "Teleport to the Barbarian Outpost (games necklace) and run south to the whirlpool; stairs south-east of the entrance lead to the upper level where 'the only threat are the mithril dragons'. They use melee, magic, magical ranged and dragonfire. 'It is not recommended to kill other dragons apart from collection log purposes.'",
+        "evidence": {
+          "multi": "Location comparison row 'Ancient Cavern (upper level)': Multicombat = No (Slayer task/Metal dragons).",
+          "cannon": "'Dwarf multicannons cannot be used here. If attempted, players will receive the message: It's far too damp for you to set up a cannon here.' (Ancient Cavern); 'Of these dragons, only mithril dragons cannot be cannoned.' (Slayer task/Metal dragons); on the Dwarf multicannon prohibited list.",
+          "requirements": "'The cavern can only be accessed after the player has completed the first part of Barbarian Firemaking, requiring 35 Firemaking.' (Slayer task/Metal dragons). Not in Konar's metal dragon list; Mithril dragon infobox assignedby = nieve,duradel (Mithril dragon)."
+        }
+      }
+    ],
+    "notes": "Slayer XP per kill by variant: bronze 125, iron 169.1/199.5, steel 215.2/256.2 (task page lists 173.2/199.5 and 220.5/262.5), mithril 266.5 (task page 273), adamant 324.5, rune 363. 'Pedal to the Metals' (200 points) raises the assignment to 150-200. Task page: 'Metal dragons as a slayer task also have an incredibly high weight value (the most out of all potential tasks)'. Slayer task list row requirements: 'Dragon Slayer I (partially)', 'Combat 85'.",
+    "_verification": {
+      "corrections": [
+        "No factual corrections. styleNotes now records that the Adamant dragon infobox has no immunecannon field (the 'none are cannon-immune' claim rests on the task page sentence 'only mithril dragons cannot be cannoned' and the Lithkren Vault Cannonable = Yes row).",
+        "Confirmed: task page Slayer task/Metal dragons (skillreq None, combatreq 85, otherreq partial Dragon Slayer I, konar/nieve 30-40 (150-200), duradel 35-45 (150-200)); all six monster LocLines (Brimhaven Dungeon, Brimhaven task-only, Catacombs, Isle of Souls Dungeon, Ancient Cavern upper level, Lithkren Vault) covered; xpPerKill 125 = Bronze dragon slayxp; iron 169.1/199.5, steel 215.2/215.2/256.2, mithril 266.5, adamant 324.5, rune 363; cat Metal Dragons; attributes dragon,fiery; Earth 50%; poisonresistance 0/0/0/100/100/100; immunecannon No on bronze/iron/steel/mithril/rune; assignedby konar,nieve,duradel (mithril nieve,duradel); Location comparison rows (task-only 5/9/9 No/Yes, Brimhaven 3/13/4 No/Yes, Catacombs 5/2/2 Yes/No, Isle of Souls 3 iron No/Yes, Ancient Cavern 7 mithril No/No, Lithkren 5/5 No/Yes) and their notes verbatim (axe + 10 Woodcutting, 875 / 1,000,000 / 5000 trading sticks, Barbarian Firemaking 35, Dragon Slayer II); Brimhaven Dungeon 'A Dwarf multicannon may be used within the dungeon, although it is a single way combat zone.', Hieve sentence, Saniboch/Banisoch fees verbatim; Isle of Souls 'A dwarf multicannon can be used in the dungeon, though it is not a multicombat area.' and iron-dragon safespot sentence verbatim; Ancient Cavern 'far too damp' message and 'the only threat are the mithril dragons' verbatim; Catacombs 28 Agility stepping stones verbatim; Konar rows Brimhaven/Catacombs/Isle of Souls/Lithkren; 'Pedal to the Metals' 150-200; weight sentence verbatim; Protect from Magic / stab / earth sentences verbatim."
+      ],
+      "confirmed": 52,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Minotaurs",
+    "wikiTaskPage": "Minotaur",
+    "monsterPages": [
+      "Minotaur"
+    ],
+    "bossTask": false,
+    "summary": "A Turael/Spria beginner task on the first level (Vault of War) of the Stronghold of Security under Barbarian Village. Minotaurs (level 12 and 27) are non-aggressive crush attackers with very low Defence, so any style works; the level has ranging safespots and is the only multicombat floor of the stronghold, and a cannon can be placed. They drop the right skull half for the skull sceptre and plenty of iron arrows.",
+    "recommendedStyle": "Any",
+    "styleNotes": "Low Defence crush attackers, max hit 2-3, not aggressive; poison resistance 0; not cannon-immune; easily safespotted for Ranged/Magic.",
+    "requiredItems": [],
+    "usefulItems": [
+      "Dwarf multicannon (allowed in the stronghold)",
+      "Ranged gear for the Vault of War safespots"
+    ],
+    "superior": null,
+    "alternatives": [],
+    "xpPerKill": 10,
+    "locations": [
+      {
+        "name": "Stronghold of Security: Vault of War",
+        "displayName": "Stronghold of Security level 1 (Vault of War), 45 minotaurs (multi, cannon)",
+        "rank": 1,
+        "multi": true,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "7 Combat (Slayer task list requirement)"
+        ],
+        "notes": "Enter the stronghold 'at the heart of the Barbarian Village mine, west of Varrock' (Stronghold of Security). 'The level contains ranging safespots, making it popular for new players to gain combat experience in Ranged or Magic. Unlike the other levels, the first is a multicombat area.' Monster table: Minotaur levels 12, 27, spawns 45. Safespots per the Minotaur page: the small centre room south of the spiky-chain room, the room immediately east of the floor start behind the spiked fences, and the large south-eastern room behind the spiked fence.",
+        "evidence": {
+          "multi": "'Unlike the other levels, the first is a multicombat area.' (Stronghold of Security); 'Stronghold of Security' (first level only) listed under 'List of multicombat areas' (Multicombat area).",
+          "cannon": "'Note: A cannon can be placed in the stronghold.' (Stronghold of Security).",
+          "requirements": "Slayer task list row for Minotaurs: Requirements 'Combat 7', location 'Stronghold of Security' (Slayer task). Konar does not assign minotaurs (assignedby = turael,spria)."
+        }
+      }
+    ],
+    "notes": "No 'Slayer task/Minotaurs' page exists (also tried singular); data from the Minotaur, Stronghold of Security and Slayer task pages. Slayer XP is 10 for the level 12 minotaur and 22 for the level 27 one (a third variant gives 13).",
+    "_verification": {
+      "corrections": [
+        "No factual corrections. Location notes now cite the Stronghold of Security monster table (45 spawns) and the Minotaur page's three safespots.",
+        "Confirmed: page Minotaur (no 'Slayer task/Minotaurs' page - API missingtitle); LocLines both 'Stronghold of Security: Vault of War'; versions Level 12 / Level 27 / Unused with slayxp 10 / 22 / 13; cat Minotaurs; assignedby turael,spria; aggressive No; max hit 2/3; attack style Crush; poisonresistance 0; immunecannon No, immunethrall No; right skull half / skull sceptre and iron arrows sentences verbatim; 'Note: A cannon can be placed in the stronghold.' and multicombat sentence verbatim; 'The first level of the Stronghold of Security' in the 'List of multicombat areas'; Slayer task list row 'Minotaurs | Stronghold of Security | Combat 7 | Turael, Spria'."
+      ],
+      "confirmed": 17,
+      "downgraded": 0
+    }
+  }
+]
