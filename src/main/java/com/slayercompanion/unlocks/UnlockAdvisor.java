@@ -68,18 +68,23 @@ public class UnlockAdvisor
 			for (LiveSlayerCatalog.Unlock u : live)
 			{
 				UnlockInfo b = bundled.remove(SlayerData.normalise(u.getName()));
+				String effect = u.getDescription() != null && !u.getDescription().isEmpty() ? u.getDescription()
+					: (b == null || b.getEffect() == null ? "" : b.getEffect());
 				out.add(new UnlockAdvice(u.getName(), u.getDescription(), u.getCost(), catalog.isUnlocked(u),
 					points >= u.getCost(),
 					b == null ? 9 : b.getPriority(),
 					b == null ? null : b.getCategory(),
-					b == null ? null : b.getRationale()));
+					b == null ? null : b.getRationale(),
+					effect,
+					tasks(b)));
 			}
 		}
 		// Bundled entries the live list did not have (e.g. when the cache read failed).
 		for (UnlockInfo b : bundled.values())
 		{
 			out.add(new UnlockAdvice(b.getName(), b.getEffect() == null ? "" : b.getEffect(), b.getCost(), null,
-				points >= b.getCost(), b.getPriority(), b.getCategory(), b.getRationale()));
+				points >= b.getCost(), b.getPriority(), b.getCategory(), b.getRationale(),
+				b.getEffect() == null ? "" : b.getEffect(), tasks(b)));
 		}
 		out.sort((a, c) ->
 		{
@@ -92,5 +97,22 @@ public class UnlockAdvisor
 			return byPriority != 0 ? byPriority : Integer.compare(a.getCost(), c.getCost());
 		});
 		return Collections.unmodifiableList(out);
+	}
+
+	/** Real task names only; bundled placeholders like "(all tasks)" are dropped. */
+	private static List<String> tasks(UnlockInfo b)
+	{
+		List<String> out = new ArrayList<>();
+		if (b != null && b.getAffectsTasks() != null)
+		{
+			for (String t : b.getAffectsTasks())
+			{
+				if (t != null && !t.startsWith("("))
+				{
+					out.add(t);
+				}
+			}
+		}
+		return out;
 	}
 }
