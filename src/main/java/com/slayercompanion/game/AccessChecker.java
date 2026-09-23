@@ -126,6 +126,11 @@ public class AccessChecker
 		boolean checkedAnything = false;
 		for (AccessGroup group : access == null ? Collections.<AccessGroup>emptyList() : access.groupsOrEmpty())
 		{
+			if ("assignment requirement".equals(group.getNote()))
+			{
+				// Gates whether a master hands the task out, not whether the player can go there.
+				continue;
+			}
 			List<AccessRule> rules = group.getAny() == null ? Collections.<AccessRule>emptyList() : group.getAny();
 			if (rules.isEmpty())
 			{

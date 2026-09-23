@@ -14,6 +14,7 @@ python3 generate.py --out out                # full build (uses cache/, ~300-500
 python3 generate.py --only "Bloodveld,Elves" # rebuild only these tasks, keep the rest from out/tasks.json
 python3 generate.py --refresh                # ignore the cache and re-fetch every page
 python3 generate.py --limit 5                # smoke test on the first five tasks
+python3 generate.py --self-test              # unit tests for parse_access() (no network, no cache)
 ```
 
 | Option | Default | Meaning |
@@ -26,6 +27,7 @@ python3 generate.py --limit 5                # smoke test on the first five task
 | `--only A,B` | – | comma-separated display names or substrings; other tasks are copied from the previous `out/tasks.json` |
 | `--limit N` | 0 | only the first N tasks (testing) |
 | `--sleep S` | 0.5 | seconds between network fetches |
+| `--self-test` | off | run the `parse_access()` assertions and exit (90 checks on the tricky requirement strings) |
 
 Progress goes to stderr; a summary of the `counts` block of `report.json` goes to stdout.
 
@@ -148,12 +150,15 @@ All JSON is pretty-printed, keys sorted, UTF-8, `ensure_ascii=False`.
 | `coordsMissing` | true when there are no coordinates |
 | `rank`, `multi`, `cannon`, `wilderness`, `wildernessLevelMin`, `wildernessLevelMax`, `konarAssignable`, `requirements[]`, `notes` | curated fields (defaults: `null`, `"unknown"`, `"unknown"`, heuristic bool, `null`, `null`, `"unknown"`, `[]`, `null`). `wilderness` defaults to true when the name contains "Wilderness" or a spawn lies in the surface Wilderness box |
 | `curated`, `curatedName` | whether a curated record matched and under which name |
+| `access` | `{groups[]}` derived from `requirements[]` by `parse_access()`, see below |
 
 ### `out/locations.json` – array of unique locations across all tasks
 
-`{id, name, displayName, link, annotations[], plane, mapID, x, y, spawns[], spawnsByTask{task → [[x,y]…]}, spawnCount, tasks[], wilderness, coordsMissing}`.
+`{id, name, displayName, link, annotations[], plane, mapID, x, y, spawns[], spawnsByTask{task → [[x,y]…]}, spawnCount, tasks[], wilderness, coordsMissing, requirementsByTask{task → [str]}, accessByTask{task → access}}`.
 `x`/`y` is the centroid of the union of spawns from every task that uses the location; use
-`spawnsByTask` (or the per-task copy in `tasks.json`) for task-specific positions.
+`spawnsByTask` (or the per-task copy in `tasks.json`) for task-specific positions. Requirements
+are curated per task (a task-only cave is task-only for one task), so they and their parsed
+`access` are keyed by task rather than merged: a union would lock a location for the wrong task.
 
 ### `out/report.json`
 
@@ -162,7 +167,9 @@ withMasters, withStrategy, withUnlocks, withXp, curatedTasks), `fetches`, `faile
 `tasksWithoutTaskPage[{task, tried}]`, `tasksWithoutMonsterPage[]`, `tasksWithoutEquipment[]`,
 `tasksWithoutLocations[]`, `tasksWithoutMasters[]`, `unmatchedCuratedLocations[]`,
 `ambiguousCuratedLocations[]`, `curatedProblems[]`, `curatedTasksUnused[]`.
-`trainingSummaryRows`, `trainingSummaryUnmatched[]`, `trainingSummaryAmbiguous[]` (see below).
+`trainingSummaryRows`, `trainingSummaryUnmatched[]`, `trainingSummaryAmbiguous[]` (see below),
+`accessCounts{…}`, `accessUnparsed{string → count}` (see "access"); `counts` also gains
+`accessGroups`, `accessGroupsCheckable`, `accessGroupsManual`, `accessUnparsed`.
 
 ### `out/general-gear.json` – general Slayer gear (not task-specific)
 
@@ -221,6 +228,66 @@ inventories and rune pouches – one per line, sorted. The plugin resolves these
 *pages* rather than items (e.g. `God capes`, `Cape of Accomplishment (t)`) will simply not resolve
 and the accompanying `pic` name (`Imbued Saradomin cape`, `Strength cape(t)`) will.
 
+
+### `access` on `locations[]` – checkable requirements
+
+`apply_access()` runs after the curated overrides and turns every location's free-text
+`requirements[]` into a structure the plugin's `AccessChecker` can evaluate through the RuneLite
+API (quest states, real skill levels, combat level, diary varbits, membership, the live Slayer
+reward list). `parse_access(requirements) -> dict` is a pure, table-driven function; `--self-test`
+runs its unit tests.
+
+```
+"access": {
+  "groups": [                      // every group must be satisfied (AND)
+    { "text": "<original requirement string>",
+      "any": [ rule, ... ],        // alternatives (OR); empty when nothing is checkable
+      "manual": true|false,        // true when the string (or part of it) cannot be checked by the client
+      "note": "..." }              // optional: why (see the table below)
+  ]
+}
+rule = {"type":"quest","quest":"PRIEST_IN_PERIL","name":"Priest in Peril","state":"FINISHED"|"IN_PROGRESS"}
+     | {"type":"skill","skill":"AGILITY","level":70}
+     | {"type":"combat","level":75}
+     | {"type":"diary","varbit":"MORYTANIA_DIARY_HARD_COMPLETE","name":"Morytania Hard diary"}
+     | {"type":"unlock","name":"Like a Boss"}       // slayer reward unlock, checked by name against the live reward list
+     | {"type":"members"}
+```
+
+`quest` is the RuneLite `Quest` enum name and `name` its display name (`QUESTS` table in the
+script); `skill` a RuneLite `Skill` enum name; `varbit` a `VarbitID` constant name (`1` = tier
+complete). `IN_PROGRESS` means "at least started"; the checker treats `FINISHED` as satisfying it.
+
+The checker ANDs the groups and ORs the rules inside `any`; a group whose rules all evaluate
+false is a hard lock whatever `manual` says, and a group with an empty `any` is shown as a
+manual reminder. **A wrong lock is worse than a missing one**, so the parser is deliberately
+conservative:
+
+| Input | Output |
+| --- | --- |
+| whole string mentions assignment (`to be assigned`, `to be offered`, `for the (boss) task`, `assigns`, `to receive … tasks`, `Slayer task list requirement`, `for God Wars Dungeon slayer tasks`…) | `any: []`, `manual: true`, `note: "assignment requirement"` – a master requirement, not a location requirement |
+| `Optional: …`, `… recommended …` | `any: []`, manual, `note: "optional"` |
+| `Not available after …`, `no longer …` | `any: []`, manual, `note: "negative requirement"` |
+| `None (free-to-play)` | `any: []`, `manual: false`, `note: "no requirement"` |
+| `Task-only area`, `Must be on a … task`, `<Monster> Slayer task`, `On-task only` | `any: []`, manual, `note: "task-only"` |
+| `N Skill` / `Skill N` / `level N Skill` (+ `(boostable)`, `(not boostable)`, `to …`, `for …`) | skill rule; `Combat N` / `N Combat` → combat rule. A qualifier naming a `shortcut`, `route`, `entrance`, `stepping stones`, `per the task page` makes it manual (it may not gate the whole location) |
+| `<Easy/Medium/Hard/Elite> <Region> Diary` in any word order, optional `the`, `is complete`/`is done` | diary rule; Karamja easy/medium/hard have no varbit → manual |
+| `Members`, `Members (Varlamore)` | members rule |
+| `<Name> unlock (N Slayer reward points)`, `'<Name>' Slayer unlock` | unlock rule when `<Name>` matches `UNLOCK_NAMES` case-insensitively (the exact live name is emitted) |
+| quest name, optionally led by `Partial completion of` / `Started` / `Completion of` and followed by `quest`/`miniquest`/`started`/`completed`/`partial`, then at most one `to access|enter|reach|board …`, `to the point of …`, `far enough to …` or `for <Region> access` clause | quest rule. The longest word prefix that is a quest wins, so `Heroes' Quest` keeps its "Quest". State is `IN_PROGRESS` when the piece (with its own parentheticals) says `partial`, `started`, `progressed`, `to the point`, `far enough` or `during`, else `FINISHED`. Names are matched after lower-casing, dropping punctuation and a leading "The"; `QUEST_ALIASES` adds short forms (`DS2`, `SotE`, `MM2`, `RFD`, `Recipe for Disaster: Freeing Sir Amik Varze`, …) |
+| `A or B`, `A / B`, `A, or B`, `A unless B`, `A (not needed with B)`, `A (or B)`, `A (permanent after B)` | alternatives: every alternative must parse, otherwise the whole group becomes `any: []` + manual (`Dusty key or 70 Agility` never locks on Agility alone; `Medium Wilderness Diary (or a Callisto boss task)` never locks on the diary) |
+| `A, B and C`, `A; B`, `A plus B` (no `or` outside parentheses) | conjunction: each checkable part becomes its own group (a necessary condition is always safe to lock on), the uncheckable parts one extra manual group with the same `text` |
+| parentheticals | `(boostable)`, `(not boostable)`, `(partial …)`, `(started …)`, `(completed)`, `(… access)`, `(to enter …)`, `(reached …)`, `(defeat Dad)`, `(fairy ring X)`, `(N Slayer reward points)`, `(boulder)`, `(jutting wall)` are ignored; a parenthetical containing `or`, `unless`, `bypass`, `instead`, `with`, `without`, `only`, `free`, `half`, `formerly`, `after` may describe another way in and drops the rules (`any: []`); any other parenthetical keeps the rules but sets `manual: true` (`66 Slayer (82 for Ancient Wyverns)`) |
+| everything else (items, keys, light sources, ropes, fees, kill counts, boat spots, combat-achievement tiers, "X to avoid aggression", "Label: …" sub-area notes) | `any: []`, `manual: true` |
+
+A phrase that looks like a quest (contains `quest`, `partial`, `started`, `complet…`, `progress`,
+a known quest name, or is a Title Case phrase) but does not parse is **never** turned into a
+rule; it is reported in `report.json → accessUnparsed` with the number of location records that
+carry it, so the maintainer can add an alias or fix the curated text. `accessCounts` gives
+`locations`, `strings`, `distinctStrings`, `groups`, `checkable` (non-empty `any`),
+`checkableStrict` (non-empty `any` and `manual: false`), `manual`, `distinctStringsCheckable`,
+`distinctStringsManualOnly`. Rules are never invented: when in doubt the string is manual.
+
 ## Coverage of the current build (2026-09-23)
 
 148 tasks: 148 with a task page (76 `Slayer task/…` pages with `{{Infobox Slayer}}`, 72 monster
@@ -228,6 +295,9 @@ pages of which 35 are boss tasks), 13 with `{{Recommended equipment}}` tables (+
 setups only), 144 with locations, 147 with XP per kill, 31 with a Slayer-unlock table; 540 fetches,
 0 failed pages. Missing locations: Barrows Brothers, TzTok-Jad, TzKal-Zuk, Zulrah (instanced /
 no `{{LocLine}}` on the wiki). Missing XP: Ents only (the `Ent` infobox has no `slayxp`).
+Access: 913 location records carry 537 requirement strings (377 distinct) →
+551 groups, 264 with rules (252 fully checkable), 298 manual;
+19 strings listed in `accessUnparsed` (see COVERAGE.md).
 
 ## Maintaining
 
