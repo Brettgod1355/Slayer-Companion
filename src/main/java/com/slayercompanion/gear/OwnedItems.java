@@ -42,6 +42,7 @@ import net.runelite.api.ItemContainer;
 import net.runelite.api.events.GameStateChanged;
 import net.runelite.api.events.ItemContainerChanged;
 import net.runelite.api.gameval.InventoryID;
+import net.runelite.client.callback.ClientThread;
 import net.runelite.client.config.ConfigManager;
 import net.runelite.client.eventbus.EventBus;
 import net.runelite.client.eventbus.Subscribe;
@@ -61,6 +62,7 @@ public class OwnedItems
 	private static final String BANK_KEY = "bankSnapshot";
 
 	private final Client client;
+	private final ClientThread clientThread;
 	private final ItemManager itemManager;
 	private final ConfigManager configManager;
 	private final EventBus eventBus;
@@ -78,9 +80,11 @@ public class OwnedItems
 	private boolean bankKnown;
 
 	@Inject
-	OwnedItems(Client client, ItemManager itemManager, ConfigManager configManager, EventBus eventBus, Gson gson)
+	OwnedItems(Client client, ClientThread clientThread, ItemManager itemManager, ConfigManager configManager,
+		EventBus eventBus, Gson gson)
 	{
 		this.client = client;
+		this.clientThread = clientThread;
 		this.itemManager = itemManager;
 		this.configManager = configManager;
 		this.eventBus = eventBus;
@@ -93,7 +97,24 @@ public class OwnedItems
 		if (client.getGameState() == GameState.LOGGED_IN)
 		{
 			loadPersistedBank();
+			clientThread.invoke(this::readLiveContainers);
 		}
+	}
+
+	/** Read inventory and equipment directly (used when the plugin starts mid-session). Client thread only. */
+	private void readLiveContainers()
+	{
+		ItemContainer inv = client.getItemContainer(InventoryID.INV);
+		if (inv != null)
+		{
+			read(inv, inventory);
+		}
+		ItemContainer worn = client.getItemContainer(InventoryID.WORN);
+		if (worn != null)
+		{
+			read(worn, equipment);
+		}
+		eventBus.post(new OwnedItemsChanged(false));
 	}
 
 	public void shutDown()

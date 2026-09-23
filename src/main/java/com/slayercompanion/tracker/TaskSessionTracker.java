@@ -215,7 +215,11 @@ public class TaskSessionTracker
 		{
 			return;
 		}
-		if (event.isNewAssignment() || session == null || !task.getName().equalsIgnoreCase(session.getTaskName()))
+		// A session restored from config for the same task carries on; a genuinely new assignment of
+		// the same monster shows up as the kill count going backwards.
+		boolean sameTask = session != null && task.getName().equalsIgnoreCase(session.getTaskName())
+			&& task.getKills() >= session.getKills();
+		if (!sameTask)
 		{
 			if (session != null && !session.isCompleted())
 			{
