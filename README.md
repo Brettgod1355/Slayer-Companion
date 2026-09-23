@@ -3,7 +3,7 @@
 A RuneLite plugin that puts everything about your current Slayer task in one side panel.
 
 - **Task** – how the task is normally done, what to bring (checked against your bank), what else counts, XP per kill and how many the assigning master gives.
-- **Where** – every location with multi-combat and cannon flags, Wilderness level, requirements and notes. Star a favourite; it is listed first and marked on the world map. A *Route* button hands the spot to the [Shortest Path](https://runelite.net/plugin-hub/show/shortest-path) plugin, which draws the way. This plugin never walks, clicks or moves the camera.
+- **Where** – every location with multi-combat and cannon flags, Wilderness level, requirements and notes. A padlock shows whether you meet the requirements the client can check (quests, diaries, levels, membership, Slayer unlocks): open shackle = you can go, closed = locked with the reason, grey = nothing checkable. Locked spots stay listed and routable. Star a favourite; it is listed first and marked on the world map. A *Route* button hands the spot to the [Shortest Path](https://runelite.net/plugin-hub/show/shortest-path) plugin, which draws the way. This plugin never walks, clicks or moves the camera.
 - **Gear** – the wiki's recommended equipment per slot next to the best item you actually own; save your own setup per task and see what you are missing; a "worth saving for" list weighted by what your master assigns.
 - **Points** – points, streaks, the next milestone task and which master pays most for it.
 - **Loot** – kills, Slayer XP, loot value, supplies used and profit for the current task, plus recent history.

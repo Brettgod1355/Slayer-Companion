@@ -81,6 +81,8 @@ public class PanelModel
 	boolean gearIsGeneral;
 	/** Index into {@code gearTables} to show first (preferred style, else the task's recommended style). */
 	int defaultGearTable;
+	/** Location id -> lock state for the current task's locations. */
+	java.util.Map<String, com.slayercompanion.game.LockState> locks;
 	int points;
 	boolean loggedIn;
 }

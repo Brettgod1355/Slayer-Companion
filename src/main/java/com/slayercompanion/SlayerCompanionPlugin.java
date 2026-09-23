@@ -92,7 +92,7 @@ import net.runelite.client.util.LinkBrowser;
 public class SlayerCompanionPlugin extends Plugin
 {
 	/** Shown in the panel footer; bumped together with build.gradle and runelite-plugin.properties. */
-	public static final String VERSION = "0.1.0";
+	public static final String VERSION = "0.2.0";
 
 	private static final String WIKI_BASE = "https://oldschool.runescape.wiki/w/";
 	/** Refresh the Wilderness numbers at most this often (game ticks). */
@@ -123,6 +123,8 @@ public class SlayerCompanionPlugin extends Plugin
 	private ItemNameResolver itemNameResolver;
 	@Inject
 	private LiveSlayerCatalog catalog;
+	@Inject
+	private com.slayercompanion.game.AccessChecker accessChecker;
 	@Inject
 	private LocationService locationService;
 	@Inject
@@ -329,6 +331,14 @@ public class SlayerCompanionPlugin extends Plugin
 		TaskInfo info = task == null ? null : data.task(task.getName()).orElse(null);
 		List<TaskLocation> locations = info == null ? Collections.emptyList() : locationService.forTask(info);
 		String favourite = task == null ? null : locationService.favourite(task.getName());
+		java.util.Map<String, com.slayercompanion.game.LockState> locks = new java.util.HashMap<>();
+		if (loggedIn)
+		{
+			for (TaskLocation l : locations)
+			{
+				locks.put(l.getId(), accessChecker.check(l));
+			}
+		}
 		int points = loggedIn ? client.getVarbitValue(VarbitID.SLAYER_POINTS) : 0;
 		int shared = loggedIn ? client.getVarbitValue(VarbitID.SLAYER_TASKS_COMPLETED) : 0;
 		int wildStreak = loggedIn ? client.getVarbitValue(VarbitID.SLAYER_WILDERNESS_TASKS_COMPLETED) : 0;
@@ -400,6 +410,7 @@ public class SlayerCompanionPlugin extends Plugin
 			.gearTables(gearTables)
 			.gearAdvice(gearAdvice)
 			.gearIsGeneral(gearIsGeneral)
+			.locks(locks)
 			.defaultGearTable(gearAdvisor.defaultTableIndex(gearTables, info == null ? null : info.getRecommendedStyle()))
 			.build();
 	}
@@ -408,7 +419,16 @@ public class SlayerCompanionPlugin extends Plugin
 	{
 		if (config.showMapMarkers())
 		{
-			mapMarkerService.show(locationService.forTask(info), locationService.favourite(info.getTask()));
+			List<TaskLocation> locs = locationService.forTask(info);
+			java.util.Map<String, com.slayercompanion.game.LockState> locks = new java.util.HashMap<>();
+			if (client.getGameState() == GameState.LOGGED_IN)
+			{
+				for (TaskLocation l : locs)
+				{
+					locks.put(l.getId(), accessChecker.check(l));
+				}
+			}
+			mapMarkerService.show(locs, locationService.favourite(info.getTask()), locks);
 		}
 		else
 		{

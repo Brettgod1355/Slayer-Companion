@@ -25,6 +25,11 @@
 package com.slayercompanion.ui;
 
 import com.slayercompanion.data.TaskLocation;
+import com.slayercompanion.game.LockState;
+import java.awt.image.BufferedImage;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+import net.runelite.client.util.ImageUtil;
 import java.awt.BorderLayout;
 import java.util.ArrayList;
 import java.util.List;
@@ -35,6 +40,10 @@ import net.runelite.client.ui.ColorScheme;
 /** Where to fight the task, with multi/cannon/wilderness flags, favourite and routing. */
 class LocationsTab extends JPanel
 {
+	private static final BufferedImage LOCK_OPEN = ImageUtil.loadImageResource(LocationsTab.class, "/com/slayercompanion/lock_open.png");
+	private static final BufferedImage LOCK_CLOSED = ImageUtil.loadImageResource(LocationsTab.class, "/com/slayercompanion/lock_closed.png");
+	private static final BufferedImage LOCK_UNKNOWN = ImageUtil.loadImageResource(LocationsTab.class, "/com/slayercompanion/lock_unknown.png");
+
 	private final PanelActions actions;
 
 	LocationsTab(PanelActions actions)
@@ -71,7 +80,7 @@ class LocationsTab extends JPanel
 			String taskName = m.getTask().getName();
 			for (TaskLocation l : m.getLocations())
 			{
-				col.add(card(l, taskName, l.getId().equals(m.getFavouriteLocationId()), m.isShortestPathAvailable()));
+				col.add(card(l, taskName, l.getId().equals(m.getFavouriteLocationId()), m.isShortestPathAvailable(), m.getLocks().get(l.getId())));
 				col.add(Ui.gap(4));
 			}
 			col.add(Ui.buttonRow(Ui.button("Clear route", "Remove the drawn route", actions::clearRoute)));
@@ -81,10 +90,29 @@ class LocationsTab extends JPanel
 		repaint();
 	}
 
-	private JPanel card(TaskLocation l, String taskName, boolean favourite, boolean routing)
+	private JPanel card(TaskLocation l, String taskName, boolean favourite, boolean routing, LockState lock)
 	{
 		JPanel card = Ui.card();
-		card.add(Ui.title((favourite ? "★ " : "") + l.label()));
+		JLabel title = Ui.title((favourite ? "★ " : "") + l.label());
+		if (lock != null)
+		{
+			switch (lock.getKind())
+			{
+				case OPEN:
+					title.setIcon(new ImageIcon(LOCK_OPEN));
+					title.setToolTipText("You meet the requirements the plugin can check");
+					break;
+				case LOCKED:
+					title.setIcon(new ImageIcon(LOCK_CLOSED));
+					title.setToolTipText(Ui.html("Locked: " + String.join("; ", lock.getReasons())));
+					break;
+				default:
+					title.setIcon(new ImageIcon(LOCK_UNKNOWN));
+					title.setToolTipText("No checkable requirements (see the notes)");
+			}
+			title.setIconTextGap(5);
+		}
+		card.add(title);
 
 		List<String> badges = new ArrayList<>();
 		switch (String.valueOf(l.getMulti()).toLowerCase())
@@ -133,7 +161,15 @@ class LocationsTab extends JPanel
 		}
 		card.add(Ui.badges(badges.toArray(new String[0])));
 
-		if (l.getRequirements() != null && !l.getRequirements().isEmpty())
+		if (lock != null && lock.getKind() == LockState.Kind.LOCKED)
+		{
+			card.add(Ui.wrap("Locked: " + String.join("; ", lock.getReasons()), Ui.BAD));
+		}
+		if (lock != null && !lock.getManual().isEmpty())
+		{
+			card.add(Ui.wrap("Also needs: " + String.join("; ", lock.getManual()), Ui.WARN));
+		}
+		else if (lock == null && l.getRequirements() != null && !l.getRequirements().isEmpty())
 		{
 			card.add(Ui.wrap("Needs: " + String.join("; ", l.getRequirements()), Ui.WARN));
 		}

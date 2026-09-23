@@ -52,7 +52,7 @@ public class MapMarkerService
 		this.favouriteIcon = ImageUtil.loadImageResource(MapMarkerService.class, "/com/slayercompanion/map_marker_fav.png");
 	}
 
-	public void show(List<TaskLocation> locations, String favouriteId)
+	public void show(List<TaskLocation> locations, String favouriteId, java.util.Map<String, com.slayercompanion.game.LockState> locks)
 	{
 		clear();
 		for (TaskLocation l : locations)
@@ -64,7 +64,7 @@ public class MapMarkerService
 					.worldPoint(wp)
 					.image(fav ? favouriteIcon : icon)
 					.name(l.label())
-					.tooltip(tooltip(l))
+					.tooltip(tooltip(l, locks.get(l.getId())))
 					.jumpOnClick(true)
 					.snapToEdge(true)
 					.build();
@@ -83,9 +83,13 @@ public class MapMarkerService
 		points.clear();
 	}
 
-	private static String tooltip(TaskLocation l)
+	private static String tooltip(TaskLocation l, @javax.annotation.Nullable com.slayercompanion.game.LockState lock)
 	{
 		StringBuilder sb = new StringBuilder(l.label());
+		if (lock != null && lock.getKind() == com.slayercompanion.game.LockState.Kind.LOCKED)
+		{
+			sb.append("</br>Locked: ").append(String.join("; ", lock.getReasons()));
+		}
 		if (l.isMulti())
 		{
 			sb.append("</br>Multi-combat");
