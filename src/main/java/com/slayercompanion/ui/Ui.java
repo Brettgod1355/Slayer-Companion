@@ -69,6 +69,8 @@ final class Ui
 	/** Collapsed state per card title, kept for the session (panels are rebuilt on every refresh). */
 	private static final java.util.Map<String, Boolean> COLLAPSED = new java.util.HashMap<>();
 	private static final String TITLE_KEY = "slayercompanion.cardTitle";
+	private static final String TITLE_TEXT = "slayercompanion.cardText";
+	private static final String TITLE_COLLAPSED = "slayercompanion.cardCollapsed";
 
 	/**
 	 * A card: the first {@link #title(String)} added becomes a click-to-collapse header, everything
@@ -102,7 +104,7 @@ final class Ui
 			{
 				header = (JLabel) comp;
 				String key = String.valueOf(header.getClientProperty(TITLE_KEY));
-				boolean collapsed = COLLAPSED.getOrDefault(key, false);
+				boolean collapsed = COLLAPSED.getOrDefault(key, Boolean.TRUE.equals(header.getClientProperty(TITLE_COLLAPSED)));
 				body.setVisible(!collapsed);
 				decorate(collapsed);
 				header.setCursor(java.awt.Cursor.getPredefinedCursor(java.awt.Cursor.HAND_CURSOR));
@@ -111,7 +113,7 @@ final class Ui
 					@Override
 					public void mouseClicked(java.awt.event.MouseEvent e)
 					{
-						boolean now = !COLLAPSED.getOrDefault(key, false);
+						boolean now = body.isVisible();
 						COLLAPSED.put(key, now);
 						body.setVisible(!now);
 						decorate(now);
@@ -135,8 +137,10 @@ final class Ui
 
 		private void decorate(boolean collapsed)
 		{
-			String text = String.valueOf(header.getClientProperty(TITLE_KEY));
-			header.setText((collapsed ? "\u25b8 " : "\u25be ") + text);
+			String text = String.valueOf(header.getClientProperty(TITLE_TEXT));
+			// Wrap long headers instead of letting Swing cut them off with "...".
+			int iconWidth = header.getIcon() == null ? 0 : header.getIcon().getIconWidth() + header.getIconTextGap();
+			header.setText(html((collapsed ? "\u25b8 " : "\u25be ") + text, CONTENT_WIDTH - 24 - iconWidth));
 			if (header.getToolTipText() == null || header.getToolTipText().startsWith("Click to "))
 			{
 				header.setToolTipText(collapsed ? "Click to expand" : "Click to collapse");
@@ -152,8 +156,19 @@ final class Ui
 
 	static JLabel title(String text)
 	{
+		return section(text, text, false);
+	}
+
+	/**
+	 * A card header whose collapsed state is remembered under {@code key} (so the visible text can
+	 * change, e.g. a count) and which starts collapsed when {@code collapsedByDefault}.
+	 */
+	static JLabel section(String key, String text, boolean collapsedByDefault)
+	{
 		JLabel l = new JLabel(text);
-		l.putClientProperty(TITLE_KEY, text);
+		l.putClientProperty(TITLE_KEY, key);
+		l.putClientProperty(TITLE_TEXT, text);
+		l.putClientProperty(TITLE_COLLAPSED, collapsedByDefault);
 		l.setFont(FontManager.getRunescapeBoldFont());
 		l.setForeground(Color.WHITE);
 		l.setAlignmentX(Component.LEFT_ALIGNMENT);
@@ -308,6 +323,26 @@ final class Ui
 			}
 		});
 		return combo;
+	}
+
+	/** A row with wrapping text on the left and a short fixed value on the right (e.g. a price). */
+	static JPanel priceRow(String name, String right, Color nameColor, Color rightColor)
+	{
+		JPanel row = rowPanel(new BorderLayout(6, 0));
+		row.setBackground(ColorScheme.DARKER_GRAY_COLOR);
+		row.setAlignmentX(Component.LEFT_ALIGNMENT);
+		JLabel r = new JLabel(right);
+		r.setFont(FontManager.getRunescapeFont());
+		r.setForeground(rightColor);
+		r.setVerticalAlignment(SwingConstants.TOP);
+		JLabel n = new JLabel();
+		n.setFont(FontManager.getRunescapeFont());
+		n.setForeground(nameColor);
+		n.setVerticalAlignment(SwingConstants.TOP);
+		n.setText(html(name, (CONTENT_WIDTH - 24) - r.getPreferredSize().width - 6));
+		row.add(n, BorderLayout.CENTER);
+		row.add(r, BorderLayout.EAST);
+		return row;
 	}
 
 	static Component gap(int px)

@@ -44,4 +44,8 @@ public class UnlockAdvice
 	String category;
 	@Nullable
 	String rationale;
+	/** One sentence on what it does (the game's own description when available). */
+	String effect;
+	/** Task names this unlock is about; empty for general unlocks. */
+	java.util.List<String> affectsTasks;
 }
