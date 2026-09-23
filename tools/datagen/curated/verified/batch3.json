@@ -1,0 +1,953 @@
+[
+  {
+    "task": "Crawling hands",
+    "wikiTaskPage": "Crawling Hand",
+    "monsterPages": [
+      "Crawling Hand",
+      "Crushing hand"
+    ],
+    "bossTask": false,
+    "summary": "A level 5 Slayer beginner task from Turael, Spria, Mazchna and Mortimer. Crawling hands are tiny undead with a max hit of 1-2, so any combat style with no prayer kills them; they are not aggressive and drop bones plus cheap gloves and rings. The usual place is the ground floor of the Slayer Tower north-west of Canifis, which holds 24 spawns, though the Meiyerditch Laboratories also have them. Because they are undead, Crumble Undead and the salve amulet work on them.",
+    "recommendedStyle": "Any",
+    "styleNotes": "Undead, so the salve amulet and Crumble Undead work on them; not aggressive, max hit 1-2, no poison or venom immunity noted.",
+    "requiredItems": [],
+    "usefulItems": [
+      "Salve amulet (undead)"
+    ],
+    "superior": "Crushing hand",
+    "alternatives": [
+      "Crushing hand"
+    ],
+    "xpPerKill": 12,
+    "locations": [
+      {
+        "name": "Slayer Tower (ground floor)",
+        "displayName": "Slayer Tower – ground floor (west and east wings)",
+        "rank": 1,
+        "multi": "unknown",
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Priest in Peril"
+        ],
+        "notes": "24 crawling hand spawns in the west wing and part of the east wing; banshees share the east wing. Reached from Canifis (Slayer ring or Kharyrll/Fenkenstrain teleports nearby). Do not climb the 61 Agility spiked chain without a nose peg or Slayer helmet because aberrant spectres are upstairs.",
+        "evidence": {
+          "multi": "not stated on Slayer Tower or Crawling Hand pages; Slayer Tower is not in the 'List of multicombat areas' (Multicombat area)",
+          "cannon": "'Dwarf multicannons cannot be used here. If attempted, players will receive the message, \"A strange magical force won't let you set up a cannon here.\"' (Slayer Tower); also Dwarf multicannon prohibited list: Slayer Tower",
+          "requirements": "Slayer task list row for Crawling Hands, Required Items/Requirements column: 'Priest in Peril' (Slayer task)"
+        }
+      },
+      {
+        "name": "Meiyerditch Laboratories",
+        "displayName": "Meiyerditch Laboratories – eastern section",
+        "rank": 2,
+        "multi": true,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Darkness of Hallowvale (the laboratories are entered during the quest); Sins of the Father for full access"
+        ],
+        "notes": "Crawling hands are in the eastern part of the laboratories; the whole area is multicombat and cannonable. Getting there means the Meiyerditch mine route or, after Sins of the Father, Drakan's medallion or the Hallowed Sepulchre exit.",
+        "evidence": {
+          "multi": "'The entire area is also multicombat and the Dwarven multicannon can be used here' (Meiyerditch Laboratories)",
+          "cannon": "'The entire area is also multicombat and the Dwarven multicannon can be used here' (Meiyerditch Laboratories)",
+          "requirements": "'During the quest Darkness of Hallowvale, the player visits the laboratories' and 'Access to the complete laboratory is granted after the player kills the mutated bloodveld that appears during the Sins of the Father quest' (Meiyerditch Laboratories)"
+        }
+      }
+    ],
+    "notes": "No 'Slayer task/Crawling hands' page exists on the wiki; data comes from the Crawling Hand monster page and the Slayer task list. Slayer XP is 12 for the level 7 variant, 16 for level 8 and 19 for level 12 (Crawling Hand infobox). Vannaka no longer assigns crawling hands (8 May 2024 change). Konar does not assign this task.",
+    "_verification": {
+      "corrections": [
+        "No changes. Crawling Hand LocLine list is exactly 'Meiyerditch Laboratories' (levels 7, 8) and 'Slayer Tower (ground floor)' (levels 8, 12); both present. Slayer Tower monster table 'spawns=24' confirmed. Slayer Tower cannon quote confirmed verbatim; Slayer Tower in Dwarf multicannon prohibited list. Meiyerditch Laboratories multi/cannon quote confirmed verbatim. Slayer task row: Priest in Peril, masters Turael/Spria/Mazchna/Mortimer. Infobox slayxp1 = 12 (level 7). Superior Crushing hand (cat = Crawling Hands, slayxp 550)."
+      ],
+      "confirmed": 14,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Crazy Archaeologists",
+    "wikiTaskPage": "Crazy archaeologist",
+    "monsterPages": [
+      "Crazy archaeologist",
+      "Deranged archaeologist"
+    ],
+    "bossTask": true,
+    "summary": "Boss task for Bellock, the crazy archaeologist, who lives in the Western Ruins south of the Forgotten Cemetery in level 23 Wilderness; the deranged archaeologist on Fossil Island may be killed instead unless Krystilia or Konar specified the Wilderness.",
+    "recommendedStyle": "Magic",
+    "styleNotes": "Magic is particularly effective because his Magic level is negligible; he attacks with Ranged and melee and is not immune to cannon or thralls.",
+    "requiredItems": [],
+    "usefulItems": [
+      "Dareeyak teleport (tablet) or Burning amulet"
+    ],
+    "superior": null,
+    "alternatives": [
+      "Deranged archaeologist"
+    ],
+    "xpPerKill": 275,
+    "locations": [
+      {
+        "name": "Ruins (west)",
+        "displayName": "Western Ruins – south of the Forgotten Cemetery (level 23 Wilderness)",
+        "rank": 1,
+        "multi": false,
+        "cannon": "unknown",
+        "wilderness": true,
+        "wildernessLevelMin": 22,
+        "wildernessLevelMax": 24,
+        "konarAssignable": true,
+        "requirements": [
+          "Like a boss unlock (200 Slayer reward points)",
+          "Slayer 1"
+        ],
+        "notes": "Fastest route is Dareeyak Teleport (78 Magic) or its tablet; a burning amulet to the Bandit Camp lands just east of the ruins. The ruins are a single-way combat area.",
+        "evidence": {
+          "multi": "'The crazy archaeologist is located in single-way combat, meaning the player will be safe from player killers while in active combat with the boss.' (Crazy archaeologist)",
+          "cannon": "not stated; Ruins (west) is not in the Dwarf multicannon prohibited list; infobox immunecannon = No (Crazy archaeologist)",
+          "requirements": "Boss page table row: 'Crazy archaeologist | Wilderness | Slayer 1 | Deranged archaeologist can be killed instead' (Boss); 'Players who have unlocked the Like a boss ability via spending 200 Slayer reward points can be assigned bosses' (Boss)"
+        }
+      }
+    ],
+    "notes": "Wilderness level: the boss page says 'level 23 Wilderness' and Krystilia's table says '22-24'. Assigned by Krystilia, Konar, Nieve and Duradel (infobox assignedby). 'On a crazy archaeologist boss Slayer task, the deranged archaeologist may be killed as an alternative, unless the Wilderness is specified as the task location when given by Krystilia or Konar quo Maten.' (Crazy archaeologist)",
+    "_verification": {
+      "corrections": [
+        "Location notes: removed the 'safe from PKers' wording (warning about other players); the single-way combat fact is kept and its quote is on the page.",
+        "All other fields confirmed: page title 'Crazy archaeologist'; LocLine only 'Ruins (west)'; infobox slayxp 275, assignedby krystilia,konar,nieve,duradel, immunecannon No; Krystilia table row 'Crazy archaeologist: Western Ruins | 22-24'; Boss page row 'Crazy archaeologist | Wilderness | Slayer 1 | Deranged archaeologist can be killed instead'; 'Like a boss' 200-point sentence present on Boss page; deranged-alternative sentence present verbatim."
+      ],
+      "confirmed": 12,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Crocodiles",
+    "wikiTaskPage": "Crocodile",
+    "monsterPages": [
+      "Crocodile"
+    ],
+    "bossTask": false,
+    "summary": "A Vannaka-only task at 50 combat. Crocodiles live along the River Elid south of Pollnivneach and around the Ruins of Unkah and Ruins of Ullek; they are aggressive melee slashers with poor drops, so most players just bring waterskins for the desert heat and either melee them or safespot them from across the water. Some crocodiles are confined to the water and can be safespotted by standing one tile back from the shore. The grassy area near the Ruins of Ullek has 12 spawns and needs no waterskins.",
+    "recommendedStyle": "Any",
+    "styleNotes": "Lack defence in all three melee styles so any melee weapon works; weak to Earth spells (40%); ranged works from across the river; not immune to cannon or thralls.",
+    "requiredItems": [],
+    "usefulItems": [
+      "Waterskins",
+      "Desert clothing",
+      "Ranged weapon (to hit crocodiles in the water)",
+      "Earth spells"
+    ],
+    "superior": null,
+    "alternatives": [],
+    "xpPerKill": 62,
+    "locations": [
+      {
+        "name": "Along the River Elid",
+        "displayName": "River Elid – south bank south of Pollnivneach",
+        "rank": 1,
+        "multi": "unknown",
+        "cannon": "unknown",
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Combat 50 (to be assigned)"
+        ],
+        "notes": "Stand on the south side of the river directly south of the small island where crocodiles spawn so they come to you. A cactus safespot lies directly west of the Nardah magic carpet. Bring waterskins; Nardah has a fountain and altar.",
+        "evidence": {
+          "multi": "not stated (Crocodile); River Elid is not in the 'List of multicombat areas' (Multicombat area)",
+          "cannon": "not stated (Crocodile); not in Dwarf multicannon prohibited list",
+          "requirements": "Slayer task list row for Crocodiles: 'Combat 50' (Slayer task)"
+        }
+      },
+      {
+        "name": "Near the Ruins of Unkah",
+        "displayName": "Ruins of Unkah – wall safespot",
+        "rank": 2,
+        "multi": "unknown",
+        "cannon": "unknown",
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Combat 50 (to be assigned)"
+        ],
+        "notes": "'Players may also use the wall East of the Ruins of Unkah to safespot the crocodiles, negating the need for food and waterskins (as there are plenty of cacti to refill them from).'",
+        "evidence": {
+          "multi": "not stated (Crocodile)",
+          "cannon": "not stated (Crocodile)",
+          "requirements": "Slayer task list row for Crocodiles: 'Combat 50' (Slayer task)"
+        }
+      },
+      {
+        "name": "Near the Ruins of Ullek",
+        "displayName": "Ruins of Ullek – grassy riverbank (12 spawns, no waterskins needed)",
+        "rank": 3,
+        "multi": "unknown",
+        "cannon": "unknown",
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Combat 50 (to be assigned)"
+        ],
+        "notes": "'The area south of the Ruins of Ullek, south-west of the teak trees has 12 crocodile spawns and does not require water for the player to survive, so long as the player stays in the grassy area near the water.'",
+        "evidence": {
+          "multi": "not stated (Crocodile)",
+          "cannon": "not stated (Crocodile)",
+          "requirements": "Slayer task list row for Crocodiles: 'Combat 50' (Slayer task)"
+        }
+      }
+    ],
+    "notes": "No 'Slayer task/Crocodiles' page exists; data from the Crocodile monster page. Only Vannaka assigns crocodiles. A crocodile that dies with its south-west tile over water drops no bones. North of Sophanem (after Icthlarin's Little Helper) is another spot with an altar and sink nearby.",
+    "_verification": {
+      "corrections": [
+        "No changes. Crocodile LocLines: 'Along the River Elid' (x3), 'Near the Ruins of Unkah', 'Near the Ruins of Ullek' (12 pins) - all three represented. Slayer task row: 'Near Elid', 'Southern shore of Kharidian Desert', Combat 50, Vannaka only. Infobox slayxp 62, assignedby vannaka, immunecannon No, immunethrall No, elementalweakness Earth 40. Unkah wall and Ullek grassy-area quotes confirmed verbatim. Multi/cannon remain unknown (not stated on the page)."
+      ],
+      "confirmed": 13,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Custodian Stalkers",
+    "wikiTaskPage": "Slayer task/Custodian stalker",
+    "monsterPages": [
+      "Custodian stalker",
+      "Juvenile custodian stalker",
+      "Mature custodian stalker",
+      "Elder custodian stalker",
+      "Ancient Custodian"
+    ],
+    "bossTask": false,
+    "summary": "Custodian stalkers are found only in the Stalker Den beneath the Custodia Pass after Shadows of Custodia; juveniles need 54 Slayer, matures 67 and elders 76. They hit with melee blocked by Protect from Melee, but at low health they use a bleed special that is blocked by Protect from Magic instead, so bring healing when fighting several at once. The south-western caves are multicombat and cannonable, which makes chinchompas, burst spells or a cannon the fast option; single-way caves in the south-east and north suit melee with safespots. Players are encouraged to reach 76 Slayer for elders, which have the best drops and are the only ones that can spawn the Ancient Custodian.",
+    "recommendedStyle": "Ranged",
+    "styleNotes": "Multicombat area favours chinchompas, venator bow or barrage spells; melee works in the single-way caves; high magic defence gear such as dragonhide reduces the bleed special.",
+    "requiredItems": [],
+    "usefulItems": [
+      "Dwarf multicannon (south-western caves)",
+      "Bracelet of slaughter",
+      "Super restore or prayer potions",
+      "Bonecrusher",
+      "Pendant of Ates",
+      "High Level Alchemy runes (juveniles drop adamant scimitars)"
+    ],
+    "superior": "Ancient Custodian",
+    "alternatives": [
+      "Juvenile custodian stalker",
+      "Mature custodian stalker",
+      "Elder custodian stalker",
+      "Ancient Custodian"
+    ],
+    "xpPerKill": 135,
+    "locations": [
+      {
+        "name": "Stalker Den",
+        "displayName": "Stalker Den – south-western caves (multicombat, cannonable)",
+        "rank": 1,
+        "multi": true,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Shadows of Custodia",
+          "54 Slayer (juvenile), 67 (mature), 76 (elder)",
+          "59 Agility for the southern entrance"
+        ],
+        "notes": "Southern entrance (59 Agility) via quetzal to Auburnvale, Pendant of Ates to Nemus Retreat, or fairy ring AIS; northern entrance via fairy ring BLS or Xeric's Honour. Stalkers are already aggressive; step out every 10 minutes to reset aggression if not cannoning.",
+        "evidence": {
+          "multi": "'The south-western sections of the dungeon are entirely multicombat, and cannons can be placed, while two caves in the south-east and two in the north are single-way combat.' (Stalker Den)",
+          "cannon": "'There are multicombat areas where cannons can be placed in the south-western side of the dungeon' (Slayer task/Custodian stalker)",
+          "requirements": "'can be found in the Stalker Den after the completion of the Shadows of Custodia quest' (Slayer task/Custodian stalker); 'requiring 54, 67 and 76 Slayer in order to be harmed, respectively' (Stalker Den); 'Southern entrance requiring 59 Agility' (Stalker Den)"
+        }
+      },
+      {
+        "name": "Stalker Den",
+        "displayName": "Stalker Den – single-way caves (south-east and north)",
+        "rank": 2,
+        "multi": false,
+        "cannon": "unknown",
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Shadows of Custodia",
+          "54 Slayer (juvenile), 67 (mature), 76 (elder)"
+        ],
+        "notes": "Elder stalkers are in the north (64 Agility stepping stone across the spring); juveniles can be safespotted behind a skeleton in the middle of their room and matures in the south-western single area once aggression drops.",
+        "evidence": {
+          "multi": "'two caves in the south-east and two in the north are single-way combat' (Stalker Den)",
+          "cannon": "not stated for the single-way caves; the task page only names the south-western multicombat side as a cannon area (Slayer task/Custodian stalker)",
+          "requirements": "'can be found in the Stalker Den after the completion of the Shadows of Custodia quest' (Slayer task/Custodian stalker)"
+        }
+      }
+    ],
+    "notes": "Assigned by Chaeldar, Nieve and Mortimer only; Konar does not assign them. Un-restraining Order (100 points) raises the amount to 200-250. Slayer XP: juvenile 135, mature 190, elder 250, Ancient Custodian 3382. Baby custodian stalkers cannot be attacked.",
+    "_verification": {
+      "corrections": [
+        "No changes. Task page 'Slayer task/Custodian stalker' exists (skillreq 54, combatreq None, otherreq Shadows of Custodia; Chaeldar/Nieve/Mortimer; Un-restraining Order 100 points -> 200-250). Stalker Den quotes on multicombat/single-way, 54/67/76 Slayer and 59 Agility southern entrance confirmed verbatim. Variant infoboxes: juvenile 135, mature 190, elder 250, Ancient Custodian 3382 slayxp; all cat 'Custodian Stalker'. Mature/Elder LocLines list only 'Stalker Den (single-combat)' and 'Stalker Den (multicombat)'. Slayer task row requires Shadows of Custodia. Cannon in single-way caves stays unknown (page names only the south-western multicombat side)."
+      ],
+      "confirmed": 15,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Dagannoth",
+    "wikiTaskPage": "Slayer task/Dagannoth",
+    "monsterPages": [
+      "Dagannoth",
+      "Dagannoth (Waterbirth Island)",
+      "Dagannoth spawn",
+      "Dagannoth fledgeling",
+      "Dagannoth Kings"
+    ],
+    "bossTask": false,
+    "summary": "Dagannoth are a fast, easy task once Horror from the Deep is done; they are much weaker than their combat level suggests. The Lighthouse basement and Jormungand's Prison are multicombat and are the standard cannon spots, with the Lighthouse offering some of the fastest Slayer XP in the game and the prison housing 62 melee-only dagannoth so Protect from Melee covers everything. The Catacombs of Kourend are multicombat but not cannonable and suit AFK melee with prayer. Waterbirth Island dagannoth are far stronger, and the Dagannoth Kings can be killed on the task.",
+    "recommendedStyle": "Melee",
+    "styleNotes": "Weak to Earth spells (35%); level 74 Lighthouse dagannoth use Ranged while others use stab melee; not immune to cannon or thralls.",
+    "requiredItems": [],
+    "usefulItems": [
+      "Dwarf multicannon (Lighthouse or Jormungand's Prison)",
+      "Seed box",
+      "Prayer potions",
+      "Nose peg or Slayer helmet (for passing deviant spectres from fairy ring DJR)",
+      "Pet rock and rune thrownaxe (Waterbirth doors)"
+    ],
+    "superior": null,
+    "alternatives": [
+      "Dagannoth Kings",
+      "Dagannoth spawn",
+      "Dagannoth (Waterbirth Island)",
+      "Dagannoth fledgeling (gives no Slayer XP)"
+    ],
+    "xpPerKill": 70,
+    "locations": [
+      {
+        "name": "Lighthouse",
+        "displayName": "Lighthouse Dungeon – basement (22 dagannoth, cannon)",
+        "rank": 1,
+        "multi": true,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Horror from the Deep",
+          "Combat 75 (to be assigned)"
+        ],
+        "notes": "Fairy ring ALP is next door. 22 dagannoth around the entrance ladder; level 74s use a weak Ranged attack so this is the AFK-without-prayer choice. Usually busy with cannon users. Jossik upstairs buys and sells noted food.",
+        "evidence": {
+          "multi": "'It is a multi-combat area' (Lighthouse); 'Lighthouse Dungeon' in 'List of multicombat areas' (Multicombat area); task page Location Comparison row Multicombat Yes (Slayer task/Dagannoth)",
+          "cannon": "'In the first two locations, a dwarf cannon can be used very effectively as the area is multicombat.' and Location Comparison row Lighthouse Dungeon Cannonable Yes (Slayer task/Dagannoth)",
+          "requirements": "'Horror from the Deep (required to enter the Lighthouse)' (Lighthouse)"
+        }
+      },
+      {
+        "name": "Jormungand's Prison",
+        "displayName": "Jormungand's Prison – dagannoth areas (62 melee-only dagannoth, cannon)",
+        "rank": 2,
+        "multi": true,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "The Fremennik Exiles",
+          "Horror from the Deep (to be assigned)",
+          "Combat 75 (to be assigned)"
+        ],
+        "notes": "Common cannoning location; dagannoth here only melee so Protect from Melee needs no food. Thralls work in the dagannoth areas.",
+        "evidence": {
+          "multi": "'The dagannoth in Jormungand's Prison are in multi-combat, and only attack using melee.' (Jormungand's Prison); 'Jormungand's Prison' in 'List of multicombat areas' (Multicombat area)",
+          "cannon": "'The dwarf multicannon cannot be used to kill the basilisks in the prison, but it can be set up in the dagannoth areas.' (Jormungand's Prison)",
+          "requirements": "'Only accessible after completing The Fremennik Exiles.' (Slayer task/Dagannoth)"
+        }
+      },
+      {
+        "name": "Catacombs of Kourend",
+        "displayName": "Catacombs of Kourend – southern section (14 dagannoth, no cannon)",
+        "rank": 3,
+        "multi": true,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Horror from the Deep (to be assigned)",
+          "Combat 75 (to be assigned)"
+        ],
+        "notes": "All dagannoth here use melee; AFK with Protect from Melee and Auto Retaliate, or use Dinh's bulwark spec to hold aggression. Safespots exist using warped jellies or terrain corners. Drops ancient shards and totem pieces like other Catacombs monsters.",
+        "evidence": {
+          "multi": "Location Comparison row Catacombs of Kourend Multicombat Yes (Slayer task/Dagannoth); 'this particular dungeon is a multicombat area (excluding the brutal dragon area)' (Catacombs of Kourend)",
+          "cannon": "'A dwarf multicannon cannot be used within the Catacombs of Kourend.' (Dagannoth); Dwarf multicannon prohibited list: Catacombs of Kourend",
+          "requirements": "not stated beyond the task's Horror from the Deep requirement (Slayer task/Dagannoth infobox otherreq)"
+        }
+      },
+      {
+        "name": "Waterbirth Island Dungeon",
+        "displayName": "Waterbirth Island Dungeon – first floor main area (strong dagannoth, Kings deeper)",
+        "rank": 4,
+        "multi": true,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Horror from the Deep (to be assigned)",
+          "Pet rock or Humphrey dumphrey plus a ranged weapon or a second player to open the doors (or 85 Agility shortcut)",
+          "Combat 75 (to be assigned)"
+        ],
+        "notes": "Dagannoth here are much stronger (level 88 range, level 90 melee); trigger dagannoth spawn eggs while the dagannoth are aggressive. The entrance is not multicombat. The Dagannoth Kings can be killed on task; 80+ Agility and the Elite Fremennik Diary make the trip much easier.",
+        "evidence": {
+          "multi": "Location Comparison row Waterbirth Island Dungeon Multicombat Yes with note 'The entrance is not multicombat' (Slayer task/Dagannoth); 'Waterbirth Island Dungeon' in 'List of multicombat areas' (Multicombat area)",
+          "cannon": "Location Comparison row Waterbirth Island Dungeon Cannonable Yes (Slayer task/Dagannoth)",
+          "requirements": "'Reaching the multicombat zone requires a pet rock or Humphrey dumphrey, and a ranged weapon or another player to assist you.' (Slayer task/Dagannoth)"
+        }
+      }
+    ],
+    "notes": "Konar assigns dagannoth at Catacombs of Kourend, Lighthouse, Waterbirth Island or Jormungand's Prison; on a Konar Waterbirth task the Dagannoth Kings and dagannoth spawn count (Konar quo Maten). The task needs Horror from the Deep and combat 75 to be assigned (Slayer task/Dagannoth infobox; Slayer task list row). Slayer XP is 70 for level 74 and 120 for level 92 dagannoth; Waterbirth variants give 85/99.6, spawn 35, fledgeling 0. The Kings give 331.4 (Rex and Prime infobox) or 255 (Supreme); the task page variants table lists 331.5 for Rex and Prime. The Kings also have a Slayer-only lair reachable via the 'Slayer' option on the ladder for players on a dagannoth or Dagannoth Kings task (Dagannoth Kings).",
+    "_verification": {
+      "corrections": [
+        "Alternatives: 'Dagannoth fledgeling (Konar Waterbirth task only, no XP)' -> 'Dagannoth fledgeling (gives no Slayer XP)'. The Slayer task list row lists the fledgeling as an alternative for the ordinary dagannoth task and its infobox has cat = Dagannoth, assignedby vannaka,chaeldar,konar,nieve,duradel; the 'Konar only' restriction is not on any page (the Konar mention on the task page concerns brimstone keys).",
+        "Requirements: added 'Combat 75 (to be assigned)' to every location (Slayer task/Dagannoth infobox combatreq = Combat 75; Slayer task list row 'Combat 75').",
+        "Notes: Dagannoth Rex and Prime infobox slayxp is 331.4, not 331.5; the 331.5 figure is only in the task page variants table.",
+        "All quoted evidence confirmed verbatim: Lighthouse ('It is a multi-combat area', 'Horror from the Deep (required to enter the Lighthouse)'), Jormungand's Prison (multi/melee-only and cannon sentences), Catacombs of Kourend (multicombat excluding brutal dragon area; cannon prohibited), Dagannoth page ('A dwarf multicannon cannot be used within the Catacombs of Kourend.'), task page Location Comparison rows and 'Only accessible after completing The Fremennik Exiles.' Locations complete: Dagannoth LocLines are Jormungand's Prison, Catacombs of Kourend, Lighthouse; Waterbirth variant lives on its own page; all four appear in the Location Comparison."
+      ],
+      "confirmed": 18,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Dagannoth Kings",
+    "wikiTaskPage": "Dagannoth Kings",
+    "monsterPages": [
+      "Dagannoth Kings",
+      "Dagannoth Rex",
+      "Dagannoth Prime",
+      "Dagannoth Supreme"
+    ],
+    "bossTask": true,
+    "summary": "Boss task for the three level 303 Dagannoth Kings (Rex, Prime and Supreme) on the sixth level of the Waterbirth Island Dungeon, where a Slayer-only lair is available to players on a Dagannoth Kings or dagannoth task.",
+    "recommendedStyle": "Any",
+    "styleNotes": "Each king follows the combat triangle: Rex (melee) is weak to Magic, Prime (Magic) is weak to Ranged, Supreme (Ranged) is weak to Melee.",
+    "requiredItems": [],
+    "usefulItems": [
+      "Pet rock and rune thrownaxe (or 85 Agility shortcut)",
+      "Stamina potions",
+      "Waterbirth Teleport or enchanted lyre (Hard Fremennik Diary)"
+    ],
+    "superior": null,
+    "alternatives": [
+      "Dagannoth Rex",
+      "Dagannoth Prime",
+      "Dagannoth Supreme"
+    ],
+    "xpPerKill": 331.4,
+    "locations": [
+      {
+        "name": "Waterbirth Island Dungeon",
+        "displayName": "Waterbirth Island Dungeon – Dagannoth Kings' lair (sixth level; Slayer-only lair on task)",
+        "rank": 1,
+        "multi": true,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Like a boss unlock (200 Slayer reward points)",
+          "Slayer 1",
+          "Pet rock or another player plus a ranged weapon for the doors, or 85 Agility and 81 Agility shortcuts (boostable)"
+        ],
+        "notes": "Reach Waterbirth Island by Waterbirth Teleport, POH portal, enchanted lyre (Hard Fremennik Diary) or Jarvald from Rellekka. Right-click the ladder and choose 'Slayer' to enter the task-only lair. Elite Fremennik Diary is recommended so dagannoth bones are dropped noted.",
+        "evidence": {
+          "multi": "'live deep in the cave on Waterbirth Island which is a multiway combat area' (Dagannoth Kings); 'Waterbirth Island Dungeon' in 'List of multicombat areas' (Multicombat area)",
+          "cannon": "Dagannoth task page Location Comparison row 'Waterbirth Island Dungeon ... 3 Dagannoth Kings' Cannonable Yes (Slayer task/Dagannoth); not in Dwarf multicannon prohibited list",
+          "requirements": "Boss page table row: 'Dagannoth Kings | Waterbirth island | Slayer 1' (Boss); 'There are two high-level Agility shortcuts ... requires level 85 Agility ... requires level 81 Agility ... Both of these requirements are boostable.' (Dagannoth Kings)"
+        }
+      }
+    ],
+    "notes": "Slayer XP per kill from the monster infoboxes: Dagannoth Rex 331.4, Dagannoth Prime 331.4, Dagannoth Supreme 255 (the Slayer task/Dagannoth variants table lists 331.5 for Rex and Prime). Boss tasks are rolled by Konar, Nieve/Steve, Duradel/Kuradal and Krystilia after Like a boss; Krystilia only rolls Wilderness bosses so she does not assign the Kings (Boss). 'All players can enter the lair, but will only be able to damage the kings if they are on one of the two tasks.' (Dagannoth Kings)",
+    "_verification": {
+      "corrections": [
+        "xpPerKill: 331.5 -> 331.4 to match the Dagannoth Rex and Dagannoth Prime infobox slayxp (331.4); Supreme infobox is 255. Notes updated to record the task-page table discrepancy.",
+        "All other fields confirmed: Boss page row 'Dagannoth Kings | Waterbirth island | Slayer 1'; Dagannoth Kings page 'multiway combat area' sentence, the 85/81 Agility shortcut sentence ('Both of these requirements are boostable.') and the Slayer lair sentence all present verbatim; Waterbirth Island Dungeon in the multicombat list; task page Location Comparison row cannonable Yes and Rex/Prime/Supreme infobox immunecannon No; each king's infobox cat 'Bosses, Dagannoth' and assignedby all five masters; Konar page lists 'Waterbirth Island: Dagannoth Kings, dagannoth spawn'."
+      ],
+      "confirmed": 12,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Dark beasts",
+    "wikiTaskPage": "Slayer task/Dark beast",
+    "monsterPages": [
+      "Dark beast",
+      "Night beast"
+    ],
+    "bossTask": false,
+    "summary": "Dark beasts need 90 Slayer and 90 combat and are permanently aggressive, never becoming tolerant. Melee with Protect from Melee and high prayer-bonus armour such as Proselyte is the standard method; they only open with Magic if you attack first or they cannot reach you, so a cannon is legal but not recommended. Both spots are single-way; the Mourner Tunnels hold 19 beasts and are reached instantly by Slayer ring after Mourning's End Part II, while the Iorwerth Dungeon has 10 and needs Song of the Elves but can drop crystal shards. Bring a herb sack and gem bag for the loot.",
+    "recommendedStyle": "Melee",
+    "styleNotes": "Melee is most effective; weak to Earth spells (60%); highly accurate melee so Protect from Melee is recommended; not immune to cannon or thralls.",
+    "requiredItems": [],
+    "usefulItems": [
+      "Proselyte or sunfire fanatic armour",
+      "Prayer potions or super restores",
+      "Saradomin godsword",
+      "Herb sack",
+      "Gem bag",
+      "Seed box",
+      "Bonecrusher",
+      "Slayer ring (Mourner Tunnels teleport)"
+    ],
+    "superior": "Night beast",
+    "alternatives": [
+      "Night beast"
+    ],
+    "xpPerKill": 225.4,
+    "locations": [
+      {
+        "name": "Mourner Tunnels",
+        "displayName": "Mourner Tunnels – first half (19 dark beasts)",
+        "rank": 1,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Mourning's End Part II (started; Slayer ring teleport needs it completed)"
+        ],
+        "notes": "Slayer ring teleports straight to the dark beasts after MEP2; otherwise enter via the Mourner HQ basement in full mourner gear with the new key, or via the Death Altar from the Abyss. Beasts are in the north-east and western parts of the first half of the tunnels.",
+        "evidence": {
+          "multi": "Location comparison row Mourner Tunnels Multicombat No (Slayer task/Dark beast)",
+          "cannon": "Location comparison row Mourner Tunnels Cannonable Yes; 'while they can be hit with a dwarf multicannon, it is not recommended to bring one' (Slayer task/Dark beast)",
+          "requirements": "'The player also needs to have started Mourning's End Part II, however no progression is required' and 'using a Slayer ring to immediately teleport to the dark beasts in the Mourner Tunnels. This requires completion of Mourning's End Part II.' (Dark beast)"
+        }
+      },
+      {
+        "name": "Iorwerth Dungeon",
+        "displayName": "Iorwerth Dungeon – dark beast room (10 dark beasts, crystal shards)",
+        "rank": 2,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Song of the Elves",
+          "Mourning's End Part II started (to be assigned)"
+        ],
+        "notes": "Teleport to Prifddinas and enter the dungeon in the Iorwerth district; a shortcut gives quick access to the dark beasts. Dark beasts killed here can drop crystal shards.",
+        "evidence": {
+          "multi": "'the whole dungeon is single-way combat' (Iorwerth Dungeon); Location comparison row Iorwerth Dungeon Multicombat No (Slayer task/Dark beast)",
+          "cannon": "'A dwarf multicannon can be used in the dungeon.' (Iorwerth Dungeon); Location comparison row Cannonable Yes (Slayer task/Dark beast)",
+          "requirements": "'Players have access to the dungeon after the completion of Song of the Elves quest' (Iorwerth Dungeon)"
+        }
+      }
+    ],
+    "notes": "Assigned by Konar (Mourner Tunnels or Iorwerth Dungeon), Nieve, Duradel and Mortimer. Default amounts are only 10-20 (Konar 10-15); Need More Darkness (100 points) raises them to 110-135. The Slayer task list row requires Mourning's End Part II (partially) and Combat 90. Night beasts are not aggressive and always open with a Magic attack. Along with night beasts they are the only source of the dark bow and death talisman.",
+    "_verification": {
+      "corrections": [
+        "Notes: default amounts corrected to '10-20 (Konar 10-15)' per the task infobox (konar = 10-15 (110-135), nieve/duradel = 10-20 (110-135)); added the Slayer task list row requirements.",
+        "All other fields confirmed: Dark beast LocLines are exactly Iorwerth Dungeon (10 pins) and Mourner Tunnels (19 pins); Location comparison rows Multicombat No / Cannonable Yes for both; 'while they can be hit with a dwarf multicannon, it is not recommended to bring one' verbatim; Iorwerth Dungeon 'A dwarf multicannon can be used in the dungeon. However, the whole dungeon is single-way combat.' and Song of the Elves access verbatim; Mourner Tunnels '19 dark beasts in the north-east and western parts of the first half of the tunnels'; infobox slayxp 225.4, Earth 60%, assignedby konar,nieve,duradel,Mortimer; Night beast cat 'Dark Beasts', aggressive No; Konar page lists Mourner Tunnels and Iorwerth Dungeon."
+      ],
+      "confirmed": 15,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Dark warriors",
+    "wikiTaskPage": "Dark warrior",
+    "monsterPages": [
+      "Dark warrior"
+    ],
+    "bossTask": false,
+    "summary": "A Krystilia-only Wilderness task done at the Dark Warriors' Fortress north of Ice Mountain, in roughly level 14-16 multicombat Wilderness. The fortress holds level 8 warriors in the corridors and on the upper walls plus level 145 warriors in the members-only courtyard; the wiki suggests setting a cannon in the centre of the inner courtyard for the 145s while you melee the level 8s, closing the courtyard doors so they stay in range. Protect from Melee stops the swarm from overwhelming low-level players.",
+    "recommendedStyle": "Melee",
+    "styleNotes": "Slash melee attackers with no special weaknesses noted; not immune to cannon or thralls.",
+    "requiredItems": [],
+    "usefulItems": [
+      "Dwarf multicannon (inner courtyard)",
+      "Burning amulet or Dareeyak teleport",
+      "Looting bag"
+    ],
+    "superior": null,
+    "alternatives": [],
+    "xpPerKill": 17,
+    "locations": [
+      {
+        "name": "Dark Warriors' Fortress",
+        "displayName": "Dark Warriors' Fortress – ground floor and courtyard (level 8 and 145, cannon)",
+        "rank": 1,
+        "multi": true,
+        "cannon": true,
+        "wilderness": true,
+        "wildernessLevelMin": 14,
+        "wildernessLevelMax": 16,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "Burning amulet to the Bandit Camp then run south-west, or Dareeyak Teleport and run south-east, or run west from Ferox Enclave. Ground floor corridors have level 8s (15 spawns); the central courtyard has level 145s (18 spawns, members) and is where the cannon goes.",
+        "evidence": {
+          "multi": "'The area is multi-combat' (Dark warrior); 'The Dark Warriors' Fortress' in the Wilderness part of 'List of multicombat areas' (Multicombat area)",
+          "cannon": "'a Dwarf multicannon can be set up in the centre of the inner courtyard of the fortress' (Dark warrior)",
+          "requirements": "not stated; Slayer task list Required Items column is N/A (Slayer task)"
+        }
+      },
+      {
+        "name": "Dark Warriors' Fortress (1st floor)",
+        "displayName": "Dark Warriors' Fortress – top of the walls (level 8 only)",
+        "rank": 2,
+        "multi": true,
+        "cannon": "unknown",
+        "wilderness": true,
+        "wildernessLevelMin": 14,
+        "wildernessLevelMax": 16,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "'This floor is the top level of the castle walls. It contains only level 8 dark warriors, making this a viable option for lower levelled accounts doing Wilderness Slayer.' Ladder in the south-western room.",
+        "evidence": {
+          "multi": "'The Dark Warriors' Fortress is a castle in level 14 to 16 multi-combat Wilderness' (Dark Warriors' Fortress)",
+          "cannon": "not stated for the upper floor; the cannon note refers to the inner courtyard (Dark warrior)",
+          "requirements": "not stated"
+        }
+      }
+    ],
+    "notes": "No 'Slayer task/Dark warriors' page exists; data from the Dark warrior and Dark Warriors' Fortress pages. Wilderness level is given inconsistently: fortress infobox 14-16, Wilderness page table 13-16, Dark warrior page and Krystilia's table 12-16. Krystilia assigns 75-125. Slayer XP is 17 for level 8 and 181.5 for level 145 in the Dark warrior infobox (Krystilia's table prints 181.4). Dark warriors also exist south of Shayzien and in the woods between Lovakengj and Arceuus (Great Kourend), but the Slayer task list gives only the fortress as the task location and Krystilia's tasks are Wilderness tasks, so those are not listed as task locations here.",
+    "_verification": {
+      "corrections": [
+        "Summary: removed 'as with any Wilderness task expect player killers' (warning about other players).",
+        "Notes: the 181.5 figure comes from the Dark warrior infobox (slayxp5 = 181.5); Krystilia's table actually prints '17, 181.4'. Attribution fixed. Krystilia's table gives Wilderness level 12-16, added.",
+        "Location notes: added spawn counts from the fortress monster table (level 8: 15 spawns; level 145: 18 spawns).",
+        "All other fields confirmed: Dark warrior LocLines are Fortress (level 8), Fortress (level 145), Fortress 1st floor (level 8), South of Shayzien, Woods between Lovakengj and Arceuus - the two Kourend spots are correctly excluded and explained; 'The area is multi-combat and a Dwarf multicannon can be set up in the centre of the inner courtyard of the fortress' verbatim; fortress page 'level 14 to 16 multi-combat Wilderness' and the top-of-walls quote verbatim; Multicombat area list includes The Dark Warriors' Fortress; Slayer task row: Fortress only, N/A requirements, Krystilia; infobox assignedby krystilia, slayxp1 17, immunecannon No."
+      ],
+      "confirmed": 13,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Deranged Archaeologist",
+    "wikiTaskPage": "Deranged archaeologist",
+    "monsterPages": [
+      "Deranged archaeologist"
+    ],
+    "bossTask": true,
+    "summary": "The deranged archaeologist at the southern end of the Tar Swamp on Fossil Island is the non-Wilderness substitute for a crazy archaeologist boss task, unless Krystilia or Konar specified the Wilderness.",
+    "recommendedStyle": "Magic",
+    "styleNotes": "Magic is particularly effective because his Magic level is negligible; attacks with Ranged and melee; not immune to cannon or thralls.",
+    "requiredItems": [
+      "Axe (to chop the swamp vine)"
+    ],
+    "usefulItems": [
+      "Digsite pendant",
+      "Rake (only if crossing the whole swamp instead of the Mycelium Transportation System)"
+    ],
+    "superior": null,
+    "alternatives": [
+      "Crazy archaeologist"
+    ],
+    "xpPerKill": 275,
+    "locations": [
+      {
+        "name": "Fossil Island – South end of the Tar Swamp",
+        "displayName": "Fossil Island – south end of the Tar Swamp",
+        "rank": 1,
+        "multi": "unknown",
+        "cannon": "unknown",
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Like a boss unlock (200 Slayer reward points)",
+          "Access to Fossil Island",
+          "Axe to chop a swamp vine"
+        ],
+        "notes": "Digsite pendant to Fossil Island, then the Mycelium Transportation System to the Sticky Swamp and chop the vine. A spine mushroom just before the area occasionally hits passing players for 10 and poisons them.",
+        "evidence": {
+          "multi": "not stated (Deranged archaeologist); Tar Swamp is not in the 'List of multicombat areas' (Multicombat area)",
+          "cannon": "not stated; not in Dwarf multicannon prohibited list; infobox immunecannon = No (Deranged archaeologist)",
+          "requirements": "'An axe is required to chop a swamp vine in order to reach him.' (Deranged archaeologist); Boss page: 'Crazy archaeologist | Wilderness | Slayer 1 | Deranged archaeologist can be killed instead' (Boss)"
+        }
+      }
+    ],
+    "notes": "Not a separately rolled boss task on the Boss page table; it counts as the crazy archaeologist boss task: 'The deranged archaeologist may be killed as an alternative on a crazy archaeologist boss Slayer task, unless the Wilderness is specified as the task location when given by Krystilia or Konar quo Maten.' (Deranged archaeologist). The Boss page adds 'Konar is a unique exception to boss assignments; while the deranged archaeologist is an acceptable substitute for the crazy archaeologist, this does not apply to her tasks', although the monster infobox lists assignedby konar,nieve,duradel; konarAssignable is set false on that basis.",
+    "_verification": {
+      "corrections": [
+        "No changes. LocLine 'Fossil Island - South end of the Tar Swamp' only; axe/rake/Digsite pendant/spine mushroom sentences verbatim; infobox slayxp 275, assignedby konar,nieve,duradel, immunecannon No, immunethrall No; 'may be killed as an alternative ... unless the Wilderness is specified ... Krystilia or Konar quo Maten' verbatim; Boss page 'Konar is a unique exception ... this does not apply to her tasks' verbatim, so konarAssignable false stands. Multi/cannon stay unknown (not stated)."
+      ],
+      "confirmed": 12,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Dogs",
+    "wikiTaskPage": "Slayer task/Dogs",
+    "monsterPages": [
+      "Guard dog",
+      "Wild dog",
+      "Jackal",
+      "Temple Guardian"
+    ],
+    "bossTask": false,
+    "summary": "A low-level task from Turael, Spria and Mazchna at 15 combat. All dogs use melee and most are aggressive; jackals west of Nardah (fairy ring DLQ) are the easiest and lowest-level option and are safespottable, though the desert heat needs waterskins. Guard dogs in the Hosidius marketplace or Handelmort Mansion and wild dogs in Brimhaven Dungeon also count. Drops are just bones and ensouled dog heads, so kill whatever is closest.",
+    "recommendedStyle": "Any",
+    "styleNotes": "All variants use melee; guard dogs have fairly high melee accuracy for low levels; the Temple Guardian is immune to Magic and cannon.",
+    "requiredItems": [],
+    "usefulItems": [
+      "Waterskins (jackals in the desert)"
+    ],
+    "superior": null,
+    "alternatives": [
+      "Jackal",
+      "Guard dog",
+      "Wild dog",
+      "Temple Guardian",
+      "Shadow Hound",
+      "Reanimated dog"
+    ],
+    "xpPerKill": 27,
+    "locations": [
+      {
+        "name": "West of Nardah",
+        "displayName": "Jackals west of Nardah (fairy ring DLQ)",
+        "rank": 1,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Combat 15 (to be assigned)"
+        ],
+        "notes": "7 jackals, directly west of fairy ring DLQ; lowest-level dog and safespottable. Bring protection from the desert heat.",
+        "evidence": {
+          "multi": "Location Comparison row West of Nardah Multicombat No (Slayer task/Dogs)",
+          "cannon": "Location Comparison row West of Nardah Cannonable Yes (Slayer task/Dogs)",
+          "requirements": "'Requires some protection from the desert heat.' (Slayer task/Dogs); Slayer task list row for Dogs: 'Combat 15' (Slayer task)"
+        }
+      },
+      {
+        "name": "Hosidius",
+        "displayName": "Hosidius marketplace guard dogs (multicombat)",
+        "rank": 2,
+        "multi": true,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Combat 15 (to be assigned)"
+        ],
+        "notes": "3 guard dogs by the bakery and fruit stalls, which can be used to recover health; the dogs only turn aggressive if they catch you stealing.",
+        "evidence": {
+          "multi": "Location Comparison row Hosidius marketplace Multicombat Yes (Slayer task/Dogs)",
+          "cannon": "Location Comparison row Hosidius marketplace Cannonable Yes (Slayer task/Dogs)",
+          "requirements": "Slayer task list row for Dogs: 'Combat 15' (Slayer task)"
+        }
+      },
+      {
+        "name": "Handelmort Mansion",
+        "displayName": "Handelmort Mansion, East Ardougne – guard dogs",
+        "rank": 3,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Combat 15 (to be assigned)"
+        ],
+        "notes": "4 guard dogs in the mansion grounds in East Ardougne; safespottable.",
+        "evidence": {
+          "multi": "Location Comparison row Handelmort Mansion Multicombat No (Slayer task/Dogs)",
+          "cannon": "Location Comparison row Handelmort Mansion Cannonable Yes (Slayer task/Dogs)",
+          "requirements": "Slayer task list row for Dogs: 'Combat 15' (Slayer task)"
+        }
+      },
+      {
+        "name": "Brimhaven Dungeon",
+        "displayName": "Central Brimhaven Dungeon – wild dogs",
+        "rank": 4,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Combat 15 (to be assigned)",
+          "Axe and 875 coins (or unlimited access bought from Saniboch)"
+        ],
+        "notes": "8 wild dogs, not aggressive, near bronze dragons and other strong monsters.",
+        "evidence": {
+          "multi": "Location Comparison row Central Brimhaven Dungeon Multicombat No (Slayer task/Dogs)",
+          "cannon": "Location Comparison row Central Brimhaven Dungeon Cannonable Yes (Slayer task/Dogs)",
+          "requirements": "'Brimhaven Dungeon requires an axe and 875 coins to access Brimhaven Dungeon (unless player has paid for unlimited access from Saniboch or Banisoch).' (Slayer task/Dogs)"
+        }
+      }
+    ],
+    "notes": "Konar does not assign dogs. Other guard dog spots: McGrubor's Wood, Kourend Castle, and the Black Arm Gang hideout in Brimhaven (requires having started Heroes' Quest). Jackals also spawn south and north-east of the Ancient Pyramid, north-west of the Agility Pyramid, south-west of Pollnivneach, north and east of Sophanem and north of Nardah (Jackal LocLines). Shadow Hounds in the eastern Shadow Dungeon count but need a ring of visibility and partial Desert Treasure I. The Temple Guardian can only be fought once during Priest in Peril and cannot be hurt by Magic or a cannon. Hellhounds, terror dogs and venators do NOT count towards the task. Slayer XP: jackal 27, reanimated dog 35, Temple Guardian 45, guard dog 49, wild dog 62, Shadow Hound 62.",
+    "_verification": {
+      "corrections": [
+        "Alternatives: 'Shadow hound' -> 'Shadow Hound' (page title; infobox cat = Dogs, assignedby turael,spria,mazchna, slayxp 62). Reanimated dog confirmed (cat = Dogs, slayxp 35).",
+        "Notes: added the other Jackal LocLine locations (South of the Ancient Pyramid, North-west of the Agility Pyramid, south-west of Pollnivneach, North/East of Sophanem, North of Nardah, North-east of the Ancient Pyramid) and the Shadow Dungeon shadow hounds so the location list is complete against the monster pages; the four task locations mirror the task page's Location Comparison table.",
+        "All other fields confirmed: Location Comparison rows (Hosidius Yes/Yes, West of Nardah No/Yes, Central Brimhaven Dungeon No/Yes, Handelmort Mansion No/Yes) and their notes verbatim; Brimhaven 875 coins sentence verbatim; task infobox combatreq 15, Turael/Spria/Mazchna; Jackal slayxp 27; Temple Guardian immunecannon Yes and 'Your spells do not seem to affect it.'; Exceptions section confirms hellhounds, terror dogs and venators do not count."
+      ],
+      "confirmed": 16,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Drakes",
+    "wikiTaskPage": "Slayer task/Drakes",
+    "monsterPages": [
+      "Drake",
+      "Guardian Drake"
+    ],
+    "bossTask": false,
+    "summary": "Drakes are level 84 Slayer wingless dragons on the middle level of the Karuulm Slayer Dungeon, with a separate task-only room that the wiki recommends because it is smaller for a cannon. They use Ranged and ranged-melee attacks blocked by Protect from Missiles, plus a volcanic breath every seven attacks that dragonfire protection reduces or a one-tile sidestep avoids. Boots of stone, brimstone or granite boots are required in the dungeon unless the elite Kourend and Kebos diary is done. Melee with a dragon hunter lance is typical; many players block the task because of its high weight, lacklustre drops and the drakes' flat armour.",
+    "recommendedStyle": "Melee",
+    "styleNotes": "Draconic, so dragonbane weapons (dragon hunter lance, crossbow, wand) are very effective; take 50% more damage from water spells; immune to poison and venom; have 2 flat armour; not immune to cannon or thralls.",
+    "requiredItems": [
+      "Boots of stone, boots of brimstone or granite boots (not needed after the elite Kourend & Kebos Diary)"
+    ],
+    "usefulItems": [
+      "Dragon hunter lance",
+      "Anti-dragon shield or dragonfire shield with antifire, or super antifire",
+      "Dwarf multicannon",
+      "Holy wrench",
+      "Bonecrusher",
+      "Herb sack",
+      "Rada's blessing 3 or 4 (Mount Karuulm teleport)"
+    ],
+    "superior": "Guardian Drake",
+    "alternatives": [
+      "Guardian Drake"
+    ],
+    "xpPerKill": 230.6,
+    "locations": [
+      {
+        "name": "Karuulm Slayer Dungeon",
+        "displayName": "Karuulm Slayer Dungeon – task-only drake room (middle level)",
+        "rank": 1,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "84 Slayer",
+          "Boots of stone / brimstone / granite boots unless elite Kourend & Kebos Diary",
+          "Combat 90 (to be assigned)"
+        ],
+        "notes": "Rada's blessing 3/4 teleports to Mount Karuulm; fairy ring CIR or Battlefront Teleport also work. Seven drakes in the task-only room; use Protect from Missiles and step off the tile when the volcanic breath is fired.",
+        "evidence": {
+          "multi": "'The dungeon itself is single-way combat.' (Karuulm Slayer Dungeon)",
+          "cannon": "'Most players tend to block drakes despite them being cannonable' and 'It is recommended to kill drakes in the task-only area, as while both rooms are still large, the task-only area is smaller for a cannon' (Slayer task/Drakes); 'A dwarf multicannon can be used in all areas here except the wyrm and Alchemical Hydra areas' (Karuulm Slayer Dungeon)",
+          "requirements": "'Prior to completion of the elite Kourend & Kebos diary, boots of stone, boots of brimstone or granite boots must be worn within the dungeon to avoid taking constant damage.' and 'Level 84 Slayer to deal damage or receive a task.' (Slayer task/Drakes)"
+        }
+      },
+      {
+        "name": "Karuulm Slayer Dungeon",
+        "displayName": "Karuulm Slayer Dungeon – normal drake room (middle level)",
+        "rank": 2,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "84 Slayer",
+          "Boots of stone / brimstone / granite boots unless elite Kourend & Kebos Diary"
+        ],
+        "notes": "Seven drakes in the open room, usable off task; larger than the task-only room so a cannon covers less of it.",
+        "evidence": {
+          "multi": "'The dungeon itself is single-way combat.' (Karuulm Slayer Dungeon)",
+          "cannon": "'A dwarf multicannon can be used in all areas here except the wyrm and Alchemical Hydra areas' (Karuulm Slayer Dungeon)",
+          "requirements": "'players must wear the boots of stone, boots of brimstone, or granite boots to protect themselves from the extreme heat of the dungeon floor. Alternatively, players who have completed the elite Kourend & Kebos Diary have protection from the burn effect regardless of footwear.' (Drake)"
+        }
+      }
+    ],
+    "notes": "Assigned by Konar (75-140, her most frequent drake amounts), Nieve, Duradel and Mortimer. Drake's claw and tooth drops are five times more common on task. Slayer XP is 230.6 in the Drake infobox but 256.2 in the Karuulm Slayer Dungeon monster table; the infobox value is used. Guardian Drakes have a stun special that must be avoided by moving out of melee distance.",
+    "_verification": {
+      "corrections": [
+        "No changes. 'Slayer task/Drake' and 'Slayer task/Drakes' resolve to the same page (title 'Slayer task/Drakes'); Drake page uses HasTask|Drakes. Drake LocLine: Karuulm Slayer Dungeon only (13 pins); Karuulm table 'Drake ... spawns 7 (normal) / 7 (task-only)'. Karuulm quotes ('The dungeon itself is single-way combat.', cannon usable except wyrm/Alchemical Hydra areas, boots of stone paragraph) verbatim; task page quotes (block despite cannonable, task-only area smaller for a cannon, elite diary boots sentence, 'Level 84 Slayer to deal damage or receive a task.') verbatim; task infobox combatreq 90, konar 75-140; Slayer task row boots of stone/brimstone/granite or elite Kourend diary; infobox slayxp 230.6 (Karuulm table 256.2 noted), Water 50%, poison/venom resistance 100, flatarmour 2, immunecannon No; Guardian Drake stun special and 'Not aggressive' confirmed."
+      ],
+      "confirmed": 16,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Duke Sucellus",
+    "wikiTaskPage": "Duke Sucellus",
+    "monsterPages": [
+      "Duke Sucellus"
+    ],
+    "bossTask": true,
+    "summary": "Boss task for Duke Sucellus, the chthonian demon fought in the asylum of Ghorrock Prison beneath Ghorrock, reached through the Weiss salt mine, after completing Desert Treasure II - The Fallen Empire.",
+    "recommendedStyle": "Any",
+    "styleNotes": "Demonic with 30% demonbane resistance; immune to cannon; can be poisoned but not envenomed; not immune to thralls.",
+    "requiredItems": [],
+    "usefulItems": [
+      "Ring of shadows (teleports to Ghorrock Prison once the frozen tablet has been used on it)",
+      "Icy basalt (Weiss teleport)"
+    ],
+    "superior": null,
+    "alternatives": [],
+    "xpPerKill": 305,
+    "locations": [
+      {
+        "name": "Ghorrock Prison - Asylum",
+        "displayName": "Ghorrock Prison – asylum (via Weiss salt mine)",
+        "rank": 1,
+        "multi": "unknown",
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Desert Treasure II - The Fallen Empire",
+          "Like a boss unlock (200 Slayer reward points)",
+          "Slayer 1"
+        ],
+        "notes": "Teleport with the ring of shadows (after using the frozen tablet on it), or teleport to Weiss with icy basalt and go through the Salt Mine into Ghorrock Dungeon; after the quest the main prison entrance leads straight to the asylum. Instanced boss.",
+        "evidence": {
+          "multi": "not stated (Duke Sucellus); Ghorrock Prison is not in the 'List of multicombat areas' (Multicombat area)",
+          "cannon": "Duke Sucellus infobox: immunecannon = Yes (Duke Sucellus); Ghorrock Prison is not in the Dwarf multicannon prohibited list",
+          "requirements": "Boss page table row: 'Duke Sucellus | Ghorrock Prison | Slayer 1 | Completion of Desert Treasure II - The Fallen Empire' (Boss)"
+        }
+      }
+    ],
+    "notes": "Assigned by Konar, Nieve and Duradel (infobox assignedby). Slayer XP is 305 for the post-quest version and 1697 for the awakened version (the wiki marks the awakened figure as needing verification), and the slayer helmet has no effect on awakened versions (Boss). 'While Sucellus is considered demonic, he has 30% demonbane resistance.' (Duke Sucellus)",
+    "_verification": {
+      "corrections": [
+        "Summary: Ghorrock Prison is 'located beneath Ghorrock, accessible from Ghorrock Dungeon', which is reached from Weiss's Salt Mine - reworded from 'beneath Weiss'.",
+        "Notes: removed the unsupported arder/musca powder sentence (fight detail not verified on the pages read; boss tasks should carry no fight mechanics). Added the wiki's own 'needs verification' caveat on the 1697 awakened XP figure.",
+        "usefulItems / location notes: added ring of shadows (with frozen tablet) and icy basalt from the Ghorrock Prison Transportation list.",
+        "All other fields confirmed: LocLine 'Ghorrock Prison - Asylum'; infobox slayxp 305 (post-quest), 1697 (awakened), assignedby konar,nieve,duradel, immunecannon Yes, immunethrall No, attributes Demon, poisonresistance 0, venomresistance Poison; the 30% demonbane resistance sentence is on the page; Boss page row 'Duke Sucellus | Ghorrock Prison | Slayer 1 | Completion of Desert Treasure II - The Fallen Empire'. Multi stays unknown (not stated)."
+      ],
+      "confirmed": 12,
+      "downgraded": 0
+    }
+  }
+]

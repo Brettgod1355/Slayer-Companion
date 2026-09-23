@@ -1,0 +1,2028 @@
+[
+  {
+    "task": "Ghouls",
+    "wikiTaskPage": "Ghoul",
+    "monsterPages": [
+      "Ghoul"
+    ],
+    "bossTask": false,
+    "summary": "A low-level Mazchna and Vannaka task fought just west of Canifis in Morytania. Ghouls hit up to 5 with crush, are aggressive, and run away when their hitpoints get low, so ranged or magic from behind the gravestones (or poison) is the easiest way to secure kills; melee works but expect them to flee. They look undead but are alive, so the salve amulet and Crumble Undead do nothing. Both the Salve graveyard north of Mort Myre and the grounds south of the Slayer Tower have about a dozen spawns each, and a ghoul may randomly attack players under combat level 85.",
+    "recommendedStyle": "Ranged",
+    "styleNotes": "Not undead despite appearances, so immune to Crumble Undead and the salve amulet; retreat at low hitpoints, so poison or ranged/magic helps finish kills; no poison, venom or cannon immunity in the infobox.",
+    "requiredItems": [],
+    "usefulItems": [
+      "Poisoned weapon or ammo (kills fleeing ghouls)",
+      "Ranged or magic gear for gravestone safespots"
+    ],
+    "superior": null,
+    "alternatives": [],
+    "xpPerKill": 50,
+    "locations": [
+      {
+        "name": "South of the Slayer Tower",
+        "displayName": "Ghoul grounds south of the Slayer Tower (west of Canifis)",
+        "rank": 1,
+        "multi": "unknown",
+        "cannon": "unknown",
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Priest in Peril"
+        ],
+        "notes": "12 ghoul spawns (12 LocLine pins) on the grounds south of the Slayer Tower and west of Canifis; the Canifis page says 'The northern ghoul grounds features 12 ghouls, great for Slayer tasks'. Reach it via the Kharyrll Teleport (Canifis bank), a Slayer ring to the Slayer Tower entrance north of the town, or fairy ring CKS just west of Canifis (Canifis page teleport list).",
+        "evidence": {
+          "multi": "not stated on Ghoul, Canifis or Slayer Tower pages; not in the 'List of multicombat areas' (Multicombat area)",
+          "cannon": "not stated; not in the Dwarf multicannon prohibited list",
+          "requirements": "Slayer task list row for Ghouls, Required Items/Requirements column: 'Priest in Peril', 'Combat 25' (Slayer task)"
+        }
+      },
+      {
+        "name": "North of Mort Myre Swamp",
+        "displayName": "Salve graveyard north of Mort Myre Swamp (ranged safespot)",
+        "rank": 2,
+        "multi": "unknown",
+        "cannon": "unknown",
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Priest in Peril"
+        ],
+        "notes": "10 ghouls (10 LocLine pins) walk the Salve graveyard 'just north of the swamp' (Canifis). The Salve Graveyard Teleport lands 'slightly west of the town' and fairy ring CKS is nearby. The Ghoul page's safespot 'between two gravestones and a cross on the eastern side, directly north from the Large grave' is described for 'the ghouls to the west of Canifis' without naming the cluster; the Large grave page places one large grave at the eastern edge of this cluster (3434,3457) and another south of the Slayer Tower cluster (3413,3495), so it may apply to either. Retreating ghouls 'walk back to the water and will still be within range'.",
+        "evidence": {
+          "multi": "not stated on Ghoul or Canifis pages; not in the 'List of multicombat areas' (Multicombat area)",
+          "cannon": "not stated; not in the Dwarf multicannon prohibited list",
+          "requirements": "Slayer task list row for Ghouls: 'Priest in Peril' (Slayer task)"
+        }
+      }
+    ],
+    "notes": "No 'Slayer task/Ghouls' page exists on the wiki (API returned missingtitle on this run); data comes from the Ghoul monster page, the Canifis page and the Slayer task list row. Assigned by Mazchna and Vannaka only (infobox assignedby = mazchna,vannaka); Konar does not assign ghouls. 'It is possible for a ghoul to randomly attack a player lower than level 85 combat, ignoring any current engagement' which can steal kills. Killing a ghoul is an easy Morytania Diary task. Canifis itself requires Priest in Peril.",
+    "_verification": {
+      "corrections": [
+        "Removed the RS3 term 'lodestone-free' from the Slayer Tower location notes; the three routes (Kharyrll Teleport, Slayer ring, fairy ring CKS) are confirmed on the Canifis page and the Salve Graveyard Teleport was added for the graveyard cluster.",
+        "Safespot attribution softened: the Ghoul page does not say which of the two clusters the gravestone safespot is in (Large grave page shows a large grave next to both).",
+        "Confirmed: page title, both LocLine locations (North of Mort Myre Swamp 10 pins, South of the Slayer Tower 12 pins), slayxp 50, assignedby mazchna,vannaka, Priest in Peril + Combat 25 from the Slayer task row, no superior/alternatives, multi/cannon not stated anywhere (kept unknown)."
+      ],
+      "confirmed": 14,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "The Giant Mole",
+    "wikiTaskPage": "Giant Mole",
+    "monsterPages": [
+      "Giant Mole",
+      "Mole Hole"
+    ],
+    "bossTask": true,
+    "summary": "A boss Slayer task from Konar, Nieve or Duradel (needs the 'Like a boss' unlock) for the level 230 Giant Mole under Falador Park, reached by digging a mole hill with a spade and bringing a light source.",
+    "recommendedStyle": "Any",
+    "styleNotes": "Boss task: the plugin only needs identity and location; the infobox lists a 50% earth elemental weakness, crush defence 100 and venom resistance 'Poison'.",
+    "requiredItems": [
+      "Spade",
+      "Light source (not needed once the Fire of Eternal Light is built after Making Friends With My Arm)"
+    ],
+    "usefulItems": [
+      "Tinderbox (relights open light sources)",
+      "Falador shield 3 or better (tracks the mole)",
+      "25,000 coins for a private instance (12,500 after hard Combat Achievements, halved for ironmen)"
+    ],
+    "superior": null,
+    "alternatives": [],
+    "xpPerKill": 215,
+    "locations": [
+      {
+        "name": "Mole Hole (Under Falador Park)",
+        "displayName": "Mole Hole beneath Falador Park",
+        "rank": 1,
+        "multi": true,
+        "cannon": "unknown",
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "'Like a boss' Slayer unlock (200 points) to be assigned",
+          "Spade to dig into a mole hill",
+          "Light source"
+        ],
+        "notes": "'The Giant Mole is accessed by digging with a spade on top of the mole hills in the Falador Park. A light source is required to navigate the tunnels without taking damage.' The exit rope at the southern end leads to a well south of White Knights' Castle. A paid private instance is available from the spade at the north-western mole hill.",
+        "evidence": {
+          "multi": "'Mole Hole' appears in the 'List of multicombat areas' (Multicombat area)",
+          "cannon": "not stated on Giant Mole or Mole Hole pages; Mole Hole is not in the Dwarf multicannon prohibited list",
+          "requirements": "'Players who have unlocked the Like a boss ability via spending 200 Slayer reward points can be assigned bosses by Konar, Nieve/Steve, Duradel/Kuradal, or Krystilia' and boss table row 'Giant Mole | Mole Lair | Slayer 1 | (no other requirement)' (Boss); 'A light source is required to navigate the tunnels' (Giant Mole)"
+        }
+      }
+    ],
+    "notes": "Boss task, so no fight mechanics are recorded. Infobox assignedby = konar,nieve,duradel and cat = Bosses; 'Krystilia will only roll boss tasks in the Wilderness' (Boss), so she does not assign the mole. Boss tasks give 3-35 kills (cap raised by Combat Achievement tiers) plus 5,000 bonus Slayer XP on completion (Boss). Killing the Giant Mole once is a hard Falador Diary task. Brimstone keys drop only on a Konar task.",
+    "_verification": {
+      "corrections": [
+        "No factual corrections. Confirmed: slayxp 215, assignedby konar,nieve,duradel, cat Bosses, Mole Hole in the 'List of multicombat areas', spade + light source + tinderbox + Fire of Eternal Light (Giant Mole), instance prices 25,000/12,500/halved for ironmen (Giant Mole + Mole Hole), Falador shield 3 tracking (Giant Mole), 'Like a boss' 200 points, 'Krystilia will only roll boss tasks in the Wilderness', 3-35 kills and +5,000 XP (Boss), brimstone keys only on a Konar task (Giant Mole drops), dcrush 100 and venomresistance Poison.",
+        "Cannon left unknown: neither the Giant Mole nor the Mole Hole page mentions a cannon and the Mole Hole is not in the Dwarf multicannon prohibited list.",
+        "Summary contains no fight mechanics (boss task)."
+      ],
+      "confirmed": 16,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Goblins",
+    "wikiTaskPage": "Slayer task/Goblins",
+    "monsterPages": [
+      "Goblin",
+      "Goblin (Vault of War)",
+      "Cave goblin (monster)"
+    ],
+    "bossTask": false,
+    "summary": "A beginner task from Turael and Spria with no requirements. Ordinary level 2 goblins die to anything and are not aggressive (except one armed goblin in the Goblin Cave), so any style with no prayer or food is fine. Lumbridge has by far the most spawns (121) and is the fastest place to finish, while the first floor of the Stronghold of Security is multicombat and cannonable if you want to speed things up. The Bandos sergeants in the God Wars Dungeon also count.",
+    "recommendedStyle": "Any",
+    "styleNotes": "Level 2 goblins have -15 defence bonuses in every style and hit 1; no poison, venom, cannon or thrall immunity.",
+    "requiredItems": [],
+    "usefulItems": [],
+    "superior": null,
+    "alternatives": [
+      "Sergeant Strongstack",
+      "Sergeant Grimspike",
+      "Sergeant Steelwill",
+      "Cave goblin (monster)",
+      "Cave goblin miner",
+      "Cave goblin guard"
+    ],
+    "xpPerKill": 5,
+    "locations": [
+      {
+        "name": "Lumbridge",
+        "displayName": "Lumbridge surroundings (goblin huts and fields)",
+        "rank": 1,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "121 goblin spawns (121 LocLine pins on the Goblin page); safespottable and cannonable per the task page table. Free-to-play.",
+        "evidence": {
+          "multi": "Slayer task/Goblins Location Variants table, Lumbridge row: Multicombat No",
+          "cannon": "Slayer task/Goblins Location Variants table, Lumbridge row: Cannonable Yes",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Stronghold of Security",
+        "displayName": "Stronghold of Security – first level (Vault of War)",
+        "rank": 2,
+        "multi": true,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "34 beefier goblins (levels 5-25, 5-26 Slayer XP each) on the first floor under Barbarian Village; the first level is multicombat and a cannon can be placed. Ranging safespots exist.",
+        "evidence": {
+          "multi": "'Unlike the other levels, the first is a multicombat area.' (Stronghold of Security); task table row: Multicombat Yes",
+          "cannon": "'Note: A cannon can be placed in the stronghold.' (Stronghold of Security); task table row: Cannonable Yes",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Goblin Cave",
+        "displayName": "Goblin Cave (east of the Fishing Guild)",
+        "rank": 3,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "24 goblins (24 LocLine pins). The Goblin Cave page places it 'east of the Fishing Guild and south of Hemenster'. 'The single armed goblin with a blue mail ... is the only aggressive goblin found anywhere' and 'has a wander range spanning almost the entire goblin cave'; 'any other goblin can become aggressive upon searching any of the stacked boxes in the cave' (Goblin). Safespottable per the task table.",
+        "evidence": {
+          "multi": "Slayer task/Goblins Location Variants table, Goblin Cave row: Multicombat No",
+          "cannon": "Slayer task/Goblins Location Variants table, Goblin Cave row: Cannonable Yes",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Goblin Village",
+        "displayName": "Goblin Village (north of Falador)",
+        "rank": 4,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "23 goblins per the task table; Goblin Village lies directly north of Falador (Goblin Village infobox: south = Falador). Note: the Goblin monster page's LocLine list does not include Goblin Village, so the count comes only from the task page table.",
+        "evidence": {
+          "multi": "Slayer task/Goblins Location Variants table, Goblin Village row: Multicombat No",
+          "cannon": "Slayer task/Goblins Location Variants table, Goblin Village row: Cannonable Yes",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Lumbridge Swamp Caves",
+        "displayName": "Lumbridge Swamp Caves (cave goblins)",
+        "rank": 5,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "Only 4 cave goblins (10 Slayer XP each); a light source is needed in the caves.",
+        "evidence": {
+          "multi": "Slayer task/Goblins Location Variants table, Lumbridge Swamp Caves row: Multicombat No",
+          "cannon": "'A Dwarf multicannon can be used in the caves.' (Lumbridge Swamp Caves); task table row: Cannonable Yes",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Observatory Dungeon",
+        "displayName": "Observatory Dungeon (31 goblins)",
+        "rank": 6,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "31 goblins (levels 2 and 5; 31 LocLine pins). Not safespottable per the task table.",
+        "evidence": {
+          "multi": "Slayer task/Goblins Location Variants table, Observatory Dungeon row: Multicombat No",
+          "cannon": "Slayer task/Goblins Location Variants table, Observatory Dungeon row: Cannonable Yes",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "West of Fishing Guild",
+        "displayName": "West of the Fishing Guild (23 goblins)",
+        "rank": 7,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "23 level-2 goblins (23 LocLine pins) west of the Fishing Guild; a separate spot from the Goblin Cave.",
+        "evidence": {
+          "multi": "Slayer task/Goblins Location Variants table, West of Fishing Guild row: Multicombat No",
+          "cannon": "Slayer task/Goblins Location Variants table, West of Fishing Guild row: Cannonable Yes",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Dorgeshuun Mines",
+        "displayName": "Dorgeshuun Mines (cave goblin miners and guards)",
+        "rank": 8,
+        "multi": true,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Started The Lost Tribe"
+        ],
+        "notes": "12 cave goblins: 'Combination of Cave goblin miners and guards' (10 and 26 Slayer XP); multicombat and cannonable, not safespottable per the task table.",
+        "evidence": {
+          "multi": "Slayer task/Goblins Location Variants table, Dorgeshuun Mines row: Multicombat Yes",
+          "cannon": "Slayer task/Goblins Location Variants table, Dorgeshuun Mines row: Cannonable Yes",
+          "requirements": "Slayer task/Goblins Monster Variants table, Cave goblin miner / guard rows: 'Requires starting The Lost Tribe'"
+        }
+      },
+      {
+        "name": "God Wars Dungeon",
+        "displayName": "God Wars Dungeon – Bandos goblins",
+        "rank": 9,
+        "multi": true,
+        "cannon": "unknown",
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Partial Troll Stronghold (or Easy Combat Achievements)",
+          "Rope on first entry"
+        ],
+        "notes": "14 goblins per the task table (God Wars Dungeon gallery lists 'Goblin (12-17) - melee'). The Bandos sergeants in the boss room also count but need 40 kill count.",
+        "evidence": {
+          "multi": "Slayer task/Goblins Location Variants table, God Wars Dungeon row: Multicombat Yes; 'God Wars Dungeon' in the 'List of multicombat areas' (Multicombat area)",
+          "cannon": "Slayer task/Goblins Location Variants table, God Wars Dungeon row: Cannonable Unknown",
+          "requirements": "'Accessing it requires partial completion of Troll Stronghold (defeating Dad) or full completion of the Easy Combat Achievements' and 'Rope (to access the dungeon itself for the first time)' (God Wars Dungeon)"
+        }
+      },
+      {
+        "name": "Clock Tower Dungeon",
+        "displayName": "Clock Tower Dungeon (14 goblins)",
+        "rank": 10,
+        "multi": false,
+        "cannon": "unknown",
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "14 goblins (levels 2, 5 and 13; 14 LocLine pins).",
+        "evidence": {
+          "multi": "Slayer task/Goblins Location Variants table, Clock Tower Dungeon row: Multicombat No",
+          "cannon": "Slayer task/Goblins Location Variants table, Clock Tower Dungeon row: Cannonable Unknown",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Outside Port Sarim",
+        "displayName": "Outside Port Sarim (12 goblins, free-to-play)",
+        "rank": 11,
+        "multi": false,
+        "cannon": "unknown",
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "12 level-2 goblins (12 LocLine pins) outside Port Sarim.",
+        "evidence": {
+          "multi": "Slayer task/Goblins Location Variants table, Outside of Port Sarim row: Multicombat No",
+          "cannon": "Slayer task/Goblins Location Variants table, Outside of Port Sarim row: Cannonable Unknown",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Tree Gnome Village maze",
+        "displayName": "Tree Gnome Village maze (10 goblins)",
+        "rank": 12,
+        "multi": false,
+        "cannon": "unknown",
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "10 goblins (levels 2 and 5; 10 LocLine pins) in the Tree Gnome Village maze.",
+        "evidence": {
+          "multi": "Slayer task/Goblins Location Variants table, Tree Gnome Village maze row: Multicombat No",
+          "cannon": "Slayer task/Goblins Location Variants table, Tree Gnome Village maze row: Cannonable Unknown",
+          "requirements": "not stated"
+        }
+      }
+    ],
+    "notes": "Turael and Spria only (Infobox Slayer: turael 15-30, spria 15-30; 'no Slayer level requirement'). Konar does not assign goblins. Slayer XP is 5 for level 2 goblins, 12 for level 5 and 16 for level 13 (Goblin infobox); the Sergeants give 127-148 each but need 40 Bandos kill count. Dorgeshuun Mines cave goblins require starting The Lost Tribe. The Goblin monster page also has small LocLines not in the task table (between Lumbridge and Varrock 1, west of Varrock 5, the Digsite 1, south-east of Draynor Village 7, south of Draynor Manor 1, Lumbridge Swamp 1, outside the Fishing Guild 4, south of Hosidius 5, Kebos Lowlands 6, entrance to Arandar 3, The Hollows cave 3, Underground Pass 3+7).",
+    "_verification": {
+      "corrections": [
+        "Added 7 locations that the Slayer task/Goblins Location Variants table lists but the curated data omitted: Observatory Dungeon (31), West of Fishing Guild (23), Dorgeshuun Mines (12, multi, needs The Lost Tribe started), God Wars Dungeon (14, multi), Clock Tower Dungeon (14), Outside Port Sarim (12), Tree Gnome Village maze (10).",
+        "Goblin Village is absent from the Goblin monster page LocLine list; kept from the task table with a note.",
+        "Confirmed: page title, Turael/Spria 15-30 with no requirement, alternatives (Sergeants + Cave goblin in the Slayer task row; Cave goblin miner/guard in the task page variants table), slayxp 5 (level 2), Stronghold first level multi + cannon quotes, Lumbridge Swamp Caves cannon + light source quotes, Goblin Cave aggression quotes, all multi/cannon values against the task table."
+      ],
+      "confirmed": 18,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Greater demons",
+    "wikiTaskPage": "Slayer task/Greater demons",
+    "monsterPages": [
+      "Greater demon"
+    ],
+    "bossTask": false,
+    "summary": "A level 70+ combat task from Krystilia, Chaeldar, Konar, Nieve and Duradel. Greater demons only melee, so Protect from Melee or a safespot handles them; demonbane weapons (Arclight, Emberlight) shred them and they have a 40% water weakness. The Chasm of Fire is the usual spot because it is compact and cannonable (single-way), while the Catacombs of Kourend are multicombat for AFK burst/venator killing plus ancient shard and dark totem drops. Wilderness tasks are best done in the Wilderness Slayer Cave, which is both multi and cannonable but heavily PKed.",
+    "recommendedStyle": "Melee",
+    "styleNotes": "Demons: weak to demonbane weapons (Arclight/Emberlight), 40% water elemental weakness and -10 magic defence; attack with slash only; not immune to poison, venom, cannon or thralls.",
+    "requiredItems": [],
+    "usefulItems": [
+      "Arclight or Emberlight (demonbane)",
+      "Dwarf multicannon (Chasm of Fire, Wilderness Slayer Cave)",
+      "Viggora's chainmace (Wilderness)",
+      "Dark totem (Skotizo alternative)"
+    ],
+    "superior": null,
+    "alternatives": [
+      "Skotizo",
+      "K'ril Tsutsaroth",
+      "Tstanon Karlak",
+      "Tormented Demon"
+    ],
+    "xpPerKill": 87,
+    "locations": [
+      {
+        "name": "Chasm of Fire",
+        "displayName": "Chasm of Fire – middle floor (fairy ring DJR)",
+        "rank": 1,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [],
+        "notes": "16 greater demons per the task table (the Chasm of Fire monster table and the LocLine give 17). 'Easily accessible through Fairy Ring DJR'. 'There are several safespots for killing greater demons on the middle floor, by utilising the piles of rocks and the narrow pathways' (Chasm of Fire). Contracts for Yama can drop after A Kingdom Divided. 'Demons in the dungeon no longer require a Slayer task in order to be killed' (Chasm of Fire update history). 'Resurrection spells cannot be cast whilst within the Chasm of Fire'.",
+        "evidence": {
+          "multi": "'A dwarf multicannon can be used in the chasm, although it is not a multi-combat area.' (Chasm of Fire); task table row: Multicombat No",
+          "cannon": "'A dwarf multicannon can be used in the chasm' (Chasm of Fire); task table row: Cannonable Yes",
+          "requirements": "not stated (fairy ring/teleports only work 'if you've previously been to Great Kourend' - Chasm of Fire)"
+        }
+      },
+      {
+        "name": "Catacombs of Kourend",
+        "displayName": "Catacombs of Kourend – greater demon area (multi, no cannon)",
+        "rank": 2,
+        "multi": true,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [],
+        "notes": "10 stronger demons (levels 100/101/113, 115-130 Slayer XP) that drop ancient shards and dark totem pieces; safespots 'under the arch which divides the Greater Demon area, and at the extreme north-east corner of the dungeon behind the rope exit'. Skotizo (needs a dark totem) counts and is only offered by Konar when assigned here.",
+        "evidence": {
+          "multi": "'As this particular dungeon is a multicombat area (excluding the brutal dragon area), it is generally recommended to use Prayer or high-healing methods' (Catacombs of Kourend); task table row: Multicombat Yes",
+          "cannon": "Dwarf multicannon prohibited list: 'Catacombs of Kourend - An ancient power won't let you set up a cannon here.' (Dwarf multicannon); task table row: Cannonable No",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Wilderness Slayer Cave",
+        "displayName": "Wilderness Slayer Cave – greater demons (level 29-32 Wilderness)",
+        "rank": 3,
+        "multi": true,
+        "cannon": true,
+        "wilderness": true,
+        "wildernessLevelMin": 29,
+        "wildernessLevelMax": 32,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "10 level-104 demons (120 Slayer XP, Wilderness Slayer Cave inhabitants table: level 29-32; the task page row instead says 'Level 28 wilderness'). 'fast experience if used with Viggora's chainmace ... one of the only areas that is both cannonable and multicombat.' Can drop Larran's keys and Slayer's enchantments. 'frequented often by player killers, so players should not bring items they are not willing to lose.' Safespot: 'stalagmites at the entrance of the Greater Demon chamber, halberds may also be used'.",
+        "evidence": {
+          "multi": "'Multicombat area in the Wilderness, fast experience if using Wilderness weapons' (Slayer task/Hellhounds location table, Wilderness Slayer Cave row: Multicombat Yes); 'The cave is the only multi-combat spot where the cannon can be used for some monsters.' (Wilderness Slayer Cave); Slayer task/Greater demons table row: Multicombat Yes",
+          "cannon": "'it's possible to use the Dwarf multicannon inside the dungeon' (Wilderness Slayer Cave); task table row: Cannonable Yes",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Karuulm Slayer Dungeon",
+        "displayName": "Karuulm Slayer Dungeon – greater demon room (boots of stone)",
+        "rank": 4,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Boots of stone / brimstone / granite boots unless Elite Kourend & Kebos Diary is complete"
+        ],
+        "notes": "9 demons; 'The safespot is by the entrance to the greater demon room. If you stay one tile away from the room, the greater demon won't be able to reach you.'",
+        "evidence": {
+          "multi": "'The dungeon itself is single-way combat.' (Karuulm Slayer Dungeon); task table row: Multicombat No",
+          "cannon": "'A dwarf multicannon can be used in all areas here except the wyrm and Alchemical Hydra areas' (Karuulm Slayer Dungeon); task table row: Cannonable Yes",
+          "requirements": "'players who have not completed the elite Kourend & Kebos Diary must wear boots of stone, boots of brimstone, or granite boots to protect themselves from the extreme heat of the dungeon floor' (Hydra)"
+        }
+      },
+      {
+        "name": "Isle of Souls Dungeon",
+        "displayName": "Isle of Souls Dungeon (via Soul Wars portal)",
+        "rank": 5,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [],
+        "notes": "7 demons; 'The safespot is behind the two rocks on the eastern side of the inner wall, about 6 tiles south of the demonic symbols.' Compact but a lesser demon may interrupt.",
+        "evidence": {
+          "multi": "'A dwarf multicannon can be used in the dungeon, though it is not a multicombat area.' (Isle of Souls Dungeon); task table row: Multicombat No",
+          "cannon": "'A dwarf multicannon can be used in the dungeon' (Isle of Souls Dungeon); task table row: Cannonable Yes",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Brimhaven Dungeon upper level",
+        "displayName": "Brimhaven Dungeon – upper level (875 coin entry)",
+        "rank": 6,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Axe (to cut vines)",
+          "875 coins per entry, or a one-time 1,000,000 coin fee, or 5,000 trading sticks"
+        ],
+        "notes": "Only 7 demons spread far apart; 'while cannonable it is not an ideal spot for clearing tasks unless assigned by Konar.'",
+        "evidence": {
+          "multi": "Slayer task/Greater demons table row, Brimhaven Dungeon: Multicombat No",
+          "cannon": "Slayer task/Greater demons table row, Brimhaven Dungeon: Cannonable Yes",
+          "requirements": "'Axe needed' and '875 entry for each time, a one-time fee of 1,000,000 or alternate entry of one-off fee of 5000 trading sticks' (Slayer task/Greater demons)"
+        }
+      },
+      {
+        "name": "Lava Maze Dungeon",
+        "displayName": "Lava Maze Dungeon (single-way, deep Wilderness)",
+        "rank": 7,
+        "multi": false,
+        "cannon": true,
+        "wilderness": true,
+        "wildernessLevelMin": 41,
+        "wildernessLevelMax": 47,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "Only 3 demons. 'As the other wilderness areas are multicombat, one may elect to do their slayer task here. Highly recommended to have 82 Agility if completing tasks here.' Long trek around the maze otherwise.",
+        "evidence": {
+          "multi": "'The dungeon is entirely single-way combat' (Lava Maze Dungeon); task table row: Multicombat No",
+          "cannon": "Slayer task/Greater demons table row, Lava Maze Dungeon: Cannonable Yes",
+          "requirements": "not stated (82 Agility shortcut recommended, not required)"
+        }
+      },
+      {
+        "name": "Wilderness near Demonic Ruins",
+        "displayName": "Demonic Ruins (level 44-48 Wilderness, multi)",
+        "rank": 8,
+        "multi": true,
+        "cannon": true,
+        "wilderness": true,
+        "wildernessLevelMin": 44,
+        "wildernessLevelMax": 48,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "4 demons; prayer regenerates at the ruins. 'due to it being deep in the Wilderness, multicombat, and a popular teleport destination, it is very unsafe to do your task here.' Only free-to-play greater demon spot.",
+        "evidence": {
+          "multi": "'The entire area is multicombat' (Demonic Ruins); 'The Demonic Ruins' in the 'List of multicombat areas' (Multicombat area); task table row: Multicombat Yes",
+          "cannon": "Slayer task/Greater demons table row, Demonic Ruins: Cannonable Yes",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Ogre Enclave",
+        "displayName": "Ogre Enclave (Yanille, caged demons)",
+        "rank": 9,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Watchtower quest progressed to the point of enclave access"
+        ],
+        "notes": "5 demons; 'Most of the Greater Demons in this location are behind a cage, requiring either a halberd or other ranged methods'.",
+        "evidence": {
+          "multi": "Slayer task/Greater demons table row, Ogre Enclave: Multicombat No",
+          "cannon": "Slayer task/Greater demons table row, Ogre Enclave: Cannonable Yes",
+          "requirements": "'(requires Watchtower quest to be completed until the point where you can access the enclave)' (Greater demon, Strategies)"
+        }
+      },
+      {
+        "name": "Entrana Dungeon",
+        "displayName": "Entrana Dungeon (2 demons, no weapons allowed)",
+        "rank": 10,
+        "multi": false,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "Only 2 demons (2 LocLine pins). 'Due to not being able to take weapons and armour to Entrana, it is not advisable to complete a Slayer Task there' (task table). Safespot 'behind the burnt corpses' (Greater demon).",
+        "evidence": {
+          "multi": "Slayer task/Greater demons Location comparison table, Entrana Dungeon row: Multicombat No",
+          "cannon": "Dwarf multicannon#Prohibited areas lists 'Entrana'; Entrana page: 'Some items without bonuses or which can't be equipped are still not allowed:' with {{plink|Dwarf multicannon|pic=Cannon barrels}} in that table (Entrana). Overrides the Slayer task/Greater demons Location comparison row Cannonable Yes. Changed True -> False in the consolidation pass (2026-09-23).",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Sisterhood Sanctuary",
+        "displayName": "Sisterhood Sanctuary beneath Slepe (4 demons)",
+        "rank": 11,
+        "multi": "unknown",
+        "cannon": "unknown",
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "4 level-92 demons (Greater demon LocLine, 4 pins; Sisterhood Sanctuary monster list '4 greater demons'). Not in the task page location table. Reached via Slepe (Drakan's medallion 'Slepe' option after using a Slepey tablet, or Ver Sinhaza then run north).",
+        "evidence": {
+          "multi": "not stated on the Sisterhood Sanctuary page; not in the task table",
+          "cannon": "not stated; not in the Dwarf multicannon prohibited list",
+          "requirements": "not stated on the pages read"
+        }
+      }
+    ],
+    "notes": "Konar assigns greater demons at Catacombs of Kourend, Chasm of Fire, Isle of Souls Dungeon, Karuulm Slayer Dungeon and Brimhaven Dungeon (Konar quo Maten task table); Krystilia sends players to the Wilderness only. Slayer XP: 87 (level 92), 115/120/130 (Catacombs), 120 (Wilderness Slayer Cave), Skotizo 618.5, K'ril 350.5, Tormented Demon 1,065. 'Greater Challenge' unlock (100 points) raises assignments to 200-250. Entrana Dungeon and Sisterhood Sanctuary also have demons but Entrana bans weapons. The Judge of Yama counts during A Kingdom Divided. Konar's own task table lists greater demons at 75 combat (the task page infobox and the Slayer task row say 70). 'Konar will not be able to assign special locations, such as the ability to kill Tormented Demons as part of a greater demon assignment' (Konar quo Maten).",
+    "_verification": {
+      "corrections": [
+        "Added Entrana Dungeon (task table: 2 demons, single, cannonable, weapons cannot be brought) and Sisterhood Sanctuary (monster page LocLine only, 4 demons, multi/cannon unknown) so the list covers every Greater demon LocLine.",
+        "Chasm of Fire count clarified (task table 16 vs Chasm page/LocLine 17) and the 'middle floor' claim is now backed by the Chasm of Fire safespot sentence.",
+        "Wilderness Slayer Cave level conflict recorded: cave inhabitants table 29-32 (kept) versus task table 'Level 28 wilderness'.",
+        "Confirmed: page title, slayxp 87/115/120/120/130, assignedby krystilia,chaeldar,konar,nieve,duradel, Combat 70, Water 40% and dmagic -10, no immunities, alternatives (K'ril, Tstanon Karlak, Skotizo, Tormented Demon) on both the task page and the Slayer task row, Skotizo 618.5 / K'ril 350.5 / Tormented 1,065 XP, Konar locations (Catacombs, Chasm, Isle of Souls, Karuulm, Brimhaven) with Skotizo substitute, all quoted multi/cannon sentences found on their pages, Ogre Enclave Watchtower requirement, Demonic Ruins level 44-48 and Lava Maze Dungeon 41-47."
+      ],
+      "confirmed": 30,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Green dragons",
+    "wikiTaskPage": "Slayer task/Green dragons",
+    "monsterPages": [
+      "Green dragon"
+    ],
+    "bossTask": false,
+    "summary": "A Krystilia-only Wilderness task (52 combat, partial Dragon Slayer I) so every kill must be in the Wilderness; Corsair Cove green dragons do not count. They melee and breathe dragonfire, so bring an anti-dragon or dragonfire shield and antifire, and since they are large they are usually safespotted with ranged or a halberd. The safest spot is the cluster of three dragons below level 20 just west of the Dark Warriors' Fortress where a teleport tab escapes any PKer; the wiki says most of the other dragons, including the largest group (11) east of the Bone Yard hunter area, are above the level 20 line, so carry a level 30 teleport such as a glory or royal seed pod.",
+    "recommendedStyle": "Ranged",
+    "styleNotes": "Dragons: weak to dragonbane weapons and 50% weak to water spells; melee (slash) plus dragonfire up to 50 without protection; stab defence 0; not immune to poison, venom or cannon.",
+    "requiredItems": [
+      "Anti-dragon shield, dragonfire shield/ward or ancient wyvern shield",
+      "Antifire potion (with a shield for full protection)"
+    ],
+    "usefulItems": [
+      "Level 30 teleport such as an amulet of glory or royal seed pod (escape above level 20)",
+      "Dragonbane weapon (dragon hunter lance/crossbow)",
+      "Looting bag"
+    ],
+    "superior": null,
+    "alternatives": [],
+    "xpPerKill": 75,
+    "locations": [
+      {
+        "name": "West of the Dark Warriors' Fortress",
+        "displayName": "West of the Dark Warriors' Fortress (below level 20, 3 dragons)",
+        "rank": 1,
+        "multi": false,
+        "cannon": true,
+        "wilderness": true,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": 19,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "'A small cluster of three dragons can be found below level 20 Wilderness just west of the Dark Warriors' Fortress, making it ideal for killing with good attention, as the use of a teleport tab is enough to escape any hostile players.' Task table marks it not safespottable. Exact level range not stated; the fortress itself is level 14-16.",
+        "evidence": {
+          "multi": "Slayer task/Green dragons Location Comparison table, 'Wilderness (West of Dark Warriors' Fortress)' row: Multicombat No (note: 'The Dark Warriors' Fortress' itself is in the Multicombat area list)",
+          "cannon": "Slayer task/Green dragons table row: Cannonable Yes",
+          "requirements": "Slayer task list row for Green dragons: 'Dragon Slayer I (partially)', 'Combat 52' (Slayer task)"
+        }
+      },
+      {
+        "name": "East of the Bone Yard Hunter area",
+        "displayName": "East of the Bone Yard hunter area / south of Venenatis (11 dragons)",
+        "rank": 2,
+        "multi": false,
+        "cannon": true,
+        "wilderness": true,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "'In the Wilderness. Largest concentration of green dragons.' (11 LocLine pins). Safespottable per the task table. The task page says 'A majority of dragons are above the level 20 line, thus a level 30 teleport such as an amulet of glory or royal seed pod is recommended'; the exact Wilderness level of this cluster is not stated on the pages read.",
+        "evidence": {
+          "multi": "Slayer task/Green dragons table, 'Wilderness (South of Venenatis)' row: Multicombat No",
+          "cannon": "Slayer task/Green dragons table row: Cannonable Yes",
+          "requirements": "Slayer task list row: 'Dragon Slayer I (partially)', 'Combat 52' (Slayer task)"
+        }
+      },
+      {
+        "name": "Wilderness Slayer Cave",
+        "displayName": "Wilderness Slayer Cave – level 88 green dragons (level 19-27 Wilderness)",
+        "rank": 3,
+        "multi": true,
+        "cannon": true,
+        "wilderness": true,
+        "wildernessLevelMin": 19,
+        "wildernessLevelMax": 27,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "6 level-88 dragons (100 Slayer XP each) with the improved cave drop table; 'Only places where the level-88 variant is found.' Multi and cannonable, but the cave is a PK hotspot.",
+        "evidence": {
+          "multi": "'Multicombat area in the Wilderness, fast experience if using Wilderness weapons' (Slayer task/Hellhounds location table, Wilderness Slayer Cave row: Multicombat Yes); 'The cave is the only multi-combat spot where the cannon can be used for some monsters.' (Wilderness Slayer Cave); Slayer task/Green dragons table row: Multicombat Yes",
+          "cannon": "'it's possible to use the Dwarf multicannon inside the dungeon' (Wilderness Slayer Cave); task table row: Cannonable Yes",
+          "requirements": "Slayer task list row: 'Dragon Slayer I (partially)', 'Combat 52' (Slayer task)"
+        }
+      },
+      {
+        "name": "North of the Graveyard of Shadows",
+        "displayName": "North of the Graveyard of Shadows (5 dragons, near Ferox Enclave)",
+        "rank": 4,
+        "multi": "unknown",
+        "cannon": "unknown",
+        "wilderness": true,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "'In the Wilderness. Close to Ferox Enclave.' (5 LocLine pins). The task table lists multi, cannon and safespot as Unknown. The Multicombat area page only says the Wilderness is multi 'at or around ... The Graveyard of Shadows', which does not prove the dragons north of it are in multi. Level not stated on the pages read.",
+        "evidence": {
+          "multi": "Slayer task/Green dragons table row: Multicombat Unknown; 'Several places in the Wilderness including the areas at or around: ... The Graveyard of Shadows' (Multicombat area) is not specific enough to confirm the dragon spawns, so left unknown",
+          "cannon": "Slayer task/Green dragons table row: Cannonable Unknown; not in the Dwarf multicannon prohibited list",
+          "requirements": "Slayer task list row: 'Dragon Slayer I (partially)', 'Combat 52' (Slayer task)"
+        }
+      },
+      {
+        "name": "South of the Lava Maze",
+        "displayName": "South of the Lava Maze (5 dragons, above level 30)",
+        "rank": 5,
+        "multi": "unknown",
+        "cannon": true,
+        "wilderness": true,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "'The dragons near the Lava Maze are above level 30 Wilderness, and thus it is not recommended to kill them there.' (5 LocLine pins). 'The Lava Maze is a maze located deep in the Wilderness, around level 40-45' (Lava Maze). The task table lists multi as Unknown; the Multicombat area page names 'areas at or around ... The Lava Maze' but not these spawns specifically.",
+        "evidence": {
+          "multi": "Slayer task/Green dragons table row: Multicombat Unknown; Multicombat area list entry 'The Lava Maze' is about the maze area, not proven for the dragons south of it",
+          "cannon": "Slayer task/Green dragons table row: Cannonable Yes",
+          "requirements": "Slayer task list row: 'Dragon Slayer I (partially)', 'Combat 52' (Slayer task)"
+        }
+      }
+    ],
+    "notes": "Krystilia only (Infobox Slayer: krystilia 65-100). 'As Krystilia is the only Slayer master to assign green dragons, they must be fought in the Wilderness, and other variants outside the Wilderness do not count' - the Corsair Cove Dungeon / Myths' Guild dragons (Dragon Slayer II) are excluded. The Slayer task list row names Baby green dragon, Brutal green dragon and Elvarg as alternatives, but the Baby green dragon page states 'Baby green dragons do not count towards a green dragons Slayer assignment, as only Krystilia assigns green dragons', so alternatives are left empty. Wilderness level minimum for the Dark Warriors' Fortress cluster is left null because the pages only say 'below level 20' (the fortress itself is 'level 14 to 16 multi-combat Wilderness').",
+    "_verification": {
+      "corrections": [
+        "North of the Graveyard of Shadows: multi downgraded True -> unknown (task table says Unknown; the Multicombat area list only names the surrounding area).",
+        "South of the Lava Maze: multi downgraded True -> unknown for the same reason.",
+        "Summary and Bone Yard notes reworded: the wiki says 'A majority of dragons are above the level 20 line', it does not state the level of the 11-dragon cluster.",
+        "Alternatives kept empty: Slayer task row lists baby/brutal green dragons and Elvarg, but the Baby green dragon page explicitly says they do not count.",
+        "Confirmed: page title, all 5 Wilderness LocLines present, slayxp 75 (level 88 variant 100), Combat 52 + partial Dragon Slayer I, Water 50%, dstab 0, max hit 8 slash / 50 dragonfire, Wilderness Slayer Cave 19-27 and 6 spawns, Dark Warriors' Fortress cluster of three below level 20, all cannon values against the task table."
+      ],
+      "confirmed": 18,
+      "downgraded": 2
+    }
+  },
+  {
+    "task": "Gryphons",
+    "wikiTaskPage": "Slayer task/Gryphons",
+    "monsterPages": [
+      "Gryphon",
+      "Dire gryphon",
+      "Shellbane gryphon",
+      "Gryphons (dungeon)"
+    ],
+    "bossTask": false,
+    "summary": "A 51 Slayer task on the Great Conch (Troubled Tortugans and 45 Sailing) from Vannaka, Chaeldar and Mortimer, or Nieve/Duradel after buying Wings Spread. Gryphons melee and have a knockback special that hurts if your equipped weight is under 30 kg, so wear heavy gear; they are weakest to stab melee and 50% weak to air spells. The best method is the south-western multicombat room of the eastern task-only cave with a cannon and a venator bow or melee; the western cave has a full safespot. A tortugan shield is only required for the dire gryphon superior and the Shellbane gryphon boss.",
+    "recommendedStyle": "Melee",
+    "styleNotes": "Weakest to melee, ideally stab (stab defence 10, magic defence 100); 50% air spell weakness; equipped weight of 30 kg or more stuns the special instead of knocking you back; not immune to poison, venom, cannon or thralls.",
+    "requiredItems": [
+      "Equipment weighing at least 30 kg equipped (avoids the knockback special)"
+    ],
+    "usefulItems": [
+      "Tortugan shield (required for the dire gryphon and Shellbane gryphon; heavy)",
+      "Dwarf multicannon",
+      "Venator bow",
+      "Granite ring / black mask (i) to reach 30 kg in ranged gear"
+    ],
+    "superior": "Dire gryphon",
+    "alternatives": [
+      "Shellbane gryphon"
+    ],
+    "xpPerKill": 110,
+    "locations": [
+      {
+        "name": "Gryphons (task-only dungeon)",
+        "displayName": "Great Conch – eastern gryphon cave (task-only, multi room in the south-west)",
+        "rank": 1,
+        "multi": "partial",
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Troubled Tortugans",
+          "45 Sailing to reach the Great Conch",
+          "51 Slayer",
+          "On-task only"
+        ],
+        "notes": "18 gryphons. 'They are best killed in the south-western multicombat room of the eastern task-only cave using a venator bow and a dwarf multicannon.' 'The multicombat area features a centrally placed skeleton, which blocks line of sight to part of this section of the cave for cannons and other ranged attacks.'",
+        "evidence": {
+          "multi": "'Task-only. The south-west part of the dungeon is multicombat, the rest is single-way combat.' (Slayer task/Gryphons); 'The south west part of this dungeon is a multicombat area. The other two thirds of the dungeon is single-way combat.' (Gryphons (dungeon))",
+          "cannon": "'A Dwarf multicannon can be used in both dungeons.' (Gryphons (dungeon)); task table row: Cannonable Yes",
+          "requirements": "'They inhabit the Great Conch and require completion of the Troubled Tortugans quest and 45 Sailing to access.' (Gryphon); Slayer task list row: 'Troubled Tortugans', 'Combat 50', Slayer 51 (Slayer task)"
+        }
+      },
+      {
+        "name": "Gryphons (dungeon)",
+        "displayName": "Great Conch – western gryphon cave (off-task allowed, safespot)",
+        "rank": 2,
+        "multi": "partial",
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Troubled Tortugans",
+          "45 Sailing to reach the Great Conch",
+          "51 Slayer"
+        ],
+        "notes": "18 gryphons; 'The south part of the dungeon is multicombat, the rest is single-way combat. Multicombat area is well suited for use of a Dwarf multicannon.' Gallery caption: 'Gryphon safe spot on the Great Conch island. It is the cave on the west side. Avoids all attacks.'",
+        "evidence": {
+          "multi": "'The south part of the dungeon is multicombat, the rest is single-way combat.' (Slayer task/Gryphons)",
+          "cannon": "'A Dwarf multicannon can be used in both dungeons.' (Gryphons (dungeon)); task table row: Cannonable Yes",
+          "requirements": "'require completion of the Troubled Tortugans quest and 45 Sailing to access' (Gryphon)"
+        }
+      },
+      {
+        "name": "Shellbane Gryphon Cave",
+        "displayName": "Great Conch – Shellbane Gryphon Cave (task-only boss)",
+        "rank": 3,
+        "multi": false,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Troubled Tortugans",
+          "45 Sailing",
+          "Gryphon Slayer task",
+          "Tortugan shield"
+        ],
+        "notes": "'It is a solo instanced boss' found 'in the centre lair and is only attackable on-task' (Slayer task/Gryphons); 400 Slayer XP per kill. Task-only boss; no fight details recorded.",
+        "evidence": {
+          "multi": "Slayer task/Gryphons Locations table, Shellbane Gryphon Cave row: Multicombat No",
+          "cannon": "Dwarf multicannon prohibited list: 'Shellbane Gryphon Cave - The ground is too unstable to set up a cannon here.' (Dwarf multicannon); task table row: Cannonable No",
+          "requirements": "'A boss variant, the Shellbane gryphon, can be found in the centre lair and is only attackable on-task.' and 'those who are fighting their superior, the dire gryphon, or the boss are required to use [the tortugan shield]' (Slayer task/Gryphons)"
+        }
+      }
+    ],
+    "notes": "Assigned by Vannaka, Chaeldar and Mortimer after Troubled Tortugans; Nieve and Duradel need the 'Wings Spread' unlock (80 points); 'Gryphon and on' (50 points) adds 80 to the amount. Konar does not assign gryphons. 'gryphons are Vannaka's highest weighted task.' Dire gryphon gives 2,800 Slayer XP and needs the tortugan shield or you take guaranteed damage after every hit.",
+    "_verification": {
+      "corrections": [
+        "No factual corrections. Confirmed: page title, 51 Slayer / Combat 50 / Troubled Tortugans, 45 Sailing (Gryphon), masters Vannaka/Chaeldar/Mortimer plus Nieve/Duradel via 'Wings Spread' (80 points), 'Gryphon and on' +80, slayxp 110, superior Dire gryphon (2,800 XP, Superior slayer monster list), Shellbane gryphon 400 XP, dstab 10 / dmagic 100 / air 50%, 30 kg threshold and stun counter, tortugan shield needed only for superior and boss, both dungeon rows multi Yes with south/south-west rooms only, 'A Dwarf multicannon can be used in both dungeons', Shellbane cave in the cannon prohibited list, 'gryphons are Vannaka's highest weighted task'.",
+        "multi kept as 'partial' for both caves because the wiki says only one southern room of each cave is multicombat."
+      ],
+      "confirmed": 20,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Harpie bug swarms",
+    "wikiTaskPage": "Harpie Bug Swarm",
+    "monsterPages": [
+      "Harpie Bug Swarm"
+    ],
+    "bossTask": false,
+    "summary": "A Vannaka-only task needing 33 Slayer and 33 Firemaking; you cannot damage them unless a lit bug lantern is equipped. They are aggressive up to combat 93 and very accurate for up to 6, so bring food or use Protect from Melee. The wiki now recommends the swarms east of the Colossal Wyrm Remains in Varlamore, which have safespots, no poisonous neighbours and a quetzal landing site next to a bank, over the classic Tai Bwo Wannai spot on Karamja where a cannon can be used but antipoison is needed.",
+    "recommendedStyle": "Any",
+    "styleNotes": "Damage requires an equipped lit bug lantern (which also applies to cannon damage); 50% fire spell weakness; low defence bonuses (5-10); not immune to poison, venom or cannon.",
+    "requiredItems": [
+      "Lit bug lantern (must be lit and equipped; 33 Firemaking)"
+    ],
+    "usefulItems": [
+      "Nature runes for alching drops",
+      "Food or prayer for Protect from Melee",
+      "Antipoison (Karamja spot only)"
+    ],
+    "superior": null,
+    "alternatives": [],
+    "xpPerKill": 25,
+    "locations": [
+      {
+        "name": "East of the Colossal Wyrm Remains",
+        "displayName": "East of the Colossal Wyrm Remains (Varlamore, recommended)",
+        "rank": 1,
+        "multi": "unknown",
+        "cannon": "unknown",
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Lit bug lantern equipped"
+        ],
+        "notes": "18 spawns. '(Recommended) Building a quetzal landing site at Colossal Wyrm Remains opens up a very convenient, quick shortcut to a bank at Auburnvale and a prayer altar at The Teomat.' Nearest fairy ring is AJP; 'this location is very accessible, offers several safespots, and is free of dangers associated with Karamja'.",
+        "evidence": {
+          "multi": "not stated on Harpie Bug Swarm or Colossal Wyrm Remains pages; not in the 'List of multicombat areas' (Multicombat area)",
+          "cannon": "not stated for this location; not in the Dwarf multicannon prohibited list",
+          "requirements": "'A lit bug lantern... is required to damage these monsters (the lantern must be lit and equipped)' (Harpie Bug Swarm)"
+        }
+      },
+      {
+        "name": "North-east of Tai Bwo Wannai",
+        "displayName": "North-east of Tai Bwo Wannai, Karamja (fairy ring DKP)",
+        "rank": 2,
+        "multi": "unknown",
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Lit bug lantern equipped"
+        ],
+        "notes": "14 spawns. Fairy ring DKP then run south past the Shaikahan and aggressive jogres; 'There are two safespots: one between the two trees to the south behind the small jungle plant, and another to the north on the beaches of the fairy ring'. 'It is highly recommended to bring antipoison due to the presence of other aggressive, poisonous creatures.' Tai Bwo Wannai Trio unlocks the nearby Tribal Statue prayer recharge.",
+        "evidence": {
+          "multi": "not stated on Harpie Bug Swarm or Tai Bwo Wannai pages; not in the 'List of multicombat areas' (Multicombat area)",
+          "cannon": "'You can use a dwarf multicannon in this location, but you have to equip the bug lantern for the cannon to deal damage.' (Harpie Bug Swarm)",
+          "requirements": "'A lit bug lantern... is required to damage these monsters' (Harpie Bug Swarm)"
+        }
+      }
+    ],
+    "notes": "No 'Slayer task/Harpie bug swarms' page exists (also tried 'Harpie Bug Swarms' and singular); data comes from the Harpie Bug Swarm monster page and the Slayer task list row ('Lit bug lantern', 'Combat 45', 'Firemaking 33', assigned by Vannaka). 'If you do not have 33 Firemaking, you cannot be assigned harpie bug swarms as a Slayer task.' Konar does not assign them.",
+    "_verification": {
+      "corrections": [
+        "No factual corrections. Confirmed: no 'Slayer task/Harpie bug swarms' page exists (API missingtitle this run), monster page title 'Harpie Bug Swarm', both LocLines (Tai Bwo Wannai 14 pins, Colossal Wyrm Remains 18 pins), slayxp 25, slaylvl 33, assignedby vannaka, Slayer task row (Lit bug lantern, Combat 45, Firemaking 33), Fire 50%, defence bonuses 5-10, aggressive until combat 93, max hit 6, '(Recommended)' Varlamore section with quetzal landing site/Auburnvale bank/Teomat altar/fairy ring AJP, both Tai Bwo Wannai safespots, cannon-needs-lantern sentence, antipoison advice, Tribal Statue after Tai Bwo Wannai Trio.",
+        "Multi left unknown at both spots (not stated on any page read, neither in the multicombat list); cannon at Colossal Wyrm Remains left unknown (only the Karamja spot has a cannon sentence)."
+      ],
+      "confirmed": 17,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Hellhounds",
+    "wikiTaskPage": "Slayer task/Hellhounds",
+    "monsterPages": [
+      "Hellhound"
+    ],
+    "bossTask": false,
+    "summary": "A mid-to-high level task from Vannaka, Chaeldar, Konar, Nieve, Duradel and Krystilia. Hellhounds only bite with accurate melee, so either safespot them (they are 2x2 and get stuck on rocks) or keep Protect from Melee on; they are demons, so Arclight/Emberlight work well. The Stronghold Slayer Cave is the standard spot (four rooms, task-only, cannon allowed), the Catacombs of Kourend are multicombat for AFK venator bow or burst plus ancient shard and totem drops, and Wilderness tasks are done in the Wilderness Slayer Cave. Their draw is the 1/64 hard clue rate (1/32 with an imbued ring of wealth in the Wilderness).",
+    "recommendedStyle": "Any",
+    "styleNotes": "Demonic, so weak to demonbane weapons; 50% water spell weakness; melee (stab) only, so Protect from Melee negates everything; no poison, venom, cannon or thrall immunity.",
+    "requiredItems": [],
+    "usefulItems": [
+      "Arclight or Emberlight",
+      "Dwarf multicannon (Stronghold Slayer Cave, Taverley, Karuulm, Wilderness Slayer Cave)",
+      "Venator bow (Catacombs AFK)",
+      "Soul bearer (banks ensouled heads)",
+      "Ring of wealth (i) in the Wilderness for 1/32 hard clues"
+    ],
+    "superior": null,
+    "alternatives": [
+      "Cerberus",
+      "Skeleton Hellhound (Vet'ion)",
+      "Greater Skeleton Hellhound (Vet'ion)",
+      "Skeleton Hellhound (Calvar'ion)",
+      "Greater Skeleton Hellhound (Calvar'ion)"
+    ],
+    "xpPerKill": 116,
+    "locations": [
+      {
+        "name": "Stronghold Slayer Cave",
+        "displayName": "Stronghold Slayer Cave (task-only, cannon)",
+        "rank": 1,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "On a hellhound task (task-only area)"
+        ],
+        "notes": "13 hellhounds in 'four rooms of three or four hellhounds in each one, and a dwarf multicannon can be set up in their caves.' Entrance next to Nieve/Steve in the Gnome Stronghold; the Slayer ring teleports to it. 'players can only attack the Slayer monster they were assigned'.",
+        "evidence": {
+          "multi": "Slayer task/Hellhounds Location Comparison table, Stronghold Slayer Dungeon row: Multicombat No (Stronghold Slayer Cave page makes no multi statement)",
+          "cannon": "'A dwarf multicannon can be used in the dungeon.' (Stronghold Slayer Cave); LocLine ref 'Dwarf multicannon can be placed.' (Hellhound)",
+          "requirements": "LocLine ref 'Can only be fought while on a Hellhound Slayer task.' (Hellhound)"
+        }
+      },
+      {
+        "name": "Catacombs of Kourend",
+        "displayName": "Catacombs of Kourend – hellhound room (multi, no cannon)",
+        "rank": 2,
+        "multi": true,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [],
+        "notes": "9 hellhounds near the entrance; 'Killing Hellhounds here also gives access to Ancient shards and Dark totem pieces'. 'ensure you stand on the eastern side of the hallway, otherwise a hellhound can enter and attack.' Reset aggression by running south and up the vine to the Giants' Den.",
+        "evidence": {
+          "multi": "'As this particular dungeon is a multicombat area (excluding the brutal dragon area), it is generally recommended to use Prayer or high-healing methods' (Catacombs of Kourend); task table row: Multicombat Yes",
+          "cannon": "'The catacombs do not allow for a cannon, but is a Multicombat area' (Slayer task/Hellhounds); Dwarf multicannon prohibited list: 'Catacombs of Kourend - An ancient power won't let you set up a cannon here.' (Dwarf multicannon)",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Wilderness Slayer Cave",
+        "displayName": "Wilderness Slayer Cave – hellhounds (level 18-24 Wilderness, sources disagree)",
+        "rank": 3,
+        "multi": true,
+        "cannon": true,
+        "wilderness": true,
+        "wildernessLevelMin": 18,
+        "wildernessLevelMax": 24,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "9 level-136 hellhounds (150 Slayer XP; 9 LocLine pins and 9 in the cave inhabitants table, although the task page prose says 'a group of five'). Smouldering stone rate 'increased by 50%' and access to the cave drop table. Wilderness level is inconsistent on the wiki: the cave inhabitants table says 21-24, the task page table row says 'Wilderness (Level 18-22)' and its prose says the hellhounds are 'below level 20 Wilderness'; the range here is the union. Safespot 'by running to the gap in the stalagmites on the eastern wall in level 21 Wilderness'. 'the cave itself is a very popular player killing hotspot'. Usually only for Krystilia tasks.",
+        "evidence": {
+          "multi": "'Multicombat area in the Wilderness, fast experience if using Wilderness weapons' (Slayer task/Hellhounds location table, Wilderness Slayer Cave row: Multicombat Yes); 'The cave is the only multi-combat spot where the cannon can be used for some monsters.' (Wilderness Slayer Cave)",
+          "cannon": "'it's possible to use the Dwarf multicannon inside the dungeon' (Wilderness Slayer Cave); LocLine ref 'Dwarf multicannon can be placed.' (Hellhound)",
+          "requirements": "not stated",
+          "wilderness": "Wilderness Slayer Cave inhabitants table: wildernesslevel 21-24; Slayer task/Hellhounds table row: 'Wilderness (Level 18-22), Wilderness Slayer Cave'"
+        }
+      },
+      {
+        "name": "Karuulm Slayer Dungeon",
+        "displayName": "Karuulm Slayer Dungeon – hellhounds (boots of stone)",
+        "rank": 4,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Boots of stone / brimstone / granite boots unless Elite Kourend & Kebos Diary is complete"
+        ],
+        "notes": "12 hellhounds; safespot with ranged 'at the entrance by staying against the north wall and luring the two northern spawn Hellhounds towards the entrance.'",
+        "evidence": {
+          "multi": "'The dungeon itself is single-way combat.' (Karuulm Slayer Dungeon); task table row: Multicombat No",
+          "cannon": "'A dwarf multicannon can be used in all areas here except the wyrm and Alchemical Hydra areas' (Karuulm Slayer Dungeon); LocLine ref 'Dwarf multicannon can be placed.' (Hellhound)",
+          "requirements": "'Players who haven't completed the Elite Kourend & Kebos Diary must wear the boots of stone, boots of brimstone or granite boots' (Slayer task/Hellhounds)"
+        }
+      },
+      {
+        "name": "Taverley Dungeon",
+        "displayName": "Taverley Dungeon – hellhound area (80 Agility shortcut)",
+        "rank": 5,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [],
+        "notes": "13 hellhounds deep in the dungeon; '80 Agility (boostable at 75 with summer pie) is highly recommended.' Easily safespotted on rocks and columns. Cerberus is the Konar substitute when assigned here.",
+        "evidence": {
+          "multi": "Slayer task/Hellhounds table, Taverley Dungeon row: Multicombat No",
+          "cannon": "LocLine ref 'Dwarf multicannon can be placed.' (Hellhound); task table row: Cannonable Yes",
+          "requirements": "not stated (80 Agility recommended, not required)"
+        }
+      },
+      {
+        "name": "Witchaven Dungeon",
+        "displayName": "Witchaven Dungeon (short puzzle on first visit)",
+        "rank": 6,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [],
+        "notes": "8 hellhounds; 'Long distance from a bank or convenient teleport makes it less recommended' and 'A short puzzle is required to access the Hellhounds area for the first time.' Safespot near the entrance.",
+        "evidence": {
+          "multi": "Slayer task/Hellhounds table, Witchaven Dungeon row: Multicombat No",
+          "cannon": "Slayer task/Hellhounds table, Witchaven Dungeon row: Cannonable Yes",
+          "requirements": "'A short puzzle is required to access the Hellhounds area for the first time.' (Slayer task/Hellhounds)"
+        }
+      },
+      {
+        "name": "Outside of the Wilderness Resource Area",
+        "displayName": "Wilderness level 49-55 outside the Resource Area",
+        "rank": 7,
+        "multi": false,
+        "cannon": true,
+        "wilderness": true,
+        "wildernessLevelMin": 49,
+        "wildernessLevelMax": 55,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "6 hellhounds; 'High danger of Player killing due to high traffic and high Wilderness level'; the Edgeville lever gives quick bank access.",
+        "evidence": {
+          "multi": "Slayer task/Hellhounds table, 'Wilderness (Level 49-55), near the Resource Area' row: Multicombat No",
+          "cannon": "LocLine ref 'Dwarf multicannon can be placed.' (Hellhound); task table row: Cannonable Yes",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "God Wars Dungeon",
+        "displayName": "God Wars Dungeon – level 127 hellhounds (Zamorak followers)",
+        "rank": 8,
+        "multi": true,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Partial Troll Stronghold (or Easy Combat Achievements)",
+          "Rope on first entry"
+        ],
+        "notes": "5 stronger hellhounds that count as Zamorak kill count; 'Highly discouraged due to generally far and sparse spawns.' Wear Zamorak-aligned items to avoid aggression.",
+        "evidence": {
+          "multi": "'God Wars Dungeon' appears in the 'List of multicombat areas' (Multicombat area); task table row: Multicombat Yes",
+          "cannon": "Slayer task/Hellhounds table, God Wars Dungeon row: Cannonable No; 'inhabitants of the God Wars Dungeon may also destroy a cannon' (Dwarf multicannon)",
+          "requirements": "'Accessing it requires partial completion of Troll Stronghold (defeating Dad) or full completion of the Easy Combat Achievements' and 'Rope (to access the dungeon itself for the first time)' (God Wars Dungeon)"
+        }
+      },
+      {
+        "name": "Buccaneers' Laboratory",
+        "displayName": "Buccaneers' Laboratory (76 Sailing, multi, cannon)",
+        "rank": 9,
+        "multi": true,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "76 Sailing"
+        ],
+        "notes": "5 hellhounds; 'Requires 76 Sailing to access the Island. The Rowboat can be used to travel to Buccaneers' Haven from Pirates' Cove.' Not safespottable.",
+        "evidence": {
+          "multi": "'Since this area is multi-combat you're able to place and use the dwarf multicannon.' (Slayer task/Hellhounds)",
+          "cannon": "'Since this area is multi-combat you're able to place and use the dwarf multicannon.' (Slayer task/Hellhounds)",
+          "requirements": "'Requires 76 Sailing to access the Island.' (Slayer task/Hellhounds)"
+        }
+      },
+      {
+        "name": "Charred Dungeon",
+        "displayName": "Charred Dungeon (60 Sailing, multi, cannon)",
+        "rank": 10,
+        "multi": true,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "60 Sailing",
+          "Rope on first entry (a rope spawns on the island)"
+        ],
+        "notes": "5 hellhounds (5 LocLine pins). 'Requires 60 Sailing to access. Discouraged due to few spawns.' (task table). Not safespottable per the task table.",
+        "evidence": {
+          "multi": "'The entire dungeon, barring the lava strykewyrms, is a multicombat area.' (Charred Dungeon); task table row: Multicombat Yes",
+          "cannon": "'A dwarf multicannon can be used throughout the dungeon' (Charred Dungeon); task table row: Cannonable Yes",
+          "requirements": "'requires level 60 Sailing to dock at. Rope is required when entering the dungeon the first time. However, there is a rope item spawn on the island' (Charred Dungeon)"
+        }
+      }
+    ],
+    "notes": "Konar assigns hellhounds at Karuulm Slayer Dungeon, Catacombs of Kourend, Stronghold Slayer Dungeon, Taverley Dungeon and Witchaven Dungeon, with Cerberus as the Taverley substitute (Konar quo Maten). Combat requirement conflict: the task page infobox says 65 combat while the Slayer task list row and Konar's table say 75. Cerberus needs 91 Slayer (86 with a wild pie boost). 'Revenant hellhounds do not count towards a normal hellhound task.' Skeleton Hellhounds and Greater Skeleton Hellhounds from Vet'ion/Calvar'ion count (task page variants table; Krystilia task list footnote). The task table also lists 'Wilderness (Level 31-35), near Vet'ion' (4 skeleton hellhounds per boss kill, 'Highly discouraged').",
+    "_verification": {
+      "corrections": [
+        "Added Charred Dungeon (Hellhound LocLine + task table: 5 hellhounds, multi, cannon, 60 Sailing) which the curated locations omitted.",
+        "Wilderness Slayer Cave hellhound level widened to 18-24 because the cave page (21-24) and the task page (18-22, 'below level 20') disagree.",
+        "Added the Greater Skeleton Hellhound (Vet'ion/Calvar'ion) alternatives listed in the task page variants table and Krystilia's footnote.",
+        "Confirmed: page title, slayxp 116/116/150, assignedby (all six masters), Combat 65 (task page) vs 75 (list/Konar), Water 50%, stab attack, hard clue 1/64 -> 1/32 with ring of wealth (i) in the Wilderness, all LocLine locations now covered, every quoted multi/cannon/requirement sentence (Stronghold Slayer Cave, Catacombs, Karuulm, Taverley 80 Agility, Witchaven puzzle, Resource Area 49-55, God Wars Dungeon, Buccaneers' Laboratory 76 Sailing)."
+      ],
+      "confirmed": 30,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Hill giants",
+    "wikiTaskPage": "Slayer task/Hill giants",
+    "monsterPages": [
+      "Hill Giant",
+      "Cyclops",
+      "Obor"
+    ],
+    "bossTask": false,
+    "summary": "A 25 combat task from Mazchna and Vannaka (Krystilia for the Wilderness). Hill giants only melee for up to 4, have low defence and are aggressive below combat 57, so any style works and they are easy to safespot. Edgeville Dungeon has the most free-to-play spawns and is cannonable, the Shayzien Giant Pit south of fairy ring DJR is the members equivalent, and the Catacombs of Kourend are multicombat with ancient shard and totem drops. Cyclopes and Obor count too.",
+    "recommendedStyle": "Any",
+    "styleNotes": "Crush melee only, max hit 4; 25% earth spell weakness; all defence bonuses 0; not immune to poison, venom or cannon.",
+    "requiredItems": [],
+    "usefulItems": [
+      "Dwarf multicannon (Edgeville Dungeon is a classic cannon spot)",
+      "Brass key (Edgeville Dungeon shortcut entrance)"
+    ],
+    "superior": null,
+    "alternatives": [
+      "Cyclops",
+      "Obor",
+      "Reanimated giant"
+    ],
+    "xpPerKill": 35,
+    "locations": [
+      {
+        "name": "Edgeville Dungeon",
+        "displayName": "Edgeville Dungeon – hill giant room (free-to-play)",
+        "rank": 1,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Brass key for the Barbarian Village-side entrance (or walk in from Edgeville)"
+        ],
+        "notes": "12 giants; 'For free-to-play, the Edgeville Dungeon offers the most spawns'. 'The Edgeville dungeon may be accessed through the entrance located in the house north-east of Barbarian Village and west of the Cooks' Guild if the player has a brass key.' Often crowded on F2P worlds; safespot pictured on the task page.",
+        "evidence": {
+          "multi": "Slayer task/Hill giants Location Comparison table, Edgeville Dungeon row: Multicombat No",
+          "cannon": "'The Dwarf Multicannon can be used here.' (Edgeville Dungeon); 'Hill Giants in the Edgeville Dungeon are a less common target' in the cannon training section (Dwarf multicannon)",
+          "requirements": "'if the player has a brass key' (Hill Giant)"
+        }
+      },
+      {
+        "name": "Giant Pit",
+        "displayName": "Giant Pit south of the Chasm of Fire (fairy ring DJR)",
+        "rank": 2,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "13 giants (task page says 12) in a small enclosure north-west of Shayzien, 'South of Fairy Ring code DJR'; safespottable and cannonable. 'for members, the Shayzien Giant Pit also has numerous spawns.'",
+        "evidence": {
+          "multi": "Slayer task/Hill giants table, Giant Pit row: Multicombat No",
+          "cannon": "Slayer task/Hill giants table, Giant Pit row: Cannonable Yes",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Catacombs of Kourend",
+        "displayName": "Catacombs of Kourend – hill giants and cyclopes (multi, no cannon)",
+        "rank": 3,
+        "multi": true,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "13 hill giants and 6 cyclopes; 'one of the fastest ways to farm for ancient shards and dark totem pieces because of their low hitpoints'.",
+        "evidence": {
+          "multi": "'As this particular dungeon is a multicombat area (excluding the brutal dragon area), it is generally recommended to use Prayer or high-healing methods' (Catacombs of Kourend); task table row: Multicombat Yes",
+          "cannon": "Dwarf multicannon prohibited list: 'Catacombs of Kourend - An ancient power won't let you set up a cannon here.' (Dwarf multicannon); task table row: Cannonable No",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Giants' Plateau",
+        "displayName": "Giants' Plateau east of Al Kharid (free-to-play)",
+        "rank": 4,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "8 giants (7 pins on the monster page); free-to-play area 'east of the Al Kharid General Store... east past the gap in the gate'. Safespot using the orchid.",
+        "evidence": {
+          "multi": "Slayer task/Hill giants table, Giants' Plateau row: Multicombat No",
+          "cannon": "Slayer task/Hill giants table, Giants' Plateau row: Cannonable Yes",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Giants' Den",
+        "displayName": "Giants' Den (Kourend, dark hill giants)",
+        "rank": 5,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "8 dark hill giants; reached from the Catacombs vine or the Shayzien surface entrance. Safespottable.",
+        "evidence": {
+          "multi": "'A dwarf multicannon can be used in the den; however, it is only single-way combat.' (Giants' Den); Slayer task/Hill giants table, Giants' Den row: Multicombat No",
+          "cannon": "'A dwarf multicannon can be used in the den' (Giants' Den); task table row: Cannonable Yes",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Taverley Dungeon",
+        "displayName": "Taverley Dungeon – hill giants",
+        "rank": 6,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "5 giants (Taverley Dungeon monster table: 5 spawns; 5 LocLine pins).",
+        "evidence": {
+          "multi": "Slayer task/Hill giants table, Taverley Dungeon row: Multicombat No",
+          "cannon": "Slayer task/Hill giants table, Taverley Dungeon row: Cannonable Yes",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Deep Wilderness Dungeon",
+        "displayName": "Deep Wilderness Dungeon (level 49-56, single-way)",
+        "rank": 7,
+        "multi": false,
+        "cannon": true,
+        "wilderness": true,
+        "wildernessLevelMin": 49,
+        "wildernessLevelMax": 56,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "6 giants; the dungeon 'is entirely single-way combat and covers level 49 to 56 Wilderness', entered via stairs in a broken house west of the Mage Arena. Krystilia task option.",
+        "evidence": {
+          "multi": "'It is entirely single-way combat and covers level 49 to 56 Wilderness.' (Deep Wilderness Dungeon); task table row: Multicombat No",
+          "cannon": "Slayer task/Hill giants table, Deep Wilderness Dungeon row: Cannonable Yes",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Lava Maze",
+        "displayName": "Lava Maze (level 40-45 Wilderness)",
+        "rank": 8,
+        "multi": "unknown",
+        "cannon": true,
+        "wilderness": true,
+        "wildernessLevelMin": 40,
+        "wildernessLevelMax": 45,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "4 giants inside the maze (4 LocLine pins); webs 'must be cut with a slash weapon or a knife'. 'The Lava Maze is a maze located deep in the Wilderness, around level 40-45.' The task table says single-way while the Multicombat area list names 'The Lava Maze' among multi areas; left unknown.",
+        "evidence": {
+          "multi": "conflict: Slayer task/Hill giants table, Lava Maze row: Multicombat No, versus 'The Lava Maze' in the 'List of multicombat areas' (Multicombat area)",
+          "cannon": "Slayer task/Hill giants table, Lava Maze row: Cannonable Yes",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Bone Yard Hunter area",
+        "displayName": "Bone Yard hunter area (Wilderness, 2 giants)",
+        "rank": 9,
+        "multi": true,
+        "cannon": "unknown",
+        "wilderness": true,
+        "wildernessLevelMin": 17,
+        "wildernessLevelMax": 18,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "Only 2 giants (2 LocLine pins): 'There are two Hill Giants in level 17-18 Wilderness, but the area is unsuitable for training due to the possibility of player killers and its long distance from the nearest bank, found in Ferox Enclave' (Hill Giant).",
+        "evidence": {
+          "multi": "Slayer task/Hill giants table, Bone Yard Hunter area row: Multicombat Yes",
+          "cannon": "Slayer task/Hill giants table, Bone Yard Hunter area row: Cannonable Unknown",
+          "requirements": "not stated",
+          "wilderness": "'There are two Hill Giants in level 17-18 Wilderness' (Hill Giant)"
+        }
+      },
+      {
+        "name": "Avium Savannah",
+        "displayName": "Avium Savannah, Varlamore (multi, cannon)",
+        "rank": 10,
+        "multi": true,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "6 giants 'North-west of Wyrm agility arena'; multicombat, cannonable and safespottable per the task table.",
+        "evidence": {
+          "multi": "Slayer task/Hill giants table, Avium Savannah row: Multicombat Yes",
+          "cannon": "Slayer task/Hill giants table, Avium Savannah row: Cannonable Yes",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "North of the Observatory",
+        "displayName": "North of the Observatory (6 giants)",
+        "rank": 11,
+        "multi": false,
+        "cannon": "unknown",
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "6 giants (6 LocLine pins) north of the Observatory; cannon and safespot listed as Unknown in the task table.",
+        "evidence": {
+          "multi": "Slayer task/Hill giants Location Comparison table, North of the Observatory row: Multicombat No",
+          "cannon": "Slayer task/Hill giants Location Comparison table, North of the Observatory row: Cannonable Unknown",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "South-west of Tree Gnome Stronghold",
+        "displayName": "South-west of the Tree Gnome Stronghold (6 giants)",
+        "rank": 12,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "6 giants (6 LocLine pins); cannonable and safespottable per the task table.",
+        "evidence": {
+          "multi": "Slayer task/Hill giants Location Comparison table, South-west of Tree Gnome Stronghold row: Multicombat No",
+          "cannon": "Slayer task/Hill giants Location Comparison table, South-west of Tree Gnome Stronghold row: Cannonable Yes",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Gnome Maze",
+        "displayName": "Gnome Maze (3 giants)",
+        "rank": 13,
+        "multi": false,
+        "cannon": "unknown",
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "Only 3 giants (3 LocLine pins).",
+        "evidence": {
+          "multi": "Slayer task/Hill giants Location Comparison table, Gnome Maze row: Multicombat No",
+          "cannon": "Slayer task/Hill giants Location Comparison table, Gnome Maze row: Cannonable Unknown",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Warriors' Guild",
+        "displayName": "Warriors' Guild cyclopes (melee only, tokens)",
+        "rank": 14,
+        "multi": false,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Warriors' Guild access (Attack + Strength 130, or 99 in one)",
+          "100 warrior guild tokens to enter (10 per minute)",
+          "Rune defender shown to Lorelai for the basement"
+        ],
+        "notes": "Cyclopes count as hill giants. 12 on the 2nd floor (levels 56/76, 75/100 Slayer XP) and 23 in the basement (level 106, 150 XP). 'Players must attack with melee' - they are immune to Ranged and Magic; chance of defender drops.",
+        "evidence": {
+          "multi": "Slayer task/Hill giants Location Comparison table, Warriors' Guild rows: Multicombat No",
+          "cannon": "Slayer task/Hill giants Location Comparison table, Warriors' Guild rows: Cannonable No",
+          "requirements": "'Cyclopes in the Warriors' Guild require access to said guild (combined Strength and Attack level of 130 or 99 in one of them)' and '100 Warrior guild tokens are required to enter and 10 are deducted every minute' and 'showing a rune defender to Lorelai' (Slayer task/Hill giants)"
+        }
+      },
+      {
+        "name": "God Wars Dungeon",
+        "displayName": "God Wars Dungeon – Bandos' Stronghold cyclopes",
+        "rank": 15,
+        "multi": true,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "70 Strength",
+          "Hammer or dragon warhammer",
+          "Rope on first entry",
+          "Partial Troll Stronghold (or Easy Combat Achievements)"
+        ],
+        "notes": "13 level-81 cyclopes (110 Slayer XP). 'They and nearby monsters are aggressive unless the player wear Bandos-aligned equipment'.",
+        "evidence": {
+          "multi": "Slayer task/Hill giants Location Comparison table, God Wars Dungeon row: Multicombat Yes; 'God Wars Dungeon' in the 'List of multicombat areas' (Multicombat area)",
+          "cannon": "Slayer task/Hill giants Location Comparison table, God Wars Dungeon row: Cannonable No",
+          "requirements": "'Requires level 70 Strength and a hammer or dragon warhammer (and a rope the first time)' (Slayer task/Hill giants); 'Accessing it requires partial completion of Troll Stronghold (defeating Dad) or full completion of the Easy Combat Achievements' and 'Rope (to access the dungeon itself for the first time)' (God Wars Dungeon)"
+        }
+      }
+    ],
+    "notes": "Assigned by Mazchna, Vannaka and Krystilia (Wilderness) per the Slayer task list and the Hill Giant infobox; Konar does not assign hill giants. Cyclopes and Obor count (Slayer task row); Reanimated giants give 35 Slayer XP (task page variants table). Obor needs a giant key on the first visit and gives 129 Slayer XP. The Ardougne Zoo cyclops (1, in an enclosure) also appears in the task table.",
+    "_verification": {
+      "corrections": [
+        "Added the three Hill Giant LocLines missing from the curated list (North of the Observatory 6, South-west of Tree Gnome Stronghold 6, Gnome Maze 3) and the two cyclops spots from the task table (Warriors' Guild, God Wars Dungeon Bandos' Stronghold).",
+        "Lava Maze multi downgraded False -> unknown: the task table says No but the Multicombat area list names the Lava Maze.",
+        "Bone Yard Hunter area Wilderness level set to 17-18 from the Hill Giant page sentence.",
+        "Taverley notes: removed the unsupported 'near the entrance area' phrase.",
+        "Confirmed: page title, slayxp 35, Combat 25, masters, alternatives Cyclops/Obor/Reanimated giant, Earth 25%, all-zero defence bonuses, aggressive below combat 57, Edgeville brass key + cannon, Giant Pit 13 giants and DJR, Giants' Plateau orchid safespot, Deep Wilderness Dungeon 49-56 single-way, Avium Savannah row, Catacombs multi + no cannon."
+      ],
+      "confirmed": 26,
+      "downgraded": 1
+    }
+  },
+  {
+    "task": "Hobgoblins",
+    "wikiTaskPage": "Slayer task/Hobgoblins",
+    "monsterPages": [
+      "Hobgoblin"
+    ],
+    "bossTask": false,
+    "summary": "A 20 combat task from Mazchna and Vannaka. Hobgoblins are aggressive and hit fairly accurately for their level (3 unarmed, 5 for the level 42 spear variant) but have almost no defence, so any style with a little food works. The peninsula west of the Crafting Guild is the classic spot (skills necklace teleport, safespot from the cow field), the peninsula north-east of the Hosidius vinery has the most spawns outside the Wilderness, and the Wilderness Bandit Camp mine has 26 but is single-way and risky.",
+    "recommendedStyle": "Any",
+    "styleNotes": "Crush (level 28) or stab (level 42) melee; defence bonuses 0-1; no elemental weakness listed; not immune to poison, venom or cannon.",
+    "requiredItems": [],
+    "usefulItems": [
+      "Skills necklace (Crafting Guild teleport)",
+      "Telekinetic Grab runes if ranging from the cow field"
+    ],
+    "superior": null,
+    "alternatives": [],
+    "xpPerKill": 29,
+    "locations": [
+      {
+        "name": "Hobgoblin Peninsula west of the Crafting Guild",
+        "displayName": "Hobgoblin Peninsula west of the Crafting Guild (free-to-play)",
+        "rank": 1,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "10 level-28 hobgoblins on 'the narrow strip of land alongside the peninsula west of the Crafting Guild'. 'The quickest way to get there is via the skills necklace teleport to the Crafting Guild.' 'Safespotting requires standing in the guild's cow field, or using cornered edges along the peninsula'.",
+        "evidence": {
+          "multi": "Slayer task/Hobgoblins Location Comparison table, 'Peninsula West of the Crafting Guild' row: Multicombat No",
+          "cannon": "Slayer task/Hobgoblins table row: Cannonable Yes",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "The Dibber in Hosidius",
+        "displayName": "Peninsula north-east of the Hosidius vinery (The Dibber)",
+        "rank": 2,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "22 level-28 hobgoblins, some wielding spears; no safespot per the task table.",
+        "evidence": {
+          "multi": "Slayer task/Hobgoblins table, 'Peninsula north-east of the Hosidius vinery' row: Multicombat No",
+          "cannon": "Slayer task/Hobgoblins table row: Cannonable Yes",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Bandit Camp mine (Wilderness)",
+        "displayName": "Wilderness Bandit Camp mine / Hobgoblin Mine (level 32-35)",
+        "rank": 3,
+        "multi": "unknown",
+        "cannon": true,
+        "wilderness": true,
+        "wildernessLevelMin": 32,
+        "wildernessLevelMax": 35,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "26 hobgoblins (26 LocLine pins; Bandit Camp Mine monster table: 26 spawns). 'found north-east of the Bandit Camp in the Wilderness from levels 32 to 35 and east of the Wilderness God Wars Dungeon' and 'occupied by a large number of aggressive hobgoblins' (Bandit Camp Mine). The task table says single-way, but the Multicombat area list names 'The Wilderness Bandit Camp' area; left unknown. Krystilia does not assign hobgoblins.",
+        "evidence": {
+          "multi": "conflict: Slayer task/Hobgoblins table, Bandit Camp mine row: Multicombat No, versus 'The Wilderness Bandit Camp' in the 'List of multicombat areas' (Multicombat area)",
+          "cannon": "Slayer task/Hobgoblins table, Bandit Camp mine row: Cannonable Yes",
+          "requirements": "not stated",
+          "wilderness": "'in the Wilderness from levels 32 to 35' (Bandit Camp Mine)"
+        }
+      },
+      {
+        "name": "Asgarnian Ice Dungeon",
+        "displayName": "Asgarnian Ice Dungeon (free-to-play)",
+        "rank": 4,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "7 hobgoblins (levels 28 and 42; Asgarnian Ice Dungeon monster table: 7 spawns, free-to-play). The western Royal Titans / ice giant area 'is a multicombat area' (Asgarnian Ice Dungeon) but the hobgoblin row in the task table is single-way. Not safespottable per the task table.",
+        "evidence": {
+          "multi": "Slayer task/Hobgoblins table, Asgarnian Ice Dungeon row: Multicombat No",
+          "cannon": "Slayer task/Hobgoblins table row: Cannonable Yes",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Edgeville Dungeon",
+        "displayName": "Edgeville Dungeon – hobgoblins (free-to-play)",
+        "rank": 5,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "5 hobgoblins (levels 28 and 42); 'Safespot between the rockslide and the fire remains by the campfire'.",
+        "evidence": {
+          "multi": "Slayer task/Hobgoblins table, Edgeville Dungeon row: Multicombat No",
+          "cannon": "'The Dwarf Multicannon can be used here.' (Edgeville Dungeon); task table row: Cannonable Yes",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Outpost",
+        "displayName": "Outpost north of Ardougne",
+        "rank": 6,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "8 hobgoblins (levels 28 and 42); not safespottable per the task table.",
+        "evidence": {
+          "multi": "Slayer task/Hobgoblins table, Outpost row: Multicombat No",
+          "cannon": "Slayer task/Hobgoblins table row: Cannonable Yes",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "God Wars Dungeon",
+        "displayName": "God Wars Dungeon – level 47 hobgoblins (Bandos followers)",
+        "rank": 7,
+        "multi": true,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Partial Troll Stronghold (or Easy Combat Achievements)",
+          "Rope on first entry"
+        ],
+        "notes": "11 level-47 hobgoblins (52 Slayer XP) that are 'aggressive unless wearing a Bandos-affiliated item'; multicombat and no cannon.",
+        "evidence": {
+          "multi": "'God Wars Dungeon' appears in the 'List of multicombat areas' (Multicombat area); task table row: Multicombat Yes",
+          "cannon": "Slayer task/Hobgoblins table, God Wars Dungeon row: Cannonable No",
+          "requirements": "'Accessing it requires partial completion of Troll Stronghold (defeating Dad) or full completion of the Easy Combat Achievements' and 'Rope (to access the dungeon itself for the first time)' (God Wars Dungeon)"
+        }
+      },
+      {
+        "name": "Tree Gnome Village dungeon",
+        "displayName": "Tree Gnome Village dungeon (key required, level 28 only)",
+        "rank": 8,
+        "multi": "unknown",
+        "cannon": "unknown",
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Key (Tree Gnome Village Dungeon)"
+        ],
+        "notes": "9 roaming plus 7 imprisoned level-28 hobgoblins (LocLine pins). 'Tree Gnome Village dungeon (requires a key), contain many level 28 hobgoblins with no level 42 variants present' (Hobgoblin).",
+        "evidence": {
+          "multi": "not in the Slayer task/Hobgoblins Location Comparison table; not stated on the pages read",
+          "cannon": "not in the Slayer task/Hobgoblins Location Comparison table; not in the Dwarf multicannon prohibited list",
+          "requirements": "'Tree Gnome Village dungeon (requires a key)' (Hobgoblin)"
+        }
+      },
+      {
+        "name": "North of Rellekka",
+        "displayName": "North of Rellekka (5 level-42 hobgoblins)",
+        "rank": 9,
+        "multi": "unknown",
+        "cannon": "unknown",
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "5 level-42 hobgoblins (49 Slayer XP each; 5 LocLine pins).",
+        "evidence": {
+          "multi": "not in the Slayer task/Hobgoblins Location Comparison table; not stated on the pages read",
+          "cannon": "not in the Slayer task/Hobgoblins Location Comparison table; not in the Dwarf multicannon prohibited list",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Crandor",
+        "displayName": "Crandor (5 hobgoblins)",
+        "rank": 10,
+        "multi": "unknown",
+        "cannon": "unknown",
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "5 level-28 hobgoblins (5 LocLine pins) on Crandor.",
+        "evidence": {
+          "multi": "not in the Slayer task/Hobgoblins Location Comparison table; not stated on the pages read",
+          "cannon": "not in the Slayer task/Hobgoblins Location Comparison table; not in the Dwarf multicannon prohibited list",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Witchaven Dungeon",
+        "displayName": "Witchaven Dungeon entrance room (4 hobgoblins)",
+        "rank": 11,
+        "multi": "unknown",
+        "cannon": "unknown",
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "4 level-28 hobgoblins (4 LocLine pins): 'When you enter the dungeon, you will come into a room containing aggressive level 28 hobgoblins' (Witchaven Dungeon).",
+        "evidence": {
+          "multi": "not in the Slayer task/Hobgoblins Location Comparison table; not stated on the pages read",
+          "cannon": "not in the Slayer task/Hobgoblins Location Comparison table; not in the Dwarf multicannon prohibited list",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "South of Tai Bwo Wannai",
+        "displayName": "South of Tai Bwo Wannai (3 hobgoblins)",
+        "rank": 12,
+        "multi": "unknown",
+        "cannon": "unknown",
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "3 level-28 hobgoblins (3 LocLine pins).",
+        "evidence": {
+          "multi": "not in the Slayer task/Hobgoblins Location Comparison table; not stated on the pages read",
+          "cannon": "not in the Slayer task/Hobgoblins Location Comparison table; not in the Dwarf multicannon prohibited list",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Waterbirth Island",
+        "displayName": "Waterbirth Island (2 hobgoblins)",
+        "rank": 13,
+        "multi": "unknown",
+        "cannon": "unknown",
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "2 level-28 hobgoblins (2 LocLine pins).",
+        "evidence": {
+          "multi": "not in the Slayer task/Hobgoblins Location Comparison table; not stated on the pages read",
+          "cannon": "not in the Slayer task/Hobgoblins Location Comparison table; not in the Dwarf multicannon prohibited list",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Clock Tower Dungeon",
+        "displayName": "Clock Tower Dungeon (2 hobgoblins)",
+        "rank": 14,
+        "multi": "unknown",
+        "cannon": "unknown",
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "2 level-28 hobgoblins (2 LocLine pins).",
+        "evidence": {
+          "multi": "not in the Slayer task/Hobgoblins Location Comparison table; not stated on the pages read",
+          "cannon": "not in the Slayer task/Hobgoblins Location Comparison table; not in the Dwarf multicannon prohibited list",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "The Hollows",
+        "displayName": "The Hollows (2 hobgoblins)",
+        "rank": 15,
+        "multi": "unknown",
+        "cannon": "unknown",
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "2 hobgoblins (levels 28 and 42; 2 LocLine pins).",
+        "evidence": {
+          "multi": "not in the Slayer task/Hobgoblins Location Comparison table; not stated on the pages read",
+          "cannon": "not in the Slayer task/Hobgoblins Location Comparison table; not in the Dwarf multicannon prohibited list",
+          "requirements": "not stated"
+        }
+      }
+    ],
+    "notes": "Mazchna 30-50 and Vannaka 40-90 only (task page infobox; Hobgoblin infobox assignedby = mazchna,vannaka); Konar does not assign hobgoblins and hobgoblins are not in Krystilia's task list. Slayer XP 29 (level 28), 49 (level 42), 52 (God Wars, level 47). 'some level 28 hobgoblins found north-east of the Vinery in Hosidius as well as one west of the Crafting Guild wield spears too'.",
+    "_verification": {
+      "corrections": [
+        "Bandit Camp mine: Wilderness level set to 32-35 from the Bandit Camp Mine page; multi downgraded False -> unknown because the task table (No) conflicts with the Multicombat area list ('The Wilderness Bandit Camp').",
+        "Added the 8 Hobgoblin LocLine locations the curated list omitted (Tree Gnome Village dungeon 9+7, North of Rellekka 5, Crandor 5, Witchaven Dungeon 4, South of Tai Bwo Wannai 3, Waterbirth Island 2, Clock Tower Dungeon 2, The Hollows 2) with multi/cannon unknown.",
+        "Asgarnian Ice Dungeon notes: removed the unsupported 'eastern part of the dungeon' placement.",
+        "Confirmed: page title, Combat 20, Mazchna/Vannaka, slayxp 29/49/52, max hits 3/5, aggressive, defence 0-1, no elemental weakness, all 7 curated locations' multi/cannon against the task table, Crafting Guild peninsula quotes (Hobgoblin + Hobgoblin Peninsula), The Dibber 22 pins, Outpost north of West Ardougne, God Wars Dungeon requirements."
+      ],
+      "confirmed": 22,
+      "downgraded": 1
+    }
+  },
+  {
+    "task": "Hydras",
+    "wikiTaskPage": "Slayer task/Hydras",
+    "monsterPages": [
+      "Hydra",
+      "Colossal Hydra",
+      "Alchemical Hydra"
+    ],
+    "bossTask": false,
+    "summary": "A 95 Slayer task from Konar and Mortimer, found only on the lower level of the Karuulm Slayer Dungeon. Hydras alternate ranged and magic in sets of one to three attacks and later spit poison pools, so start with the protection prayer for your weaker defence and swap when they switch; ranged (twisted bow) or a dragonbane weapon is standard because of their very high magic level. Wear boots of stone, brimstone or granite unless you have the Elite Kourend & Kebos Diary. The Alchemical Hydra boss can be killed instead while on task and is far more profitable.",
+    "recommendedStyle": "Ranged",
+    "styleNotes": "Draconic: weak to dragonbane weapons and 40% weak to earth spells; 160 stab, slash, crush and magic defence but 0 light, standard and heavy ranged defence; attacks with magic and ranged and spits poison; poison and venom resistance 0 in the infobox.",
+    "requiredItems": [
+      "Boots of stone, boots of brimstone or granite boots (unless Elite Kourend & Kebos Diary)"
+    ],
+    "usefulItems": [
+      "Twisted bow",
+      "Dragon hunter crossbow / dragon hunter lance (dragonbane)",
+      "Antidote/anti-venom for poison pools",
+      "Dwarf multicannon (normal hydra area only)"
+    ],
+    "superior": "Colossal Hydra",
+    "alternatives": [
+      "Alchemical Hydra"
+    ],
+    "xpPerKill": 322.5,
+    "locations": [
+      {
+        "name": "Karuulm Slayer Dungeon",
+        "displayName": "Karuulm Slayer Dungeon – lower level hydra area (boots of stone)",
+        "rank": 1,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "95 Slayer (boostable for the normal hydras)",
+          "Boots of stone / brimstone / granite boots unless Elite Kourend & Kebos Diary"
+        ],
+        "notes": "17 hydras (17 LocLine pins; task table 17). 'Hydras are draconic creatures found in the lower level of the Karuulm Slayer Dungeon'; 'There are two areas within the dungeon that contain hydras, one being exclusive to players on a hydra Slayer assignment' (Hydra). Cannon allowed here (not in the Alchemical Hydra room); not safespottable per the task table. Reach the mountain via fairy ring CIR ('a short walk north') or Rada's blessing 3+ 'Mount Karuulm' teleport (Karuulm Slayer Dungeon).",
+        "evidence": {
+          "multi": "'The dungeon itself is single-way combat.' (Karuulm Slayer Dungeon); task table row: Multicombat No",
+          "cannon": "'A dwarf multicannon can be used in all areas here except the wyrm and Alchemical Hydra areas' (Karuulm Slayer Dungeon); task table row (hydra area): Cannonable Yes",
+          "requirements": "'players who have not completed the elite Kourend & Kebos Diary must wear boots of stone, boots of brimstone, or granite boots to protect themselves from the extreme heat of the dungeon floor' (Hydra); Slayer task list row: 'Boots of stone' with derivatives and 'not required with completion of the elite Kourend & Kebos Diary' (Slayer task)"
+        }
+      },
+      {
+        "name": "Karuulm Slayer Dungeon (lower level)",
+        "displayName": "Karuulm Slayer Dungeon – Alchemical Hydra room (task-only boss)",
+        "rank": 2,
+        "multi": false,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Hydra Slayer task (boss is task-only)",
+          "95 Slayer",
+          "Boots of stone / brimstone / granite boots unless Elite Kourend & Kebos Diary"
+        ],
+        "notes": "'The player fights the Hydra in an instanced room upon jumping over the rock barrier' (Alchemical Hydra). 'The Alchemical Hydra can only be killed while on a Hydra task.' 1,320 Slayer XP per kill; no fight details recorded here. Konar is the only master who can assign it as a boss task.",
+        "evidence": {
+          "multi": "Slayer task/Hydras table, Alchemical Hydra room row: Multicombat No; 'The dungeon itself is single-way combat.' (Karuulm Slayer Dungeon)",
+          "cannon": "Dwarf multicannon prohibited list: 'Karuulm Slayer Dungeon (wyrm and Alchemical Hydra areas) - The electricity bursting through this part of the cavern would render the cannon useless.' (Dwarf multicannon)",
+          "requirements": "'The Alchemical Hydra can only be killed while on a Hydra task.' (Slayer task/Hydras)"
+        }
+      }
+    ],
+    "notes": "Konar (125-190) and Mortimer (150-200, or 200-300) only; Mortimer needs partial Fallen From Grace and 'is the best way for players to obtain hydra tasks'. Konar's table lists Karuulm Slayer Dungeon with the Alchemical Hydra as the boss substitute. Colossal Hydra (superior, 8,625 XP) has the best imbued heart rate at 1/160. Killing a hydra is an Elite Kourend & Kebos Diary task and can be done at 90 Slayer with a wild pie.",
+    "_verification": {
+      "corrections": [
+        "styleNotes fixed: the infobox gives 0 defence to all three ranged types (light/standard/heavy), not only 'standard'.",
+        "Added the Hydra page statement that one of the two hydra areas is task-only; fairy ring CIR and Rada's blessing routes confirmed on the Karuulm Slayer Dungeon page.",
+        "Confirmed: page title, 95 Slayer, Konar 125-190 and Mortimer 150-200 (200-300) with partial Fallen From Grace, slayxp 322.5, superior Colossal Hydra (8,625 XP, 1/160 imbued heart, Superior slayer monster list), alternative Alchemical Hydra (1,320, task-only), boots of stone/brimstone/granite unless elite diary, dungeon single-way, cannon everywhere except wyrm and Alchemical Hydra areas, wild pie boost from 90 for the diary."
+      ],
+      "confirmed": 18,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Icefiends",
+    "wikiTaskPage": "Slayer task/Icefiends",
+    "monsterPages": [
+      "Icefiend"
+    ],
+    "bossTask": false,
+    "summary": "A Turael and Spria beginner task (20 combat) of only 15-20 kills. Icefiends are level 13 demons that hit 2 with magical melee and are weak to fire spells, so anything kills them. Most players finish it on top of Ice Mountain next to the Lassar Teleport (10 spawns, single-way, cannon only on the westernmost tiles); the Ruins of Tapoyauik in Varlamore have 15 in a multicombat area and drop moon key halves but need The Heart of Darkness. The God Wars Dungeon versions are level 18 and count as Zamorak followers.",
+    "recommendedStyle": "Any",
+    "styleNotes": "Demons with a 100% fire spell weakness ('quick and agile but weak to fire spells'); magical melee, max hit 2-3; not immune to poison, venom, cannon or thralls.",
+    "requiredItems": [],
+    "usefulItems": [
+      "Lassar teleport (Ancient Magicks or tablet) to Ice Mountain"
+    ],
+    "superior": null,
+    "alternatives": [],
+    "xpPerKill": 15,
+    "locations": [
+      {
+        "name": "Ice Mountain",
+        "displayName": "Ice Mountain summit (Lassar Teleport)",
+        "rank": 1,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "10 icefiends; 'most players choose to complete this task nearby teleports such as Lassar Teleport'. 'Dwarf multicannon can only be placed on the westernmost tiles of the mountain'. Safespottable.",
+        "evidence": {
+          "multi": "Slayer task/Icefiends Location Comparisons table, Ice Mountain row: Multicombat No",
+          "cannon": "'Dwarf multicannon can only be placed on the westernmost tiles of the mountain' (Slayer task/Icefiends); prohibited list: 'Ice Mountain (except on the western tiles of the mountain) - The dwarves won't be happy if you set up a cannon here.' (Dwarf multicannon)",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Ruins of Tapoyauik",
+        "displayName": "Ruins of Tapoyauik – bottom floor (Varlamore, multi, no cannon)",
+        "rank": 2,
+        "multi": true,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "The Heart of Darkness"
+        ],
+        "notes": "15 icefiends on the bottom floor; 'One of the fastest methods of obtaining moon key halves' and 'Also drops Frozen tears'. The Tower of Ascension lift is a shortcut into the slayer area after the quest.",
+        "evidence": {
+          "multi": "Slayer task/Icefiends table, Ruins of Tapoyauik row: Multicombat Yes",
+          "cannon": "'A Dwarven multicannon cannot be placed inside the ruins.' (Ruins of Tapoyauik); prohibited list: 'Ruins of Tapoyauik (including Doom of Mokhaiotl) - An ancient magical force won't let you set up a cannon here.' (Dwarf multicannon)",
+          "requirements": "'Ruins of Tapoyauik icefiends require completion of The Heart of Darkness in order to access.' (Slayer task/Icefiends)"
+        }
+      },
+      {
+        "name": "Ralos' Rise",
+        "displayName": "Ralos' Rise, Varlamore (multi, cannon)",
+        "rank": 3,
+        "multi": true,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "5 icefiends; multicombat, cannonable and safespottable per the task table.",
+        "evidence": {
+          "multi": "Slayer task/Icefiends table, Ralos' Rise row: Multicombat Yes",
+          "cannon": "Slayer task/Icefiends table, Ralos' Rise row: Cannonable Yes",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Mons Gratia",
+        "displayName": "Mons Gratia, Varlamore",
+        "rank": 4,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "5 icefiends; single-way, cannonable and safespottable per the task table.",
+        "evidence": {
+          "multi": "Slayer task/Icefiends table, Mons Gratia row: Multicombat No",
+          "cannon": "Slayer task/Icefiends table, Mons Gratia row: Cannonable Yes",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "God Wars Dungeon",
+        "displayName": "God Wars Dungeon – level 18 icefiends (Zamorak followers)",
+        "rank": 5,
+        "multi": true,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Partial Troll Stronghold (or Easy Combat Achievements)",
+          "Rope on first entry"
+        ],
+        "notes": "5 level-18 icefiends (20 Slayer XP) that are 'aggressive unless wearing a Zamorak-affiliated item'; 'Only safespottable by wearing the appropriate God equipment'.",
+        "evidence": {
+          "multi": "'God Wars Dungeon' appears in the 'List of multicombat areas' (Multicombat area); task table row: Multicombat Yes",
+          "cannon": "Slayer task/Icefiends table, God Wars Dungeon row: Cannonable No; 'inhabitants of the God Wars Dungeon may also destroy a cannon' (Dwarf multicannon)",
+          "requirements": "'Accessing it requires partial completion of Troll Stronghold (defeating Dad) or full completion of the Easy Combat Achievements' and 'Rope (to access the dungeon itself for the first time)' (God Wars Dungeon)"
+        }
+      },
+      {
+        "name": "Wilderness God Wars Dungeon",
+        "displayName": "Wilderness God Wars Dungeon – 2 icefiends (level 28 Wilderness)",
+        "rank": 6,
+        "multi": true,
+        "cannon": false,
+        "wilderness": true,
+        "wildernessLevelMin": 28,
+        "wildernessLevelMax": 28,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "Only 2 level-18 icefiends (2 LocLine pins); 'a multi-combat area located within a cave east of The Forgotten Cemetery at level 28 Wilderness' where 'all monsters in the dungeon are aggressive to any player unless they have equipped at least one item that is devoted to their god' (Wilderness God Wars Dungeon). No cannon per the task table; 'Only safespottable by wearing the appropriate God equipment'.",
+        "evidence": {
+          "multi": "'The Wilderness God Wars Dungeon is a multi-combat area' (Wilderness God Wars Dungeon); Slayer task/Icefiends table row: Multicombat Yes",
+          "cannon": "Slayer task/Icefiends table, Wilderness God Wars Dungeon row: Cannonable No",
+          "requirements": "not stated",
+          "wilderness": "'at level 28 Wilderness' (Wilderness God Wars Dungeon)"
+        }
+      }
+    ],
+    "notes": "No dedicated requirement beyond 20 combat; Turael/Aya 15-20 and Spria 15-20 only, so Konar never assigns icefiends. Slayer XP 15 (level 13) and 20 (level 18 God Wars variant). Icefiends also spawn during the Ice demon fight in the Chambers of Xeric. Killing one is an option for cooling the dwarven rock cake in Recipe for Disaster.",
+    "_verification": {
+      "corrections": [
+        "Wilderness God Wars Dungeon level set to 28 from the dungeon page ('at level 28 Wilderness'); its multi status now cites the dungeon page as well as the task table.",
+        "Confirmed: page title, Turael/Aya and Spria 15-20, Combat 20, slayxp 15 (level 13) and 20 (level 18), demon attribute, Fire 100%, magical melee max hit 2/3, level-18 variant aggressive unless wearing a Zamorak item, all six LocLines present with matching pin counts (10/15/5/5/5/2), Ice Mountain western-tiles cannon rule (task page + prohibited list), Ruins of Tapoyauik no-cannon sentence, Heart of Darkness requirement, lift shortcut, moon key halves and frozen tears, Lassar Teleport, God Wars Dungeon access requirements."
+      ],
+      "confirmed": 22,
+      "downgraded": 0
+    }
+  }
+]

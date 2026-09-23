@@ -18,7 +18,7 @@ python3 generate.py --limit 5                # smoke test on the first five task
 
 | Option | Default | Meaning |
 | --- | --- | --- |
-| `--tasks PATH` | `task-enum.txt` | tab-separated `ENUM_NAME<TAB>display name<TAB>alt1|alt2` |
+| `--tasks PATH` | `../research/task-enum.txt` | tab-separated `ENUM_NAME<TAB>display name<TAB>alt1|alt2` |
 | `--out DIR` | `out/` | where `tasks.json`, `locations.json`, `report.json`, `item-names.txt` are written |
 | `--cache DIR` | `cache/` | raw wikitext cache (`<sanitised title>.wikitext` + `.meta.json`) |
 | `--curated DIR` | `curated/verified/` | curated override files (may be empty or absent) |
@@ -98,6 +98,11 @@ locations and must be curated.
   with `x`/`y`/`plane` = `null` and `coordsMissing: true`, and are listed in
   `report.json → unmatchedCuratedLocations`; multiple matches are listed under
   `ambiguousCuratedLocations` (the first match is used).
+* Before those passes, `CURATED_LOCATION_ALIASES[display][displayName or name]` (a table at the
+  top of the script) can pin a curated record to one generated location `id` ("tier 0"); the
+  displayName is looked up first so two curated records sharing a `name` can be told apart. A
+  value of `None` forces "no match" when the loose passes would pick a wrong record. An alias that
+  points at an id the task does not have is listed in `report.json → curatedProblems`.
 * The directory may be empty or missing.
 
 ## Outputs

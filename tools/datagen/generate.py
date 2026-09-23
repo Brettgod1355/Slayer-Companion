@@ -111,6 +111,45 @@ BOSS_TASK_OVERRIDES = {"TzTok-Jad", "TzKal-Zuk"}
 EXTRA_MONSTER_PAGES: dict[str, list[str]] = {
     "Bloodveld": ["Mutated Bloodveld"],
     "Barrows Brothers": ["Barrows"],
+    # variant pages that carry the LocLines the curated data refers to
+    "Callisto": ["Artio"],                 # Hunter's End
+    "Black dragons": ["King Black Dragon"],  # King Black Dragon Lair (Wilderness)
+    "Rats": ["Brine rat"],                 # Brine Rat Cavern
+    "Gryphons": ["Shellbane gryphon"],     # Shellbane Gryphon Cave ({{Map}} on the boss page)
+}
+
+# Curated location names that the normalised-name passes of apply_curated()
+# cannot match (or match ambiguously), per task display name.  The key is the
+# curated record's displayName or name (displayName is looked up first so two
+# curated records with the same name can be told apart); the value is the id
+# of the generated location to use.  None forces "no match" when the loose
+# passes would otherwise pick a wrong record (the curated record is then
+# appended without coordinates, as for any unmatched curated location).
+CURATED_LOCATION_ALIASES: dict[str, dict[str, str | None]] = {
+    "Bats": {"Abandoned Mine": "abandoned-mine-level-1-p0"},
+    "Birds": {"Farmer Fred's chicken pen": "lumbridge-west-farm-p0",
+              "River Lum": "along-the-river-lum-south-of-varrock-p0"},
+    "Black dragons": {"Corsair Cove Dungeon": "corsair-cove-dungeon-myths-guild-basement-p0"},
+    "Blue dragons": {"Corsair Cove Dungeon": "corsair-cove-dungeon-myths-guild-basement-p1"},
+    "Crabs": {"Ruins of Tapoyauik": "ruins-of-tapoyauik-middle-floor-p1"},
+    "Custodian Stalkers": {
+        "Stalker Den – south-western caves (multicombat, cannonable)": "stalker-den-multicombat-p0",
+        "Stalker Den – single-way caves (south-east and north)": "stalker-den-single-combat-p0"},
+    "Dark warriors": {"Dark Warriors' Fortress": "dark-warriors-fortress-p0"},
+    "Fire giants": {"Brimhaven Dungeon": "brimhaven-dungeon-p1"},
+    "Gryphons": {"Shellbane Gryphon Cave": "shellbane-gryphon-p0"},
+    "Hobgoblins": {"Tree Gnome Village dungeon": "tree-gnome-village-dungeon-roaming-p0"},
+    "The Maggot King": {"Vampyrium": "maggot-king-p0"},
+    "Moss giants": {"Tonali Cavern": "tonali-cavern-southern-chamber-p0"},
+    "Rats": {"Stronghold of Security": "stronghold-of-security-vault-of-war-p0"},
+    "Rogues": {"Rogues' Castle": "rogues-castle-p0"},
+    "Scorpions": {"Stonecutter Outpost temple": "south-west-of-stonecutter-outpost-p0"},
+    "The Shellbane Gryphon": {"Shellbane Gryphon Cave": "shellbane-gryphon-p0"},
+    "Spiders": {"Forthos Dungeon": "forthos-dungeon-burial-tomb-p0"},
+    "Trolls": {"Troll Stronghold (Surface)": None,  # outside; only troll-boss spawns inside are generated
+               "Troll Stronghold (Underground)": "troll-stronghold-bottom-level-p0"},
+    "Vampyres": {"Meiyerditch": "meiyerditch-p0"},
+    "Zombies": {"Varrock Sewers": "varrock-sewers-hallway-p0"},
 }
 
 # Wilderness surface bounding box (plane 0), used only as a hint that curated
@@ -1325,17 +1364,29 @@ def apply_curated(task: dict, curated: dict | None, report: dict) -> None:
         cname = cl.get("name")
         if not cname:
             continue
+        # tier 0: explicit alias (CURATED_LOCATION_ALIASES) by displayName, then name;
         # tier 1: exact (punctuation-insensitive) match on name or displayName;
         # tier 2: floor/basement parentheticals stripped; tier 3: all parentheticals stripped
+        aliases = CURATED_LOCATION_ALIASES.get(task["task"], {})
+        alias_key = next((k for k in (cl.get("displayName"), cname) if k in aliases), None)
+        if alias_key is not None:
+            target_id = aliases[alias_key]
+            matches = [l for l in locs if l["id"] == target_id] if target_id else []
+            if target_id and not matches:
+                report["curatedProblems"].append(
+                    f"{task['task']}: alias for '{alias_key}' points to missing location id '{target_id}'")
+            aliased = True
+        else:
+            aliased = False
         exact = re.sub(r"\s+", " ", re.sub(r"[^a-z0-9]+", " ", cname.lower())).strip()
-        matches = [l for l in locs if exact in (
+        matches = matches if aliased else [l for l in locs if exact in (
             re.sub(r"\s+", " ", re.sub(r"[^a-z0-9]+", " ", l["name"].lower())).strip(),
             re.sub(r"\s+", " ", re.sub(r"[^a-z0-9]+", " ", l["displayName"].lower())).strip())]
-        if not matches:
+        if not matches and not aliased:
             norm = normalise_loc_name(cname)
             matches = [l for l in locs if normalise_loc_name(l["name"]) == norm
                        or normalise_loc_name(l["displayName"]) == norm]
-        if not matches:
+        if not matches and not aliased:
             norm2 = normalise_loc_name(cname, strip_all_parens=True)
             matches = [l for l in locs if normalise_loc_name(l["name"], True) == norm2]
         if len(matches) > 1:

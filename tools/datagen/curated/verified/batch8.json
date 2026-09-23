@@ -1,0 +1,1555 @@
+[
+  {
+    "task": "Mogres",
+    "wikiTaskPage": "Slayer task/Ogres",
+    "monsterPages": [
+      "Mogre",
+      "Mogre (sea)"
+    ],
+    "bossTask": false,
+    "summary": "Mogres are a level 32 Slayer ogre-type monster assigned by Mazchna and Vannaka; there is no dedicated task page, the Slayer task list links Mogres to Slayer task/Ogres and mogres also count for an Ogres task. On land they live only at Mudskipper Point (fairy ring AIQ), where you must Use a fishing explosive on an Ominous Fishing Spot from a few tiles away to lure one ashore; they can be safespotted from the fairy ring, the STASH unit to the west or along the shoreline, and the Rimmington church altar just north restores prayer for Protect from Melee. Since Sailing, swimming mogres in the Ardent Ocean can be killed with a ship cannon without explosives or the miniquest, but 32 Slayer is still required. Bring a tinderbox and logs to cook the raw fish they drop.",
+    "recommendedStyle": "Any",
+    "styleNotes": "Land mogres attack with crush, are aggressive, max hit 8, have a 20% elemental weakness to earth spells and are immune to poison and venom (poisonresistance = 100); sea mogres are level 54 and not aggressive.",
+    "requiredItems": [
+      "Fishing explosive (land mogres at Mudskipper Point only; not needed for swimming mogres)"
+    ],
+    "usefulItems": [
+      "Tinderbox and logs (cook dropped raw fish)",
+      "Prayer potions or Protect from Melee (altar at Rimmington church)",
+      "Halberd or ranged weapon for the safespots",
+      "Adamant keel or better on your boat for sea mogres"
+    ],
+    "superior": null,
+    "alternatives": [
+      "Mogre (sea) in the Ardent Ocean (Mudskipper Sound, Strait of Khazard, Kharazi Strait) killed from a boat cannon (43.5 xp)"
+    ],
+    "xpPerKill": 48,
+    "locations": [
+      {
+        "name": "Mudskipper Point",
+        "displayName": "Mudskipper Point - fairy ring AIQ (lure with fishing explosives)",
+        "rank": 1,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "32 Slayer",
+          "Skippy and the Mogres miniquest (per Slayer task list Required column; the Mogre page says this was formerly required)",
+          "Fishing explosives to lure each mogre"
+        ],
+        "notes": "Only 3 land spawns; each mogre must be lured by using a fishing explosive on an Ominous Fishing Spot while standing a few tiles away (the Lure/Bait options do nothing). Safespot from the fairy ring, the STASH unit to the west or the shoreline; Rimmington church altar to the north restores prayer.",
+        "evidence": {
+          "multi": "Slayer task/Ogres location comparison row 'Mudskipper Point' -> Multicombat: No",
+          "cannon": "Slayer task/Ogres location comparison row 'Mudskipper Point' -> Cannonable: Yes; Mogre page image caption 'A safespot for fighting Mogres using a Halberd and/or Cannon.'",
+          "requirements": "Slayer task list Mogres row Required items/other: 'Fishing explosive (except for swimming Mogres)', 'Quest Skippy and the Mogres', 'Combat 30'. Mogre page: 'requiring level 32 Slayer to kill. Mogres appear when disturbed by the player, who must lure them using Fishing explosives on an Ominous Fishing Spot. Previously, they could only be killed by players who had completed the Skippy and the Mogres miniquest.'"
+        }
+      },
+      {
+        "name": "Ardent Ocean",
+        "displayName": "Ardent Ocean - Mudskipper Sound / Strait of Khazard / Kharazi Strait (ship cannon)",
+        "rank": 2,
+        "multi": "unknown",
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "32 Slayer (cannot be bypassed by a crewmate manning the cannon)",
+          "Sailing access to the Ardent Ocean; a boat with an adamant keel or better takes no damage from mogres"
+        ],
+        "notes": "Level 54 swimming mogres killed with the player's boat cannon; no fishing explosives or Skippy and the Mogres needed. Also offered as a Sailing bounty task from 30 Sailing (guaranteed from Ardougne).",
+        "evidence": {
+          "multi": "not stated for these straits; Multicombat area list: 'The majority of oceans, barring some parts of the Ardent Ocean'",
+          "cannon": "Dwarf multicannon prohibited list: 'Sailing boats - The boat is too damp and unstable for you to set up a cannon here.' (the ship's own cannon is used instead: Mogre page 'Mogres swimming in the ocean can now be killed with cannons from the player's boat')",
+          "requirements": "Mogre (sea): 'Like the ones found on land, they require level 32 Slayer to fight. This requirement cannot be bypassed by having a crewmate man a cannon. Any boat with an adamant keel or better will not take any damage from mogres.'"
+        }
+      }
+    ],
+    "notes": "No 'Slayer task/Mogres' page exists (fetch returned missingtitle for Mogres and Mogre); the assignment list row links to Slayer task/Ogres, which lists Mogre (sea) and Mogre as task variants ('Along with ogres and ogress warriors and shamans, mogres, zogres, and skogres can be killed to satisfy the task'). Killing a Mogre is a Falador medium diary task. Chaeldar no longer assigns mogres (8 May 2024 change). The Slayer task list Mogres row lists only Mogre (sea) as a task variant, so ogres, ogresses, zogres and skogres are not shown as counting for a Mogres task; mogres do count for an Ogres task (Slayer task/Ogres). Mogre (sea) infobox slayxp = 43.5.",
+    "_verification": {
+      "corrections": [
+        "alternatives: removed the non-alternative note about ogres not counting (moved to notes; the Slayer task list row only lists Mogre (sea) as a variant) and added Mogre (sea) slayxp 43.5 from its infobox",
+        "confirmed: Mogre infobox slayxp = 48, assignedby mazchna,vannaka, poisonresistance/venomresistance 100, earth 20%, max hit 8; Mogre (sea) combat 54, aggressive No, 'require level 32 Slayer... cannot be bypassed by having a crewmate man a cannon'; Slayer task/Ogres row Mudskipper Point Multicombat No / Cannonable Yes; caption 'A safespot for fighting Mogres using a Halberd and/or Cannon.'; Chaeldar change 8 May 2024; Falador diary line; bounty task from 30 Sailing"
+      ],
+      "confirmed": 17,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Molanisks",
+    "wikiTaskPage": "Slayer task/Molanisks",
+    "monsterPages": [
+      "Molanisk"
+    ],
+    "bossTask": false,
+    "summary": "Molanisks are a level 39 Slayer task assigned only by Vannaka (50 combat, Death to the Dorgeshuun completed). They are found only in the Dorgesh-Kaan South Dungeon (fairy ring AJQ), stuck to cave walls; you must ring a Slayer bell within 3 tiles to pull one off, after which it becomes aggressive to you. Bring a light source because the dungeon is dark, and expect very little damage despite their level. They are weak to crush and magic and can be safespotted on a large rock down the path south of the fairy ring, where two spawns are close together.",
+    "recommendedStyle": "Any",
+    "styleNotes": "Molanisk page: 'relatively weak to both crush and magic attacks'; 60% elemental weakness to earth spells; crush attacker, max hit 5, not poisonous, not poison-immune.",
+    "requiredItems": [
+      "Slayer bell",
+      "Light source"
+    ],
+    "usefulItems": [
+      "Tinderbox (relight the light source)",
+      "Antipoison (other creatures in the dungeon are poisonous)",
+      "Rope for the first descent"
+    ],
+    "superior": null,
+    "alternatives": [],
+    "xpPerKill": 52,
+    "locations": [
+      {
+        "name": "Dorgesh-Kaan South Dungeon",
+        "displayName": "Dorgesh-Kaan South Dungeon - fairy ring AJQ",
+        "rank": 1,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Death to the Dorgeshuun",
+          "Rope to climb down",
+          "Light source",
+          "Slayer bell to make them attackable"
+        ],
+        "notes": "10 spawns on the cave walls; ring the Slayer bell within 3 tiles of the wall. Safespot on the large rock down the path south of the AJQ fairy ring; two spawns close together there. Using the bell while another monster (e.g. a cave crawler) attacks you switches aggression to the molanisk.",
+        "evidence": {
+          "multi": "Slayer task/Molanisks location comparison row 'Dorgesh-Kaan South Dungeon' -> Multicombat: No; Dorgesh-Kaan South Dungeon page: 'You can use a dwarf multicannon in the dungeon, however it is not multicombat.'",
+          "cannon": "Slayer task/Molanisks location comparison row -> Cannonable: Yes; Dorgesh-Kaan South Dungeon page: 'You can use a dwarf multicannon in the dungeon'",
+          "requirements": "Slayer task/Molanisks: 'Entry to the dungeon requires completion of the Death to the Dorgeshuun quest and a rope to get down.' Dorgesh-Kaan South Dungeon: 'The dungeon is dark and requires the player to have a light source or face relentless damage from stinging insects.'"
+        }
+      }
+    ],
+    "notes": "Vannaka only (39-50 assigned). Mainly hunted for the earth emerald (1/64) drop. Chaeldar no longer assigns molanisks (8 May 2024 change).",
+    "_verification": {
+      "corrections": [
+        "no changes; all fields re-checked against Slayer task/Molanisks (Multicombat No, Cannonable Yes, 10 spawns, 'Entry to the dungeon requires completion of the Death to the Dorgeshuun quest and a rope to get down.'), Molanisk infobox (slayxp 52, slaylvl 39, assignedby vannaka, max hit 5, aggressive Yes, earth 60%, poisonresistance 0), Molanisk text ('relatively weak to both crush and magic attacks', bell 'only works within 3 tiles', earth emerald 1/64, Chaeldar change 8 May 2024) and Dorgesh-Kaan South Dungeon ('You can use a dwarf multicannon in the dungeon, however it is not multicombat.')"
+      ],
+      "confirmed": 14,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Monkeys",
+    "wikiTaskPage": "Slayer task/Monkeys",
+    "monsterPages": [
+      "Monkey (monster)",
+      "Monkey"
+    ],
+    "bossTask": false,
+    "summary": "Monkeys are a no-requirement Turael and Spria task usually finished on level 3 Karamja, Mos Le'Harmless or Ardougne Zoo monkeys, which the wiki calls by far the safest to kill; any style works because they have 6 hitpoints and a max hit of 1. Higher-level alternatives locked behind Monkey Madness I and II (Monkey Archers and Guards on Ape Atoll, Monkey Zombies in the Ape Atoll dungeons, tortured and demonic gorillas in the Crash Site Cavern) give far more Slayer XP but are dangerous. Ba-Ba and her baboons do not count.",
+    "recommendedStyle": "Any",
+    "styleNotes": "Regular monkeys: 6 HP, max hit 1, crush attacker, not aggressive, no immunities (immunecannon = No); during Tai Bwo Wannai Trio Karamja monkeys can only be hurt by Ranged or Magic. Demonic gorillas are immune to cannon damage.",
+    "requiredItems": [],
+    "usefulItems": [
+      "Cabin Fever completed for Mos Le'Harmless monkeys",
+      "Monkey greegree and Protect from Melee for Ape Atoll variants"
+    ],
+    "superior": null,
+    "alternatives": [
+      "Monkey Archer (Marim / Marim gates, 50 xp, MM1)",
+      "Monkey Guard (Temple of Marimbo, 130 xp, MM1)",
+      "Monkey Zombie (Ape Atoll Dungeon / Temple of Marimbo Dungeon, 60-90 xp, MM1)",
+      "Maniacal monkey (Kruk's Dungeon, 65 xp, MM2)",
+      "Tortured gorilla (Crash Site Cavern, 210 xp, MM2)",
+      "Demonic gorilla (Crash Site Cavern, 408.5 xp, MM2)"
+    ],
+    "xpPerKill": 6,
+    "locations": [
+      {
+        "name": "Ardougne Zoo",
+        "displayName": "Ardougne Zoo (caged monkeys, ranged/magic from outside)",
+        "rank": 1,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "6 monkeys in the cage; safespottable from outside with Ranged or Magic. Entering the cage to melee needs partial Monkey Madness I. The wiki gives no explicit ranking between regular-monkey spots.",
+        "evidence": {
+          "multi": "Slayer task/Monkeys location comparison row 'Ardougne Zoo' -> Multicombat: No",
+          "cannon": "Slayer task/Monkeys location comparison row 'Ardougne Zoo' -> Cannonable: Yes",
+          "requirements": "Slayer task/Monkeys: 'If you want to kill these with melee, it is possible to get in the cage; however, it requires partial completion of Monkey Madness I.'"
+        }
+      },
+      {
+        "name": "North-east of Shilo Village",
+        "displayName": "Karamja - north-east of Shilo Village (16 monkeys)",
+        "rank": 2,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "Largest regular-monkey cluster (16). Other Karamja groups: north-west of Shilo Village (12), south-east Karamja (9), east of Tai Bwo Wannai (7), around Brimhaven (6), near the volcano (4, free-to-play).",
+        "evidence": {
+          "multi": "Slayer task/Monkeys location comparison row 'North-east of Shilo Village' -> Multicombat: No",
+          "cannon": "Slayer task/Monkeys location comparison row 'North-east of Shilo Village' -> Cannonable: Yes",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Mos Le'Harmless",
+        "displayName": "Mos Le'Harmless (18 monkeys, needs Cabin Fever)",
+        "rank": 3,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Cabin Fever"
+        ],
+        "notes": "18 monkeys spread across the island.",
+        "evidence": {
+          "multi": "Slayer task/Monkeys location comparison row 'Mos Le'Harmless' -> Multicombat: No",
+          "cannon": "Slayer task/Monkeys location comparison row 'Mos Le'Harmless' -> Cannonable: Yes",
+          "requirements": "Slayer task/Monkeys: 'Requires completion of Cabin Fever.' Mos Le'Harmless page: 'You must complete Cabin Fever to access the island.'"
+        }
+      },
+      {
+        "name": "Karamja, near the volcano",
+        "displayName": "Karamja - near the volcano (free-to-play)",
+        "rank": 4,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "Only 4 monkeys; the Monkey (monster) LocLine marks this spot members = No, so it is the free-to-play option.",
+        "evidence": {
+          "multi": "Slayer task/Monkeys location comparison row 'Karamja, near the volcano' -> Multicombat: No",
+          "cannon": "Slayer task/Monkeys location comparison row 'Karamja, near the volcano' -> Cannonable: Yes",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Ape Atoll Dungeon",
+        "displayName": "Ape Atoll Dungeon - Monkey Zombies (MM1, dangerous)",
+        "rank": 5,
+        "multi": true,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Partial completion of Monkey Madness I"
+        ],
+        "notes": "30 Monkey Zombies (60-90 xp); the dungeon 'is infested with extremely strong monsters and traps' with traps hitting up to 8, poisonous spiders and falling rocks; the page advises 43 Prayer for Protect from Melee and antipoison, and says completing Monkey Madness II does not make the mobs non-aggressive, but they are not aggressive while you wield a monkey greegree. Temple of Marimbo Dungeon has 41 more zombies (multi, cannonable).",
+        "evidence": {
+          "multi": "Slayer task/Monkeys location comparison row 'Ape Atoll Dungeon' -> Multicombat: Yes; Multicombat area list: '*Ape Atoll'",
+          "cannon": "Slayer task/Monkeys location comparison row 'Ape Atoll Dungeon' -> Cannonable: Yes",
+          "requirements": "Slayer task/Monkeys monster variants: Monkey Zombie 'Requires partial completion of Monkey Madness I.' Ape Atoll Dungeon: 'Access to the island Ape Atoll is obtained through the quest Monkey Madness I.' Ape Atoll Dungeon: 'Completion of Monkey Madness II does not make the mobs non-aggressive.' and 'Monsters will not be aggressive to you if you are in any monkey form (i.e. wielding a monkey greegree), although damage will still be taken from traps and falling rocks.'"
+        }
+      },
+      {
+        "name": "Temple of Marimbo",
+        "displayName": "Temple of Marimbo - Monkey Guards (130 xp, MM1)",
+        "rank": 6,
+        "multi": true,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Partial completion of Monkey Madness I"
+        ],
+        "notes": "12 level 167 Monkey Guards; some can block your path like Pest Control brawlers. Contains the Gorilla Statue for quick Prayer refills. Marim (25) and Marim gates (14) hold level 86 Monkey Archers.",
+        "evidence": {
+          "multi": "Slayer task/Monkeys location comparison row 'Temple of Marimbo' -> Multicombat: Yes; Multicombat area list: '*Ape Atoll'",
+          "cannon": "Slayer task/Monkeys location comparison row 'Temple of Marimbo' -> Cannonable: Yes",
+          "requirements": "Slayer task/Monkeys monster variants: Monkey Guard 'Requires partial completion of Monkey Madness I.'"
+        }
+      },
+      {
+        "name": "Crash Site Cavern",
+        "displayName": "Crash Site Cavern - tortured / demonic gorillas (MM2)",
+        "rank": 7,
+        "multi": "partial",
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Partial completion of Monkey Madness II"
+        ],
+        "notes": "36 gorillas (tortured 210 xp, demonic 408.5 xp). Demonic gorillas are immune to cannon damage and have their own strategy page; only worth it for players already hunting zenyte shards.",
+        "evidence": {
+          "multi": "Slayer task/Monkeys location comparison row 'Crash Site Cavern' -> Multicombat: Both; Crash Site Cavern page: 'The caverns consist of both single and multi-way combat zones... Past this archway, the entire area is exclusively multi-way.'",
+          "cannon": "Slayer task/Monkeys location comparison row 'Crash Site Cavern' -> Cannonable: Yes, note 'Demonic gorillas are immune to Dwarf Multicannon damage.'",
+          "requirements": "Slayer task/Monkeys monster variants: Tortured gorilla / Demonic gorilla 'Requires partial completion of Monkey Madness II.'"
+        }
+      }
+    ],
+    "notes": "Turael/Spria only, 15-30 assigned, no combat or Slayer requirement. Exceptions: 'Ba-Ba and all her baboon troops do not count towards the task.' A separate 'North-east Karamja (instanced)' spot with 7 monkeys also exists. The Monkey page is a race overview; the monster data is on 'Monkey (monster)'. The task page's Monkey variant row also lists 'Nature Altar' as a monkey location, but it appears in neither the task page's location comparison table nor the Monkey (monster) LocLine list, so it is not included above. Temple of Marimbo page: prayer can be topped up 'at the nearby gorilla statue' and the nearby level 1 spiders can poison you.",
+    "_verification": {
+      "corrections": [
+        "Ape Atoll Dungeon notes: replaced the unsupported 'all monsters here are aggressive regardless of level' with the page's actual wording (MM2 completion does not remove aggression; monkey-form/greegree prevents it)",
+        "alternatives: added Maniacal monkey 65 xp and Marim gates from the task page variant table",
+        "notes: recorded 'Nature Altar' (listed only in the task page variant table) as an unverified extra location",
+        "confirmed: all 7 location rows (amount/multi/cannon) match the Slayer task/Monkeys location comparison; Monkey (monster) infobox hitpoints 6, max hit 1, slayxp 6; Tai Bwo Wannai Trio ranged/magic-only line; 'These are by far the safest to kill.'; Ba-Ba exception; Mos Le'Harmless 'You must complete Cabin Fever to access the island.'; Multicombat area list '*Ape Atoll'; Crash Site Cavern single/multi quote"
+      ],
+      "confirmed": 26,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Moss giants",
+    "wikiTaskPage": "Slayer task/Moss giants",
+    "monsterPages": [
+      "Moss giant",
+      "Bryophyta"
+    ],
+    "bossTask": false,
+    "summary": "Moss giants are a low-level task from Vannaka (40 combat) and Krystilia (Wilderness only) with zero defence against every style and a 50% weakness to fire spells, so any style works and most spots have safespots. On task the mossy key drop rate improves to 1/75, and Bryophyta in the Varrock Sewers can be killed instead at 1/8 for keys. Varrock Sewers is a strong pick because it is multicombat, cannonable, safespottable and right next to Bryophyta's lair; Catacombs of Kourend giants also drop dark totem pieces but no cannon is allowed there. Krystilia tasks must be done at the Wilderness Pond (level 35), which has a safespot for one spawn.",
+    "recommendedStyle": "Any",
+    "styleNotes": "Slayer task/Moss giants: 'zero defence against every attack style and are 50% weak to fire damage'; crush attacker, max hit 6, aggressive, no poison or cannon immunity. Iorwerth Dungeon variant (level 84) also attacks with Magic.",
+    "requiredItems": [],
+    "usefulItems": [
+      "Fire spells",
+      "Dwarf multicannon (most spots except Catacombs and Bryophyta's lair)",
+      "Mossy key for first entry to Bryophyta's lair",
+      "Slash weapon for the Varrock Sewers webs (or 51 Agility Edgeville shortcut)",
+      "Halberd or ranged weapon for safespots"
+    ],
+    "superior": null,
+    "alternatives": [
+      "Bryophyta (Varrock Sewers, 115 xp; 1/8 mossy key on task)"
+    ],
+    "xpPerKill": 60,
+    "locations": [
+      {
+        "name": "Varrock Sewers",
+        "displayName": "Varrock Sewers (multi, cannon, next to Bryophyta)",
+        "rank": 1,
+        "multi": true,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Slash weapon to cut webs if entering via the sewers (not needed with the level 51 Agility shortcut from Edgeville Dungeon)"
+        ],
+        "notes": "10 spawns; safespot behind the corpse next to the agility shortcut. Bryophyta's lair entrance is just east of the giants (cannon cannot be set up inside the lair).",
+        "evidence": {
+          "multi": "Slayer task/Moss giants location comparison row 'Varrock Sewers' -> Multicombat: Yes; Multicombat area list: '*Varrock Sewers'",
+          "cannon": "Slayer task/Moss giants location comparison row 'Varrock Sewers' -> Cannonable: Yes (Dwarf multicannon prohibited list: 'Bryophyta's lair - You can't set up a cannon here.')",
+          "requirements": "Slayer task/Moss giants: 'Requires a slash weapon to cut webs if entering via varrock sewers. Not needed if using the agility shortcut (level 51) from Edgeville. Safespot behind corpse, next to agility shortcut.'"
+        }
+      },
+      {
+        "name": "Brimhaven Dungeon",
+        "displayName": "Brimhaven Dungeon (20 spawns, single, cannon)",
+        "rank": 2,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "875 coins per entry (or 1,000,000 one-off)",
+          "Axe to cut vines (10 Woodcutting)"
+        ],
+        "notes": "Most spawns of any location (20) with various safespots.",
+        "evidence": {
+          "multi": "Slayer task/Moss giants location comparison row 'Brimhaven Dungeon' -> Multicombat: No; Brimhaven Dungeon page: 'A Dwarf multicannon may be used within the dungeon, although it is a single way combat zone.'",
+          "cannon": "Slayer task/Moss giants location comparison row 'Brimhaven Dungeon' -> Cannonable: Yes; Brimhaven Dungeon: 'A Dwarf multicannon may be used within the dungeon'",
+          "requirements": "Brimhaven Dungeon: 'players must pay Saniboch, who is outside the entrance, 875 coins each time they wish to enter the dungeon. Alternatively, a one-off fee of 1,000,000 coins can be paid for permanent access. A player will also need an axe to cut the vines blocking the path (requiring level 10 Woodcutting).'"
+        }
+      },
+      {
+        "name": "Catacombs of Kourend",
+        "displayName": "Catacombs of Kourend (multi, no cannon, dark totem pieces)",
+        "rank": 3,
+        "multi": true,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "13 spawns; stand next to the eastern wall of the northern exit of the room to safespot. Drops dark totem pieces at 1/440 each.",
+        "evidence": {
+          "multi": "Slayer task/Moss giants location comparison row 'Catacombs of Kourend' -> Multicombat: Yes; Catacombs of Kourend page: 'this particular dungeon is a multicombat area (excluding the brutal dragon area)'",
+          "cannon": "Slayer task/Moss giants location comparison row 'Catacombs of Kourend' -> Cannonable: No; Dwarf multicannon prohibited list: 'Catacombs of Kourend - An ancient power won't let you set up a cannon here.'",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Kourend Woodland",
+        "displayName": "Kourend Woodland (4 spawns, safespot pictured on task page)",
+        "rank": 4,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "4 spawns; the task page shows a Kourend Woodland safespot picture ('Moss giant (Kourend Woodland) safespot.png') and lists 'Various safespots'. Kourend Woodland page: Land's End is at the southernmost side of the woodland.",
+        "evidence": {
+          "multi": "Slayer task/Moss giants location comparison row 'Kourend Woodland' -> Multicombat: No",
+          "cannon": "Slayer task/Moss giants location comparison row 'Kourend Woodland' -> Cannonable: Yes",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Moss Giant Island, west of Brimhaven (10 Agility required)",
+        "displayName": "Moss Giant Island - west of Brimhaven (10 Agility)",
+        "rank": 5,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "10 Agility"
+        ],
+        "notes": "5 spawns with various safespots.",
+        "evidence": {
+          "multi": "Slayer task/Moss giants location comparison row 'Moss Giant Island' -> Multicombat: No",
+          "cannon": "Slayer task/Moss giants location comparison row 'Moss Giant Island' -> Cannonable: Yes",
+          "requirements": "Slayer task/Moss giants: 'Various safespots available. 10 Agility required to access.'"
+        }
+      },
+      {
+        "name": "Pirates' Cove",
+        "displayName": "Pirates' Cove - level 48 giants, 85 xp (Lunar Diplomacy)",
+        "rank": 6,
+        "multi": true,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Partial completion of Lunar Diplomacy"
+        ],
+        "notes": "10 stronger level 48 giants giving 85 Slayer XP each; various safespots.",
+        "evidence": {
+          "multi": "Slayer task/Moss giants location comparison row 'Pirates' Cove' -> Multicombat: Yes",
+          "cannon": "Slayer task/Moss giants location comparison row 'Pirates' Cove' -> Cannonable: Yes",
+          "requirements": "Slayer task/Moss giants monster variants: Moss giant (48) 'Requires partial completion of Lunar Diplomacy.'"
+        }
+      },
+      {
+        "name": "Iorwerth Dungeon",
+        "displayName": "Iorwerth Dungeon - level 84 giants, 120 xp (Song of the Elves)",
+        "rank": 7,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Song of the Elves"
+        ],
+        "notes": "6 level 84 giants that also use Magic; stand on the eastern tile of the southern entrance to the room to safespot.",
+        "evidence": {
+          "multi": "Slayer task/Moss giants location comparison row 'Iorwerth Dungeon' -> Multicombat: No; Iorwerth Dungeon page: 'the whole dungeon is single-way combat.'",
+          "cannon": "Slayer task/Moss giants location comparison row 'Iorwerth Dungeon' -> Cannonable: Yes; Iorwerth Dungeon: 'A dwarf multicannon can be used in the dungeon.'",
+          "requirements": "Slayer task/Moss giants monster variants: 'Requires completion of Song of the Elves. Also attacks with Magic, unlike other Moss giants.'"
+        }
+      },
+      {
+        "name": "Wilderness Pond",
+        "displayName": "Wilderness Pond - level 35 Wilderness (Krystilia task)",
+        "rank": 8,
+        "multi": false,
+        "cannon": true,
+        "wilderness": true,
+        "wildernessLevelMin": 35,
+        "wildernessLevelMax": 35,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "6 spawns around the pond, reached by waka canoe (one-way trip), the Wilderness obelisk to level 35 then east, or the revenant cave teleport then south. Safespot for one spawn behind the northernmost tree. Only moss giants in the Wilderness, so Krystilia tasks go here.",
+        "evidence": {
+          "multi": "Slayer task/Moss giants location comparison row 'Wilderness (by the pond reachable using a canoe)' -> Multicombat: No",
+          "cannon": "Slayer task/Moss giants location comparison row 'Wilderness (by the pond...)' -> Cannonable: Yes",
+          "requirements": "not stated; Wilderness Pond infobox 'wilderness = 35'; page: 'Moss giants can be found around the pond, being the only ones that can be found in the Wilderness.'"
+        }
+      },
+      {
+        "name": "Giants' Den",
+        "displayName": "Giants' Den (10 spawns, Kourend)",
+        "rank": 9,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "10 spawns, safespottable; giants here can also drop dark totem pieces per the task page.",
+        "evidence": {
+          "multi": "Slayer task/Moss giants location comparison row 'Giants' Den' -> Multicombat: No",
+          "cannon": "Slayer task/Moss giants location comparison row 'Giants' Den' -> Cannonable: Yes",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Bryophyta's Lair (Varrock Sewers)",
+        "displayName": "Bryophyta's Lair - Varrock Sewers (boss alternative)",
+        "rank": 10,
+        "multi": "unknown",
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Mossy key to unlock the gate the first time (not consumed; later entries need no key)"
+        ],
+        "notes": "Instanced moss giant boss (115 xp) killable on a moss giant task; mossy key 1/16 normally, 1/8 on a moss giant task (even on a free-to-play world), but Krystilia tasks do not increase the rate. Poisonous (8) on members worlds only.",
+        "evidence": {
+          "multi": "not stated (Bryophyta page marks it {{Instance}} only)",
+          "cannon": "Dwarf multicannon prohibited list: 'Bryophyta's lair - You can't set up a cannon here.'",
+          "requirements": "Bryophyta: 'A mossy key is needed to unlock the gate leading to Bryophyta's lair for the first time, but subsequent access to the lair does not require a key.' Bryophyta drop note: 'While having a moss giant Slayer task, the drop rate is increased to 1/8, even if Bryophyta is killed on a free-to-play world; Krystilia tasks do not increase the drop rate.'"
+        }
+      },
+      {
+        "name": "West of Ralos' Rise",
+        "displayName": "West of Ralos' Rise - Varlamore (6 spawns, monster page only)",
+        "rank": 11,
+        "multi": "unknown",
+        "cannon": "unknown",
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "6 level 42 spawns listed only on the Moss giant monster page LocLine list; not on the task page, so no multi/cannon/safespot data.",
+        "evidence": {
+          "multi": "not stated",
+          "cannon": "not stated",
+          "requirements": "not stated; Moss giant LocLine 'West of [[Ralos' Rise]]' levels 42, 6 coordinates"
+        }
+      },
+      {
+        "name": "Tonali Cavern",
+        "displayName": "Tonali Cavern - southern chamber (8 spawns, The Final Dawn, no cannon)",
+        "rank": 12,
+        "multi": "unknown",
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "The Final Dawn"
+        ],
+        "notes": "5 spawns on the ground floor and 3 on the first floor of the southern chamber, listed only on the Moss giant monster page; not on the task page.",
+        "evidence": {
+          "multi": "not stated for the southern chamber (Tonali Cavern page names only the Moon and Sun chambers as multicombat)",
+          "cannon": "Tonali Cavern: 'Players cannot set up a dwarf multicannon within the cavern.'",
+          "requirements": "Tonali Cavern: 'Accessing it requires completion of the The Final Dawn quest.'"
+        }
+      }
+    ],
+    "notes": "Vannaka 40-90, Krystilia 100-150. Task page intro: 'The mossy key drop rate is improved to 1/75 while slaying moss giants on task' and 'Bryophyta, the moss giant boss, drops mossy keys at a much higher rate of 1/8 while on a moss giant slayer task.' Other listed spots: Crandor (3), Isle of Souls (6), West of Fishing Guild (4), Laguna Aurorae (15, needs 58 Sailing) - all single-way and cannonable per the task page. The wiki does not explicitly rank locations; ranks here follow spawn count and cannon/multi convenience. The Moss giant monster page additionally lists West of Ralos' Rise and Tonali Cavern (added above, unranked data) and a giant north-east of Prifddinas that 'Cannot actually be fought'. The Slayer task list Moss giants row also names Glarial's Tomb, which is on neither the task page nor the monster page LocLine list (unverified).",
+    "_verification": {
+      "corrections": [
+        "Kourend Woodland: removed the unsupported 'north of Land's End' placement; the task page only shows a safespot image and 'Various safespots'",
+        "locations: added West of Ralos' Rise (6) and Tonali Cavern (5+3, cannon prohibited, The Final Dawn) from the Moss giant LocLine list, which the task page omits",
+        "Bryophyta's Lair: added that Krystilia tasks do not raise the mossy key rate and that the base rate is 1/16",
+        "notes: flagged Glarial's Tomb (Slayer task list row only) as unverified",
+        "confirmed: all 9 task-page location rows (spawns/multi/cannon/notes), variant xp 60/85/120/115, Moss giant infobox slayxp1 60, fire 50%, max hit 6, aggressive Yes, assignedby krystilia,vannaka; Wilderness Pond wilderness = 35 and access routes; Brimhaven Dungeon fee/axe/single-way quotes; Catacombs multicombat quote; Iorwerth single-way quote; Dwarf multicannon prohibited lines for Bryophyta's lair and Catacombs"
+      ],
+      "confirmed": 40,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Nechryael",
+    "wikiTaskPage": "Slayer task/Nechryael",
+    "monsterPages": [
+      "Nechryael",
+      "Greater Nechryael",
+      "Nechryarch"
+    ],
+    "bossTask": false,
+    "summary": "Nechryael (80 Slayer, 85 combat, Priest in Peril to be assigned) are melee demons that summon up to two death spawns whose typeless hits ignore Protect from Melee and single-combat rules, so bring food or use blood spells. The wiki's fastest option is bursting or barraging the 14 greater nechryael in the Catacombs of Kourend with a goading potion to draw aggression, since they are not aggressive; for melee it recommends the Iorwerth Dungeon (the nechryael there drop crystal shards) with a demonbane weapon such as Emberlight or Arclight. Normal nechryael in the Slayer Tower are safespottable using the tables and buckets, and the Charred Dungeon (60 Sailing) is a multicombat, cannonable spot for normal nechryael. Krystilia tasks must be done in the task-only Wilderness Slayer Cave; bring a one-click teleport such as a royal seed pod.",
+    "recommendedStyle": "Magic",
+    "styleNotes": "Demon attribute (demonbane weapons very effective); crush attackers, not aggressive, no poison or cannon immunity; the superior Nechryarch is poison/venom immune and summons three chaotic death spawns (melee, magic, ranged) only if it can reach you.",
+    "requiredItems": [],
+    "usefulItems": [
+      "Goading potion (or darts/knives/Dinh's bulwark) to lure since they are not aggressive",
+      "Bracelet of slaughter",
+      "Herb sack / Seed box",
+      "Super restores or prayer potions for Protect from Melee",
+      "Demonbane weapon (Emberlight, Arclight) for melee",
+      "Ice Burst/Barrage runes for the Catacombs",
+      "Xeric's talisman or Kourend portal for the Catacombs; teleport crystal for Iorwerth",
+      "One-click teleport such as royal seed pod for the Wilderness Slayer Cave"
+    ],
+    "superior": "Nechryarch",
+    "alternatives": [
+      "Greater Nechryael (Catacombs of Kourend, Iorwerth Dungeon, Wilderness Slayer Cave)"
+    ],
+    "xpPerKill": 105,
+    "locations": [
+      {
+        "name": "Catacombs of Kourend",
+        "displayName": "Catacombs of Kourend - greater nechryael (multi, burst/barrage)",
+        "rank": 1,
+        "multi": true,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [],
+        "notes": "14 greater nechryael (210 xp each) in two chambers of seven; reached easily with a Kourend-attuned portal or Xeric's talisman. Often crashed if meleeing. Northern crevice shortcut (34 Agility) links to warped jellies.",
+        "evidence": {
+          "multi": "Slayer task/Nechryael location comparison row 'Catacombs of Kourend' -> Multicombat: Yes; Catacombs of Kourend page: 'this particular dungeon is a multicombat area (excluding the brutal dragon area)'",
+          "cannon": "Slayer task/Nechryael location comparison row 'Catacombs of Kourend' -> Cannonable: No; Catacombs page: 'dwarf multicannons cannot be placed inside the Catacombs'",
+          "requirements": "not stated; Slayer task/Nechryael: 'Easily accessible with a portal attuned to Great Kourend or with a Xeric's Talisman.'"
+        }
+      },
+      {
+        "name": "Iorwerth Dungeon",
+        "displayName": "Iorwerth Dungeon - greater nechryael (single, cannon, crystal shards)",
+        "rank": 2,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Song of the Elves"
+        ],
+        "notes": "16 greater nechryael; quick access with a teleport crystal; recommended for melee because it is less likely to be crashed and the nechryael here drop crystal shards.",
+        "evidence": {
+          "multi": "Slayer task/Nechryael location comparison row 'Iorwerth Dungeon' -> Multicombat: No; Iorwerth Dungeon page: 'the whole dungeon is single-way combat.'",
+          "cannon": "Slayer task/Nechryael location comparison row 'Iorwerth Dungeon' -> Cannonable: Yes; Iorwerth Dungeon: 'A dwarf multicannon can be used in the dungeon.'",
+          "requirements": "Slayer task/Nechryael: 'Requires completion of Song of the Elves.'"
+        }
+      },
+      {
+        "name": "Slayer Tower (top floor)",
+        "displayName": "Slayer Tower - top floor (normal nechryael, safespots)",
+        "rank": 3,
+        "multi": false,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Priest in Peril (Morytania access)"
+        ],
+        "notes": "11 normal nechryael in the north-eastern wing of the top floor; safespot using the many tables and buckets. The spiked chain in the infernal mage room (71 Agility, boostable) is a shortcut up to the nechryael, not a requirement. Morytania diary gives 2.5-10% bonus Slayer XP in the tower.",
+        "evidence": {
+          "multi": "Slayer task/Nechryael location comparison row 'Slayer Tower (top floor)' -> Multicombat: No",
+          "cannon": "Slayer task/Nechryael location comparison row 'Slayer Tower (top floor)' -> Cannonable: No; Slayer Tower page: 'Dwarf multicannons cannot be used here.'; Dwarf multicannon prohibited list: 'Slayer Tower'",
+          "requirements": "Slayer task list Nechryael row: 'Quest Priest in Peril'. Slayer Tower: 'This chain requires 71 Agility (can be boosted) to take players to the 2nd floor, where the nechryael are located.'"
+        }
+      },
+      {
+        "name": "Slayer Tower (basement)",
+        "displayName": "Slayer Tower - basement (task-only, safespots)",
+        "rank": 4,
+        "multi": false,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Priest in Peril (Morytania access)",
+          "Must be on a nechryael task (Raulyn blocks off-task kills)"
+        ],
+        "notes": "12 normal nechryael; ladder near the ground-floor entrance. Many tables make safespotting nechryarchs very easy.",
+        "evidence": {
+          "multi": "Slayer task/Nechryael location comparison row 'Slayer Tower (basement)' -> Multicombat: No",
+          "cannon": "Slayer task/Nechryael location comparison row 'Slayer Tower (basement)' -> Cannonable: No; Dwarf multicannon prohibited list: 'Slayer Tower'",
+          "requirements": "Slayer task/Nechryael: 'Can only be killed on a slayer task.' Slayer Tower: 'Monsters here can only be killed on a Slayer task. Raulyn will stop players who attempt to attack monsters that are not on their Slayer task.'"
+        }
+      },
+      {
+        "name": "Charred Dungeon",
+        "displayName": "Charred Dungeon - normal nechryael (multi, cannon, 60 Sailing)",
+        "rank": 5,
+        "multi": true,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "60 Sailing to dock at Charred Island",
+          "Rope on the first entry (a rope spawns on the island)"
+        ],
+        "notes": "11 normal nechryael per the Nechryael LocLine and the task page's location table (the task page prose says 'only being 6 spawns'); the task page says it is 'highly encouraged' for normal nechryael because kills are much faster with better seed rates and it is a good imbued heart spot. Close to Wyrmscraig for necklace of passage access.",
+        "evidence": {
+          "multi": "Slayer task/Nechryael location comparison row 'Charred Dungeon' -> Multicombat: Yes; Charred Dungeon page: 'The entire dungeon, barring the lava strykewyrms, is a multicombat area.'",
+          "cannon": "Slayer task/Nechryael location comparison row 'Charred Dungeon' -> Cannonable: Yes; Charred Dungeon: 'A dwarf multicannon can be used throughout the dungeon'",
+          "requirements": "Charred Dungeon: 'requires level 60 Sailing to dock at. Rope is required when entering the dungeon the first time.'"
+        }
+      },
+      {
+        "name": "Wilderness Slayer Cave",
+        "displayName": "Wilderness Slayer Cave - greater nechryael (task-only, PK hotspot)",
+        "rank": 6,
+        "multi": true,
+        "cannon": true,
+        "wilderness": true,
+        "wildernessLevelMin": 17,
+        "wildernessLevelMax": 32,
+        "konarAssignable": false,
+        "requirements": [
+          "Must be on a nechryael task (Peeve blocks off-task kills)",
+          "Krystilia only assigns them with 'I Wildy More Slayer' unlocked"
+        ],
+        "notes": "8 greater nechryael with an improved drop table; entrances at level 18 (west of Larran's small chest) and level 29 (south-west of the Silk Chasm). Do not bring items you are unwilling to lose.",
+        "evidence": {
+          "multi": "Slayer task/Nechryael location comparison row 'Wilderness Slayer Cave' -> Multicombat: Yes; Wilderness Slayer Cave page: 'The cave is the only multi-combat spot where the cannon can be used for some monsters.'",
+          "cannon": "Slayer task/Nechryael location comparison row 'Wilderness Slayer Cave' -> Cannonable: Yes; Wilderness Slayer Cave: 'it's possible to use the Dwarf multicannon inside the dungeon.'",
+          "requirements": "Wilderness Slayer Cave: 'Abyssal demons, Nechryaels, Dust devils, and Jellies can only be killed while on Slayer task.' Greater Nechryael: 'Krystilia will only assign them if I Wildy More Slayer is unlocked.'"
+        }
+      }
+    ],
+    "notes": "Assigned by Krystilia, Vannaka, Konar, Chaeldar, Nieve, Duradel and Mortimer; Konar locations are Catacombs of Kourend, Iorwerth Dungeon and Slayer Tower. Slayer XP: infobox says 105 (normal) / 210 (greater) / 3,280 (Nechryarch) while the task page's variant table says 128 / 205; the infobox and dungeon tables (Charred 105, Catacombs 210) are used here. Death spawns 'are able to attack you in single-combat areas regardless of if you are already in combat.'",
+    "_verification": {
+      "corrections": [
+        "Slayer Tower (top floor): moved the 71 Agility spiked chain from requirements to notes (Slayer Tower page describes it as a chain shortcut, not an entry requirement)",
+        "Charred Dungeon: noted the task page's own 6 vs 11 spawn discrepancy (LocLine has 11 coordinates, location table says 11)",
+        "confirmed: all 6 location rows match Slayer task/Nechryael Location Comparisons; Nechryael infobox slayxp 105 / Greater 210 / Nechryarch 3280; Nechryarch poisonresistance 100 and 'summon 3 chaotic death spawns... magic, ranged and melee'; Konar row locations Catacombs, Iorwerth, Slayer Tower; Wilderness Slayer Cave 'can only be killed while on Slayer task... stopped by Peeve' and entrances level 18/29; Greater Nechryael 'Krystilia will only assign them if I Wildy More Slayer is unlocked'; Catacombs northern crevice 34 Agility; Charred Dungeon 60 Sailing/rope/multicombat/cannon quotes; Slayer task list row Priest in Peril, Combat 85",
+        "summary: removed the crashing/PK warnings about other players (kept in location notes)"
+      ],
+      "confirmed": 36,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Ogres",
+    "wikiTaskPage": "Slayer task/Ogres",
+    "monsterPages": [
+      "Ogre",
+      "Ogress Warrior"
+    ],
+    "bossTask": false,
+    "summary": "Ogres are a Vannaka-only task at 40 combat with no Slayer requirement; mogres, zogres, skogres and Ogress Warriors and Shamans all count, but jogres do not. The wiki says the best place is directly west of Yanille, where you can stand between the plants and the dry stone walls so the ogres can never reach you; the Chaos Druid Tower dungeon (46 Thieving) is a quiet alternative and the caged ogres at the Combat Training Camp (Biohazard) can be ranged or maged with no danger. Ogress Warriors and Shamans in the Corsair Cove Dungeon are a good alternative with rune drops. Ogres hit with crush and have a 20% weakness to earth spells.",
+    "recommendedStyle": "Any",
+    "styleNotes": "Crush attackers with 20% elemental weakness to earth; no poison or cannon immunity (Ogre infobox); zogres/skogres inflict disease and take 75% reduced damage from normal weapons so brutal arrows work best (Zogre page); Ogress Warriors have 'somewhat higher defence than lesser demons (especially magical defence)'.",
+    "requiredItems": [],
+    "usefulItems": [
+      "Dwarf multicannon (west of Yanille, Combat Training Camp)",
+      "Halberd to melee caged ogres through the bars",
+      "Brutal arrows for zogres/skogres",
+      "Ensouled ogre heads (41 Magic, Adept Reanimation) to count reanimated ogres"
+    ],
+    "superior": null,
+    "alternatives": [
+      "Ogress Warrior / Ogress Shaman (Corsair Cove Dungeon, 82 xp)",
+      "Mogre (Mudskipper Point, 32 Slayer, 48 xp)",
+      "Zogre / Skogre (Jiggig, Zogre Flesh Eaters, 71 xp)",
+      "Ogre chieftain / Enclave guard (Ogre Enclave; listed as task variants in the Slayer task list Ogres row, xp not verified)",
+      "Reanimated ogre (ensouled ogre head)"
+    ],
+    "xpPerKill": 60,
+    "locations": [
+      {
+        "name": "West of Yanille",
+        "displayName": "West of Yanille (best spot, safespot behind the stone walls)",
+        "rank": 1,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "14 ogres near Og and the small island; stand between the plants and the dry stone walls and they can never reach you. If crowded by cannon users, kill the ogres in the ruins immediately north behind a line of trees.",
+        "evidence": {
+          "multi": "Slayer task/Ogres location comparison row 'West of Yanille' -> Multicombat: No",
+          "cannon": "Slayer task/Ogres location comparison row 'West of Yanille' -> Cannonable: Yes; Ogre page: 'the location may be crowded with cannon users'",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Chaos Druid Tower Dungeon (requires 46 Thieving)",
+        "displayName": "Chaos Druid Tower dungeon (46 Thieving, quiet)",
+        "rank": 2,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "46 Thieving to pick the tower door"
+        ],
+        "notes": "7 ogres in a usually quiet dungeon; safespottable.",
+        "evidence": {
+          "multi": "Slayer task/Ogres location comparison row 'Chaos Druid Tower Dungeon' -> Multicombat: No",
+          "cannon": "Slayer task/Ogres location comparison row 'Chaos Druid Tower Dungeon' -> Cannonable: Yes",
+          "requirements": "Ogre page: 'if the player has level 46 Thieving, they can access the Chaos Druid Tower that has 7 ogres in its dungeon, where it is usually quiet.'"
+        }
+      },
+      {
+        "name": "Corsair Cove Dungeon",
+        "displayName": "Corsair Cove Dungeon - Ogress Warriors and Shamans (82 xp)",
+        "rank": 3,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Partial completion of The Corsair Curse or level 10 Agility"
+        ],
+        "notes": "32 ogresses (16 warriors, 16 shamans); the entrance is a commonly used safespot so expect it taken. Ogress shamans have a unique cosmetic drop; 45+ Ranged or 13+ Magic recommended for safespotting due to their defence.",
+        "evidence": {
+          "multi": "Slayer task/Ogres location comparison row 'Corsair Cove Dungeon' -> Multicombat: No; Corsair Cove Dungeon page: 'The Dwarf multicannon can be used in the dungeon, though it is not multicombat.'",
+          "cannon": "Slayer task/Ogres location comparison row 'Corsair Cove Dungeon' -> Cannonable: Yes; Corsair Cove Dungeon: 'The Dwarf multicannon can be used in the dungeon'",
+          "requirements": "Slayer task/Ogres monster variants: Ogress Shaman / Ogress Warrior 'Requires partial completion of The Corsair Curse or level 10 Agility.'"
+        }
+      },
+      {
+        "name": "Combat Training Camp (requires Biohazard)",
+        "displayName": "Combat Training Camp - caged ogres (Biohazard, cannon/range from safety)",
+        "rank": 4,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Biohazard"
+        ],
+        "notes": "8 caged level 63 ogres; the Ogre page says 'These ogres are unaggressive' (the infobox Level 63 version is marked aggressive = Yes). Ranged, magic, cannon or a halberd through the cage. The most common low-risk cannon spot but very busy at peak hours.",
+        "evidence": {
+          "multi": "Slayer task/Ogres location comparison row 'Combat Training Camp' -> Multicombat: No",
+          "cannon": "Slayer task/Ogres location comparison row 'Combat Training Camp' -> Cannonable: Yes; Dwarf multicannon page: 'The Combat Training Camp is the most common low risk spot for cannoning'",
+          "requirements": "Slayer task/Ogres: 'Requires completion of Biohazard.'"
+        }
+      },
+      {
+        "name": "Gu'Tanoth (Requires partial completion of Watchtower)",
+        "displayName": "Gu'Tanoth (18 ogres, partial Watchtower)",
+        "rank": 5,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Partial completion of Watchtower"
+        ],
+        "notes": "18 ogres secluded in many parts of the ogre city.",
+        "evidence": {
+          "multi": "Slayer task/Ogres location comparison row 'Gu'Tanoth' -> Multicombat: No",
+          "cannon": "Slayer task/Ogres location comparison row 'Gu'Tanoth' -> Cannonable: Yes",
+          "requirements": "Ogre LocLine: 'Gu'Tanoth (Requires partial completion of Watchtower)'"
+        }
+      },
+      {
+        "name": "Feldip Hills",
+        "displayName": "Feldip Hills (18 ogres, spread out)",
+        "rank": 6,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "18 ogres but fairly spread out. The Dwarf multicannon page lists only the 'Feldip Hills jungle hunter area' as cannon-prohibited.",
+        "evidence": {
+          "multi": "Slayer task/Ogres location comparison row 'Feldip Hills' -> Multicombat: No",
+          "cannon": "Slayer task/Ogres location comparison row 'Feldip Hills' -> Cannonable: Yes (Dwarf multicannon prohibited list names only 'Feldip Hills jungle hunter area')",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Jiggig",
+        "displayName": "Jiggig - zogres and skogres (multi, no cannon, disease)",
+        "rank": 7,
+        "multi": true,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Started Zogre Flesh Eaters (zogres) / partial completion (skogres)"
+        ],
+        "notes": "11 level 44 zogres/skogres above ground (71 xp) and 36 more in Jiggig Dungeon (single, no cannon); they inflict disease and brutal arrows work best.",
+        "evidence": {
+          "multi": "Slayer task/Ogres location comparison row 'Jiggig' -> Multicombat: Yes (Jiggig Dungeon row -> No)",
+          "cannon": "Slayer task/Ogres location comparison row 'Jiggig' -> Cannonable: No; Dwarf multicannon prohibited list: 'Jiggig - The ogres won't be happy if you set up a cannon here.' and 'Jiggig Dungeon - The ground is too soft'",
+          "requirements": "Slayer task/Ogres monster variants: Zogre 'Requires the starting of Zogre Flesh Eaters.'; Skogre 'Requires partial completion of Zogre Flesh Eaters.'"
+        }
+      },
+      {
+        "name": "God Wars Dungeon",
+        "displayName": "God Wars Dungeon (3 ogres, multi, other followers attack)",
+        "rank": 8,
+        "multi": true,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "Only 3 level 58 ogres; multicombat so other monsters will attack you unless wearing a Bandos-affiliated item. Wilderness God Wars Dungeon has 1 more (multi, in the Wilderness).",
+        "evidence": {
+          "multi": "Slayer task/Ogres location comparison row 'God Wars Dungeon' -> Multicombat: Yes, 'As this is a multicombat area, other monsters will attack you.'; Multicombat area list: '*God Wars Dungeon'",
+          "cannon": "Slayer task/Ogres location comparison row 'God Wars Dungeon' -> Cannonable: Yes (Dwarf multicannon page: 'inhabitants of the God Wars Dungeon may also destroy a cannon if a player attempts to use it')",
+          "requirements": "not stated"
+        }
+      }
+    ],
+    "notes": "Vannaka only, 40-90 assigned. Task page: 'Jogres do not count towards the task.' Other cannonable single-way spots listed: Clock Tower Dungeon (3), Witchaven Dungeon (6), Gnome Maze (1), Underground Pass (2, Plague City). Mogres at Mudskipper Point also satisfy the task (see Mogres entry). The Slayer task list Ogres row also names Ogre chieftain and Enclave guard as variants and South of Castle Wars, South of Gu'Tanoth and Toban's Island as locations; none of those locations appear in the Ogre LocLine list (unverified).",
+    "_verification": {
+      "corrections": [
+        "alternatives: added Ogre chieftain / Enclave guard, which the Slayer task list Ogres row lists as task variants (Ogre Enclave page has 6 Ogre chieftain spawns)",
+        "styleNotes: replaced 'notably higher magic defence' with the Ogress Warrior page wording and added the Zogre 75% damage reduction",
+        "Combat Training Camp: recorded the infobox/text conflict on aggression",
+        "notes: flagged three Slayer task list locations absent from the Ogre LocLine list",
+        "confirmed: all 8 location rows match Slayer task/Ogres Location Comparison; Ogre infobox slayxp 60, assignedby vannaka, earth 20%, poisonresistance 0, immunecannon No, GWD version 'Yes, unless wearing a Bandos-affiliated item'; Ogre page 'best place... directly west of Yanille', 'crowded with cannon users', 'Chaos Druid Tower that has 7 ogres in its dungeon, where it is usually quiet'; Corsair Cove Dungeon cannon/not multicombat; Zogre disease and 71 xp; 'Jogres do not count'; Dwarf multicannon lines for Jiggig, Jiggig Dungeon, Feldip Hills jungle hunter area, Combat Training Camp, God Wars Dungeon",
+        "summary: removed the 'cannon users often crowd it' warning about other players (kept in location notes)"
+      ],
+      "confirmed": 38,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Otherworldly beings",
+    "wikiTaskPage": "Otherworldly being",
+    "monsterPages": [
+      "Otherworldly being"
+    ],
+    "bossTask": false,
+    "summary": "Otherworldly beings are level 64 spectral monsters found only south of the bank in Zanaris, assigned by Vannaka at 40 combat after Lost City. They are not aggressive and can be safespotted by standing next to the flower pond and attacking across it, or more reliably by corner-trapping them at the pond corners; they wander a lot, so a couple will retreat if attacked across the pond. They are a decent source of herbs, runes and ring-of-forging materials for ironmen, and an Ectoplasmator gives Prayer XP because they are spectral.",
+    "recommendedStyle": "Any",
+    "styleNotes": "Spectral attribute (Ectoplasmator gives Prayer XP); crush attacker, max hit 7, not aggressive, 35% elemental weakness to wind spells, flat armour -2, no poison or cannon immunity.",
+    "requiredItems": [],
+    "usefulItems": [
+      "Ectoplasmator (Prayer XP from spectral kills)",
+      "Ranged or Magic for the pond safespot"
+    ],
+    "superior": null,
+    "alternatives": [],
+    "xpPerKill": 66,
+    "locations": [
+      {
+        "name": "Zanaris",
+        "displayName": "Zanaris - south of the bank, by the flower pond",
+        "rank": 1,
+        "multi": "unknown",
+        "cannon": "unknown",
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Lost City"
+        ],
+        "notes": "Six spawns just south of the Zanaris bank. Five of the six have a wander radius that allows pond safespotting; one retreats if attacked horizontally across the pond, another vertically, the other three never retreat while you stay next to the pond.",
+        "evidence": {
+          "multi": "not stated (Otherworldly being and Zanaris pages are silent; research/area-rules.json lists 'Zanaris (page silent)')",
+          "cannon": "not stated (infobox immunecannon = No, but no page states whether a cannon can be set up in Zanaris)",
+          "requirements": "Slayer task list Otherworldly beings row: 'Quest Lost City', 'Combat 40'. Zanaris: 'The Lost City quest is a pre-requisite to visiting Zanaris.'"
+        }
+      }
+    ],
+    "notes": "No 'Slayer task/Otherworldly beings' page exists (fetch returned missingtitle for both plural and singular), so the monster page is used. Vannaka only. Assignment list Location column: Zanaris.",
+    "_verification": {
+      "corrections": [
+        "no changes; Otherworldly being infobox (combat 64, spectral, flatarmour -2, max hit 7, aggressive No, slayxp 66, assignedby vannaka, air 35%, poisonresistance 0, immunecannon No), pond/corner-trap/wander-radius text, Ectoplasmator line, ironman herbs/runes/ring of forging line, Zanaris 'The Lost City quest is a pre-requisite to visiting Zanaris.' and Slayer task list row (Lost City, Combat 40, Vannaka) all re-read; multi/cannon remain unknown as no page states them"
+      ],
+      "confirmed": 15,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "The Phantom Muspah",
+    "wikiTaskPage": "Phantom Muspah",
+    "monsterPages": [
+      "Phantom Muspah"
+    ],
+    "bossTask": true,
+    "summary": "The Phantom Muspah is a level 741 solo instanced boss in its lair off the Ghorrock Dungeon beneath Weiss, unlocked by completing Secrets of the North, and can be assigned as a boss task by Konar, Nieve and Duradel.",
+    "recommendedStyle": "Any",
+    "styleNotes": "Spectral attribute; immune to cannon (immunecannon = Yes), immune to poison and venom, 33% freeze resistance, 65% elemental weakness to air spells.",
+    "requiredItems": [],
+    "usefulItems": [],
+    "superior": null,
+    "alternatives": [],
+    "xpPerKill": 1763.7,
+    "locations": [
+      {
+        "name": "Ghorrock Dungeon",
+        "displayName": "Ghorrock Dungeon - Muspah lair crevice (via Weiss Salt Mine)",
+        "rank": 1,
+        "multi": "unknown",
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Secrets of the North",
+          "Like a Boss unlock (200 Slayer reward points) to receive boss tasks"
+        ],
+        "notes": "Enter the Ghorrock Dungeon from Weiss's Salt Mine (icy basalt teleport, or ring of shadows after using the frozen tablet) and take the crevice in the south of the dungeon; graves appear outside the lair. The page text says it respawns 30 seconds after death (infobox respawn = 50 ticks). Brimstone keys drop only on a Konar task.",
+        "evidence": {
+          "multi": "not stated (Phantom Muspah page describes it only as 'a solo boss' in an instance)",
+          "cannon": "Phantom Muspah infobox 'immunecannon = Yes'",
+          "requirements": "Phantom Muspah: 'a solo boss that can be fought after completion of the quest Secrets of the North.' Boss page boss-slayer table: 'Phantom Muspah | Ghorrock Dungeon | Slayer 1 | Completion of Quest Secrets of the North'. Slayer page: 'players who have unlocked the Like a boss ability via spending 200 Slayer reward points can have Nieve/Steve, Duradel/Kuradal, Konar quo Maten or Krystilia (Wilderness only) directly assign them a limited selection of boss monsters'. Ghorrock Dungeon: 'Teleporting with the ring of shadows, after using the frozen tablet on it.' / 'Teleporting to Weiss with icy basalt, then entering the Salt Mine'; 'At the south of the dungeon through a crevice is the lair of the Phantom Muspah'."
+        }
+      }
+    ],
+    "notes": "Boss task; identity and location only, no fight mechanics. Infobox assignedby: konar, nieve, duradel. Slayer page: completing a boss task 'will grant an additional 5,000 Slayer experience after the task is complete.' Unique drops include ancient essence and venator shards.",
+    "_verification": {
+      "corrections": [
+        "Ghorrock Dungeon notes: crevice is described as 'south of the dungeon' on the Ghorrock Dungeon page and 'south-west' on the Phantom Muspah page; both kept, and the 30 s vs infobox 50-tick respawn noted",
+        "confirmed: infobox combat 741, spectral, slayxp 1763.7, assignedby konar,nieve,duradel, immunecannon Yes, poison/venom 100, freezeresistance 33, air 65%; 'solo boss that can be fought after completion of the quest Secrets of the North'; Boss page row 'Phantom Muspah | Ghorrock Dungeon | Slayer 1 | Completion of Quest Secrets of the North'; Slayer page Like a boss / 5,000 XP lines; brimstone key Konar-only note; no fight mechanics present"
+      ],
+      "confirmed": 16,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Pirates",
+    "wikiTaskPage": "Slayer task/Pirate",
+    "monsterPages": [
+      "Pirate",
+      "Zombie pirate"
+    ],
+    "bossTask": false,
+    "summary": "Pirates are a Krystilia-only Wilderness task (39 Thieving) with two options. The level 26 pirates in the Pirates' Hideout at level 54-55 Wilderness need a lockpick to enter, are in single-way combat and have a minimal drop table. The wiki favours the level 22-34 zombie pirates at the Chaos Temple in level 11 Wilderness, which is multicombat, cannonable and gives a generous drop table (much better with the medium Wilderness diary), but nearby elder chaos druids will teleblock you, so use Protect from Magic and recharge at the temple altar.",
+    "recommendedStyle": "Any",
+    "styleNotes": "Pirates attack with slash and are aggressive in the hideout; zombie pirates are undead crush attackers with a 50% elemental weakness to fire; neither is immune to poison or cannon.",
+    "requiredItems": [
+      "Lockpick (Pirates' Hideout only)"
+    ],
+    "usefulItems": [
+      "Dwarf multicannon (Chaos Temple)",
+      "Prayer potions for Protect from Magic against elder chaos druids",
+      "Teleport anchoring scroll (stops druid teleports)",
+      "Amulet of avarice (notes zombie pirate drops)",
+      "Medium Wilderness diary (50% drop roll instead of 15%)"
+    ],
+    "superior": null,
+    "alternatives": [
+      "Zombie pirate (Chaos Temple, 30/35/40 xp)"
+    ],
+    "xpPerKill": 20,
+    "locations": [
+      {
+        "name": "Chaos Temple (Wilderness)",
+        "displayName": "Chaos Temple - zombie pirates, level 11 Wilderness (multi, cannon)",
+        "rank": 1,
+        "multi": true,
+        "cannon": true,
+        "wilderness": true,
+        "wildernessLevelMin": 11,
+        "wildernessLevelMax": 12,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "34 zombie pirates around the temple north of Varrock; burning amulet teleports to the north entrance at level 15. Elder chaos druids teleblock and teleport you to them, and lava rocks do minor damage; altar inside recharges prayer.",
+        "evidence": {
+          "multi": "Slayer task/Pirate: 'It is located in multi-way combat and a cannon can be used.'; location table 'Chaos Temple (Wilderness)' -> Multicombat: Yes; Chaos Temple (Wilderness) page: 'The area is also multi-combat'",
+          "cannon": "Slayer task/Pirate: 'a cannon can be used'; location table -> Cannonable: Yes",
+          "requirements": "not stated; Chaos Temple (Wilderness) infobox 'wilderness = 11', otheruses 'the temple in level 11-12 Wilderness'"
+        }
+      },
+      {
+        "name": "Pirates' Hideout",
+        "displayName": "Pirates' Hideout - level 54-55 Wilderness (lockpick, single)",
+        "rank": 2,
+        "multi": false,
+        "cannon": true,
+        "wilderness": true,
+        "wildernessLevelMin": 54,
+        "wildernessLevelMax": 55,
+        "konarAssignable": false,
+        "requirements": [
+          "39 Thieving",
+          "Lockpick to pick the door"
+        ],
+        "notes": "12 aggressive level 26 pirates in deep Wilderness with a minimal drop table; reach it via the Ardougne/Edgeville lever to the Deserted Keep then north and west, or Ice Plateau/Ghorrock teleport then east.",
+        "evidence": {
+          "multi": "Slayer task/Pirate: 'They are located in single-way combat.'; Pirates' Hideout page: 'a single-way combat building located in deep Wilderness'",
+          "cannon": "Slayer task/Pirate location table 'Pirates' Hideout' -> Cannonable: Yes",
+          "requirements": "Pirates' Hideout: 'A lockpick and 39 Thieving are required to pick the door lock and gain entry.' Slayer task/Pirate: 'Pirates can be found at level 55 Wilderness in the Pirates' Hideout. A lockpick is required to enter.' (infobox wilderness = 54) Pirate LocLine for Pirates' Hideout: levels 26, 12 coordinates, dropversion 'Asgarnian Ice Dungeon' (infobox version4 combat 26, aggressive Yes)."
+        }
+      }
+    ],
+    "notes": "Krystilia only, 62-75 assigned. The task page title is singular ('Slayer task/Pirate'); 'Slayer task/Pirates' does not exist. Zombie pirates are also assigned by Turael, Spria and Mazchna as zombies.",
+    "_verification": {
+      "corrections": [
+        "no field changes; added the Pirate LocLine/version evidence for 'aggressive level 26'",
+        "confirmed: Slayer task/Pirate (Krystilia 62-75, 39 Thieving, 'located in single-way combat', 'multi-way combat and a cannon can be used', teleblock/Protect from Magic/altar/15%->50% diary lines, tables 12 and 34); Pirate infobox slayxp 20, slash, assignedby krystilia; Zombie pirate infobox undead, crush, slayxp 30/35/40, fire 50%, assignedby turael,spria,krystilia,mazchna, amulet of avarice line; Pirates' Hideout wilderness = 54, lockpick + 39 Thieving, lever/Ice Plateau routes; Chaos Temple (Wilderness) wilderness = 11, '11-12 Wilderness', multi-combat, burning amulet level 15, lava rocks; Slayer task list row (Pirates' Hideout, Chaos Temple (Wilderness), Thieving 39)"
+      ],
+      "confirmed": 24,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Pyrefiends",
+    "wikiTaskPage": "Slayer task/Pyrefiends",
+    "monsterPages": [
+      "Pyrefiend",
+      "Pyrelord",
+      "Flaming pyrelord"
+    ],
+    "bossTask": false,
+    "summary": "Pyrefiends (30 Slayer, 25 combat) are small fire demons assigned by Mazchna, Vannaka and Mortimer that attack with magic-based melee, so wear dragonhide or other high magic defence armour, or flick Protect from Melee; their max hit is low but they hit consistently. They are 100% weak to water spells and have low magic defence, so Magic is very effective. The Fremennik Slayer Cave (fairy ring AJR) has 13 with a rock safespot but no cannon; the Sisterhood Sanctuary (21 plus 6 stronger pyrelords) and the Smoke Dungeon (23, facemask needed) allow a cannon, and the Isle of Souls burnt forest near BJP has a tree safespot for pyrelords and working cannon.",
+    "recommendedStyle": "Magic",
+    "styleNotes": "Magical melee attack (accuracy rolls against magic defence); 100% elemental weakness to water spells; demon attribute; pyrefiends are immune to weak burns and 1x1 so hard to safespot, pyrelords are 2x2 and safespot easily behind trees.",
+    "requiredItems": [],
+    "usefulItems": [
+      "Dragonhide or other magic-defence armour",
+      "Water spells",
+      "Halberd or ranged weapon for safespots",
+      "Dwarf multicannon (Sisterhood Sanctuary, Smoke Dungeon, Isle of Souls)",
+      "Facemask / Slayer helmet / gas mask for the Smoke Dungeon"
+    ],
+    "superior": "Flaming pyrelord",
+    "alternatives": [
+      "Pyrelord (Isle of Souls, Sisterhood Sanctuary, 80 xp; superior Infernal pyrelord 1,840 xp)"
+    ],
+    "xpPerKill": 45,
+    "locations": [
+      {
+        "name": "Fremennik Slayer Cave (ajr)",
+        "displayName": "Fremennik Slayer Dungeon - fairy ring AJR (13, safespot, no cannon)",
+        "rank": 1,
+        "multi": false,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "13 level 43 pyrefiends in the fourth chamber; 43 Agility (boostable) strange-floor shortcut from the cave crawler chamber. Fremennik Slayer Dungeon page: 'For players using magic and ranged, there is safespot near rocks on west.' The wiki gives no explicit ranking between pyrefiend spots.",
+        "evidence": {
+          "multi": "Slayer task/Pyrefiends location comparison row 'Fremennik Slayer Cave' -> Multicombat: No",
+          "cannon": "Slayer task/Pyrefiends location comparison row -> Cannonable: No; Pyrefiend page: 'the Dwarf Cannon will not work in the Fremennik Slayer Dungeon due to the humidity'; Dwarf multicannon prohibited list: 'Fremennik Slayer Dungeon - The air is too dank for you to set up a cannon here.'",
+          "requirements": "not stated; Fremennik Slayer Dungeon: 'The fourth chamber contains thirteen pyrefiends which can be killed at level 30 Slayer... The Agility shortcut here requires level 43 Agility, and leads back to the first chamber.'"
+        }
+      },
+      {
+        "name": "Sisterhood Sanctuary",
+        "displayName": "Sisterhood Sanctuary - Slepe (21 fiends + 6 pyrelords, cannon)",
+        "rank": 2,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Priest in Peril for Morytania access"
+        ],
+        "notes": "Most spawns of any spot (21 pyrefiends, 6 pyrelords) under Slepe; Morytania legs teleport to Burgh de Rott then the southern boat to Slepe (after Sins of the Father).",
+        "evidence": {
+          "multi": "Slayer task/Pyrefiends location comparison row 'Sisterhood Sanctuary' -> Multicombat: No",
+          "cannon": "Slayer task/Pyrefiends location comparison row 'Sisterhood Sanctuary' -> Cannonable: Yes",
+          "requirements": "Slayer task/Pyrefiends: 'Priest in Peril for access to Morytania'"
+        }
+      },
+      {
+        "name": "Smoke Dungeon",
+        "displayName": "Smoke Dungeon (23, facemask, cannon)",
+        "rank": 3,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Desert Treasure I started (reached the diamond search)",
+          "Facemask, Slayer helmet, Slayer helmet (i) or gas mask against the smoke"
+        ],
+        "notes": "23 pyrefiends; without smoke protection you take 20 damage every 12 seconds. The cannon ban in this dungeon applies only to the western task-only dust devil area.",
+        "evidence": {
+          "multi": "Slayer task/Pyrefiends location comparison row 'Smoke Dungeon' -> Multicombat: No",
+          "cannon": "Slayer task/Pyrefiends location comparison row 'Smoke Dungeon' -> Cannonable: Yes; Smoke Dungeon page: 'Dusty Aliv will also stop players from placing a Dwarf multicannon in the task-only area.' (Dwarf multicannon list: 'Smoke Dungeon (task-only area)')",
+          "requirements": "Slayer task/Pyrefiends: 'Must have started Desert Treasure I. Players must wear a facemask, Slayer helmet, Slayer helmet (i) or Gas mask to protect from the smoke in this area.'"
+        }
+      },
+      {
+        "name": "Isle of Souls (bjp)",
+        "displayName": "Isle of Souls - north side burnt forest, fairy ring BJP (10 + 3 pyrelords)",
+        "rank": 4,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "10 pyrefiends and 3 pyrelords on the northern part of the island south-west of fairy ring BJP; safespot pyrelords by putting a tree between you. Cage/harpoon fishing spots are on the north-eastern coast. The only bank and deposit box on the island are in the Soul Wars Lobby, 'very far away from most of the resources'; the Pyrelord page says the closest bank is the Shayzien Encampment via fairy ring DJR.",
+        "evidence": {
+          "multi": "Slayer task/Pyrefiends location comparison row 'Isle of Souls' -> Multicombat: No",
+          "cannon": "Slayer task/Pyrefiends location comparison row 'Isle of Souls' -> Cannonable: Yes; Pyrefiend page: 'is functional at the back of the Isle of Souls in the burnt forest area.'",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "God Wars Dungeon",
+        "displayName": "God Wars Dungeon (4, multi, followers aggressive)",
+        "rank": 5,
+        "multi": true,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Partial completion of Troll Stronghold",
+          "60 Strength or 60 Agility",
+          "Rope on the first visit"
+        ],
+        "notes": "Only 4 level 48 pyrefiends (aggressive unless wearing a Zamorak item); bring god-related protection. Wilderness God Wars Dungeon has 2 more (multi, Wilderness, ecumenical key chance).",
+        "evidence": {
+          "multi": "Slayer task/Pyrefiends location comparison row 'God Wars Dungeon' -> Multicombat: Yes; Multicombat area list: '*God Wars Dungeon'",
+          "cannon": "Slayer task/Pyrefiends location comparison row 'God Wars Dungeon' -> Cannonable: No",
+          "requirements": "Slayer task/Pyrefiends: 'Requires partial completion of Troll Stronghold. Requires either 60 Strength or 60 Agility... A rope is required on the first visit.'"
+        }
+      }
+    ],
+    "notes": "Mazchna 30-50, Vannaka 40-90, Mortimer 35-50. Pyrelords count and have their own superior (Infernal pyrelord). Task page safespot section: pyrefiends 'cannot easily be safespotted... They can also be flinched while taking minimal damage.'",
+    "_verification": {
+      "corrections": [
+        "Isle of Souls: removed the unsupported ''Hot!' fires nearby for cooking' claim (not on the Isle of Souls, Pyrefiend or Pyrelord pages) and quoted the bank situation",
+        "Fremennik Slayer Cave: cited the Fremennik Slayer Dungeon page for the rock safespot and 43 Agility shortcut",
+        "confirmed: superior Flaming pyrelord (Slayer task list row and task page; Infernal pyrelord 1,840 xp is the pyrelord superior); Pyrefiend infobox slayxp 45, slaylvl 30, magical melee, water 100%, demon, size 1, immuneburn 'Immune to weak burns', assignedby mazchna,vannaka,Mortimer; all 5 location rows match the task page (13 / 4 / 10+3 / 21+6 / 23); Sisterhood Sanctuary route line and 21/6 counts; Smoke Dungeon 20 damage every 12 seconds and Dusty Aliv cannon line; Dwarf multicannon 'Fremennik Slayer Dungeon' and 'Smoke Dungeon (task-only area)' lines; Wilderness GWD pyrefiend (48) and ecumenical key"
+      ],
+      "confirmed": 30,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Rats",
+    "wikiTaskPage": "Slayer task/Rats",
+    "monsterPages": [
+      "Rat",
+      "Giant rat"
+    ],
+    "bossTask": false,
+    "summary": "Rats are a no-requirement Turael and Spria task usually done on ordinary rats and giant rats around Lumbridge, Varrock Sewers or the Stronghold of Security, which rarely deal damage; the wiki recommends Rat bone weapons for their greatly increased effectiveness against rats. Higher-XP alternatives are brine rats (Olaf's Quest, brine sabre and medium clues), crypt rats and giant crypt rats in the Barrows crypts (Priest in Peril), hell-rat behemoths (Freeing Evil Dave) and Scurrius in the Varrock Sewers, whose minions also count down the task.",
+    "recommendedStyle": "Any",
+    "styleNotes": "Rats have 0 max hit and giant rats hit 1-3 (stab); rat attribute means Rat bone weapons are much more effective; no poison or cannon immunity.",
+    "requiredItems": [],
+    "usefulItems": [
+      "Rat bone weapons",
+      "Spade (Brine Rat Cavern entry)",
+      "Food and prayer potions if fighting Scurrius"
+    ],
+    "superior": null,
+    "alternatives": [
+      "Giant rat (5/10/25 xp)",
+      "Brine rat (Brine Rat Cavern, 50 xp, 47 Slayer)",
+      "Crypt rat (Barrows crypt, 35 xp per infobox; task page table says 45) / Giant crypt rat (70 xp)",
+      "Hell-rat behemoth (Evil Dave's basement after Freeing Evil Dave, 15 xp; fought by your cat)",
+      "Dungeon rat (Clock Tower Dungeon, Ardougne Sewers, Goblin Cave, 12 xp; partial Clock Tower)",
+      "Zombie rat (Melzar's Maze, 2 xp; Dragon Slayer I started)",
+      "Scurrius (Varrock Sewers, 600 solo / 2,137.5 group xp; cannon immune, minions also count)"
+    ],
+    "xpPerKill": 2,
+    "locations": [
+      {
+        "name": "Varrock Sewers",
+        "displayName": "Varrock Sewers - giant rats (and Scurrius)",
+        "rank": 1,
+        "multi": true,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "6 level 3 and 6 giant rats (Varrock Sewers monster table); Scurrius' lair is also here but a cannon cannot be set up inside it and Scurrius is cannon immune. Listed first in the assignment list's Location column.",
+        "evidence": {
+          "multi": "Multicombat area list: '*Varrock Sewers'",
+          "cannon": "Varrock Sewers page: 'The dwarf multicannon can be used here' (Dwarf multicannon prohibited list: 'Scurrius' Lair - It's far too damp for you to set up a cannon here.'; Scurrius infobox immunecannon = Yes)",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Lumbridge Swamp",
+        "displayName": "Lumbridge - swamp and behind the castle (giant rats)",
+        "rank": 2,
+        "multi": "unknown",
+        "cannon": "unknown",
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "Level 3 and 6 giant rats in the swamp and lighter grey ones behind Lumbridge Castle; ordinary level 1 rats in and around Lumbridge.",
+        "evidence": {
+          "multi": "not stated",
+          "cannon": "not stated",
+          "requirements": "not stated; Slayer task/Rats giant rat locations: 'Behind Lumbridge castle', 'Lumbridge Swamp'"
+        }
+      },
+      {
+        "name": "Stronghold of Security",
+        "displayName": "Stronghold of Security - level 1 rats (first level, multi) and level 26 giant rats (second level)",
+        "rank": 3,
+        "multi": "partial",
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "56 level 1 rats on the first level (Vault of War), which is multicombat and whose rats always drop bones; 10 level 26 giant rats (25 xp) are on the second level (Catacomb of Famine), which the page implies is not multicombat. A cannon can be placed in the stronghold.",
+        "evidence": {
+          "multi": "Stronghold of Security: 'Unlike the other levels, the first is a multicombat area.' (first level: Rat levels 1, spawns 56; second level: Giant rat levels 26, spawns 10)",
+          "cannon": "Stronghold of Security: 'Note: A cannon can be placed in the stronghold.'",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Brine Rat Cavern",
+        "displayName": "Brine Rat Cavern - brine rats, 50 xp (Olaf's Quest, spade)",
+        "rank": 4,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "47 Slayer",
+          "Olaf's Quest started",
+          "Spade to dig in south of the windswept tree"
+        ],
+        "notes": "Level 70 brine rats (47 Slayer) that drop medium clues and the brine sabre (1/512); remote Fremennik location.",
+        "evidence": {
+          "multi": "Brine Rat Cavern page: 'The entire cavern is a single combat zone.'",
+          "cannon": "Brine Rat Cavern page: 'Dwarf multicannons may be used here.'",
+          "requirements": "Brine rat: 'A Slayer level of 47 is required to fight them.' Slayer task/Rats: 'Requires Olaf's Quest to be started to access the cavern.' Brine Rat Cavern: 'Players can enter the dungeon by digging with a spade south of the windswept tree'"
+        }
+      },
+      {
+        "name": "Barrows crypt",
+        "displayName": "Barrows crypts - crypt rats and giant crypt rats (Priest in Peril)",
+        "rank": 5,
+        "multi": "unknown",
+        "cannon": "unknown",
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Priest in Peril for Morytania access"
+        ],
+        "notes": "Crypt rats (35 xp per infobox; the task page table says 45) and giant crypt rats (70 xp) inside the Barrows tunnels; killing them also changes reward potential in the minigame.",
+        "evidence": {
+          "multi": "not stated",
+          "cannon": "not stated",
+          "requirements": "Slayer task/Rats: 'Requires Priest in Peril completion for access to Morytania.'"
+        }
+      }
+    ],
+    "notes": "Turael/Spria only, 15-30 assigned. Assignment list Location column: 'Varrock Sewers, Brine Rat Cavern, Various locations'. Slayer task/Rats: 'Scurrius can be fought for greater experience and profit, although his minions will also decrement the task, reducing how many times the boss can be fought on task.' No location comparison table exists on the task page, so multi/cannon values come from the Multicombat area list and location pages only.",
+    "_verification": {
+      "corrections": [
+        "Stronghold of Security: the batch put level 26 giant rats on the multicombat first level; the page puts 56 level 1 rats on the first (multicombat) level and 10 level 26 giant rats on the second level, so multi is now 'partial' and cannon true ('A cannon can be placed in the stronghold')",
+        "Varrock Sewers: cannon upgraded from unknown to true (Varrock Sewers page: 'The dwarf multicannon can be used here')",
+        "Brine Rat Cavern: added the missing 47 Slayer requirement (Brine rat page)",
+        "Crypt rat xp: infobox says 35, not the 45 in the task page table; both recorded",
+        "Hell-rat behemoth: noted it is fought by the player's cat and needs Freeing Evil Dave; added Dungeon rat / Zombie rat access notes from the task page; Scurrius cannon immune",
+        "confirmed: Rat infobox slayxp 2, max hit 0, rat attribute; Giant rat slayxp 5/10/25, stab, max hit 1-3; task page Rat bone weapons and Scurrius minion lines; Brine Rat Cavern single combat + cannon; Slayer task list row"
+      ],
+      "confirmed": 18,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Red dragons",
+    "wikiTaskPage": "Slayer task/Red dragons",
+    "monsterPages": [
+      "Red dragon",
+      "Baby red dragon",
+      "Brutal red dragon"
+    ],
+    "bossTask": false,
+    "summary": "Red dragons must be unlocked with Seeing red (50 points) and need partial Dragon Slayer I for the anti-dragon shield; Konar, Nieve and Duradel assign 30-80. Adult and brutal variants use melee plus dragonfire (max 50), so bring an anti-dragon or dragonfire shield and antifire potion, or use Protect from Magic; baby red dragons have no dragonfire and count too. Brimhaven Dungeon has 16 adults plus 12 babies, allows a cannon, has a safespot by the pipe shortcut and drops noted hides with the elite Karamja diary; Forthos Dungeon has 6 with an altar but no cannon; after Dragon Slayer II the three in the Myths' Guild basement are very close to a bank. Brutal red dragons in the Catacombs are a slow alternative that can drop a draconic visage.",
+    "recommendedStyle": "Any",
+    "styleNotes": "Chromatic dragons weak to ranged, magic and stab (Baby red dragon page); 50% elemental weakness to water; slash plus dragonfire attackers, aggressive; brutal reds also use Magic and long-range dragonfire and are poison/venom immune; none are cannon immune.",
+    "requiredItems": [
+      "Dragonfire protection for adult/brutal dragons: anti-dragon shield, dragonfire shield, dragonfire ward or ancient wyvern shield, and/or antifire potions (not needed for baby dragons)"
+    ],
+    "usefulItems": [
+      "Super antifire potion (full protection, frees the shield slot)",
+      "Prayer potions for Protect from Magic / Protect from Melee",
+      "Dwarf multicannon (Brimhaven, Corsair Cove, Charred Dungeon)",
+      "Axe and 875 coins for Brimhaven Dungeon",
+      "Needle and thread to craft hides at Forthos (Eodan tans)"
+    ],
+    "superior": null,
+    "alternatives": [
+      "Baby red dragon (50 xp, no dragonfire)",
+      "Brutal red dragon (Catacombs of Kourend, 306.2 xp)"
+    ],
+    "xpPerKill": 143.4,
+    "locations": [
+      {
+        "name": "Brimhaven Dungeon",
+        "displayName": "Brimhaven Dungeon (16 adults + 12 babies, cannon, safespot)",
+        "rank": 1,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "875 coins per entry (or 1,000,000 one-off)",
+          "Axe to cut vines (10 Woodcutting); 30 Agility per the task page, 56 Agility stepping stones for the fast route",
+          "Wild dogs can attack even while safespotting"
+        ],
+        "notes": "Safespot next to the pipe agility shortcut to the black demons. Karamja elite diary notes the red dragonhide drops and unlocks an 83 Agility shortcut to the dragons.",
+        "evidence": {
+          "multi": "Slayer task/Red dragons location comparison row 'Brimhaven Dungeon' -> Multicombat: No; Brimhaven Dungeon page: 'it is a single way combat zone.'",
+          "cannon": "Slayer task/Red dragons location comparison row 'Brimhaven Dungeon' -> Cannonable: Yes; Brimhaven Dungeon: 'A Dwarf multicannon may be used within the dungeon'",
+          "requirements": "Slayer task/Red dragons: 'Brimhaven Dungeon requires at least 30 Agility'. Brimhaven Dungeon: '875 coins each time they wish to enter the dungeon... A player will also need an axe to cut the vines'. Baby red dragon: 'has wild dogs that can attack even when safespotting with Ranged or Magic.'"
+        }
+      },
+      {
+        "name": "Forthos Dungeon",
+        "displayName": "Forthos Dungeon (6 adults + 5 babies, altar, no cannon)",
+        "rank": 2,
+        "multi": false,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [],
+        "notes": "Safespot next to the fire and stalagmite near the strange-floor shortcut in the north-east corner; nearby Altar of the Sun restores prayer indefinitely and the Sacred Bone Burner takes bones for bonus XP.",
+        "evidence": {
+          "multi": "Slayer task/Red dragons location comparison row 'Forthos Dungeon' -> Multicombat: No",
+          "cannon": "Slayer task/Red dragons location comparison row 'Forthos Dungeon' -> Cannonable: No; Forthos Dungeon page: 'Dwarf multicannons cannot be placed inside the Forthos Dungeon.'; Dwarf multicannon prohibited list: 'Forthos Dungeon'",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Corsair Cove Dungeon/Myths' Guild (basement)",
+        "displayName": "Myths' Guild basement / Corsair Cove Dungeon (3 adults + 2 babies, near bank, DS2)",
+        "rank": 3,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Dragon Slayer II"
+        ],
+        "notes": "Reached via the Mythic Statue in the Myths' Guild or the barriers west of the ogresses; very close to the guild bank but only 3 adults and 2 babies.",
+        "evidence": {
+          "multi": "Slayer task/Red dragons location comparison row 'Corsair Cove Dungeon' -> Multicombat: No; Corsair Cove Dungeon page: 'The Dwarf multicannon can be used in the dungeon, though it is not multicombat.'",
+          "cannon": "Slayer task/Red dragons location comparison row 'Corsair Cove Dungeon' -> Cannonable: Yes; Corsair Cove Dungeon: 'The Dwarf multicannon can be used in the dungeon'",
+          "requirements": "Slayer task/Red dragons: 'Requires Completion of Dragon Slayer II'; Corsair Cove Dungeon: 'The western side of the dungeon, which is the Myths' Guild basement, is only accessible to members who have completed Dragon Slayer II.'"
+        }
+      },
+      {
+        "name": "Charred Dungeon",
+        "displayName": "Charred Dungeon (4 adults, multi, cannon, 60 Sailing)",
+        "rank": 4,
+        "multi": true,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "60 Sailing to dock at Charred Island",
+          "Rope on the first entry"
+        ],
+        "notes": "Only 4 red dragons, sharing a large room with black dragons and baby black dragons; safespottable.",
+        "evidence": {
+          "multi": "Slayer task/Red dragons location comparison row 'Charred Dungeon' -> Multicombat: Yes; Charred Dungeon page: 'The entire dungeon, barring the lava strykewyrms, is a multicombat area.'",
+          "cannon": "Slayer task/Red dragons location comparison row 'Charred Dungeon' -> Cannonable: Yes; Charred Dungeon: 'A dwarf multicannon can be used throughout the dungeon'",
+          "requirements": "Slayer task/Red dragons: 'Requires level 60 Sailing to access.' Charred Dungeon: 'Rope is required when entering the dungeon the first time.'"
+        }
+      },
+      {
+        "name": "Catacombs of Kourend",
+        "displayName": "Catacombs of Kourend - brutal red dragons (3, slow, visage chance)",
+        "rank": 5,
+        "multi": false,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "100 Combat for Konar to assign the Catacombs location"
+        ],
+        "notes": "3 brutal reds in the Dragon's Den (north-west), reached past the brutal blues or via the Lovakengj vine shortcut once unlocked from inside. Protect from Magic plus antifire fully blocks their magic and dragonfire, letting you safespot outside melee range. The task page says a brutal task is very slow compared to normal or baby reds.",
+        "evidence": {
+          "multi": "Slayer task/Red dragons location comparison row 'Catacombs of Kourend' (brutal) -> Multicombat: No; Catacombs page: 'a multicombat area (excluding the brutal dragon area)'",
+          "cannon": "Slayer task/Red dragons location comparison row 'Catacombs of Kourend' -> Cannonable: No; Dwarf multicannon prohibited list: 'Catacombs of Kourend'",
+          "requirements": "Konar quo Maten task table: 'Catacombs of Kourend: Brutal red dragon (Combat 100 required)'"
+        }
+      },
+      {
+        "name": "Dragon Nest",
+        "displayName": "Dragon Nest - east of Tal Teklan (5 adults + 2 babies, cannon, monster page only)",
+        "rank": 6,
+        "multi": "unknown",
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "unknown (visited during the Scrambled! quest; the page states no access requirement)"
+        ],
+        "notes": "Listed on the Red dragon LocLine list but not on the task page. Dragon Nest page: 5 blue dragons, 5 red dragons, 2 baby blue dragons and 2 baby red dragons, plus burnt bones and coin spawns.",
+        "evidence": {
+          "multi": "not stated",
+          "cannon": "Dragon Nest: 'A cannon can be set up in the cave.'",
+          "requirements": "Dragon Nest: 'It is visited as part of the Scrambled! quest'"
+        }
+      }
+    ],
+    "notes": "Konar 30-50, Nieve 30-80, Duradel 30-65; Konar page row also requires Combat 68, partial Dragon Slayer I and Seeing red; Konar locations are Brimhaven Dungeon, Catacombs of Kourend, Forthos Dungeon and Myths' Guild Dungeon (baby red dragons count at Brimhaven, Forthos and Myths' Guild). Red dragon page: 'Once unlocked, they can be disabled, but players must spend another 50 points to unlock them again.' The Dragon Nest (5 red + 2 baby red per its page) is on the Red dragon LocLine list but not on the task page or the Baby red dragon LocLine list. Brimhaven Dungeon update notes confirm the 83 Agility Karamja Elite Diary shortcut to the red dragons and noted hides.",
+    "_verification": {
+      "corrections": [
+        "locations: added Dragon Nest (Red dragon LocLine; page says 5 red + 2 baby red, cannon allowed) as an unranked-data extra since the task page omits it",
+        "notes: added Konar's Combat 68 requirement from the Konar quo Maten row and fixed the Dragon Nest attribution (Baby red dragon LocLines do not list it)",
+        "confirmed: all 5 task-page rows (16/12, 6/5, 3/2, 4, 3 with multi/cannon) match Slayer task/Red dragons; Red dragon infobox slayxp 143.4, water 50%, slash + dragonfire, max hit 50 dragonfire, aggressive Yes, assignedby konar,nieve,duradel, immunecannon No; Baby red dragon slayxp 50, 'weak to ranged, magic, and stab', 'do not attack with dragonfire', wild dogs line; Brutal red dragon slayxp 306.2, poisonresistance 100, Protect from Magic + antifire safespot line, Lovakengj vine shortcut, visage 1/10000; Catacombs 'Dragon's Den is the north-western section'; Forthos cannon prohibition and Altar of the Sun; Corsair Cove Dungeon DS2/Mythic Statue/barrier line; Charred Dungeon quotes; Konar row Catacombs Combat 100"
+      ],
+      "confirmed": 38,
+      "downgraded": 0
+    }
+  }
+]

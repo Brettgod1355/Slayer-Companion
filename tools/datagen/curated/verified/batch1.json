@@ -1,0 +1,1607 @@
+[
+  {
+    "task": "Basilisks",
+    "wikiTaskPage": "Slayer task/Basilisks",
+    "monsterPages": [
+      "Basilisk",
+      "Basilisk Knight"
+    ],
+    "bossTask": false,
+    "summary": "Basilisks are fought with melee using crush weapons, and a mirror shield or V's shield must be equipped or their gaze deals immense damage and drains stats. Ordinary basilisks in the Fremennik Slayer Dungeon only use a weak melee attack and can be safespotted, but their thin drop table and high Defence make them slow. After The Fremennik Exiles most players kill Basilisk Knights in Jormungand's Prison for the basilisk jaw; knights use melee and magic and can be safespotted from melee, praying against whichever style is reaching you. Cannons cannot be placed anywhere with basilisks.",
+    "recommendedStyle": "Melee",
+    "styleNotes": "Weak to crush attacks (zombie axe, dragon mace) with high Defence; Basilisk Knights are immune to cannon and thralls, and no cannon can be placed near any basilisk.",
+    "requiredItems": [
+      "Mirror shield or V's shield"
+    ],
+    "usefulItems": [
+      "Staff of fire or fire runes with nature runes for High Level Alchemy",
+      "Helm of Neitiznot (to combine with a basilisk jaw)"
+    ],
+    "superior": "Monstrous basilisk",
+    "alternatives": [
+      "Basilisk Knight",
+      "Basilisk Sentinel",
+      "Monstrous basilisk"
+    ],
+    "xpPerKill": 75,
+    "locations": [
+      {
+        "name": "Jormungand's Prison",
+        "displayName": "Jormungand's Prison – southern rooms (Basilisk Knights)",
+        "rank": 1,
+        "multi": false,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "The Fremennik Exiles",
+          "60 Slayer for Basilisk Knights"
+        ],
+        "notes": "20 Basilisk Knights beneath the Island of Stone; knights can be safespotted so only their magic attack reaches you. Basilisk jaw drop rate rises from 1/5000 to 1/1000 on task. Thralls cannot be resurrected here.",
+        "evidence": {
+          "multi": "Task page Location comparison row 'Jormungand's Prison southern rooms' Multicombat {{No}}; Jormungand's Prison page: 'the player cannot resurrect thralls in the single-way combat area of the prison, meaning thralls cannot be used against basilisks' (Jormungand's Prison)",
+          "cannon": "'Cannons cannot be placed anywhere with any kind of basilisk.' (Slayer task/Basilisks); 'The dwarf multicannon cannot be used to kill the basilisks in the prison, but it can be set up in the dagannoth areas.' (Jormungand's Prison); also Dwarf multicannon prohibited list: Jormungand's Prison basilisk areas",
+          "requirements": "'Only accessible after completion of The Fremennik Exiles.' (Slayer task/Basilisks); 'requiring level 60 Slayer and completion of The Fremennik Exiles to kill' (Basilisk Knight)"
+        }
+      },
+      {
+        "name": "Fremennik Slayer Dungeon",
+        "displayName": "Fremennik Slayer Dungeon – basilisk chamber",
+        "rank": 2,
+        "multi": false,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "40 Slayer",
+          "20 Defence (to wield the mirror shield)"
+        ],
+        "notes": "8 basilisks; fairy ring AJR or Slayer ring teleport. Safespot against the west wall one square north of the agility shortcut, or use the rocks on either side of the room.",
+        "evidence": {
+          "multi": "Task page Location comparison row 'Fremennik Slayer Dungeon' Multicombat {{No}} (Slayer task/Basilisks)",
+          "cannon": "'Players cannot set up a dwarf multicannon within the caves. Attempting to do so yields the chatbox message: The air is too dank for you to set up a cannon here.' (Fremennik Slayer Dungeon); also Dwarf multicannon prohibited list",
+          "requirements": "'Players require a Defence level of 20 in order to receive basilisks as a Slayer task, as this is required to wield the shield.' (Basilisk)"
+        }
+      },
+      {
+        "name": "Jormungand's Prison",
+        "displayName": "Jormungand's Prison – eastern rooms (basilisks)",
+        "rank": 3,
+        "multi": false,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "The Fremennik Exiles"
+        ],
+        "notes": "12 ordinary basilisks in the eastern rooms; safespottable. Same drop table as Fremennik Slayer Dungeon basilisks.",
+        "evidence": {
+          "multi": "Task page Location comparison row 'Jormungand's Prison eastern rooms' Multicombat {{No}} (Slayer task/Basilisks)",
+          "cannon": "Task page Location comparison row 'Jormungand's Prison eastern rooms' Cannonable {{No}}; 'Cannons cannot be placed anywhere with any kind of basilisk.' (Slayer task/Basilisks)",
+          "requirements": "'Only accessible after completion of The Fremennik Exiles.' (Slayer task/Basilisks)"
+        }
+      }
+    ],
+    "notes": "Konar, Nieve and Duradel only assign basilisks after unlocking Basilocked (80 points); Basilonger (100 points) extends to 200-250. Basilisk Knights have their own superior, the Basilisk Sentinel, which fires a slow projectile you must sidestep or click out of the stone encasement. All locations are single-way and non-cannonable. Basilisks also have a 40% elemental weakness to earth spells (Basilisk and Basilisk Knight infoboxes).",
+    "_verification": {
+      "corrections": [
+        "All fields confirmed against Slayer task/Basilisks, Basilisk, Basilisk Knight, Jormungand's Prison, Fremennik Slayer Dungeon and Dwarf multicannon pages (xp 75 = Basilisk infobox slayxp; superior Monstrous basilisk; knights immune to cannon and thralls per Basilisk Knight infobox).",
+        "Note only: Basilisk Knight changelog (2 October 2019) says 'Basilisk Knights can no longer be safespotted', but the current task page table marks the southern rooms Safespottable with the note that melee can be prevented while magic still reaches you; kept the task page wording."
+      ],
+      "confirmed": 9,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Bats",
+    "wikiTaskPage": "Slayer task/Bats",
+    "monsterPages": [
+      "Bat",
+      "Giant bat",
+      "Albino bat",
+      "Death wing"
+    ],
+    "bossTask": false,
+    "summary": "A beginner task from Turael, Spria and Mazchna at 5 combat. Regular bats and giant bats are the usual targets because they die to any style and drop only bat bones, so there is no reason to seek higher-level variants. Silvarea (13 bats on the path to Paterdomus) and the Haunted Woods (13, not cannonable) are the largest surface clusters, Abandoned Mine level 1 holds 16, and the Coal Trucks or Taverley Dungeon giant bats are easy alternatives. Giant bats are aggressive to players of combat level 54 or lower.",
+    "recommendedStyle": "Any",
+    "styleNotes": "No weaknesses or immunities are stated; bats are weak melee attackers that hit at most 1-3.",
+    "requiredItems": [],
+    "usefulItems": [],
+    "superior": null,
+    "alternatives": [
+      "Giant bat",
+      "Albino bat",
+      "Death wing"
+    ],
+    "xpPerKill": 32,
+    "locations": [
+      {
+        "name": "Silvarea",
+        "displayName": "Silvarea (near Paterdomus)",
+        "rank": 1,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "13 bats scattered along the Silvarea path in north-east Misthalin, which ends at the Paterdomus Temple; safespottable and cannonable.",
+        "evidence": {
+          "multi": "Task page Location Comparison row 'Silvarea' Multicombat {{No}} (Slayer task/Bats)",
+          "cannon": "Task page Location Comparison row 'Silvarea' Cannonable {{Yes}} (Slayer task/Bats)",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Coal Trucks",
+        "displayName": "Coal Trucks area (giant bats)",
+        "rank": 2,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "7 giant bats around the Coal Trucks, which are north of the Fishing Guild and west of McGrubor's Wood; safespottable.",
+        "evidence": {
+          "multi": "Task page Location Comparison row 'Coal Trucks area' Multicombat {{No}} (Slayer task/Bats)",
+          "cannon": "Task page Location Comparison row 'Coal Trucks area' Cannonable {{Yes}} (Slayer task/Bats)",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Taverley Dungeon",
+        "displayName": "Taverley Dungeon (giant bats)",
+        "rank": 3,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "9 giant bats in Taverley Dungeon (Taverley Dungeon page: Giant bat, 9 spawns).",
+        "evidence": {
+          "multi": "Task page Location Comparison row 'Taverley Dungeon' Multicombat {{No}} (Slayer task/Bats); 'Taverley Dungeon is entirely single combat' (Taverley Dungeon)",
+          "cannon": "Task page Location Comparison row 'Taverley Dungeon' Cannonable {{Yes}} (Slayer task/Bats)",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Slayer Tower Entrance",
+        "displayName": "Slayer Tower entrance (outside, bats)",
+        "rank": 4,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "6 bats just outside the Slayer Tower entrance; reachable by Slayer ring or fairy ring CKS.",
+        "evidence": {
+          "multi": "Task page Location Comparison row 'Slayer Tower entrance' Multicombat {{No}} (Slayer task/Bats)",
+          "cannon": "Task page Location Comparison row 'Slayer Tower entrance' Cannonable {{Yes}} (Slayer task/Bats); note the tower interior itself is on the Dwarf multicannon prohibited list",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Abandoned Mine",
+        "displayName": "Abandoned Mine level 1 (bats and giant bats)",
+        "rank": 5,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "16 bats and giant bats on the first level of the Abandoned Mine; the largest single group listed on the task page.",
+        "evidence": {
+          "multi": "Task page Location Comparison row 'Abandoned Mine level 1' Multicombat {{No}} (Slayer task/Bats)",
+          "cannon": "Task page Location Comparison row 'Abandoned Mine level 1' Cannonable {{Yes}} (Slayer task/Bats)",
+          "requirements": "not stated"
+        }
+      }
+    ],
+    "notes": "Slayer XP is 8 for a bat and 32 for a giant bat (33 albino bat, 80 death wing); xpPerKill uses the giant bat. Dire bats in Vampyrium do not count. Not assigned by Konar.",
+    "_verification": {
+      "corrections": [
+        "Silvarea notes: 'path between Varrock and Paterdomus' replaced; Silvarea page says it is 'a small area in the north-eastern corner of Misthalin ... it ends at the Paterdomus Temple'.",
+        "Coal Trucks notes: 'north of Ardougne' replaced with the Coal Trucks page location 'north of the Fishing Guild and west of McGrubor's Wood'.",
+        "Taverley Dungeon notes: removed the unsupported claim 'no key or Agility needed for this section' (not stated on the Taverley Dungeon or task page).",
+        "Summary: 'largest surface cluster' was wrong; task page table gives Silvarea 13, Haunted Woods 13 and Abandoned Mine level 1 16.",
+        "Added Abandoned Mine level 1 (16 bats, task page table). Task page also lists ~25 further bat spots (Haunted Woods, Graveyard of Heroes, Yanille Agility Dungeon, Keep Le Faye, Legends'/Heroes' Guild basements, Temple of Ikov, deep Wilderness west of Mage Arena, Karamja Volcano, Underground Pass, Chaos Druid Tower, Grand Tree mine, Brine Rat Cavern, Dark Altar paths, Mount Karuulm, Hosidius, Slepe, Goblin Cave, Mos Le'Harmless Cave, Shaman Caves) that remain omitted from this curated list."
+      ],
+      "confirmed": 10,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Bears",
+    "wikiTaskPage": "Slayer task/Bears",
+    "monsterPages": [
+      "Black bear",
+      "Grizzly bear",
+      "Callisto",
+      "Artio"
+    ],
+    "bossTask": false,
+    "summary": "A low-level task (13 combat) killed with any style; grizzly bears are the most widespread, black bears are non-aggressive and bear cubs are easiest for low levels. The cluster north-east of Ardougne and the woods outside Rellekka hold the most bears, and the four black bears outside the Mind Altar (between Ice Mountain and Goblin Village) are the biggest black bear group. Krystilia's assignment must be done in the Wilderness, where the bears west of the Graveyard of Shadows are the main option, or Callisto and Artio can be killed for their drops.",
+    "recommendedStyle": "Any",
+    "styleNotes": "No weaknesses or immunities are stated; grizzly bears are aggressive, black bears are not.",
+    "requiredItems": [],
+    "usefulItems": [
+      "Ensouled bear heads with Basic Reanimation (21 Magic) as an easier alternative"
+    ],
+    "superior": null,
+    "alternatives": [
+      "Bear Cub",
+      "Grizzly bear cub",
+      "Reanimated bear",
+      "Callisto",
+      "Artio"
+    ],
+    "xpPerKill": 27,
+    "locations": [
+      {
+        "name": "North-east of Ardougne",
+        "displayName": "North-east of Ardougne (grizzly bears)",
+        "rank": 1,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "9 grizzly bears in the forest north-east of East Ardougne; the Slayer task list names East Ardougne as a bear location.",
+        "evidence": {
+          "multi": "Task page Location Comparison row 'North-east of Ardougne' Multicombat {{No}} (Slayer task/Bears)",
+          "cannon": "Task page Location Comparison row 'North-east of Ardougne' Cannonable {{Yes}} (Slayer task/Bears)",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Fremennik Province - woods outside of Rellekka",
+        "displayName": "Woods outside Rellekka (bear cubs and grizzlies)",
+        "rank": 2,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "Two clumps of four bear cubs and 2 grizzly bears; good for low combat levels.",
+        "evidence": {
+          "multi": "Task page Location Comparison row 'Fremennik Province - woods outside of Rellekka' Multicombat {{No}} (Slayer task/Bears)",
+          "cannon": "Task page Location Comparison row 'Fremennik Province - woods outside of Rellekka' Cannonable {{Yes}} (Slayer task/Bears)",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Outside of the Mind Altar",
+        "displayName": "Outside the Mind Altar (black bears)",
+        "rank": 3,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "4 black bears, the greatest number of black bears in one place; non-aggressive.",
+        "evidence": {
+          "multi": "Task page Location Comparison row 'Outside of the Mind Altar' Multicombat {{No}} (Slayer task/Bears)",
+          "cannon": "Task page Location Comparison row 'Outside of the Mind Altar' Cannonable {{Yes}} (Slayer task/Bears)",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Varrock south-east mine",
+        "displayName": "Varrock south-east mine (black bear)",
+        "rank": 4,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "1 black bear south of Varrock, close to the east bank; the Slayer task list names 'south of Varrock'.",
+        "evidence": {
+          "multi": "Task page Location Comparison row 'Varrock south-east mine' Multicombat {{No}} (Slayer task/Bears)",
+          "cannon": "Task page Location Comparison row 'Varrock south-east mine' Cannonable {{Yes}} (Slayer task/Bears)",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "West of the Graveyard of Shadows",
+        "displayName": "West of the Graveyard of Shadows (Wilderness, Krystilia)",
+        "rank": 5,
+        "multi": false,
+        "cannon": true,
+        "wilderness": true,
+        "wildernessLevelMin": 18,
+        "wildernessLevelMax": 22,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "10 grizzly bears in the Wilderness; only Wilderness kills count for Krystilia. Bring nothing you are unwilling to lose.",
+        "evidence": {
+          "multi": "Task page Location Comparison row 'West of the Graveyard of Shadows' Multicombat {{No}} (Slayer task/Bears). Note: Multicombat area list includes 'areas at or around The Graveyard of Shadows' as multi; the task page's explicit {{No}} is used.",
+          "cannon": "Task page Location Comparison row 'West of the Graveyard of Shadows' Cannonable {{Yes}} (Slayer task/Bears)",
+          "requirements": "Krystilia task table: bears at 'North-west of the Ferox Enclave, west of the Graveyard of Shadows, south of the Western Ruins' Wilderness level '18-22' (Krystilia)"
+        }
+      },
+      {
+        "name": "Callisto's Den",
+        "displayName": "Callisto's Den (Callisto, Wilderness level 40)",
+        "rank": 6,
+        "multi": true,
+        "cannon": false,
+        "wilderness": true,
+        "wildernessLevelMin": 40,
+        "wildernessLevelMax": 40,
+        "konarAssignable": false,
+        "requirements": [
+          "Medium Wilderness Diary (or a Callisto boss Slayer task)",
+          "50,000 coin one-time fee"
+        ],
+        "notes": "Only recommended for high level players; counts for a bear task but the diary requirement is not bypassed by a bear task.",
+        "evidence": {
+          "multi": "'It is a multi-combat dungeon located in the Wilderness, just south of Demonic Ruins.' (Callisto's Den); task page row 'South of the Demonic Ruins (Callisto's Den)' Multicombat {{Yes}} (Slayer task/Bears)",
+          "cannon": "Conflict: task page row 'South of the Demonic Ruins (Callisto's Den)' Cannonable {{Yes}} (Slayer task/Bears), but Dwarf multicannon prohibited list: Callisto's Den ('It doesn't seem safe to set up a cannon here.') and Callisto infobox immunecannon = Yes; kept false.",
+          "requirements": "'Entering the boss lair requires completion of the medium Wilderness diary OR a Callisto boss Slayer task, and a fee of 50,000 coins' (Callisto's Den); 'a bear Slayer task does not bypass the diary requirement' (Callisto)"
+        }
+      },
+      {
+        "name": "Kebos Lowlands - south of Mount Quidamortem",
+        "displayName": "Kebos Lowlands south of Mount Quidamortem (bear cubs and grizzlies)",
+        "rank": 7,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "9 bears (bear cubs and level 21 grizzly bears) south of Mount Quidamortem; be wary of poisonous lizardmen nearby.",
+        "evidence": {
+          "multi": "Task page Location Comparison row 'Kebos Lowlands - south of Mount Quidamortem' Multicombat {{No}} (Slayer task/Bears)",
+          "cannon": "Task page Location Comparison row 'Kebos Lowlands - south of Mount Quidamortem' Cannonable {{Yes}} (Slayer task/Bears); 'Be wary of poisonous Lizardmen.' (Slayer task/Bears)",
+          "requirements": "not stated"
+        }
+      }
+    ],
+    "notes": "Slayer XP: black bear 25, grizzly bear 27 (level 21) or 35 (level 42), bear cub 20, Callisto 1300, Artio 518. Angry bears, the Headless Beast and the Gauntlet bears do not count. Artio (Hunter's End, level 21 Wilderness, singles-plus) needs the Hard Wilderness Diary. Not assigned by Konar. Reanimated bears give 15 Slayer XP (Reanimated bear infobox).",
+    "_verification": {
+      "corrections": [
+        "Summary: 'Mind Altar ... close to Edgeville' unsupported; Mind Altar page places the entrance 'between Ice Mountain and Goblin Village'.",
+        "Callisto's Den cannon: task page table says Cannonable Yes but the Dwarf multicannon prohibited list names Callisto's Den and Callisto is cannon-immune; kept false and recorded the conflict.",
+        "Added Kebos Lowlands south of Mount Quidamortem (9 bears, task page table; Bear Cub and Grizzly bear LocLines). Still omitted: Ardougne Zoo, east of Varrock Palace, Entrana, Gnome Maze, Land's End, Farming Guild, Isafdar, Observatory, Tyras Camp, Dark Warriors' Fortress (Wilderness, 2+3), Prifddinas, Gu'Tanoth, Tree Gnome Village/Stronghold, Lletya and the Escape Caves grizzly bears."
+      ],
+      "confirmed": 16,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Birds",
+    "wikiTaskPage": "Slayer task/Birds",
+    "monsterPages": [
+      "Bird",
+      "Chicken"
+    ],
+    "bossTask": false,
+    "summary": "A no-requirement beginner task from Turael or Spria. Chickens, seagulls and ducks are the usual targets since they are level 1-3, rarely deal damage and are easy to reach; chickens also drop bones, raw chicken and feathers. Farmer Fred's chicken pen and the Lumbridge farms have the densest chicken spawns. Ducks in water need Ranged or Magic.",
+    "recommendedStyle": "Any",
+    "styleNotes": "The Bird monster and vultures have a 25% elemental weakness to air spells and seagulls 20%; chickens have no stated weakness. Vultures cannot be harmed by melee while flying and chompy birds can only be killed with an ogre bow or comp ogre bow.",
+    "requiredItems": [],
+    "usefulItems": [],
+    "superior": null,
+    "alternatives": [
+      "Chicken",
+      "Duck",
+      "Seagull",
+      "Rooster",
+      "Terrorbird",
+      "Vulture",
+      "Undead chicken",
+      "Mounted terrorbird gnome",
+      "Chompy bird",
+      "Bird",
+      "Penguin",
+      "Entrana firebird",
+      "Oomlie bird"
+    ],
+    "xpPerKill": 3,
+    "locations": [
+      {
+        "name": "Farmer Fred's chicken pen",
+        "displayName": "Farmer Fred's chicken pen (Lumbridge)",
+        "rank": 1,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "28 chickens in the pen north-west of Lumbridge; the largest chicken cluster listed.",
+        "evidence": {
+          "multi": "Task page Location comparison row \"Farmer Fred's chicken pen\" Multicombat {{No}} (Slayer task/Birds)",
+          "cannon": "Task page Location comparison row \"Farmer Fred's chicken pen\" Cannonable {{Yes}} (Slayer task/Birds)",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Lumbridge East Farm",
+        "displayName": "Lumbridge east farm (chickens)",
+        "rank": 2,
+        "multi": "unknown",
+        "cannon": "unknown",
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "Free-to-play chicken farm east of the River Lum next to Lumbridge; often crowded.",
+        "evidence": {
+          "multi": "not stated (Chicken page LocLine only)",
+          "cannon": "not stated",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Port Sarim",
+        "displayName": "Port Sarim (seagulls)",
+        "rank": 3,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "10 seagulls on the Port Sarim docks.",
+        "evidence": {
+          "multi": "Task page Location comparison row 'Port Sarim' Multicombat {{No}} (Slayer task/Birds)",
+          "cannon": "Task page Location comparison row 'Port Sarim' Cannonable {{Yes}} (Slayer task/Birds)",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "River Lum",
+        "displayName": "River Lum south of Varrock (ducks)",
+        "rank": 4,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "41 ducks along both banks and in the water; ducks in the water need Ranged or Magic and ammunition is lost if they are not on land.",
+        "evidence": {
+          "multi": "Task page Location comparison row 'Along the River Lum south of Varrock' Multicombat {{No}} (Slayer task/Birds)",
+          "cannon": "Task page Location comparison row 'Along the River Lum south of Varrock' Cannonable {{Yes}} (Slayer task/Birds)",
+          "requirements": "not stated"
+        }
+      }
+    ],
+    "notes": "Slayer XP is 3 for chickens and ducks; seagulls give 6-10. Birds introduced with Sailing do not count. Not assigned by Konar.",
+    "_verification": {
+      "corrections": [
+        "styleNotes: 'Birds have a 25% elemental weakness to air spells' overgeneralised; only the Bird (25%), Vulture (25%) and Seagull (20%) infoboxes carry an air weakness, Chicken has none.",
+        "Alternatives: added Bird, Penguin, Entrana firebird and Oomlie bird, all listed in the task page Monster variants table.",
+        "Added River Lum south of Varrock (41 ducks, the largest group in the task page table). Still omitted: River Lum north of Lumbridge (28 ducks), Corsair Cove (9 seagulls), Port Piscarilius (7 seagulls) and the many chicken LocLines on the Chicken page.",
+        "Lumbridge East Farm: multi/cannon left unknown (Chicken LocLine only; no task page row)."
+      ],
+      "confirmed": 6,
+      "downgraded": 2
+    }
+  },
+  {
+    "task": "Black demons",
+    "wikiTaskPage": "Slayer task/Black demons",
+    "monsterPages": [
+      "Black demon",
+      "Demonic gorilla"
+    ],
+    "bossTask": false,
+    "summary": "Black demons are killed either by safespotting with Ranged or Magic or by meleeing with Protect from Melee; demonbane weapons and water spells are strong against them. The two best spots are Taverley Dungeon, which packs 24 demons together, and the bottom level of the Chasm of Fire, which has more safespots; both are single-way but cannonable. Their drop table is nearly empty, so lower-levelled players who must safespot often skip the task. Demonic gorillas can be substituted (except on Krystilia or Konar tasks) and are profitable but slower.",
+    "recommendedStyle": "Any",
+    "styleNotes": "Weak to demonbane weapons and to water spells (40% elemental weakness); demonic gorillas are immune to cannon damage.",
+    "requiredItems": [],
+    "usefulItems": [
+      "Dwarf multicannon (Taverley Dungeon or Chasm of Fire)",
+      "Demonbane weapon (arclight, emberlight)",
+      "Dusty key (Taverley Dungeon, if under 70 Agility)"
+    ],
+    "superior": null,
+    "alternatives": [
+      "Demonic gorilla",
+      "Skotizo",
+      "Balfrug Kreeyath",
+      "Porazdir",
+      "Kolodion (final form)"
+    ],
+    "xpPerKill": 157,
+    "locations": [
+      {
+        "name": "Taverley Dungeon",
+        "displayName": "Taverley Dungeon (black demon area)",
+        "rank": 1,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Dusty key or 70 Agility"
+        ],
+        "notes": "24 demons packed together; safespot by the two stalagmites in the south-west corner or the crevice in the north-east corner, which is great for cannoning.",
+        "evidence": {
+          "multi": "Task page Location comparison row 'Taverley Dungeon' Multicombat {{No}}; 'Taverley Dungeon is entirely single combat (although cannons can still attack multiple targets if the player is not in direct combat).' (Taverley Dungeon)",
+          "cannon": "Task page Location comparison row 'Taverley Dungeon' Cannonable {{Yes}}; 'both are cannonable' (Slayer task/Black demons)",
+          "requirements": "'Requires Dusty Key or 70 Agility.' (Slayer task/Black demons)"
+        }
+      },
+      {
+        "name": "Chasm of Fire (Bottom Level)",
+        "displayName": "Chasm of Fire – bottom level",
+        "rank": 2,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [],
+        "notes": "17 demons with safespots by the stalagmites to the north and in the centre by the Voice of Yama; chasm teleport scroll lands on the bottom floor. After A Kingdom Divided and a Yama contract, demons can drop contracts.",
+        "evidence": {
+          "multi": "Task page Location comparison row 'Chasm of Fire (Bottom level)' Multicombat {{No}}; 'A dwarf multicannon can be used in the chasm, although it is not a multi-combat area.' (Chasm of Fire)",
+          "cannon": "'A dwarf multicannon can be used in the chasm, although it is not a multi-combat area.' (Chasm of Fire)",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Catacombs of Kourend",
+        "displayName": "Catacombs of Kourend (black demons, multi)",
+        "rank": 3,
+        "multi": true,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [],
+        "notes": "4 demons with higher Defence than elsewhere; multicombat so they stack on you, and not all four spawns can be used. Gives ancient shards and dark totem pieces.",
+        "evidence": {
+          "multi": "Task page Location comparison row 'Catacombs of Kourend' Multicombat {{Yes}}; 'the Catacombs of Kourend, which is a multicombat area' (Slayer task/Black demons)",
+          "cannon": "Task page Location comparison row 'Catacombs of Kourend' Cannonable {{No}}; Dwarf multicannon prohibited list: Catacombs of Kourend",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Brimhaven Dungeon",
+        "displayName": "Brimhaven Dungeon",
+        "rank": 4,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "875 coins entry fee (or 1,000,000 one-off)",
+          "Axe to cut vines",
+          "12 Agility for the stepping stones"
+        ],
+        "notes": "4 demons; a safespot near the agility pipe lets a cannon hit 2-3 of them.",
+        "evidence": {
+          "multi": "Task page Location comparison row 'Brimhaven Dungeon' Multicombat {{No}}; 'A Dwarf multicannon may be used within the dungeon, although it is a single way combat zone.' (Brimhaven Dungeon)",
+          "cannon": "'A Dwarf multicannon may be used within the dungeon, although it is a single way combat zone.' (Brimhaven Dungeon)",
+          "requirements": "'players must pay Saniboch, who is outside the entrance, 875 coins each time they wish to enter the dungeon. Alternatively, a one-off fee of 1,000,000 coins can be paid for permanent access. A player will also need an axe to cut the vines' (Brimhaven Dungeon)"
+        }
+      },
+      {
+        "name": "Edgeville Dungeon (Wilderness)",
+        "displayName": "Edgeville Dungeon – Wilderness section (Krystilia)",
+        "rank": 5,
+        "multi": false,
+        "cannon": true,
+        "wilderness": true,
+        "wildernessLevelMin": 5,
+        "wildernessLevelMax": 6,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "3 demons in low Wilderness; easier to escape from than the Wilderness Slayer Cave. Safespot available.",
+        "evidence": {
+          "multi": "Task page Location comparison row 'Edgeville Dungeon' Multicombat {{No}} (Slayer task/Black demons)",
+          "cannon": "Task page Location comparison row 'Edgeville Dungeon' Cannonable {{Yes}}; 'The Dwarf Multicannon can be used here.' (Edgeville Dungeon)",
+          "requirements": "Krystilia task table: black demons at 'Edgeville Dungeon, Wilderness Slayer Cave' Wilderness level '5-6, 28-31' (Krystilia)"
+        }
+      },
+      {
+        "name": "Wilderness Slayer Cave",
+        "displayName": "Wilderness Slayer Cave (Krystilia, multi)",
+        "rank": 6,
+        "multi": true,
+        "cannon": true,
+        "wilderness": true,
+        "wildernessLevelMin": 28,
+        "wildernessLevelMax": 31,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "4 stronger level 188 demons with a different drop table; multicombat, one entrance and aggressive demons make hopping difficult. Very dangerous location.",
+        "evidence": {
+          "multi": "Task page Location comparison row 'Wilderness Slayer Cave' Multicombat {{Yes}}; 'the latter is a multicombat area' (Slayer task/Black demons)",
+          "cannon": "Task page Location comparison row 'Wilderness Slayer Cave' Cannonable {{Yes}}; 'it's possible to use the Dwarf multicannon inside the dungeon' (Wilderness Slayer Cave)",
+          "requirements": "Krystilia task table: black demons at 'Edgeville Dungeon, Wilderness Slayer Cave' Wilderness level '5-6, 28-31' (Krystilia)"
+        }
+      },
+      {
+        "name": "Crash Site Cavern",
+        "displayName": "Crash Site Cavern (demonic gorillas)",
+        "rank": 7,
+        "multi": "partial",
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Monkey Madness II"
+        ],
+        "notes": "27 demonic gorillas; they switch prayers and styles so two combat styles are needed. Not valid for Krystilia or Konar black demon tasks.",
+        "evidence": {
+          "multi": "'The caverns consist of both single and multi-way combat zones' (Crash Site Cavern); task page row 'Crash Site Cavern' Multicombat {{Yes}} (Slayer task/Black demons)",
+          "cannon": "Task page Location comparison row 'Crash Site Cavern' Cannonable {{No}}; 'Demonic gorillas cannot be damaged with a Dwarf multicannon.' (Demonic gorilla)",
+          "requirements": "'Requires completion of Monkey Madness II' (Slayer task/Black demons)"
+        }
+      },
+      {
+        "name": "Charred Dungeon",
+        "displayName": "Charred Dungeon (60 Sailing, multi, cannon)",
+        "rank": 8,
+        "multi": true,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "60 Sailing",
+          "Rope on first entry (a rope spawns on Charred Island)"
+        ],
+        "notes": "3 black demons in a multicombat, cannonable dungeon reached by the dark hole on Charred Island.",
+        "evidence": {
+          "multi": "'The entire dungeon, barring the lava strykewyrms, is a multicombat area.' (Charred Dungeon); task page row 'Charred Dungeon' Multicombat {{Yes}} (Slayer task/Black demons)",
+          "cannon": "'A dwarf multicannon can be used throughout the dungeon, although it will not target the strykewyrms.' (Charred Dungeon)",
+          "requirements": "'Requires level 60 Sailing to access.' (Slayer task/Black demons); 'Rope is required when entering the dungeon the first time. However, there is a rope item spawn on the island' (Charred Dungeon)"
+        }
+      }
+    ],
+    "notes": "Konar assigns Catacombs of Kourend, Chasm of Fire, Taverley Dungeon or Brimhaven Dungeon (Skotizo counts in the Catacombs). Krystilia only counts Wilderness kills. Charred Dungeon (60 Sailing) is a further multi, cannonable option. 'It's dark in here' (100 points) extends to 200-250. Level 178/184 Catacombs demons give 160/170 XP and the level 188 Wilderness Slayer Cave demon 200 XP.",
+    "_verification": {
+      "corrections": [
+        "Added Charred Dungeon, which the task page table and the Black demon LocLine list both include but the curated list only mentioned in notes.",
+        "All other locations, quotes, table rows, xp (Black demon infobox slayxp1 = 157) and alternatives (task page Monster variants) confirmed. Brimhaven 12 Agility requirement confirmed: 'The stepping stones to the west of the vines in the dungeon require level 12 Agility to pass.' (Brimhaven Dungeon)."
+      ],
+      "confirmed": 22,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Black dragons",
+    "wikiTaskPage": "Slayer task/Black dragons",
+    "monsterPages": [
+      "Black dragon",
+      "Baby black dragon",
+      "Brutal black dragon",
+      "King Black Dragon"
+    ],
+    "bossTask": false,
+    "summary": "Adult black dragons use accurate melee and short-range dragonfire, so use Protect from Melee with an anti-dragon shield and antifire potion. The fastest task is AFKing the five baby black dragons in the task-only upper level of Taverley Dungeon, which need no dragonfire protection; for profit, kill brutal black dragons in the Catacombs (77 Slayer) with Protect from Magic and a crossbow from range, or with a dragon hunter lance. The Evil Chicken's Lair and the Corsair Cove Dungeon are the adult spots closest to a bank.",
+    "recommendedStyle": "Melee",
+    "styleNotes": "Dragons are susceptible to dragonbane weapons (dragon hunter lance and crossbow); adults need dragonfire protection while baby dragons do not breathe fire; brutal black dragons add a magic attack and long-range dragonfire.",
+    "requiredItems": [
+      "Anti-dragon shield, dragonfire shield, dragonfire ward or ancient wyvern shield (except for baby dragons)",
+      "Antifire potion (recommended alongside the shield)"
+    ],
+    "usefulItems": [
+      "Dragon hunter lance or dragon hunter crossbow",
+      "Dusty key (Taverley Dungeon, if under 70 Agility)",
+      "Raw chicken and rope (Evil Chicken's Lair)",
+      "Mythical cape (Corsair Cove Dungeon banking)"
+    ],
+    "superior": null,
+    "alternatives": [
+      "Baby black dragon",
+      "Brutal black dragon",
+      "King Black Dragon (not for Krystilia tasks)"
+    ],
+    "xpPerKill": 194.7,
+    "locations": [
+      {
+        "name": "Taverley Dungeon (Upper Level)",
+        "displayName": "Taverley Dungeon – upper level (task-only)",
+        "rank": 1,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Dusty key or 70 Agility",
+          "Black dragon Slayer task (task-only area)"
+        ],
+        "notes": "12 adult and 5 baby black dragons; the babies AFK quickly and can be safespotted from the bridge. Access by the stairs just north of the dungeon entrance.",
+        "evidence": {
+          "multi": "Task page Location Comparison row 'Taverley Dungeon (upper level)' Multicombat {{No}} (Slayer task/Black dragons); 'Taverley Dungeon is entirely single combat' (Taverley Dungeon)",
+          "cannon": "Task page Location Comparison row 'Taverley Dungeon (upper level)' Cannonable {{Yes}} (Slayer task/Black dragons)",
+          "requirements": "'Black dragons can only be killed here while on a Slayer task.' (Slayer task/Black dragons); 'Access to this area requires a dusty key, or at least 70 Agility to use the obstacle pipe.' (Taverley Dungeon)"
+        }
+      },
+      {
+        "name": "Evil Chicken's Lair",
+        "displayName": "Evil Chicken's Lair (Zanaris)",
+        "rank": 2,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Recipe for Disaster: Freeing Sir Amik Varze started",
+          "Raw chicken to enter (rope for the baby dragon)"
+        ],
+        "notes": "4 adults close to the Zanaris bank; they attack on entry so have Protect from Melee on. Safespot in the eastern tunnel entrance or behind the bone piles to the north.",
+        "evidence": {
+          "multi": "Task page Location Comparison row \"Evil Chicken's Lair\" Multicombat {{No}} (Slayer task/Black dragons)",
+          "cannon": "'A cannon can be placed in the lair.' (Evil Chicken's Lair)",
+          "requirements": "'Requires partial completion of Recipe for Disaster/Freeing Sir Amik Varze as well as a raw chicken to access (and a rope to access the baby black dragons).' (Slayer task/Black dragons)"
+        }
+      },
+      {
+        "name": "Corsair Cove Dungeon",
+        "displayName": "Corsair Cove Dungeon / Myths' Guild basement",
+        "rank": 3,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Dragon Slayer II"
+        ],
+        "notes": "2 adults and 1 baby; the closest black dragons to a bank, with a quick Mythical cape teleport.",
+        "evidence": {
+          "multi": "'The Dwarf multicannon can be used in the dungeon, though it is not multicombat.' (Corsair Cove Dungeon)",
+          "cannon": "'The Dwarf multicannon can be used in the dungeon, though it is not multicombat.' (Corsair Cove Dungeon)",
+          "requirements": "'Requires completion of Dragon Slayer II.' (Slayer task/Black dragons)"
+        }
+      },
+      {
+        "name": "Catacombs of Kourend",
+        "displayName": "Catacombs of Kourend – Dragon's Den (brutal black dragons)",
+        "rank": 4,
+        "multi": false,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "77 Slayer"
+        ],
+        "notes": "4 brutal black dragons; use Protect from Magic plus antifire and stay out of melee range. Konar requires 100 combat for this variant.",
+        "evidence": {
+          "multi": "Task page Location Comparison row 'Catacombs of Kourend' Multicombat {{No}}; 'this particular dungeon is a multicombat area (excluding the brutal dragon area)' (Catacombs of Kourend)",
+          "cannon": "Task page Location Comparison row 'Catacombs of Kourend' Cannonable {{No}}; Dwarf multicannon prohibited list: Catacombs of Kourend",
+          "requirements": "'Brutal black dragons. Requires level 77 Slayer.' (Slayer task/Black dragons)"
+        }
+      },
+      {
+        "name": "Taverley Dungeon",
+        "displayName": "Taverley Dungeon – lower level (2 adults)",
+        "rank": 5,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Dusty key or 70 Agility"
+        ],
+        "notes": "2 adults near the Obelisk of Fire; safespot behind the ladder.",
+        "evidence": {
+          "multi": "Task page Location Comparison row 'Taverley Dungeon' Multicombat {{No}} (Slayer task/Black dragons)",
+          "cannon": "Task page Location Comparison row 'Taverley Dungeon' Cannonable {{Yes}} (Slayer task/Black dragons)",
+          "requirements": "'Requires either a dusty key or 70 Agility.' (Black dragon)"
+        }
+      },
+      {
+        "name": "Lava Maze Dungeon",
+        "displayName": "Lava Maze Dungeon (Krystilia, single-way)",
+        "rank": 6,
+        "multi": false,
+        "cannon": true,
+        "wilderness": true,
+        "wildernessLevelMin": 44,
+        "wildernessLevelMax": 45,
+        "konarAssignable": false,
+        "requirements": [
+          "Knife or slash weapon for webs",
+          "82 Agility (boostable) shortcut recommended"
+        ],
+        "notes": "2 adults in deep Wilderness (Krystilia lists them at level 44-45; the Lava Maze Dungeon page says its eastern section covers level 41 to 47). Poison spiders nearby so bring poison protection, especially with a cannon. Long trek through the maze without the 82 Agility shortcut.",
+        "evidence": {
+          "multi": "'The dungeon is entirely single-way combat' (Lava Maze Dungeon); task page row 'Lava Maze Dungeon' Multicombat {{No}}",
+          "cannon": "Task page Location Comparison row 'Lava Maze Dungeon' Cannonable {{Yes}} (Slayer task/Black dragons)",
+          "requirements": "Krystilia task table: black dragons at 'Lava Maze Dungeon, Wilderness Slayer Cave' Wilderness level '44-45; 30-31' (Krystilia); 'This part of the dungeon covers level 41 to 47 Wilderness.' (Lava Maze Dungeon)"
+        }
+      },
+      {
+        "name": "Wilderness Slayer Cave",
+        "displayName": "Wilderness Slayer Cave (Krystilia, multi)",
+        "rank": 7,
+        "multi": true,
+        "cannon": true,
+        "wilderness": true,
+        "wildernessLevelMin": 30,
+        "wildernessLevelMax": 31,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "3 level 247 dragons with the best draconic visage rate (1/5,000); multicombat and a popular PK spot. One-click teleports still work here if safespotted.",
+        "evidence": {
+          "multi": "Task page Location Comparison row 'Wilderness Slayer Cave' Multicombat {{Yes}}; 'the cave itself is both a multicombat area and a popular player killing spot' (Slayer task/Black dragons)",
+          "cannon": "Task page Location Comparison row 'Wilderness Slayer Cave' Cannonable {{Yes}}; 'it's possible to use the Dwarf multicannon inside the dungeon' (Wilderness Slayer Cave)",
+          "requirements": "Krystilia task table: black dragons at 'Lava Maze Dungeon, Wilderness Slayer Cave' Wilderness level '44-45; 30-31' (Krystilia)"
+        }
+      },
+      {
+        "name": "King Black Dragon Lair (Wilderness)",
+        "displayName": "King Black Dragon Lair (via level 42 Wilderness lever)",
+        "rank": 8,
+        "multi": true,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Reach the lever in the Lava Maze Dungeon (Wilderness)"
+        ],
+        "notes": "The lair is multicombat but not part of the Wilderness; the walk from the level 44 obelisk is short but the lever area is a PK hotspot. Does not count for Krystilia tasks.",
+        "evidence": {
+          "multi": "'His lair is a multicombat area. Though designated as a Wilderness boss, the lair itself is not in the Wilderness' (King Black Dragon)",
+          "cannon": "Task page Location Comparison row 'King Black Dragon Lair' Cannonable {{No}} (Slayer task/Black dragons); Dwarf multicannon page: 'The Kalphite Queen, King Black Dragon, Thermonuclear smoke devil, and inhabitants of the God Wars Dungeon may also destroy a cannon'",
+          "requirements": "'Can only be accessed through a lever in the Wilderness. The arena itself is NOT considered part of the Wilderness.' (Slayer task/Black dragons)"
+        }
+      },
+      {
+        "name": "Charred Dungeon",
+        "displayName": "Charred Dungeon (60 Sailing, multi, cannon)",
+        "rank": 9,
+        "multi": true,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "60 Sailing",
+          "Rope on first entry (a rope spawns on Charred Island)"
+        ],
+        "notes": "5 adult and 7 baby black dragons in a multicombat, cannonable dungeon; red dragons share the same large room.",
+        "evidence": {
+          "multi": "'The entire dungeon, barring the lava strykewyrms, is a multicombat area.' (Charred Dungeon); task page row 'Charred Dungeon' Multicombat {{Yes}} (Slayer task/Black dragons)",
+          "cannon": "'A dwarf multicannon can be used throughout the dungeon, although it will not target the strykewyrms.' (Charred Dungeon)",
+          "requirements": "'Requires level 60 Sailing to access.' (Slayer task/Black dragons); 'Rope is required when entering the dungeon the first time.' (Charred Dungeon)"
+        }
+      }
+    ],
+    "notes": "Slayer XP: adult 194.7 (Black dragon infobox; the task page's older table says 199.5), level 247 Wilderness Slayer Cave variant 262, baby 80, brutal 346.4, KBD 258. Konar assigns Catacombs of Kourend, Myths' Guild Dungeon, Evil Chicken's Lair or Taverley Dungeon. The King Black Dragon and lava dragons do not count for Krystilia. Fire & Darkness (50 points) extends to 40-60. Charred Dungeon (60 Sailing) is a multi, cannonable extra option.",
+    "_verification": {
+      "corrections": [
+        "Lava Maze Dungeon Wilderness level changed from 41-47 to 44-45 (Krystilia task table '44-45; 30-31' is specific to the black dragons); the 41-47 figure is the whole eastern dungeon section.",
+        "Added Charred Dungeon (5 adults, 7 babies; task page table and Black dragon LocLine). Mynydd (1 adult, Song of the Elves) remains omitted.",
+        "xpPerKill 194.7 confirmed from Black dragon infobox slayxp1 (task page table still shows 199.5); brutal 346.4 (Brutal black dragon infobox; task page 346.5), KBD 258, baby 80 confirmed."
+      ],
+      "confirmed": 27,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Black Knights",
+    "wikiTaskPage": "Black Knight",
+    "monsterPages": [
+      "Black Knight"
+    ],
+    "bossTask": false,
+    "summary": "A Krystilia-only Wilderness task; only kills inside the Wilderness count. Black knights are level 33 melee fighters that any style handles easily. The two Wilderness groups are the black knights inside the Lava Maze (level 40-45) and the seven north-east of the Bone Yard, south of the Silk Chasm (around level 35). Both are deep enough that player killers are the main danger, so bring minimal risk.",
+    "recommendedStyle": "Any",
+    "styleNotes": "No weaknesses or immunities are stated; they attack with slash and hit at most 4.",
+    "requiredItems": [],
+    "usefulItems": [
+      "Knife or slash weapon for the Lava Maze webs"
+    ],
+    "superior": null,
+    "alternatives": [],
+    "xpPerKill": 42,
+    "locations": [
+      {
+        "name": "Lava Maze (Wilderness)",
+        "displayName": "Lava Maze (Wilderness level 40-45)",
+        "rank": 1,
+        "multi": true,
+        "cannon": "unknown",
+        "wilderness": true,
+        "wildernessLevelMin": 40,
+        "wildernessLevelMax": 45,
+        "konarAssignable": false,
+        "requirements": [
+          "Knife or slash weapon for the webs"
+        ],
+        "notes": "9 black knight spawns inside the maze; fastest access is the burning amulet Lava Maze teleport to the west entrance, or the level 44 obelisk.",
+        "evidence": {
+          "multi": "Multicombat area list: 'Several places in the Wilderness including the areas at or around: The Lava Maze' (Multicombat area)",
+          "cannon": "not stated",
+          "requirements": "'In the entrance and partway through the maze, there are spiderwebs that must be cut with a slash weapon or a knife.' (Lava Maze); Krystilia task table: Black Knights at 'South of Silk Chasm, Lava Maze' Wilderness level '~35, ~40' (Krystilia)"
+        }
+      },
+      {
+        "name": "North-east of Bone Yard (Wilderness)",
+        "displayName": "North-east of the Bone Yard / south of the Silk Chasm (Wilderness ~35)",
+        "rank": 2,
+        "multi": "unknown",
+        "cannon": "unknown",
+        "wilderness": true,
+        "wildernessLevelMin": 35,
+        "wildernessLevelMax": 35,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "7 black knights on the surface between the Bone Yard and the Silk Chasm; Krystilia's page puts them at roughly level 35 Wilderness.",
+        "evidence": {
+          "multi": "not stated",
+          "cannon": "not stated",
+          "requirements": "Krystilia task table: Black Knights at 'South of Silk Chasm, Lava Maze' Wilderness level '~35, ~40' (Krystilia); 'The number of black knights north of Venenatis were increased from 2 to 7' (Krystilia)"
+        }
+      }
+    ],
+    "notes": "Only assigned by Krystilia (75-125). Black Knights' Fortress, Taverley Dungeon and the surface spawns near Varrock and Draynor do not count because 'Only kills within the Wilderness count towards her tasks.' (Krystilia). The Black Knights' Fortress is on the cannon prohibited list. No task page exists on the wiki.",
+    "_verification": {
+      "corrections": [
+        "Confirmed: no 'Slayer task/Black Knights' page exists (API missingtitle); Black Knight infobox slayxp 42, assignedby krystilia only; LocLines 'Lava Maze (Wilderness)' 9 spawns and 'North-east of Bone Yard (Wilderness)' 7 spawns; Krystilia table 'South of Silk Chasm, Lava Maze' '~35, ~40'.",
+        "Lava Maze cannon and Bone Yard multi/cannon stay unknown: neither the Lava Maze page nor the Dwarf multicannon list states cannon placement, and the Multicombat area list names the Lava Maze but not the Bone Yard."
+      ],
+      "confirmed": 3,
+      "downgraded": 3
+    }
+  },
+  {
+    "task": "Bloodveld",
+    "wikiTaskPage": "Slayer task/Bloodveld",
+    "monsterPages": [
+      "Bloodveld",
+      "Mutated Bloodveld"
+    ],
+    "bossTask": false,
+    "summary": "Bloodvelds have high Hitpoints and low Defence and attack with magic-based melee, so wear armour with good magic defence such as dragonhide and pray Protect from Melee if using prayer. The Meiyerditch Laboratories are the best spot because they are multicombat and cannonable with a cluster of seven mutated bloodvelds, giving the most experience per hour; the Stronghold Slayer Cave is the common choice for its bank proximity and cannon use. The God Wars Dungeon and Wilderness God Wars Dungeon locations are recommended to skip.",
+    "recommendedStyle": "Any",
+    "styleNotes": "Demons, so demonbane weapons apply; they attack with magic-based melee that rolls against magic defence, and Protect from Melee nullifies it.",
+    "requiredItems": [],
+    "usefulItems": [
+      "Dwarf multicannon",
+      "Dragonhide or blood moon armour for magic defence",
+      "Ash sanctifier",
+      "Goading potion (Catacombs clusters)",
+      "Nature runes for alchemy"
+    ],
+    "superior": "Insatiable Bloodveld",
+    "alternatives": [
+      "Mutated Bloodveld",
+      "Insatiable mutated Bloodveld",
+      "Reanimated bloodveld"
+    ],
+    "xpPerKill": 120,
+    "locations": [
+      {
+        "name": "Meiyerditch Laboratories",
+        "displayName": "Meiyerditch Laboratories (multi, cannon)",
+        "rank": 1,
+        "multi": true,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Sins of the Father (partial: kill the mutated bloodveld during the quest)"
+        ],
+        "notes": "4 bloodvelds and 7 mutated bloodvelds; best XP per hour with a cannon. The run is long, so use prayer rather than food, or the Abyss shortcut to the blood altar at significant Wilderness risk.",
+        "evidence": {
+          "multi": "'The entire area is also multicombat and the Dwarven multicannon can be used here' (Meiyerditch Laboratories); task page row 'Meiyerditch Laboratories' Multicombat {{Yes}}",
+          "cannon": "'The entire area is also multicombat and the Dwarven multicannon can be used here' (Meiyerditch Laboratories)",
+          "requirements": "'Access to the complete laboratory is granted after the player kills the mutated bloodveld that appears during the Sins of the Father quest' (Meiyerditch Laboratories)"
+        }
+      },
+      {
+        "name": "Stronghold Slayer Cave",
+        "displayName": "Stronghold Slayer Cave",
+        "rank": 2,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [],
+        "notes": "12 bloodvelds close to a bank; Slayer ring teleports to the entrance. Cannon safespot in the north-east of their area (often crowded), another in the east room.",
+        "evidence": {
+          "multi": "Task page Location comparison row 'Stronghold Slayer Cave' Multicombat {{No}} (Slayer task/Bloodveld)",
+          "cannon": "'A dwarf multicannon can be used in the dungeon.' (Stronghold Slayer Cave)",
+          "requirements": "'Anyone can enter the dungeon, but players can only attack the Slayer monster they were assigned' (Stronghold Slayer Cave)"
+        }
+      },
+      {
+        "name": "Buccaneers' Laboratory",
+        "displayName": "Buccaneers' Laboratory (76 Sailing, multi, cannon)",
+        "rank": 3,
+        "multi": true,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "76 Sailing"
+        ],
+        "notes": "8 mutated bloodvelds with no obstacles; build a rowboat and bank chest on the island for fast access.",
+        "evidence": {
+          "multi": "Task page Location comparison row \"Buccaneers' Laboratory\" Multicombat {{Yes}}; 'also multicombat but has no obstacles blocking bloodvelds' (Slayer task/Bloodveld)",
+          "cannon": "Task page Location comparison row \"Buccaneers' Laboratory\" Cannonable {{Yes}} (Slayer task/Bloodveld)",
+          "requirements": "'Requires 76 Sailing to access the island.' (Slayer task/Bloodveld)"
+        }
+      },
+      {
+        "name": "Catacombs of Kourend",
+        "displayName": "Catacombs of Kourend (mutated bloodvelds)",
+        "rank": 4,
+        "multi": true,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [],
+        "notes": "18 mutated bloodvelds in three groups (north-east cluster of seven is ideal for goading potions); gives ancient shards and dark totem pieces. Recommended only when assigned by Konar.",
+        "evidence": {
+          "multi": "Task page Location comparison row 'Catacombs of Kourend' Multicombat {{Yes}}; 'They can be killed in multicombat.' (Slayer task/Bloodveld)",
+          "cannon": "Task page Location comparison row 'Catacombs of Kourend' Cannonable {{No}}; Dwarf multicannon prohibited list: Catacombs of Kourend",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Iorwerth Dungeon",
+        "displayName": "Iorwerth Dungeon (mutated bloodvelds)",
+        "rank": 5,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Song of the Elves"
+        ],
+        "notes": "12 mutated bloodvelds in two sections of six, each with a cannonable safespot, very close to the entrance; 1/24 chance of crystal shards.",
+        "evidence": {
+          "multi": "Task page Location comparison row 'Iorwerth Dungeon' Multicombat {{No}}; 'the whole dungeon is single-way combat' (Iorwerth Dungeon)",
+          "cannon": "Task page Location comparison row 'Iorwerth Dungeon' Cannonable {{Yes}}; 'A dwarf multicannon can be used in the dungeon.' (Iorwerth Dungeon)",
+          "requirements": "'This location can only be accessed after completion of Song of the Elves.' (Slayer task/Bloodveld)"
+        }
+      },
+      {
+        "name": "Slayer Tower (1st floor)",
+        "displayName": "Slayer Tower – 1st floor",
+        "rank": 6,
+        "multi": false,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Priest in Peril"
+        ],
+        "notes": "15 bloodvelds in the north-west wing; Morytania Diary gives up to 10% extra Slayer XP here. Safespot in the north-east corner behind the chair.",
+        "evidence": {
+          "multi": "Task page Location comparison row 'Slayer Tower (1st floor)' Multicombat {{No}} (Slayer task/Bloodveld)",
+          "cannon": "'Dwarf multicannons cannot be used here.' (Slayer Tower); Dwarf multicannon prohibited list: Slayer Tower",
+          "requirements": "Slayer task list Required Items/requirements column: 'Priest in Peril' (Slayer task)"
+        }
+      },
+      {
+        "name": "Slayer Tower (basement)",
+        "displayName": "Slayer Tower – basement (task-only)",
+        "rank": 7,
+        "multi": false,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Priest in Peril",
+          "Bloodveld Slayer task (task-only area)"
+        ],
+        "notes": "12 bloodvelds; accessed by the ladder near the entrance and usually less busy. Safespot in the north-west corner between the chest, chair and shelves.",
+        "evidence": {
+          "multi": "Task page Location comparison row 'Slayer Tower (basement)' Multicombat {{No}} (Slayer task/Bloodveld)",
+          "cannon": "'Dwarf multicannons cannot be used here.' (Slayer Tower); Dwarf multicannon prohibited list: Slayer Tower",
+          "requirements": "'Monsters here can only be killed on a Slayer task.' (Slayer Tower)"
+        }
+      },
+      {
+        "name": "God Wars Dungeon",
+        "displayName": "God Wars Dungeon (Zamorakian bloodvelds, skip)",
+        "rank": 8,
+        "multi": true,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Troll Stronghold (partial, defeating Dad) or full Easy Combat Achievements",
+          "60 Strength or 60 Agility",
+          "Rope on first entry",
+          "Climbing boots unless using the Trollheim Teleport (61 Magic, Eadgar's Ruse)"
+        ],
+        "notes": "16 level 81 bloodvelds that are aggressive unless a Zamorak item is worn; the superior cannot spawn here and other followers aggro, so skipping is recommended.",
+        "evidence": {
+          "multi": "Task page Location comparison row 'God Wars Dungeon' Multicombat {{Yes}}; Multicombat area list: 'God Wars Dungeon'",
+          "cannon": "Task page Location comparison row 'God Wars Dungeon' Cannonable {{No}}; Dwarf multicannon page: 'inhabitants of the God Wars Dungeon may also destroy a cannon'",
+          "requirements": "'Accessing it requires partial completion of Troll Stronghold (defeating Dad) or full completion of the Easy Combat Achievements' (God Wars Dungeon); 'and either 60 Strength or 60 Agility. A rope is also required the first time. Without 61 Magic and the completion of Eadgar's Ruse (to be able to use the Trollheim Teleport), climbing boots are required each time.' (God Wars Dungeon)"
+        }
+      },
+      {
+        "name": "Wilderness God Wars Dungeon",
+        "displayName": "Wilderness God Wars Dungeon (Krystilia, multi)",
+        "rank": 9,
+        "multi": true,
+        "cannon": false,
+        "wilderness": true,
+        "wildernessLevelMin": 26,
+        "wildernessLevelMax": 29,
+        "konarAssignable": false,
+        "requirements": [
+          "60 Agility or 60 Strength to enter"
+        ],
+        "notes": "Only 5 sparse bloodveld spawns in a dangerous multiway area where all monsters are aggressive without a god item; the superior cannot spawn here. Not recommended.",
+        "evidence": {
+          "multi": "'The Wilderness God Wars Dungeon is a multi-combat area' (Wilderness God Wars Dungeon); task page row Multicombat {{Yes}}",
+          "cannon": "Task page Location comparison row 'Wilderness God Wars Dungeon' Cannonable {{No}} (Slayer task/Bloodveld)",
+          "requirements": "Krystilia note: 'Only assigned to players who have either 60 Agility or 60 Strength to access the Wilderness God Wars Dungeon.' (Krystilia); Wilderness level '26-29' (Krystilia)"
+        }
+      }
+    ],
+    "notes": "Requires 50 Slayer and Priest in Peril. Mutated bloodvelds give 170 XP (Insatiable 2,900; Insatiable mutated 4,100); God Wars variant 134. Konar assigns Catacombs, God Wars Dungeon, Iorwerth Dungeon, Meiyerditch Laboratories, Slayer Tower or Stronghold Slayer Cave. Krystilia's only location is the Wilderness God Wars Dungeon. Bleed me dry (75 points) extends to 200-250. Reanimated bloodvelds (Expert Reanimation) count for non-Konar tasks.",
+    "_verification": {
+      "corrections": [
+        "God Wars Dungeon requirements: added the 60 Strength or 60 Agility requirement and corrected climbing boots (needed each time unless using the Trollheim Teleport, not only on first access).",
+        "Slayer Tower safespots ('north-eastern corner behind the chair'; basement 'north-west corner between the chest, chair, broken table, and shelves') and Stronghold Slayer Cave safespots confirmed on the Bloodveld page; 1st-floor 'north-western part of the wing' confirmed on the Slayer Tower page.",
+        "xp 120 (Bloodveld infobox slayxp1), superior Insatiable Bloodveld, alternatives and all table rows confirmed."
+      ],
+      "confirmed": 26,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Blue dragons",
+    "wikiTaskPage": "Slayer task/Blue dragons",
+    "monsterPages": [
+      "Blue dragon",
+      "Baby blue dragon",
+      "Brutal blue dragon"
+    ],
+    "bossTask": false,
+    "summary": "Blue dragons use melee and short-range dragonfire, so bring an anti-dragon shield or antifire and pray Protect from Melee, or safespot them with Ranged, Magic or a halberd since they are large. For a fast task, take a dwarf multicannon to the main Taverley Dungeon and cannon the baby blue dragons; adults give more profit. Skip Konar tasks to the Ogre Enclave, Catacombs or Ruins of Tapoyauik (no cannon or spread-out dragons); Vorkath after Dragon Slayer II is the most profitable alternative.",
+    "recommendedStyle": "Any",
+    "styleNotes": "Susceptible to dragonbane weapons; adults need dragonfire protection, babies do not breathe fire; brutal blue dragons add magic and long-range dragonfire; Ruins of Tapoyauik dragons are weak to fire spells instead of water.",
+    "requiredItems": [
+      "Anti-dragon shield, dragonfire shield, dragonfire ward or ancient wyvern shield (except for baby dragons)",
+      "Antifire potion (recommended alongside the shield)"
+    ],
+    "usefulItems": [
+      "Dwarf multicannon (Taverley Dungeon babies)",
+      "Dusty key (Taverley Dungeon, if under 70 Agility)",
+      "Ring of dueling for Castle Wars banking",
+      "Dragon hunter lance or dragon hunter crossbow"
+    ],
+    "superior": null,
+    "alternatives": [
+      "Baby blue dragon",
+      "Brutal blue dragon",
+      "Vorkath"
+    ],
+    "xpPerKill": 105,
+    "locations": [
+      {
+        "name": "Taverley Dungeon",
+        "displayName": "Taverley Dungeon – main area (9 adults, 12 babies, cannon the babies)",
+        "rank": 1,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Dusty key or 70 Agility"
+        ],
+        "notes": "Cannon the baby blue dragons in the main dungeon for the fastest task; babies near the lava eel spot and the east side are away from adults. Ring of dueling plus Enlightened Journey balloon gives fast Castle Wars banking.",
+        "evidence": {
+          "multi": "Task page Location comparison row 'Taverley Dungeon' Multicombat {{No}}; 'Taverley Dungeon is entirely single combat' (Taverley Dungeon)",
+          "cannon": "Task page Location comparison row 'Taverley Dungeon' Cannonable {{Yes}}; 'bring a dwarf multicannon to Taverley Dungeon, using it against the baby blue dragons in the main dungeon' (Slayer task/Blue dragons)",
+          "requirements": "'Requires dusty key or level 70 Agility.' (Slayer task/Blue dragons)"
+        }
+      },
+      {
+        "name": "Taverley Dungeon (Upper Level)",
+        "displayName": "Taverley Dungeon – upper level (task-only, 12 adults)",
+        "rank": 2,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Dusty key or 70 Agility",
+          "Blue dragon Slayer task (task-only area)"
+        ],
+        "notes": "12 adult dragons only killable on task; stairs just north of the dungeon entrance.",
+        "evidence": {
+          "multi": "Task page Location comparison row 'Taverley Dungeon (upper level)' Multicombat {{No}} (Slayer task/Blue dragons)",
+          "cannon": "Task page Location comparison row 'Taverley Dungeon (upper level)' Cannonable {{Yes}} (Slayer task/Blue dragons)",
+          "requirements": "'Blue dragons can only be killed here while on a Slayer task.' (Slayer task/Blue dragons)"
+        }
+      },
+      {
+        "name": "Corsair Cove Dungeon",
+        "displayName": "Corsair Cove Dungeon / Myths' Guild basement",
+        "rank": 3,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Dragon Slayer II"
+        ],
+        "notes": "5 adults and 3 babies close to the Myths' Guild bank and Mythical cape teleport.",
+        "evidence": {
+          "multi": "'The Dwarf multicannon can be used in the dungeon, though it is not multicombat.' (Corsair Cove Dungeon)",
+          "cannon": "'The Dwarf multicannon can be used in the dungeon, though it is not multicombat.' (Corsair Cove Dungeon)",
+          "requirements": "'Requires completion of Dragon Slayer II.' (Slayer task/Blue dragons)"
+        }
+      },
+      {
+        "name": "Isle of Souls Dungeon",
+        "displayName": "Isle of Souls Dungeon",
+        "rank": 4,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [],
+        "notes": "4 adults and 3 babies in one room; the blue dragons can be safespotted from the cove next to the adamantite rocks. Acceptable Konar location because a cannon can be placed.",
+        "evidence": {
+          "multi": "'A dwarf multicannon can be used in the dungeon, though it is not a multicombat area.' (Isle of Souls Dungeon)",
+          "cannon": "'A dwarf multicannon can be used in the dungeon, though it is not a multicombat area.' (Isle of Souls Dungeon)",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Dragon Nest",
+        "displayName": "Dragon Nest (east of Tal Teklan)",
+        "rank": 5,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "5 adults and 2 babies close to the Tal Teklan bank; 40 Agility shortcut available. Safespot pictured on the Blue dragon page.",
+        "evidence": {
+          "multi": "Task page Location comparison row 'Dragon Nest' Multicombat {{No}} (Slayer task/Blue dragons)",
+          "cannon": "Task page Location comparison row 'Dragon Nest' Cannonable {{Yes}} (Slayer task/Blue dragons)",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Heroes' Guild Basement",
+        "displayName": "Heroes' Guild basement (1 caged adult)",
+        "rank": 6,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Heroes' Quest"
+        ],
+        "notes": "A single fenced-off dragon that can be safespotted with Ranged, Magic or a halberd; respawn is about 20 seconds.",
+        "evidence": {
+          "multi": "Task page Location comparison row \"Heroes' Guild (basement)\" Multicombat {{No}} (Slayer task/Blue dragons)",
+          "cannon": "Task page Location comparison row \"Heroes' Guild (basement)\" Cannonable {{Yes}} (Slayer task/Blue dragons)",
+          "requirements": "'The Heroes' Guild requires completion of Heroes' Quest to access.' (Slayer task/Blue dragons)"
+        }
+      },
+      {
+        "name": "Ogre Enclave",
+        "displayName": "Ogre Enclave (Gu'Tanoth)",
+        "rank": 7,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Watchtower"
+        ],
+        "notes": "6 adults spread far apart and far from a bank; skip if sent here by Konar. Ring of dueling to Castle Wars then run east to bank. A cannon will also target the level 1 spiders and skeletons.",
+        "evidence": {
+          "multi": "'A dwarf multicannon may be used here, but it is not a multi-combat area.' (Ogre Enclave)",
+          "cannon": "'A dwarf multicannon may be used here, but it is not a multi-combat area.' (Ogre Enclave)",
+          "requirements": "'Requires completion of Watchtower.' (Slayer task/Blue dragons)"
+        }
+      },
+      {
+        "name": "Catacombs of Kourend (north-west)",
+        "displayName": "Catacombs of Kourend – Dragon's Den (2 brutal blue dragons)",
+        "rank": 8,
+        "multi": false,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [],
+        "notes": "2 brutal blue dragons with higher profit and dark totem pieces; Protect from Magic plus antifire fully protects at range. Skip if sent here by Konar (no cannon); Konar requires 100 combat.",
+        "evidence": {
+          "multi": "Task page Location comparison row 'Catacombs of Kourend' Multicombat {{No}}; 'this particular dungeon is a multicombat area (excluding the brutal dragon area)' (Catacombs of Kourend)",
+          "cannon": "Task page Location comparison row 'Catacombs of Kourend' Cannonable {{No}}; Dwarf multicannon prohibited list: Catacombs of Kourend",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Ruins of Tapoyauik (Bottom floor)",
+        "displayName": "Ruins of Tapoyauik – bottom floor (7 adults, 7 babies, 5 brutals)",
+        "rank": 9,
+        "multi": false,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "The Heart of Darkness"
+        ],
+        "notes": "Fast access with a charged Pendant of Ates; dragons here are weak to fire spells and can drop frozen tears. No cannon, so skip if assigned by Konar.",
+        "evidence": {
+          "multi": "Task page Location comparison row 'Ruins of Tapoyauik' Multicombat {{No}} (Slayer task/Blue dragons)",
+          "cannon": "Task page Location comparison row 'Ruins of Tapoyauik' Cannonable {{No}}; Dwarf multicannon prohibited list: Ruins of Tapoyauik",
+          "requirements": "'Can be accessed after completing The Heart of Darkness.' (Slayer task/Blue dragons)"
+        }
+      }
+    ],
+    "notes": "Requires 65 combat and Dragon Slayer I started. Slayer XP: adult 105, baby 50, brutal blue 257, Vorkath 460 (750 post-quest). Konar assigns Catacombs, Isle of Souls Dungeon, Myths' Guild Dungeon, Ogre Enclave, Ruins of Tapoyauik or Taverley Dungeon. Vorkath (Ungael) requires Dragon Slayer II and is non-multi, non-cannon.",
+    "_verification": {
+      "corrections": [
+        "Isle of Souls Dungeon notes: 'three safespots' unsupported; the Isle of Souls Dungeon page documents one ('by standing in the cove next to the adamantite rocks').",
+        "Heroes' Guild respawn confirmed: 'With a surprisingly fast respawn time of around 20 seconds' (Blue dragon). All table rows, dungeon quotes, xp 105 and alternatives (task page variants incl. Vorkath) confirmed."
+      ],
+      "confirmed": 24,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Brine rats",
+    "wikiTaskPage": "Brine rat",
+    "monsterPages": [
+      "Brine rat"
+    ],
+    "bossTask": false,
+    "summary": "Brine rats live only in the Brine Rat Cavern near Rellekka, entered by digging with a spade south of the windswept tree (fairy ring DKS is right beside it). They have low Defence but fairly high Attack and Strength, so bring food unless your Defence is around 70; two safespots exist behind the bones in the south-east and north-west corners. Rat bone weapons add 10 to your max hit against them. The cavern is single-way but a cannon can be used.",
+    "recommendedStyle": "Any",
+    "styleNotes": "Low Defence, high Attack and Strength; rat bone weapons gain +10 max hit against them.",
+    "requiredItems": [
+      "Spade (to dig into the cavern)"
+    ],
+    "usefulItems": [
+      "Rat bone weapon",
+      "Bones to Peaches tablets",
+      "Food"
+    ],
+    "superior": null,
+    "alternatives": [],
+    "xpPerKill": 50,
+    "locations": [
+      {
+        "name": "Brine Rat Cavern",
+        "displayName": "Brine Rat Cavern (fairy ring DKS)",
+        "rank": 1,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Olaf's Quest (Slayer task list says partial completion; Brine rat and Konar pages say completion)",
+          "47 Slayer",
+          "Spade"
+        ],
+        "notes": "7 spawns in the main cavern; not aggressive. Exit is a rock in the south-west that cannot be used to re-enter. Fairy ring DKS or the Slayer ring Fremennik Slayer Dungeon teleport are closest.",
+        "evidence": {
+          "multi": "'The entire cavern is a single combat zone. Dwarf multicannons may be used here.' (Brine Rat Cavern)",
+          "cannon": "'The entire cavern is a single combat zone. Dwarf multicannons may be used here.' (Brine Rat Cavern)",
+          "requirements": "'They are only assigned to players who have completed Olaf's Quest.' (Brine rat); 'A Slayer level of 47 is required to fight them.' (Brine rat); 'Note: A spade is required to enter Brine Rat Cavern.' (Brine rat)"
+        }
+      }
+    ],
+    "notes": "No dedicated task page exists (API missingtitle for 'Slayer task/Brine rats'); the Slayer task list row and Brine rat monster page were used. The Slayer task list row names Vannaka, Chaeldar, Konar and Nieve; the Brine rat infobox assignedby field also lists Turael and Spria (they also count for a rat task). Konar's table lists 47 Slayer, 45 combat and completion of Olaf's Quest. They are the only source of the brine sabre.",
+    "_verification": {
+      "corrections": [
+        "Requirement wording: Slayer task list says 'Olaf's Quest (partially)' while the Brine rat page says 'only assigned to players who have completed Olaf's Quest' and Konar's table says 'completion of Olaf's Quest'; both readings recorded.",
+        "Assigned-by list expanded from the Brine rat infobox (turael, spria, vannaka, chaeldar, konar, nieve). 7 spawns confirmed from the Brine rat LocLine; cannon/single-way quote confirmed on Brine Rat Cavern."
+      ],
+      "confirmed": 3,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Callisto",
+    "wikiTaskPage": "Callisto",
+    "monsterPages": [
+      "Callisto",
+      "Artio"
+    ],
+    "bossTask": true,
+    "summary": "Callisto is a level 470 bear boss in Callisto's Den at level 40 Wilderness, assigned as a boss task (Like a boss unlock) with Artio in Hunter's End as an accepted substitute.",
+    "recommendedStyle": "Any",
+    "styleNotes": "Immune to cannon; Artio is not cannon-immune. No further fight guidance recorded for boss tasks.",
+    "requiredItems": [],
+    "usefulItems": [],
+    "superior": null,
+    "alternatives": [
+      "Artio"
+    ],
+    "xpPerKill": 1300,
+    "locations": [
+      {
+        "name": "Callisto's Den",
+        "displayName": "Callisto's Den (Wilderness level 40, multi)",
+        "rank": 1,
+        "multi": true,
+        "cannon": false,
+        "wilderness": true,
+        "wildernessLevelMin": 40,
+        "wildernessLevelMax": 40,
+        "konarAssignable": true,
+        "requirements": [
+          "Like a boss unlock (200 Slayer reward points) for the task",
+          "Medium Wilderness Diary OR a Callisto boss Slayer task",
+          "50,000 coin fee (deductible from bank)"
+        ],
+        "notes": "Entrance just south of the Demonic Ruins; exiting drops you at a random point in the Escape Caves. Teleports are blocked for 3 ticks on entry unless the Hard Wilderness Diary is done.",
+        "evidence": {
+          "multi": "'It is a multi-combat dungeon located in the Wilderness, just south of Demonic Ruins.' (Callisto's Den)",
+          "cannon": "Dwarf multicannon prohibited list: Callisto's Den ('It doesn't seem safe to set up a cannon here.'); Callisto infobox immunecannon = Yes",
+          "requirements": "'Entering the boss lair requires completion of the medium Wilderness diary OR a Callisto boss Slayer task, and a fee of 50,000 coins; this fee does not need to be brought along in the inventory, and can be deducted from the bank.' (Callisto's Den); Boss page Boss slayer table: Callisto, Callisto's Den, Slayer 1, 'Artio can be killed instead'"
+        }
+      },
+      {
+        "name": "Hunter's End",
+        "displayName": "Hunter's End (Artio, Wilderness level 21, singles-plus)",
+        "rank": 2,
+        "multi": false,
+        "cannon": "unknown",
+        "wilderness": true,
+        "wildernessLevelMin": 21,
+        "wildernessLevelMax": 21,
+        "konarAssignable": true,
+        "requirements": [
+          "Hard Wilderness Diary OR a Callisto boss Slayer task",
+          "50,000 coin fee shared with the other boss lairs"
+        ],
+        "notes": "Artio is the weaker solo version and counts for the Callisto boss task; the lair is singles-plus so another player attacking you takes priority.",
+        "evidence": {
+          "multi": "'Artio is a weaker variant of Callisto who is fought in the Hunter's End, a singles-plus combat area in level 21 Wilderness.' (Artio); Singles-plus combat page lists Hunter's End",
+          "cannon": "not stated",
+          "requirements": "'To enter Artio's lair, players must have completed the hard Wilderness diary, OR they must have a Callisto boss Slayer task' (Artio)"
+        }
+      }
+    ],
+    "notes": "Boss tasks are assigned by Konar, Nieve/Steve, Duradel/Kuradal or Krystilia after unlocking Like a boss (200 points); 3-35 kills and 5,000 bonus Slayer XP on completion (Boss page). Callisto and Artio also count for an ordinary bear task, but a bear task does not bypass the diary requirement. Artio gives 518 Slayer XP.",
+    "_verification": {
+      "corrections": [
+        "Confirmed: no 'Slayer task/Callisto' page exists; Callisto infobox slayxp 1300, immunecannon Yes; Artio 518, immunecannon No; Callisto's Den infobox wilderness = 40 and 'multi-combat dungeon'; Hunter's End wilderness = 21 and singles-plus; Boss page table row 'Callisto | Callisto's Den | Slayer 1 | Artio can be killed instead'; 5,000 bonus Slayer XP and Like a boss (200 points) on Boss page.",
+        "Hunter's End cannon stays unknown (Artio is not cannon-immune but no page states a cannon can be placed in the lair)."
+      ],
+      "confirmed": 5,
+      "downgraded": 1
+    }
+  },
+  {
+    "task": "Catablepon",
+    "wikiTaskPage": "Catablepon",
+    "monsterPages": [
+      "Catablepon"
+    ],
+    "bossTask": false,
+    "summary": "Catablepon are found only on the third level of the Stronghold of Security, the Pit of Pestilence, and are assigned by Mazchna. They cast Weaken with their glare, draining Strength until 8% plus 3 levels are gone, so Ranged or Magic from the safespots behind the tendrils or doors in the north-western room is advised over melee, or use Protect from Magic and restore potions. They are aggressive and use both melee and magic. The level is single-way but a cannon can be set up in the stronghold.",
+    "recommendedStyle": "Ranged",
+    "styleNotes": "Their weakening glare drains Strength (Protect from Magic stops it), which makes melee training inefficient; no immunities are stated.",
+    "requiredItems": [],
+    "usefulItems": [
+      "Strength potion or restore potion (if meleeing)",
+      "Skull sceptre pieces from the stronghold for a Barbarian Village teleport"
+    ],
+    "superior": null,
+    "alternatives": [],
+    "xpPerKill": 40,
+    "locations": [
+      {
+        "name": "Stronghold of Security: Pit of Pestilence",
+        "displayName": "Stronghold of Security – Pit of Pestilence (level 3)",
+        "rank": 1,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "26 catablepon (levels 49, 64 and 68) across the third level; they drop the top of sceptre. Safespots behind the stinking/dripping tendrils and beside the doors of the north-western room.",
+        "evidence": {
+          "multi": "'Unlike the other levels, the first is a multicombat area.' (Stronghold of Security), so the third level is single-way",
+          "cannon": "'Note: A cannon can be placed in the stronghold.' (Stronghold of Security)",
+          "requirements": "not stated"
+        }
+      }
+    ],
+    "notes": "Only assigned by Mazchna (35 combat); free-to-play. Slayer XP varies by level: 40 (level 49), 70 (level 64), 50 (level 68); xpPerKill uses the lowest variant. No task page exists on the wiki. The Catablepon page advises killing only the level 64 variant on task to maximise Slayer XP.",
+    "_verification": {
+      "corrections": [
+        "Confirmed: no 'Slayer task/Catablepon' page exists; Catablepon infobox slayxp1-3 = 40/70/50 for levels 49/64/68, assignedby mazchna; Stronghold of Security 26 spawns, 'A cannon can be placed in the stronghold', 'Unlike the other levels, the first is a multicombat area'; Skull sceptre 'can be used to teleport to the entrance of the Stronghold in Barbarian Village'."
+      ],
+      "confirmed": 2,
+      "downgraded": 0
+    }
+  }
+]

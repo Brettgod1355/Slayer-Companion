@@ -1,0 +1,1020 @@
+[
+  {
+    "task": "Cave bugs",
+    "wikiTaskPage": "Cave bug",
+    "monsterPages": [
+      "Cave bug"
+    ],
+    "bossTask": false,
+    "summary": "A beginner task from Turael, Spria and Mazchna at 7 Slayer. Level 6 cave bugs in the Lumbridge Swamp Caves die to any combat style and drop low-level herbs; the caves need a light source and a rope, and wall beasts in the corridors can grab you unless you wear a spiny helmet or run past them. Level 96 cave bugs in the Dorgesh-Kaan South Dungeon can be safespotted but need Death to the Dorgeshuun. Both variants regenerate hitpoints about 20 times faster than normal monsters.",
+    "recommendedStyle": "Any",
+    "styleNotes": "Both variants have a 50% elemental weakness to fire spells; not immune to cannon or thralls; hitpoints regenerate every 5 game ticks.",
+    "requiredItems": [
+      "Bullseye lantern (lit) or another light source (Fire of Eternal Light removes the need)",
+      "Rope (first visit to Lumbridge Swamp Caves)"
+    ],
+    "usefulItems": [
+      "Spiny helmet or Slayer helmet (wall beasts)",
+      "Tinderbox",
+      "Antipoison"
+    ],
+    "superior": null,
+    "alternatives": [],
+    "xpPerKill": 5,
+    "locations": [
+      {
+        "name": "Lumbridge Swamp Caves",
+        "displayName": "Lumbridge Swamp Caves (level 6 cave bugs)",
+        "rank": 1,
+        "multi": "unknown",
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Light source",
+          "Rope to enter the caves (only needed once)"
+        ],
+        "notes": "Enter via the rope hole in Lumbridge Swamp near the candle seller. Level 6 bugs are aggressive but max hit 1. Open light sources can ignite swamp gas in the north-west and south-middle sections; wall beasts sit in narrow corridors, so stop one square behind the hole in the wall and run past.",
+        "evidence": {
+          "multi": "not stated (Lumbridge Swamp Caves page and Multicombat area list say nothing about this cave)",
+          "cannon": "'A Dwarf multicannon can be used in the caves.' (Lumbridge Swamp Caves)",
+          "requirements": "'The caves require a light source, unless the player has lit a fire of eternal light near the rope entrance.' and 'From the swamp near the candle seller, requiring a rope to enter. After one rope has been used, further ropes are not required.' (Lumbridge Swamp Caves)"
+        }
+      },
+      {
+        "name": "Dorgesh-Kaan South Dungeon",
+        "displayName": "Dorgesh-Kaan South Dungeon (level 6 and 96 cave bugs)",
+        "rank": 2,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Death to the Dorgeshuun",
+          "Light source"
+        ],
+        "notes": "Reach via fairy ring AJQ. Level 96 cave bugs are not aggressive and can be safespotted from the passage between the frogs and the cave bugs south-west of the ladder; they give 93 Slayer XP each.",
+        "evidence": {
+          "multi": "'You can use a dwarf multicannon in the dungeon, however it is not multicombat.' (Dorgesh-Kaan South Dungeon)",
+          "cannon": "'You can use a dwarf multicannon in the dungeon, however it is not multicombat.' (Dorgesh-Kaan South Dungeon)",
+          "requirements": "'Entry to the dungeon requires completion of the Death to the Dorgeshuun quest. The dungeon is dark and requires the player to have a light source' (Dorgesh-Kaan South Dungeon); 'can only be accessed after the completion of the Death to the Dorgeshuun quest through fairy ring AJQ' (Cave bug)"
+        }
+      }
+    ],
+    "notes": "No Slayer task/Cave bugs page exists; data taken from the Cave bug monster page and the Slayer task list row. xpPerKill is for the level 6 variant; the level 96 variant gives 93 XP. Assigned only by Turael, Spria and Mazchna (Vannaka stopped assigning them on 8 May 2024). Not assignable by Konar.",
+    "_verification": {
+      "corrections": [],
+      "confirmed": 16,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Cave crawlers",
+    "wikiTaskPage": "Cave crawler",
+    "monsterPages": [
+      "Cave crawler",
+      "Chasm Crawler"
+    ],
+    "bossTask": false,
+    "summary": "A low-level task at 10 Slayer usually done in the first chamber of the Fremennik Slayer Dungeon, right beside fairy ring AJR. Cave crawlers hit up to 3 but inflict a strong poison, so bring antipoison; low-Defence players can range or mage them from the rocks around the chamber walls. They can also be killed in the Lumbridge Swamp Caves or Dorgesh-Kaan South Dungeon, where a light source is needed and exposed light sources can explode. They regenerate 1 hitpoint every 5 ticks, so kill them quickly.",
+    "recommendedStyle": "Any",
+    "styleNotes": "Standard variant has no listed elemental weakness; the icy variant in Ruins of Tapoyauik is 50% weak to fire spells; not immune to cannon or thralls; they poison for 8.",
+    "requiredItems": [],
+    "usefulItems": [
+      "Antipoison",
+      "Bullseye lantern or other enclosed light source (Lumbridge Swamp Caves / Dorgesh-Kaan)",
+      "Herb sack"
+    ],
+    "superior": "Chasm Crawler",
+    "alternatives": [
+      "Cave crawler (icy)"
+    ],
+    "xpPerKill": 22,
+    "locations": [
+      {
+        "name": "Fremennik Slayer Dungeon",
+        "displayName": "Fremennik Slayer Dungeon – first chamber",
+        "rank": 1,
+        "multi": "unknown",
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "Eight cave crawlers in the first chamber; fairy ring AJR is just outside for banking. Aggressive only to players of combat level 46 and below. Use the rocks around the room walls as safespots for Ranged or Magic.",
+        "evidence": {
+          "multi": "not stated (Fremennik Slayer Dungeon page and Multicombat area list say nothing)",
+          "cannon": "'Players cannot set up a dwarf multicannon within the caves. Attempting to do so yields the chatbox message: The air is too dank for you to set up a cannon here.' (Fremennik Slayer Dungeon); also on the Dwarf multicannon prohibited list",
+          "requirements": "'The first chamber contains eight cave crawlers (level 10 Slayer is required to kill them).' (Fremennik Slayer Dungeon)"
+        }
+      },
+      {
+        "name": "Lumbridge Swamp Caves",
+        "displayName": "Lumbridge Swamp Caves",
+        "rank": 2,
+        "multi": "unknown",
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Light source",
+          "Rope to enter the caves (only needed once)"
+        ],
+        "notes": "Only three spawns. Exposed light sources such as candles may explode, so bring a bullseye or oil lantern. A safespot exists at 3180,9591. The Zanaris shed in the swamp is a fast banking route.",
+        "evidence": {
+          "multi": "not stated",
+          "cannon": "'A Dwarf multicannon can be used in the caves.' (Lumbridge Swamp Caves)",
+          "requirements": "'The caves require a light source, unless the player has lit a fire of eternal light near the rope entrance.' (Lumbridge Swamp Caves)"
+        }
+      },
+      {
+        "name": "Dorgesh-Kaan South Dungeon",
+        "displayName": "Dorgesh-Kaan South Dungeon",
+        "rank": 3,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Death to the Dorgeshuun",
+          "Light source"
+        ],
+        "notes": "Five spawns; reach via fairy ring AJQ. Several poisonous creatures live in the dungeon, so antipoison is recommended.",
+        "evidence": {
+          "multi": "'You can use a dwarf multicannon in the dungeon, however it is not multicombat.' (Dorgesh-Kaan South Dungeon)",
+          "cannon": "'You can use a dwarf multicannon in the dungeon, however it is not multicombat.' (Dorgesh-Kaan South Dungeon)",
+          "requirements": "'Entry to the dungeon requires completion of the Death to the Dorgeshuun quest. The dungeon is dark and requires the player to have a light source' (Dorgesh-Kaan South Dungeon)"
+        }
+      },
+      {
+        "name": "Ruins of Tapoyauik - top level",
+        "displayName": "Ruins of Tapoyauik – top level (icy cave crawlers)",
+        "rank": 4,
+        "multi": "unknown",
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "The Heart of Darkness (completed)"
+        ],
+        "notes": "Seven icy cave crawler spawns on the top level; same combat level and Slayer XP as the standard variant but 50% weak to fire spells. Only accessible after completing The Heart of Darkness.",
+        "evidence": {
+          "multi": "not stated",
+          "cannon": "'A Dwarven multicannon cannot be placed inside the ruins.' (Ruins of Tapoyauik); Dwarf multicannon prohibited list: 'Ruins of Tapoyauik (including Doom of Mokhaiotl) - An ancient magical force won't let you set up a cannon here.'",
+          "requirements": "'They are visited during the quest The Heart of Darkness, after completion of which the ruins become populated with a variety of monsters, all of which are susceptible to fire spells. Prior to quest completion, they are not accessible.' and monster list 'Cave crawler, post-quest, top floor' (Ruins of Tapoyauik)"
+        }
+      }
+    ],
+    "notes": "Slayer task/Cave crawlers redirects to the Cave crawler monster page. Assigned by Turael, Spria, Mazchna and Mortimer at combat level 10+; Vannaka and Chaeldar stopped assigning them on 8 May 2024. Not assignable by Konar. Superior Chasm Crawler requires the Bigger and Badder unlock. The icy variant in the Ruins of Tapoyauik requires completion of The Heart of Darkness.",
+    "_verification": {
+      "corrections": [
+        "Ruins of Tapoyauik location: requirements [] -> ['The Heart of Darkness (completed)'] (Ruins of Tapoyauik page: 'Prior to quest completion, they are not accessible.'); cannon evidence now also quotes the Ruins of Tapoyauik page"
+      ],
+      "confirmed": 22,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Cave horrors",
+    "wikiTaskPage": "Slayer task/Cave horrors",
+    "monsterPages": [
+      "Cave horror",
+      "Cave abomination"
+    ],
+    "bossTask": false,
+    "summary": "Cave horrors are found only in the Mos Le'Harmless Cave and need 58 Slayer, Cabin Fever, a light source and either a witchwood icon or Protect from Melee, because their scream always deals 10% of your base Hitpoints. They use magic-based melee, so most players either pray melee in prayer gear or use a fast Ranged weapon such as a toxic blowpipe from the many safespots near the cave entrance. A cannon can be used and there is a well-known cannon placement near the entrance where targeted horrors get stuck on the wall. They are killed mainly for the black mask and hard clue scrolls; bring a herb sack, seed box and log basket for the frequent herb, seed and mahogany log drops.",
+    "recommendedStyle": "Ranged",
+    "styleNotes": "Not weak to any melee style; 30% elemental weakness to fire spells; not immune to cannon or thralls; low hitpoints favour fast-firing Ranged weapons.",
+    "requiredItems": [
+      "Witchwood icon (or Protect from Melee)",
+      "Bullseye lantern (lit) or another light source (Fire of Eternal Light removes the need)"
+    ],
+    "usefulItems": [
+      "Dwarf multicannon",
+      "Bonecrusher necklace",
+      "Herb sack",
+      "Seed box",
+      "Log basket",
+      "Proselyte armour",
+      "Telekinetic Grab runes for looting from safespots"
+    ],
+    "superior": "Cave abomination",
+    "alternatives": [],
+    "xpPerKill": 55,
+    "locations": [
+      {
+        "name": "Mos Le'Harmless Cave",
+        "displayName": "Mos Le'Harmless Cave (only location)",
+        "rank": 1,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Cabin Fever",
+          "58 Slayer",
+          "Light source or Fire of Eternal Light",
+          "Witchwood icon or Protect from Melee"
+        ],
+        "notes": "70 spawns, all aggressive, alongside aggressive albino bats. Get there by Minigame Teleport to Trouble Brewing, Bill Teach from Port Phasmatys, a charter ship, or a Mos le'harmless teleport scroll. Safespots exist directly beside the entrance behind the Fire of Eternal Light and around the lake; the recommended cannon spot is at 3785,9460.",
+        "evidence": {
+          "multi": "Task page Location table row 'Mos Le'Harmless Cave' Multicombat {{No}} (Slayer task/Cave horrors)",
+          "cannon": "'A dwarf multicannon can also be used to speed up kills.' (Slayer task/Cave horrors); 'The Dwarf multicannon can be used in the cave.' (Mos Le'Harmless Cave)",
+          "requirements": "'Cave horrors are found exclusively in the Mos Le'Harmless Cave, requiring completion of Cabin Fever.' and 'You must wear a witchwood icon to fight cave horrors at melee distance, otherwise they will use a special attack which always deals damage equal to 10% of the player's base Hitpoints level' and 'A light source is also required to fight them without taking additional damage, unless a fire of eternal light is lit.' (Slayer task/Cave horrors)"
+        }
+      }
+    ],
+    "notes": "Assigned by Chaeldar, Nieve, Duradel and Mortimer at 85+ combat; not assignable by Konar. Horrorific unlock (100 points) raises assignments to 200-250. Killing a cave horror is a Hard Morytania Diary task.",
+    "_verification": {
+      "corrections": [],
+      "confirmed": 18,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Cave kraken",
+    "wikiTaskPage": "Slayer task/Cave krakens",
+    "monsterPages": [
+      "Cave kraken",
+      "Kraken"
+    ],
+    "bossTask": false,
+    "summary": "Cave kraken live only in Kraken Cove and can only be attacked while on task; you must disturb a whirlpool to surface each one. Magic is the only reliable style because Ranged deals a seventh of its damage and melee cannot reach them, so use earth spells against their elemental weakness and Protect from Magic against their magic attacks. Their drops are poor apart from the uncharged trident, so most players kill the Kraken boss instead for the same task, using fishing explosives to start each fight quickly.",
+    "recommendedStyle": "Magic",
+    "styleNotes": "50% elemental weakness to earth spells; Ranged deals 1/7 damage, melee including halberds deals no damage; immune to cannon and thralls; attacks are magic so they can be prayed against.",
+    "requiredItems": [],
+    "usefulItems": [
+      "Earth spell runes or an earth staff",
+      "Prayer potions for Protect from Magic",
+      "Fishing explosives (Kraken boss)"
+    ],
+    "superior": null,
+    "alternatives": [
+      "Kraken"
+    ],
+    "xpPerKill": 125,
+    "locations": [
+      {
+        "name": "Kraken Cove",
+        "displayName": "Kraken Cove (task-only; Kraken boss chamber also counts)",
+        "rank": 1,
+        "multi": "partial",
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "87 Slayer",
+          "50 Magic",
+          "Active Cave kraken or Kraken task"
+        ],
+        "notes": "25 cave kraken whirlpools plus the Kraken boss room, which has a peek option to count players inside. Fairy ring AKQ lands just east of the cove; a Piscatoris teleport scroll or Western banner 3/4 also work. Lieve McCracken stops any attack made off-task.",
+        "evidence": {
+          "multi": "Multicombat area list: 'Inner Kraken Cove'; the outer part is not listed",
+          "cannon": "Cave kraken infobox immunecannon = yes (Cave kraken); Dwarf multicannon prohibited list includes 'Kraken Cove', although the Kraken Cove page says 'A dwarf multicannon can be used within this dungeon, but not near the Waterfiends.'",
+          "requirements": "'To be assigned cave krakens, players require level 87 Slayer and 50 Magic.' and 'They can only be attacked if players have them as a Slayer task.' (Cave kraken)"
+        }
+      }
+    ],
+    "notes": "Assigned by Chaeldar, Konar, Nieve and Duradel at 80+ combat; Konar's table lists Kraken Cove with the Kraken boss as an alternative. Krack on unlock (100 points) raises assignments to 150-200. The Kraken boss also requires 87 Slayer which cannot be boosted, and its attacks are typeless so they cannot be prayed against.",
+    "_verification": {
+      "corrections": [],
+      "confirmed": 17,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Cave slimes",
+    "wikiTaskPage": "Cave slime",
+    "monsterPages": [
+      "Cave slime"
+    ],
+    "bossTask": false,
+    "summary": "A beginner task at 17 Slayer done in the Lumbridge Swamp Caves or the Dorgesh-Kaan South Dungeon. Cave slimes hit only 2 but poison you even when they miss, so bring antipoison; any combat style works. In the Lumbridge Swamp Caves an enclosed light source such as a bullseye or sapphire lantern is important because open flames ignite gas in the northern slime room, while the southern room is risk free. Wall beasts guard the way to both rooms, so a spiny helmet or Slayer helmet helps.",
+    "recommendedStyle": "Any",
+    "styleNotes": "50% elemental weakness to earth spells; poisonous (3 damage); not immune to cannon or thralls; all defences are 0.",
+    "requiredItems": [
+      "Bullseye lantern (lit) or another enclosed light source (Fire of Eternal Light removes the need)",
+      "Rope (first visit to Lumbridge Swamp Caves)"
+    ],
+    "usefulItems": [
+      "Antipoison",
+      "Spiny helmet or Slayer helmet (wall beasts)",
+      "Tinderbox"
+    ],
+    "superior": null,
+    "alternatives": [],
+    "xpPerKill": 25,
+    "locations": [
+      {
+        "name": "Lumbridge Swamp Caves",
+        "displayName": "Lumbridge Swamp Caves – southern slime room (gas-free)",
+        "rank": 1,
+        "multi": "unknown",
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Light source (enclosed recommended)",
+          "Rope to enter the caves (only needed once)"
+        ],
+        "notes": "Slimes are in two rooms; open light sources ignite gas in the northern room but the entire southern room is risk free. You pass a wall beast to reach either room. Not aggressive.",
+        "evidence": {
+          "multi": "not stated",
+          "cannon": "'A Dwarf multicannon can be used in the caves.' (Lumbridge Swamp Caves)",
+          "requirements": "'As they are located in the Lumbridge Swamp Caves, a rope is needed if you have not entered the dungeon before. A light source is also required, but be aware that any exposed light sources (such as a candle) may explode' (Cave slime)"
+        }
+      },
+      {
+        "name": "Dorgesh-Kaan South Dungeon",
+        "displayName": "Dorgesh-Kaan South Dungeon",
+        "rank": 2,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Death to the Dorgeshuun",
+          "Light source"
+        ],
+        "notes": "Nine spawns; reach via fairy ring AJQ. Antipoison recommended because several poisonous creatures live here.",
+        "evidence": {
+          "multi": "'You can use a dwarf multicannon in the dungeon, however it is not multicombat.' (Dorgesh-Kaan South Dungeon)",
+          "cannon": "'You can use a dwarf multicannon in the dungeon, however it is not multicombat.' (Dorgesh-Kaan South Dungeon)",
+          "requirements": "'Entry to the dungeon requires completion of the Death to the Dorgeshuun quest. The dungeon is dark and requires the player to have a light source' (Dorgesh-Kaan South Dungeon)"
+        }
+      }
+    ],
+    "notes": "No Slayer task/Cave slimes page exists; data from the Cave slime monster page and the Slayer task list row. Assigned by Turael, Spria and Mazchna at 15+ combat; Vannaka and Chaeldar stopped assigning them on 8 May 2024. Not assignable by Konar. Guaranteed swamp tar drop (roughly 3.5 per kill).",
+    "_verification": {
+      "corrections": [],
+      "confirmed": 16,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Cerberus",
+    "wikiTaskPage": "Cerberus",
+    "monsterPages": [
+      "Cerberus"
+    ],
+    "bossTask": true,
+    "summary": "Cerberus is a level 318 hellhound boss in Cerberus' Lair, entered from the north-east cave in the hellhound area of Taverley Dungeon, and needs 91 Slayer plus a hellhound or Cerberus task to fight.",
+    "recommendedStyle": "Any",
+    "styleNotes": "Attacks with all three combat styles; 40% elemental weakness to water spells; immune to poison and venom; not immune to cannon or thralls but a cannon cannot be placed in the lair.",
+    "requiredItems": [],
+    "usefulItems": [
+      "Key master teleport",
+      "Wild pie (to boost to 91 Slayer on a hellhound task)"
+    ],
+    "superior": null,
+    "alternatives": [],
+    "xpPerKill": 690,
+    "locations": [
+      {
+        "name": "Cerberus' Lair",
+        "displayName": "Cerberus' Lair (via Taverley Dungeon hellhound area)",
+        "rank": 1,
+        "multi": "unknown",
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "91 Slayer (boostable with wild pie on a hellhound task, must stay at or above 91)",
+          "Hellhound or Cerberus Slayer task"
+        ],
+        "notes": "Cave entrance in the eastern wall of the Taverley Dungeon hellhound area, beyond the poisonous spiders; the Key Master guards three gates leading to three separate rooms. A Key master teleport goes straight there.",
+        "evidence": {
+          "multi": "not stated (Cerberus' Lair page and Multicombat area list say nothing)",
+          "cannon": "'A dwarf multicannon cannot be set up inside Cerberus' Lair; if attempted, players will receive the message: You cannot place the cannon here, it would melt.' (Cerberus); Dwarf multicannon prohibited list: Cerberus' Lair",
+          "requirements": "'Defeating Cerberus requires a Slayer level of 91, along with a task of hellhounds or Cerberus herself.' (Cerberus); 'He will only allow players who are assigned hellhounds or Cerberus as a slayer task to fight it.' (Cerberus' Lair)"
+        }
+      }
+    ],
+    "notes": "Boss task: assigned by Konar, Nieve/Steve and Duradel/Kuradal after unlocking Like a boss (200 points) with 91 Slayer; also a valid substitute on any hellhound task (Vannaka, Chaeldar, Konar, Nieve, Duradel). Boss tasks award a bonus 5,000 Slayer XP on completion.",
+    "_verification": {
+      "corrections": [],
+      "confirmed": 14,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Chaos druids",
+    "wikiTaskPage": "Chaos druid",
+    "monsterPages": [
+      "Chaos druid",
+      "Elder Chaos druid"
+    ],
+    "bossTask": false,
+    "summary": "A Krystilia-only task, so only kills inside the Wilderness count. The usual spot is the level 1-5 Wilderness section of the Edgeville Dungeon, where 11 level 13 chaos druids die to anything and drop plenty of herbs. Elder Chaos druids at the Chaos Temple in level 11-13 Wilderness also count but teleblock, teleport you to them and hit hard with Magic, so use Protect from Magic there.",
+    "recommendedStyle": "Any",
+    "styleNotes": "Chaos druids have no listed weaknesses or immunities and hit a max of 2; Elder Chaos druids attack with Magic and can teleblock.",
+    "requiredItems": [],
+    "usefulItems": [
+      "Herb sack",
+      "Teleport anchoring scroll (Elder Chaos druids)",
+      "Prayer potions (Elder Chaos druids)"
+    ],
+    "superior": null,
+    "alternatives": [
+      "Elder Chaos druid"
+    ],
+    "xpPerKill": 20,
+    "locations": [
+      {
+        "name": "Edgeville Dungeon (Wilderness)",
+        "displayName": "Edgeville Dungeon – Wilderness section (level 1-5)",
+        "rank": 1,
+        "multi": "unknown",
+        "cannon": true,
+        "wilderness": true,
+        "wildernessLevelMin": 1,
+        "wildernessLevelMax": 5,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "11 spawns in the members-only northern half of the dungeon, next to the Obelisk of Earth. Reach it via Paddewwa Teleport or by walking north from the Edgeville entrance.",
+        "evidence": {
+          "multi": "not stated (Edgeville Dungeon page and Multicombat area list say nothing about the dungeon)",
+          "cannon": "'The Dwarf Multicannon can be used here.' (Edgeville Dungeon)",
+          "requirements": "'Only kills within the Wilderness count towards her tasks.' (Krystilia); Wilderness page table: 'Northern Edgeville Dungeon | 1 - 5 | Monsters include Black demons, Earth warriors, and Chaos druids.'"
+        }
+      },
+      {
+        "name": "Chaos Temple (Wilderness)",
+        "displayName": "Chaos Temple – eastern Wilderness (Elder Chaos druids, level 11-13)",
+        "rank": 2,
+        "multi": "unknown",
+        "cannon": "unknown",
+        "wilderness": true,
+        "wildernessLevelMin": 11,
+        "wildernessLevelMax": 13,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "13 level 129 Elder Chaos druids around the altar, never tolerant, able to teleblock and pull you within melee range from 20 tiles unless you have read a teleport anchoring scroll. Burning amulet teleports to the north entrance in level 15 Wilderness; the altar restores prayer for Protect from Magic.",
+        "evidence": {
+          "multi": "Sources conflict: Multicombat area list names 'The Chaos Temple in the western Wilderness (not the Chaos Temple in the eastern Wilderness)', while the Chaos Temple (Wilderness) page says 'The area is also multi-combat, and contains many elder chaos druids'. Downgraded to unknown.",
+          "cannon": "not stated",
+          "requirements": "'Elder Chaos druids are high-level mages found at the Chaos Temple in the Wilderness.' (Elder Chaos druid); Krystilia task table lists Chaos druids at 'Edgeville Dungeon, Chaos Temple (Elder Chaos druids)' with Wilderness levels '1-5, 11-12'; Chaos Temple (Wilderness) page: 'located around level 11 Wilderness'; Wilderness page table lists Chaos Temple at level 13"
+        }
+      }
+    ],
+    "notes": "Only Krystilia assigns chaos druids (50-90) and only Wilderness kills count ('Only kills within the Wilderness count towards her tasks.' - Krystilia), so the Taverley Dungeon, Chaos Druid Tower (46 Thieving), Slepe church and Yanille Agility Dungeon druids on the monster page will not progress the task. No Slayer task/Chaos druids page exists. Elder Chaos druids give 150 Slayer XP. Multicombat status of the eastern Chaos Temple is contradicted between the Multicombat area list and the temple's own page, so it is recorded as unknown.",
+    "_verification": {
+      "corrections": [
+        "Summary: removed the warning about player killers disguised in Zamorak robes (summaries must not warn about other players)",
+        "Edgeville Dungeon notes: removed the PKer warning sentence",
+        "Chaos Temple multi: false -> unknown (Multicombat area list and Chaos Temple (Wilderness) page contradict each other)",
+        "Chaos Temple wilderness level evidence expanded: Krystilia 11-12, temple page 'around level 11', Wilderness page 13; range 11-13 kept"
+      ],
+      "confirmed": 15,
+      "downgraded": 1
+    }
+  },
+  {
+    "task": "The Chaos Elemental",
+    "wikiTaskPage": "Chaos Elemental",
+    "monsterPages": [
+      "Chaos Elemental"
+    ],
+    "bossTask": true,
+    "summary": "The Chaos Elemental is a level 305 boss wandering the multicombat Wilderness just west of the Rogues' Castle at about level 52-54, reachable from the deep Wilderness levers in Ardougne or Edgeville or a Wilderness obelisk, with no Slayer requirement.",
+    "recommendedStyle": "Any",
+    "styleNotes": "Attacks with Magic, Ranged and Melee; 50% elemental weakness to air spells; immune to venom (venom weapons poison instead); not immune to cannon or thralls.",
+    "requiredItems": [],
+    "usefulItems": [],
+    "superior": null,
+    "alternatives": [],
+    "xpPerKill": 268.75,
+    "locations": [
+      {
+        "name": "West of the Rogues' Castle",
+        "displayName": "Wilderness – west of the Rogues' Castle (level 52-54, multi)",
+        "rank": 1,
+        "multi": true,
+        "cannon": true,
+        "wilderness": true,
+        "wildernessLevelMin": 52,
+        "wildernessLevelMax": 54,
+        "konarAssignable": true,
+        "requirements": [],
+        "notes": "Deep multicombat Wilderness; bring only what you can afford to lose. Access via the deep Wilderness teleport lever in Ardougne or Edgeville, or a Wilderness obelisk (selectable after the hard Wilderness Diary).",
+        "evidence": {
+          "multi": "'As this boss is located deep within the Wilderness, and wanders around in a multi-combat zone, beware of player-killers!' (Chaos Elemental); Multicombat area list: 'Rogues' Castle'",
+          "cannon": "'Outside of Slayer, using the cannon can speed up kills on lizardman shamans and Wilderness bosses.' (Dwarf multicannon); not on the prohibited list",
+          "requirements": "Boss slayer requirements table: 'Chaos Elemental | Wilderness | Slayer 1' (Boss / Boss task page); Krystilia boss table: 'Chaos Elemental: West of the Rogues' Castle' Wilderness level '52-54'"
+        }
+      }
+    ],
+    "notes": "Boss task: assigned by Krystilia, Konar, Nieve/Steve and Duradel/Kuradal after unlocking Like a boss (200 points). Boss tasks award a bonus 5,000 Slayer XP on completion. Killing it is a Hard Wilderness Diary task.",
+    "_verification": {
+      "corrections": [
+        "Location notes: dropped 'roamed by player killers' wording, kept the wiki-supported multicombat/deep Wilderness caution"
+      ],
+      "confirmed": 15,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "The Chaos Fanatic",
+    "wikiTaskPage": "Chaos Fanatic",
+    "monsterPages": [
+      "Chaos Fanatic"
+    ],
+    "bossTask": true,
+    "summary": "The Chaos Fanatic is a level 202 boss standing in single-way combat west of the Lava Maze in level 42 Wilderness, reached fastest by Ghorrock Teleport or a burning amulet to the Lava Maze, with no Slayer requirement.",
+    "recommendedStyle": "Ranged",
+    "styleNotes": "Weakest to Ranged attacks, particularly standard ranged weapons; attacks with Magic; not immune to cannon or thralls.",
+    "requiredItems": [],
+    "usefulItems": [
+      "Ghorrock teleport (tablet)",
+      "Burning amulet"
+    ],
+    "superior": null,
+    "alternatives": [],
+    "xpPerKill": 253,
+    "locations": [
+      {
+        "name": "West of the Lava Maze",
+        "displayName": "Wilderness – west of the Lava Maze (level 40-42, single-way)",
+        "rank": 1,
+        "multi": false,
+        "cannon": true,
+        "wilderness": true,
+        "wildernessLevelMin": 40,
+        "wildernessLevelMax": 42,
+        "konarAssignable": true,
+        "requirements": [],
+        "notes": "Single-way combat, so you cannot be attacked by players while actively fighting the boss. Ghorrock Teleport or tablet is fastest; a burning amulet teleports to the Lava Maze entrance, then run west; a POH obelisk level 44 teleport also works after the hard Wilderness Diary.",
+        "evidence": {
+          "multi": "'The Chaos Fanatic is located in single-way combat, meaning the player will be safe from player killers while in active combat with the boss.' (Chaos Fanatic)",
+          "cannon": "'Outside of Slayer, using the cannon can speed up kills on lizardman shamans and Wilderness bosses.' (Dwarf multicannon); not on the prohibited list",
+          "requirements": "Boss slayer requirements table: 'Chaos Fanatic | Wilderness | Slayer 1' (Boss / Boss task page); 'resides west of the Lava Maze in level 42 Wilderness' (Chaos Fanatic); Krystilia boss table Wilderness level '40-42'"
+        }
+      }
+    ],
+    "notes": "Boss task: assigned by Krystilia, Konar, Nieve/Steve and Duradel/Kuradal after unlocking Like a boss (200 points). Boss tasks award a bonus 5,000 Slayer XP on completion. Drops one of the three shards for the malediction and odium wards.",
+    "_verification": {
+      "corrections": [
+        "styleNotes: removed the '(Protect from Magic negates the main attack)' fight-mechanic clause from a boss task"
+      ],
+      "confirmed": 15,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Cockatrice",
+    "wikiTaskPage": "Cockatrice",
+    "monsterPages": [
+      "Cockatrice",
+      "Moonlight Cockatrice",
+      "Cockathrice"
+    ],
+    "bossTask": false,
+    "summary": "Cockatrice need 25 Slayer and a mirror shield or V's shield, otherwise their gaze drains your combat stats every hit even from a safespot; with the shield equipped they are a pushover and need few supplies. The standard task spot is the third chamber of the Fremennik Slayer Dungeon (fairy ring AJR), which is single-file and cannot be cannoned. Players who want to cannon can kill Moonlight Cockatrice in Neypotzli instead, which requires partial completion of Perilous Moons.",
+    "recommendedStyle": "Any",
+    "styleNotes": "No listed elemental weakness; not immune to cannon or thralls; gaze reduces combat stats unless a mirror shield or V's shield is equipped (20 Defence to wield).",
+    "requiredItems": [
+      "Mirror shield or V's shield"
+    ],
+    "usefulItems": [
+      "Dwarf multicannon (Neypotzli only)"
+    ],
+    "superior": "Cockathrice",
+    "alternatives": [
+      "Moonlight Cockatrice"
+    ],
+    "xpPerKill": 37,
+    "locations": [
+      {
+        "name": "Fremennik Slayer Cave",
+        "displayName": "Fremennik Slayer Dungeon – third chamber",
+        "rank": 1,
+        "multi": "unknown",
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "25 Slayer",
+          "Mirror shield or V's shield (20 Defence)"
+        ],
+        "notes": "Seven cockatrice in the third chamber; not aggressive. Fairy ring AJR is just outside. They commonly drop medium clue scrolls.",
+        "evidence": {
+          "multi": "not stated (Fremennik Slayer Dungeon page and Multicombat area list say nothing)",
+          "cannon": "'A dwarf multicannon cannot be set up in the Fremmenik Slayer Caves.' (Cockatrice); 'Players cannot set up a dwarf multicannon within the caves.' (Fremennik Slayer Dungeon); Dwarf multicannon prohibited list",
+          "requirements": "'The third chamber contains seven cockatrice. They require level 25 Slayer and a mirror shield - without one, the player's stats (including life points) will be dangerously reduced.' (Fremennik Slayer Dungeon); 'As 20 Defence is needed to be able to wield a mirror shield, players who do not meet this requirement will not be assigned them as a task.' (Cockatrice)"
+        }
+      },
+      {
+        "name": "Neypotzli - Earthbound Cavern",
+        "displayName": "Neypotzli – Earthbound Cavern (Moonlight Cockatrice, cannonable)",
+        "rank": 2,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "48 Slayer for partial completion of Perilous Moons (access to Neypotzli)",
+          "Mirror shield or V's shield"
+        ],
+        "notes": "Moonlight Cockatrice give 52 Slayer XP and share the Cockathrice superior. With only partial Perilous Moons completion they do not respawn until you leave and re-enter the room, and you must pick up your cannon before leaving or it degrades. Reach Neypotzli via Cam Torum.",
+        "evidence": {
+          "multi": "'The area is not multi combat, but a dwarven cannon can be set up for Slayer tasks within the caverns.' (Neypotzli)",
+          "cannon": "'The area is not multi combat, but a dwarven cannon can be set up for Slayer tasks within the caverns.' (Neypotzli)",
+          "requirements": "'found in the Earthbound Cavern within Neypotzli which requires level 48 Slayer for partial completion of Perilous Moons to enter' (Moonlight Cockatrice)"
+        }
+      }
+    ],
+    "notes": "No Slayer task/Cockatrice page exists; data from the Cockatrice monster page and the Slayer task list row. Assigned by Mazchna, Vannaka and Mortimer at 25+ combat and 20+ Defence; Chaeldar (2024) and Duradel (2015) no longer assign them. Not assignable by Konar.",
+    "_verification": {
+      "corrections": [],
+      "confirmed": 19,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Cows",
+    "wikiTaskPage": "Cow",
+    "monsterPages": [
+      "Cow",
+      "Cow calf",
+      "Undead cow"
+    ],
+    "bossTask": false,
+    "summary": "A level 2 beginner task from Turael and Spria that any combat style finishes quickly; cows hit a maximum of 1 and are not aggressive. The task list points to the pasture south of Falador and the field north of the Al Kharid gate east of Lumbridge, though cows are found in many farms and cow calves and undead cows also count. Cowhides can be kept for Crafting or sold.",
+    "recommendedStyle": "Any",
+    "styleNotes": "No weaknesses listed; immune to poison and venom (100% resistance); not immune to cannon or thralls; max hit 1.",
+    "requiredItems": [],
+    "usefulItems": [],
+    "superior": null,
+    "alternatives": [
+      "Cow calf",
+      "Undead cow",
+      "Buffalo",
+      "Brutus"
+    ],
+    "xpPerKill": 8,
+    "locations": [
+      {
+        "name": "South Falador Farm",
+        "displayName": "South Falador Farm cow pasture",
+        "rank": 1,
+        "multi": "unknown",
+        "cannon": "unknown",
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "Large pasture of cows just south of Falador; the Slayer task list names 'South of Falador' first. Cabbages spawn in the patch nearby for food.",
+        "evidence": {
+          "multi": "not stated (the Multicombat area list names 'Most sections of Falador' but not the farm south of the city)",
+          "cannon": "not stated",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Lumbridge East farm",
+        "displayName": "Lumbridge east cow field (north of the Al Kharid gate)",
+        "rank": 2,
+        "multi": "unknown",
+        "cannon": "unknown",
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "Named in the Slayer task list as 'North of Al Kharid gate'. Often crowded with new players; the spot north of the windmill north-west of Lumbridge is usually emptier.",
+        "evidence": {
+          "multi": "not stated",
+          "cannon": "not stated",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "North of Hosidius Town Square",
+        "displayName": "Hosidius cow pen (multicombat)",
+        "rank": 3,
+        "multi": true,
+        "cannon": "unknown",
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "Small farm north of Hosidius with 5 cows, 3 cow calves, a dairy cow and a Master Farmer.",
+        "evidence": {
+          "multi": "Multicombat area list: 'Hosidius cow pen'",
+          "cannon": "not stated",
+          "requirements": "not stated"
+        }
+      }
+    ],
+    "notes": "Slayer task/Cows redirects to the Cow monster page. Assigned only by Turael and Spria. Not assignable by Konar. The Cow page lists many more fields (Ardougne Farm, Champions' Guild, Sinclair Mansion, Gwenith, Crafting Guild, Zanaris, Isle of Souls, Kebos Lowlands farms); no multi or cannon statement was found for any of them.",
+    "_verification": {
+      "corrections": [],
+      "confirmed": 14,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Crabs",
+    "wikiTaskPage": "Slayer task/Crabs",
+    "monsterPages": [
+      "Crab",
+      "Rock Crab",
+      "Sand Crab",
+      "Ammonite Crab",
+      "Swamp Crab",
+      "King Sand Crab",
+      "Frost Crab"
+    ],
+    "bossTask": false,
+    "summary": "Crabs have no requirements and are the classic AFK training monsters: they sit disguised as rocks, emerge and attack when you stand beside them, and the common training crabs hit only 1 with crush, so no special gear is needed beyond crush-heavy armour at low levels. They go tolerant after 10 minutes, so you must walk away and come back to reset aggression. Sand crabs on the Hosidius coast and ammonite crabs on Fossil Island are the usual choices, but they cannot be targeted by a cannon; rock crabs north of Rellekka can be cannoned in multicombat. King Sand Crabs give the most Slayer XP but fight back, and Gemstone and hermit crabs do not count.",
+    "recommendedStyle": "Any",
+    "styleNotes": "All crabs attack with crush and are 15-35% weak to earth spells; sand, ammonite and frost crabs are immune to cannon; swamp crabs resist melee and magic but have negative ranged defence; Frost Crabs are 100% weak to fire spells.",
+    "requiredItems": [],
+    "usefulItems": [
+      "Food or armour with high crush defence at low combat levels",
+      "Dwarf multicannon (rock crabs and king sand crabs only)",
+      "Ring of wealth (auto-collects numulite from ammonite crabs)"
+    ],
+    "superior": null,
+    "alternatives": [
+      "Rock Crab",
+      "Sand Crab",
+      "Ammonite Crab",
+      "Swamp Crab",
+      "King Sand Crab",
+      "Giant Rock Crab",
+      "Frost Crab",
+      "Crab"
+    ],
+    "xpPerKill": null,
+    "locations": [
+      {
+        "name": "Hosidius - southern coast",
+        "displayName": "Hosidius southern coast (Sand Crabs)",
+        "rank": 1,
+        "multi": "unknown",
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "Sand crabs give 60 Slayer XP. There is a bank chest in the centre of the beach and a nearby altar. Reach it from a Hosidius house portal, the Tithe Farm minigame teleport, the Lovakengj minecart 'Hosidius South' stop, or fairy ring AKR. Often crowded; the Avium Savannah coast in Varlamore is a quieter alternative.",
+        "evidence": {
+          "multi": "not stated (the Sand Crab page only notes that the Outer Fortis area is single-way)",
+          "cannon": "'The dwarf multicannon cannot be used against them.' (Sand Crab); Dwarf multicannon page: 'Sand crabs and Ammonite crabs will not be targeted at all, as it would disrupt other players training.'",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "North of Rellekka",
+        "displayName": "North of Rellekka (Rock Crabs, cannonable multicombat)",
+        "rank": 2,
+        "multi": true,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "Rock crabs give 50 Slayer XP and are not shown as yellow dots on the minimap. Reset aggression by walking halfway back to the Rellekka entrance or by entering and leaving the Keldagrim tunnel.",
+        "evidence": {
+          "multi": "'Rock Crabs are a very common cannon target, due to their low attack and the multicombat areas they inhabit.' (Dwarf multicannon); Multicombat area list: 'The northern coast of the Fremennik Province'",
+          "cannon": "'Rock Crabs are a very common cannon target, due to their low attack and the multicombat areas they inhabit.' (Dwarf multicannon)",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Mushroom Forest",
+        "displayName": "Fossil Island coasts (Ammonite Crabs)",
+        "rank": 3,
+        "multi": "unknown",
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Bone Voyage"
+        ],
+        "notes": "Ammonite crabs give 100 Slayer XP and have 100 hitpoints and level 1 in every other stat. Found in the Mushroom Forest, around the Fossil Island Volcano and in the northern Wyvern Cave.",
+        "evidence": {
+          "multi": "not stated",
+          "cannon": "Ammonite Crab infobox immunecannon = Yes; Dwarf multicannon page: 'Sand crabs and Ammonite crabs will not be targeted at all, as it would disrupt other players training.'",
+          "requirements": "Task page Monster Variants row 'Ammonite Crab | Fossil Island | Requires completion of Bone Voyage' (Slayer task/Crabs)"
+        }
+      },
+      {
+        "name": "Crabclaw Isle",
+        "displayName": "Crabclaw Isle (Sand Crabs, paid entry)",
+        "rank": 4,
+        "multi": "unknown",
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "10,000 coins to Sandicrahb (half price with easy Kourend & Kebos Diary, free with medium)"
+        ],
+        "notes": "40 sand crabs on a small island south of the Hosidius coast, with several spots where three or four crabs surround one tile. Spots may be occupied.",
+        "evidence": {
+          "multi": "not stated",
+          "cannon": "'The dwarf multicannon cannot be used against them.' (Sand Crab)",
+          "requirements": "'Players can reach the island by paying Sandicrahb 10,000 coins. Completing the easy Kourend & Kebos Diary will allow players to access it for half the price. Completing the medium Kourend & Kebos Diary will allow players to access the island for free.' (Crabclaw Isle)"
+        }
+      },
+      {
+        "name": "Haunted Woods",
+        "displayName": "South of Port Phasmatys / Slepe path (Swamp Crabs, multicombat)",
+        "rank": 5,
+        "multi": true,
+        "cannon": "unknown",
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "Swamp crabs give 75 Slayer XP, have a 1-square aggression range and resist melee and magic, so use Ranged. Lower-level players should stay near Port Phasmatys because the path through the Haunted Woods has feral vampyres and leeches.",
+        "evidence": {
+          "multi": "'They can be found in multi-combat areas directly south of Port Phasmatys and along the path leading from Port Phasmatys to Slepe.' (Swamp Crab)",
+          "cannon": "not stated (Swamp Crab infobox immunecannon = No, but no statement about placing a cannon in the Haunted Woods)",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Catacombs of Kourend",
+        "displayName": "Catacombs of Kourend (King Sand Crabs, most Slayer XP)",
+        "rank": 6,
+        "multi": true,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "King Sand Crabs (level 107) give 200 Slayer XP and can drop ancient shards, dark totem pieces and medium clues, but unlike other crabs they have real offensive and defensive stats. Also found in the Crabclaw Caves.",
+        "evidence": {
+          "multi": "'As this particular dungeon is a multicombat area (excluding the brutal dragon area)' (Catacombs of Kourend)",
+          "cannon": "'dwarf multicannons cannot be placed inside the Catacombs' (Catacombs of Kourend); Dwarf multicannon prohibited list: Catacombs of Kourend",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Waterbirth Island",
+        "displayName": "Waterbirth Island surface (Rock Crabs)",
+        "rank": 7,
+        "multi": "unknown",
+        "cannon": "unknown",
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Boat with Jarvald at Rellekka: 1,000 coins per trip unless The Fremennik Trials is complete"
+        ],
+        "notes": "Rock crabs are scattered across the island in their disguised rock form. Also reachable by Waterbirth Teleport (72 Magic, Lunar) or a house portal.",
+        "evidence": {
+          "multi": "not stated (the Multicombat area list names 'Waterbirth Island Dungeon' but not the island surface)",
+          "cannon": "not stated (Waterbirth Island page has no cannon statement; not on the prohibited list)",
+          "requirements": "'Speak to Jarvald at the Rellekka docks to travel to the island via boat (the player does not have to start or complete The Fremennik Trials; costs 1,000 coins each time if the quest is not complete)' (Waterbirth Island)"
+        }
+      },
+      {
+        "name": "West of Mount Quidamortem",
+        "displayName": "West of Mount Quidamortem (Rock Crabs)",
+        "rank": 8,
+        "multi": "unknown",
+        "cannon": "unknown",
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "28 rock crabs at the base of the mountain near the mountain troll settlements; aggressive lizardmen patrol the east side, so bring poison protection.",
+        "evidence": {
+          "multi": "not stated (the Mount Quidamortem page only calls the troll camp south of the peak multicombat)",
+          "cannon": "not stated",
+          "requirements": "'At the base of the mountain will be some mountain troll settlements and a large group of rock crabs.' and monster list 'Rock crab (x28)' (Mount Quidamortem)"
+        }
+      },
+      {
+        "name": "Isle of Souls",
+        "displayName": "Isle of Souls (Sand Crabs)",
+        "rank": 9,
+        "multi": "unknown",
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "Reach it through the Soul Wars portal near the Edgeville ruins, the portal in the Ferox Enclave Dungeon or the Soul Wars Minigame Teleport. The only bank is in the Soul Wars lobby.",
+        "evidence": {
+          "multi": "not stated",
+          "cannon": "Sand Crab infobox immunecannon = Yes; 'The dwarf multicannon cannot be used against them.' (Sand Crab)",
+          "requirements": "'The isle can be accessed through a few different means: Entering the Soul Wars Portal near the Edgeville ruins. Entering the Soul Wars Portal inside the Ferox Enclave Dungeon. Using the Soul Wars Minigame Teleport.' (Isle of Souls); Sand Crab LocLine 'Isle of Souls'"
+        }
+      },
+      {
+        "name": "Avium Savannah - southern coast",
+        "displayName": "Avium Savannah southern coast (Sand Crabs, quieter)",
+        "rank": 10,
+        "multi": "unknown",
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Children of the Sun (first travel to Civitas illa Fortis)"
+        ],
+        "notes": "From Civitas illa Fortis go south to the beach and west to the sand crabs. Faces much less competition than the Hosidius crabs.",
+        "evidence": {
+          "multi": "not stated",
+          "cannon": "Sand Crab infobox immunecannon = Yes; 'The dwarf multicannon cannot be used against them.' (Sand Crab)",
+          "requirements": "'The player must first travel to Civitas illa Fortis via Regulus Cento after completing Children of the Sun before other transportation methods become usable.' (Avium Savannah); 'A recommended alternative are the Sand Crabs on the Avium Savannah in Varlamore, which face much less competition compared to the Sand Crabs in Hosidius.' (Sand Crab)"
+        }
+      },
+      {
+        "name": "Crabclaw Caves",
+        "displayName": "Crabclaw Caves (Sand Crabs and King Sand Crabs)",
+        "rank": 11,
+        "multi": "unknown",
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Partial completion of The Depths of Despair"
+        ],
+        "notes": "South of the Woodcutting Guild. One spot has three sand crabs together and another has four; two smaller caves hold several king sand crabs. A cannon can be set up but only targets the king sand crabs.",
+        "evidence": {
+          "multi": "not stated",
+          "cannon": "'You are able to set up a dwarf multicannon inside the cave to kill a king sand crab for the easy Kourend & Kebos Diary. The dwarf multicannon will not target immune targets such as sand crabs or sand snakes, however.' (Crabclaw Caves)",
+          "requirements": "'Access to the caves requires partial completion of The Depths of Despair quest.' (Crabclaw Caves)"
+        }
+      },
+      {
+        "name": "Ruins of Tapoyauik",
+        "displayName": "Ruins of Tapoyauik middle and bottom floors (Frost Crabs)",
+        "rank": 12,
+        "multi": "unknown",
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "The Heart of Darkness (task page says partial completion; the Ruins of Tapoyauik page says the ruins are not accessible before completing the quest)"
+        ],
+        "notes": "Frost crabs give 60 Slayer XP and are 100% weak to fire spells. Cannon cannot be placed in the ruins and frost crabs are cannon-immune anyway.",
+        "evidence": {
+          "multi": "not stated",
+          "cannon": "Frost Crab infobox immunecannon = Yes; 'A Dwarven multicannon cannot be placed inside the ruins.' (Ruins of Tapoyauik)",
+          "requirements": "Task page Monster Variants row 'Frost Crab | Ruins of Tapoyauik | Requires partial completion of The Heart of Darkness' (Slayer task/Crabs); 'Prior to quest completion, they are not accessible.' (Ruins of Tapoyauik)"
+        }
+      }
+    ],
+    "notes": "Assigned by Mazchna (30-50), Vannaka (40-90) and Chaeldar (70-130) since 26 March 2025; not assignable by Konar. xpPerKill is null because it varies by variant: Crab 18-19, Rock Crab 50, Sand Crab 60, Frost Crab 60, Swamp Crab 75, Ammonite Crab 100, Giant Rock Crab 198, King Sand Crab 200. Gemstone Crabs and hermit crabs do not count. Mogre Camp crabs need partial Recipe for Disaster (Pirate Pete) and that camp cannot be cannoned; Giant Rock Crabs live in the Waterbirth Island Dungeon and Tonali Cavern. The Frost Crab quest requirement is recorded differently on the task page (partial) and the Ruins of Tapoyauik page (completed).",
+    "_verification": {
+      "corrections": [
+        "Added six wiki-listed locations that were missing (Waterbirth Island, West of Mount Quidamortem, Isle of Souls, Avium Savannah, Crabclaw Caves, Ruins of Tapoyauik) - the first four are named in the Slayer task list row itself",
+        "Mushroom Forest notes: removed the unsupported claim that ammonite crabs are 'spaced further apart with a wider aggression range'",
+        "styleNotes: earth weakness range corrected from 20-35% to 15-35% (King Sand Crab is 15%); frost crabs added to the cannon-immune list",
+        "Summary: 'hit only 1' narrowed to the common training crabs (Crab max hit 3, King Sand Crab 6, Giant Rock Crab 9)",
+        "usefulItems: cannon note now also covers king sand crabs (Crabclaw Caves page)"
+      ],
+      "confirmed": 24,
+      "downgraded": 1
+    }
+  }
+]

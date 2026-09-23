@@ -1,0 +1,976 @@
+[
+  {
+    "task": "Ice giants",
+    "wikiTaskPage": "Slayer task/Ice giants",
+    "monsterPages": [
+      "Ice giant",
+      "Eldric the Ice King"
+    ],
+    "bossTask": false,
+    "summary": "A low-tier melee-attacking giant task assigned only by Vannaka and Krystilia; the wiki says it is rarely done outside Wilderness Slayer because the drops are poor and most spawns are far from a bank. Ice giants have a 100% weakness to fire spells and no special protection is needed. The recommended spot is the Wilderness Slayer Cave, where a cluster of 14 stronger level 67 giants sits in a multicombat, cannonable area below level 20 Wilderness with the cave's improved drop table. Outside the Wilderness the western Asgarnian Ice Dungeon giants are multicombat and cannonable with no other monsters to interrupt.",
+    "recommendedStyle": "Any",
+    "styleNotes": "100% elemental weakness to fire spells (Ice giant infobox 'elementalweaknesstype = Fire, elementalweaknesspercent = 100'); not poisonous, not immune to cannon or poison; the Wilderness Slayer Cave variant is a stronger level 67.",
+    "requiredItems": [],
+    "usefulItems": [
+      "Dwarf multicannon (Wilderness Slayer Cave or Asgarnian Ice Dungeon)",
+      "Fire spells",
+      "Ranged weapon for safespotting",
+      "Pickaxe (50 Mining) for the White Wolf Mountain top / Ice Queen's Lair giants",
+      "One-click teleport if in the Wilderness"
+    ],
+    "superior": null,
+    "alternatives": [
+      "Eldric the Ice King (Royal Titans; only when assigned by Vannaka)"
+    ],
+    "xpPerKill": 70,
+    "locations": [
+      {
+        "name": "Wilderness Slayer Cave",
+        "displayName": "Wilderness Slayer Cave (level 67 giants, Wilderness)",
+        "rank": 1,
+        "multi": true,
+        "cannon": true,
+        "wilderness": true,
+        "wildernessLevelMin": 17,
+        "wildernessLevelMax": 32,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "14 stronger level 67 ice giants (100 Slayer XP each) 'found below level 20 Wilderness'; entrances at level 18 (west of Larran's small chest) and level 29 (south-west of the Silk Chasm); popular PK spot, do not bring items you are unwilling to lose.",
+        "evidence": {
+          "multi": "Slayer task/Ice giants location comparison row 'Wilderness Slayer Cave' -> Multicombat: Yes; note 'Entirely multicombat area.' Also Wilderness Slayer Cave page: 'The cave is the only multi-combat spot where the cannon can be used for some monsters.'",
+          "cannon": "Slayer task/Ice giants location comparison row 'Wilderness Slayer Cave' -> Cannonable: Yes; Wilderness Slayer Cave page: 'it's possible to use the Dwarf multicannon inside the dungeon.'",
+          "requirements": "not stated (Wilderness Slayer Cave page: only abyssal demons, nechryaels, dust devils and jellies are task-only)"
+        }
+      },
+      {
+        "name": "Asgarnian Ice Dungeon",
+        "displayName": "Asgarnian Ice Dungeon (west room multi, east room single)",
+        "rank": 2,
+        "multi": "partial",
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "9 giants; the western group is multicombat with nothing else nearby, the eastern group is single-way next to ice warriors that are aggressive below 104 combat. Safespot in the western part. Trapdoor south of Port Sarim, fairy ring AIQ.",
+        "evidence": {
+          "multi": "Slayer task/Ice giants location comparison row 'Asgarnian Ice Dungeon' -> Multicombat: Varies; 'Ice giants to the east are in a single-way combat zone... Ice giants to the west are in a multicombat area, with no other monsters nearby to interrupt training.' Asgarnian Ice Dungeon page: 'The western area of the dungeon... contains six ice giants... This area is a multicombat area.'",
+          "cannon": "Slayer task/Ice giants location comparison row 'Asgarnian Ice Dungeon' -> Cannonable: Yes",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Settlement Ruins",
+        "displayName": "Settlement Ruins (Kourend, far from bank)",
+        "rank": 3,
+        "multi": true,
+        "cannon": "unknown",
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "5 giants; many safespots behind destroyed buildings and ice chunks; nearby ice warriors and ice spiders are aggressive to players below 123 combat; very far from a bank.",
+        "evidence": {
+          "multi": "Slayer task/Ice giants: 'A cannon can be used at this location and it is multi-combat.' and location comparison row 'Settlement Ruins' -> Multicombat: Yes",
+          "cannon": "CONFLICT on Slayer task/Ice giants: prose says 'A cannon can be used at this location and it is multi-combat.' but the location comparison row 'Settlement Ruins' -> Cannonable: No",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Frozen Waste Plateau (Wilderness)",
+        "displayName": "Frozen Waste Plateau (deep Wilderness)",
+        "rank": 4,
+        "multi": false,
+        "cannon": true,
+        "wilderness": true,
+        "wildernessLevelMin": 43,
+        "wildernessLevelMax": 56,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "9 normal giants split between a free-to-play area (5) and a members area (4); 'escape is next to impossible if caught by a player killer'. Reach via Ghorrock Teleport (96 Magic, Ancients) or Ice Plateau Teleport (89 Magic, Lunars).",
+        "evidence": {
+          "multi": "Slayer task/Ice giants location comparison row 'Frozen Waste Plateau' -> Multicombat: No",
+          "cannon": "Slayer task/Ice giants location comparison row 'Frozen Waste Plateau' -> Cannonable: Yes",
+          "requirements": "not stated; Wilderness page notable-locations table: 'Frozen Waste Plateau | 43 - 56 | North-western most part of the Wilderness'"
+        }
+      },
+      {
+        "name": "White Wolf Mountain On top",
+        "displayName": "White Wolf Mountain (top; needs 50 Mining)",
+        "rank": 5,
+        "multi": true,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Pickaxe and 50 Mining",
+          "Partial completion of Heroes' Quest"
+        ],
+        "notes": "4 giants; mine the boulder west of the ice warriors and climb the ladders; the first two can be safespotted by the trees, or range them from the mountain path (wolves may attack low levels). Very far from a bank.",
+        "evidence": {
+          "multi": "Multicombat area list entry '*[[White Wolf Mountain]]' (Multicombat area); the White Wolf Mountain page itself is silent. The dedicated list overrides the Slayer task/Ice giants location comparison row 'White Wolf Mountain' -> Multicombat: No. Changed False -> True in the consolidation pass (2026-09-23).",
+          "cannon": "Slayer task/Ice giants location comparison row 'White Wolf Mountain' -> Cannonable: Yes",
+          "requirements": "Ice giant LocLine refn: 'Requires a pickaxe and 50 Mining to access.'; Slayer task/Ice giants: 'Requires partial completion of Heroes' Quest to access.'"
+        }
+      },
+      {
+        "name": "Ice Queen's Lair",
+        "displayName": "Ice Queen's Lair (under White Wolf Mountain)",
+        "rank": 6,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Pickaxe and 50 Mining",
+          "Partial completion of Heroes' Quest"
+        ],
+        "notes": "7 giants; safespottable; very far from a bank.",
+        "evidence": {
+          "multi": "Slayer task/Ice giants location comparison row 'Ice Queen's Lair' -> Multicombat: No",
+          "cannon": "Slayer task/Ice giants location comparison row 'Ice Queen's Lair' -> Cannonable: Yes",
+          "requirements": "Slayer task/Ice giants: 'Requires partial completion of Heroes' Quest to access.'; Ice giant LocLine NamedRef 'pick': 'Requires a pickaxe and 50 Mining to access.'"
+        }
+      },
+      {
+        "name": "Ruins of Tapoyauik",
+        "displayName": "Ruins of Tapoyauik (Varlamore, post-quest)",
+        "rank": 7,
+        "multi": false,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "The Heart of Darkness"
+        ],
+        "notes": "14 giants; safespottable; reached via the Tower of Ascension lift after the quest.",
+        "evidence": {
+          "multi": "Slayer task/Ice giants location comparison row 'Ruins of Tapoyauik' -> Multicombat: No",
+          "cannon": "Dwarf multicannon prohibited list: 'Ruins of Tapoyauik (including Doom of Mokhaiotl) - An ancient magical force won't let you set up a cannon here.'",
+          "requirements": "Slayer task/Ice giants: 'Requires completion of The Heart of Darkness to access.'"
+        }
+      }
+    ],
+    "notes": "Assigned only by Vannaka (30-80) and Krystilia (100-150); not assignable by Konar. Level 67 Wilderness Slayer Cave giants give 100 XP instead of 70. Eldric the Ice King (735 XP) counts only when assigned by Vannaka; the task buffs do not apply to Branda the Fire Queen.",
+    "_verification": {
+      "corrections": [
+        "Summary: removed the PK-risk warning clause (rule: summaries carry no warnings about other players); the wiki sentence stays in the Wilderness Slayer Cave location notes.",
+        "All 7 Ice giant LocLines (Frozen Waste Plateau, Settlement Ruins, White Wolf Mountain On top, Asgarnian Ice Dungeon, Ice Queen's Lair, Wilderness Slayer Cave, Ruins of Tapoyauik) are present; every Multicombat/Cannonable value re-checked against the Slayer task/Ice giants location table; Settlement Ruins cannon left 'unknown' because the page conflicts with itself (prose 'A cannon can be used at this location' vs table Cannonable No).",
+        "Confirmed slayxp 70 (level 53) / 100 (level 67) and Eldric the Ice King slayxp 735, assignedby vannaka; Frozen Waste Plateau 43-56 confirmed on the Wilderness page table."
+      ],
+      "confirmed": 26,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Ice warriors",
+    "wikiTaskPage": "Ice warrior (no 'Slayer task/Ice warriors' page exists)",
+    "monsterPages": [
+      "Ice warrior",
+      "Icelord"
+    ],
+    "bossTask": false,
+    "summary": "Low-level ice elementals assigned by Mazchna, Vannaka and Krystilia. They are aggressive, accurate slashers that cut through ranged and magic armour, so melee in adamant or rune with decent food is advised; fire spells are extremely strong against them and the wiki says your best fire spell is most likely the fastest way through the task. The closest spot is the Asgarnian Ice Dungeon south of Port Sarim, where they can be safespotted behind a plus-shaped rock formation; the Frozen Waste Plateau is the Wilderness option.",
+    "recommendedStyle": "Magic",
+    "styleNotes": "100% elemental weakness to fire spells ('Fire spells are extremely strong against ice warriors'); attack with slash; not poisonous; not immune to cannon.",
+    "requiredItems": [],
+    "usefulItems": [
+      "Fire spells (e.g. Fire Bolt with chaos gauntlets)",
+      "Adamant or rune armour and good food if meleeing",
+      "Pickaxe (50 Mining) for the Ice Queen's Lair route"
+    ],
+    "superior": null,
+    "alternatives": [
+      "Icelord (Iceberg)",
+      "Kamil (Desert Treasure I)"
+    ],
+    "xpPerKill": 59,
+    "locations": [
+      {
+        "name": "Asgarnian Ice Dungeon",
+        "displayName": "Asgarnian Ice Dungeon (east room)",
+        "rank": 1,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "11 warriors in the eastern area; safespot by trapping one on a plus-shaped rock formation in the north-west of their room (stand in the north-west corner). Every monster in the dungeon is aggressive. Trapdoor south of Port Sarim, fairy ring AIQ.",
+        "evidence": {
+          "multi": "Slayer task/Ice giants (same dungeon): 'Ice giants to the east are in a single-way combat zone. Players can be interrupted by nearby ice warriors if below 104 combat.'; Asgarnian Ice Dungeon page places the warriors 'in the eastern area'",
+          "cannon": "Slayer task/Ice giants location comparison row 'Asgarnian Ice Dungeon' -> Cannonable: Yes",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Southern Frozen Waste Plateau",
+        "displayName": "Frozen Waste Plateau (Wilderness; F2P south, members north)",
+        "rank": 2,
+        "multi": false,
+        "cannon": true,
+        "wilderness": true,
+        "wildernessLevelMin": 43,
+        "wildernessLevelMax": 56,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "Warriors on both the free-to-play southern part and the members northern part of the plateau; deep Wilderness with no easy escape. Ghorrock Teleport (96 Magic) or Ice Plateau Teleport (89 Magic) reach it.",
+        "evidence": {
+          "multi": "Slayer task/Ice giants location comparison row 'Frozen Waste Plateau' -> Multicombat: No (same plateau; the Frozen Waste Plateau page itself is silent)",
+          "cannon": "Slayer task/Ice giants location comparison row 'Frozen Waste Plateau' -> Cannonable: Yes",
+          "requirements": "not stated; Wilderness page notable-locations table: 'Frozen Waste Plateau | 43 - 56 | North-western most part of the Wilderness'"
+        }
+      },
+      {
+        "name": "White Wolf Mountain",
+        "displayName": "White Wolf Mountain (mountain path)",
+        "rank": 3,
+        "multi": "unknown",
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "Safespot south of the middle dungeon marker outside the triple-ladder enclosure; level 25 and 38 wolves are aggressive unless your combat level exceeds double theirs.",
+        "evidence": {
+          "multi": "CONFLICT: Multicombat area page lists 'White Wolf Mountain' as multicombat, but Slayer task/Ice giants location comparison row 'White Wolf Mountain' -> Multicombat: No; neither speaks about the warriors' spot specifically",
+          "cannon": "Slayer task/Ice giants location comparison row 'White Wolf Mountain' -> Cannonable: Yes",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Ice Queen's Lair",
+        "displayName": "Ice Queen's Lair (under White Wolf Mountain)",
+        "rank": 4,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Pickaxe and 50 Mining",
+          "Partial completion of Heroes' Quest"
+        ],
+        "notes": "Very far from a bank.",
+        "evidence": {
+          "multi": "Slayer task/Ice giants location comparison row 'Ice Queen's Lair' -> Multicombat: No",
+          "cannon": "Slayer task/Ice giants location comparison row 'Ice Queen's Lair' -> Cannonable: Yes",
+          "requirements": "Slayer task/Ice giants: 'Requires partial completion of Heroes' Quest to access.'; Ice giant LocLine NamedRef 'pick': 'Requires a pickaxe and 50 Mining to access.'"
+        }
+      },
+      {
+        "name": "Ruins of Tapoyauik - middle level",
+        "displayName": "Ruins of Tapoyauik (middle and lower levels)",
+        "rank": 5,
+        "multi": false,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "The Heart of Darkness"
+        ],
+        "notes": "Warriors on both the middle and lower levels; all monsters in the ruins are susceptible to fire spells.",
+        "evidence": {
+          "multi": "Slayer task/Ice giants location comparison row 'Ruins of Tapoyauik' -> Multicombat: No; Slayer task/Jellies: chilled jellies in the ruins 'are in a single combat area'",
+          "cannon": "Ruins of Tapoyauik page: 'A Dwarven multicannon cannot be placed inside the ruins.'; Dwarf multicannon prohibited list",
+          "requirements": "Ruins of Tapoyauik page: 'Prior to quest completion, they are not accessible.' (The Heart of Darkness)"
+        }
+      }
+    ],
+    "notes": "Slayer task list row: locations White Wolf Mountain, Frozen Waste Plateau, Asgarnian Ice Caves; masters Krystilia, Mazchna, Vannaka; 45 combat. Not assignable by Konar. Icelord: 'Icelords can be slain in place of ice warriors' (60 XP, Iceberg).",
+    "_verification": {
+      "corrections": [
+        "No data changes. Ice warrior LocLines are Southern/Northern Frozen Waste Plateau, Asgarnian Ice Dungeon (11 spawns), White Wolf Mountain, Ice Queen's Lair, Ruins of Tapoyauik middle/lower level; the two plateau halves and two ruin levels are merged into single entries, which is noted in their displayNames.",
+        "Confirmed slayxp 59, Fire weakness 100%, Icelord slayxp 60 ('Icelords can be slain in place of ice warriors'), Kamil ('Kamil is also considered an ice warrior in regards to Slayer tasks'), Slayer task row masters Krystilia/Mazchna/Vannaka at 45 combat.",
+        "Ice Queen's Lair requirement: the Ice Queen's Lair page itself only states 'requiring a pickaxe and level 50 Mining'; the 'partial Heroes' Quest' requirement comes from the Slayer task/Ice giants location table for the same dungeon and is retained on that basis."
+      ],
+      "confirmed": 20,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Infernal mages",
+    "wikiTaskPage": "Infernal Mage (no 'Slayer task/Infernal mages' page exists)",
+    "monsterPages": [
+      "Infernal Mage",
+      "Malevolent Mage"
+    ],
+    "bossTask": false,
+    "summary": "A 45 Slayer task assigned by Vannaka and Mortimer, done on the first floor of the Slayer Tower. Infernal mages are not aggressive and attack only with an accurate magic attack that Protect from Magic negates completely. Getting to them means running past aggressive banshees, so wear earmuffs or a Slayer helmet, or use the 18 Agility broken-window shortcut. They are mainly killed for fire rubies, death runes and rare dark mystic boots and hat.",
+    "recommendedStyle": "Any",
+    "styleNotes": "Attack only with Magic (Protect from Magic negates it); infobox shows +40 magic defence versus 0 stab/slash/crush/ranged defence bonuses and 60 Defence; not immune to poison or cannon; 'Immune to weak burns'.",
+    "requiredItems": [],
+    "usefulItems": [
+      "Earmuffs or Slayer helmet (banshees on the way up)",
+      "Protect from Magic",
+      "18 Agility for the broken window shortcut"
+    ],
+    "superior": "Malevolent Mage",
+    "alternatives": [],
+    "xpPerKill": 60,
+    "locations": [
+      {
+        "name": "Slayer Tower (1st floor)",
+        "displayName": "Slayer Tower – 1st floor, north-east wing",
+        "rank": 1,
+        "multi": false,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Priest in Peril"
+        ],
+        "notes": "15 spawns in the north-eastern part of the first floor; reach them via the south-east stairs past the banshees, or the 18 Agility broken-window shortcut. Morytania diary progress adds 2.5%-10% bonus Slayer XP on task in the tower.",
+        "evidence": {
+          "multi": "Single-way combat page: '(Chaotic) death spawns summoned by nechryael or nechryarch in the Slayer Tower are able to attack the player even though it is single-way combat.'",
+          "cannon": "Slayer Tower page: 'Dwarf multicannons cannot be used here. If attempted, players will receive the message, \"A strange magical force won't let you set up a cannon here.\"'; also on the Dwarf multicannon prohibited list",
+          "requirements": "Slayer task list row 'Infernal Mages': Requirements 'Priest in Peril', 'Combat 40'"
+        }
+      }
+    ],
+    "notes": "Slayer task list row: Slayer 45, Priest in Peril, 40 combat, masters Vannaka and Mortimer. Not assignable by Konar. Malevolent Mage superior gives 1,750 XP.",
+    "_verification": {
+      "corrections": [
+        "No data changes. Confirmed slaylvl 45, slayxp 60, aggressive No, attack style Magic, dmagic 40 vs 0 melee/ranged defence, 'Immune to weak burns', 15 spawn coordinates on Slayer Tower 1st floor, Malevolent Mage slayxp 1750, Slayer task row (Priest in Peril, Combat 40, Vannaka/Mortimer), Slayer Tower cannon message and Morytania diary bonus, Single-way combat page quote."
+      ],
+      "confirmed": 14,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "TzTok-Jad",
+    "wikiTaskPage": "TzTok-Jad (boss page; see also Slayer task/TzHaar)",
+    "monsterPages": [
+      "TzTok-Jad"
+    ],
+    "bossTask": true,
+    "summary": "TzTok-Jad is the boss of the TzHaar Fight Cave under the Karamja Volcano in Mor Ul Rek; after unlocking Hot Stuff, Chaeldar, Nieve or Duradel may offer 1-3 Jad kills in place of a TzHaar task, and leaving or dying in the cave ends the task without breaking your streak.",
+    "recommendedStyle": "Ranged",
+    "styleNotes": "The wiki recommends killing Jad with Ranged; 40% elemental weakness to water spells; immune to venom (poison only).",
+    "requiredItems": [],
+    "usefulItems": [
+      "Slayer helmet (i) or black mask (i) (bonus applies to the whole cave)"
+    ],
+    "superior": null,
+    "alternatives": [],
+    "xpPerKill": 25250,
+    "locations": [
+      {
+        "name": "Mor Ul Rek - Fight Caves",
+        "displayName": "TzHaar Fight Cave, Mor Ul Rek (instanced minigame)",
+        "rank": 1,
+        "multi": "unknown",
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Hot Stuff unlock (100 Slayer reward points) to be offered the task"
+        ],
+        "notes": "Solo minigame: TzTok-Jad 'is encountered on Wave 63 (the final wave)' of the TzHaar Fight Cave, which must be fought solo without restocking between waves. Mor Ul Rek lies underneath the Karamja Volcano.",
+        "evidence": {
+          "multi": "not stated for the Fight Cave itself (Multicombat area page lists 'Mor Ul Rek' and 'Fight Pits in Mor Ul Rek' but not the Fight Cave)",
+          "cannon": "Dwarf multicannon prohibited list: 'Mor Ul Rek, TzHaar Fight Cave and TzHaar Fight Pit - The TzHaar won't be happy if you set up a cannon here.'",
+          "requirements": "TzTok-Jad page: 'Players can pay 100 slayer reward points to have Duradel, Nieve, or Chaeldar assign TzHaar as a possible Slayer task. When players receive TzHaar as a slayer assignment, they will be prompted with an option to be assigned 1-3 TzTok-Jad instead.'"
+        }
+      }
+    ],
+    "notes": "TzTok-Jad page: 'By default, players can only kill one Jad per task, but can be increased to 2 and 3 respectively with completion of the Master and Grandmaster Combat Achievements'. A full cave on task totals 37,010 Slayer XP (25,250 from Jad). 'If the player is to leave the Fight Cave during their task, either manually or by dying... You no longer have a slayer task as you left the fight cave. This will not reset a player's task streak'. TzRek-Jad pet rate improves from 1/200 to 1/100 on task. Not assignable by Konar or Krystilia. Slayer task/TzHaar: 'the Slayer master may instead allow the player to kill TzTok-Jad or TzKal-Zuk, with the latter requiring that the player has at least one TzKal-Zuk kill count' - these are alternative assignments offered in place of a TzHaar task, not substitutes that count as Jad kills; regular TzHaar killed in the cave give Slayer XP but do not count toward the Jad kill total.",
+    "_verification": {
+      "corrections": [
+        "alternatives: cleared 'TzKal-Zuk' and 'Regular TzHaar task' - the TzHaar task page describes Jad and Zuk as alternative assignments chosen when TzHaar is offered, not monsters that count toward a Jad task; the info moved to notes.",
+        "Location notes: removed the unsupported 'Crandor and Karamja Dungeon cave entrance' route; 'Wave 63 (the final wave)' confirmed on the TzTok-Jad page, 'underneath the Karamja Volcano in Mor Ul Rek' confirmed on Slayer task/TzHaar.",
+        "Confirmed slayxp 25250, 37,010 total, Water weakness 40%, venomresistance = Poison, assignedby chaeldar/nieve/duradel, 100-point Hot Stuff quote, 1-3 kills with Master/Grandmaster CAs, leaving the cave ends the task without resetting the streak, TzRek-Jad 1/200 -> 1/100 on task, cannon prohibited in the Fight Cave."
+      ],
+      "confirmed": 12,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Jellies",
+    "wikiTaskPage": "Slayer task/Jellies",
+    "monsterPages": [
+      "Jelly",
+      "Warped Jelly",
+      "Chilled jelly",
+      "Vitreous Jelly"
+    ],
+    "bossTask": false,
+    "summary": "A 52 Slayer task known for hard clue scrolls. Jellies attack with magic-based melee that bypasses physical armour, so either pray Protect from Melee to negate all damage or wear high magic-defence armour like dragonhide. The wiki does not recommend killing regular jellies in the Fremennik Slayer Dungeon (poor drops, far from a bank); instead do warped jellies in the multicombat Catacombs of Kourend, ideally bursting or barraging them, or the Wilderness Slayer Cave for Krystilia tasks where nine jellies sit in a cannonable multicombat area below level 30 Wilderness.",
+    "recommendedStyle": "Magic",
+    "styleNotes": "Magical melee attackers with unusually high Defence for their level; Protect from Melee negates all damage; regular jellies have a 35% earth weakness and warped jellies 30% earth, while chilled jellies have a 50% fire weakness (infobox elementalweaknesstype/percent); not poisonous, not immune to cannon (Vitreous Chilled Jelly alone is immunecannon = Yes).",
+    "requiredItems": [],
+    "usefulItems": [
+      "Protect from Melee (prayer potions or super restores)",
+      "Ice Burst or Ice Barrage runes (rune pouch)",
+      "Slayer ring or Dramen/Lunar staff for fairy ring AJR",
+      "Kourend Castle Teleport runes or Xeric's talisman (Xeric's Heart)",
+      "Cheap darts or knives to tag monsters",
+      "Gem bag",
+      "Empty slot for brimstone keys on Konar tasks"
+    ],
+    "superior": "Vitreous Jelly (Vitreous Warped Jelly / Vitreous Chilled Jelly for the variants)",
+    "alternatives": [
+      "Warped Jelly",
+      "Chilled jelly"
+    ],
+    "xpPerKill": 75,
+    "locations": [
+      {
+        "name": "Catacombs of Kourend",
+        "displayName": "Catacombs of Kourend – warped jellies (multi, barrage spot)",
+        "rank": 1,
+        "multi": true,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [],
+        "notes": "18 warped jellies (140 XP, level 112) in the southern and eastern catacombs; safespot by firing over corners or across the water. Enter via the statue of King Rada I at Kourend Castle (Xeric's Heart or Kourend Castle Teleport).",
+        "evidence": {
+          "multi": "Slayer task/Jellies: 'Warped jellies are in a Multicombat area and are popular for barrage tasks'; location comparison row 'Catacombs of Kourend' -> Multicombat: Yes",
+          "cannon": "Catacombs of Kourend page: 'dwarf multicannons cannot be placed inside the Catacombs... The influence of the dark altar prevents your cannon being set up here.'; Dwarf multicannon prohibited list: 'Catacombs of Kourend'",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Wilderness Slayer Cave",
+        "displayName": "Wilderness Slayer Cave (Krystilia; task-only, below level 30)",
+        "rank": 2,
+        "multi": true,
+        "cannon": true,
+        "wilderness": true,
+        "wildernessLevelMin": 17,
+        "wildernessLevelMax": 32,
+        "konarAssignable": false,
+        "requirements": [
+          "Must be on a jelly task (task-only in the cave)"
+        ],
+        "notes": "9 jellies in a multicombat area; the task page says they are 'below level 30 Wilderness' with one entrance, so a one-click teleport such as a royal seed pod escapes PKers. Safespot on either side of the rockfall in the southern part of the cave or on the western rock corner.",
+        "evidence": {
+          "multi": "Slayer task/Jellies: 'Players who are assigned jellies by Krystilia can kill them in the Wilderness Slayer Cave, where nine jellies can be found in a multicombat area.'; location comparison row -> Multicombat: Yes",
+          "cannon": "Slayer task/Jellies location comparison row 'Wilderness Slayer Cave' -> Cannonable: Yes; Wilderness Slayer Cave page: 'it's possible to use the Dwarf multicannon inside the dungeon'",
+          "requirements": "Wilderness Slayer Cave page: 'Abyssal demons, Nechryaels, Dust devils, and Jellies can only be killed while on Slayer task.'"
+        }
+      },
+      {
+        "name": "Ruins of Tapoyauik",
+        "displayName": "Ruins of Tapoyauik – chilled jellies (single, post-quest)",
+        "rank": 3,
+        "multi": false,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "The Heart of Darkness"
+        ],
+        "notes": "10 chilled jellies (140 XP) in a single-combat chamber; safespot behind the smaller icicles; moonlight moths spawn in the dungeon to save prayer potions; also drop frozen tears and moon key tooth halves here.",
+        "evidence": {
+          "multi": "Slayer task/Jellies: 'Chilled jellies are in a single combat area'; location comparison row 'Ruins of Tapoyauik' -> Multicombat: No",
+          "cannon": "Ruins of Tapoyauik page: 'A Dwarven multicannon cannot be placed inside the ruins.'; Dwarf multicannon prohibited list",
+          "requirements": "Ruins of Tapoyauik page: 'Prior to quest completion, they are not accessible.' (The Heart of Darkness). Slayer task/Jellies says chilled jellies 'require completion of The Heart of Darkness or level 87 Sailing' because they exist at two locations; the Chilled jelly page ties the Sailing route to 'the dungeon on Grimstone', so only the quest applies to the ruins."
+        }
+      },
+      {
+        "name": "Fremennik Slayer Dungeon",
+        "displayName": "Fremennik Slayer Dungeon (regular jellies; not recommended)",
+        "rank": 4,
+        "multi": false,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [],
+        "notes": "10 regular jellies; safespot by firing over the rock corners in the west or south of the room. Fairy ring AJR or slayer ring; far from a bank.",
+        "evidence": {
+          "multi": "Slayer task/Jellies location comparison row 'Fremennik Slayer Dungeon' -> Multicombat: No",
+          "cannon": "Fremennik Slayer Dungeon page: 'Players cannot set up a dwarf multicannon within the caves... The air is too dank for you to set up a cannon here.'",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Grimstone Dungeon",
+        "displayName": "Grimstone Dungeon – chilled jellies (Sailing island)",
+        "rank": 5,
+        "multi": false,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "87 Sailing (reach Grimstone)"
+        ],
+        "notes": "10 chilled jellies north and west of the fairy ring (DLP, usable once you have moored there); safespot between the two icicles to the west with Ranged or Magic.",
+        "evidence": {
+          "multi": "Slayer task/Jellies location comparison row 'Grimstone Dungeon' -> Multicombat: No; monster variants table: 'Single combat area.'",
+          "cannon": "Grimstone Dungeon page: 'Attempting to set up a Dwarf multicannon anywhere in the dungeon will result in the message It's far too cold for you to set up a cannon here.'",
+          "requirements": "Chilled jelly page: 'require either completion of The Heart of Darkness or level 87 Sailing to reach, due to their locations: within the Ruins of Tapoyauik and inside the dungeon on Grimstone'",
+          "konar": "Konar quo Maten task table row 'Jellies' lists only Fremennik Slayer Dungeon, Catacombs of Kourend and Ruins of Tapoyauik."
+        }
+      },
+      {
+        "name": "Ynysdail Cavern",
+        "displayName": "Ynysdail Cavern (Sailing island; single combat)",
+        "rank": 6,
+        "multi": false,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "73 Sailing to moor on Ynysdail (boat with an adamant keel or better)"
+        ],
+        "notes": "9 regular jellies in the dungeon beneath Ynysdail, alongside rockslugs and aquanites; not listed on the Slayer task/Jellies page.",
+        "evidence": {
+          "multi": "Ynysdail Cavern page: 'The entire dungeon is a single-combat zone'",
+          "cannon": "Ynysdail Cavern page: 'Dwarf multicannons cannot be set in the dungeon; attempting to do so will result in the message \"The ground is too damp to set up a cannon here.\"'",
+          "requirements": "Ynysdail page: 'It requires 73 Sailing to moor onto. As Ynysdail is surrounded by crystal-flecked waters, the player will need a boat equipped with an adamant keel or better to safely sail to the island.'",
+          "konar": "Konar quo Maten task table row 'Jellies' lists only Fremennik Slayer Dungeon, Catacombs of Kourend and Ruins of Tapoyauik."
+        }
+      }
+    ],
+    "notes": "Konar's task row lists Fremennik Slayer Dungeon, Catacombs of Kourend and Ruins of Tapoyauik as her jelly locations. Krystilia jelly assignments can be toggled off for free. Superiors need the Bigger and Badder unlock (50 points): Vitreous Jelly 1,900 XP, Vitreous Warped/Chilled Jelly 2,200 XP. Warped jellies do NOT count for a Warped creatures task.",
+    "_verification": {
+      "corrections": [
+        "Added missing location 'Ynysdail Cavern' (Jelly page LocLine with 9 spawns; single-combat, no cannon per the Ynysdail Cavern page; 73 Sailing per the Ynysdail page).",
+        "Ruins of Tapoyauik requirements: dropped the '87 Sailing' alternative - the Ruins page says 'Prior to quest completion, they are not accessible'; the Sailing route on the Chilled jelly page applies to Grimstone.",
+        "Grimstone Dungeon konarAssignable: 'unknown' -> false (Konar's Jellies row lists only Fremennik Slayer Dungeon, Catacombs of Kourend, Ruins of Tapoyauik).",
+        "styleNotes: added the earth weaknesses of regular (35%) and warped (30%) jellies from their infoboxes.",
+        "Confirmed slayxp 75/140/140, superiors 1900/2200/2200, Warped Jelly page 'they do not count towards a Warped creatures Slayer task', Krystilia free toggle ('I Wildy More Slayer'), cannon messages for Catacombs, Fremennik Slayer Dungeon, Grimstone and Ruins of Tapoyauik, all Slayer task/Jellies location table values."
+      ],
+      "confirmed": 22,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Jungle horrors",
+    "wikiTaskPage": "Jungle horror (no 'Slayer task/Jungle horrors' page exists)",
+    "monsterPages": [
+      "Jungle horror"
+    ],
+    "bossTask": false,
+    "summary": "Jungle horrors are aggressive melee (stab) attackers on the island of Mos Le'Harmless, assigned by Vannaka and Chaeldar; no witchwood icon is needed, unlike cave horrors. Players under 70 Defence should bring good food and armour against their accurate melee, while higher-level players can sustain off the pineapples they drop with a knife. The biggest camp of 10-12 is directly north of the settlement's exit and several spawns can be safespotted from behind the northern wall or trees.",
+    "recommendedStyle": "Any",
+    "styleNotes": "Aggressive stab melee attackers with a 25% elemental weakness to fire spells; not poisonous, not immune to cannon.",
+    "requiredItems": [],
+    "usefulItems": [
+      "Good food or a knife to slice dropped pineapples",
+      "Ectophial to reach Bill Teach at Port Phasmatys"
+    ],
+    "superior": null,
+    "alternatives": [],
+    "xpPerKill": 45,
+    "locations": [
+      {
+        "name": "Mos Le'Harmless",
+        "displayName": "Mos Le'Harmless – north of the settlement gate",
+        "rank": 1,
+        "multi": "unknown",
+        "cannon": "unknown",
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Cabin Fever"
+        ],
+        "notes": "Largest camp (about 10-12) directly north of the settlement exit; one spawn near the opening in the northern wall and a group at the north-east corner of the wall can be safespotted; Joe by the gate sells stews and wine. Reach the island via Bill Teach at Port Phasmatys or the charter ships.",
+        "evidence": {
+          "multi": "not stated (Mos Le'Harmless surface is not on the Multicombat area list; the multi statement on the Mos Le'Harmless Cave page covers only the cave)",
+          "cannon": "not stated for the island surface (the 'Dwarf multicannon can be used' statement is on the Mos Le'Harmless Cave page, not the island)",
+          "requirements": "Jungle horror page: 'Players must have completed Cabin Fever to gain access to the island.'"
+        }
+      }
+    ],
+    "notes": "Slayer task list row: 65 combat, Cabin Fever, masters Vannaka and Chaeldar. Not assignable by Konar. 'A witchwood icon is NOT required to kill jungle horrors.'",
+    "_verification": {
+      "corrections": [
+        "No data changes. Confirmed slayxp 45, aggressive Yes, Stab, Fire weakness 25%, single LocLine Mos Le'Harmless, Cabin Fever, 'A witchwood icon is NOT required', 10-12 camp north of the settlement exit, safespots, Joe's stews, Bill Teach/ectophial and charter ship routes on the Mos Le'Harmless page; multi/cannon remain 'unknown' because neither the Jungle horror nor the Mos Le'Harmless page states them for the island surface."
+      ],
+      "confirmed": 12,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Kalphites",
+    "wikiTaskPage": "Slayer task/Kalphites",
+    "monsterPages": [
+      "Kalphite Worker",
+      "Kalphite Soldier",
+      "Kalphite Guardian",
+      "Kalphite Queen"
+    ],
+    "bossTask": false,
+    "summary": "A common task from every master except Mortimer and Krystilia. All kalphites except the Queen use melee, and soldiers and guardians poison (starting at 4 and 6) through protection prayers, so Protect from Melee plus poison immunity negates everything. The wiki says tasks should be done in the task-only Kalphite Cave east of Shantay Pass, whose open multicombat chambers are cannonable and need no rope: cannon workers for a fast task or soldiers for XP, and avoid guardians. If Konar forces the Kalphite Lair, cannon the soldiers on the upper level; the Queen is not worth it without the Elite Desert Diary shortcut.",
+    "recommendedStyle": "Melee",
+    "styleNotes": "All kalphite variants (worker, soldier, guardian and Queen) have a 40% elemental weakness to fire; the task page says kalphites are weak to crush attacks, that keris weapons deal 33% more damage to them, and that the keris partisan of breaching adds a further 33% accuracy; soldiers (4) and guardians (6) poison through protection prayers, workers cannot poison.",
+    "requiredItems": [],
+    "usefulItems": [
+      "Dwarf multicannon",
+      "Protect from Melee",
+      "Poison immunity (antidote++/anti-venom)",
+      "Keris partisan or keris partisan of breaching",
+      "Rope(s) for the Kalphite Lair unless Hard Desert Diary is done",
+      "Shantay pass or fairy ring BIQ"
+    ],
+    "superior": null,
+    "alternatives": [
+      "Kalphite Queen"
+    ],
+    "xpPerKill": 90,
+    "locations": [
+      {
+        "name": "Kalphite Cave (on Slayer task)",
+        "displayName": "Kalphite Cave – task-only, east of Shantay Pass",
+        "rank": 1,
+        "multi": true,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Must be on a kalphite task (Buggie stops off-task attacks)"
+        ],
+        "notes": "18 workers, 20 soldiers and 5 guardians in five open chambers; no rope needed and no desert heat. Reach via the Shantay Pass (diary cape teleport, or Pollnivneach house + magic carpet).",
+        "evidence": {
+          "multi": "Kalphite Cave page: 'A dwarf multicannon can be used here, and it is a multi-combat area.'; Slayer task/Kalphites location comparison row -> Multicombat: Yes",
+          "cannon": "Kalphite Cave page: 'A dwarf multicannon can be used here'; Slayer task/Kalphites location comparison row -> Cannonable: Yes",
+          "requirements": "Kalphite Cave page: 'housing kalphites that can only be killed while on a Slayer task... upon attacking any monster inside the dungeon, Buggie will stop them'"
+        }
+      },
+      {
+        "name": "Kalphite Lair",
+        "displayName": "Kalphite Lair – north-east of the Bedabin Camp (rope needed)",
+        "rank": 2,
+        "multi": true,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Rope to enter (second rope for the Queen) unless Hard Desert Diary is complete"
+        ],
+        "notes": "13 workers, 7 soldiers, 4 guardians and the Queen; the upper-level potato cactus chamber is the popular cannon spot for soldiers; the cannon is destroyed if used near the Queen. Fairy ring BIQ then run north-west; no desert heat inside. Elite Desert Diary + 86 Agility crevice shortcut leads to the Queen.",
+        "evidence": {
+          "multi": "Multicombat area page list: 'Kalphite Lair'; Slayer task/Kalphites location comparison row 'Kalphite Lair' -> Multicombat: Yes",
+          "cannon": "Kalphite Lair page: 'The upper level has many kalphite workers and some kalphite soldiers, which are popular and great spots for players with a dwarf multicannon on a Slayer task.' and 'The cannon will be destroyed by the queen if used in her vicinity, however.'",
+          "requirements": "Kalphite Lair page: 'Players will need a rope to enter the lair and another to enter the area containing the Kalphite Queen... players who have completed the Hard Desert Diary need not do so after attaching the ropes one last time'"
+        }
+      }
+    ],
+    "notes": "XP per kill by variant: worker 40, soldier 90, guardian 170, Queen 535.5 (task page table). Assigned by Turael, Spria, Mazchna, Vannaka, Chaeldar, Konar, Nieve, Duradel at 15 combat. Konar can send you to either the Lair or the Cave. No superior variant.",
+    "_verification": {
+      "corrections": [
+        "styleNotes: the 40% fire weakness applies to every kalphite variant (Worker, Soldier, Guardian and Queen infoboxes all read elementalweaknesstype = Fire, 40), not only workers; keris wording corrected to the task page ('increases damage against all kalphites by 33%'; breaching partisan 'provides an additional 33% accuracy').",
+        "Confirmed spawn counts (Cave 18/20/5, Lair 13/7/4 + Queen), Kalphite Cave 'A dwarf multicannon can be used here, and it is a multi-combat area', Buggie task-only rule, Kalphite Lair rope / Hard Desert Diary / 86 Agility crevice / potato cactus cannon spot / 'The cannon will be destroyed by the queen if used in her vicinity' (line 57), masters and 15 combat, XP 40/90/170/535.5."
+      ],
+      "confirmed": 16,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "The Kalphite Queen",
+    "wikiTaskPage": "Kalphite Queen (boss page; no 'Slayer task/Kalphite Queen' page exists)",
+    "monsterPages": [
+      "Kalphite Queen"
+    ],
+    "bossTask": true,
+    "summary": "The Kalphite Queen is the two-form kalphite boss at the bottom of the Kalphite Lair, assignable as a boss task after the Like a Boss unlock and also acceptable as a substitute for a regular kalphite task.",
+    "recommendedStyle": "Any",
+    "styleNotes": "Uses melee, Ranged and Magic across two forms with different resistances; 40% elemental weakness to fire; immune to venom (venomresistance = Poison); not immune to cannon, but the Kalphite Lair page says the cannon will be destroyed by the queen if used in her vicinity.",
+    "requiredItems": [],
+    "usefulItems": [
+      "Two ropes (or Hard Desert Diary for permanent ropes)",
+      "86 Agility + Elite Desert Diary for the crevice shortcut to her chamber",
+      "Fairy ring BIQ"
+    ],
+    "superior": null,
+    "alternatives": [],
+    "xpPerKill": 535.4,
+    "locations": [
+      {
+        "name": "Kalphite Lair",
+        "displayName": "Kalphite Lair – Queen's chamber (lower level)",
+        "rank": 1,
+        "multi": true,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Rope to enter the lair and a second rope for the Queen's tunnel (permanent after Hard Desert Diary)"
+        ],
+        "notes": "South-west of the Shantay Pass; a rope is consumed entering the dungeon and another reaches the lower level; with the Elite Desert Diary the 86 Agility crevice links the lair entrance straight to the Queen's chamber entrance.",
+        "evidence": {
+          "multi": "Multicombat area page list: 'Kalphite Lair' (whole lair; the Queen's room is not listed separately)",
+          "cannon": "Kalphite Lair page: 'The cannon will be destroyed by the queen if used in her vicinity'; Dwarf multicannon page: 'The Kalphite Queen, King Black Dragon, Thermonuclear smoke devil, and inhabitants of the God Wars Dungeon may also destroy a cannon if a player attempts to use it'",
+          "requirements": "Kalphite Queen page: 'Two ropes are required to access the lair, one to enter the dungeon itself and another to reach the lower level where Kalphite Queen resides... Completion of the hard Desert Diary makes these ropes permanent once placed.'; Boss page boss-slayer table row 'Kalphite Queen | Kalphite Lair | Slayer 1'"
+        }
+      }
+    ],
+    "notes": "Boss page: boss tasks need the Like a Boss unlock (200 points) and come from Konar, Nieve/Steve, Duradel/Kuradal or Krystilia; Krystilia only rolls Wilderness bosses, so effectively Konar, Nieve and Duradel. Slayer XP: infobox says 535.4, Slayer task/Kalphites table says 535.5. Brimstone keys only on Konar tasks. Killing her once is a Hard Desert Diary task. The Queen counts toward a regular kalphite task (Slayer task/Kalphites variants table), but nothing on the wiki says regular kalphites count toward a Kalphite Queen boss task.",
+    "_verification": {
+      "corrections": [
+        "styleNotes: removed 'her ranged and magic attacks always hit' (fight mechanic on a boss task); added the 40% fire weakness from the infobox.",
+        "alternatives: cleared - the previous entry was itself a non-alternative ('count for the kalphite task, not the boss task'); moved to notes.",
+        "Confirmed slayxp 535.4 (infobox) vs 535.5 (task table), Boss page 'Like a boss' 200 points and Konar/Nieve/Duradel/Krystilia, Krystilia Wilderness-only quote, boss table row 'Kalphite Queen | Kalphite Lair | Slayer 1', two-rope quote, Hard Desert Diary permanent ropes, Multicombat area list 'Kalphite Lair', Dwarf multicannon page line about KQ destroying cannons."
+      ],
+      "confirmed": 12,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Killerwatts",
+    "wikiTaskPage": "Killerwatt (no 'Slayer task/Killerwatts' page exists)",
+    "monsterPages": [
+      "Killerwatt",
+      "Killerwatt plane"
+    ],
+    "bossTask": false,
+    "summary": "A 37 Slayer task assigned only by Mazchna, done on the Killerwatt plane reached through Professor Oddenstein's portal at the top of Draynor Manor after Ernest the Chicken. Insulated boots are required: without them both their melee and ranged attacks hit up to 15 instead of 6 and 8, though the bonus does not go through the correct protection prayer. They appear as passive orbs but transform and rush you as soon as they are clicked, and switch between melee and ranged by distance, so Ranged or Magic (air spells) from a safespot locks them into ranged attacks.",
+    "recommendedStyle": "Ranged",
+    "styleNotes": "Negative ranged defence and a 60% weakness to air spells; attack with stab/crush melee and magical ranged; not aggressive until clicked; not immune to cannon but no cannon can be placed on the plane.",
+    "requiredItems": [
+      "Insulated boots"
+    ],
+    "usefulItems": [
+      "Protect from Missiles or Melee as appropriate",
+      "Air spells",
+      "Halberd if meleeing to keep them at range"
+    ],
+    "superior": null,
+    "alternatives": [],
+    "xpPerKill": 51,
+    "locations": [
+      {
+        "name": "Killerwatt plane",
+        "displayName": "Killerwatt plane (via Draynor Manor portal)",
+        "rank": 1,
+        "multi": "unknown",
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Ernest the Chicken",
+          "Insulated boots"
+        ],
+        "notes": "Only location; enter through the portal machine on the top floor of Draynor Manor and leave via the portal or any teleport. The ground does not show on the minimap.",
+        "evidence": {
+          "multi": "not stated",
+          "cannon": "Killerwatt plane page: 'Players cannot use the dwarf multicannon in the Killerwatt plane.'; Dwarf multicannon prohibited list: 'Killerwatt Plane - The electricity is too powerful for you to set up a cannon here.'",
+          "requirements": "Killerwatt page: 'accessible through a portal at the top floor of Draynor Manor after completion of Ernest the Chicken'; Slayer task list row 'Killerwatts': Required items 'Insulated boots', requirements 'Ernest the Chicken', 'Combat 50'"
+        }
+      }
+    ],
+    "notes": "Slayer task list row: Slayer 37, 50 combat, only Mazchna. Not assignable by Konar. Killerwatt page: 'If a player is not wearing a pair of insulated boots while fighting them, both their Ranged and Melee attacks will have a much higher maximum hit.'",
+    "_verification": {
+      "corrections": [
+        "No data changes. Confirmed slaylvl 37, slayxp 51, max hit '8 (Ranged), 6 (Melee), 15 (Ranged/Melee; without insulated boots)', aggressive No, Air weakness 60%, transform-on-click and distance-based style switching, halberd note, 'does not hit through the correct protection prayer', portal/Ernest the Chicken, 26 spawns, cannon prohibited on the plane, Slayer task row (Insulated boots, Ernest the Chicken, Combat 50, Mazchna only)."
+      ],
+      "confirmed": 13,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "The King Black Dragon",
+    "wikiTaskPage": "King Black Dragon (boss page; no 'Slayer task/King Black Dragon' page exists)",
+    "monsterPages": [
+      "King Black Dragon",
+      "King Black Dragon Lair"
+    ],
+    "bossTask": true,
+    "summary": "The King Black Dragon is a three-headed dragon in a lair reached only by pulling a lever in the western entrance of the Lava Maze Dungeon in the deep Wilderness; the lair itself is a multicombat, non-Wilderness area that can be instanced for 50,000 coins, and he also counts for a black dragon task unless Krystilia assigned it.",
+    "recommendedStyle": "Any",
+    "styleNotes": "Uses stab melee and dragonfire ('four different breath attacks; normal dragonfire alongside three special dragonfire attacks'); an anti-dragon shield with an antifire potion 'will prevent his regular dragonfire damage, and reduce his special dragonfire damage to 10'; poisonous (Yes (8)); 50% elemental weakness to water; not immune to cannon but 'Most bosses, such as the King Black Dragon, destroy cannons set up near them'.",
+    "requiredItems": [
+      "Anti-dragon shield (or other dragonfire protection)"
+    ],
+    "usefulItems": [
+      "Antifire potion",
+      "Burning amulet (Lava Maze teleport)",
+      "Items you are willing to lose on the Wilderness walk"
+    ],
+    "superior": null,
+    "alternatives": [],
+    "xpPerKill": 258,
+    "locations": [
+      {
+        "name": "King Black Dragon Lair (Wilderness)",
+        "displayName": "King Black Dragon Lair – lever in the Lava Maze Dungeon (level 42 Wilderness approach)",
+        "rank": 1,
+        "multi": true,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Dragon Slayer I (for the boss task)",
+          "Dragonfire protection"
+        ],
+        "notes": "Burning amulet to the Lava Maze, enter the fenced ladder area with four lesser demons on the west end of the maze, climb down past the poison spiders and pull the lever (cannot be pulled while teleblocked). The lair is not Wilderness: no PvP and any teleport works to leave, but the approach is a popular PK spot.",
+        "evidence": {
+          "multi": "King Black Dragon page: 'His lair is a multicombat area.'; King Black Dragon Lair page: 'The King Black Dragon Lair... is a multi-combat area'",
+          "cannon": "Dwarf multicannon page: 'Most bosses, such as the King Black Dragon, destroy cannons set up near them.'",
+          "requirements": "Boss page boss-slayer table row 'King Black Dragon | King Black Dragon's Lair | Slayer 1 | Completion of Dragon Slayer I'; King Black Dragon page: 'An anti-dragon shield in combination with an antifire potion will prevent his regular dragonfire damage'"
+        }
+      }
+    ],
+    "notes": "Lair page: 'The lair can be accessed via the western entrance to the Lava Maze Dungeon in level 42 Wilderness near the Lava Maze, however the lair itself is not the Wilderness.' The location object is therefore marked wilderness=false, but the plugin should still warn: the trek from the level 44 Wilderness Obelisk is short but 'escape is likely impossible if attacked by a player killer' (Slayer task/Black dragons). Boss task masters: Konar, Nieve, Duradel (Boss page: 'Krystilia will only roll boss tasks in the Wilderness, barring the King Black Dragon as his lair is not considered part of it'). Private instance costs 50,000 coins. Counts towards a black dragon task 'except when assigned by Krystilia'. Brimstone keys only on Konar tasks.",
+    "_verification": {
+      "corrections": [
+        "styleNotes: added infobox facts (poisonous Yes (8), Water weakness 50%) and quoted the dragonfire/anti-dragon shield sentences verbatim; the 'four kinds of dragonfire' claim is confirmed on the page.",
+        "Confirmed slayxp 258, assignedby konar/nieve/duradel, 'His lair is a multicombat area', 50,000-coin instance, 'counts towards a black dragon Slayer task, except when assigned by Krystilia', lair 'in level 42 Wilderness ... however the lair itself is not the Wilderness', teleblock lever rule, four lesser demons and poison spiders, Boss table row with Dragon Slayer I, Slayer task/Black dragons 'escape is likely impossible' sentence."
+      ],
+      "confirmed": 14,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "The Cave Kraken Boss",
+    "wikiTaskPage": "Kraken (boss page; see also Slayer task/Cave krakens)",
+    "monsterPages": [
+      "Kraken",
+      "Cave kraken",
+      "Kraken Cove"
+    ],
+    "bossTask": true,
+    "summary": "The Kraken is the 87 Slayer boss version of the cave kraken in Kraken Cove near the Piscatoris Fishing Colony; it can only be attacked while on a Kraken or cave kraken task, needs 50 Magic, must be fought with Magic, and can be instanced for 25,000 coins.",
+    "recommendedStyle": "Magic",
+    "styleNotes": "Immune to melee ('You can't attack it properly like that'), Ranged deals 1/7 damage, typeless magic attacks so Protect from Magic gives no reduction; immune to cannon.",
+    "requiredItems": [
+      "On a Kraken or cave kraken Slayer task",
+      "87 Slayer (cannot be boosted)",
+      "50 Magic"
+    ],
+    "usefulItems": [
+      "Fishing explosive to start the fight instantly",
+      "Fairy ring AKQ or Piscatoris teleport scroll / Western banner 3+"
+    ],
+    "superior": null,
+    "alternatives": [],
+    "xpPerKill": 255,
+    "locations": [
+      {
+        "name": "Kraken Cove",
+        "displayName": "Kraken Cove – Kraken boss pool (optionally instanced)",
+        "rank": 1,
+        "multi": "partial",
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Kraken or cave kraken Slayer task",
+          "87 Slayer",
+          "50 Magic"
+        ],
+        "notes": "South-west of the Piscatoris Fishing Colony; fairy ring AKQ lands just east of the cove. Disturb the four small whirlpools then the large one, or use a fishing explosive on the large whirlpool. Lieve McCracken stops off-task attacks.",
+        "evidence": {
+          "multi": "Multicombat area page list: 'Inner Kraken Cove'; the Kraken and Kraken Cove pages do not say which parts are multi",
+          "cannon": "Kraken infobox 'immunecannon = Yes' (the boss cannot be cannoned); Kraken Cove page: 'A dwarf multicannon can be used within this dungeon, but not near the Waterfiends' while the Dwarf multicannon prohibited list also names 'Kraken Cove' (conflict)",
+          "requirements": "Kraken page: 'It requires level 87 Slayer to kill and cannot be boosted. Located at the Kraken Cove, it can only be attacked if the player has it, or cave krakens as a Slayer task, which also requires level 50 Magic.'"
+        }
+      }
+    ],
+    "notes": "Assigned by Chaeldar, Konar, Nieve and Duradel (infobox). Boss page boss-slayer row: 'Kraken | Kraken Cove | Slayer 87'. 'Players can create a Kraken instance for 25,000 coins... The boss respawns more slowly in a private instance than the public arena.' Brimstone keys only on Konar tasks. The Boss page says each Slayer boss 'requires a task for either the boss itself or the equivalent monster in order to be fought', i.e. the Kraken may be killed on a cave kraken task; nothing states that cave krakens count toward a Kraken boss task.",
+    "_verification": {
+      "corrections": [
+        "alternatives: removed 'Cave kraken (regular task)' - the wiki only supports the reverse direction (the boss can be fought on a cave kraken task); moved to notes.",
+        "Confirmed slaylvl 87 'cannot be boosted', slayxp 255, 50 Magic, immunecannon Yes, assignedby chaeldar/konar/nieve/duradel, 'You can't attack it properly like that', Ranged 1/7 damage, typeless magic vs Protect from Magic, 25,000-coin instance and slower respawn, fishing explosive / whirlpools, Lieve McCracken, fairy ring AKQ, Multicombat area 'Inner Kraken Cove', Kraken Cove vs Dwarf multicannon cannon conflict (moot: boss is cannon-immune)."
+      ],
+      "confirmed": 14,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Kree'arra",
+    "wikiTaskPage": "Kree'arra (boss page; see also Slayer task/Aviansies)",
+    "monsterPages": [
+      "Kree'arra",
+      "God Wars Dungeon"
+    ],
+    "bossTask": true,
+    "summary": "Kree'arra is Armadyl's general in Armadyl's Eyrie in the God Wars Dungeon north of Trollheim; reaching him needs 70 Ranged with a crossbow and mith grapple to cross the chasm plus 40 Armadyl killcount or an ecumenical key, and he and his bodyguards also count for an aviansie task.",
+    "recommendedStyle": "Ranged",
+    "styleNotes": "Like all Armadylean followers he cannot be attacked with melee except halberds or salamanders (including melee-weapon special attacks such as Voidwaker); attacks mainly with Ranged; not immune to cannon but GWD inhabitants may destroy cannons.",
+    "requiredItems": [
+      "Crossbow and mith grapple",
+      "70 Ranged",
+      "Ecumenical key or 40 Armadyl killcount (fewer with Combat Achievement tiers)"
+    ],
+    "usefulItems": [
+      "Armadyl item (and a Zamorak item) for god protection",
+      "Rope (first visit)",
+      "Climbing boots unless using Trollheim Teleport (61 Magic, Eadgar's Ruse)",
+      "Ghommal's hilt 1+ teleport (Easy Combat Achievements)"
+    ],
+    "superior": null,
+    "alternatives": [],
+    "xpPerKill": 357,
+    "locations": [
+      {
+        "name": "God Wars Dungeon (Armadyl boss room)",
+        "displayName": "God Wars Dungeon – Armadyl's Eyrie boss room (optionally instanced)",
+        "rank": 1,
+        "multi": true,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Death Plateau (to be assigned GWD tasks)",
+          "Partial Troll Stronghold (defeat Dad) or Easy Combat Achievements",
+          "60 Strength or 60 Agility",
+          "70 Ranged, crossbow and mith grapple",
+          "40 Armadyl killcount or ecumenical key"
+        ],
+        "notes": "North of Trollheim: Trollheim Teleport (61 Magic, Eadgar's Ruse) or Burthorpe with climbing boots and a rope the first time. Wear god-aligned items or the followers are aggressive. Kree'arra roams the boss room with his bodyguards.",
+        "evidence": {
+          "multi": "Multicombat area page list: 'God Wars Dungeon'",
+          "cannon": "Dwarf multicannon page: 'The Kalphite Queen, King Black Dragon, Thermonuclear smoke devil, and inhabitants of the God Wars Dungeon may also destroy a cannon if a player attempts to use it'",
+          "requirements": "Kree'arra page: 'players must first wield any crossbow along with a mithril grapple. A Ranged level of at least 70 is then required to navigate the chasm. To enter the boss room, players must use an ecumenical key, or have slain 40 followers of Armadyl'; God Wars Dungeon page: 'To get Slayer assignments related to the God Wars Dungeon, such as boss tasks, players must complete the Death Plateau quest.' and 'Accessing it requires partial completion of Troll Stronghold (defeating Dad) or full completion of the Easy Combat Achievements... and either Strength 60 or Agility 60. A rope is also required the first time.'; Boss page boss-slayer row 'Kree'arra | God Wars Dungeon | Slayer 1 | Ranged 70, completion of Death Plateau, Strength 60 or Agility 60'"
+        }
+      }
+    ],
+    "notes": "Assigned by Chaeldar, Konar, Nieve and Duradel (infobox); as a boss task (Like a Boss, 200 points) from Konar, Nieve/Steve or Duradel/Kuradal. Boss page: 'players can still be assigned Kree'arra even if they do not have aviansies toggled on, as long as they have access to God Wars Dungeon.' Killcount reduces to 35/30/25/15 with Hard/Elite/Master/Grandmaster Combat Achievements. Slayer task/Aviansies suggests banking at Nex's prison with a Zarosian item. Slayer task/Aviansies: 'Kree'arra and his bodyguards can be killed as alternatives for an aviansie task' (Flight Kilisa slayxp 132.5); nothing states the bodyguards count toward a Kree'arra boss task.",
+    "_verification": {
+      "corrections": [
+        "alternatives: removed the bodyguards - they are alternatives for an aviansie task (Slayer task/Aviansies), not for a Kree'arra boss task; moved to notes.",
+        "Location notes: removed 'resets if everyone leaves' (fight mechanic on a boss task).",
+        "Confirmed slayxp 357, assignedby chaeldar/konar/nieve/duradel, crossbow + mith grapple + 70 Ranged, ecumenical key or 40 killcount (35/30/25/15 with CA tiers), halberd/salamander-only melee incl. Voidwaker, God Wars Dungeon Death Plateau / Troll Stronghold-or-Easy CAs / 60 Strength or Agility / first-time rope / Trollheim Teleport (61 Magic, Eadgar's Ruse) quotes, Boss table row and 'aviansies toggled on' sentence, Multicombat area list 'God Wars Dungeon', GWD inhabitants may destroy a cannon, Nex-prison banking with a Zarosian item."
+      ],
+      "confirmed": 15,
+      "downgraded": 0
+    }
+  }
+]

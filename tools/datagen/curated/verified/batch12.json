@@ -1,0 +1,381 @@
+[
+  {
+    "task": "Commander Zilyana",
+    "wikiTaskPage": "Commander Zilyana",
+    "monsterPages": [
+      "Commander Zilyana"
+    ],
+    "bossTask": true,
+    "summary": "Boss task: Commander Zilyana is the Saradomin general of the God Wars Dungeon, fought in the Saradomin boss room; the task is assigned only after unlocking Like a Boss and requires 70 Agility, Death Plateau and 40 Saradomin kill count (or an ecumenical key) to enter her chamber.",
+    "recommendedStyle": "Any",
+    "styleNotes": "Attacks with Crush and Magic; poison resistance 100 and venom resistance 100 per the infobox (effectively immune to poison and venom); immunecannon = No but God Wars Dungeon inhabitants destroy cannons.",
+    "requiredItems": [
+      "Rope (x2, first visit to Saradomin's Encampment only; three total if first ever God Wars Dungeon visit)"
+    ],
+    "usefulItems": [
+      "Ecumenical key (skips kill count)",
+      "Saradomin-aligned item and items of the other gods for protection",
+      "Climbing boots or Trollheim Teleport (61 Magic, Eadgar's Ruse)"
+    ],
+    "superior": null,
+    "alternatives": [],
+    "xpPerKill": 350,
+    "locations": [
+      {
+        "name": "God Wars Dungeon (Saradomin boss room)",
+        "displayName": "God Wars Dungeon – Saradomin boss room (Saradomin's Encampment)",
+        "rank": 1,
+        "multi": true,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Like a Boss unlock (200 Slayer reward points)",
+          "Death Plateau (for God Wars Dungeon slayer tasks)",
+          "70 Agility (cannot be boosted)",
+          "40 Saradomin kill count (35/30/25/15 with the hard/elite/master/grandmaster Combat Achievement tiers) or an ecumenical key",
+          "2 ropes on first visit to the Encampment",
+          "Partial Troll Stronghold (or Easy Combat Achievements for Ghommal's hilt teleport) and 60 Strength or 60 Agility to enter the dungeon"
+        ],
+        "notes": "Reach the dungeon via Trollheim Teleport or from Burthorpe past the Troll Stronghold; bring god-aligned items so followers are not aggressive; the chamber can optionally be instanced from the hard Combat Achievement tier.",
+        "evidence": {
+          "multi": "Multicombat area page lists '*[[God Wars Dungeon]]' under multicombat areas (Multicombat area).",
+          "cannon": "'The Kalphite Queen, King Black Dragon, Thermonuclear smoke devil, and inhabitants of the God Wars Dungeon may also destroy a cannon if a player attempts to use it' (Dwarf multicannon).",
+          "requirements": "'To gain access to her chamber within the Saradomin Encampment, players must use an ecumenical key or have killed 40 of Saradomin's followers throughout the dungeon. Furthermore, in addition to an Agility level of 70 (cannot be boosted), players must bring two ropes on their first visit' (Commander Zilyana); Boss page boss-slayer table row: 'Commander Zilyana | God Wars Dungeon | Slayer 1 | Agility 70, completion of Death Plateau' (Boss); 'To get Slayer assignments related to the God Wars Dungeon, such as boss tasks, players must complete the Death Plateau quest.' (God Wars Dungeon). Kill-count reduction: Commander Zilyana page footnote '35 for hard, 30 for elite, 25 for master and 15 kills for grandmaster for those who have unlocked the respective combat achievement tiers'."
+        }
+      }
+    ],
+    "notes": "Boss task via the Like a Boss unlock: 'Players who have unlocked the Like a boss ability via spending 200 Slayer reward points can be assigned bosses by Konar, Nieve/Steve, Duradel/Kuradal, or Krystilia' (Boss page); Krystilia only rolls Wilderness bosses so Zilyana comes from Konar, Nieve/Steve or Duradel/Kuradal. Boss tasks award an extra 5,000 Slayer XP on completion. Brimstone keys drop only on a Konar task. No 'Slayer task/Commander Zilyana' page exists; the boss page was used.",
+    "_verification": {
+      "corrections": [
+        "All quoted evidence located verbatim on Commander Zilyana, Boss, God Wars Dungeon, Dwarf multicannon and Multicombat area pages; LocLine '|location = [[God Wars Dungeon]] (Saradomin boss room)' is the only location and matches.",
+        "Infobox confirmed: slayxp = 350, attack style Crush/Magic, poisonresistance 100, venomresistance 100, immunecannon = No.",
+        "Boss page assignable table row 'Commander Zilyana | God Wars Dungeon | Slayer 1 | Agility 70, completion of Death Plateau' confirmed; Krystilia Wilderness-only and +5,000 XP lines confirmed.",
+        "Added the Combat Achievement kill-count reduction (35/30/25/15) to the kill-count requirement, sourced from the Zilyana page footnote."
+      ],
+      "confirmed": 12,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Zombies",
+    "wikiTaskPage": "Slayer task/Zombies",
+    "monsterPages": [
+      "Zombie",
+      "Zombie pirate",
+      "Undead Druid",
+      "Vorkath",
+      "Zombie (Wilderness)"
+    ],
+    "bossTask": false,
+    "summary": "Zombies are a low-level task (10 Combat) from Turael, Spria, Mazchna and Krystilia that most players finish as fast as possible because ordinary zombies have a very poor drop table. Undead cows and chickens at Alice's farm west of the Ectofuntus are the quickest kills, while Undead Druids in Forthos Dungeon or Vorkath are the profitable alternatives for players with the requirements. On a Krystilia Wilderness task, zombie pirates at the Chaos Temple are lucrative if the Medium Wilderness Diary is done; otherwise the Graveyard of Shadows and eastern Ruins are the Wilderness options. Zombies have a 50 percent elemental weakness to fire spells and use melee.",
+    "recommendedStyle": "Any",
+    "styleNotes": "Zombies are undead (Salve amulet works, including on Vorkath), have a 50 percent elemental weakness to fire spells, are not poisonous, and are not cannon-immune; the Magic Guild dungeon zombies cannot be killed with melee.",
+    "requiredItems": [],
+    "usefulItems": [
+      "Salve amulet (undead)",
+      "Fire spells (50% elemental weakness)",
+      "Dwarf multicannon at Graveyard of Shadows or Alice's farm",
+      "Teleport anchoring scroll (Chaos Temple, against elder chaos druid teleports)",
+      "Amulet of avarice (notes zombie pirate drops)"
+    ],
+    "superior": null,
+    "alternatives": [
+      "Vorkath",
+      "Zombie pirate",
+      "Undead cow",
+      "Undead chicken",
+      "Undead Druid",
+      "Monkey Zombie",
+      "Undead one",
+      "Undead Zealot",
+      "Zombie rat",
+      "Zombie swab",
+      "Sorebones",
+      "Armoured zombie (Zemouregal's Base)",
+      "Armoured zombie (Zemouregal's Fort)",
+      "Undead Lumberjack",
+      "Zogre"
+    ],
+    "xpPerKill": 22,
+    "locations": [
+      {
+        "name": "Alice's farm west of the Ectofuntus",
+        "displayName": "Alice's farm west of the Ectofuntus (undead cows and chickens – fastest)",
+        "rank": 1,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Priest in Peril"
+        ],
+        "notes": "Undead cows (2) and undead chickens (1) give 8 and 3 Slayer XP; the task page says they are good for players who wish to quickly complete the task. Safespottable; 10 spawns.",
+        "evidence": {
+          "multi": "Location Comparison table row \"Alice's farm west of the Ectofuntus | 10 | Multicombat {{No}}\" (Slayer task/Zombies).",
+          "cannon": "Location Comparison table row \"Alice's farm ... | Cannonable {{Yes}}\" (Slayer task/Zombies).",
+          "requirements": "'Requires completion of [[Priest in Peril]].' (Slayer task/Zombies, Location Comparison)."
+        }
+      },
+      {
+        "name": "Forthos Dungeon",
+        "displayName": "Forthos Dungeon (Undead Druids – profitable)",
+        "rank": 2,
+        "multi": false,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "Undead Druids (level 105, 147 Slayer XP on the monster page, 140 on the task page) in the Crypt of the Moon, Temple Library and a small chamber near Brother Aimeri; they only use magic if attacked from a distance, an altar and grubby chest allow long trips, and red dragons are nearby.",
+        "evidence": {
+          "multi": "Location Comparison table row \"Forthos Dungeon | 18 | Multicombat {{No}}\" (Slayer task/Zombies).",
+          "cannon": "Location Comparison table row \"Forthos Dungeon | Cannonable {{No}}\" (Slayer task/Zombies); Dwarf multicannon prohibited list: '*[[Forthos Dungeon]] - A mysterious presence won't let you set up a cannon here.'",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Chaos Temple (Wilderness)",
+        "displayName": "Chaos Temple – level 11 Wilderness (zombie pirates, Krystilia)",
+        "rank": 3,
+        "multi": true,
+        "cannon": true,
+        "wilderness": true,
+        "wildernessLevelMin": 11,
+        "wildernessLevelMax": 12,
+        "konarAssignable": false,
+        "requirements": [
+          "Medium Wilderness Diary recommended for the improved drop table"
+        ],
+        "notes": "34 zombie pirate spawns around the level 11-12 Wilderness temple north of Varrock; 13 elder chaos druids that teleblock and teleport players share the area. Burning amulet teleports to the north entrance in level 15 Wilderness. Zombie pirate Slayer XP is 30/35/40.",
+        "evidence": {
+          "multi": "Location Comparison table row \"Chaos Temple (Wilderness) | 34 | Multicombat {{Yes}}\" (Slayer task/Zombies); 'The area is also [[multi-combat]], and contains many elder chaos druids' (Chaos Temple (Wilderness)). Note: the Multicombat area page's older Wilderness list excludes 'the [[Chaos Temple]] in the eastern Wilderness'. Chaos Temple (Wilderness) monster table: '{{LocationMonsterTableLine|name=Zombie pirate|...|levels=22, 28, 34|spawns=34}}' and '...name=Elder Chaos druid|...|spawns=13'.",
+          "cannon": "Location Comparison table row \"Chaos Temple (Wilderness) | Cannonable {{Yes}}\" (Slayer task/Zombies).",
+          "requirements": "'zombies are more lucrative, with players having the option of killing zombie pirates, who have a generous drop table provided that the player has completed the Medium Wilderness Diary' (Slayer task/Zombies); 'Zombie pirates can be found at the Chaos Temple in level 11 Wilderness' (Zombie pirate); infobox '|wilderness = 11' and 'the temple in level 11-12 Wilderness' (Chaos Temple (Wilderness))."
+        }
+      },
+      {
+        "name": "Graveyard of Shadows (Wilderness)",
+        "displayName": "Graveyard of Shadows – level 18-21 Wilderness (Krystilia, cannon)",
+        "rank": 4,
+        "multi": true,
+        "cannon": true,
+        "wilderness": true,
+        "wildernessLevelMin": 18,
+        "wildernessLevelMax": 21,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "21 level 18/24 zombie spawns; the task page calls it a popular PK hotspot next to Calvar'ion's lair but says it is more open so a cannon is more effective there. Close to the Ferox Enclave. Safespottable.",
+        "evidence": {
+          "multi": "Multicombat area list, 'Several places in the Wilderness including the areas at or around:' '**The [[Graveyard of Shadows]]' (Multicombat area); the Graveyard of Shadows page itself is silent. The dedicated list overrides the Slayer task/Zombies Location Comparison row Multicombat {{No}}. Changed False -> True in the consolidation pass (2026-09-23).",
+          "cannon": "Location Comparison table row \"Graveyard of Shadows (Wilderness) | Cannonable {{Yes}}\" (Slayer task/Zombies); 'The Graveyard of Shadows is more open and thus a cannon is more effective there.' (Slayer task/Zombies).",
+          "requirements": "'The Graveyard of Shadows, located at levels 18–21 in the Wilderness' and infobox '|wilderness = 18-21' (Graveyard of Shadows); zombie levels from Zombie (Wilderness) LocLine '|location = [[Graveyard of Shadows]] ([[Wilderness]])' '|levels = 18, 24'."
+        }
+      },
+      {
+        "name": "Ruins (east) (Wilderness)",
+        "displayName": "Eastern Ruins – level 25-28 Wilderness (Krystilia)",
+        "rank": 5,
+        "multi": false,
+        "cannon": true,
+        "wilderness": true,
+        "wildernessLevelMin": 25,
+        "wildernessLevelMax": 28,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "15 level 18 zombie spawns; the task page names it a PK hotspot next to Spindel's lair. Safespottable. Single-way combat area.",
+        "evidence": {
+          "multi": "Location Comparison table row \"Ruins (east) (Wilderness) | 15 | Multicombat {{No}}\" (Slayer task/Zombies). Note: the Multicombat area page lists 'The [[Ruins (east)|Abandoned Farm]]' as multi, which conflicts; task page value used. Ruins (east) page itself: 'They lie a [[single-way combat]] area in between level 26 to 29 Wilderness', which supports the task page.",
+          "cannon": "Location Comparison table row \"Ruins (east) (Wilderness) | Cannonable {{Yes}}\" (Slayer task/Zombies).",
+          "requirements": "Ruins (east) infobox '|wilderness = 25-28'; body text: 'They lie a [[single-way combat]] area in between level 26 to 29 Wilderness' (Ruins (east)) - infobox value used, body text differs by one level."
+        }
+      },
+      {
+        "name": "Stronghold of Security (Catacomb of Famine)",
+        "displayName": "Stronghold of Security – level 2 Catacomb of Famine (F2P, many spawns)",
+        "rank": 6,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "52 zombie spawns (levels 30, 44, 53) in three groups on the second level; safespottable and cannonable.",
+        "evidence": {
+          "multi": "Location Comparison table row \"Stronghold of Security (Level 2, Catacomb of Famine) | 52 | Multicombat {{No}}\" (Slayer task/Zombies).",
+          "cannon": "Location Comparison table row \"Stronghold of Security ... | Cannonable {{Yes}}\" (Slayer task/Zombies).",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Varrock Sewers",
+        "displayName": "Varrock Sewers (F2P, multi, cannon)",
+        "rank": 7,
+        "multi": true,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "6 level 13/24 zombie spawns in the hallway and the ladder room; safespottable.",
+        "evidence": {
+          "multi": "Location Comparison table row \"Varrock Sewers | 6 | Multicombat {{Yes}}\" (Slayer task/Zombies); Multicombat area page lists '*[[Varrock Sewers]]'.",
+          "cannon": "Location Comparison table row \"Varrock Sewers | Cannonable {{Yes}}\" (Slayer task/Zombies).",
+          "requirements": "not stated"
+        }
+      },
+      {
+        "name": "Ungael",
+        "displayName": "Ungael – Vorkath (boss alternative)",
+        "rank": 8,
+        "multi": true,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Partial completion of Dragon Slayer II"
+        ],
+        "notes": "Vorkath counts as a zombie and blue dragon for Slayer; 750 Slayer XP post-quest (460 during the quest, combat 392). Salve amulet works on Vorkath but does not stack with the Slayer helmet. Vorkath is immune to cannons.",
+        "evidence": {
+          "multi": "Location Comparison table row \"Ungael | 1 | Multicombat {{Yes}}\" (Slayer task/Zombies).",
+          "cannon": "Location Comparison table row \"Ungael | Cannonable {{No}}\" (Slayer task/Zombies); Dwarf multicannon prohibited list: '*[[Ungael]] ([[Vorkath]] area) - The intense cold threatens to crack the metal of your cannon.'; Vorkath infobox '|immunecannon = Yes'.",
+          "requirements": "'Requires partial completion of [[Dragon Slayer II]].' (Slayer task/Zombies, Monster Variants table); 'Vorkath is the highest level alternative to this task, and can only be accessed during and after Dragon Slayer II.' (Slayer task/Zombies)."
+        }
+      }
+    ],
+    "notes": "Assigned by Krystilia, Turael, Spria and Mazchna only (Slayer task list row), so Konar never assigns it and Krystilia tasks must be done in the Wilderness. 'The Zombies Champion does not count towards the task' (Slayer task/Zombies) and the Zombies Champion page says 'The Zombie Champion does not count as a zombie for the purpose of a Slayer task.' Zogres and Monkey Zombies: the Slayer task list row says 'Any other zombie-class except Zogres and Zombie monkeys', but the task page says 'Monkey Zombies, ..., Zogres, and Zombie rats can all be killed to satisfy the task' and both monster pages carry {{HasTask|...|Zombies}} ('{{HasTask|Ogres|Zombies}}' on Zogre, '{{HasTask|Monkeys|Zombies}}' on Monkey Zombie), so they are kept as alternatives with this conflict noted. Task page Slayer XP for plain zombies is 22-71 by level; xpPerKill uses the level-13 zombie infobox value (22). Other task-page locations not listed here: Ape Atoll Dungeon and Temple of Marimbo Dungeon (Monkey Zombies, Monkey Madness I), Braindeath Island and Harmony Island incl. ship and underground (Rum Deal / The Great Brain Robbery), Draynor Sewers, Edgeville Dungeon and mine, Ardougne Sewers, Glarial's Tomb (no weapons, armour or runes allowed), Jiggig and Jiggig Dungeon (Zogres take 75% less damage except from brutal arrows and Crumble Undead), Magic Guild dungeon (66 Magic, magic-only), Melzar's Maze, Shilo Village entrance, South of the Graveyard of Heroes (4 spawns, multi, cannonable), Tree Gnome Village dungeon, West Ardougne cemetery (Plague City), Shade Catacombs (Undead Zealots), Temple Trekking / Burgh de Rott Ramble (Undead Lumberjacks, 0 XP but count), Temple of Ah Za Rhoon and Tomb of Rashiliyia (Shilo Village quest only), Zemouregal's Base and Fort. The Zombie monster page additionally has LocLines for Underground Pass (dungeon) (north-western and south-eastern areas), which the task page does not list.",
+    "_verification": {
+      "corrections": [
+        "Removed 'both PK hotspots' from the summary (no warnings about other players in summaries); the wiki sentence about Calvar'ion/Spindel remains in location notes only.",
+        "Ruins (east): wilderness level was null/'not stated'; filled 25-28 from the Ruins (east) infobox '|wilderness = 25-28' (body text says 'between level 26 to 29 Wilderness'; discrepancy noted in evidence). Its single-way combat status is also confirmed on that page.",
+        "All Location Comparison table quotes (Alice's farm, Forthos, Chaos Temple, Graveyard, Ruins (east), Stronghold, Varrock Sewers, Ungael) and the prose quotes (Medium Wilderness Diary, cannon more effective at Graveyard, Vorkath highest level alternative, Priest in Peril, Dragon Slayer II) found verbatim on Slayer task/Zombies.",
+        "Dwarf multicannon prohibited-list quotes for Forthos Dungeon and Ungael found verbatim; Vorkath '|immunecannon = Yes' confirmed; Multicombat area page entries for Varrock Sewers, Graveyard of Shadows, Abandoned Farm and Chaos Temple exclusion confirmed.",
+        "Infobox checks: Zombie level 13 slayxp 22, elementalweaknesstype Fire / 50%, attributes undead, immunecannon No; Zombie pirate slayxp 30/35/40; Undead Druid slayxp 147; Vorkath slayxp 750/460, combat 732/392; Undead cow 8, Undead chicken 3.",
+        "Zombie pirate, Chaos Temple (Wilderness) (13 elder chaos druids, 34 pirate spawns, burning amulet level 15 north entrance, multi-combat sentence), Graveyard of Shadows 18-21, Undead Druid sections (Crypt of the Moon / Temple Library / chamber near Brother Aimeri), Stronghold 52 spawns levels 30/44/53 and Varrock Sewers 6 spawns levels 13/24 all confirmed on their pages.",
+        "Alternatives: all 15 entries appear in the task page Monster Variants table; Zogre and Monkey Zombie kept despite the Slayer task list row excluding them, because the task page and both monster pages' HasTask templates say they count (conflict recorded in notes).",
+        "Notes expanded with the omitted task-page locations (South of the Graveyard of Heroes, Jiggig Dungeon, Shade Catacombs, Harmony Island ship/underground, Temple Trekking, Temple of Ah Za Rhoon, Tomb of Rashiliyia) and the Underground Pass LocLines on the Zombie page."
+      ],
+      "confirmed": 52,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "TzKal-Zuk",
+    "wikiTaskPage": "TzKal-Zuk",
+    "monsterPages": [
+      "TzKal-Zuk",
+      "Inferno"
+    ],
+    "bossTask": true,
+    "summary": "TzKal-Zuk is the final monster of the Inferno in Mor Ul Rek and can be chosen in place of a TzHaar slayer task after unlocking Hot Stuff, provided the player has already defeated Zuk once off-task; the Inferno requires a one-time fire cape payment to TzHaar-Ket-Keh.",
+    "recommendedStyle": "Any",
+    "styleNotes": "Attacks with Typeless Magic and Typeless Ranged; poison resistance 100 and venom resistance 100 per the infobox (effectively immune to poison and venom) and immune to strong burns.",
+    "requiredItems": [
+      "Fire cape (one-time payment to TzHaar-Ket-Keh to access the Inferno)"
+    ],
+    "usefulItems": [],
+    "superior": null,
+    "alternatives": [],
+    "xpPerKill": 101890,
+    "locations": [
+      {
+        "name": "Inferno (Mor Ul Rek)",
+        "displayName": "The Inferno – Mor Ul Rek (solo minigame)",
+        "rank": 1,
+        "multi": "unknown",
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Hot Stuff unlock (100 Slayer reward points)",
+          "Must have defeated TzKal-Zuk at least once off-task to be offered the option",
+          "Fire cape given to TzHaar-Ket-Keh (one-time)"
+        ],
+        "notes": "The TzHaar task page has no LocLine; location taken from the Inferno page infobox ('|location = [[Mor Ul Rek]]'). The task covers all monsters inside the Inferno and is cancelled if the player is defeated.",
+        "evidence": {
+          "multi": "not stated on the TzKal-Zuk or Inferno pages; the Multicombat area page lists 'Mor Ul Rek' and 'Fight Pits in Mor Ul Rek' but not the Inferno itself.",
+          "cannon": "Dwarf multicannon prohibited list: '*[[Mor Ul Rek]], [[TzHaar Fight Cave]] and [[TzHaar Fight Pit]] - The TzHaar won't be happy if you set up a cannon here.'",
+          "requirements": "'Zuk can be killed in place of a TzHaar slayer assignment after unlocking the perk Hot Stuff for 100 slayer reward points. Unlike TzTok-Jad, in order to be given the option to be assigned Zuk, the player must have defeated him at least once off-task.' (TzKal-Zuk); 'In order to access the Inferno, players must give TzHaar-Ket-Keh a fire cape. This is a one-time fee' (Inferno)."
+        }
+      }
+    ],
+    "notes": "Not a Like a Boss assignment: Zuk is absent from the Boss page's 'Only the following bosses can be assigned' table; it is an alternative for the TzHaar task, which the Slayer task list assigns from Chaeldar, Nieve and Duradel with 'Hot stuff unlocked' (so Konar cannot assign it). 'Players who defeat Zuk as part of a slayer task will be given 101,890 Slayer experience, and when accounting for the waves and its monsters, around ~125,000 experience in a successful attempt.' (TzKal-Zuk). 'If the player has previously defeated TzKal-Zuk, it may be chosen as a Slayer task when assigned TzHaar, which will affect all monsters inside the Inferno. The task will also be cancelled in the event the player is defeated' (Inferno). Slayer task/TzHaar: 'the Slayer master may instead allow the player to kill TzTok-Jad or TzKal-Zuk, with the latter requiring that the player has at least one TzKal-Zuk kill count. This can be further increased to two and three kills per task with the completion of the master and grandmaster combat achievement tiers respectively.' Jal-Nib-Rek pet rate improves to 1/75 on task ('Jal-Nib-Rek drop rate is 1/75 if TzKal-Zuk is killed while on a TzHaar Slayer task.'). TzTok-Jad is the other option offered instead of a TzHaar assignment, chosen at assignment time; whether Jad counts once the Zuk option is taken is not stated on the pages read (unknown).",
+    "_verification": {
+      "corrections": [
+        "Removed 'TzTok-Jad' from alternatives: Slayer task/TzHaar says the master 'may instead allow the player to kill TzTok-Jad or TzKal-Zuk' as an either/or choice at assignment; no page read says Jad counts toward a task already set as Zuk. Recorded as unknown in notes.",
+        "All quotes found verbatim: TzKal-Zuk page (Hot Stuff, off-task kill, 101,890 / ~125,000 XP), Inferno page ('|location = [[Mor Ul Rek]]', one-time fire cape fee, task cancelled on defeat), Dwarf multicannon Mor Ul Rek line, Multicombat area lines 'Fight Pits in Mor Ul Rek' and 'Mor Ul Rek' (Inferno not listed, so multi stays unknown).",
+        "Infobox confirmed: slayxp = 101890, attack style Typeless Magic / Typeless Ranged, poisonresistance 100, venomresistance 100, '|immuneburn = Immune to strong burns'.",
+        "Confirmed TzKal-Zuk is absent from the Boss page's assignable-boss table (its only Boss page appearances are in the general boss gallery, lines 713-714) and that the Slayer task list TzHaar row lists TzKal-Zuk under Chaeldar/Nieve/Duradel with 'Hot stuff unlocked'.",
+        "Added the master/grandmaster Combat Achievement note (two and three Zuk kills per task) from Slayer task/TzHaar."
+      ],
+      "confirmed": 11,
+      "downgraded": 1
+    }
+  },
+  {
+    "task": "Zulrah",
+    "wikiTaskPage": "Zulrah",
+    "monsterPages": [
+      "Zulrah"
+    ],
+    "bossTask": true,
+    "summary": "Zulrah is a solo-only level 725 snake boss fought at Zulrah's Shrine east of Zul-Andra in the Poison Waste, assigned as a boss task after unlocking Like a Boss and requiring Regicide (to the point of reaching Port Tyras) plus speaking to High Priestess Zul-Harcinqa to be allowed on the sacrificial boat.",
+    "recommendedStyle": "Any",
+    "styleNotes": "Infobox lists Ranged, Typeless and Magic/Ranged attack styles by form; inflicts venom; poison resistance 100 and venom resistance 100 (effectively immune); the shrine cannot be reached with melee except halberds.",
+    "requiredItems": [],
+    "usefulItems": [
+      "Anti-venom, anti-venom+ or serpentine helm (venom)",
+      "Zul-andra teleport scroll",
+      "Fairy ring BJS with 76 Agility (boostable) for the stepping stones"
+    ],
+    "superior": null,
+    "alternatives": [],
+    "xpPerKill": 500,
+    "locations": [
+      {
+        "name": "Zulrah's Shrine (east of Zul-Andra)",
+        "displayName": "Zulrah's Shrine – east of Zul-Andra, Poison Waste (instanced, solo)",
+        "rank": 1,
+        "multi": "unknown",
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Like a Boss unlock (200 Slayer reward points)",
+          "Regicide completed to the point of reaching Port Tyras",
+          "Spoken to High Priestess Zul-Harcinqa to offer yourself as the sacrifice"
+        ],
+        "notes": "Travel by Zul-andra teleport scroll or fairy ring BJS and the stepping stones (76 Agility, boostable); board the sacrificial boat at Zul-Andra. Death items are held by Priestess Zul-Gwenwynig and are permanently lost on a further unsafe death before reclaiming.",
+        "evidence": {
+          "multi": "not stated; the Zulrah page only says it is a 'solo-only snake boss' and the shrine is not on the Multicombat area list.",
+          "cannon": "Dwarf multicannon prohibited list: \"*[[Zulrah's Shrine]] - It's far too damp for you to set up a cannon here.\"",
+          "requirements": "'Before the player can fight Zulrah, players must have completed Regicide to the point of reaching Port Tyras, as well as having spoken with High Priestess Zul-Harcinqa to offer themselves as the sacrifice in place of the gnome child' (Zulrah); Boss page boss-slayer table row: 'Zulrah | Poison Waste | Slayer 1 | Completion of Regicide' (Boss)."
+        }
+      }
+    ],
+    "notes": "Boss task via Like a Boss (200 points): assignable by Konar, Nieve/Steve or Duradel/Kuradal; Krystilia only rolls Wilderness bosses (Boss page). The Zulrah page has no LocLine; the location comes from its Transportation section ('Zulrah is located at a shrine east of Zul-Andra'). Killing Zulrah is also a hard Western Provinces Diary task. Boss tasks award an extra 5,000 Slayer XP on completion. No 'Slayer task/Zulrah' page exists; the boss page was used.",
+    "_verification": {
+      "corrections": [
+        "All quotes found verbatim on the Zulrah page (solo-only, Regicide to Port Tyras + Zul-Harcinqa, 'located at a shrine east of Zul-Andra', fairy ring BJS / 76 Agility boostable, Zul-andra teleport scroll, halberd-only melee, Zul-Gwenwynig item retrieval, hard Western Provinces Diary), the Boss page row 'Zulrah | Poison Waste | Slayer 1 | Completion of Regicide', and the Dwarf multicannon line for Zulrah's Shrine.",
+        "Infobox confirmed: combat 725, slayxp = 500, poisonous Yes (venom), attack style1 Ranged / style2 Typeless / style3 Magic, Ranged, poisonresistance 100, venomresistance 100.",
+        "Confirmed the Zulrah page has no LocLine (grep found none) and the shrine is not on the Multicombat area list, so multi stays unknown.",
+        "No fight mechanics present in summary/notes; no changes needed."
+      ],
+      "confirmed": 12,
+      "downgraded": 0
+    }
+  }
+]
