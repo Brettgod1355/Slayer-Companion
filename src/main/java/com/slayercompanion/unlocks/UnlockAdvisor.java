@@ -33,7 +33,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import javax.inject.Inject;
+import javax.annotation.Nullable;
 import javax.inject.Singleton;
+import net.runelite.client.game.ItemManager;
+import net.runelite.client.util.QuantityFormatter;
 
 /**
  * Merges the game's own reward list (names, costs, owned state from the cache and varbits) with
@@ -45,12 +48,14 @@ public class UnlockAdvisor
 {
 	private final SlayerData data;
 	private final LiveSlayerCatalog catalog;
+	private final ItemManager itemManager;
 
 	@Inject
-	UnlockAdvisor(SlayerData data, LiveSlayerCatalog catalog)
+	UnlockAdvisor(SlayerData data, LiveSlayerCatalog catalog, ItemManager itemManager)
 	{
 		this.data = data;
 		this.catalog = catalog;
+		this.itemManager = itemManager;
 	}
 
 	public List<UnlockAdvice> advise(int points)
@@ -76,7 +81,8 @@ public class UnlockAdvisor
 					b == null ? null : b.getCategory(),
 					b == null ? null : b.getRationale(),
 					effect,
-					tasks(b)));
+					tasks(b),
+					elsewhere(b)));
 			}
 		}
 		// Bundled entries the live list did not have (e.g. when the cache read failed).
@@ -84,7 +90,7 @@ public class UnlockAdvisor
 		{
 			out.add(new UnlockAdvice(b.getName(), b.getEffect() == null ? "" : b.getEffect(), b.getCost(), null,
 				points >= b.getCost(), b.getPriority(), b.getCategory(), b.getRationale(),
-				b.getEffect() == null ? "" : b.getEffect(), tasks(b)));
+				b.getEffect() == null ? "" : b.getEffect(), tasks(b), elsewhere(b)));
 		}
 		out.sort((a, c) ->
 		{
@@ -97,6 +103,25 @@ public class UnlockAdvisor
 			return byPriority != 0 ? byPriority : Integer.compare(a.getCost(), c.getCost());
 		});
 		return Collections.unmodifiableList(out);
+	}
+
+	/** The cheaper route, with the item's current Grand Exchange price when the bundle names one. */
+	@Nullable
+	private String elsewhere(@Nullable UnlockInfo b)
+	{
+		if (b == null || b.getElsewhere() == null || b.getElsewhere().isEmpty())
+		{
+			return null;
+		}
+		if (b.getElsewhereItemId() != null)
+		{
+			int price = itemManager.getItemPrice(b.getElsewhereItemId());
+			if (price > 0)
+			{
+				return b.getElsewhere() + " The note is about " + QuantityFormatter.quantityToStackSize(price) + " gp on the Grand Exchange right now.";
+			}
+		}
+		return b.getElsewhere();
 	}
 
 	/** Real task names only; bundled placeholders like "(all tasks)" are dropped. */

@@ -53,4 +53,10 @@ public class UnlockInfo
 	private List<String> audience;
 	@Nullable
 	private String rationale;
+	/** A cheaper or better way to get the same thing, when one exists. */
+	@Nullable
+	private String elsewhere;
+	/** Tradeable item to price on the Grand Exchange for the {@code elsewhere} route. */
+	@Nullable
+	private Integer elsewhereItemId;
 }

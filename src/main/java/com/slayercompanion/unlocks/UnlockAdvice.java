@@ -48,4 +48,7 @@ public class UnlockAdvice
 	String effect;
 	/** Task names this unlock is about; empty for general unlocks. */
 	java.util.List<String> affectsTasks;
+	/** Cheaper way to get it (with a live GE price appended when known), or null. */
+	@Nullable
+	String elsewhere;
 }
