@@ -46,7 +46,7 @@ import net.runelite.client.util.QuantityFormatter;
 /** Small Swing helpers shared by the tabs. Text always wraps; names are never truncated. */
 final class Ui
 {
-	static final int CONTENT_WIDTH = 200;
+	static final int CONTENT_WIDTH = 196;
 	static final Color GOOD = ColorScheme.PROGRESS_COMPLETE_COLOR;
 	static final Color WARN = ColorScheme.PROGRESS_INPROGRESS_COLOR;
 	static final Color BAD = ColorScheme.PROGRESS_ERROR_COLOR;
@@ -95,7 +95,7 @@ final class Ui
 	{
 		JLabel l = new JLabel(html(text));
 		l.setForeground(color);
-		l.setFont(FontManager.getRunescapeSmallFont());
+		l.setFont(FontManager.getRunescapeFont());
 		l.setAlignmentX(Component.LEFT_ALIGNMENT);
 		l.setVerticalAlignment(SwingConstants.TOP);
 		return l;
@@ -124,11 +124,11 @@ final class Ui
 		row.setAlignmentX(Component.LEFT_ALIGNMENT);
 		JLabel k = new JLabel(key);
 		k.setForeground(MUTED);
-		k.setFont(FontManager.getRunescapeSmallFont());
+		k.setFont(FontManager.getRunescapeFont());
 		int valueWidth = (CONTENT_WIDTH - 24) - k.getPreferredSize().width - 6;
 		JLabel v = new JLabel(html(value, valueWidth));
 		v.setForeground(valueColor);
-		v.setFont(FontManager.getRunescapeSmallFont());
+		v.setFont(FontManager.getRunescapeFont());
 		v.setHorizontalAlignment(SwingConstants.RIGHT);
 		row.add(k, BorderLayout.WEST);
 		row.add(v, BorderLayout.CENTER);
@@ -144,7 +144,7 @@ final class Ui
 	static JButton button(String text, String tooltip, Runnable onClick)
 	{
 		JButton b = new JButton(text);
-		b.setFont(FontManager.getRunescapeSmallFont());
+		b.setFont(FontManager.getRunescapeFont());
 		b.setToolTipText(tooltip);
 		b.setFocusPainted(false);
 		b.addActionListener(e -> onClick.run());
@@ -187,7 +187,7 @@ final class Ui
 			b.setOpaque(true);
 			b.setBackground(ColorScheme.DARK_GRAY_COLOR);
 			b.setForeground(Color.decode(badges[i + 1]));
-			b.setFont(FontManager.getRunescapeSmallFont());
+			b.setFont(FontManager.getRunescapeFont());
 			b.setBorder(BorderFactory.createEmptyBorder(1, 4, 1, 4));
 			row.add(b);
 			inRow++;
@@ -213,6 +213,6 @@ final class Ui
 
 	static Font small()
 	{
-		return FontManager.getRunescapeSmallFont();
+		return FontManager.getRunescapeFont();
 	}
 }
