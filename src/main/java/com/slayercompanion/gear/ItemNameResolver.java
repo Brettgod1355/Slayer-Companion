@@ -81,13 +81,13 @@ public class ItemNameResolver
 		}
 		List<Integer> ids = new ArrayList<>();
 		addExact(key, ids);
+		// Variants (imbued, ornamented, charged...) count as owning the item; exact ids stay first.
+		for (String suffix : VARIANT_SUFFIXES)
+		{
+			addExact(key + suffix, ids);
+		}
 		if (ids.isEmpty())
 		{
-			// Try the name with a variant suffix, and the base name of a variant.
-			for (String suffix : VARIANT_SUFFIXES)
-			{
-				addExact(key + suffix, ids);
-			}
 			int paren = key.indexOf(" (");
 			if (paren > 0)
 			{
@@ -99,7 +99,8 @@ public class ItemNameResolver
 			// Last resort: prefix match on the search index (e.g. "Ardougne cloak" -> all tiers).
 			for (ItemPrice p : itemManager.search(key))
 			{
-				if (p.getName().toLowerCase().startsWith(key))
+				String n = p.getName().toLowerCase();
+				if (n.startsWith(key) && (n.length() == key.length() || n.charAt(key.length()) == ' ' || n.charAt(key.length()) == '('))
 				{
 					ids.add(itemManager.canonicalize(p.getId()));
 				}

@@ -45,6 +45,7 @@ class GearTab extends JPanel
 	private final PanelActions actions;
 	private int selectedTable;
 	private String selectedTaskName;
+	private int lastDefault = -1;
 
 	GearTab(PanelActions actions)
 	{
@@ -65,9 +66,10 @@ class GearTab extends JPanel
 		else
 		{
 			String taskName = m.getTask().getName();
-			if (!taskName.equals(selectedTaskName))
+			if (!taskName.equals(selectedTaskName) || lastDefault != m.getDefaultGearTable())
 			{
 				selectedTaskName = taskName;
+				lastDefault = m.getDefaultGearTable();
 				selectedTable = -1;
 			}
 			if (!m.isBankKnown())
@@ -85,7 +87,7 @@ class GearTab extends JPanel
 			{
 				if (selectedTable < 0 || selectedTable >= tables.size())
 				{
-					selectedTable = info == null ? 0 : defaultIndex(tables, info);
+					selectedTable = Math.max(0, Math.min(tables.size() - 1, m.getDefaultGearTable()));
 				}
 				if (m.isGearIsGeneral())
 				{
@@ -118,7 +120,7 @@ class GearTab extends JPanel
 					card.add(slotRow(a));
 				}
 				card.add(Ui.gap(2));
-				card.add(Ui.wrap("Green = equipped, white = in bank, orange = a lower tier than the wiki's best, red = none of the listed items owned.", Ui.MUTED));
+				card.add(Ui.wrap("Green = worn, white = owned (bank or inventory) and the wiki's top tier, orange = owned but a lower tier and not worn, red = none of the listed items owned.", Ui.MUTED));
 				col.add(card);
 				col.add(Ui.gap(4));
 			}
@@ -213,21 +215,5 @@ class GearTab extends JPanel
 			return t.getLabel();
 		}
 		return t.getStyle() == null ? "Gear" : t.getStyle();
-	}
-
-	private static int defaultIndex(List<GearTable> tables, TaskInfo info)
-	{
-		String preferred = info.getRecommendedStyle();
-		if (preferred != null)
-		{
-			for (int i = 0; i < tables.size(); i++)
-			{
-				if (preferred.equalsIgnoreCase(tables.get(i).getStyle()))
-				{
-					return i;
-				}
-			}
-		}
-		return 0;
 	}
 }

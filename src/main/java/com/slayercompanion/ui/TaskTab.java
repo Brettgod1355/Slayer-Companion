@@ -63,7 +63,7 @@ class TaskTab extends JPanel
 		}
 		else if (info == null)
 		{
-			col.add(Ui.wrap("No bundled notes for \"" + task.getName() + "\" yet. The Locations and Gear tabs will be empty for this task.", Ui.WARN));
+			col.add(Ui.wrap("No bundled notes for \"" + task.getName() + "\" yet. The Where and Gear tabs will have little for this task.", Ui.WARN));
 		}
 		else
 		{
@@ -175,7 +175,14 @@ class TaskTab extends JPanel
 					for (String r : required)
 					{
 						boolean missing = m.getMissingRequiredItems().contains(r);
-						items.add(Ui.wrap((missing ? "✗ " : "✓ ") + r + " (required)", missing ? Ui.BAD : Ui.GOOD));
+						if (!m.isBankKnown() && missing)
+						{
+							items.add(Ui.wrap("? " + r + " (required)", Ui.MUTED));
+						}
+						else
+						{
+							items.add(Ui.wrap((missing ? "✗ " : "✓ ") + r + " (required)", missing ? Ui.BAD : Ui.GOOD));
+						}
 					}
 				}
 				if (useful != null)

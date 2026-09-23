@@ -31,4 +31,6 @@ import lombok.Data;
 public class UnlocksFile
 {
 	private List<UnlockInfo> unlocks;
+	@javax.annotation.Nullable
+	private List<UnlockInfo> cosmetics;
 }

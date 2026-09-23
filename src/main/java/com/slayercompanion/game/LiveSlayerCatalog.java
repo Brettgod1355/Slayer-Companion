@@ -34,6 +34,7 @@ import lombok.Value;
 import lombok.extern.slf4j.Slf4j;
 import net.runelite.api.Client;
 import net.runelite.api.gameval.DBTableID;
+import net.runelite.api.gameval.VarbitID;
 
 /**
  * Reads Slayer reference data that the game client already carries in its cache database tables:
@@ -72,6 +73,8 @@ public class LiveSlayerCatalog
 
 	private List<MasterAssignment> assignments;
 	private List<Unlock> unlocks;
+	/** True once the "Bigger and Badder" row's bit matched its known varbit id. */
+	private boolean bitsAreVarbits;
 
 	@Inject
 	LiveSlayerCatalog(Client client)
@@ -124,7 +127,8 @@ public class LiveSlayerCatalog
 	 */
 	public Boolean isUnlocked(Unlock unlock)
 	{
-		if (unlock.getBit() <= 0)
+		unlocks();
+		if (!bitsAreVarbits || unlock.getBit() <= 0)
 		{
 			return null;
 		}
@@ -202,6 +206,19 @@ public class LiveSlayerCatalog
 			log.debug("Could not read slayer unlocks from cache", e);
 		}
 		out.sort((a, b) -> Integer.compare(a.getListPosition(), b.getListPosition()));
+		// The cache column is assumed to hold varbit ids; prove it on a row whose varbit RuneLite names.
+		bitsAreVarbits = false;
+		for (Unlock u : out)
+		{
+			if ("biggerandbadder".equals(u.getName().toLowerCase().replaceAll("[^a-z0-9]", "")))
+			{
+				bitsAreVarbits = u.getBit() == VarbitID.SLAYER_UNLOCK_SUPERIORMOBS;
+			}
+		}
+		if (!bitsAreVarbits)
+		{
+			log.debug("SlayerUnlock.COL_BIT does not look like a varbit id; owned state unavailable");
+		}
 		return Collections.unmodifiableList(out);
 	}
 

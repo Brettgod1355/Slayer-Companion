@@ -102,7 +102,7 @@ class LocationsTab extends JPanel
 				badges.add("#e6961e");
 				break;
 			default:
-				badges.add("Multi: unknown");
+				badges.add("Multi ?");
 				badges.add("#777777");
 		}
 		switch (String.valueOf(l.getCannon()).toLowerCase())
@@ -116,7 +116,7 @@ class LocationsTab extends JPanel
 				badges.add("#a5a5a5");
 				break;
 			default:
-				badges.add("Cannon: unknown");
+				badges.add("Cannon ?");
 				badges.add("#777777");
 		}
 		if (l.isWilderness())

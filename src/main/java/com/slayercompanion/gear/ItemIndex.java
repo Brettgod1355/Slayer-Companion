@@ -104,6 +104,7 @@ public class ItemIndex
 		}
 		if (added)
 		{
+			byName.clear();
 			nextId = 0;
 			complete = false;
 		}

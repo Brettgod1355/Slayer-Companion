@@ -79,6 +79,8 @@ public class PanelModel
 	/** Slot advice aligned with {@code gearTables}. */
 	List<List<com.slayercompanion.gear.SlotAdvice>> gearAdvice;
 	boolean gearIsGeneral;
+	/** Index into {@code gearTables} to show first (preferred style, else the task's recommended style). */
+	int defaultGearTable;
 	int points;
 	boolean loggedIn;
 }

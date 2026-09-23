@@ -101,9 +101,15 @@ final class Ui
 		return l;
 	}
 
+	/** Swing's HTML engine scales 'px' by 1.3; 'pt' maps 1:1 to pixels, so widths are given in pt. */
 	static String html(String text)
 	{
-		return "<html><body style='width:" + (CONTENT_WIDTH - 24) + "px'>" + escape(text) + "</body></html>";
+		return html(text, CONTENT_WIDTH - 24);
+	}
+
+	static String html(String text, int widthPx)
+	{
+		return "<html><body style='width:" + Math.max(40, widthPx) + "pt'>" + escape(text) + "</body></html>";
 	}
 
 	static String escape(String s)
@@ -119,7 +125,8 @@ final class Ui
 		JLabel k = new JLabel(key);
 		k.setForeground(MUTED);
 		k.setFont(FontManager.getRunescapeSmallFont());
-		JLabel v = new JLabel(html(value));
+		int valueWidth = (CONTENT_WIDTH - 24) - k.getPreferredSize().width - 6;
+		JLabel v = new JLabel(html(value, valueWidth));
 		v.setForeground(valueColor);
 		v.setFont(FontManager.getRunescapeSmallFont());
 		v.setHorizontalAlignment(SwingConstants.RIGHT);
@@ -159,11 +166,23 @@ final class Ui
 
 	static JPanel badges(String... badges)
 	{
-		JPanel row = new JPanel(new FlowLayout(FlowLayout.LEFT, 3, 0));
-		row.setBackground(ColorScheme.DARKER_GRAY_COLOR);
-		row.setAlignmentX(Component.LEFT_ALIGNMENT);
+		// Two badges per row so the row never grows wider than the panel.
+		JPanel rows = new JPanel();
+		rows.setLayout(new BoxLayout(rows, BoxLayout.Y_AXIS));
+		rows.setBackground(ColorScheme.DARKER_GRAY_COLOR);
+		rows.setAlignmentX(Component.LEFT_ALIGNMENT);
+		JPanel row = null;
+		int inRow = 0;
 		for (int i = 0; i + 1 < badges.length; i += 2)
 		{
+			if (row == null || inRow == 2)
+			{
+				row = new JPanel(new FlowLayout(FlowLayout.LEFT, 3, 1));
+				row.setBackground(ColorScheme.DARKER_GRAY_COLOR);
+				row.setAlignmentX(Component.LEFT_ALIGNMENT);
+				rows.add(row);
+				inRow = 0;
+			}
 			JLabel b = new JLabel(badges[i]);
 			b.setOpaque(true);
 			b.setBackground(ColorScheme.DARK_GRAY_COLOR);
@@ -171,9 +190,10 @@ final class Ui
 			b.setFont(FontManager.getRunescapeSmallFont());
 			b.setBorder(BorderFactory.createEmptyBorder(1, 4, 1, 4));
 			row.add(b);
+			inRow++;
 		}
-		row.setMaximumSize(new Dimension(Integer.MAX_VALUE, row.getPreferredSize().height + 2));
-		return row;
+		rows.setMaximumSize(new Dimension(Integer.MAX_VALUE, rows.getPreferredSize().height + 2));
+		return rows;
 	}
 
 	static Component gap(int px)

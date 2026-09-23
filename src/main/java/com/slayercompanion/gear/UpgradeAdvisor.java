@@ -109,6 +109,7 @@ public class UpgradeAdvisor
 			{
 				continue;
 			}
+			Set<String> countedForTask = new java.util.HashSet<>();
 			for (GearTable table : task.gearTablesOrEmpty())
 			{
 				if (styleFilter != null && (table.getStyle() == null || !table.getStyle().equalsIgnoreCase(styleFilter)))
@@ -137,6 +138,10 @@ public class UpgradeAdvisor
 								continue;
 							}
 							String name = item.label();
+							if (!countedForTask.add(name))
+							{
+								continue;
+							}
 							score.merge(name, w * tierWeight, Double::sum);
 							helps.computeIfAbsent(name, k -> new LinkedHashSet<>()).add(task.getTask());
 							slotOf.putIfAbsent(name, slot.getKey());

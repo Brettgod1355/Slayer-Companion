@@ -60,28 +60,27 @@ public class GearAdvisor
 		this.config = config;
 	}
 
-	/** Pick the gear table to show first: preferred style, else the task's recommended style, else the first. */
-	@Nullable
-	public GearTable defaultTable(TaskInfo task)
+	/** Index of the table to show first: preferred style, else the task's recommended style, else 0. */
+	public int defaultTableIndex(List<GearTable> tables, @Nullable String recommendedStyle)
 	{
-		List<GearTable> tables = task.gearTablesOrEmpty();
 		if (tables.isEmpty())
 		{
-			return null;
+			return 0;
 		}
 		String preferred = config.preferredStyle() == SlayerCompanionConfig.CombatStyle.AUTO
-			? task.getRecommendedStyle() : config.preferredStyle().name();
+			? recommendedStyle : config.preferredStyle().name();
 		if (preferred != null)
 		{
-			for (GearTable t : tables)
+			for (int i = 0; i < tables.size(); i++)
 			{
-				if (t.getStyle() != null && t.getStyle().equalsIgnoreCase(preferred))
+				String style = tables.get(i).getStyle();
+				if (style != null && style.toLowerCase().startsWith(preferred.toLowerCase()))
 				{
-					return t;
+					return i;
 				}
 			}
 		}
-		return tables.get(0);
+		return 0;
 	}
 
 	public List<SlotAdvice> advise(GearTable table)

@@ -156,7 +156,16 @@ public class SlayerData
 				}
 			}
 		}
-		return unlocks.getUnlocks() == null ? Collections.emptyList() : unlocks.getUnlocks();
+		List<UnlockInfo> all = new java.util.ArrayList<>();
+		if (unlocks.getUnlocks() != null)
+		{
+			all.addAll(unlocks.getUnlocks());
+		}
+		if (unlocks.getCosmetics() != null)
+		{
+			all.addAll(unlocks.getCosmetics());
+		}
+		return Collections.unmodifiableList(all);
 	}
 
 	public WildernessInfo wilderness()

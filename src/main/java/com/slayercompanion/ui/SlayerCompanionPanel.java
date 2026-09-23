@@ -91,7 +91,7 @@ public class SlayerCompanionPanel extends PluginPanel
 		wildernessTab = new WildernessTab(wildernessInfo);
 		unlocksTab = new UnlocksTab();
 
-		tabs.setLayout(new java.awt.GridLayout(2, 4, 2, 2));
+		tabs.setLayout(new java.awt.GridLayout(0, 3, 2, 2));
 		tabs.setBorder(new EmptyBorder(4, 4, 0, 4));
 		addTab("Task", taskTab);
 		addTab("Where", locationsTab);
@@ -163,6 +163,10 @@ public class SlayerCompanionPanel extends PluginPanel
 			progress.setValue(Math.max(0, t.getInitialAmount() - t.getRemaining()));
 		}
 		wildernessMaterialTab.setVisible(config.showWildernessTab());
+		if (!config.showWildernessTab() && wildernessMaterialTab.isSelected())
+		{
+			tabs.select(tabs.getTab(0));
+		}
 
 		taskTab.update(m);
 		locationsTab.update(m);

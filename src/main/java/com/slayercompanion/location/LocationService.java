@@ -111,8 +111,9 @@ public class LocationService
 		return Optional.of(new WorldPoint(l.getX(), l.getY(), l.getPlane() == null ? 0 : l.getPlane()));
 	}
 
+	/** Config key fragment; the same for the game's task name and the wiki's (case, "The ", punctuation ignored). */
 	public static String slug(String taskName)
 	{
-		return taskName.toLowerCase().replaceAll("[^a-z0-9]+", "-");
+		return com.slayercompanion.data.SlayerData.normalise(taskName);
 	}
 }

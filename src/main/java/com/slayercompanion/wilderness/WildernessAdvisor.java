@@ -81,22 +81,28 @@ public class WildernessAdvisor
 		addAll(carried, ownedItems.inventory());
 		addAll(carried, ownedItems.equipment());
 
-		List<WildernessStatus.CarriedItem> tradeables = new ArrayList<>();
 		List<WildernessStatus.CarriedItem> untradeables = new ArrayList<>();
 		long carriedValue = 0;
 		for (WildernessStatus.CarriedItem item : carried)
 		{
-			carriedValue += item.getValue();
-			(item.isTradeable() ? tradeables : untradeables).add(item);
+			if (item.isTradeable())
+			{
+				carriedValue += item.getValue();
+			}
+			else
+			{
+				untradeables.add(item);
+			}
 		}
-		// Highest unit value first, the order the game keeps items in.
-		tradeables.sort((a, b) -> Long.compare(unitValue(b), unitValue(a)));
+		// Highest unit value first, the order the game keeps items in. Untradeables rank by their
+		// alchemy value and take up kept slots too, but are not counted as gold at risk.
+		carried.sort((a, b) -> Long.compare(unitValue(b), unitValue(a)));
 
 		List<WildernessStatus.CarriedItem> keptItems = new ArrayList<>();
 		List<WildernessStatus.CarriedItem> lostItems = new ArrayList<>();
 		int slotsLeft = kept;
 		long risk = 0;
-		for (WildernessStatus.CarriedItem item : tradeables)
+		for (WildernessStatus.CarriedItem item : carried)
 		{
 			// Each kept slot protects one unit of a stack.
 			int keepQty = Math.min(slotsLeft, item.getQuantity());
@@ -105,9 +111,9 @@ public class WildernessAdvisor
 			long unit = unitValue(item);
 			if (keepQty > 0)
 			{
-				keptItems.add(new WildernessStatus.CarriedItem(item.getItemId(), item.getName(), keepQty, unit * keepQty, true));
+				keptItems.add(new WildernessStatus.CarriedItem(item.getItemId(), item.getName(), keepQty, unit * keepQty, item.isTradeable()));
 			}
-			if (loseQty > 0)
+			if (loseQty > 0 && item.isTradeable())
 			{
 				lostItems.add(new WildernessStatus.CarriedItem(item.getItemId(), item.getName(), loseQty, unit * loseQty, true));
 				risk += unit * loseQty;
@@ -141,7 +147,12 @@ public class WildernessAdvisor
 			int qty = e.getValue();
 			ItemComposition comp = itemManager.getItemComposition(id);
 			boolean tradeable = comp.isTradeable();
-			long value = tradeable ? (long) itemManager.getItemPrice(id) * qty : 0;
+			int unit = tradeable ? itemManager.getItemPrice(id) : 0;
+			if (unit <= 0)
+			{
+				unit = comp.getHaPrice();
+			}
+			long value = (long) Math.max(0, unit) * qty;
 			into.add(new WildernessStatus.CarriedItem(id, comp.getName(), qty, value, tradeable));
 		}
 	}

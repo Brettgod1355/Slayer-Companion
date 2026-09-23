@@ -70,7 +70,7 @@ public class TaskSessionTrackerTest
 		SlayerCompanionConfig config = new SlayerCompanionConfig()
 		{
 		};
-		tracker = new TaskSessionTracker(client, itemManager, configManager, new EventBus(), new Gson(), config);
+		tracker = new TaskSessionTracker(client, mock(net.runelite.client.callback.ClientThread.class), itemManager, configManager, new EventBus(), new Gson(), config);
 		tracker.startUp();
 	}
 

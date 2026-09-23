@@ -57,6 +57,7 @@ import net.runelite.api.events.WidgetClosed;
 import net.runelite.api.events.WidgetLoaded;
 import net.runelite.api.gameval.InterfaceID;
 import net.runelite.api.gameval.InventoryID;
+import net.runelite.client.callback.ClientThread;
 import net.runelite.client.config.ConfigManager;
 import net.runelite.client.eventbus.EventBus;
 import net.runelite.client.eventbus.Subscribe;
@@ -87,6 +88,7 @@ public class TaskSessionTracker
 		"scales", "cannonball", "bolt rack", "brutal arrow", "atlatl dart");
 
 	private final Client client;
+	private final ClientThread clientThread;
 	private final ItemManager itemManager;
 	private final ConfigManager configManager;
 	private final EventBus eventBus;
@@ -105,10 +107,11 @@ public class TaskSessionTracker
 	private java.util.Set<Integer> npcIds = Collections.emptySet();
 
 	@Inject
-	TaskSessionTracker(Client client, ItemManager itemManager, ConfigManager configManager, EventBus eventBus,
-		Gson gson, SlayerCompanionConfig config)
+	TaskSessionTracker(Client client, ClientThread clientThread, ItemManager itemManager, ConfigManager configManager,
+		EventBus eventBus, Gson gson, SlayerCompanionConfig config)
 	{
 		this.client = client;
+		this.clientThread = clientThread;
 		this.itemManager = itemManager;
 		this.configManager = configManager;
 		this.eventBus = eventBus;
@@ -121,7 +124,11 @@ public class TaskSessionTracker
 		eventBus.register(this);
 		if (client.getGameState() == GameState.LOGGED_IN)
 		{
-			load();
+			clientThread.invoke(() ->
+			{
+				lastSlayerXp = client.getSkillExperience(Skill.SLAYER);
+				load();
+			});
 		}
 	}
 
@@ -214,7 +221,12 @@ public class TaskSessionTracker
 		}
 		else if (event.getGameState() == GameState.LOGIN_SCREEN || event.getGameState() == GameState.HOPPING)
 		{
+			// Save, then forget: the next login may be another account or profile, and load() restores
+			// whatever that profile has.
 			persist();
+			session = null;
+			targetNames.clear();
+			npcIds = Collections.emptySet();
 			lastInventory.clear();
 			lastSlayerXp = -1;
 		}
@@ -418,6 +430,11 @@ public class TaskSessionTracker
 		npcIds = targetNpcIds.apply(taskName);
 		targetNames.add(targetNamePattern(taskName));
 		targetNames.add(targetNamePattern(taskName.replaceAll("s$", "")));
+		if (taskName.endsWith("ves"))
+		{
+			// Wolves -> Wolf, Dwarves -> Dwarf, Elves -> Elf
+			targetNames.add(targetNamePattern(taskName.substring(0, taskName.length() - 3) + "f"));
+		}
 		for (String alt : alternativeNames.apply(taskName))
 		{
 			targetNames.add(targetNamePattern(alt));

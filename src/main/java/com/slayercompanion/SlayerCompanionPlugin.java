@@ -400,6 +400,7 @@ public class SlayerCompanionPlugin extends Plugin
 			.gearTables(gearTables)
 			.gearAdvice(gearAdvice)
 			.gearIsGeneral(gearIsGeneral)
+			.defaultGearTable(gearAdvisor.defaultTableIndex(gearTables, info == null ? null : info.getRecommendedStyle()))
 			.build();
 	}
 

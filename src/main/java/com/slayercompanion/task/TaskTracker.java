@@ -98,6 +98,11 @@ public class TaskTracker
 		{
 			clientThread.invokeLater(this::refresh);
 		}
+		else if (event.getGameState() == GameState.LOGIN_SCREEN || event.getGameState() == GameState.HOPPING)
+		{
+			// Forget the assignment quietly so the next login does not report it as the "previous" task.
+			current = null;
+		}
 	}
 
 	@Subscribe

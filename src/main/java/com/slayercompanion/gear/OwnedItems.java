@@ -134,6 +134,13 @@ public class OwnedItems
 		{
 			loadPersistedBank();
 		}
+		else if (event.getGameState() == GameState.LOGIN_SCREEN || event.getGameState() == GameState.HOPPING)
+		{
+			// The next login may be a different account; its snapshot is loaded fresh.
+			bank.clear();
+			bankSeenThisSession = false;
+			bankKnown = false;
+		}
 	}
 
 	@Subscribe
@@ -197,6 +204,8 @@ public class OwnedItems
 		String json = configManager.getRSProfileConfiguration(SlayerCompanionConfig.GROUP, BANK_KEY);
 		if (json == null || json.isEmpty())
 		{
+			bank.clear();
+			bankKnown = false;
 			return;
 		}
 		try
