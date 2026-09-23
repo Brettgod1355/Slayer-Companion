@@ -12,7 +12,7 @@ A RuneLite plugin that puts everything about your current Slayer task in one sid
 
 ## Privacy
 
-The plugin makes **no network requests** and sends nothing anywhere. All reference data (task
+The plugin makes **no network requests of its own**. Your saved setups, bank snapshot and task history are stored in your RuneLite profile settings like any other plugin's configuration. All reference data (task
 notes, gear tables, locations, master and reward information) is bundled inside the plugin. It is
 derived from the [Old School RuneScape Wiki](https://oldschool.runescape.wiki) under
 [CC BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/) and refreshed by the

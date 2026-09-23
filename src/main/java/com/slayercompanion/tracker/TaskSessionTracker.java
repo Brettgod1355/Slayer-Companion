@@ -140,6 +140,29 @@ public class TaskSessionTracker
 		return Optional.ofNullable(session);
 	}
 
+	/** Detached copy safe to hand to another thread. Client thread only. */
+	public Optional<TaskSession> snapshot()
+	{
+		if (session == null)
+		{
+			return Optional.empty();
+		}
+		TaskSession c = new TaskSession();
+		c.setTaskName(session.getTaskName());
+		c.setMasterName(session.getMasterName());
+		c.setStartedAtEpochMs(session.getStartedAtEpochMs());
+		c.setUpdatedAtEpochMs(session.getUpdatedAtEpochMs());
+		c.setInitialAmount(session.getInitialAmount());
+		c.setKills(session.getKills());
+		c.setSlayerXpGained(session.getSlayerXpGained());
+		c.setLoot(new HashMap<>(session.getLoot()));
+		c.setLootValue(session.getLootValue());
+		c.setSupplies(new HashMap<>(session.getSupplies()));
+		c.setSuppliesValue(session.getSuppliesValue());
+		c.setCompleted(session.isCompleted());
+		return Optional.of(c);
+	}
+
 	public List<TaskSession> history()
 	{
 		String json = configManager.getRSProfileConfiguration(SlayerCompanionConfig.GROUP, HISTORY_KEY);
@@ -183,7 +206,11 @@ public class TaskSessionTracker
 	{
 		if (event.getGameState() == GameState.LOGGED_IN)
 		{
-			load();
+			// LOADING -> LOGGED_IN happens on every region change; only restore when nothing is in memory.
+			if (session == null)
+			{
+				load();
+			}
 		}
 		else if (event.getGameState() == GameState.LOGIN_SCREEN || event.getGameState() == GameState.HOPPING)
 		{

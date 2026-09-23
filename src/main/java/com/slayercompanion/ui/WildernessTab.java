@@ -61,7 +61,6 @@ class WildernessTab extends JPanel
 		{
 			JPanel risk = Ui.card();
 			risk.add(Ui.title(w.isInWilderness() ? "In the Wilderness, level " + w.getWildernessLevel() : "Not in the Wilderness"));
-			risk.add(Ui.keyValue("Skulled", w.isSkulled() ? "yes" : "no"));
 			risk.add(Ui.keyValue("Protect Item", w.isProtectItemActive() ? "on" : "off"));
 			risk.add(Ui.keyValue("Items kept", String.valueOf(w.getItemsKept())));
 			risk.add(Ui.keyValue("Carried value", Ui.gp(w.getCarriedValue())));

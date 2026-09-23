@@ -61,6 +61,7 @@ public class TaskTracker
 
 	@Nullable
 	private CurrentTask current;
+	private boolean refreshPending;
 
 	@Inject
 	TaskTracker(Client client, ClientThread clientThread, EventBus eventBus)
@@ -118,7 +119,16 @@ public class TaskTracker
 			|| varbit == VarbitID.SLAYER_TASKS_COMPLETED
 			|| varbit == VarbitID.SLAYER_WILDERNESS_TASKS_COMPLETED)
 		{
-			refresh();
+			// A new assignment updates several varps in one packet; read them once they have all landed.
+			if (!refreshPending)
+			{
+				refreshPending = true;
+				clientThread.invokeLater(() ->
+				{
+					refreshPending = false;
+					refresh();
+				});
+			}
 		}
 	}
 

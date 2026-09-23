@@ -30,7 +30,6 @@ import java.awt.Color;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import java.util.function.IntFunction;
 import javax.swing.JPanel;
 import net.runelite.client.ui.ColorScheme;
 
@@ -38,12 +37,11 @@ import net.runelite.client.ui.ColorScheme;
 class TrackerTab extends JPanel
 {
 	private final PanelActions actions;
-	private final IntFunction<String> itemName;
+	private Map<Integer, String> itemNames = java.util.Collections.emptyMap();
 
-	TrackerTab(PanelActions actions, IntFunction<String> itemName)
+	TrackerTab(PanelActions actions)
 	{
 		this.actions = actions;
-		this.itemName = itemName;
 		setLayout(new BorderLayout());
 		setBackground(ColorScheme.DARK_GRAY_COLOR);
 	}
@@ -51,6 +49,7 @@ class TrackerTab extends JPanel
 	void update(PanelModel m)
 	{
 		removeAll();
+		itemNames = m.getItemNames();
 		JPanel col = Ui.column();
 		TaskSession s = m.getSession();
 		if (s == null)
@@ -82,7 +81,7 @@ class TrackerTab extends JPanel
 				loot.add(Ui.title("Loot"));
 				for (Map.Entry<Integer, Integer> e : top(s.getLoot(), 12))
 				{
-					loot.add(Ui.wrap(itemName.apply(e.getKey()) + " x " + Ui.num(e.getValue()), Color.WHITE));
+					loot.add(Ui.wrap(itemNames.getOrDefault(e.getKey(), "Item " + e.getKey()) + " x " + Ui.num(e.getValue()), Color.WHITE));
 				}
 				col.add(loot);
 				col.add(Ui.gap(4));
@@ -93,7 +92,7 @@ class TrackerTab extends JPanel
 				sup.add(Ui.title("Supplies used"));
 				for (Map.Entry<Integer, Integer> e : top(s.getSupplies(), 12))
 				{
-					sup.add(Ui.wrap(itemName.apply(e.getKey()) + " x " + Ui.num(e.getValue()), Color.WHITE));
+					sup.add(Ui.wrap(itemNames.getOrDefault(e.getKey(), "Item " + e.getKey()) + " x " + Ui.num(e.getValue()), Color.WHITE));
 				}
 				col.add(sup);
 				col.add(Ui.gap(4));

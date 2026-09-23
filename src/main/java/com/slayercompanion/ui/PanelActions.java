@@ -24,10 +24,7 @@
  */
 package com.slayercompanion.ui;
 
-import com.slayercompanion.data.GearTable;
 import com.slayercompanion.data.TaskLocation;
-import com.slayercompanion.gear.SlotAdvice;
-import java.util.List;
 import javax.annotation.Nullable;
 
 /** Callbacks from the panel into the plugin. Implementations hop to the client thread as needed. */
@@ -46,9 +43,6 @@ public interface PanelActions
 	void resetSession();
 
 	void refresh();
-
-	/** Gear advice for a table, computed on demand (cheap, uses cached name lookups). */
-	List<SlotAdvice> advise(GearTable table);
 
 	void openWiki(String pageTitle);
 }

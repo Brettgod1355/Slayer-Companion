@@ -71,7 +71,7 @@ public class WildernessAdvisor
 	public WildernessStatus status()
 	{
 		Player local = client.getLocalPlayer();
-		boolean skulled = local != null && local.getSkullIcon() == SkullIcon.SKULL;
+		boolean skulled = local != null && local.getSkullIcon() != SkullIcon.NONE;
 		boolean protect = client.isPrayerActive(Prayer.PROTECT_ITEM);
 		int level = wildernessLevel();
 

@@ -31,7 +31,6 @@ import com.slayercompanion.task.CurrentTask;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
-import java.util.function.IntFunction;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
@@ -63,7 +62,7 @@ public class SlayerCompanionPanel extends PluginPanel
 	private final UnlocksTab unlocksTab;
 	private final MaterialTab wildernessMaterialTab;
 
-	public SlayerCompanionPanel(PanelActions actions, WildernessInfo wildernessInfo, IntFunction<String> itemName)
+	public SlayerCompanionPanel(PanelActions actions, WildernessInfo wildernessInfo)
 	{
 		super(false);
 		setLayout(new BorderLayout());
@@ -88,7 +87,7 @@ public class SlayerCompanionPanel extends PluginPanel
 		locationsTab = new LocationsTab(actions);
 		gearTab = new GearTab(actions);
 		pointsTab = new PointsTab();
-		trackerTab = new TrackerTab(actions, itemName);
+		trackerTab = new TrackerTab(actions);
 		wildernessTab = new WildernessTab(wildernessInfo);
 		unlocksTab = new UnlocksTab();
 

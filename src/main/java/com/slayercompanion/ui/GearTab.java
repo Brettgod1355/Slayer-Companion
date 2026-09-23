@@ -107,7 +107,7 @@ class GearTab extends JPanel
 				GearTable table = tables.get(selectedTable);
 				JPanel card = Ui.card();
 				card.add(Ui.title("Slot: yours / wiki best"));
-				for (SlotAdvice a : actions.advise(table))
+				for (SlotAdvice a : m.getGearAdvice().getOrDefault(selectedTable, java.util.Collections.emptyList()))
 				{
 					card.add(slotRow(a));
 				}

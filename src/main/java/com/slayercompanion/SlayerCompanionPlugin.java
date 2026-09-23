@@ -152,13 +152,13 @@ public class SlayerCompanionPlugin extends Plugin
 	private volatile TaskSession overlaySession;
 	private volatile WildernessStatus overlayWilderness;
 	private int tickCounter;
-	private boolean refreshQueued;
+	private final java.util.concurrent.atomic.AtomicBoolean refreshQueued = new java.util.concurrent.atomic.AtomicBoolean();
 	private boolean indexWasComplete;
 
 	@Override
 	protected void startUp()
 	{
-		panel = new SlayerCompanionPanel(new Actions(), data.wilderness(), this::itemName);
+		panel = new SlayerCompanionPanel(new Actions(), data.wilderness());
 		BufferedImage icon = ImageUtil.loadImageResource(getClass(), "/com/slayercompanion/panel_icon.png");
 		navButton = NavigationButton.builder()
 			.tooltip("Slayer Companion")
@@ -251,7 +251,7 @@ public class SlayerCompanionPlugin extends Plugin
 	@Subscribe
 	public void onSessionUpdated(SessionUpdated event)
 	{
-		overlaySession = event.getSession();
+		overlaySession = sessionTracker.snapshot().orElse(null);
 		requestRefresh();
 	}
 
@@ -295,7 +295,7 @@ public class SlayerCompanionPlugin extends Plugin
 		WildernessStatus prev = overlayWilderness;
 		overlayWilderness = w;
 		if (prev == null || prev.isInWilderness() != w.isInWilderness() || prev.getRiskValue() != w.getRiskValue()
-			|| prev.isSkulled() != w.isSkulled() || prev.getWildernessLevel() != w.getWildernessLevel())
+			|| prev.getItemsKept() != w.getItemsKept() || prev.getWildernessLevel() != w.getWildernessLevel())
 		{
 			requestRefresh();
 		}
@@ -304,14 +304,13 @@ public class SlayerCompanionPlugin extends Plugin
 	/** Build a fresh model on the client thread and push it to the panel on the Swing thread. Coalesces bursts. */
 	private void requestRefresh()
 	{
-		if (refreshQueued)
+		if (!refreshQueued.compareAndSet(false, true))
 		{
 			return;
 		}
-		refreshQueued = true;
 		clientThread.invokeLater(() ->
 		{
-			refreshQueued = false;
+			refreshQueued.set(false);
 			PanelModel model = buildModel();
 			SwingUtilities.invokeLater(() ->
 			{
@@ -345,7 +344,29 @@ public class SlayerCompanionPlugin extends Plugin
 		WildernessStatus wilderness = loggedIn ? wildernessAdvisor.status() : null;
 		overlayWilderness = wilderness;
 		overlayTask = task;
-		overlaySession = sessionTracker.current().orElse(null);
+		overlaySession = sessionTracker.snapshot().orElse(null);
+
+		java.util.Map<Integer, String> itemNames = new java.util.HashMap<>();
+		if (overlaySession != null)
+		{
+			for (int id : overlaySession.getLoot().keySet())
+			{
+				itemNames.put(id, itemName(id));
+			}
+			for (int id : overlaySession.getSupplies().keySet())
+			{
+				itemNames.put(id, itemName(id));
+			}
+		}
+		java.util.Map<Integer, List<SlotAdvice>> gearAdvice = new java.util.HashMap<>();
+		if (info != null)
+		{
+			List<com.slayercompanion.data.GearTable> tables = info.gearTablesOrEmpty();
+			for (int i = 0; i < tables.size(); i++)
+			{
+				gearAdvice.put(i, gearAdvisor.advise(tables.get(i)));
+			}
+		}
 
 		return PanelModel.builder()
 			.loggedIn(loggedIn)
@@ -368,6 +389,8 @@ public class SlayerCompanionPlugin extends Plugin
 			.history(sessionTracker.history())
 			.wilderness(wilderness)
 			.unlocks(loggedIn ? unlockAdvisor.advise(points) : Collections.emptyList())
+			.itemNames(itemNames)
+			.gearAdvice(gearAdvice)
 			.build();
 	}
 
@@ -441,12 +464,6 @@ public class SlayerCompanionPlugin extends Plugin
 		public void refresh()
 		{
 			requestRefresh();
-		}
-
-		@Override
-		public List<SlotAdvice> advise(com.slayercompanion.data.GearTable table)
-		{
-			return gearAdvisor.advise(table);
 		}
 
 		@Override

@@ -72,6 +72,10 @@ public class PanelModel
 	@Nullable
 	WildernessStatus wilderness;
 	List<UnlockAdvice> unlocks;
+	/** Item id -> display name for everything the Loot tab shows. */
+	java.util.Map<Integer, String> itemNames;
+	/** Slot advice per gear table index of {@code info.gearTablesOrEmpty()}. */
+	java.util.Map<Integer, List<com.slayercompanion.gear.SlotAdvice>> gearAdvice;
 	int points;
 	boolean loggedIn;
 }

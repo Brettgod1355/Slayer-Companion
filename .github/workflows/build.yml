@@ -17,5 +17,7 @@ jobs:
       - uses: gradle/actions/setup-gradle@v4
       - name: Build and test
         run: ./gradlew --no-daemon build
+      - name: Hub rules self-test
+        run: ci/self-test.sh
       - name: Hub rules
         run: ci/check-hub-rules.sh
