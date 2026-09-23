@@ -1501,13 +1501,14 @@
     "ironman"
    ],
    "category": "buy",
-   "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Buy table StoreLine 'Slayer ring (8)' sell=75",
+   "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Buy table StoreLine 'Slayer ring (8)' sell=75; Slayer ring.wikitext lead",
    "cost": 75,
    "effect": "An equippable ring that provides all the functions of an Enchanted gem, and provides 8 charges for teleporting to useful Slayer sites.",
+   "elsewhere": "Unlock Ring Bling once (150 points) and craft them yourself at 75 Crafting from a gold bar and an enchanted gem.",
    "id": "slayer_ring_8",
    "name": "Slayer ring (8)",
-   "priority": 3,
-   "rationale": "Inference: convenience teleports; players with Ring Bling (75 Crafting) can craft instead of buying.",
+   "priority": 5,
+   "rationale": "Wiki: 'Players can purchase Slayer rings from Slayer masters for 75 Slayer reward points each. Alternatively, they can purchase the Ring bling unlock for a one-time cost of 150 points, giving them the ability to craft slayer rings.' Rings are untradeable, so Ring Bling is the better value once you have 75 Crafting.",
    "repeatable": true,
    "requirements": [
     "None"
@@ -1576,13 +1577,14 @@
     "everyone"
    ],
    "category": "buy",
-   "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Buy table StoreLine 'Herb sack' sell=750",
+   "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Buy table StoreLine 'Herb sack' sell=750; Herb sack.wikitext lead",
    "cost": 750,
    "effect": "Stores up to 30 of each type of grimy herb (for a total of 450 herbs). Level 58 Herblore is required to use it.",
+   "elsewhere": "250 Tithe Farm points from Farmer Gricoller.",
    "id": "herb_sack",
    "name": "Herb sack",
-   "priority": 2,
-   "rationale": "Inference: quality-of-life for herb drops on long tasks; the wiki gives no ranking.",
+   "priority": 5,
+   "rationale": "Wiki: 'A herb sack is an item that can be bought from Slayer masters for 750 Slayer reward points or from Farmer Gricoller's Rewards for 250 Tithe Farm points.' Tithe Farm is the cheaper route.",
    "repeatable": true,
    "requirements": [
     "58 Herblore to use"
@@ -1599,13 +1601,15 @@
     "ironman"
    ],
    "category": "buy",
-   "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Buy table StoreLine 'Rune pouch' sell=750",
+   "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Buy table StoreLine 'Rune pouch' sell=750; Rune pouch.wikitext ==Obtaining==; Rune pouch note.wikitext",
    "cost": 750,
    "effect": "Stores up to 16,000 of three types of runes. Only one can be owned. Can also be obtained by exchanging a rune pouch note at a bank.",
+   "elsewhere": "A rune pouch note from the Grand Exchange or 75 LMS points (swap it at any bank), or the Mage Training Arena.",
+   "elsewhereItemId": 24587,
    "id": "rune_pouch",
    "name": "Rune pouch",
-   "priority": 2,
-   "rationale": "Inference: one-time inventory-saving purchase for mages; note the alternative source 'exchanging a rune pouch note at a bank'. Cost 'reduced from 1,250 to 750' (7 Nov 2019).",
+   "priority": 5,
+   "rationale": "Wiki: 'A rune pouch note can be purchased from players, the Grand Exchange, or bought from Justine's stuff for the Last Shopper Standing for 75 Last Man Standing points; this note can be exchanged for a rune pouch at any bank.' 750 Slayer points is poor value when the note is available.",
    "repeatable": true,
    "requirements": [
     "None"
@@ -1621,13 +1625,14 @@
     "wilderness slayers"
    ],
    "category": "buy",
-   "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Buy table StoreLine 'Looting bag' sell=10",
+   "citation": "Extending_slayer_task.wikitext (wiki 'Slayer Rewards' page) Buy table StoreLine 'Looting bag' sell=10; Looting bag.wikitext ==Obtaining==",
    "cost": 10,
    "effect": "Within the Wilderness and certain other PvP areas, tradeable items can be stored in the looting bag, enabling you to carry more loot.",
+   "elsewhere": "It drops from almost any Wilderness monster, costs 1 LMS point, and a looting bag note is sold on the Grand Exchange.",
    "id": "looting_bag",
    "name": "Looting bag",
-   "priority": 3,
-   "rationale": "Inference: cheap and useful only for Wilderness (Krystilia) tasks; added 3 May 2023.",
+   "priority": 5,
+   "rationale": "Wiki: 'The bag can be obtained as a drop from any monster in the Wilderness ... It can also be purchased from Justine's stuff for the Last Shopper Standing for 1 Last Man Standing point'. No reason to spend Slayer points on it.",
    "repeatable": true,
    "requirements": [
     "None"

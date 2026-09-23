@@ -76,7 +76,7 @@ public class PanelPreview
 			}
 			String effect = b.getEffect() == null ? "" : b.getEffect();
 			advice.add(new UnlockAdvice(b.getName(), effect, b.getCost(), owned.contains(b.getName()), points >= b.getCost(),
-				b.getPriority(), b.getCategory(), b.getRationale(), effect, tasks));
+				b.getPriority(), b.getCategory(), b.getRationale(), effect, tasks, b.getElsewhere()));
 		}
 		CurrentTask task = new CurrentTask("Abyssal demons", 150, 180, null, SlayerMaster.DURADEL, false, points, 57);
 		PanelModel model = PanelModel.builder()

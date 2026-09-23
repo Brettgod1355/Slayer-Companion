@@ -179,6 +179,10 @@ class UnlocksTab extends JPanel
 						row.setToolTipText(Ui.html(u.getEffect()));
 					}
 					card.add(row);
+					if (u.getElsewhere() != null)
+					{
+						card.add(Ui.wrap("Cheaper: " + u.getElsewhere(), Ui.WARN));
+					}
 				}
 				col.add(card);
 				col.add(Ui.gap(4));
@@ -198,6 +202,10 @@ class UnlocksTab extends JPanel
 		if (u.getEffect() != null && !u.getEffect().isEmpty())
 		{
 			card.add(Ui.wrap(u.getEffect(), Ui.MUTED));
+		}
+		if (u.getElsewhere() != null)
+		{
+			card.add(Ui.wrap("Cheaper: " + u.getElsewhere(), Ui.WARN));
 		}
 	}
 
