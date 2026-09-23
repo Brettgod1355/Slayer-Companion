@@ -1,0 +1,37 @@
+name: Plugin Hub package
+
+# Runs RuneLite's own Plugin Hub packager against this commit, as the
+# runelite/plugin-hub repository does for every submission. Nothing is uploaded.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  package:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: runelite/plugin-hub
+          path: hubwork/plugin-hub
+          persist-credentials: false
+      - uses: actions/setup-java@v4
+        with:
+          distribution: adopt
+          java-version: '11'
+      - uses: actions/cache@v4
+        with:
+          path: |
+            ~/.gradle/caches/
+            hubwork/api/
+          key: hub-deps-v4-${{ hashFiles('hubwork/plugin-hub/runelite.version') }}
+      - name: Package with the Hub packager
+        env:
+          COMMIT: ${{ github.event.pull_request.head.sha || github.sha }}
+        run: ci/hub-package.sh "$COMMIT" "$GITHUB_WORKSPACE/hubwork"
