@@ -109,6 +109,50 @@ public class TaskInfo
 		return monsters == null ? Collections.emptyList() : monsters;
 	}
 
+	/** Monsters the player can choose between: those the wiki places somewhere, superiors excluded. */
+	public List<MonsterInfo> variants()
+	{
+		List<MonsterInfo> out = new java.util.ArrayList<>();
+		for (MonsterInfo m : monstersOrEmpty())
+		{
+			if (m.getName() == null || (superior != null && superior.equalsIgnoreCase(m.getName())))
+			{
+				continue;
+			}
+			boolean placed = false;
+			for (TaskLocation l : locationsOrEmpty())
+			{
+				if (l.getMonsters() != null && l.getMonsters().contains(m.getName()))
+				{
+					placed = true;
+					break;
+				}
+			}
+			if (placed)
+			{
+				out.add(m);
+			}
+		}
+		return out;
+	}
+
+	@Nullable
+	public MonsterInfo monster(@Nullable String name)
+	{
+		if (name == null)
+		{
+			return null;
+		}
+		for (MonsterInfo m : monstersOrEmpty())
+		{
+			if (name.equalsIgnoreCase(m.getName()))
+			{
+				return m;
+			}
+		}
+		return null;
+	}
+
 	/** All NPC ids the wiki lists for this task's monsters. */
 	public java.util.Set<Integer> npcIds()
 	{

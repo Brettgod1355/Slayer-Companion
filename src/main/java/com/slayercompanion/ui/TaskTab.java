@@ -67,6 +67,15 @@ class TaskTab extends JPanel
 		}
 		else
 		{
+			if (m.getVariants().size() > 1)
+			{
+				JPanel variant = Ui.card();
+				variant.add(Ui.title("Which are you killing?"));
+				variant.add(Ui.dropdown(m.getVariants(), m.getSelectedVariant(), v -> actions.setVariant(task.getName(), v)));
+				variant.add(Ui.wrap("Locations, map markers and XP follow this choice. Remembered per task.", Ui.MUTED));
+				col.add(variant);
+				col.add(Ui.gap(4));
+			}
 			if (info.getSummary() != null && !info.getSummary().isEmpty())
 			{
 				JPanel card = Ui.card();
@@ -87,10 +96,10 @@ class TaskTab extends JPanel
 			{
 				facts.add(Ui.keyValue("Style", info.getRecommendedStyle()));
 			}
-			if (info.getXpPerKill() != null)
+			if (m.getXpPerKill() != null)
 			{
-				facts.add(Ui.keyValue("Slayer XP / kill", Ui.num(info.getXpPerKill())));
-				facts.add(Ui.keyValue("XP left in task", Ui.num((long) info.getXpPerKill() * task.getRemaining())));
+				facts.add(Ui.keyValue("Slayer XP / kill", Ui.num(m.getXpPerKill())));
+				facts.add(Ui.keyValue("XP left in task", Ui.num((long) m.getXpPerKill() * task.getRemaining())));
 			}
 			if (info.getSlayerLevel() != null)
 			{
@@ -104,6 +113,10 @@ class TaskTab extends JPanel
 			for (MonsterInfo mon : info.monstersOrEmpty())
 			{
 				if (mon.getCombat() == null && mon.getMaxHit() == null)
+				{
+					continue;
+				}
+				if (m.getSelectedVariant() != null && !m.getSelectedVariant().equalsIgnoreCase(mon.getName()))
 				{
 					continue;
 				}

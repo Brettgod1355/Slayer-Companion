@@ -36,6 +36,9 @@ public interface PanelActions
 
 	void setFavourite(String taskName, @Nullable String locationId);
 
+	/** Choose which monster variant of the task the player is doing (filters locations and XP). */
+	void setVariant(String taskName, @Nullable String monsterName);
+
 	void saveCurrentSetup(String taskName);
 
 	void deleteSetup(String taskName);

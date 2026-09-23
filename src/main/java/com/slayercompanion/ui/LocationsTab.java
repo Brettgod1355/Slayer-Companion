@@ -78,6 +78,11 @@ class LocationsTab extends JPanel
 				col.add(Ui.gap(4));
 			}
 			String taskName = m.getTask().getName();
+			if (m.getVariants().size() > 1)
+			{
+				col.add(Ui.dropdown(m.getVariants(), m.getSelectedVariant(), v -> actions.setVariant(taskName, v)));
+				col.add(Ui.gap(4));
+			}
 			for (TaskLocation l : m.getLocations())
 			{
 				col.add(card(l, taskName, l.getId().equals(m.getFavouriteLocationId()), m.isShortestPathAvailable(), m.getLocks().get(l.getId())));

@@ -54,6 +54,13 @@ public class PanelModel
 	List<TaskLocation> locations;
 	@Nullable
 	String favouriteLocationId;
+	/** Variant monster names the player can pick for this task (empty when only one). */
+	List<String> variants;
+	@Nullable
+	String selectedVariant;
+	/** Slayer XP per kill of the selected variant, or the task's default. */
+	@Nullable
+	Integer xpPerKill;
 	boolean shortestPathAvailable;
 	boolean bankKnown;
 	List<String> missingRequiredItems;

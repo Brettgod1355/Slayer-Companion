@@ -92,7 +92,7 @@ import net.runelite.client.util.LinkBrowser;
 public class SlayerCompanionPlugin extends Plugin
 {
 	/** Shown in the panel footer; bumped together with build.gradle and runelite-plugin.properties. */
-	public static final String VERSION = "0.2.1";
+	public static final String VERSION = "0.3.0";
 
 	private static final String WIKI_BASE = "https://oldschool.runescape.wiki/w/";
 	/** Refresh the Wilderness numbers at most this often (game ticks). */
@@ -329,7 +329,22 @@ public class SlayerCompanionPlugin extends Plugin
 		boolean loggedIn = client.getGameState() == GameState.LOGGED_IN;
 		CurrentTask task = taskTracker.current().orElse(null);
 		TaskInfo info = task == null ? null : data.task(task.getName()).orElse(null);
-		List<TaskLocation> locations = info == null ? Collections.emptyList() : locationService.forTask(info);
+		String variant = info == null ? null : locationService.variant(info);
+		List<TaskLocation> locations = info == null ? Collections.emptyList() : locationService.forTask(info, variant);
+		List<String> variantNames = new java.util.ArrayList<>();
+		Integer xpPerKill = info == null ? null : info.getXpPerKill();
+		if (info != null)
+		{
+			for (com.slayercompanion.data.MonsterInfo mon : info.variants())
+			{
+				variantNames.add(mon.getName());
+			}
+			com.slayercompanion.data.MonsterInfo chosen = info.monster(variant);
+			if (chosen != null && chosen.getSlayerXp() != null)
+			{
+				xpPerKill = chosen.getSlayerXp();
+			}
+		}
 		String favourite = task == null ? null : locationService.favourite(task.getName());
 		java.util.Map<String, com.slayercompanion.game.LockState> locks = new java.util.HashMap<>();
 		if (loggedIn)
@@ -391,6 +406,9 @@ public class SlayerCompanionPlugin extends Plugin
 			.info(info)
 			.locations(locations)
 			.favouriteLocationId(favourite)
+			.variants(variantNames)
+			.selectedVariant(variant)
+			.xpPerKill(xpPerKill)
 			.shortestPathAvailable(routeService.isShortestPathAvailable())
 			.bankKnown(ownedItems.isBankKnown())
 			.missingRequiredItems(missingRequired)
@@ -460,6 +478,17 @@ public class SlayerCompanionPlugin extends Plugin
 		public void setFavourite(String taskName, @Nullable String locationId)
 		{
 			locationService.setFavourite(taskName, locationId);
+			clientThread.invokeLater(() ->
+			{
+				data.task(taskName).ifPresent(SlayerCompanionPlugin.this::updateMarkers);
+				requestRefresh();
+			});
+		}
+
+		@Override
+		public void setVariant(String taskName, @Nullable String monsterName)
+		{
+			locationService.setVariant(taskName, monsterName);
 			clientThread.invokeLater(() ->
 			{
 				data.task(taskName).ifPresent(SlayerCompanionPlugin.this::updateMarkers);

@@ -64,6 +64,9 @@ public class TaskLocation
 	private boolean coordsMissing;
 	@Nullable
 	private Access access;
+	/** Monster names (wiki page names) found at this spot. */
+	@Nullable
+	private List<String> monsters;
 
 	public String label()
 	{
