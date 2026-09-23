@@ -31,6 +31,7 @@ import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.GridLayout;
+import java.util.List;
 import javax.swing.BorderFactory;
 import javax.swing.Box;
 import javax.swing.BoxLayout;
@@ -65,19 +66,94 @@ final class Ui
 		return p;
 	}
 
+	/** Collapsed state per card title, kept for the session (panels are rebuilt on every refresh). */
+	private static final java.util.Map<String, Boolean> COLLAPSED = new java.util.HashMap<>();
+	private static final String TITLE_KEY = "slayercompanion.cardTitle";
+
+	/**
+	 * A card: the first {@link #title(String)} added becomes a click-to-collapse header, everything
+	 * added afterwards goes into a body that the header hides or shows.
+	 */
 	static JPanel card()
 	{
-		JPanel p = new JPanel();
-		p.setLayout(new BoxLayout(p, BoxLayout.Y_AXIS));
-		p.setBackground(ColorScheme.DARKER_GRAY_COLOR);
-		p.setBorder(new EmptyBorder(6, 6, 6, 6));
-		p.setAlignmentX(Component.LEFT_ALIGNMENT);
-		return p;
+		return new Card();
+	}
+
+	private static final class Card extends JPanel
+	{
+		private JLabel header;
+		private final JPanel body = new JPanel();
+
+		Card()
+		{
+			setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
+			setBackground(ColorScheme.DARKER_GRAY_COLOR);
+			setBorder(new EmptyBorder(6, 6, 6, 6));
+			setAlignmentX(Component.LEFT_ALIGNMENT);
+			body.setLayout(new BoxLayout(body, BoxLayout.Y_AXIS));
+			body.setBackground(ColorScheme.DARKER_GRAY_COLOR);
+			body.setAlignmentX(Component.LEFT_ALIGNMENT);
+		}
+
+		@Override
+		protected void addImpl(Component comp, Object constraints, int index)
+		{
+			if (header == null && comp instanceof JLabel && ((JLabel) comp).getClientProperty(TITLE_KEY) != null)
+			{
+				header = (JLabel) comp;
+				String key = String.valueOf(header.getClientProperty(TITLE_KEY));
+				boolean collapsed = COLLAPSED.getOrDefault(key, false);
+				body.setVisible(!collapsed);
+				decorate(collapsed);
+				header.setCursor(java.awt.Cursor.getPredefinedCursor(java.awt.Cursor.HAND_CURSOR));
+				header.addMouseListener(new java.awt.event.MouseAdapter()
+				{
+					@Override
+					public void mouseClicked(java.awt.event.MouseEvent e)
+					{
+						boolean now = !COLLAPSED.getOrDefault(key, false);
+						COLLAPSED.put(key, now);
+						body.setVisible(!now);
+						decorate(now);
+						Card.this.revalidate();
+						Card.this.repaint();
+					}
+				});
+				super.addImpl(header, constraints, -1);
+				super.addImpl(body, constraints, -1);
+				return;
+			}
+			if (header == null)
+			{
+				super.addImpl(comp, constraints, index);
+			}
+			else
+			{
+				body.add(comp);
+			}
+		}
+
+		private void decorate(boolean collapsed)
+		{
+			String text = String.valueOf(header.getClientProperty(TITLE_KEY));
+			header.setText((collapsed ? "\u25b8 " : "\u25be ") + text);
+			if (header.getToolTipText() == null || header.getToolTipText().startsWith("Click to "))
+			{
+				header.setToolTipText(collapsed ? "Click to expand" : "Click to collapse");
+			}
+		}
+
+		@Override
+		public Dimension getMaximumSize()
+		{
+			return new Dimension(Integer.MAX_VALUE, getPreferredSize().height);
+		}
 	}
 
 	static JLabel title(String text)
 	{
 		JLabel l = new JLabel(text);
+		l.putClientProperty(TITLE_KEY, text);
 		l.setFont(FontManager.getRunescapeBoldFont());
 		l.setForeground(Color.WHITE);
 		l.setAlignmentX(Component.LEFT_ALIGNMENT);
@@ -93,9 +169,10 @@ final class Ui
 
 	static JLabel wrap(String text, Color color)
 	{
-		JLabel l = new JLabel(html(text));
+		JLabel l = new JLabel();
 		l.setForeground(color);
 		l.setFont(FontManager.getRunescapeFont());
+		l.setText(html(text));
 		l.setAlignmentX(Component.LEFT_ALIGNMENT);
 		l.setVerticalAlignment(SwingConstants.TOP);
 		return l;
@@ -117,22 +194,35 @@ final class Ui
 		return s == null ? "" : s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;");
 	}
 
+	/** A panel whose maximum height always follows its preferred height (wrapped text can grow after creation). */
+	private static JPanel rowPanel(java.awt.LayoutManager layout)
+	{
+		return new JPanel(layout)
+		{
+			@Override
+			public Dimension getMaximumSize()
+			{
+				return new Dimension(Integer.MAX_VALUE, getPreferredSize().height);
+			}
+		};
+	}
+
 	static JPanel keyValue(String key, String value, Color valueColor)
 	{
-		JPanel row = new JPanel(new BorderLayout(6, 0));
+		JPanel row = rowPanel(new BorderLayout(6, 0));
 		row.setBackground(ColorScheme.DARKER_GRAY_COLOR);
 		row.setAlignmentX(Component.LEFT_ALIGNMENT);
 		JLabel k = new JLabel(key);
 		k.setForeground(MUTED);
 		k.setFont(FontManager.getRunescapeFont());
 		int valueWidth = (CONTENT_WIDTH - 24) - k.getPreferredSize().width - 6;
-		JLabel v = new JLabel(html(value, valueWidth));
+		JLabel v = new JLabel();
 		v.setForeground(valueColor);
 		v.setFont(FontManager.getRunescapeFont());
 		v.setHorizontalAlignment(SwingConstants.RIGHT);
+		v.setText(html(value, valueWidth));
 		row.add(k, BorderLayout.WEST);
 		row.add(v, BorderLayout.CENTER);
-		row.setMaximumSize(new Dimension(Integer.MAX_VALUE, row.getPreferredSize().height));
 		return row;
 	}
 
@@ -153,21 +243,20 @@ final class Ui
 
 	static JPanel buttonRow(JButton... buttons)
 	{
-		JPanel row = new JPanel(new GridLayout(1, buttons.length, 4, 0));
+		JPanel row = rowPanel(new GridLayout(1, buttons.length, 4, 0));
 		row.setBackground(ColorScheme.DARKER_GRAY_COLOR);
 		row.setAlignmentX(Component.LEFT_ALIGNMENT);
 		for (JButton b : buttons)
 		{
 			row.add(b);
 		}
-		row.setMaximumSize(new Dimension(Integer.MAX_VALUE, row.getPreferredSize().height));
 		return row;
 	}
 
 	static JPanel badges(String... badges)
 	{
 		// Two badges per row so the row never grows wider than the panel.
-		JPanel rows = new JPanel();
+		JPanel rows = rowPanel(null);
 		rows.setLayout(new BoxLayout(rows, BoxLayout.Y_AXIS));
 		rows.setBackground(ColorScheme.DARKER_GRAY_COLOR);
 		rows.setAlignmentX(Component.LEFT_ALIGNMENT);
@@ -192,8 +281,33 @@ final class Ui
 			row.add(b);
 			inRow++;
 		}
-		rows.setMaximumSize(new Dimension(Integer.MAX_VALUE, rows.getPreferredSize().height + 2));
 		return rows;
+	}
+
+	/** A dropdown sized for the panel. */
+	static javax.swing.JComboBox<String> dropdown(List<String> items, @javax.annotation.Nullable String selected, java.util.function.Consumer<String> onChange)
+	{
+		javax.swing.JComboBox<String> combo = new javax.swing.JComboBox<>();
+		for (String s : items)
+		{
+			combo.addItem(s);
+		}
+		if (selected != null)
+		{
+			combo.setSelectedItem(selected);
+		}
+		combo.setFont(FontManager.getRunescapeFont());
+		combo.setAlignmentX(Component.LEFT_ALIGNMENT);
+		combo.setMaximumSize(new Dimension(Integer.MAX_VALUE, combo.getPreferredSize().height));
+		combo.addActionListener(e ->
+		{
+			Object item = combo.getSelectedItem();
+			if (item != null && !item.equals(selected))
+			{
+				onChange.accept(item.toString());
+			}
+		});
+		return combo;
 	}
 
 	static Component gap(int px)

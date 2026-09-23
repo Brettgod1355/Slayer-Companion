@@ -45,6 +45,7 @@ import net.runelite.client.config.ConfigManager;
 public class LocationService
 {
 	private static final String FAVOURITE_PREFIX = "fav.";
+	private static final String VARIANT_PREFIX = "variant.";
 
 	private final ConfigManager configManager;
 
@@ -56,8 +57,28 @@ public class LocationService
 
 	public List<TaskLocation> forTask(TaskInfo task)
 	{
+		return forTask(task, variant(task));
+	}
+
+	/** Locations for a task, narrowed to the chosen variant when that variant has any spots. */
+	public List<TaskLocation> forTask(TaskInfo task, @Nullable String variant)
+	{
 		String fav = favourite(task.getTask());
-		List<TaskLocation> out = new ArrayList<>(task.locationsOrEmpty());
+		List<TaskLocation> out = new ArrayList<>();
+		if (variant != null)
+		{
+			for (TaskLocation l : task.locationsOrEmpty())
+			{
+				if (l.getMonsters() != null && l.getMonsters().contains(variant))
+				{
+					out.add(l);
+				}
+			}
+		}
+		if (out.isEmpty())
+		{
+			out.addAll(task.locationsOrEmpty());
+		}
 		out.sort(Comparator
 			.comparing((TaskLocation l) -> fav == null || !fav.equals(l.getId()))
 			.thenComparingInt(l -> l.getRank() <= 0 ? Integer.MAX_VALUE : l.getRank())
@@ -87,6 +108,32 @@ public class LocationService
 			}
 		}
 		return Optional.empty();
+	}
+
+	/** The variant chosen for a task, or the task's first variant when none is saved. */
+	@Nullable
+	public String variant(TaskInfo task)
+	{
+		String saved = configManager.getConfiguration(SlayerCompanionConfig.GROUP, VARIANT_PREFIX + slug(task.getTask()));
+		if (saved != null && task.monster(saved) != null)
+		{
+			return saved;
+		}
+		List<com.slayercompanion.data.MonsterInfo> variants = task.variants();
+		return variants.isEmpty() ? null : variants.get(0).getName();
+	}
+
+	public void setVariant(String taskName, @Nullable String monsterName)
+	{
+		String key = VARIANT_PREFIX + slug(taskName);
+		if (monsterName == null)
+		{
+			configManager.unsetConfiguration(SlayerCompanionConfig.GROUP, key);
+		}
+		else
+		{
+			configManager.setConfiguration(SlayerCompanionConfig.GROUP, key, monsterName);
+		}
 	}
 
 	public void setFavourite(String taskName, @Nullable String locationId)
