@@ -1,0 +1,11 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Master Luke" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="com.slayercompanion.SlayerCompanionPluginTest" />
+    <module name="slayer-companion.test" />
+    <option name="PROGRAM_PARAMETERS" value="--developer-mode --debug --profile=&quot;Master Luke&quot;" />
+    <option name="VM_PARAMETERS" value="-ea" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
