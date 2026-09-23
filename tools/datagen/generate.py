@@ -28,6 +28,7 @@ Data flow
           v
     merge_locations()           dedupe by (location text, plane) -> stable id
     apply_curated()             curated/verified/*.json overrides + extra locs
+    apply_access()              requirements[] text -> access{groups[any[rule]]}
           |
           v
     out/tasks.json  out/locations.json  out/report.json  out/item-names.txt
@@ -1421,6 +1422,642 @@ def apply_curated(task: dict, curated: dict | None, report: dict) -> None:
 
 
 # --------------------------------------------------------------------------
+# Access rules: free-text location requirements -> checkable structure
+# --------------------------------------------------------------------------
+# parse_access() turns the curated `requirements` strings of a location into
+# {"groups": [{"text", "any": [rule...], "manual", "note"?}]}.  The plugin
+# (AccessChecker) ANDs the groups and ORs the rules inside `any`; a group whose
+# `any` evaluates false is a hard lock, so anything that might be an
+# unexpressed *alternative* (an item, a boss task, a combat-achievement tier,
+# an unknown parenthetical) collapses the group to `any: []` + manual.  A
+# missing lock is always preferred to a wrong one.
+
+# RuneLite Quest enum name -> display name (net.runelite.api.Quest).
+QUESTS: dict[str, str] = {
+    "ANIMAL_MAGNETISM": "Animal Magnetism", "ANOTHER_SLICE_OF_HAM": "Another Slice of H.A.M.",
+    "THE_ASCENT_OF_ARCEUUS": "The Ascent of Arceuus", "ALFRED_GRIMHANDS_BARCRAWL": "Alfred Grimhand's Barcrawl",
+    "BEAR_YOUR_SOUL": "Bear Your Soul", "BELOW_ICE_MOUNTAIN": "Below Ice Mountain",
+    "BETWEEN_A_ROCK": "Between a Rock...", "BIG_CHOMPY_BIRD_HUNTING": "Big Chompy Bird Hunting",
+    "BIOHAZARD": "Biohazard", "BLACK_KNIGHTS_FORTRESS": "Black Knights' Fortress", "BONE_VOYAGE": "Bone Voyage",
+    "CABIN_FEVER": "Cabin Fever", "CLIENT_OF_KOUREND": "Client of Kourend", "CLOCK_TOWER": "Clock Tower",
+    "COLD_WAR": "Cold War", "CONTACT": "Contact!", "COOKS_ASSISTANT": "Cook's Assistant",
+    "THE_CORSAIR_CURSE": "The Corsair Curse", "CREATURE_OF_FENKENSTRAIN": "Creature of Fenkenstrain",
+    "CURSE_OF_THE_EMPTY_LORD": "Curse of the Empty Lord", "DADDYS_HOME": "Daddy's Home",
+    "DARKNESS_OF_HALLOWVALE": "Darkness of Hallowvale", "DEATH_PLATEAU": "Death Plateau",
+    "DEATH_TO_THE_DORGESHUUN": "Death to the Dorgeshuun", "DEMON_SLAYER": "Demon Slayer",
+    "THE_DEPTHS_OF_DESPAIR": "The Depths of Despair", "DESERT_TREASURE_I": "Desert Treasure I",
+    "DEVIOUS_MINDS": "Devious Minds", "THE_DIG_SITE": "The Dig Site", "DORICS_QUEST": "Doric's Quest",
+    "DRAGON_SLAYER_I": "Dragon Slayer I", "DRAGON_SLAYER_II": "Dragon Slayer II", "DREAM_MENTOR": "Dream Mentor",
+    "DRUIDIC_RITUAL": "Druidic Ritual", "DWARF_CANNON": "Dwarf Cannon", "EADGARS_RUSE": "Eadgar's Ruse",
+    "EAGLES_PEAK": "Eagles' Peak", "ELEMENTAL_WORKSHOP_I": "Elemental Workshop I",
+    "ELEMENTAL_WORKSHOP_II": "Elemental Workshop II", "ENAKHRAS_LAMENT": "Enakhra's Lament",
+    "THE_ENCHANTED_KEY": "The Enchanted Key", "ENLIGHTENED_JOURNEY": "Enlightened Journey",
+    "ENTER_THE_ABYSS": "Enter the Abyss", "ERNEST_THE_CHICKEN": "Ernest the Chicken",
+    "THE_EYES_OF_GLOUPHRIE": "The Eyes of Glouphrie", "FAIRYTALE_I__GROWING_PAINS": "Fairytale I - Growing Pains",
+    "FAIRYTALE_II__CURE_A_QUEEN": "Fairytale II - Cure a Queen", "FAMILY_CREST": "Family Crest",
+    "FAMILY_PEST": "Family Pest", "THE_FEUD": "The Feud", "FIGHT_ARENA": "Fight Arena",
+    "FISHING_CONTEST": "Fishing Contest", "FORGETTABLE_TALE": "Forgettable Tale...",
+    "THE_FORSAKEN_TOWER": "The Forsaken Tower", "THE_FREMENNIK_EXILES": "The Fremennik Exiles",
+    "THE_FREMENNIK_ISLES": "The Fremennik Isles", "THE_FREMENNIK_TRIALS": "The Fremennik Trials",
+    "GARDEN_OF_TRANQUILLITY": "Garden of Tranquillity", "THE_GENERALS_SHADOW": "The General's Shadow",
+    "GERTRUDES_CAT": "Gertrude's Cat", "GETTING_AHEAD": "Getting Ahead", "GHOSTS_AHOY": "Ghosts Ahoy",
+    "THE_GIANT_DWARF": "The Giant Dwarf", "GOBLIN_DIPLOMACY": "Goblin Diplomacy", "THE_GOLEM": "The Golem",
+    "THE_GRAND_TREE": "The Grand Tree", "THE_GREAT_BRAIN_ROBBERY": "The Great Brain Robbery",
+    "GRIM_TALES": "Grim Tales", "THE_HAND_IN_THE_SAND": "The Hand in the Sand", "HAUNTED_MINE": "Haunted Mine",
+    "HAZEEL_CULT": "Hazeel Cult", "HEROES_QUEST": "Heroes' Quest", "HOLY_GRAIL": "Holy Grail",
+    "HORROR_FROM_THE_DEEP": "Horror from the Deep", "ICTHLARINS_LITTLE_HELPER": "Icthlarin's Little Helper",
+    "IMP_CATCHER": "Imp Catcher", "IN_AID_OF_THE_MYREQUE": "In Aid of the Myreque",
+    "IN_SEARCH_OF_KNOWLEDGE": "In Search of Knowledge", "IN_SEARCH_OF_THE_MYREQUE": "In Search of the Myreque",
+    "JUNGLE_POTION": "Jungle Potion", "A_KINGDOM_DIVIDED": "A Kingdom Divided", "KINGS_RANSOM": "King's Ransom",
+    "THE_KNIGHTS_SWORD": "The Knight's Sword", "LAIR_OF_TARN_RAZORLOR": "Lair of Tarn Razorlor",
+    "LEGENDS_QUEST": "Legends' Quest", "LOST_CITY": "Lost City", "THE_LOST_TRIBE": "The Lost Tribe",
+    "LUNAR_DIPLOMACY": "Lunar Diplomacy", "MAGE_ARENA_I": "Mage Arena I", "MAGE_ARENA_II": "Mage Arena II",
+    "MAKING_FRIENDS_WITH_MY_ARM": "Making Friends with My Arm", "MAKING_HISTORY": "Making History",
+    "MERLINS_CRYSTAL": "Merlin's Crystal", "MISTHALIN_MYSTERY": "Misthalin Mystery",
+    "MONKEY_MADNESS_I": "Monkey Madness I", "MONKEY_MADNESS_II": "Monkey Madness II",
+    "MONKS_FRIEND": "Monk's Friend", "MOUNTAIN_DAUGHTER": "Mountain Daughter",
+    "MOURNINGS_END_PART_I": "Mourning's End Part I", "MOURNINGS_END_PART_II": "Mourning's End Part II",
+    "MURDER_MYSTERY": "Murder Mystery", "MY_ARMS_BIG_ADVENTURE": "My Arm's Big Adventure",
+    "NATURE_SPIRIT": "Nature Spirit", "A_NIGHT_AT_THE_THEATRE": "A Night at the Theatre",
+    "OBSERVATORY_QUEST": "Observatory Quest", "OLAFS_QUEST": "Olaf's Quest", "ONE_SMALL_FAVOUR": "One Small Favour",
+    "PIRATES_TREASURE": "Pirate's Treasure", "PLAGUE_CITY": "Plague City",
+    "A_PORCINE_OF_INTEREST": "A Porcine of Interest", "PRIEST_IN_PERIL": "Priest in Peril",
+    "PRINCE_ALI_RESCUE": "Prince Ali Rescue", "THE_QUEEN_OF_THIEVES": "The Queen of Thieves",
+    "RAG_AND_BONE_MAN_I": "Rag and Bone Man I", "RAG_AND_BONE_MAN_II": "Rag and Bone Man II",
+    "RATCATCHERS": "Ratcatchers", "RECIPE_FOR_DISASTER": "Recipe for Disaster",
+    "RECRUITMENT_DRIVE": "Recruitment Drive", "REGICIDE": "Regicide", "THE_RESTLESS_GHOST": "The Restless Ghost",
+    "ROMEO__JULIET": "Romeo & Juliet", "ROVING_ELVES": "Roving Elves", "ROYAL_TROUBLE": "Royal Trouble",
+    "RUM_DEAL": "Rum Deal", "RUNE_MYSTERIES": "Rune Mysteries", "SCORPION_CATCHER": "Scorpion Catcher",
+    "SEA_SLUG": "Sea Slug", "SHADES_OF_MORTTON": "Shades of Mort'ton", "SHADOW_OF_THE_STORM": "Shadow of the Storm",
+    "SHEEP_HERDER": "Sheep Herder", "SHEEP_SHEARER": "Sheep Shearer", "SHIELD_OF_ARRAV": "Shield of Arrav",
+    "SHILO_VILLAGE": "Shilo Village", "SINS_OF_THE_FATHER": "Sins of the Father",
+    "SKIPPY_AND_THE_MOGRES": "Skippy and the Mogres", "THE_SLUG_MENACE": "The Slug Menace",
+    "SONG_OF_THE_ELVES": "Song of the Elves", "A_SOULS_BANE": "A Soul's Bane",
+    "SPIRITS_OF_THE_ELID": "Spirits of the Elid", "SWAN_SONG": "Swan Song", "TAI_BWO_WANNAI_TRIO": "Tai Bwo Wannai Trio",
+    "A_TAIL_OF_TWO_CATS": "A Tail of Two Cats", "TALE_OF_THE_RIGHTEOUS": "Tale of the Righteous",
+    "A_TASTE_OF_HOPE": "A Taste of Hope", "TEARS_OF_GUTHIX": "Tears of Guthix", "TEMPLE_OF_IKOV": "Temple of Ikov",
+    "THRONE_OF_MISCELLANIA": "Throne of Miscellania", "THE_TOURIST_TRAP": "The Tourist Trap",
+    "TOWER_OF_LIFE": "Tower of Life", "TREE_GNOME_VILLAGE": "Tree Gnome Village", "TRIBAL_TOTEM": "Tribal Totem",
+    "TROLL_ROMANCE": "Troll Romance", "TROLL_STRONGHOLD": "Troll Stronghold", "UNDERGROUND_PASS": "Underground Pass",
+    "VAMPYRE_SLAYER": "Vampyre Slayer", "WANTED": "Wanted!", "WATCHTOWER": "Watchtower",
+    "WATERFALL_QUEST": "Waterfall Quest", "WHAT_LIES_BELOW": "What Lies Below", "WITCHS_HOUSE": "Witch's House",
+    "WITCHS_POTION": "Witch's Potion", "X_MARKS_THE_SPOT": "X Marks the Spot",
+    "ZOGRE_FLESH_EATERS": "Zogre Flesh Eaters", "THE_FROZEN_DOOR": "The Frozen Door",
+    "LAND_OF_THE_GOBLINS": "Land of the Goblins", "HOPESPEARS_WILL": "Hopespear's Will",
+    "TEMPLE_OF_THE_EYE": "Temple of the Eye", "BENEATH_CURSED_SANDS": "Beneath Cursed Sands",
+    "SLEEPING_GIANTS": "Sleeping Giants", "THE_GARDEN_OF_DEATH": "The Garden of Death",
+    "INTO_THE_TOMBS": "Into the Tombs",
+    "RECIPE_FOR_DISASTER__ANOTHER_COOKS_QUEST": "Recipe for Disaster - Another Cook's Quest",
+    "RECIPE_FOR_DISASTER__MOUNTAIN_DWARF": "Recipe for Disaster - Mountain Dwarf",
+    "RECIPE_FOR_DISASTER__WARTFACE__BENTNOZE": "Recipe for Disaster - Wartface & Bentnoze",
+    "RECIPE_FOR_DISASTER__PIRATE_PETE": "Recipe for Disaster - Pirate Pete",
+    "RECIPE_FOR_DISASTER__LUMBRIDGE_GUIDE": "Recipe for Disaster - Lumbridge Guide",
+    "RECIPE_FOR_DISASTER__EVIL_DAVE": "Recipe for Disaster - Evil Dave",
+    "RECIPE_FOR_DISASTER__SKRACH_UGLOGWEE": "Recipe for Disaster - Skrach Uglogwee",
+    "RECIPE_FOR_DISASTER__SIR_AMIK_VARZE": "Recipe for Disaster - Sir Amik Varze",
+    "RECIPE_FOR_DISASTER__KING_AWOWOGEI": "Recipe for Disaster - King Awowogei",
+    "RECIPE_FOR_DISASTER__CULINAROMANCER": "Recipe for Disaster - Culinaromancer",
+    "SECRETS_OF_THE_NORTH": "Secrets of the North",
+    "DESERT_TREASURE_II__THE_FALLEN_EMPIRE": "Desert Treasure II - The Fallen Empire",
+    "HIS_FAITHFUL_SERVANTS": "His Faithful Servants", "THE_PATH_OF_GLOUPHRIE": "The Path of Glouphrie",
+    "CHILDREN_OF_THE_SUN": "Children of the Sun", "BARBARIAN_TRAINING": "Barbarian Training",
+    "DEFENDER_OF_VARROCK": "Defender of Varrock", "WHILE_GUTHIX_SLEEPS": "While Guthix Sleeps",
+    "TWILIGHTS_PROMISE": "Twilight's Promise", "AT_FIRST_LIGHT": "At First Light",
+    "PERILOUS_MOONS": "Perilous Moons",
+    "THE_RIBBITING_TALE_OF_A_LILY_PAD_LABOUR_DISPUTE": "The Ribbiting Tale of a Lily Pad Labour Dispute",
+    "THE_HEART_OF_DARKNESS": "The Heart of Darkness", "DEATH_ON_THE_ISLE": "Death on the Isle",
+    "MEAT_AND_GREET": "Meat and Greet", "ETHICALLY_ACQUIRED_ANTIQUITIES": "Ethically Acquired Antiquities",
+    "THE_CURSE_OF_ARRAV": "The Curse of Arrav", "THE_FINAL_DAWN": "The Final Dawn",
+    "SHADOWS_OF_CUSTODIA": "Shadows of Custodia", "SCRAMBLED": "Scrambled!", "VALE_TOTEMS": "Vale Totems",
+    "PANDEMONIUM": "Pandemonium", "PRYING_TIMES": "Prying Times", "CURRENT_AFFAIRS": "Current Affairs",
+    "TROUBLED_TORTUGANS": "Troubled Tortugans", "THE_RED_REEF": "The Red Reef",
+    "FALLEN_FROM_GRACE": "Fallen From Grace", "LEARNING_THE_ROPES": "Learning the Ropes",
+    "THE_IDES_OF_MILK": "The Ides of Milk", "THE_BLOOD_MOON_RISES": "The Blood Moon Rises",
+    "A_RUFF_SITUATION": "A Ruff Situation", "CRAB_QUEST": "Crab Quest",
+}
+
+# Short forms / spellings seen in the requirement strings -> Quest enum name.
+# Keys are normalised with _quest_key() (lower-case, alphanumerics only, no leading "the").
+QUEST_ALIASES: dict[str, str] = {
+    "ds1": "DRAGON_SLAYER_I", "ds2": "DRAGON_SLAYER_II", "dsii": "DRAGON_SLAYER_II",
+    "dragonslayer": "DRAGON_SLAYER_I",
+    "sote": "SONG_OF_THE_ELVES", "mm1": "MONKEY_MADNESS_I", "mm2": "MONKEY_MADNESS_II",
+    "monkeymadness": "MONKEY_MADNESS_I",
+    "mep1": "MOURNINGS_END_PART_I", "mep2": "MOURNINGS_END_PART_II", "mepii": "MOURNINGS_END_PART_II",
+    "dt1": "DESERT_TREASURE_I", "dt2": "DESERT_TREASURE_II__THE_FALLEN_EMPIRE",
+    "deserttreasureii": "DESERT_TREASURE_II__THE_FALLEN_EMPIRE",
+    "deserttreasure2": "DESERT_TREASURE_II__THE_FALLEN_EMPIRE",
+    "fairytaleii": "FAIRYTALE_II__CURE_A_QUEEN", "fairytale2": "FAIRYTALE_II__CURE_A_QUEEN",
+    "fairytalei": "FAIRYTALE_I__GROWING_PAINS", "fairytale1": "FAIRYTALE_I__GROWING_PAINS",
+    "rfd": "RECIPE_FOR_DISASTER",
+    "recipefordisasterfreeingsiramikvarze": "RECIPE_FOR_DISASTER__SIR_AMIK_VARZE",
+    "recipefordisastersiramikvarze": "RECIPE_FOR_DISASTER__SIR_AMIK_VARZE",
+    "rfdsiramikvarze": "RECIPE_FOR_DISASTER__SIR_AMIK_VARZE",
+    "sotf": "SINS_OF_THE_FATHER", "atoh": "A_TASTE_OF_HOPE", "doh": "DARKNESS_OF_HALLOWVALE",
+    "hftd": "HORROR_FROM_THE_DEEP", "pip": "PRIEST_IN_PERIL", "wgs": "WHILE_GUTHIX_SLEEPS",
+    "legendsquest": "LEGENDS_QUEST", "heroesquest": "HEROES_QUEST", "olafsquest": "OLAFS_QUEST",
+    "waterfallquest": "WATERFALL_QUEST", "fremennikexiles": "THE_FREMENNIK_EXILES",
+    "fremenniktrials": "THE_FREMENNIK_TRIALS", "fremennikisles": "THE_FREMENNIK_ISLES",
+    "enterabyss": "ENTER_THE_ABYSS", "entertheabyss": "ENTER_THE_ABYSS",
+}
+
+# RuneLite Skill enum names.  "combat" is handled separately (type "combat").
+SKILLS = ("ATTACK", "DEFENCE", "STRENGTH", "HITPOINTS", "RANGED", "PRAYER", "MAGIC", "COOKING",
+          "WOODCUTTING", "FLETCHING", "FISHING", "FIREMAKING", "CRAFTING", "SMITHING", "MINING",
+          "HERBLORE", "AGILITY", "THIEVING", "SLAYER", "FARMING", "RUNECRAFT", "HUNTER",
+          "CONSTRUCTION", "SAILING")
+SKILL_ALIASES = {"range": "RANGED", "ranging": "RANGED", "hp": "HITPOINTS", "runecrafting": "RUNECRAFT",
+                 "wc": "WOODCUTTING", "str": "STRENGTH", "def": "DEFENCE", "att": "ATTACK"}
+
+# Diary region (normalised) -> (VarbitID prefix, display name).  Karamja only has an ELITE varbit.
+DIARY_REGIONS = {
+    "ardougne": ("ARDOUGNE", "Ardougne"), "falador": ("FALADOR", "Falador"),
+    "wilderness": ("WILDERNESS", "Wilderness"), "western": ("WESTERN", "Western Provinces"),
+    "westernprovinces": ("WESTERN", "Western Provinces"), "kandarin": ("KANDARIN", "Kandarin"),
+    "varrock": ("VARROCK", "Varrock"), "desert": ("DESERT", "Desert"), "morytania": ("MORYTANIA", "Morytania"),
+    "fremennik": ("FREMENNIK", "Fremennik"), "lumbridge": ("LUMBRIDGE", "Lumbridge & Draynor"),
+    "lumbridgeanddraynor": ("LUMBRIDGE", "Lumbridge & Draynor"), "lumbridgedraynor": ("LUMBRIDGE", "Lumbridge & Draynor"),
+    "karamja": ("KARAMJA", "Karamja"), "kourend": ("KOUREND", "Kourend & Kebos"),
+    "kourendandkebos": ("KOUREND", "Kourend & Kebos"), "kourendkebos": ("KOUREND", "Kourend & Kebos"),
+    "kebos": ("KOUREND", "Kourend & Kebos"),
+}
+DIARY_TIERS = ("easy", "medium", "hard", "elite")
+DIARY_MISSING_VARBITS = {("KARAMJA", "easy"), ("KARAMJA", "medium"), ("KARAMJA", "hard")}
+
+# Slayer reward unlock names (exact, as the live reward list shows them).
+UNLOCK_NAMES = (
+    "Gargoyle Smasher", "Slug Salter", "Reptile Freezer", "'Shroom Sprayer", "Malevolent Masquerade",
+    "Ring Bling", "Broader Fletching", "Seeing Red", "Watch the Birdie", "Hot Stuff", "Like a Boss",
+    "Reptile Got Ripped", "Bigger and Badder", "Duly Noted", "Stop the Wyvern", "Double Trouble",
+    "Basilocked", "Actual Vampyre Slayer", "Task Storage", "I Wildy More Slayer", "Warped Reality",
+    "Lured In", "Wings Spread", "Chance of Heavy Frost", "Need More Darkness", "Ankou Very Much",
+    "Suq-a-nother One", "Fire & Darkness", "Pedal to the Metals", "Spiritual Fervour", "Augment my Abbies",
+    "It's Dark in Here", "Greater Challenge", "Bleed Me Dry", "Smell Ya Later", "Birds of a Feather",
+    "Horrorific", "To Dust You Shall Return", "Wyver-nother One", "Get Smashed", "Nechs Please", "Krack On",
+    "Get Scabaright on It", "Wyver-nother Two", "Basilonger", "More at Stake", "Revenenenenenants",
+    "More eyes than sense", "Un-restraining Order", "Let's Stay All Aquanite", "Can of Wyrms",
+    "Gryphon and on", "I see Dragons",
+)
+
+# Whole-string classifiers, checked first (regex on the lower-cased string -> note).
+# Any hit makes the string a manual group with no rules.
+_ACCESS_WHOLE_STRING = (
+    # master assignment requirements: not location requirements
+    (re.compile(r"to be assigned|to be offered|to receive .*\btasks?\b|\bfor the (?:boss )?task\b|"
+                r"\bassigns?\b|\bto assign\b|slayer task list requirement|"
+                r"\bfor (?:a|an) [\w' -]*\btask\b|god wars (?:dungeon )?(?:slayer )?(?:tasks|assignments)|gwd tasks"),
+     "assignment requirement"),
+    (re.compile(r"\boptional\b|\brecommended\b"), "optional"),
+    (re.compile(r"\bnot available\b|\bno longer\b"), "negative requirement"),
+    (re.compile(r"^unknown\b"), "unknown"),
+)
+_ACCESS_NONE = re.compile(r"^none\b")
+_TASK_ONLY = re.compile(r"task-only|on-task|^must be on a|^active\b.*\btask\b|^on a\b.*\btask\b|"
+                        r"^[\w' ]+ task(?: \(|$)")
+
+# Parenthetical handling: alternatives ("or ..."), harmless qualifiers, and
+# "alternative-ish" text that might describe another way in (drops the rules).
+_PAREN_ALT = re.compile(r"^(?:or|unless|not needed with|permanent after)\b\s*(.*)$", re.I)
+_PAREN_HARMLESS = re.compile(
+    r"^(?:(?:not |un)?boostable|cannot be boosted|boosted|not boostable\b.*|"
+    r"partial(?:\b.*)?|started(?:\b.*)?|completed|complete|"
+    r"(?:to |for )?[\w' ]*\baccess(?: to [\w' ]+)?|to (?:access|enter|reach)\b.*|"
+    r"reached? [\w' ]+|defeat(?:ed)? dad|dad defeated|fairy rings? \w+(?: .*)?|"
+    r"boulder|jutting wall|dungeon entrance obstacle|varlamore|free-to-play|\d+ (?:slayer reward )?points)$", re.I)
+_PAREN_ALTISH = re.compile(r"\bor\b|\bunless\b|bypass|instead|\bwith\b|\bwithout\b|\bonly\b|\bfree\b|\bhalf\b|"
+                           r"\bformerly\b|\bneeds nothing\b|\bafter\b", re.I)
+_OR_SPLIT = re.compile(r",?\s+or\s+(?!better\b)", re.I)
+_AND_SPLIT = re.compile(r"\s*;\s+|,\s+|\s+and\s+|\s+plus\s+", re.I)
+_UNLESS = re.compile(r",?\s+(?:unless|not needed with)\s+", re.I)
+_QUALIFIER_BAD = re.compile(r"shortcut|route|entrance|task page|stepping stones|\bper\b|section", re.I)
+
+_SKILL_RE = re.compile(r"^(?:level )?(\d+)\s+([a-z]+)(?P<tail>.*)$", re.I)
+_SKILL_RE2 = re.compile(r"^([a-z]+)\s+(\d+)$", re.I)
+_SKILL_TAIL_OK = re.compile(r"^(?:,?\s*(?:boostable|not boostable|unboostable|not boostable))?"
+                            r"(?:\s+(?:to|for)\s+.+)?$", re.I)
+_DIARY_RE = re.compile(r"^(?:the\s+)?(?:(easy|medium|hard|elite)\s+)?(.+?)(?:\s+(easy|medium|hard|elite))?\s+diary"
+                       r"(?:\s+is\s+(?:complete|done)|\s+completed?)?$", re.I)
+_UNLOCK_RE = re.compile(r"^'?([\w' &!-]+?)'?\s+(?:slayer\s+)?unlock(?:ed)?$", re.I)
+_MEMBERS_RE = re.compile(r"^members$", re.I)
+_QUEST_LEAD = re.compile(r"^(?:partial completion of|completion of|partial|started|complete|completed)\s+", re.I)
+# What may follow a quest name: state words, then one "how far" / "what for" clause.
+_QUEST_TAIL_OK = re.compile(
+    r"^(?:(?i:quest|miniquest|started|completed?|progressed|partial)\s*)*"
+    r"(?:(?i:far enough\s+)?(?:(?i:to (?:the point of|access|enter|reach|board))|for [A-Z][\w']* access)\b.*)?$")
+_IN_PROGRESS = re.compile(r"partial|started|progressed|to the point|far enough|during", re.I)
+_QUEST_LOOKING = re.compile(r"quest|partial|started|complet|progress", re.I)
+_SMALL_WORDS = {"of", "the", "a", "an", "and", "in", "to", "on", "from", "for", "with", "&", "-", "at", "i", "ii", "iii"}
+
+
+def _quest_key(name: str) -> str:
+    key = re.sub(r"[^a-z0-9]+", "", name.lower())
+    return key[3:] if key.startswith("the") and len(key) > 3 else key
+
+
+_QUEST_BY_KEY: dict[str, str] = {}
+for _enum, _display in QUESTS.items():
+    _QUEST_BY_KEY[_quest_key(_display)] = _enum
+    _QUEST_BY_KEY[re.sub(r"[^a-z0-9]+", "", _display.lower())] = _enum
+_QUEST_BY_KEY.update(QUEST_ALIASES)
+
+
+def _strip_parens(text: str) -> tuple[str, list[str]]:
+    """Return text without (...) groups and the list of their contents (nesting-aware)."""
+    out, parens, depth, buf = [], [], 0, []
+    for ch in text:
+        if ch == "(":
+            if depth == 0:
+                buf = []
+            else:
+                buf.append(ch)
+            depth += 1
+        elif ch == ")" and depth:
+            depth -= 1
+            if depth == 0:
+                parens.append("".join(buf).strip())
+            else:
+                buf.append(ch)
+        elif depth:
+            buf.append(ch)
+        else:
+            out.append(ch)
+    main = re.sub(r"\s+([,;:])", r"\1", re.sub(r"\s+", " ", "".join(out))).strip(" ,;:")
+    return main, parens
+
+
+_QUEST_NAME_IN_TEXT = re.compile(
+    r"\b(?:" + "|".join(sorted((re.escape(d) for d in QUESTS.values() if len(d) >= 8), key=len, reverse=True)) + r")\b",
+    re.I)
+
+
+def _looks_like_quest(piece: str) -> bool:
+    if re.search(r"combat achievement", piece, re.I):
+        return False
+    if _QUEST_LOOKING.search(piece) or _QUEST_NAME_IN_TEXT.search(piece):
+        return True
+    words = piece.split()
+    caps = [w for w in words if w[:1].isupper()]
+    return len(words) >= 2 and len(caps) >= 2 and all(w[:1].isupper() or w.lower() in _SMALL_WORDS for w in words)
+
+
+def _classify_piece(piece: str, state_text: str) -> dict | None:
+    """One alternative / conjunct (parentheticals already removed) -> rule or None."""
+    p = piece.strip(" ,;:")
+    if not p:
+        return None
+    if _MEMBERS_RE.match(p):
+        return {"type": "members"}
+    m = _SKILL_RE.match(p) or None
+    if m:
+        level, word, tail = int(m.group(1)), m.group(2).lower(), m.group("tail")
+        if _SKILL_TAIL_OK.match(tail) and not _QUALIFIER_BAD.search(tail):
+            if word == "combat":
+                return {"type": "combat", "level": level}
+            skill = SKILL_ALIASES.get(word, word.upper())
+            if skill in SKILLS:
+                return {"type": "skill", "skill": skill, "level": level}
+    m = _SKILL_RE2.match(p)
+    if m:
+        word, level = m.group(1).lower(), int(m.group(2))
+        if word == "combat":
+            return {"type": "combat", "level": level}
+        skill = SKILL_ALIASES.get(word, word.upper())
+        if skill in SKILLS:
+            return {"type": "skill", "skill": skill, "level": level}
+    m = _DIARY_RE.match(p)
+    if m:
+        tier = (m.group(1) or m.group(3) or "").lower()
+        region = re.sub(r"[^a-z]+", "", m.group(2).lower().replace("&", "and"))
+        if tier in DIARY_TIERS and region in DIARY_REGIONS:
+            prefix, display = DIARY_REGIONS[region]
+            if (prefix, tier) in DIARY_MISSING_VARBITS:
+                return None
+            return {"type": "diary", "varbit": f"{prefix}_DIARY_{tier.upper()}_COMPLETE",
+                    "name": f"{display} {tier.title()} diary"}
+    m = _UNLOCK_RE.match(p)
+    if m:
+        wanted = re.sub(r"\s+", " ", m.group(1).lower())
+        for name in UNLOCK_NAMES:
+            if name.lower() == wanted:
+                return {"type": "unlock", "name": name}
+        return None
+    enum = _match_quest(p)
+    if enum:
+        state = "IN_PROGRESS" if _IN_PROGRESS.search(state_text) else "FINISHED"
+        return {"type": "quest", "quest": enum, "name": QUESTS[enum], "state": state}
+    return None
+
+
+def _match_quest(piece: str) -> str | None:
+    """Longest word prefix of the piece that is a known quest, provided the rest is an allowed tail."""
+    rest = _QUEST_LEAD.sub("", piece.strip())
+    words = rest.split()
+    for i in range(len(words), 0, -1):
+        enum = _QUEST_BY_KEY.get(_quest_key(" ".join(words[:i])))
+        if enum and _QUEST_TAIL_OK.match(" ".join(words[i:])):
+            return enum
+    return None
+
+
+def _split_outside_parens(text: str, rx: re.Pattern) -> list[str]:
+    """Split on rx matches that are not inside parentheses."""
+    parts, last = [], 0
+    for m in rx.finditer(text):
+        before = text[:m.start()]
+        if before.count("(") == before.count(")"):
+            parts.append(text[last:m.start()])
+            last = m.end()
+    parts.append(text[last:])
+    return [x.strip() for x in parts if x.strip()]
+
+
+def _piece(raw: str) -> tuple[str, list[str], bool, bool]:
+    """raw alternative/conjunct -> (text without parens, extra alternatives, altish, descriptive)."""
+    main, parens = _strip_parens(raw)
+    extra, altish, descriptive = [], False, False
+    for p in parens:
+        am = _PAREN_ALT.match(p)
+        if am:
+            extra.append(am.group(1))
+        elif _PAREN_HARMLESS.match(p):
+            continue
+        elif _PAREN_ALTISH.search(p):
+            altish = True      # may describe another way in: never lock on the rules alone
+        else:
+            descriptive = True  # unknown detail: keep the rules, flag the group manual
+    return main, extra, altish, descriptive
+
+
+def parse_access(requirements: list[str]) -> dict:
+    """Pure: free-text requirement strings -> {"groups": [...]} (see README, "access")."""
+    groups: list[dict] = []
+    for raw in requirements or []:
+        text = re.sub(r"\s+", " ", str(raw)).strip()
+        if not text:
+            continue
+        low = text.lower()
+        if _ACCESS_NONE.match(low):
+            groups.append({"text": text, "any": [], "manual": False, "note": "no requirement"})
+            continue
+        note = next((n for rx, n in _ACCESS_WHOLE_STRING if rx.search(low)), None)
+        if note is None and "diary" not in low and _TASK_ONLY.search(low):
+            note = "task-only"
+        if note is not None:
+            groups.append({"text": text, "any": [], "manual": True, "note": note})
+            continue
+
+        unparsed: list[str] = []
+
+        def classify(raw_piece: str) -> tuple[dict | None, bool, bool, list[str]]:
+            main, extra, altish, descriptive = _piece(raw_piece)
+            rule = _classify_piece(main, raw_piece)   # the piece's own words decide the quest state
+            if rule is None and _looks_like_quest(main):
+                unparsed.append(main)
+            return rule, altish, descriptive, extra
+
+        alts = _split_outside_parens(_UNLESS.sub(" or ", text), _OR_SPLIT)
+        if len(alts) > 1:
+            rules, uncheckable, descriptive = [], False, False
+            queue = list(alts)
+            while queue:
+                r, altish, desc, extra = classify(queue.pop(0))
+                queue.extend(extra)
+                descriptive = descriptive or desc
+                if r is None or altish:
+                    uncheckable = True
+                else:
+                    rules.append(r)
+            if uncheckable or not rules:
+                groups.append({"text": text, "any": [], "manual": True, "_unparsed": unparsed})
+            else:
+                groups.append({"text": text, "any": rules, "manual": descriptive, "_unparsed": unparsed})
+            continue
+
+        whole, altish, descriptive, extra = classify(text)
+        if whole is not None or extra:
+            # single requirement, possibly with "(or ...)" alternatives in parentheses
+            rules = [whole] if whole else []
+            uncheckable = whole is None or altish
+            for e in extra:
+                r, a2, d2, more = classify(e)
+                descriptive = descriptive or d2
+                if r is None or a2 or more:
+                    uncheckable = True
+                else:
+                    rules.append(r)
+            if uncheckable:
+                groups.append({"text": text, "any": [], "manual": True, "_unparsed": unparsed})
+            else:
+                groups.append({"text": text, "any": rules, "manual": descriptive, "_unparsed": unparsed})
+            continue
+
+        # conjunction: every checkable part is a necessary condition -> its own (AND) group
+        conjuncts = _split_outside_parens(text, _AND_SPLIT)
+        checkable: list[dict] = []
+        if len(conjuncts) > 1:
+            unparsed.clear()
+            for c in conjuncts:
+                r, a2, d2, more = classify(c)
+                if a2 or more:
+                    altish = True
+                descriptive = descriptive or d2
+                if r is not None:
+                    checkable.append(r)
+        if altish or not checkable:
+            groups.append({"text": text, "any": [], "manual": True, "_unparsed": unparsed})
+            continue
+        for r in checkable:
+            groups.append({"text": text, "any": [r], "manual": False, "_unparsed": []})
+        if len(checkable) < len(conjuncts) or descriptive:
+            groups.append({"text": text, "any": [], "manual": True, "_unparsed": unparsed})
+    for g in groups:
+        for r in g["any"]:
+            if r["type"] == "quest" and r["quest"] not in QUESTS:
+                raise AssertionError(f"unknown quest {r['quest']}")
+    return {"groups": groups}
+
+
+def apply_access(tasks: list[dict], report: dict) -> None:
+    """Attach `access` to every location record; fill report accessCounts/accessUnparsed."""
+    counts = {"locations": 0, "strings": 0, "distinctStrings": 0, "groups": 0,
+              "checkable": 0, "checkableStrict": 0, "manual": 0, "distinctStringsCheckable": 0,
+              "distinctStringsManualOnly": 0}
+    unparsed: dict[str, int] = {}
+    distinct: dict[str, bool] = {}
+    for t in tasks:
+        for loc in t["locations"]:
+            reqs = loc.get("requirements") or []
+            access = parse_access(reqs)
+            counts["locations"] += 1
+            counts["strings"] += len(reqs)
+            for g in access["groups"]:
+                counts["groups"] += 1
+                if g["any"]:
+                    counts["checkable"] += 1
+                    if not g["manual"]:
+                        counts["checkableStrict"] += 1
+                if g["manual"]:
+                    counts["manual"] += 1
+                if g.pop("_unparsed", None):
+                    unparsed[g["text"]] = unparsed.get(g["text"], 0) + 1
+                distinct[g["text"]] = distinct.get(g["text"], False) or bool(g["any"])
+            loc["access"] = access
+    counts["distinctStrings"] = len(distinct)
+    counts["distinctStringsCheckable"] = sum(1 for v in distinct.values() if v)
+    counts["distinctStringsManualOnly"] = sum(1 for v in distinct.values() if not v)
+    report["accessCounts"] = counts
+    report["accessUnparsed"] = dict(sorted(unparsed.items()))
+
+
+def _strip_unparsed(access: dict) -> dict:
+    for g in access["groups"]:
+        g.pop("_unparsed", None)
+    return access
+
+
+def self_test() -> int:
+    """`generate.py --self-test`: assertions for parse_access on the tricky strings."""
+    def one(s: str) -> list[dict]:
+        return _strip_unparsed(parse_access([s]))["groups"]
+
+    def rules(s: str) -> list[dict]:
+        gs = one(s)
+        assert len(gs) == 1, (s, gs)
+        return gs[0]["any"]
+
+    def quest(enum: str, state: str = "FINISHED") -> dict:
+        return {"type": "quest", "quest": enum, "name": QUESTS[enum], "state": state}
+
+    def manual(s: str, note: str | None = None) -> None:
+        gs = one(s)
+        assert gs and all(g["any"] == [] and g["manual"] for g in gs), (s, gs)
+        if note is not None:
+            assert gs[0].get("note") == note, (s, gs)
+
+    checks = 0
+    # skills / combat / members
+    assert rules("40 Slayer") == [{"type": "skill", "skill": "SLAYER", "level": 40}]; checks += 1
+    assert rules("Slayer 1") == [{"type": "skill", "skill": "SLAYER", "level": 1}]; checks += 1
+    assert rules("40 Slayer (not boostable)") == [{"type": "skill", "skill": "SLAYER", "level": 40}]; checks += 1
+    assert one("40 Slayer (not boostable)")[0]["manual"] is False; checks += 1
+    assert rules("45 Agility (boostable) for the forest obstacles") == [{"type": "skill", "skill": "AGILITY", "level": 45}]; checks += 1
+    assert rules("58 Sailing (not boostable) to dock on Laguna Aurorae the first time") == [{"type": "skill", "skill": "SAILING", "level": 58}]; checks += 1
+    assert rules("Members (Varlamore)") == [{"type": "members"}]; checks += 1
+    assert rules("Members") == [{"type": "members"}]; checks += 1
+    g = one("66 Slayer (82 for Ancient Wyverns)")
+    assert g[0]["any"] == [{"type": "skill", "skill": "SLAYER", "level": 66}] and g[0]["manual"] is True, g; checks += 1
+    manual("91 Slayer (boostable with wild pie on a hellhound task, must stay at or above 91)"); checks += 1
+    manual("Optional: 72 Agility shortcut", "optional"); checks += 1
+    manual("82 Agility (boostable) shortcut recommended", "optional"); checks += 1
+    manual("59 Agility for the southern entrance"); checks += 1
+    # OR alternatives
+    assert rules("60 Strength (boulder) or 60 Agility (jutting wall), boostable") == [
+        {"type": "skill", "skill": "STRENGTH", "level": 60}, {"type": "skill", "skill": "AGILITY", "level": 60}]; checks += 1
+    assert rules("60 Strength or 60 Agility to enter the dungeon") == [
+        {"type": "skill", "skill": "STRENGTH", "level": 60}, {"type": "skill", "skill": "AGILITY", "level": 60}]; checks += 1
+    assert rules("Partial completion of The Corsair Curse or level 10 Agility") == [
+        quest("THE_CORSAIR_CURSE", "IN_PROGRESS"), {"type": "skill", "skill": "AGILITY", "level": 10}]; checks += 1
+    manual("Dusty key or 70 Agility"); checks += 1   # item alternative -> never lock on Agility alone
+    manual("Medium Wilderness Diary (or a Callisto boss Slayer task)"); checks += 1
+    manual("Hard Wilderness Diary OR a Callisto boss Slayer task"); checks += 1
+    manual("Hard Wilderness Diary (a skeleton task does not bypass it; only a Vet'ion boss task does)"); checks += 1
+    manual("Boots of stone / brimstone / granite boots unless elite Kourend & Kebos Diary"); checks += 1
+    manual("Rope, unless the medium Kandarin Diary is done"); checks += 1
+    manual("Partial Troll Stronghold (defeat Dad) or Easy Combat Achievements"); checks += 1
+    manual("Partial Troll Stronghold (or Easy Combat Achievements for Ghommal's hilt teleport) and 60 Strength or 60 Agility to enter the dungeon"); checks += 1
+    # diaries
+    assert rules("Medium Wilderness Diary") == [{"type": "diary", "varbit": "WILDERNESS_DIARY_MEDIUM_COMPLETE", "name": "Wilderness Medium diary"}]; checks += 1
+    assert rules("Elite Kourend & Kebos Diary is complete") == [{"type": "diary", "varbit": "KOUREND_DIARY_ELITE_COMPLETE", "name": "Kourend & Kebos Elite diary"}]; checks += 1
+    assert rules("Morytania hard diary") == [{"type": "diary", "varbit": "MORYTANIA_DIARY_HARD_COMPLETE", "name": "Morytania Hard diary"}]; checks += 1
+    manual("Karamja hard diary"); checks += 1
+    manual("Medium Wilderness Diary recommended for the improved drop table", "optional"); checks += 1
+    # quests
+    assert rules("Priest in Peril") == [quest("PRIEST_IN_PERIL")]; checks += 1
+    assert rules("Heroes' Quest") == [quest("HEROES_QUEST")]; checks += 1
+    assert rules("Partial completion of Heroes' Quest") == [quest("HEROES_QUEST", "IN_PROGRESS")]; checks += 1
+    assert rules("Olaf's Quest started") == [quest("OLAFS_QUEST", "IN_PROGRESS")]; checks += 1
+    g = one("Olaf's Quest (Slayer task list says partial completion; Brine rat and Konar pages say completion)")
+    assert g[0]["any"] == [quest("OLAFS_QUEST", "IN_PROGRESS")] and g[0]["manual"] is True and "note" not in g[0], g; checks += 1
+    assert one("Hot Stuff unlock (100 Slayer reward points)")[0]["manual"] is False; checks += 1
+    assert "note" not in one("Hard Wilderness Diary OR a Callisto boss Slayer task")[0]; checks += 1
+    manual("Troll Stronghold partial (defeat Dad) or Easy Combat Achievements (Ghommal's hilt teleport)"); checks += 1
+    assert rules("Troll Stronghold partial") == [quest("TROLL_STRONGHOLD", "IN_PROGRESS")]; checks += 1
+    assert "note" not in one("Hard Wilderness Diary (a skeleton task does not bypass it; only a Vet'ion boss task does)")[0]; checks += 1
+    assert one("Skippy and the Mogres miniquest (per Slayer task list Required column; the Mogre page says this was formerly required)")[0]["any"] == []; checks += 1
+    assert rules("Priest in Peril (Mort'ton access)") == [quest("PRIEST_IN_PERIL")]; checks += 1
+    assert one("Priest in Peril for Morytania access")[0]["manual"] is False; checks += 1
+    assert rules("Completion of Desert Treasure II - The Fallen Empire") == [quest("DESERT_TREASURE_II__THE_FALLEN_EMPIRE")]; checks += 1
+    assert rules("Dragon Slayer II completed") == [quest("DRAGON_SLAYER_II")]; checks += 1
+    assert rules("DS2") == [quest("DRAGON_SLAYER_II")]; checks += 1
+    assert rules("Started The Lost Tribe") == [quest("THE_LOST_TRIBE", "IN_PROGRESS")]; checks += 1
+    assert rules("Desert Treasure I started (reached the diamond search)") == [quest("DESERT_TREASURE_I", "IN_PROGRESS")]; checks += 1
+    assert rules("Partial completion of Monkey Madness II") == [quest("MONKEY_MADNESS_II", "IN_PROGRESS")]; checks += 1
+    assert rules("Perilous Moons (partial completion for access)") == [quest("PERILOUS_MOONS", "IN_PROGRESS")]; checks += 1
+    assert rules("The Path of Glouphrie (partial)") == [quest("THE_PATH_OF_GLOUPHRIE", "IN_PROGRESS")]; checks += 1
+    assert rules("Regicide completed to the point of reaching Port Tyras") == [quest("REGICIDE", "IN_PROGRESS")]; checks += 1
+    assert rules("Lunar Diplomacy started far enough to board the Lady Zay") == [quest("LUNAR_DIPLOMACY", "IN_PROGRESS")]; checks += 1
+    assert rules("Watchtower quest progressed to the point of enclave access") == [quest("WATCHTOWER", "IN_PROGRESS")]; checks += 1
+    assert rules("Recipe for Disaster: Freeing Sir Amik Varze started") == [quest("RECIPE_FOR_DISASTER__SIR_AMIK_VARZE", "IN_PROGRESS")]; checks += 1
+    assert rules("Enter the Abyss miniquest or partial Fairytale II - Cure a Queen (fairy rings unlocked)") == [
+        quest("ENTER_THE_ABYSS"), quest("FAIRYTALE_II__CURE_A_QUEEN", "IN_PROGRESS")]; checks += 1
+    g = one("Mourning's End Part II (started; Slayer ring teleport needs it completed)")
+    assert g[0]["any"] == [quest("MOURNINGS_END_PART_II", "IN_PROGRESS")] and g[0]["manual"] is False, g; checks += 1
+    manual("Song of the Elves to use the Gwenith rowboat"); checks += 1
+    manual("Lair of Tarn Razorlor miniquest completed for more dogs to spawn"); checks += 1
+    manual("Dragon Slayer I progressed to Crandor for the Crandor side (the Karamja side needs nothing)"); checks += 1
+    manual("Full mourner gear, or Mourning's End Part II for the Slayer ring dark beast teleport"); checks += 1
+    manual("Not available after Song of the Elves", "negative requirement"); checks += 1
+    manual("Access to Fossil Island"); checks += 1
+    manual("Waterfall Quest completed (or Glarial's amulet during it)"); checks += 1
+    # assignment requirements (not location requirements)
+    manual("Horror from the Deep (to be assigned)", "assignment requirement"); checks += 1
+    manual("Combat 75 (to be assigned)", "assignment requirement"); checks += 1
+    manual("Death Plateau (for God Wars Dungeon slayer tasks)", "assignment requirement"); checks += 1
+    manual("Like a Boss unlock (200 Slayer reward points) to receive boss tasks", "assignment requirement"); checks += 1
+    manual("18 Slayer for the boss task", "assignment requirement"); checks += 1
+    manual("Dragon Slayer I started (Krystilia only assigns dragons to players who have started it)", "assignment requirement"); checks += 1
+    # unlocks
+    assert rules("Like a Boss unlock (200 Slayer reward points)") == [{"type": "unlock", "name": "Like a Boss"}]; checks += 1
+    assert rules("Hot stuff unlock (100 Slayer reward points)") == [{"type": "unlock", "name": "Hot Stuff"}]; checks += 1
+    assert rules("Watch the birdie unlock (80 Slayer reward points)") == [{"type": "unlock", "name": "Watch the Birdie"}]; checks += 1
+    # conjunctions: each checkable part is its own group, the rest one manual group
+    g = one("70 Agility, 70 Hitpoints, 70 Ranged and 70 Strength")
+    assert [x["any"][0]["skill"] for x in g] == ["AGILITY", "HITPOINTS", "RANGED", "STRENGTH"] and not any(x["manual"] for x in g), g; checks += 1
+    g = one("70 Ranged, crossbow and mith grapple")
+    assert g[0]["any"] == [{"type": "skill", "skill": "RANGED", "level": 70}] and g[0]["manual"] is False
+    assert g[1]["any"] == [] and g[1]["manual"] is True and len(g) == 2, g; checks += 1
+    g = one("Pickaxe and 50 Mining")
+    assert g[0]["any"] == [{"type": "skill", "skill": "MINING", "level": 50}] and g[1]["manual"], g; checks += 1
+    g = one("73 Sailing and a boat with an adamant keel or better to reach Ynysdail")
+    assert g[0]["any"] == [{"type": "skill", "skill": "SAILING", "level": 73}] and len(g) == 2, g; checks += 1
+    g = one("Shades of Mort'ton (completed) and a bronze shade key or better to enter")
+    assert g[0]["any"] == [quest("SHADES_OF_MORTTON")] and len(g) == 2, g; checks += 1
+    manual("Axe to cut vines (10 Woodcutting); 30 Agility per the task page, 56 Agility stepping stones for the fast route"); checks += 1
+    manual("Skippy and the Mogres"[:0] + "Axe and 875 coins (or unlimited access bought from Saniboch)"); checks += 1
+    # misc manual
+    manual("Light source"); checks += 1
+    manual("Task-only area", "task-only"); checks += 1
+    manual("Must be on a fire giant task", "task-only"); checks += 1
+    manual("Black dragon Slayer task (task-only area)", "task-only"); checks += 1
+    manual("Warriors' Guild access (Attack + Strength 130, or 99 in one)"); checks += 1
+    manual("10,000 coins to Sandicrahb (half price with easy Kourend & Kebos Diary, free with medium)"); checks += 1
+    manual("40 Saradomin kill count (35/30/25/15 with the hard/elite/master/grandmaster Combat Achievement tiers) or an ecumenical key"); checks += 1
+    assert one("None (free-to-play)") == [{"text": "None (free-to-play)", "any": [], "manual": False, "note": "no requirement"}]; checks += 1
+    assert parse_access([]) == {"groups": []} and parse_access(["", "  "]) == {"groups": []}; checks += 1
+    # the quest-looking phrase in a mixed string is reported, the string never gets a wrong rule
+    acc = parse_access(["Darkness of Hallowvale (the laboratories are entered during the quest); Sins of the Father for full access"])
+    assert [g["any"] for g in acc["groups"]] == [[quest("DARKNESS_OF_HALLOWVALE", "IN_PROGRESS")], []], acc
+    assert "Sins of the Father for full access" in acc["groups"][1]["_unparsed"], acc; checks += 1
+    # every quest rule refers to a real enum name, every diary varbit to a known constant
+    for s in ("Priest in Peril", "SotE", "MM2", "RFD"):
+        r = rules(s)[0]
+        assert r["type"] == "quest" and r["quest"] in QUESTS and r["name"] == QUESTS[r["quest"]], r
+    checks += 1
+    print(f"self-test OK: {checks} checks")
+    return 0
+
+
+# --------------------------------------------------------------------------
 # Task assembly
 # --------------------------------------------------------------------------
 
@@ -1575,10 +2212,13 @@ def build_locations_index(tasks: list[dict]) -> list[dict]:
                 "link": loc["link"], "annotations": loc["annotations"], "plane": loc["plane"],
                 "mapID": loc["mapID"], "x": None, "y": None, "spawns": [], "spawnsByTask": {},
                 "tasks": [], "wilderness": loc["wilderness"], "coordsMissing": True,
+                "requirementsByTask": {}, "accessByTask": {},
             })
             if t["task"] not in entry["tasks"]:
                 entry["tasks"].append(t["task"])
             entry["spawnsByTask"][t["task"]] = loc["spawns"]
+            entry["requirementsByTask"][t["task"]] = loc.get("requirements") or []
+            entry["accessByTask"][t["task"]] = loc.get("access") or parse_access(loc.get("requirements") or [])
             for s in loc["spawns"]:
                 if s not in entry["spawns"]:
                     entry["spawns"].append(s)
@@ -1876,7 +2516,10 @@ def main(argv: list[str] | None = None) -> int:
                                   "other tasks are loaded from the existing out/tasks.json")
     ap.add_argument("--limit", type=int, default=0, help="stop after N tasks (testing)")
     ap.add_argument("--sleep", type=float, default=FETCH_SLEEP)
+    ap.add_argument("--self-test", action="store_true", help="run the parse_access() unit tests and exit")
     args = ap.parse_args(argv)
+    if args.self_test:
+        return self_test()
 
     cache = WikiCache(args.cache, refresh=args.refresh, sleep=args.sleep)
     rows = read_task_list(args.tasks)
@@ -1931,6 +2574,7 @@ def main(argv: list[str] | None = None) -> int:
     general_gear = build_general_gear(cache)
     apply_training_summary(tasks, cache, report)
     style_sources = derive_recommended_styles(tasks, cache)
+    apply_access(tasks, report)
     report["failedPages"] = dict(cache.failed)
     report["fetches"] = cache.fetches
     report["counts"] = {
@@ -1949,6 +2593,10 @@ def main(argv: list[str] | None = None) -> int:
         "withRecommendedStyle": sum(1 for t in tasks if t["recommendedStyle"]),
         "recommendedStyleBySource": style_sources,
         "generalGearTables": len(general_gear["gearTables"]) if general_gear else 0,
+        "accessGroups": report["accessCounts"]["groups"],
+        "accessGroupsCheckable": report["accessCounts"]["checkable"],
+        "accessGroupsManual": report["accessCounts"]["manual"],
+        "accessUnparsed": len(report["accessUnparsed"]),
     }
 
     args.out.mkdir(parents=True, exist_ok=True)

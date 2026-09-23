@@ -350,3 +350,57 @@ fetches; not done in this pass).
 - Ents: no Slayer XP per kill on the wiki infobox.
 - Aliases that are approximations rather than exact spots: Crabs/Ruins of Tapoyauik (middle floor only), Spiders/Forthos Dungeon (Sarachnis tomb, not the Spider's Den), Trolls/Troll Stronghold (Underground) (a troll-boss spawn inside the stronghold), Fire giants/Brimhaven Dungeon (1st floor only), Rats/Stronghold of Security (Vault of War only).
 - `xcheck_area_rules.py` is a name-substring heuristic; areas whose curated name does not contain the wiki area title were not cross-checked.
+
+## Access rules (`access` on every location record)
+
+`parse_access()` output for the current build (`report.json → accessCounts`), regenerated with
+`python3 generate.py --cache <cache> --out out2` (0 fetches); `python3 generate.py --self-test`
+passes 90 checks.
+
+| Measure | Count |
+| --- | --- |
+| Location records (all tasks) | 913 |
+| Requirement strings on them | 537 (377 distinct) |
+| Access groups total | 551 |
+| Groups with at least one checkable rule (`any` non-empty) | 264 |
+| … of which fully checkable (`manual: false`) | 252 |
+| Groups flagged `manual` (no rules, or rules plus an unchecked detail) | 298 |
+| Distinct strings that yield at least one rule | 156 |
+| Distinct strings that are manual only | 221 |
+
+Rule types emitted: quest 139, skill 113, unlock 14, members 13, diary 1. Most diary strings
+are "diary OR boss task" alternatives and are therefore manual (the boss-task half cannot be
+checked, and a group with rules is a hard lock in the plugin). Assignment requirements
+(`… to be assigned`, `Death Plateau (for God Wars Dungeon slayer tasks)`, …) are manual groups
+with `note: "assignment requirement"` – they gate the master, not the location.
+
+### `accessUnparsed` – quest-looking strings that did not become a rule (19)
+
+Count = number of location records carrying the string. None of these produce a rule; add an
+entry to `QUEST_ALIASES` or reword the curated text to make them checkable.
+
+- `A Taste of Hope started for a weapon that can damage vyrewatch (38 Slayer to begin)` (1)
+- `A leaf-bladed weapon, broad ammunition or Magic Dart` (1)
+- `Access to Fossil Island` (1)
+- `Access to Great Kourend (Boss page: 'Accessed Great Kourend at least once by boat' for the Sarachnis boss task)` (1)
+- `Barbarian Training progressed to the pyre ships section (Barbarian Firemaking, 35 Firemaking)` (1)
+- `Boat with Jarvald at Rellekka: 1,000 coins per trip unless The Fremennik Trials is complete` (1)
+- `Darkness of Hallowvale (the laboratories are entered during the quest); Sins of the Father for full access` (1)
+- `Dragon Slayer I progressed to Crandor for the Crandor side (the Karamja side needs nothing)` (1)
+- `Fallen From Grace: the task page's location table says the wyrmling nest 'Requires partial completion of Fallen From Grace to access', while its prose says surface wyrmlings are accessible before partial completion; full completion unlocks the buildable bank and slayer ring/necklace of passage teleports` (1)
+- `Full mourner gear, or Mourning's End Part II for the Slayer ring dark beast teleport` (1)
+- `Lair of Tarn Razorlor miniquest completed for more dogs to spawn` (1)
+- `Light source or Fire of Eternal Light` (1)
+- `Partial Troll Stronghold (or Easy Combat Achievements for Ghommal's hilt teleport) and 60 Strength or 60 Agility to enter the dungeon` (1)
+- `Partial Troll Stronghold quest (or Trollheim Teleport with 61 Magic and Eadgar's Ruse)` (1)
+- `Partial Troll Stronghold quest to reach Trollheim by foot (or Trollheim Teleport with 61 Magic and Eadgar's Ruse)` (1)
+- `Sins of the Father started (city entry); completed to kill vyrewatch sentinels` (1)
+- `Song of the Elves to use the Gwenith rowboat` (1)
+- `Started Zogre Flesh Eaters (zogres) / partial completion (skogres)` (1)
+- `Witchwood icon or Protect from Melee` (1)
+
+Notes: `Access to Fossil Island` could be mapped to Bone Voyage and `Boat with Jarvald …`
+to The Fremennik Trials, but such mappings are game knowledge rather than text and were left
+out on purpose. `A leaf-bladed weapon, broad ammunition or Magic Dart`, `Light source or Fire
+of Eternal Light` and `Witchwood icon or Protect from Melee` are item strings caught by the
+Title-Case heuristic; they are correctly manual.

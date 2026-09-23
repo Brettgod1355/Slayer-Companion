@@ -24,64 +24,25 @@
  */
 package com.slayercompanion.data;
 
-import java.util.List;
 import javax.annotation.Nullable;
 import lombok.Data;
 
-/** A place where a task's monsters can be fought. Part of the bundled tasks.json. */
+/** One checkable requirement for a location: quest, skill, combat level, diary, slayer unlock or members. */
 @Data
-public class TaskLocation
+public class AccessRule
 {
-	private String id;
+	private String type;
+	@Nullable
+	private String quest;
+	@Nullable
 	private String name;
+	/** For quests: "FINISHED" or "IN_PROGRESS" (at least started). */
 	@Nullable
-	private String displayName;
-	private int rank;
-	/** "true", "false", "partial" or "unknown". */
-	private String multi;
-	/** "true", "false" or "unknown". */
-	private String cannon;
-	private boolean wilderness;
+	private String state;
 	@Nullable
-	private Integer wildernessLevelMin;
+	private String skill;
 	@Nullable
-	private Integer wildernessLevelMax;
-	/** "true", "false" or "unknown". */
+	private Integer level;
 	@Nullable
-	private String konarAssignable;
-	private List<String> requirements;
-	@Nullable
-	private String notes;
-	@Nullable
-	private Integer x;
-	@Nullable
-	private Integer y;
-	@Nullable
-	private Integer plane;
-	/** Individual spawn tiles as [x, y] pairs. */
-	@Nullable
-	private List<List<Integer>> spawns;
-	private boolean coordsMissing;
-	@Nullable
-	private Access access;
-
-	public String label()
-	{
-		return displayName == null || displayName.isEmpty() ? name : displayName;
-	}
-
-	public boolean hasCoords()
-	{
-		return x != null && y != null && !coordsMissing;
-	}
-
-	public boolean isMulti()
-	{
-		return "true".equalsIgnoreCase(multi);
-	}
-
-	public boolean isCannon()
-	{
-		return "true".equalsIgnoreCase(cannon);
-	}
+	private String varbit;
 }

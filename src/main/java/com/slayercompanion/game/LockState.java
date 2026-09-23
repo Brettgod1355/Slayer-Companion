@@ -22,66 +22,28 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package com.slayercompanion.data;
+package com.slayercompanion.game;
 
 import java.util.List;
-import javax.annotation.Nullable;
-import lombok.Data;
+import lombok.Value;
 
-/** A place where a task's monsters can be fought. Part of the bundled tasks.json. */
-@Data
-public class TaskLocation
+/** Whether the player meets a location's checkable requirements. */
+@Value
+public class LockState
 {
-	private String id;
-	private String name;
-	@Nullable
-	private String displayName;
-	private int rank;
-	/** "true", "false", "partial" or "unknown". */
-	private String multi;
-	/** "true", "false" or "unknown". */
-	private String cannon;
-	private boolean wilderness;
-	@Nullable
-	private Integer wildernessLevelMin;
-	@Nullable
-	private Integer wildernessLevelMax;
-	/** "true", "false" or "unknown". */
-	@Nullable
-	private String konarAssignable;
-	private List<String> requirements;
-	@Nullable
-	private String notes;
-	@Nullable
-	private Integer x;
-	@Nullable
-	private Integer y;
-	@Nullable
-	private Integer plane;
-	/** Individual spawn tiles as [x, y] pairs. */
-	@Nullable
-	private List<List<Integer>> spawns;
-	private boolean coordsMissing;
-	@Nullable
-	private Access access;
-
-	public String label()
+	public enum Kind
 	{
-		return displayName == null || displayName.isEmpty() ? name : displayName;
+		/** Every checkable requirement is met (there may still be manual ones, listed in {@code manual}). */
+		OPEN,
+		/** At least one checkable requirement is not met; {@code reasons} says which. */
+		LOCKED,
+		/** Nothing could be checked (only manual requirements, or none at all). */
+		UNKNOWN
 	}
 
-	public boolean hasCoords()
-	{
-		return x != null && y != null && !coordsMissing;
-	}
-
-	public boolean isMulti()
-	{
-		return "true".equalsIgnoreCase(multi);
-	}
-
-	public boolean isCannon()
-	{
-		return "true".equalsIgnoreCase(cannon);
-	}
+	Kind kind;
+	/** Human-readable unmet requirements, e.g. "Song of the Elves", "70 Agility". */
+	List<String> reasons;
+	/** Requirement lines the client cannot verify (items, keys, light sources...). */
+	List<String> manual;
 }

@@ -28,60 +28,15 @@ import java.util.List;
 import javax.annotation.Nullable;
 import lombok.Data;
 
-/** A place where a task's monsters can be fought. Part of the bundled tasks.json. */
+/** One requirement line; satisfied when any of its alternatives holds. Manual groups cannot be checked by the client. */
 @Data
-public class TaskLocation
+public class AccessGroup
 {
-	private String id;
-	private String name;
 	@Nullable
-	private String displayName;
-	private int rank;
-	/** "true", "false", "partial" or "unknown". */
-	private String multi;
-	/** "true", "false" or "unknown". */
-	private String cannon;
-	private boolean wilderness;
+	private String text;
 	@Nullable
-	private Integer wildernessLevelMin;
+	private List<AccessRule> any;
+	private boolean manual;
 	@Nullable
-	private Integer wildernessLevelMax;
-	/** "true", "false" or "unknown". */
-	@Nullable
-	private String konarAssignable;
-	private List<String> requirements;
-	@Nullable
-	private String notes;
-	@Nullable
-	private Integer x;
-	@Nullable
-	private Integer y;
-	@Nullable
-	private Integer plane;
-	/** Individual spawn tiles as [x, y] pairs. */
-	@Nullable
-	private List<List<Integer>> spawns;
-	private boolean coordsMissing;
-	@Nullable
-	private Access access;
-
-	public String label()
-	{
-		return displayName == null || displayName.isEmpty() ? name : displayName;
-	}
-
-	public boolean hasCoords()
-	{
-		return x != null && y != null && !coordsMissing;
-	}
-
-	public boolean isMulti()
-	{
-		return "true".equalsIgnoreCase(multi);
-	}
-
-	public boolean isCannon()
-	{
-		return "true".equalsIgnoreCase(cannon);
-	}
+	private String note;
 }
