@@ -58,6 +58,7 @@ public class SlayerData
 	private volatile UnlocksFile unlocks;
 	private volatile WildernessInfo wilderness;
 	private volatile AreaRules areaRules;
+	private volatile GeneralGearFile generalGear;
 
 	@Inject
 	public SlayerData(Gson gson)
@@ -194,25 +195,21 @@ public class SlayerData
 	public java.util.Set<String> allItemNames()
 	{
 		java.util.Set<String> names = new java.util.HashSet<>();
+		List<GearTable> general = generalGear().getGearTables();
+		if (general != null)
+		{
+			for (GearTable g : general)
+			{
+				addGearNames(names, g);
+			}
+		}
 		for (TaskInfo t : tasks())
 		{
 			addAll(names, t.getRequiredItems());
 			addAll(names, t.getUsefulItems());
 			for (GearTable g : t.gearTablesOrEmpty())
 			{
-				if (g.getSlots() != null)
-				{
-					for (List<List<GearItem>> tiers : g.getSlots().values())
-					{
-						for (List<GearItem> tier : tiers)
-						{
-							for (GearItem item : tier)
-							{
-								addAll(names, item.candidates());
-							}
-						}
-					}
-				}
+				addGearNames(names, g);
 			}
 			if (t.getExampleSetups() != null)
 			{
@@ -228,6 +225,24 @@ public class SlayerData
 			}
 		}
 		return names;
+	}
+
+	private static void addGearNames(java.util.Set<String> names, GearTable g)
+	{
+		if (g.getSlots() == null)
+		{
+			return;
+		}
+		for (List<List<GearItem>> tiers : g.getSlots().values())
+		{
+			for (List<GearItem> tier : tiers)
+			{
+				for (GearItem item : tier)
+				{
+					addAll(names, item.candidates());
+				}
+			}
+		}
 	}
 
 	private static void addAll(java.util.Set<String> into, @Nullable java.util.Collection<String> names)
@@ -257,6 +272,23 @@ public class SlayerData
 				}
 			}
 		}
+	}
+
+	/** General slayer gear tables (fallback when a task has none). */
+	public GeneralGearFile generalGear()
+	{
+		if (generalGear == null)
+		{
+			synchronized (this)
+			{
+				if (generalGear == null)
+				{
+					GeneralGearFile g = load("general-gear.json", GeneralGearFile.class);
+					generalGear = g == null ? new GeneralGearFile() : g;
+				}
+			}
+		}
+		return generalGear;
 	}
 
 	public static String normalise(String s)

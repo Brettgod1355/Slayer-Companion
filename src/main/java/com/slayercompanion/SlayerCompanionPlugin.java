@@ -358,14 +358,21 @@ public class SlayerCompanionPlugin extends Plugin
 				itemNames.put(id, itemName(id));
 			}
 		}
-		java.util.Map<Integer, List<SlotAdvice>> gearAdvice = new java.util.HashMap<>();
+		List<com.slayercompanion.data.GearTable> gearTables = Collections.emptyList();
+		boolean gearIsGeneral = false;
 		if (info != null)
 		{
-			List<com.slayercompanion.data.GearTable> tables = info.gearTablesOrEmpty();
-			for (int i = 0; i < tables.size(); i++)
+			gearTables = info.gearTablesOrEmpty();
+			if (gearTables.isEmpty() && data.generalGear().getGearTables() != null)
 			{
-				gearAdvice.put(i, gearAdvisor.advise(tables.get(i)));
+				gearTables = data.generalGear().getGearTables();
+				gearIsGeneral = true;
 			}
+		}
+		List<List<SlotAdvice>> gearAdvice = new java.util.ArrayList<>();
+		for (com.slayercompanion.data.GearTable table : gearTables)
+		{
+			gearAdvice.add(gearAdvisor.advise(table));
 		}
 
 		return PanelModel.builder()
@@ -390,7 +397,9 @@ public class SlayerCompanionPlugin extends Plugin
 			.wilderness(wilderness)
 			.unlocks(loggedIn ? unlockAdvisor.advise(points) : Collections.emptyList())
 			.itemNames(itemNames)
+			.gearTables(gearTables)
 			.gearAdvice(gearAdvice)
+			.gearIsGeneral(gearIsGeneral)
 			.build();
 	}
 

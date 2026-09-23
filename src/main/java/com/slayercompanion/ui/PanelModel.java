@@ -74,8 +74,11 @@ public class PanelModel
 	List<UnlockAdvice> unlocks;
 	/** Item id -> display name for everything the Loot tab shows. */
 	java.util.Map<Integer, String> itemNames;
-	/** Slot advice per gear table index of {@code info.gearTablesOrEmpty()}. */
-	java.util.Map<Integer, List<com.slayercompanion.gear.SlotAdvice>> gearAdvice;
+	/** Gear tables to show: the task's own, or the general Slayer tables when it has none. */
+	List<com.slayercompanion.data.GearTable> gearTables;
+	/** Slot advice aligned with {@code gearTables}. */
+	List<List<com.slayercompanion.gear.SlotAdvice>> gearAdvice;
+	boolean gearIsGeneral;
 	int points;
 	boolean loggedIn;
 }

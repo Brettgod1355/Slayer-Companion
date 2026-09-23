@@ -28,7 +28,7 @@ maintainer with `tools/datagen` – never by the client.
 ## Refreshing the bundled wiki data (maintainers)
 
 ```
-python3 tools/datagen/generate.py --out src/main/resources/com/slayercompanion/data
+cd tools/datagen && python3 generate.py --out ../../src/main/resources/com/slayercompanion/data
 ```
 
 The script caches pages under `tools/datagen/cache/` and is polite to the wiki (identifying

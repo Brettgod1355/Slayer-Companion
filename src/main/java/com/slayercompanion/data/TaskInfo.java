@@ -84,6 +84,10 @@ public class TaskInfo
 	private List<ShopOption> unlocks;
 	@Nullable
 	private String notes;
+	@Nullable
+	private TrainingSummary trainingSummary;
+	@Nullable
+	private String recommendedStyleSource;
 
 	public List<TaskLocation> locationsOrEmpty()
 	{

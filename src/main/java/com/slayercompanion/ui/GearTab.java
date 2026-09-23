@@ -76,7 +76,7 @@ class GearTab extends JPanel
 				col.add(Ui.gap(4));
 			}
 
-			List<GearTable> tables = info == null ? java.util.Collections.emptyList() : info.gearTablesOrEmpty();
+			List<GearTable> tables = m.getGearTables();
 			if (tables.isEmpty())
 			{
 				col.add(Ui.wrap("No wiki gear table bundled for this task."));
@@ -85,7 +85,12 @@ class GearTab extends JPanel
 			{
 				if (selectedTable < 0 || selectedTable >= tables.size())
 				{
-					selectedTable = defaultIndex(tables, info);
+					selectedTable = info == null ? 0 : defaultIndex(tables, info);
+				}
+				if (m.isGearIsGeneral())
+				{
+					col.add(Ui.wrap("The wiki has no gear table for this task, so these are its general Slayer setups by style.", Ui.MUTED));
+					col.add(Ui.gap(4));
 				}
 				JComboBox<String> combo = new JComboBox<>();
 				for (GearTable t : tables)
@@ -107,7 +112,8 @@ class GearTab extends JPanel
 				GearTable table = tables.get(selectedTable);
 				JPanel card = Ui.card();
 				card.add(Ui.title("Slot: yours / wiki best"));
-				for (SlotAdvice a : m.getGearAdvice().getOrDefault(selectedTable, java.util.Collections.emptyList()))
+				List<SlotAdvice> advice = selectedTable < m.getGearAdvice().size() ? m.getGearAdvice().get(selectedTable) : java.util.Collections.emptyList();
+				for (SlotAdvice a : advice)
 				{
 					card.add(slotRow(a));
 				}

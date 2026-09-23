@@ -194,6 +194,31 @@ class TaskTab extends JPanel
 				col.add(Ui.gap(4));
 			}
 
+			if (info.getTrainingSummary() != null)
+			{
+				com.slayercompanion.data.TrainingSummary ts = info.getTrainingSummary();
+				JPanel sum = Ui.card();
+				sum.add(Ui.title("Worth doing?"));
+				if (ts.getRecommendation() != null && !ts.getRecommendation().isEmpty())
+				{
+					sum.add(Ui.wrap(ts.getRecommendation(), Color.WHITE));
+				}
+				if (ts.getPros() != null && !ts.getPros().isEmpty())
+				{
+					sum.add(Ui.wrap("+ " + ts.getPros(), Ui.GOOD));
+				}
+				if (ts.getCons() != null && !ts.getCons().isEmpty())
+				{
+					sum.add(Ui.wrap("\u2212 " + ts.getCons(), Ui.WARN));
+				}
+				if (ts.getXpPerHour() != null && !ts.getXpPerHour().isEmpty())
+				{
+					sum.add(Ui.keyValue("XP / hour", ts.getXpPerHour()));
+				}
+				col.add(sum);
+				col.add(Ui.gap(4));
+			}
+
 			if (info.getStrategy() != null && !info.getStrategy().isEmpty())
 			{
 				JPanel strat = Ui.card();
