@@ -159,7 +159,7 @@
         "name": "Ruins of Tapoyauik - top level",
         "displayName": "Ruins of Tapoyauik – top level (icy cave crawlers)",
         "rank": 4,
-        "multi": "unknown",
+        "multi": true,
         "cannon": false,
         "wilderness": false,
         "wildernessLevelMin": null,
@@ -170,7 +170,7 @@
         ],
         "notes": "Seven icy cave crawler spawns on the top level; same combat level and Slayer XP as the standard variant but 50% weak to fire spells. Only accessible after completing The Heart of Darkness.",
         "evidence": {
-          "multi": "not stated",
+          "multi": "not stated | Ruins of Tapoyauik: \"|map = [[File:Ruins of Tapoyauik map.png|300px]]\"; File:Ruins of Tapoyauik map.png: \"Map of the ruins, with monster locations, notable features, exits and ladders, multicombat area, and moths marked out.\"; Cave crawler: \"|location = [[Ruins of Tapoyauik]] - top level … |plane = 2 |x:1673,y:9625|x:1671,y:9619|x:1671,y:9616|x:1669,y:9612|x:1672,y:9611|x:1673,y:9607|x:1677,y:9605\"; Slayer task/Icefiends: \"|[[Ruins of Tapoyauik]] … |x:1684,y:9640|… |x:1706,y:9634|x:1705,y:9638 … |15 |{{Yes}} |{{No}} |{{Yes}}\"; Tooth half of key (moon key): \"Despite [[icefiend]]s having the rarest drop rate, they only have 15 hitpoints and are found in multicombat regions\" [2026-09-24 research pass: quote, scope and contradiction checks]",
           "cannon": "'A Dwarven multicannon cannot be placed inside the ruins.' (Ruins of Tapoyauik); Dwarf multicannon prohibited list: 'Ruins of Tapoyauik (including Doom of Mokhaiotl) - An ancient magical force won't let you set up a cannon here.'",
           "requirements": "'They are visited during the quest The Heart of Darkness, after completion of which the ruins become populated with a variety of monsters, all of which are susceptible to fire spells. Prior to quest completion, they are not accessible.' and monster list 'Cave crawler, post-quest, top floor' (Ruins of Tapoyauik)"
         }
@@ -682,7 +682,7 @@
         "name": "South Falador Farm",
         "displayName": "South Falador Farm cow pasture",
         "rank": 1,
-        "multi": "unknown",
+        "multi": true,
         "cannon": "unknown",
         "wilderness": false,
         "wildernessLevelMin": null,
@@ -691,7 +691,7 @@
         "requirements": [],
         "notes": "Large pasture of cows just south of Falador; the Slayer task list names 'South of Falador' first. Cabbages spawn in the patch nearby for food.",
         "evidence": {
-          "multi": "not stated (the Multicombat area list names 'Most sections of Falador' but not the farm south of the city)",
+          "multi": "not stated (the Multicombat area list names 'Most sections of Falador' but not the farm south of the city) | Coordinate check – Multi-Lines: 7/7 spawns inside 'Falador'; that area has a southern lobe of tiles x 3021-3043, y 3297-3313 that traces the cow pen; Coordinate check – Wiki map Map:DeadmanAnnihilationMulticombatZones (the 'Multicombat area map' on the Multicombat area page): 7/7 spawns inside the Falador polygon, whose southern lobe (x 3021-3044, y 3297-3314) encloses the pen; Multicombat area: \"{{Legend|#f54636|caption=A map of the multicombat areas on Gielinor (not including ocean zones) indicated in red}}\"; Multicombat area: \"*Most sections of [[Falador]], including the [[White Knights' Castle]]\"; Treasure Trails/Guide/Hot Cold/Master: \"|In the cow pen north of [[Sarah's Farming Shop]]. … |Multi\" [2026-09-24 research pass: quote, scope and contradiction checks]",
           "cannon": "not stated",
           "requirements": "not stated"
         }
@@ -779,7 +779,7 @@
         "name": "Hosidius - southern coast",
         "displayName": "Hosidius southern coast (Sand Crabs)",
         "rank": 1,
-        "multi": "unknown",
+        "multi": true,
         "cannon": false,
         "wilderness": false,
         "wildernessLevelMin": null,
@@ -788,7 +788,7 @@
         "requirements": [],
         "notes": "Sand crabs give 60 Slayer XP. There is a bank chest in the centre of the beach and a nearby altar. Reach it from a Hosidius house portal, the Tithe Farm minigame teleport, the Lovakengj minecart 'Hosidius South' stop, or fairy ring AKR. Often crowded; the Avium Savannah coast in Varlamore is a quieter alternative.",
         "evidence": {
-          "multi": "not stated (the Sand Crab page only notes that the Outer Fortis area is single-way)",
+          "multi": "not stated (the Sand Crab page only notes that the Outer Fortis area is single-way) | Coordinate check – Wiki multicombat map (Module:DeadmanAnnihilationMulticombatZones.json, embedded on the Multicombat area page): 56/56 spawns inside one polygon (x 1669–1885, y 3437–3589). Multi-Lines: 56/56 spawns inside 'Kourend Sand crabs'.; Multicombat area: \"A map of the multicombat areas on Gielinor (not including ocean zones) indicated in red\"; Twisted League/Guide/Ranged: \"Killing [[Sand Crab]]s on the coast south of [[Hosidius]] is a popular low-effort training method … As this is a multi-combat area, it is also possible to gain fast Ranged experience through the use of [[Chinchompa]]s\"; Sand Crab: \"Due to the absence of aggression from the sand crabs found in Outer Fortis, they are not suitable for AFK training, … and the area is single-way combat, so the player may not tag multiple crabs and then step away.\"; Coordinate check – Wiki multicombat map (Module:DeadmanAnnihilationMulticombatZones.json, the map embedded on 'Multicombat area'): 56/56 spawns inside one polygon; Multi-Lines: 56/56 spawns inside 'Kourend Sand crabs' [2026-09-24 research pass: quote, scope and contradiction checks]",
           "cannon": "'The dwarf multicannon cannot be used against them.' (Sand Crab); Dwarf multicannon page: 'Sand crabs and Ammonite crabs will not be targeted at all, as it would disrupt other players training.'",
           "requirements": "not stated"
         }
@@ -815,7 +815,7 @@
         "name": "Mushroom Forest",
         "displayName": "Fossil Island coasts (Ammonite Crabs)",
         "rank": 3,
-        "multi": "unknown",
+        "multi": true,
         "cannon": false,
         "wilderness": false,
         "wildernessLevelMin": null,
@@ -826,7 +826,7 @@
         ],
         "notes": "Ammonite crabs give 100 Slayer XP and have 100 hitpoints and level 1 in every other stat. Found in the Mushroom Forest, around the Fossil Island Volcano and in the northern Wyvern Cave.",
         "evidence": {
-          "multi": "not stated",
+          "multi": "not stated | Multicombat area: \"==Multicombat area map== {{Map:DeadmanAnnihilationMulticombatZones|caption={{Legend|#f54636|caption=A map of the multicombat areas on Gielinor (not including ocean zones) indicated in red}}}}\"; Coordinate check – Wiki multicombat map (Module:DeadmanAnnihilationMulticombatZones.json, the map on 'Multicombat area'): 28/28 Ammonite Crab spawns inside its three Fossil Island polygons (north beach x3684-3756 y3842-3902; north-west coast x3654-3664 y3868-3885; volcano x3799-3826 y3749-3768); Coordinate check – Multi-Lines: 28/28 spawns inside 'Top main beach of fossil island' (21), 'Bottom left of fossil island' (4), 'Top left of fossil island' (3); Ammonite Crab: \"'''Ammonite Crabs''' can be found on most of the coastal areas and northern beaches of [[Fossil Island]] … |location = [[Mushroom Forest]] … |x:3800,y:3752|x:3802,y:3756|…|x:3751,y:3853\"; Slayer task/Zygomites: \"|[[Mushroom Forest]] on [[Fossil Island]] … |name = Ancient Zygomite … |27 |{{No}} |{{Yes}} |{{Yes}}\" [2026-09-24 research pass: quote, scope and contradiction checks]",
           "cannon": "Ammonite Crab infobox immunecannon = Yes; Dwarf multicannon page: 'Sand crabs and Ammonite crabs will not be targeted at all, as it would disrupt other players training.'",
           "requirements": "Task page Monster Variants row 'Ammonite Crab | Fossil Island | Requires completion of Bone Voyage' (Slayer task/Crabs)"
         }
@@ -835,7 +835,7 @@
         "name": "Crabclaw Isle",
         "displayName": "Crabclaw Isle (Sand Crabs, paid entry)",
         "rank": 4,
-        "multi": "unknown",
+        "multi": true,
         "cannon": false,
         "wilderness": false,
         "wildernessLevelMin": null,
@@ -846,7 +846,7 @@
         ],
         "notes": "40 sand crabs on a small island south of the Hosidius coast, with several spots where three or four crabs surround one tile. Spots may be occupied.",
         "evidence": {
-          "multi": "not stated",
+          "multi": "not stated | Coordinate check – Wiki multicombat map (Module:DeadmanAnnihilationMulticombatZones.json, embedded on the Multicombat area page): 47/47 spawns inside one polygon covering the isle (x 1746–1798, y 3402–3450). Multi-Lines: 47/47 spawns inside 'Kourend Sand crabs'.; Multicombat area: \"A map of the multicombat areas on Gielinor (not including ocean zones) indicated in red\"; Crabclaw Isle: \"There are 40 [[sand crab]]s scattered throughout the isle, with several spots containing three/four crabs near one tile.\"; Treasure Trails/Guide/Coordinates/Master: \"|coords = 08 degrees 01 minutes north,<br/> … |fight = [[Ancient Wizard]]s … |notes = On [[Crabclaw Isle]]. Players must pay [[Sandicrahb]] 10,000 coins to reach the island\"; Template:Treasure Trails Guide Coordinates Intro: \"If the coordinates are located in a [[multi-combat area]], three Ancient wizards, each attacking with a unique [[attack style]], will appear. … In [[single-combat]] zones, a Brassican Mage will appear\" [2026-09-24 research pass: quote, scope and contradiction checks]",
           "cannon": "'The dwarf multicannon cannot be used against them.' (Sand Crab)",
           "requirements": "'Players can reach the island by paying Sandicrahb 10,000 coins. Completing the easy Kourend & Kebos Diary will allow players to access it for half the price. Completing the medium Kourend & Kebos Diary will allow players to access the island for free.' (Crabclaw Isle)"
         }
@@ -891,7 +891,7 @@
         "name": "Waterbirth Island",
         "displayName": "Waterbirth Island surface (Rock Crabs)",
         "rank": 7,
-        "multi": "unknown",
+        "multi": false,
         "cannon": "unknown",
         "wilderness": false,
         "wildernessLevelMin": null,
@@ -902,7 +902,7 @@
         ],
         "notes": "Rock crabs are scattered across the island in their disguised rock form. Also reachable by Waterbirth Teleport (72 Magic, Lunar) or a house portal.",
         "evidence": {
-          "multi": "not stated (the Multicombat area list names 'Waterbirth Island Dungeon' but not the island surface)",
+          "multi": "not stated (the Multicombat area list names 'Waterbirth Island Dungeon' but not the island surface) | Multicombat area: \"{{Legend|#f54636|caption=A map of the multicombat areas on Gielinor (not including ocean zones) indicated in red}}\"; Multicombat area: \"*[[Waterbirth Island Dungeon]]\"; Single-way combat: \"Most areas of the world are single-way combat. Those that are not are [[multi-combat area]]s\"; Waterbirth Island: \"The surface of the island contains several [[Rock Crab]]s and [[hobgoblin]]s, as well as an abundance of [[snape grass]].\"; Coordinate check – Wiki Multicombat area map (Module:DeadmanAnnihilationMulticombatZones, plane 0): 0/19 spawns inside any polygon. Multi-Lines: 0/19 spawns inside any enabled non-Wilderness area. Legacy RuneLite multiindicators MapLocations (SanLite copy): 0/19 inside; its only Waterbirth polygons are dungeon ones ('Waterbirth island… [2026-09-24 research pass: quote, scope and contradiction checks]",
           "cannon": "not stated (Waterbirth Island page has no cannon statement; not on the prohibited list)",
           "requirements": "'Speak to Jarvald at the Rellekka docks to travel to the island via boat (the player does not have to start or complete The Fremennik Trials; costs 1,000 coins each time if the quest is not complete)' (Waterbirth Island)"
         }
@@ -911,7 +911,7 @@
         "name": "West of Mount Quidamortem",
         "displayName": "West of Mount Quidamortem (Rock Crabs)",
         "rank": 8,
-        "multi": "unknown",
+        "multi": "partial",
         "cannon": "unknown",
         "wilderness": false,
         "wildernessLevelMin": null,
@@ -920,7 +920,7 @@
         "requirements": [],
         "notes": "28 rock crabs at the base of the mountain near the mountain troll settlements; aggressive lizardmen patrol the east side, so bring poison protection.",
         "evidence": {
-          "multi": "not stated (the Mount Quidamortem page only calls the troll camp south of the peak multicombat)",
+          "multi": "not stated (the Mount Quidamortem page only calls the troll camp south of the peak multicombat) | Partial – Multi: the main southern group of 20 rock crabs (spawns y 3532–3565, x 1199–1214), nearest the troll camp. Single-way (inferred from absence): the 8 northernmost crabs at (1202,3577) (1200,3579) (1202,3581) (1199,3584) (1197,3587) (1200,3588) (1204,3590) (1213,3596), i.e. y 3577 and north. Sources: Coordinate check – Wiki multicombat map (Module:DeadmanAnnihilationMulticombatZones.json): 20/28 spawns inside the polygon south/west of Mount Quidamortem (x 1195–1303, y 3480–3568, northern edge traced tile-by-tile at y 3562–3568); 8/28 outside (y 3577–3596). Multi-Lines: the same 20/28 inside 'South of Mount Quidamortem', the same 8…; Multicombat area: \"A map of the multicombat areas on Gielinor (not including ocean zones) indicated in red\"; Multicombat area: \"Anywhere else is a [[Single-way combat]] area, also known as a single-combat area\"; Twisted League/Guide/Ranged: \"Similarly, [[Rock crabs|Rock Crabs]] are another popular low-effort training method. These can be found on the west side of [[Mount Quidamortem]]. … As this is a multi-combat area, it is also possible to gain fast Ranged experience through the use of [[Chinchompa]]s\"; Mount Quidamortem: \"South of the mountain peak is a troll camp, featuring multiple spots with mountain trolls in a [[multicombat area]].\" [2026-09-24 research pass: quote, scope and contradiction checks]",
           "cannon": "not stated",
           "requirements": "'At the base of the mountain will be some mountain troll settlements and a large group of rock crabs.' and monster list 'Rock crab (x28)' (Mount Quidamortem)"
         }
@@ -947,7 +947,7 @@
         "name": "Avium Savannah - southern coast",
         "displayName": "Avium Savannah southern coast (Sand Crabs, quieter)",
         "rank": 10,
-        "multi": "unknown",
+        "multi": true,
         "cannon": false,
         "wilderness": false,
         "wildernessLevelMin": null,
@@ -958,7 +958,7 @@
         ],
         "notes": "From Civitas illa Fortis go south to the beach and west to the sand crabs. Faces much less competition than the Hosidius crabs.",
         "evidence": {
-          "multi": "not stated",
+          "multi": "not stated | Multicombat area: \"{{Map:DeadmanAnnihilationMulticombatZones|caption={{Legend|#f54636|caption=A map of the multicombat areas on Gielinor (not including ocean zones) indicated in red}}}}\"; Coordinate check – Wiki Multicombat area map (Module:DeadmanAnnihilationMulticombatZones.json, plane 0): 47/47 spawns inside one multicombat polygon (bbox x1584-1760, y2881-2972); Multi-Lines: 47/47 spawns inside 'Varlamore Colossal Remains Area'; Slayer task/Hill giants: \"|[[Avium Savannah]] … |6 |{{Yes}} |{{Yes}} |{{Yes}} | *North-west of Wyrm agility arena.\"; Sand Crab: \"|location = [[Avium Savannah]] - southern coast\"; Slayer reward point: \"|[[Crab]]: [[Sand crab]] |[[Avium Savannah]] |Not cannonable; multi-combat. |[[Fairy ring]] {{Fairycode|AJP}}, go south to the coast\" [2026-09-24 research pass: quote, scope and contradiction checks]",
           "cannon": "Sand Crab infobox immunecannon = Yes; 'The dwarf multicannon cannot be used against them.' (Sand Crab)",
           "requirements": "'The player must first travel to Civitas illa Fortis via Regulus Cento after completing Children of the Sun before other transportation methods become usable.' (Avium Savannah); 'A recommended alternative are the Sand Crabs on the Avium Savannah in Varlamore, which face much less competition compared to the Sand Crabs in Hosidius.' (Sand Crab)"
         }
@@ -987,7 +987,7 @@
         "name": "Ruins of Tapoyauik",
         "displayName": "Ruins of Tapoyauik middle and bottom floors (Frost Crabs)",
         "rank": 12,
-        "multi": "unknown",
+        "multi": true,
         "cannon": false,
         "wilderness": false,
         "wildernessLevelMin": null,
@@ -998,7 +998,7 @@
         ],
         "notes": "Frost crabs give 60 Slayer XP and are 100% weak to fire spells. Cannon cannot be placed in the ruins and frost crabs are cannon-immune anyway.",
         "evidence": {
-          "multi": "not stated",
+          "multi": "not stated | Ruins of Tapoyauik: \"|map = [[File:Ruins of Tapoyauik map.png|300px]]\"; File:Ruins of Tapoyauik map.png: \"Map of the ruins, with monster locations, notable features, exits and ladders, multicombat area, and moths marked out.\"; Frost Crab: \"|location = [[Ruins of Tapoyauik]] middle floor … |plane = 1 |x:1718,y:9610,icon:bluePin,title:Small version|x:1722,y:9610,…\"; Frost Crab: \"|location = [[Ruins of Tapoyauik]] bottom floor … |plane = 0 |x:1704,y:9631,…|x:1700,y:9624,title:Large version\"; Ice warrior: \"|location = [[Ruins of Tapoyauik]] - middle level … |plane = 1 |x:1720,y:9632|x:1722,y:9633|x:1708,y:9650|x:1704,y:9654\" [2026-09-24 research pass: quote, scope and contradiction checks]",
           "cannon": "Frost Crab infobox immunecannon = Yes; 'A Dwarven multicannon cannot be placed inside the ruins.' (Ruins of Tapoyauik)",
           "requirements": "Task page Monster Variants row 'Frost Crab | Ruins of Tapoyauik | Requires partial completion of The Heart of Darkness' (Slayer task/Crabs); 'Prior to quest completion, they are not accessible.' (Ruins of Tapoyauik)"
         }

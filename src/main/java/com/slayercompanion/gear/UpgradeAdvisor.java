@@ -110,7 +110,8 @@ public class UpgradeAdvisor
 				continue;
 			}
 			Map<String, Double> bestForTask = new java.util.HashMap<>();
-			for (GearTable table : task.gearTablesOrEmpty())
+			// The task's own tables only: a boss variant's gear (Abyssal Sire on Abyssal demons) is not what the task needs.
+			for (GearTable table : task.gearTablesFor(null))
 			{
 				if (styleFilter != null && (table.getStyle() == null || !table.getStyle().equalsIgnoreCase(styleFilter)))
 				{

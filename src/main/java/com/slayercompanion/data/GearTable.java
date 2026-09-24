@@ -48,4 +48,7 @@ public class GearTable
 	/** Wiki page the table was taken from (a task page or a "/Strategies" subpage), for attribution. */
 	@Nullable
 	private String source;
+	/** The variant (monster name) this table is for, e.g. "Artio" on a Callisto task; null = the task's own gear. */
+	@Nullable
+	private String variant;
 }

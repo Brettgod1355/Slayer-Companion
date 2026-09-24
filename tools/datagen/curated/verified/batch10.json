@@ -86,7 +86,7 @@
         "name": "Sourhog Cave",
         "displayName": "Sourhog Cave (east of Draynor Manor)",
         "rank": 1,
-        "multi": "unknown",
+        "multi": false,
         "cannon": true,
         "wilderness": false,
         "wildernessLevelMin": null,
@@ -98,7 +98,7 @@
         ],
         "notes": "Only location, 8 sourhog spawns; the cave entrance is just east of Draynor Manor. Sourhogs are aggressive to players of any combat level.",
         "evidence": {
-          "multi": "not stated (neither Sourhog, Sourhog Cave nor the Multicombat area list mention combat type)",
+          "multi": "not stated (neither Sourhog, Sourhog Cave nor the Multicombat area list mention combat type) | Update:A Porcine of Interest Poll Blog: \"The Porcine Pests are quite ''piggy'' in their choice of home. … they can be found rootling about in a cave-like lair in the Misthalin region. Their cave will be single-combat but cannonable, for those who want to speed up kill rates.\"; Sourhog Cave: \"A [[Dwarf multicannon]] can be used here.\"; Coordinate check – Multi-Lines: 0/8 spawns inside any mapped area (Multi-Lines maps no underground areas, so this is not evidence either way); Update:Mini Poll - Miscellaneous Improvements: \"Lastly, let's talk about Sourhogs. We know that they can be a frustrating task. They're often given in high quantites, with high health, in a single combat area.\"; Update:A Porcine of Interest Poll Blog: \"They prefer the cool atmosphere of the underground, and so they can be found rootling about in a cave-like lair in the Misthalin region. Their cave will be single-combat but cannonable, for those who want to speed up kill rates.\" [2026-09-24 research pass: quote, scope and contradiction checks]",
           "cannon": "'A Dwarf multicannon can be used here.' (Sourhog Cave); Sourhog infobox immunecannon = No.",
           "requirements": "'It requires reinforced goggles to kill, or a Slayer helmet after the quest.' (Sourhog); Slayer task list row 'Sourhogs': Required items Reinforced goggles / Slayer helmet, Other requirements 'A Porcine of Interest', master Spria; infobox assignedby = spria; changelog 8 May 2024 'Sourhogs are now only assigned by Spria.' (Sourhog)."
         }
@@ -207,7 +207,7 @@
         "name": "Wilderness spider nest holding a Sapphire spawn",
         "displayName": "Wilderness 'spider hill' (~level 46) - Krystilia",
         "rank": 4,
-        "multi": "unknown",
+        "multi": true,
         "cannon": true,
         "wilderness": true,
         "wildernessLevelMin": 46,
@@ -216,7 +216,7 @@
         "requirements": [],
         "notes": "Aggressive low-HP spiders around a cut sapphire spawn at roughly level 46 Wilderness (Spider LocLine pins around 3168,3886); a cannon or fast darts/knives on the 2 HP spiderlings finishes even a 100 task in about 5 minutes. Player killers can arrive.",
         "evidence": {
-          "multi": "not stated",
+          "multi": "not stated | Coordinate check – Wilderness Lines (Nightfirecat, WILDERNESS_MULTI_AREAS): 17/17 spawns inside 'Northeast f2p wilderness' (new Rectangle(3136, 3840, 256, 64)); spawns x 3162-3178, y 3879-3893; Spider: \"|location = [[Wilderness]] spider nest holding a [[Sapphire]] spawn … |x:3162,y:3887|x:3163,y:3879|…|x:3178,y:3885\"; Slayer task/Spiders: \"it is recommended they head to the \"spider hill\" (located around level 46 Wilderness, with a cut [[sapphire]] being the location's landmark) and place a cannon there with very little risk.\"; Multicombat area: \"*Several places in the [[Wilderness]] including the areas at or around: … **[[Lava Dragon Isle]]\"; Treasure Trails/Guide/Cryptic clues/Hard: \"the [[Spiders]]' nest in level 46 [[Wilderness]] (north-west of [[Lava Dragon Isle]]).\" [2026-09-24 research pass: quote, scope and contradiction checks]",
           "cannon": "'head to the \"spider hill\" (located around level 46 Wilderness, with a cut sapphire being the location's landmark) and place a cannon there with very little risk' (Slayer task/Spiders); Spider infobox immunecannon = No.",
           "requirements": "'If the player is assigned spiders by Krystilia but does not want to kill the spider bosses, it is recommended they head to the \"spider hill\"' (Slayer task/Spiders); Spider LocLine 'Wilderness spider nest holding a Sapphire spawn' (level 1, members No)."
         }
@@ -619,7 +619,7 @@
         "name": "Lady Zay - Cage on the bottom floor",
         "displayName": "Lady Zay (ship) - caged suqah below deck (not a task spot)",
         "rank": 3,
-        "multi": "unknown",
+        "multi": true,
         "cannon": "unknown",
         "wilderness": false,
         "wildernessLevelMin": null,
@@ -630,7 +630,7 @@
         ],
         "notes": "Listed as a Suqah LocLine: a single 27th suqah kept in a cage below the deck of the Lady Zay; not a practical task location.",
         "evidence": {
-          "multi": "not stated",
+          "multi": "not stated | Multicombat area: \"==Multicombat area map== {{Map:DeadmanAnnihilationMulticombatZones|caption={{Legend|#f54636|caption=A map of the multicombat areas on Gielinor (not including ocean zones) indicated in red}}}}\"; Coordinate check – Multicombat area page map (Map:DeadmanAnnihilationMulticombatZones -> Module:DeadmanAnnihilationMulticombatZones.json, mapid -1, plane 0): 1/1 spawns (2142,3900) inside a ship-shaped polygon x2136-2145, y3888-3917 drawn around the Lady Zay docked at Lunar Isle; an identical ship polygon x2220-2229, y3785-3814 covers…; Coordinate check – Multi-Lines: 1/1 spawns inside 'Lunar Isle'; Suqah: \"|location = [[Lady Zay]] - Cage on the bottom floor … |plane = 0 … |x:2142,y:3900\"; Lady Zay: \"|map = {{Map|2140,3901|height=150}} {{Map|2224,3798|height=150}}\" [2026-09-24 research pass: quote, scope and contradiction checks]",
           "cannon": "not stated",
           "requirements": "Suqah LocLine 'Lady Zay - Cage on the bottom floor' (level 111); 'There are a total of 26 suqahs on Lunar Isle, with a 27th in a cage below the deck of the Lady Zay.' (Suqah)."
         }
@@ -777,7 +777,7 @@
         "name": "Lassar Undercity - Sunken Cathedral",
         "displayName": "Lassar Undercity - sunken cathedral (under Ice Mountain)",
         "rank": 1,
-        "multi": "unknown",
+        "multi": true,
         "cannon": false,
         "wilderness": false,
         "wildernessLevelMin": null,
@@ -790,7 +790,7 @@
         ],
         "notes": "'The undercity is accessible from the sinkhole north-west of Ruins of Camdozaal, located under Ice Mountain.' (The Whisperer); 'Players can access this area by climbing down the Bottomless Pit north of the Camdozaal Mines. Both the pre- and post-quest versions of the Undercity are instanced, and logging out in either version will bring players back to the rope leading to the palace.' (Lassar Undercity).",
         "evidence": {
-          "multi": "not stated",
+          "multi": "not stated | The Whisperer/Strategies: \"** A [[venator bow]] can kill all of the spirits within the time frame. Any spirit can be attacked in the \"L\" formation (as the shot will bounce on all three); against spirits in a \"\\\" or \"/\" formation, the player has to attack the bottom or top spirit; attacking the middle will only bounce the shot to one other spi…\"; The Whisperer/Strategies: \"[[File:The Whisperer - lost souls.mp4|thumb|400px|Killing lost souls with the venator bow. For the souls in a row, target one of the souls on the end to ensure the ricochet will hit all three.]]\"; Venator bow: \"When attacking a target in a [[multicombat area]], the arrow will try to bounce to another target near the first.\"; Venator bow: \"The bow is ineffective in single-combat areas\"; The Whisperer/Strategies: \"| special4 = {{plink|Rune thrownaxe}} (only for lost souls)\" [2026-09-24 research pass: quote, scope and contradiction checks]",
           "cannon": "The Whisperer infobox 'immunecannon = Yes' (The Whisperer); no cannon placement statement for the Lassar Undercity found.",
           "requirements": "Boss slayer table row: The Whisperer / Lassar Undercity / Slayer 1 / 'Completion of Desert Treasure II - The Fallen Empire' (Boss); 'The player must bring the blackstone fragment to initiate the fight' (The Whisperer); 'can no longer be received as a boss slayer task prior to completing Desert Treasure II' (The Whisperer)."
         }
@@ -1014,8 +1014,8 @@
         "name": "Ice Path",
         "displayName": "Ice Path (ice trolls beyond the Ice Gate, not recommended)",
         "rank": 7,
-        "multi": "unknown",
-        "cannon": "unknown",
+        "multi": false,
+        "cannon": true,
         "wilderness": false,
         "wildernessLevelMin": null,
         "wildernessLevelMax": null,
@@ -1023,8 +1023,8 @@
         "requirements": [],
         "notes": "Ice troll LocLine; 'players cannot run after passing the Ice Gate' and the chill 'drains your Hitpoints periodically by 1-2 and other stats' (Ice Path). Task page: not worth killing.",
         "evidence": {
-          "multi": "not stated",
-          "cannon": "not stated",
+          "multi": "not stated | Desert Treasure I: \"[[Protect from Melee]] is '''highly''' recommended otherwise the [[ice troll]]s and [[Ice Wolf|ice wolves]] on the way to Kamil will deal a lot of damage. The trolls are in single combat, while the wolves are in multicombat.\"; Desert Treasure I: \"Low hitpoints pures may find reaching the cave difficult, as there are dozens of trolls in the area, and it's single combat\"; Coordinate check – Multi-Lines: 0/21 Ice Path ice troll spawns inside any area, while 22/25 Ice Path ice wolf spawns are inside 'Troll Stronghold / GWD'. Wiki Multicombat area map (Module:DeadmanAnnihilationMulticombatZones.json): 0/21 troll spawns inside, 20/25 Ice Path wolf spawns inside.; Ice troll: \"Five trolls have to be killed to gain access to the ice cave on the eastern side.\"; Coordinate check – Multi-Lines: 0/21 Ice Path ice troll spawns inside any mapped multi area; nearest mapped area 'Troll Stronghold / GWD' is 15 tiles away (that same area contains 5/5 Trollheim thrower troll spawns, so the region is mapped in detail) - consistent, not proof [2026-09-24 research pass: quote, scope and contradiction checks]",
+          "cannon": "not stated | Desert Treasure I: \"Once past the Ice Gate, you have to kill five [[ice troll]]s, regardless of their level. … The [[dwarf multicannon]] works here, but can be inaccurate against the trolls, so be sure to bring several hundred cannonballs.\"; Desert Treasure I: \"A [[dwarf multicannon]] can also be used against Kamil\"; Desert Treasure I: \"A [[dwarf multicannon]] can also be used against Kamil, it should be set up two squares north of the rock\"; Ice gate: \"The '''ice gate''' is a frozen gate that leads to the [[ice troll]] area before the [[Ice Path]].\" [2026-09-24 research pass: quote, scope and contradiction checks]",
           "requirements": "'The trolls in the Ice Path are not worth killing' (Slayer task/Trolls); 'Because of the extremely cold conditions, players cannot run after passing the Ice Gate' (Ice Path); Ice troll LocLine 'Ice Path' (120, 121, 123, 124)."
         }
       },
@@ -1052,7 +1052,7 @@
         "name": "North of the Troll arena",
         "displayName": "Trollheim - north of the Troll arena / tunnel to Trollheim",
         "rank": 9,
-        "multi": "unknown",
+        "multi": false,
         "cannon": "unknown",
         "wilderness": false,
         "wildernessLevelMin": null,
@@ -1063,7 +1063,7 @@
         ],
         "notes": "Mountain troll LocLines 'North of the Troll arena' and 'Tunnel between Troll arena and Trollheim' (levels 69, 71); level 68 thrower trolls range players on the northern part of the mountain (Troll Stronghold quest page). Trollheim is one of the Slayer task list row's locations.",
         "evidence": {
-          "multi": "not stated",
+          "multi": "not stated | Multicombat area: \"Multicombat areas are identified upon entering by two crossed swords … Anywhere else is a [[Single-way combat]] area\"; Multicombat area: \"{{Map:DeadmanAnnihilationMulticombatZones|caption={{Legend|#f54636|caption=A map of the multicombat areas on Gielinor (not including ocean zones) indicated in red}}}}\"; Single-way combat: \"Most areas of the world are single-way combat.\"; Coordinate check – Wiki Multicombat area map (Module:DeadmanAnnihilationMulticombatZones.json): 0/4 spawns inside any multi polygon (nearest are the Death Plateau strip at y 3600-3608 and Trollheim at x 2880-2920, y 3688-3768). Multi-Lines: 0/4 spawns inside any area. [2026-09-24 research pass: quote, scope and contradiction checks]",
           "cannon": "not stated",
           "requirements": "'All other methods of travelling to Trollheim require at least partial completion of the Troll Stronghold quest.' (Trollheim); Mountain troll LocLines 'North of the Troll arena' and 'Tunnel between Troll arena and Trollheim'."
         }

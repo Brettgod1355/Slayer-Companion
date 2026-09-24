@@ -343,6 +343,29 @@ Access: 1025 location records carry 537 requirement strings (377 distinct) →
    the wiki has a strategy page under another name, add it to `STRATEGY_PAGE_OVERRIDES` (the task's
    own monster) or `STRATEGY_VARIANT_PAGES` (a variant; labels get a prefix).
 
+### Extra gear pages, variant gear and extra location pages (2026-09-24)
+
+* `GEAR_PAGES[task]` — list of `{"page", "variant", "tabs"}`: further pages with
+  `{{Recommended equipment}}` tables, each checked with the generator's own parser. `variant`
+  (a monster name) makes the tables that variant's own: they get `"variant"` in `tasks.json` and
+  the plugin shows them only when that variant is chosen; without it they are the task's own.
+  `tabs` keeps only the tables with those labels (pages with tabs for several monsters). A task
+  page tab may be copied to a variant (`Slayer task/Trolls` → `Ice troll male`); a table is kept
+  at most once per variant.
+* `STRATEGY_VARIANT_PAGES` tables also carry `variant`.
+* `finalise_variant_gear()` (after all tasks are built): a table whose variant the plugin cannot
+  select is dropped when it came from `GEAR_PAGES`; one from `STRATEGY_VARIANT_PAGES` becomes the
+  task's own (label keeps the prefix) unless the task already has the same table.
+* `EXTRA_LOCATION_PAGES[task]` — list of `{"page", "monster", "rename", "only"}`: pages whose
+  `{{LocLine}}`s give coordinates for a spot without being a variant of their own (the 20 Canifis
+  citizens who turn into werewolves; the level-108 mourners in the tunnels; the Vault of War
+  goblins). `monster` files the spawns under a variant name, `rename` under one location name (so
+  they merge and meet the curated record), `only` keeps listed LocLine locations.
+* LocLine monster names are matched to monster records case-insensitively, by infobox name or
+  page title, and `Name (version)` counts as `Name`; a LocLine without a name is the page's own
+  monster. A record whose page title qualifies its name (`Guard (dwarf)`, `Rock (Troll)`, but not
+  `… (monster)`) takes the page title as its variant name.
+
 ### Variant names and empty tiers
 
 * `name_variants()` gives every monster record a name that works as the plugin's variant key: a

@@ -43,7 +43,7 @@
         "displayName": "Salve graveyard north of Mort Myre Swamp (ranged safespot)",
         "rank": 2,
         "multi": false,
-        "cannon": "unknown",
+        "cannon": true,
         "wilderness": false,
         "wildernessLevelMin": null,
         "wildernessLevelMax": null,
@@ -54,7 +54,7 @@
         "notes": "10 ghouls (10 LocLine pins) walk the Salve graveyard 'just north of the swamp' (Canifis). The Salve Graveyard Teleport lands 'slightly west of the town' and fairy ring CKS is nearby. The Ghoul page's safespot 'between two gravestones and a cross on the eastern side, directly north from the Large grave' is described for 'the ghouls to the west of Canifis' without naming the cluster; the Large grave page places one large grave at the eastern edge of this cluster (3434,3457) and another south of the Slayer Tower cluster (3413,3495), so it may apply to either. Retreating ghouls 'walk back to the water and will still be within range'.",
         "evidence": {
           "multi": "Single-way combat, Ghouls exception: 'If multiple [[ghoul]]s attempt to attack the player, it is possible for them to do simultaneously even though it is single-way combat.' (the Ghoul page has only two LocLines: this one and South of the Slayer Tower)",
-          "cannon": "not stated; not in the Dwarf multicannon prohibited list",
+          "cannon": "not stated; not in the Dwarf multicannon prohibited list | Champions' Challenge/Strategies: \"Ghouls spawn in two locations west of [[Canifis]]. The southern spot is the most optimal. Use the gravestones to safespot the ghouls, allowing your cannon to fire freely at all enemies in this single combat area. 800 kills are possible an hour.\"; Champions' Challenge/Strategies: \"{{Map|x:3423,y:3461|x:3426,y:3465|x:3427,y:3463|x:3428,y:3458|x:3428,y:3465|x:3430,y:3462|x:3430,y:3467|x:3433,y:3458|x:3433,y:3468|x:3434,y:3464|mtype=pin|icon=redPin|group=ghoscroll|caption=Ghouls}} … {{Map|3433,3466|mtype=pin|icon=Pin|group=ghoscrollcannon|caption=Cannon placement}}\"; Ghoul champion scroll: \"Ghouls are most optimally killed in the [[Salve Graveyard]], west of [[Canifis]]. Around 750 kills per hour can be achieved using a [[dwarf multicannon]], high ranged accuracy equipment, and a fast ranged weapon like the [[toxic blowpipe]]. The Salve Graveyard is a [[single-way combat]] area, but utilising the safes…\"; Canifis: \"The Salve graveyard is just north of the swamp, with another 10 ghouls walking it.\"; Salve Graveyard: \"|map = {{Map|name=Graveyard|x=3434|y=3461|height=300|width=300|zoom=3}} … The '''Salve Graveyard''' is located east of the [[River Salve]] and north of [[Mort Myre Swamp]].\" [2026-09-24 research pass: quote, scope and contradiction checks]",
           "requirements": "Slayer task list row for Ghouls: 'Priest in Peril' (Slayer task)"
         }
       }
@@ -711,7 +711,7 @@
         "name": "North of the Graveyard of Shadows",
         "displayName": "North of the Graveyard of Shadows (5 dragons, near Ferox Enclave)",
         "rank": 4,
-        "multi": "unknown",
+        "multi": false,
         "cannon": "unknown",
         "wilderness": true,
         "wildernessLevelMin": null,
@@ -720,7 +720,7 @@
         "requirements": [],
         "notes": "'In the Wilderness. Close to Ferox Enclave.' (5 LocLine pins). The task table lists multi, cannon and safespot as Unknown. The Multicombat area page only says the Wilderness is multi 'at or around ... The Graveyard of Shadows', which does not prove the dragons north of it are in multi. Level not stated on the pages read.",
         "evidence": {
-          "multi": "Slayer task/Green dragons table row: Multicombat Unknown; 'Several places in the Wilderness including the areas at or around: ... The Graveyard of Shadows' (Multicombat area) is not specific enough to confirm the dragon spawns, so left unknown",
+          "multi": "Slayer task/Green dragons table row: Multicombat Unknown; 'Several places in the Wilderness including the areas at or around: ... The Graveyard of Shadows' (Multicombat area) is not specific enough to confirm the dragon spawns, so left unknown | Coordinate check – Wilderness Lines: 0/5 spawns inside any WILDERNESS_MULTI_AREAS rectangle; nearest multi tile is 33+ tiles from every spawn; Money making guide/Killing green dragons: \"|Location = Immediately north of the [[Graveyard of Shadows]], in circa level 24-25 [[Wilderness]]\"; Multicombat area: \"*Several places in the [[Wilderness]] including the areas at or around: … **The [[Graveyard of Shadows]]\"; Slayer task/Zombies: \"|[[Graveyard of Shadows]] ([[Wilderness]]) | |21 |{{No}} |{{Yes}} |{{Yes}}\"; Graveyard of Shadows: \"|map = {{Map|name=Graveyard of Shadows|x=3164|y=3672|height=300|width=300|zoom=2}}\" [2026-09-24 research pass: quote, scope and contradiction checks]",
           "cannon": "Slayer task/Green dragons table row: Cannonable Unknown; not in the Dwarf multicannon prohibited list",
           "requirements": "Slayer task list row: 'Dragon Slayer I (partially)', 'Combat 52' (Slayer task)"
         }
@@ -729,7 +729,7 @@
         "name": "South of the Lava Maze",
         "displayName": "South of the Lava Maze (5 dragons, above level 30)",
         "rank": 5,
-        "multi": "unknown",
+        "multi": false,
         "cannon": true,
         "wilderness": true,
         "wildernessLevelMin": null,
@@ -738,7 +738,7 @@
         "requirements": [],
         "notes": "'The dragons near the Lava Maze are above level 30 Wilderness, and thus it is not recommended to kill them there.' (5 LocLine pins). 'The Lava Maze is a maze located deep in the Wilderness, around level 40-45' (Lava Maze). The task table lists multi as Unknown; the Multicombat area page names 'areas at or around ... The Lava Maze' but not these spawns specifically.",
         "evidence": {
-          "multi": "Slayer task/Green dragons table row: Multicombat Unknown; Multicombat area list entry 'The Lava Maze' is about the maze area, not proven for the dragons south of it",
+          "multi": "Slayer task/Green dragons table row: Multicombat Unknown; Multicombat area list entry 'The Lava Maze' is about the maze area, not proven for the dragons south of it | Coordinate check – Wilderness Lines (Nightfirecat, WILDERNESS_MULTI_AREAS): 0/5 spawns (3078,3810; 3092,3810; 3098,3821; 3107,3812; 3118,3820) inside any multi area; nearest are 'North-mid east f2p wilderness' (34+ tiles east) and 'North of lava maze' (new Rectangle(3072, 3880, 64, 24), 59+ tiles north); Slayer task/Green dragons: \"|[[Wilderness]] (South of [[Lava Maze]]) … |3078,3810|3092,3810|3098,3821|3107,3812|3118,3820 … |5 |{{NA|Unknown}} |{{Yes}}\"; Multicombat area: \"*Several places in the [[Wilderness]] including the areas at or around: … **The [[Lava Maze]]\"; Lava Maze: \"The '''Lava Maze''' is a maze located deep in the [[Wilderness]], around level 40-45.\"; Coordinate check – Wilderness Lines (Nightfirecat, WILDERNESS_MULTI_AREAS): 0/5 spawns inside any multi area; nearest multi rectangle is 34-70 tiles away (the 'North of lava maze' / 'Northeast of lava maze' rectangles start at y 3872-3880; the spawns are at y 3810-3821) [2026-09-24 research pass: quote, scope and contradiction checks]",
           "cannon": "Slayer task/Green dragons table row: Cannonable Yes",
           "requirements": "Slayer task list row: 'Dragon Slayer I (partially)', 'Combat 52' (Slayer task)"
         }
@@ -890,8 +890,8 @@
         "name": "East of the Colossal Wyrm Remains",
         "displayName": "East of the Colossal Wyrm Remains (Varlamore, recommended)",
         "rank": 1,
-        "multi": "unknown",
-        "cannon": "unknown",
+        "multi": true,
+        "cannon": true,
         "wilderness": false,
         "wildernessLevelMin": null,
         "wildernessLevelMax": null,
@@ -901,8 +901,8 @@
         ],
         "notes": "18 spawns. '(Recommended) Building a quetzal landing site at Colossal Wyrm Remains opens up a very convenient, quick shortcut to a bank at Auburnvale and a prayer altar at The Teomat.' Nearest fairy ring is AJP; 'this location is very accessible, offers several safespots, and is free of dangers associated with Karamja'.",
         "evidence": {
-          "multi": "not stated on Harpie Bug Swarm or Colossal Wyrm Remains pages; not in the 'List of multicombat areas' (Multicombat area)",
-          "cannon": "not stated for this location; not in the Dwarf multicannon prohibited list",
+          "multi": "not stated on Harpie Bug Swarm or Colossal Wyrm Remains pages; not in the 'List of multicombat areas' (Multicombat area) | Multicombat area: \"{{Map:DeadmanAnnihilationMulticombatZones|caption={{Legend|#f54636|caption=A map of the multicombat areas on Gielinor (not including ocean zones) indicated in red}}}}\"; Coordinate check – Wiki Multicombat area map (Module:DeadmanAnnihilationMulticombatZones.json, plane 0): 18/18 spawns inside one multicombat polygon (bbox x1584-1760, y2881-2972); Multi-Lines: 18/18 spawns inside 'Varlamore Colossal Remains Area'; Slayer task/Scorpions: \"|[[Stonecutter Outpost temple]], East of Colossal Wyrm Remains … |11 Scorpions (level 14) |{{Yes}} |{{Yes}} |{{Yes}}\"; Harpie Bug Swarm: \"|location = East of the [[Colossal Wyrm Remains]]\"; Coordinate check – Multi-Lines: 18/18 spawns inside 'Varlamore Colossal Remains Area' [2026-09-24 research pass: quote, scope and contradiction checks]",
+          "cannon": "not stated for this location; not in the Dwarf multicannon prohibited list | Slayer task/Scorpions: \"|[[Stonecutter Outpost temple]], East of Colossal Wyrm Remains … |11 Scorpions (level 14) |{{Yes}} |{{Yes}} |{{Yes}}\"; Slayer task/Hill giants: \"|[[Avium Savannah]] … |6 |{{Yes}} |{{Yes}} |{{Yes}} | *North-west of Wyrm agility arena.\"; Harpie Bug Swarm: \"|immunecannon = No\"; Harpie Bug Swarm: \"You can use a [[dwarf multicannon]] in this location, but you have to equip the bug lantern for the cannon to deal damage.\"; Slayer task/Scorpions: \"|[[Stonecutter Outpost temple]], East of Colossal Wyrm Remains … |11 Scorpions (level 14) |{{Yes}} |{{Yes}} |{{Yes}}\" [2026-09-24 research pass: quote, scope and contradiction checks]",
           "requirements": "'A lit bug lantern... is required to damage these monsters (the lantern must be lit and equipped)' (Harpie Bug Swarm)"
         }
       },
@@ -910,7 +910,7 @@
         "name": "North-east of Tai Bwo Wannai",
         "displayName": "North-east of Tai Bwo Wannai, Karamja (fairy ring DKP)",
         "rank": 2,
-        "multi": "unknown",
+        "multi": false,
         "cannon": true,
         "wilderness": false,
         "wildernessLevelMin": null,
@@ -921,7 +921,7 @@
         ],
         "notes": "14 spawns. Fairy ring DKP then run south past the Shaikahan and aggressive jogres; 'There are two safespots: one between the two trees to the south behind the small jungle plant, and another to the north on the beaches of the fairy ring'. 'It is highly recommended to bring antipoison due to the presence of other aggressive, poisonous creatures.' Tai Bwo Wannai Trio unlocks the nearby Tribal Statue prayer recharge.",
         "evidence": {
-          "multi": "not stated on Harpie Bug Swarm or Tai Bwo Wannai pages; not in the 'List of multicombat areas' (Multicombat area)",
+          "multi": "not stated on Harpie Bug Swarm or Tai Bwo Wannai pages; not in the 'List of multicombat areas' (Multicombat area) | Multicombat area: \"Multicombat areas are identified upon entering by two crossed swords … Anywhere else is a [[Single-way combat]] area\"; Multicombat area: \"{{Map:DeadmanAnnihilationMulticombatZones|caption={{Legend|#f54636|caption=A map of the multicombat areas on Gielinor (not including ocean zones) indicated in red}}}}\"; Coordinate check – Wiki multicombat map (Module:DeadmanAnnihilationMulticombatZones.json): 0/14 spawns inside; nearest multi polygon (Kharazi Jungle / Karamja shipyard area) is ~77 tiles away. Control: the Varlamore harpie spot (East of the Colossal Wyrm Remains) is 18/18 inside both the wiki map and Multi-Lines 'Varlamore Colossal Re…; Talk:Harpie Bug Swarm: \"The Varlamore location needs a warning that it is a multicombat zone. Many harpies hitting 6s gets deadly in a hurry\"; Harpie Bug Swarm: \"There are two [[safespot]]s … Players can set up a cannon to range or melee 2+ swarms to the west … [[File:Harpie bug swarm cannon spot.png|thumb|Cannon semi-safespot for faster kills. ]]\" [2026-09-24 research pass: quote, scope and contradiction checks]",
           "cannon": "'You can use a dwarf multicannon in this location, but you have to equip the bug lantern for the cannon to deal damage.' (Harpie Bug Swarm)",
           "requirements": "'A lit bug lantern... is required to damage these monsters' (Harpie Bug Swarm)"
         }
@@ -1551,7 +1551,7 @@
         "name": "Bandit Camp mine (Wilderness)",
         "displayName": "Wilderness Bandit Camp mine / Hobgoblin Mine (level 32-35)",
         "rank": 3,
-        "multi": "unknown",
+        "multi": false,
         "cannon": true,
         "wilderness": true,
         "wildernessLevelMin": 32,
@@ -1560,7 +1560,7 @@
         "requirements": [],
         "notes": "26 hobgoblins (26 LocLine pins; Bandit Camp Mine monster table: 26 spawns). 'found north-east of the Bandit Camp in the Wilderness from levels 32 to 35 and east of the Wilderness God Wars Dungeon' and 'occupied by a large number of aggressive hobgoblins' (Bandit Camp Mine). The task table says single-way, but the Multicombat area list names 'The Wilderness Bandit Camp' area; left unknown. Krystilia does not assign hobgoblins.",
         "evidence": {
-          "multi": "conflict: Slayer task/Hobgoblins table, Bandit Camp mine row: Multicombat No, versus 'The Wilderness Bandit Camp' in the 'List of multicombat areas' (Multicombat area)",
+          "multi": "conflict: Slayer task/Hobgoblins table, Bandit Camp mine row: Multicombat No, versus 'The Wilderness Bandit Camp' in the 'List of multicombat areas' (Multicombat area) | Coordinate check – Wilderness Lines: 0/26 spawns inside any WILDERNESS_MULTI_AREAS rectangle; nearest multi tile is 31+ tiles from every spawn; Slayer task/Hobgoblins: \"|[[Bandit Camp mine]] … |26 |{{No}} |{{Yes}} |{{Yes}} |Found inside the [[Wilderness]]\"; Multicombat area: \"**The [[Bandit Camp (Wilderness)|Wilderness Bandit Camp]]\"; Bandit Camp (Wilderness): \"|map = {{Map|name=Bandit Camp (Wilderness)|x=3037|y=3685|height=300|width=300|zoom=1}}\"; Bandit Camp mine: \"found north-east of the [[Bandit Camp (Wilderness)|Bandit Camp]] in the [[Wilderness]] from levels 32 to 35\" [2026-09-24 research pass: quote, scope and contradiction checks]",
           "cannon": "Slayer task/Hobgoblins table, Bandit Camp mine row: Cannonable Yes",
           "requirements": "not stated",
           "wilderness": "'in the Wilderness from levels 32 to 35' (Bandit Camp Mine)"
@@ -1645,8 +1645,8 @@
         "name": "Tree Gnome Village dungeon",
         "displayName": "Tree Gnome Village dungeon (key required, level 28 only)",
         "rank": 8,
-        "multi": "unknown",
-        "cannon": "unknown",
+        "multi": false,
+        "cannon": true,
         "wilderness": false,
         "wildernessLevelMin": null,
         "wildernessLevelMax": null,
@@ -1656,8 +1656,8 @@
         ],
         "notes": "9 roaming plus 7 imprisoned level-28 hobgoblins (LocLine pins). 'Tree Gnome Village dungeon (requires a key), contain many level 28 hobgoblins with no level 42 variants present' (Hobgoblin).",
         "evidence": {
-          "multi": "not in the Slayer task/Hobgoblins Location Comparison table; not stated on the pages read",
-          "cannon": "not in the Slayer task/Hobgoblins Location Comparison table; not in the Dwarf multicannon prohibited list",
+          "multi": "not in the Slayer task/Hobgoblins Location Comparison table; not stated on the pages read | Slayer task/Zombies: \"!Location !Maplink !Spawns !Multicombat !Cannonable !Safespottable … |[[Tree Gnome Village dungeon]] | |3 |{{No}} |{{Yes}} |{{No}}\"; Tree Gnome Village Dungeon: \"{{LocationMonsterTableLine|name=Hobgoblin|levels=28|spawns=9 (before [[Roving Elves]])<br/>7 (during/after Roving Elves){{efn|Requires [[Key (Tree Gnome Village Dungeon)|key]].}}}}\"; Coordinate check – Multi-Lines (tsbreuer): 0/9 hobgoblin spawns inside any mapped multi area (non-exhaustive; absence alone proves nothing); Slayer task/Zombies: \"!Location !Maplink !Spawns !Multicombat !Cannonable !Safespottable !Notes … |[[Tree Gnome Village dungeon]] | |3 |{{No}} |{{Yes}} |{{No}}\"; Coordinate check – Multi-Lines (tsbreuer) non-Wilderness areas: 0/9 hobgoblin spawns (2513-2533, 9555-9573) inside any mapped multi area [2026-09-24 research pass: quote, scope and contradiction checks]",
+          "cannon": "not in the Slayer task/Hobgoblins Location Comparison table; not in the Dwarf multicannon prohibited list | Slayer task/Zombies: \"|[[Tree Gnome Village dungeon]] | |3 |{{No}} |{{Yes}} |{{No}} (columns !Spawns !Multicombat !Cannonable !Safespottable)\"; Dwarf multicannon: \"Within the following areas, a cannon cannot be placed down. … A non-exhaustive list of these prohibited areas are:\"; Slayer task/Zombies: \"!Location !Maplink !Spawns !Multicombat !Cannonable !Safespottable !Notes … |[[Tree Gnome Village dungeon]] | |3 |{{No}} |{{Yes}} |{{No}}\"; Dwarf multicannon: \"A non-exhaustive list of these prohibited areas are:\"; Tree Gnome Village Dungeon: \"The key can then be used in the western room full of [[hobgoblin]]s to unlock the door Golrie is imprisoned behind. After starting [[Roving Elves]], Golrie and the hobgoblins swap positions\" [2026-09-24 research pass: quote, scope and contradiction checks]",
           "requirements": "'Tree Gnome Village dungeon (requires a key)' (Hobgoblin)"
         }
       },
@@ -1665,8 +1665,8 @@
         "name": "North of Rellekka",
         "displayName": "North of Rellekka (5 level-42 hobgoblins)",
         "rank": 9,
-        "multi": "unknown",
-        "cannon": "unknown",
+        "multi": true,
+        "cannon": true,
         "wilderness": false,
         "wildernessLevelMin": null,
         "wildernessLevelMax": null,
@@ -1674,8 +1674,8 @@
         "requirements": [],
         "notes": "5 level-42 hobgoblins (49 Slayer XP each; 5 LocLine pins).",
         "evidence": {
-          "multi": "not in the Slayer task/Hobgoblins Location Comparison table; not stated on the pages read",
-          "cannon": "not in the Slayer task/Hobgoblins Location Comparison table; not in the Dwarf multicannon prohibited list",
+          "multi": "not in the Slayer task/Hobgoblins Location Comparison table; not stated on the pages read | Multicombat area: \"Some multicombat areas include: … *The northern coast of the [[Fremennik Province]]\"; Multicombat area: \"{{Map:DeadmanAnnihilationMulticombatZones|caption={{Legend|#f54636|caption=A map of the multicombat areas on Gielinor (not including ocean zones) indicated in red}}}}\"; Rellekka: \"*[[Iron pickaxe]] - Respawns on the beach, amongst the [[rock crab]]s and [[hobgoblin]]s.\"; Hobgoblin champion scroll: \"*North area of [[Rellekka]] with [[Rock crabs]].\"; Hobgoblin: \"|location = North of [[Rellekka]] … |x:2656,y:3720|x:2656,y:3727|x:2661,y:3731|x:2669,y:3725|x:2675,y:3731\" [2026-09-24 research pass: quote, scope and contradiction checks]",
+          "cannon": "not in the Slayer task/Hobgoblins Location Comparison table; not in the Dwarf multicannon prohibited list | Dwarf multicannon: \"*[[Rock Crab]]s are a very common cannon target, due to their low attack and the multicombat areas they inhabit.\"; Idle: \"[[Rock Crab]]s have only 50 Hitpoints but are found in large quantities in multi-combat areas, allowing use of the [[Dwarf Multicannon]].\"; Pay-to-play Magic training: \"*[[Rock Crab]]s in [[Rellekka]]. They have no quest requirements and are usually less crowded than Sand Crabs and Ammonite Crabs\"; Rellekka: \"*[[Iron pickaxe]] - Respawns on the beach, amongst the [[rock crab]]s and [[hobgoblin]]s.\"; Hobgoblin champion scroll: \"*North area of [[Rellekka]] with [[Rock crabs]].\" [2026-09-24 research pass: quote, scope and contradiction checks]",
           "requirements": "not stated"
         }
       },
@@ -1719,8 +1719,8 @@
         "name": "South of Tai Bwo Wannai",
         "displayName": "South of Tai Bwo Wannai (3 hobgoblins)",
         "rank": 12,
-        "multi": "unknown",
-        "cannon": "unknown",
+        "multi": false,
+        "cannon": true,
         "wilderness": false,
         "wildernessLevelMin": null,
         "wildernessLevelMax": null,
@@ -1728,8 +1728,8 @@
         "requirements": [],
         "notes": "3 level-28 hobgoblins (3 LocLine pins).",
         "evidence": {
-          "multi": "not in the Slayer task/Hobgoblins Location Comparison table; not stated on the pages read",
-          "cannon": "not in the Slayer task/Hobgoblins Location Comparison table; not in the Dwarf multicannon prohibited list",
+          "multi": "not in the Slayer task/Hobgoblins Location Comparison table; not stated on the pages read | Multicombat area: \"{{Map:DeadmanAnnihilationMulticombatZones|caption={{Legend|#f54636|caption=A map of the multicombat areas on Gielinor (not including ocean zones) indicated in red}}}} … Anywhere else is a [[Single-way combat]] area\"; Holy Lake: \"A number of [[hobgoblin]]s can be found along the Holy Lake's southern shore.\"; Karamja Hunter area: \"*Level 28 [[hobgoblin]]s north of the hunting spot\"; Coordinate check – Wiki multicombat map (Module:DeadmanAnnihilationMulticombatZones.json): 0/3 spawns inside; nearest multi polygon is the western Kharazi Jungle one, ~73 tiles south. Multi-Lines: 0/3 spawns inside any area (nearest is 'Kharazi Jungle', y 2881–2940). [2026-09-24 research pass: quote, scope and contradiction checks]",
+          "cannon": "not in the Slayer task/Hobgoblins Location Comparison table; not in the Dwarf multicannon prohibited list | Slayer task/Monkeys: \"!Location !Maplink !Amount !Multicombat !Cannonable !Safespottable !Notes … |North-west of [[Shilo Village (location)|Shilo Village]] |{{Map |type=maplink |mtype=pin |2829,3029,title:Monkey,icon:redPin … |2787,3002,title:Monkey,icon:redPin |2790,2997,title:Monkey,icon:redPin |2792,2994,title:Monkey,icon:redPin |2794…\"; Karamja Hunter area: \"|map = {{Map|name=Karamja Hunter area|x=2783|y=3001}} … ==Monsters== *Level 3 [[Monkey (monster)|monkey]]s *Level 28 [[hobgoblin]]s north of the hunting spot\"; Hobgoblin: \"|location = South of [[Tai Bwo Wannai]] |levels = 28 … |x:2787,y:3013|x:2791,y:3013|x:2794,y:3013\"; Holy Lake: \"A number of [[hobgoblin]]s can be found along the Holy Lake's southern shore.\"; Fairy ring: \"|{{Map|mapID=-1|title=Fairy ring (CKR)|2801,3003|mtype=pin|height=200|width=200}} |[[Karamja]]: South of [[Tai Bwo Wannai Village]]\" (Extended from nearby spots in the same area named by these sources; one of three verifiers judged the scope uncertain.) [2026-09-24 research pass: quote, scope and contradiction checks]",
           "requirements": "not stated"
         }
       },
@@ -1737,7 +1737,7 @@
         "name": "Waterbirth Island",
         "displayName": "Waterbirth Island (2 hobgoblins)",
         "rank": 13,
-        "multi": "unknown",
+        "multi": false,
         "cannon": "unknown",
         "wilderness": false,
         "wildernessLevelMin": null,
@@ -1746,7 +1746,7 @@
         "requirements": [],
         "notes": "2 level-28 hobgoblins (2 LocLine pins).",
         "evidence": {
-          "multi": "not in the Slayer task/Hobgoblins Location Comparison table; not stated on the pages read",
+          "multi": "not in the Slayer task/Hobgoblins Location Comparison table; not stated on the pages read | Multicombat area: \"{{Legend|#f54636|caption=A map of the multicombat areas on Gielinor (not including ocean zones) indicated in red}}\"; Multicombat area: \"*[[Waterbirth Island Dungeon]]\"; Single-way combat: \"Most areas of the world are single-way combat.\"; Waterbirth Island: \"Hobgoblins can also be found roaming about the island, particularly on the western side.\"; Coordinate check – Wiki Multicombat area map (Module:DeadmanAnnihilationMulticombatZones): 0/2 spawns (2503,3730; 2526,3739) inside any polygon. Multi-Lines: 0/2 inside any enabled non-Wilderness area. Legacy RuneLite multiindicators MapLocations: 0/2 inside (Waterbirth polygons there are dungeon-only). [2026-09-24 research pass: quote, scope and contradiction checks]",
           "cannon": "not in the Slayer task/Hobgoblins Location Comparison table; not in the Dwarf multicannon prohibited list",
           "requirements": "not stated"
         }

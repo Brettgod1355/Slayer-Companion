@@ -115,7 +115,7 @@ EXTRA_MONSTER_PAGES: dict[str, list[str]] = {
     # variant pages that carry the LocLines the curated data refers to
     "Callisto": ["Artio"],                 # Hunter's End
     "Black dragons": ["King Black Dragon",   # King Black Dragon Lair (Wilderness)
-                      "Brutal black dragon"],  # Catacombs of Kourend
+                      "Brutal black dragon", "Baby black dragon"],  # Catacombs of Kourend
     "Rats": ["Brine rat",                  # Brine Rat Cavern
              "Crypt rat",                  # Barrows crypt (alias)
              "Giant rat"],                 # Lumbridge Swamp
@@ -124,29 +124,29 @@ EXTRA_MONSTER_PAGES: dict[str, list[str]] = {
     # task (checked when added); each supplies the LocLine of a curated location.
     "Aberrant spectres": ["Deviant spectre"],        # Catacombs of Kourend
     "Banshees": ["Twisted Banshee"],                 # Catacombs of Kourend
-    "Bats": ["Giant bat"],                           # Coal Trucks, Taverley Dungeon
+    "Bats": ["Giant bat", "Albino bat"],                           # Coal Trucks, Taverley Dungeon
     "Bears": ["Grizzly bear", "Black bear",          # Ardougne, Mind Altar, Varrock, Wilderness, ...
-              "Bear cub"],                             # Woods outside of Rellekka (alias)
-    "Blue dragons": ["Brutal blue dragon"],          # Catacombs of Kourend (north-west)
+              "Bear cub", "Grizzly bear cub"],                             # Woods outside of Rellekka (alias)
+    "Blue dragons": ["Brutal blue dragon", "Baby blue dragon"],          # Catacombs of Kourend (north-west)
     "Chaos druids": ["Elder Chaos druid"],           # Chaos Temple (Wilderness)
     "Cockatrice": ["Moonlight Cockatrice"],          # Neypotzli - Earthbound Cavern
-    "Dagannoth": ["Dagannoth (Waterbirth Island)"],  # Waterbirth Island Dungeon (alias)
-    "Dogs": ["Wild dog", "Guard dog"],               # Brimhaven Dungeon, Handelmort Mansion, Hosidius
-    "Dwarves": ["Chaos dwarf"],                      # Taverley Dungeon, Deep Wilderness Dungeon
+    "Dagannoth": ["Dagannoth (Waterbirth Island)", "Dagannoth spawn", "Dagannoth Rex", "Dagannoth Prime", "Dagannoth Supreme"],  # Waterbirth Island Dungeon (alias)
+    "Dogs": ["Wild dog", "Guard dog", "Shadow Hound"],               # Brimhaven Dungeon, Handelmort Mansion, Hosidius
+    "Dwarves": ["Chaos dwarf", "Dwarf gang member", "Black Guard Berserker", "Guard (dwarf)"],                      # Taverley Dungeon, Deep Wilderness Dungeon
     "Elves": ["Elf Warrior", "Elf Archer", "Guard (Prifddinas)"],  # Lletya, Prifddinas
     "Goblins": ["Cave goblin miner", "Cave goblin guard",          # Dorgeshuun Mines
                 "Cave goblin (monster)",                           # Lumbridge Swamp Caves
-                "Goblin (Goblin Village)"],                        # Goblin Village
-    "Hill giants": ["Cyclops (God Wars Dungeon)"],   # God Wars Dungeon
+                "Goblin (Goblin Village)", "Goblin (God Wars Dungeon)"],                        # Goblin Village
+    "Hill giants": ["Cyclops (God Wars Dungeon)", "Cyclops (Catacombs of Kourend)"],   # God Wars Dungeon
     "Jellies": ["Warped Jelly", "Chilled jelly"],    # Catacombs, Grimstone Dungeon, Ruins of Tapoyauik
     "Lesser Nagua": ["Earthen Nagua"],               # Tonali Cavern - Sun Chamber
     "Lizardmen": ["Lizardman shaman"],               # Lizardman Caves, Lizardman Temple
     "Lizards": ["Sulphur lizard", "Grimy lizard", "Desert Lizard"],  # Karuulm, Neypotzli, Ullek
     "Mogres": ["Mogre (sea)"],                       # Ardent Ocean (alias)
-    "Monkeys": ["Monkey (monster)", "Monkey Zombie", "Monkey Guard"],  # Karamja, zoo, Ape Atoll, Marimbo
+    "Monkeys": ["Monkey (monster)", "Monkey Zombie", "Monkey Guard", "Maniacal monkey", "Monkey Archer"],  # Karamja, zoo, Ape Atoll, Marimbo
     "Moss giants": ["Moss Giant (Iorwerth Dungeon)"],  # Iorwerth Dungeon
     "Nechryael": ["Greater Nechryael"],              # Catacombs, Iorwerth Dungeon, Wilderness Slayer Cave
-    "Ogres": ["Ogress Warrior", "Ogress Shaman"],    # Corsair Cove Dungeon
+    "Ogres": ["Ogress Warrior", "Ogress Shaman", "Ogre chieftain", "Mogre (sea)"],    # Corsair Cove Dungeon
     "Pirates": ["Zombie pirate"],                    # Chaos Temple (Wilderness)
     "Red dragons": ["Brutal red dragon"],            # Catacombs of Kourend
     "Scabarites": ["Small scarab"],                  # Uzer Mastaba - lower level
@@ -155,8 +155,8 @@ EXTRA_MONSTER_PAGES: dict[str, list[str]] = {
                   "Skeleton (Stronghold of Security)"],  # Ape Atoll Dungeon, Catacombs, SoS (alias)
     "Spiders": ["Giant spider"],                     # East side of Lumbridge
     "Trolls": ["Mountain troll", "Ice troll",        # Trollheim, Keldagrim tunnel, Ice Path, ...
-               "Ice troll runt", "Ice troll male", "Ice troll female", "Ice troll grunt"],  # Fremennik Isles
-    "Vampyres": ["Feral Vampyre", "Venator"],        # Haunted Woods, Burgh de Rott, GWD; Apsul
+               "Ice troll runt", "Ice troll male", "Ice troll female", "Ice troll grunt", "Rock (Troll)", "Troll general", "Thrower Troll", "Thrower troll (Trollheim)", "Troll spectator"],  # Fremennik Isles
+    "Vampyres": ["Feral Vampyre", "Venator", "Vyrewatch Sentinel", "Vampyre Juvinate"],        # Haunted Woods, Burgh de Rott, GWD; Apsul
     "Zombies": ["Undead Druid", "Zombie pirate",     # Forthos Dungeon, Chaos Temple
                 "Zombie (Wilderness)",               # Graveyard of Shadows, Ruins (east)
                 "Zombie (Stronghold of Security)",   # Catacomb of Famine
@@ -166,6 +166,13 @@ EXTRA_MONSTER_PAGES: dict[str, list[str]] = {
     "TzTok-Jad": ["TzHaar Fight Cave"],
     "TzKal-Zuk": ["Inferno"],
     "Zulrah": ["Zul-Andra"],
+    "Bandits": ["Guard Bandit"],
+    "Basilisks": ["Basilisk Knight"],
+    "Birds": ["Penguin (monster)", "Undead chicken", "Mounted terrorbird gnome", "Entrana firebird", "Oomlie bird"],
+    "Cows": ["Cow calf", "Undead cow"],
+    "Ghosts": ["Ghost (Melzar's Maze)", "Ghost (Grave of Scorpius)"],
+    # ^ the last additions (Guard Bandit ... Vampyre Juvinate, Dagannoth Kings on a dagannoth task) came from the
+    # 2026-09-24 coverage research: each page's infobox `cat` names the task and its {{LocLine}}s were checked.
 }
 
 # Recommended-equipment tables mostly live on "<Monster>/Strategies" subpages.
@@ -193,6 +200,89 @@ STRATEGY_VARIANT_PAGES: dict[str, list[str]] = {
     "Callisto": ["Artio/Strategies"],
     "Vet'ion": ["Calvar'ion/Strategies"],
     "Venenatis": ["Spindel/Strategies"],
+}
+
+# GEAR_PAGES: further wiki pages with {{Recommended equipment}} tables for a task,
+# found by the gear research pass (2026-09-24) and verified with the generator's own
+# parser.  Each entry: {"page": title, "variant": monster name or None, "tabs": [labels]}.
+# "variant" attributes the tables to one selectable variant (the plugin shows them when
+# that variant is chosen); None adds them as the task's own.  "tabs", when given, keeps
+# only tables whose label is listed (pages with tabs for several monsters).
+GEAR_PAGES: dict[str, list[dict]] = {
+    "Abyssal demons": [{"page": "Abyssal Sire/Strategies", "variant": "Abyssal Sire"}],
+    "Araxytes": [{"page": "Araxxor/Strategies", "variant": "Araxxor"}],
+    "Aviansies": [{"page": "Kree'arra/Strategies", "variant": "Kree'arra"}],
+    "Bears": [{"page": "Callisto/Strategies", "variant": "Callisto", "tabs": ["Ranged", "Magic"]},
+              {"page": "Artio/Strategies", "variant": "Artio", "tabs": ["Ranged", "Magic"]}],
+    "Black demons": [{"page": "Demonic gorilla/Strategies", "variant": "Demonic gorilla"},
+                     {"page": "Skotizo/Strategies", "variant": "Skotizo"}],
+    "Black dragons": [{"page": "King Black Dragon/Strategies", "variant": "King Black Dragon"}],
+    "Blue dragons": [{"page": "Vorkath/Strategies", "variant": "Vorkath", "tabs": ["Ranged", "Melee"]}],
+    "Cave kraken": [{"page": "Kraken/Strategies", "variant": "Kraken", "tabs": ["Equipment"]}],
+    "Cows": [{"page": "Brutus/Strategies", "variant": "Brutus"}],
+    "Custodian Stalkers": [{"page": "Slayer task/Custodian stalker",
+                            "tabs": ["Ranged (Multicombat)", "Magic (Multicombat)", "Melee (Single combat)"]}],
+    "Dagannoth Kings": [{"page": "Dagannoth Kings/Strategies", "variant": "Dagannoth Rex", "tabs": ["Magic (Rex only)"]},
+                        {"page": "Dagannoth Kings/Strategies", "variant": "Dagannoth Prime", "tabs": ["Ranged (Prime only)"]}],
+    "Fire giants": [{"page": "Royal Titans/Strategies", "variant": "Branda the Fire Queen"}],
+    "Greater demons": [{"page": "K'ril Tsutsaroth/Strategies", "variant": "K'ril Tsutsaroth"},
+                       {"page": "Skotizo/Strategies", "variant": "Skotizo"},
+                       {"page": "Tormented Demon/Strategies", "variant": "Tormented Demon"}],
+    "Gryphons": [{"page": "Shellbane gryphon/Strategies", "variant": "Shellbane gryphon"}],
+    "Hellhounds": [{"page": "Cerberus/Strategies", "variant": "Cerberus", "tabs": ["Melee", "Ranged"]}],
+    "Ice giants": [{"page": "Royal Titans/Strategies", "variant": "Eldric the Ice King"}],
+    "Kurask": [{"page": "Slayer task/Kurasks", "tabs": ["Melee", "Range", "Mage"]}],
+    "Lesser Nagua": [{"page": "Amoxliatl/Strategies", "variant": "Amoxliatl"}],
+    # Wilderness-only tasks: Krystilia's general Wilderness Slayer melee setup
+    "Mammoths": [{"page": "Krystilia/Strategies", "tabs": ["Melee"]}],
+    "Magic axes": [{"page": "Krystilia/Strategies", "tabs": ["Melee"]}],
+    "Monkeys": [{"page": "Demonic gorilla/Strategies", "variant": "Demonic gorilla"},
+                {"page": "Maniacal monkey/Strategies", "variant": "Maniacal monkey"}],
+    "Moss giants": [{"page": "Money making guide/Killing Bryophyta (free-to-play)", "variant": "Bryophyta", "tabs": ["Killing Bryophyta"]},
+                    {"page": "Money making guide/Killing Bryophyta (free-to-play)", "variant": "Moss giant", "tabs": ["Obtaining keys"]}],
+    "Nechryael": [{"page": "Slayer task/Nechryael", "variant": "Greater Nechryael", "tabs": ["Magic (Greater Nechryael)"]}],
+    "Pirates": [{"page": "Money making guide/Killing zombie pirates (Max efficiency)", "variant": "Zombie pirate", "tabs": ["Gear setup"]},
+                {"page": "Money making guide/Killing zombie pirates (Budget)", "variant": "Zombie pirate", "tabs": ["Strategy"]}],
+    "Scorpions": [{"page": "Scorpia/Strategies", "variant": "Scorpia"}],
+    "Skeletons": [{"page": "Slayer task/Skeletons", "variant": "Skeleton (Ape Atoll)", "tabs": ["Ranged", "Magic"]},
+                  {"page": "Vet'ion/Strategies", "variant": "Vet'ion"},
+                  {"page": "Calvar'ion/Strategies", "variant": "Calvar'ion"}],
+    "Spiders": [{"page": "Sarachnis/Strategies", "variant": "Sarachnis"},
+                {"page": "Venenatis/Strategies", "variant": "Venenatis"},
+                {"page": "Spindel/Strategies", "variant": "Spindel"},
+                {"page": "Araxxor/Strategies", "variant": "Araxxor", "tabs": ["Melee", "Ranged"]}],
+    "Trolls": [{"page": "Slayer task/Trolls", "variant": "Mountain troll",
+                "tabs": ["Melee (Low level)", "Magic (Low level)", "Melee (Mountain trolls)", "Magic"]},
+               {"page": "Slayer task/Trolls", "variant": "Ice troll", "tabs": ["Magic (Low level)", "Magic"]},
+               {"page": "Slayer task/Trolls", "variant": "Ice troll runt", "tabs": ["Melee (Ice trolls)"]},
+               {"page": "Slayer task/Trolls", "variant": "Ice troll male", "tabs": ["Melee (Ice trolls)"]},
+               {"page": "Slayer task/Trolls", "variant": "Ice troll female", "tabs": ["Melee (Ice trolls)"]},
+               {"page": "Slayer task/Trolls", "variant": "Ice troll grunt", "tabs": ["Melee (Ice trolls)"]}],
+    "Tzhaar": [{"page": "TzHaar Fight Cave/Strategies", "variant": "TzTok-Jad"},
+               {"page": "Inferno/Strategies", "variant": "TzKal-Zuk"}],
+    "Vampyres": [{"page": "Venator/Strategies", "variant": "Venator", "tabs": ["Equipment"]},
+                 {"page": "Money making guide/Slaying Venators", "variant": "Venator"}],
+    "Venators": [{"page": "Money making guide/Slaying Venators"}],
+    "Zombies": [{"page": "Vorkath/Strategies", "variant": "Vorkath"},
+                {"page": "Money making guide/Killing zombie pirates (Max efficiency)", "variant": "Zombie pirate"},
+                {"page": "Money making guide/Killing zombie pirates (Budget)", "variant": "Zombie pirate"}],
+}
+
+# EXTRA_LOCATION_PAGES: pages whose {{LocLine}}s give coordinates for a task's spot
+# without being a variant of their own.  Each entry: {"page": title, "monster": the
+# variant name the spawns count as, "rename": location name to file them under (so
+# they merge into one spot and meet the curated record), "only": [LocLine location
+# names to keep] (optional)}.
+EXTRA_LOCATION_PAGES: dict[str, list[dict]] = {
+    # The Canifis citizens' LocLines are where each one turns into a werewolf.
+    "Werewolves": [{"page": n, "monster": "Werewolf", "rename": "Canifis"} for n in (
+        "Boris", "Imre", "Yuri", "Joseph", "Nikolai", "Eduard", "Lev", "Georgy", "Svetlana", "Irina",
+        "Alexis", "Milla", "Galina", "Sofiya", "Ksenia", "Yadviga", "Nikita", "Vera", "Zoja", "Liliya")],
+    # Only the level-108 mourners in the headquarters' tunnels are elves.
+    "Elves": [{"page": "Mourner", "monster": "Mourner", "rename": "Mourner Headquarters",
+               "only": ["Mourner Tunnels"]}],
+    # The Vault of War rooms (first level of the Stronghold of Security).
+    "Goblins": [{"page": "Goblin (Vault of War)", "monster": "Goblin", "rename": "Stronghold of Security"}],
 }
 
 # Curated location names that the normalised-name passes of apply_curated()
@@ -863,12 +953,14 @@ def collect_gear(task_page: Page | None, strategy_pages: list[tuple[Page, bool]]
             seen.add(key)
             if prefix:
                 t["label"] = f"{prefix}: {t['label']}" if t["label"] else prefix
+                t["variant"] = prefix
             t["source"] = page.title
             tables.append(t)
             added = True
         for e in s:
             if prefix:
                 e["label"] = f"{prefix}: {e['label']}" if e["label"] else prefix
+                e["variant"] = prefix
             e["source"] = page.title
             setups.append(e)
             added = True
@@ -876,6 +968,80 @@ def collect_gear(task_page: Page | None, strategy_pages: list[tuple[Page, bool]]
             sources.append(page.title)
     _disambiguate_labels(tables)
     return tables, setups, sources
+
+
+def collect_extra_gear(cache: WikiCache, display: str, tables: list[dict], setups: list[dict],
+                       sources: list[str]) -> None:
+    """Add the tables and setups of GEAR_PAGES[display] (see its comment), skipping tables
+    identical to ones already collected.  Variant tables get the variant as label prefix."""
+    seen = {(t.get("variant"), _gear_key(t)) for t in tables}
+    for entry in GEAR_PAGES.get(display, []):
+        page = cache.get(entry["page"])
+        if not page.ok:
+            continue
+        variant = entry.get("variant")
+        tabs = entry.get("tabs") or None
+        g, s = parse_gear_sections(page.wikitext)
+        added = False
+        for tb in g:
+            if tabs and tb.get("label") not in tabs:
+                continue
+            # The same table may serve the task and a variant (a task page tab for one
+            # variant), but only once each.
+            key = (variant, _gear_key(tb))
+            if key in seen:
+                continue
+            seen.add(key)
+            if variant:
+                tb["label"] = f"{variant}: {tb['label']}" if tb["label"] else variant
+                tb["variant"] = variant
+                tb["_variantOnly"] = True
+            tb["source"] = page.title
+            tables.append(tb)
+            added = True
+        for e in s:
+            if tabs and e.get("label") not in tabs:
+                continue
+            if variant:
+                e["label"] = f"{variant}: {e['label']}" if e["label"] else variant
+                e["variant"] = variant
+                e["_variantOnly"] = True
+            e["source"] = page.title
+            setups.append(e)
+            added = True
+        if added and page.title not in sources:
+            sources.append(page.title)
+    _disambiguate_labels(tables)
+
+
+def selectable_variants(task: dict) -> set[str]:
+    """Names the plugin offers as variants (TaskInfo.variants()): monster records with a
+    name that some location lists, superior excluded; lower-cased."""
+    superior = (task.get("superior") or "").lower()
+    placed = {m.lower() for loc in task.get("locations", []) for m in (loc.get("monsters") or [])}
+    return {m["name"].lower() for m in task.get("monsters", [])
+            if m.get("name") and m["name"].lower() != superior and m["name"].lower() in placed}
+
+
+def finalise_variant_gear(tasks: list[dict]) -> None:
+    """A table or setup keeps its variant only when the plugin can select that variant.
+    Otherwise a GEAR_PAGES entry (a variant's own gear) is dropped, and a
+    STRATEGY_VARIANT_PAGES table becomes part of the task's own gear (label keeps the
+    prefix) unless the task already has the same table."""
+    for task in tasks:
+        names = selectable_variants(task)
+        for kind in ("gearTables", "exampleSetups"):
+            own = {_gear_key(t) for t in task.get(kind, []) if t.get("variant") is None} if kind == "gearTables" else set()
+            kept = []
+            for item in task.get(kind, []):
+                v = item.get("variant")
+                variant_only = item.pop("_variantOnly", False)
+                if v is not None and v.lower() not in names:
+                    if variant_only or (kind == "gearTables" and _gear_key(item) in own):
+                        continue
+                    del item["variant"]
+                kept.append(item)
+            task[kind] = kept
 
 
 def _disambiguate_labels(tables: list[dict]) -> None:
@@ -2345,10 +2511,10 @@ def read_task_list(path: Path) -> list[TaskRow]:
 def name_variants(monsters: list[dict]) -> None:
     """Give every monster record a name the plugin can use as a variant key.
 
-    Variant names must be unique within a task and match the names in locations' `monsters`
-    lists, which use the {{LocLine}} name or else the page title. A record without an infobox
-    name, or whose name another record of the task shares (e.g. "Dagannoth" on both
-    `Dagannoth` and `Dagannoth (Waterbirth Island)`), takes its page title instead.
+    Variant names must be unique within a task. A record without an infobox name, or whose
+    name another record of the task shares (e.g. "Dagannoth" on both `Dagannoth` and
+    `Dagannoth (Waterbirth Island)`), takes its page title instead; the old name is kept in
+    `infoboxName` so build_task() can rename that page's {{LocLine}} monsters to match.
     """
     counts: dict[str, int] = {}
     for m in monsters:
@@ -2358,7 +2524,12 @@ def name_variants(monsters: list[dict]) -> None:
         name = m.get("name")
         if not m.get("hasInfobox"):
             continue
-        if not name or (counts[name.lower()] > 1 and name != m["page"]):
+        # A qualified page title says which one it is ("Guard (dwarf)", "Rock (Troll)");
+        # "(monster)" only separates the NPC page from an item or scenery page.
+        qualified = bool(name) and m["page"].startswith(name + " (") and not m["page"].endswith("(monster)")
+        if not name or qualified or (counts[name.lower()] > 1 and name != m["page"]):
+            if name:
+                m["infoboxName"] = name
             m["name"] = m["page"]
 
 
@@ -2408,6 +2579,7 @@ def build_task(cache: WikiCache, row: TaskRow, report: dict) -> dict:
             task["requirements"] = infobox["requirements"]
             task["masters"] = infobox["masters"]
         gear_tables, setups, gear_sources = collect_gear(task_page, strategy_pages)
+        collect_extra_gear(cache, row.display, gear_tables, setups, gear_sources)
         report["gearSources"][row.display] = {"pages": gear_sources, "strategyPagesTried": stried}
         task["gearTables"] = gear_tables
         task["exampleSetups"] = setups
@@ -2433,8 +2605,37 @@ def build_task(cache: WikiCache, row: TaskRow, report: dict) -> dict:
         if info:
             entry.update(info)
         task["monsters"].append(entry)
-    task["locations"] = merge_locations(raw_locs)
     name_variants(task["monsters"])
+    # A page's {{LocLine}}s name its monster as the infobox does, in another case, or by
+    # the page title ("Frost Dragon", "Monkey (monster)"); file them under the record's
+    # final (variant) name so the plugin can match spots to variants.
+    # A LocLine without a name is the page's own monster; "TzHaar-Xil (Melee)" is a
+    # version of TzHaar-Xil.
+    by_page = {m["page"]: m for m in task["monsters"] if m.get("name")}
+    for loc in raw_locs:
+        m = by_page.get(loc.get("page"))
+        if not m:
+            continue
+        if not loc.get("monster"):
+            loc["monster"] = m["name"]
+            continue
+        aliases = {(m.get("infoboxName") or "").lower(), m["name"].lower(), m["page"].lower()} - {""}
+        low = loc["monster"].lower()
+        if low in aliases or any(low.startswith(a + " (") for a in aliases):
+            loc["monster"] = m["name"]
+    for extra in EXTRA_LOCATION_PAGES.get(row.display, []):
+        page = cache.get(extra["page"])
+        if not page.ok:
+            continue
+        for loc in parse_loclines(page.wikitext, page.title):
+            if extra.get("only") and loc["name"] not in extra["only"]:
+                continue
+            if extra.get("rename"):
+                loc["name"] = loc["displayName"] = extra["rename"]
+            if extra.get("monster"):
+                loc["monster"] = extra["monster"]
+            raw_locs.append(loc)
+    task["locations"] = merge_locations(raw_locs)
 
     primary = None
     for m in task["monsters"]:
@@ -2860,6 +3061,7 @@ def main(argv: list[str] | None = None) -> int:
     apply_training_summary(tasks, cache, report)
     style_sources = derive_recommended_styles(tasks, cache)
     apply_access(tasks, report)
+    finalise_variant_gear(tasks)
     report["failedPages"] = dict(cache.failed)
     report["fetches"] = cache.fetches
     report["counts"] = {

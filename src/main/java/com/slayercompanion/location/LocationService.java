@@ -60,19 +60,38 @@ public class LocationService
 		return forTask(task, variant(task));
 	}
 
-	/** Locations for a task, narrowed to the chosen variant when that variant has any spots. */
+	/**
+	 * Locations for a task, narrowed to the chosen variant when that variant has any spots.
+	 * Spots that name none of the task's variants (a curated spot for the task as a whole) are
+	 * kept for every variant.
+	 */
 	public List<TaskLocation> forTask(TaskInfo task, @Nullable String variant)
 	{
 		String fav = favourite(task.getTask());
 		List<TaskLocation> out = new ArrayList<>();
 		if (variant != null)
 		{
+			java.util.Set<String> variantNames = new java.util.HashSet<>();
+			for (com.slayercompanion.data.MonsterInfo m : task.variants())
+			{
+				variantNames.add(m.getName());
+			}
+			List<TaskLocation> shared = new ArrayList<>();
 			for (TaskLocation l : task.locationsOrEmpty())
 			{
-				if (l.getMonsters() != null && l.getMonsters().contains(variant))
+				List<String> monsters = l.getMonsters() == null ? java.util.Collections.emptyList() : l.getMonsters();
+				if (monsters.contains(variant))
 				{
 					out.add(l);
 				}
+				else if (monsters.stream().noneMatch(variantNames::contains))
+				{
+					shared.add(l);
+				}
+			}
+			if (!out.isEmpty())
+			{
+				out.addAll(shared);
 			}
 		}
 		if (out.isEmpty())

@@ -42,4 +42,7 @@ public class ExampleSetup
 	/** Wiki page the setup was taken from, for attribution. */
 	@Nullable
 	private String source;
+	/** The variant (monster name) this setup is for; null = the task's own. */
+	@Nullable
+	private String variant;
 }

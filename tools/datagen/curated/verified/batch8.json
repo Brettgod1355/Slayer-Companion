@@ -531,7 +531,7 @@
         "name": "West of Ralos' Rise",
         "displayName": "West of Ralos' Rise - Varlamore (6 spawns, monster page only)",
         "rank": 11,
-        "multi": "unknown",
+        "multi": false,
         "cannon": "unknown",
         "wilderness": false,
         "wildernessLevelMin": null,
@@ -540,7 +540,7 @@
         "requirements": [],
         "notes": "6 level 42 spawns listed only on the Moss giant monster page LocLine list; not on the task page, so no multi/cannon/safespot data.",
         "evidence": {
-          "multi": "not stated",
+          "multi": "not stated | Multicombat area: \"Anywhere else is a [[Single-way combat]] area\"; Multicombat area: \"{{Map:DeadmanAnnihilationMulticombatZones|caption={{Legend|#f54636|caption=A map of the multicombat areas on Gielinor (not including ocean zones) indicated in red}}}}\"; Coordinate check – Wiki Multicombat area map (Module:DeadmanAnnihilationMulticombatZones.json, plane 0): 0/6 spawns inside any polygon (nearest multi polygons: Ralos' Rise zone from x1417 and Gemstone Crab zone up to x1362; spawns at x1389-1398, y3108-3123); Multi-Lines: 0/6 spawns inside any area; Moss giant: \"|location = West of [[Ralos' Rise]] |levels = 42 … |x:1394,y:3123|x:1398,y:3108|x:1393,y:3111|x:1398,y:3120|x:1389,y:3117|x:1396,y:3115\"; Multicombat area: \"A map of the multicombat areas on Gielinor (not including ocean zones) indicated in red\" [2026-09-24 research pass: quote, scope and contradiction checks]",
           "cannon": "not stated",
           "requirements": "not stated; Moss giant LocLine 'West of [[Ralos' Rise]]' levels 42, 6 coordinates"
         }
@@ -549,7 +549,7 @@
         "name": "Tonali Cavern",
         "displayName": "Tonali Cavern - southern chamber (8 spawns, The Final Dawn, no cannon)",
         "rank": 12,
-        "multi": "unknown",
+        "multi": false,
         "cannon": false,
         "wilderness": false,
         "wildernessLevelMin": null,
@@ -560,7 +560,7 @@
         ],
         "notes": "5 spawns on the ground floor and 3 on the first floor of the southern chamber, listed only on the Moss giant monster page; not on the task page.",
         "evidence": {
-          "multi": "not stated for the southern chamber (Tonali Cavern page names only the Moon and Sun chambers as multicombat)",
+          "multi": "not stated for the southern chamber (Tonali Cavern page names only the Moon and Sun chambers as multicombat) | Slayer task/Lesser Nagua: \"Cannons cannot be setup in the crypt. The Naguas in the Sun Chambers are multiway combat, while the ones outside are singleway.\"; Earthen Nagua: \"|location = [[Tonali Cavern]] - Southern Cavern (bottom floor) … |plane = 0 |x:1290,y:9372|x:1291,y:9368|x:1295,y:9370|x:1307,y:9388|x:1304,y:9381\"; Moss giant: \"|location = [[Tonali Cavern]] - Southern Chamber ({{FloorNumber|uk=0}}) … |plane = 0 |x:1289,y:9399|x:1286,y:9396|x:1284,y:9391|x:1287,y:9384|x:1289,y:9380\"; Tonali Cavern: \"The western Moon chamber contains grimy lizards, while the eastern Sun chamber contains earthen nagua, both of which are in a [[multicombat area]]\" [2026-09-24 research pass: quote, scope and contradiction checks]",
           "cannon": "Tonali Cavern: 'Players cannot set up a dwarf multicannon within the cavern.'",
           "requirements": "Tonali Cavern: 'Accessing it requires completion of the The Final Dawn quest.'"
         }
@@ -962,8 +962,8 @@
         "name": "Zanaris",
         "displayName": "Zanaris - south of the bank, by the flower pond",
         "rank": 1,
-        "multi": "unknown",
-        "cannon": "unknown",
+        "multi": false,
+        "cannon": true,
         "wilderness": false,
         "wildernessLevelMin": null,
         "wildernessLevelMax": null,
@@ -973,8 +973,8 @@
         ],
         "notes": "Six spawns just south of the Zanaris bank. Five of the six have a wander radius that allows pond safespotting; one retreats if attacked horizontally across the pond, another vertically, the other three never retreat while you stay next to the pond.",
         "evidence": {
-          "multi": "not stated (Otherworldly being and Zanaris pages are silent; research/area-rules.json lists 'Zanaris (page silent)')",
-          "cannon": "not stated (infobox immunecannon = No, but no page states whether a cannon can be set up in Zanaris)",
+          "multi": "not stated (Otherworldly being and Zanaris pages are silent; research/area-rules.json lists 'Zanaris (page silent)') | Slayer task/Zygomites: \"==Location Comparison== {|class = \"wikitable sortable align-center-3\" !Location !Maplink !Amount !Multicombat !Cannonable !Safespottable\"; Slayer task/Zygomites: \"|East of the furnace in [[Zanaris]] … |5 |{{No}} |{{Yes}} |{{No}}\"; Slayer task/Zygomites: \"|[[Zanaris]] near the [[Cosmic Altar]] … |5 |{{No}} |{{Yes}} |{{Yes}}\"; Coordinate check – Multi-Lines: 0/6 spawns inside any mapped multi area (consistent, but proves nothing); Slayer task/Zygomites: \"!Multicombat !Cannonable !Safespottable … |East of the furnace in [[Zanaris]] … |5 |{{No}} |{{Yes}} |{{No}}\" (Extended from nearby spots in the same area named by these sources; one of three verifiers judged the scope uncertain.) [2026-09-24 research pass: quote, scope and contradiction checks]",
+          "cannon": "not stated (infobox immunecannon = No, but no page states whether a cannon can be set up in Zanaris) | Slayer task/Zygomites: \"|East of the furnace in [[Zanaris]] … |5 |{{No}} |{{Yes}} |{{No}}\"; Slayer task/Zygomites: \"|[[Zanaris]] near the [[Cosmic Altar]] … |5 |{{No}} |{{Yes}} |{{Yes}}\"; Otherworldly being: \"|immunecannon = No\"; Slayer task/Zygomites: \"!Multicombat !Cannonable !Safespottable … |East of the furnace in [[Zanaris]] … |5 |{{No}} |{{Yes}} |{{No}}\" (Extended from nearby spots in the same area named by these sources; one of three verifiers judged the scope uncertain.) [2026-09-24 research pass: quote, scope and contradiction checks]",
           "requirements": "Slayer task list Otherworldly beings row: 'Quest Lost City', 'Combat 40'. Zanaris: 'The Lost City quest is a pre-requisite to visiting Zanaris.'"
         }
       }
@@ -1301,8 +1301,8 @@
         "name": "Lumbridge Swamp",
         "displayName": "Lumbridge - swamp and behind the castle (giant rats)",
         "rank": 2,
-        "multi": "unknown",
-        "cannon": "unknown",
+        "multi": false,
+        "cannon": true,
         "wilderness": false,
         "wildernessLevelMin": null,
         "wildernessLevelMax": null,
@@ -1310,8 +1310,8 @@
         "requirements": [],
         "notes": "Level 3 and 6 giant rats in the swamp and lighter grey ones behind Lumbridge Castle; ordinary level 1 rats in and around Lumbridge.",
         "evidence": {
-          "multi": "not stated",
-          "cannon": "not stated",
+          "multi": "not stated | Multicombat area: \"Anywhere else is a [[Single-way combat]] area, also known as a single-combat area, with an exception for the [[Revenant Caves]], [[Wilderness Agility Course]] and lesser Wilderness bosses\"; Multicombat area: \"{{Legend|#f54636|caption=A map of the multicombat areas on Gielinor (not including ocean zones) indicated in red}}\"; Single-way combat: \"Most areas of the world are single-way combat. Those that are not are [[multi-combat area]]s\"; Coordinate check – Wiki map Map:DeadmanAnnihilationMulticombatZones: 0/27 spawns inside any multicombat polygon (nearest is the Wizards' Tower polygon, 29 tiles away); Multi-Lines: 0/27 spawns inside any area; Treasure Trails/Guide/Hot Cold/Master: \"|Just north-west of the [[Lumbridge]] [[Fishing tutor]]. |[[File:Hot cold clue - Lumbridge Swamp.png|centre|300px]] … |Single\" [2026-09-24 research pass: quote, scope and contradiction checks]",
+          "cannon": "not stated | Slayer reward point: \"|[[Slayer task/Rats|Rats]] |West of [[Lumbridge Castle]], [[Varrock Sewers]], or [[West Ardougne]] |Cannonable\"; Giant rat: \"Lighter grey giant rats can be found exclusively behind [[Lumbridge Castle]] and near the [[Rimmington church]].\"; Slayer task/Rats: \"*Behind [[Lumbridge]] castle *[[Lumbridge Swamp]]\"; Slayer reward point: \"|[[Slayer task/Rats|Rats]] |West of [[Lumbridge Castle]], [[Varrock Sewers]], or [[West Ardougne]] |Cannonable\"; Giant rat: \"Lighter grey giant rats can be found exclusively behind [[Lumbridge Castle]] … |location = [[Lumbridge Swamp]] … |x:3192,y:3207|x:3194,y:3203|x:3195,y:3207|x:3197,y:3201\" [2026-09-24 research pass: quote, scope and contradiction checks]",
           "requirements": "not stated; Slayer task/Rats giant rat locations: 'Behind Lumbridge castle', 'Lumbridge Swamp'"
         }
       },

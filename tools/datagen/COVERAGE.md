@@ -1,4 +1,4 @@
-# Slayer Companion datagen – coverage report (strategy-page + coordinates pass, 2026-09-24)
+# Slayer Companion datagen – coverage report (gear-per-variant pass, 2026-09-24)
 
 Updated after the strategy-page / coordinates pass (see the section of that name below); the
 multi/cannon, master-range and access sections are unchanged from the consolidation pass of
@@ -11,6 +11,126 @@ counts a task as "withLocations" even when its only locations are coordinate-les
 so the split below is stricter.
 
 ## Counts
+
+## Multi / cannon research pass (2026-09-24)
+
+A 111-agent workflow researched every remaining `unknown` flag. For each of 16 regions, two
+researchers worked from different angles: one read the wiki pages, the other ran full-text
+searches, including Update: posts. Every proposal then went to three verifiers. The quote lens
+re-fetched each source and recomputed the coordinates. The scope lens checked that the source
+covers these exact spawns. The contradiction lens actively searched for opposite statements. A
+value was accepted only when all of these held:
+
+- the quote lens upheld it;
+- at least two of the three lenses gave that value;
+- no lens gave a different definite value.
+
+Unsettled fields got a last-chance geography and maps pass, which was verified the same way.
+
+Evidence sources beyond the wiki text (coordinate checks against our spawns):
+
+- **Wilderness Lines hub plugin** (Nightfirecat, v1.5.0, Dec 2025, `WILDERNESS_MULTI_AREAS`).
+  It is complete for the Wilderness surface and was checked against the in-game multicombat
+  indicator.
+- **Multi-Lines hub plugin** (tsbreuer, `MultiLinesData.json`). It covers areas outside the
+  Wilderness and is community-mapped, so a spawn inside one of its areas supports "multi" but a
+  spawn outside proves nothing.
+- **The wiki's own multicombat map** (`Module:DeadmanAnnihilationMulticombatZones.json`), used
+  by a few verifications only where it agreed with Multi-Lines or the page text.
+
+Every changed record quotes its sources in `evidence`, tagged "2026-09-24 research pass".
+
+Result: 52 fields settled. Unknown multi went from 59 to 17 and unknown cannon from 48 to 38 in the
+curated files (16 / 38 in the bundled data). Two cannon values and one multi value are
+extensions from nearby spots in the same area, and their evidence says so.
+
+| Task | Location | Field | Value | Sources |
+| --- | --- | --- | --- | --- |
+| Black Knights | North-east of Bone Yard (Wilderness) | multi | true | Black Knight, Treasure Trails/Guide/Coordinates/Hard, Treasure Trails/Guide/Hot Cold/Master, White equipment, coordinate |
+| Black Knights | North-east of Bone Yard (Wilderness) | cannon | true | Venenatis, White equipment |
+| Ents | East of Chaos Temple (Wilderness) | multi | true | Chaos Temple (Wilderness), Ent, Free-to-play PvP culture, Slayer task/Hill giants, coordinate check |
+| Ents | North of Chaos Temple (Wilderness) | multi | true | Chaos Temple (Wilderness), Treasure Trails/Guide/Hot Cold/Master, Wilderness Obelisk, coordinate check |
+| Green dragons | North of the Graveyard of Shadows | multi | false | Graveyard of Shadows, Money making guide/Killing green dragons, Multicombat area, Poll:Old School feature poll 15: Rejuv |
+| Hobgoblins | Bandit Camp mine (Wilderness) | multi | false | Bandit Camp (Wilderness), Bandit Camp mine, Champions' Challenge/Strategies, Free-to-play PvP culture, Hobgoblin champio |
+| Mammoths | South-east of Ferox Enclave | multi | true | Free-to-play PvP culture, Mammoth, Wilderness Obelisk, coordinate check |
+| Scorpions | Wilderness (West of the Air Obelisk) | multi | false | Free-to-play PvP culture, Scorpion, Treasure Trails/Guide/Hot Cold/Master, coordinate check |
+| Spiders | Wilderness spider nest holding a Sapphire spawn | multi | true | Giant spider, Multicombat area, Slayer task/Spiders, Spider, Treasure Trails/Guide/Cryptic clues/Hard, coordinate check |
+| Green dragons | South of the Lava Maze | multi | false | Lava Maze, Multicombat area, Slayer task/Green dragons, Slayer task/Hill giants, Wilderness Obelisk, coordinate check |
+| Rogues | South-west of Mage Arena | multi | false | Multicombat area, Rogue, coordinate check |
+| TzKal-Zuk | Inferno (Mor Ul Rek) | multi | true | Inferno, Inferno/Strategies, Multicombat area, Yt-HurKot |
+| Zulrah | Zulrah's Shrine (east of Zul-Andra) | multi | true | Coil, Multicombat area, Zul-Andra, Zulrah, Zulrah/Strategies, coordinate check |
+| TzTok-Jad | Mor Ul Rek - Fight Caves | multi | true | Multicombat area, TzHaar Fight Cave, TzHaar Fight Cave/Strategies, Yt-HurKot |
+| The Whisperer | Lassar Undercity - Sunken Cathedral | multi | true | Lost Soul (The Whisperer), Multicombat area, Odd Figure, Rune thrownaxe, The Whisperer, The Whisperer/Strategies, Venato |
+| The Maggot King | Vampyrium | multi | true | Maggot King, Maggot King's lair, Maggot King/Strategies, Update:The Blood Moon Rises & Bank Tags Tweaks, Venator bow, co |
+| Trolls | Ice Path | multi | false | Desert Treasure I, Ice troll, Update:Minigame Tweaks, Skilling Adjustments & more!, coordinate check |
+| Trolls | Ice Path | cannon | true | Desert Treasure I, Ice gate |
+| Trolls | North of the Troll arena | multi | false | Multicombat area, Single-way combat, coordinate check |
+| Crabs | Hosidius - southern coast | multi | true | Champions' Challenge/Strategies, Multicombat area, Sand Crab, Twisted League/Guide/Equipment, Twisted League/Guide/Range |
+| Crabs | Crabclaw Isle | multi | true | Ancient Wizard, Crabclaw Isle, Multicombat area, Template:Treasure Trails Guide Coordinates Intro, Treasure Trails/Guide |
+| Crabs | West of Mount Quidamortem | multi | partial | Mount Quidamortem, Multicombat area, Twisted League/Guide/Ranged, coordinate check |
+| Crabs | Avium Savannah - southern coast | multi | true | Multicombat area, Sand Crab, Slayer reward point, Slayer task/Hill giants, coordinate check |
+| Harpie bug swarms | East of the Colossal Wyrm Remains | multi | true | Harpie Bug Swarm, Multicombat area, Slayer reward point, Slayer task/Scorpions, Talk:Harpie Bug Swarm, coordinate check |
+| Harpie bug swarms | East of the Colossal Wyrm Remains | cannon | true | Harpie Bug Swarm, Slayer reward point, Slayer task/Hill giants, Slayer task/Scorpions |
+| Moss giants | West of Ralos' Rise | multi | false | Moss giant, Multicombat area, coordinate check |
+| Moss giants | Tonali Cavern | multi | false | Earthen Nagua, Moss giant, Slayer task/Lesser Nagua, Tonali Cavern |
+| Cave crawlers | Ruins of Tapoyauik - top level | multi | true | Cave crawler, File:Ruins of Tapoyauik map.png, Ruins of Tapoyauik, Slayer task/Icefiends, Stalker Den, Tooth half of key |
+| Crabs | Ruins of Tapoyauik | multi | true | File:Ruins of Tapoyauik map.png, Frost Crab, Ice warrior, Ruins of Tapoyauik, Slayer task/Icefiends, Slayer task/Jellies |
+| Crabs | Mushroom Forest | multi | true | Ammonite Crab, Multicombat area, Slayer task/Zygomites, coordinate check |
+| Crabs | Waterbirth Island | multi | false | Multicombat area, Single-way combat, User:Microbrews/multibox, Waterbirth Island, coordinate check |
+| Hobgoblins | North of Rellekka | cannon | true | Dwarf multicannon, Hobgoblin, Hobgoblin champion scroll, Idle, Pay-to-play Magic training, Rellekka, Rock Crab |
+| Hobgoblins | Waterbirth Island | multi | false | Multicombat area, Single-way combat, Waterbirth Island, coordinate check |
+| Hobgoblins | North of Rellekka | multi | true | Hobgoblin, Hobgoblin champion scroll, Multicombat area, Rellekka, coordinate check |
+| Fever spiders | Braindeath Island | cannon | true | Dwarf multicannon, Fever spider, Money making guide/Killing fever spiders, Slayer task/Zombies |
+| Harpie bug swarms | North-east of Tai Bwo Wannai | multi | false | Harpie Bug Swarm, Multicombat area, Talk:Harpie Bug Swarm, coordinate check |
+| Hobgoblins | South of Tai Bwo Wannai | multi | false | Holy Lake, Karamja Hunter area, Multicombat area, coordinate check |
+| Hobgoblins | South of Tai Bwo Wannai | cannon | true | Dwarf multicannon, Fairy ring, Hobgoblin, Holy Lake, Karamja Hunter area, Slayer task/Monkeys, coordinate check |
+| Crocodiles | Along the River Elid | multi | false | Crocodile, Multicombat area, Single-way combat, Slayer task/Dogs, Template:Treasure Trails Guide Hot Cold Intro, Treasur |
+| Crocodiles | Near the Ruins of Unkah | multi | false | Crocodile, Multicombat area, Single-way combat, Treasure Trails/Guide/Hot Cold/Master, coordinate check |
+| Crocodiles | Near the Ruins of Ullek | multi | false | Brassican Mage, Crocodile, Multicombat area, Single-way combat, Talk:Treasure Trails/Full guide/Master, Treasure Trails/ |
+| Lizards | West of Ruins of Ullek | multi | false | Desert Lizard, Multicombat area, Single-way combat, Slayer task/Lizards, coordinate check |
+| Sourhogs | Sourhog Cave | multi | false | Sourhog Cave, Update:A Porcine of Interest, Update:A Porcine of Interest Poll Blog, Update:Mini Poll - Miscellaneous Imp |
+| Cows | South Falador Farm | multi | true | Multicombat area, South Falador Farm, Treasure Trails/Guide/Hot Cold/Master, coordinate check |
+| Rats | Lumbridge Swamp | multi | false | Multicombat area, Single-way combat, Treasure Trails/Guide/Hot Cold/Master, coordinate check |
+| Rats | Lumbridge Swamp | cannon | true | Giant rat, Slayer reward point, Slayer task/Rats |
+| Hobgoblins | Tree Gnome Village dungeon | multi | false | Slayer task/Zombies, Tree Gnome Village Dungeon, coordinate check |
+| Hobgoblins | Tree Gnome Village dungeon | cannon | true | Dwarf multicannon, Slayer task/Zombies, Tree Gnome Village Dungeon |
+| Ghouls | North of Mort Myre Swamp | cannon | true | Canifis, Champions' Challenge/Strategies, Ghoul champion scroll, Salve Graveyard |
+| Suqahs | Lady Zay - Cage on the bottom floor | multi | true | Lady Zay, Multicombat area, Suqah, coordinate check |
+| Otherworldly beings | Zanaris | multi | false | Otherworldly being, Slayer task/Zygomites, coordinate check |
+| Otherworldly beings | Zanaris | cannon | true | Otherworldly being, Slayer task/Zygomites |
+
+Still unknown (55 fields): the wiki is silent or its sources conflict, including all
+Wilderness boss lairs' cannon flags, most solo boss arenas' multi flags, the Troll Stronghold and
+Trollweiss cannons, the desert crocodile and lizard spots' cannon, and Gnome Maze cannon. The
+reasons for each are recorded per field in the workflow output (session scratchpad
+`mc-research2/mc-result.json`).
+
+## Gear-per-variant and coverage pass (2026-09-24, later)
+
+Research workflow (21 groups of tasks: researcher → verifier that ran the generator's own parsers on
+every proposed page → completeness searcher → verifier) looked for wiki gear tables for every task
+AND every variant, and for coordinates of every spot and variant. Accepted pages went into
+`GEAR_PAGES` (with variant and tab filters), `EXTRA_MONSTER_PAGES` and the new
+`EXTRA_LOCATION_PAGES`. Rejected on review: two Combat Achievement pages ("Fighting as Intended",
+"Fighting as Intended II" — restricted-gear challenges) and a user guide page for Commander
+Zilyana whose "tables" were skills and inventory.
+
+| Measure | Now | Before this pass |
+| --- | --- | --- |
+| Tasks with any wiki gear tables | 79 | 60 |
+| Tasks with their own (task-level) tables | 61 | 60 |
+| Gear tables | 282 (106 for a specific variant) | 188 |
+| Selectable variants | 359 | 309 |
+| Variants with their own tables | 43 | 0 (variant tables were not told apart) |
+| Variants that get wiki gear (own or the task's) | 137 of 359 | – |
+| Location records / with coordinates | 1065 / 1062 | 1025 / 1019 |
+
+Still without coordinates (3): Hill giants – Obor's Lair (Edgeville Dungeon); Skeletons – Skeletal Tomb; Spiders – Web Chasm (instanced lairs with no
+{{LocLine}} or {{Map}} coordinates on the wiki).
+
+Tasks with no wiki gear table at all (69; the plugin shows the general Slayer gear — each was
+searched twice). A further 18 tasks have tables only for a variant (e.g. Black demons → Demonic
+gorilla, Skotizo), so their normal monster also shows the general gear: Aberrant spectres, Ankou, Bandits, Banshees, Bats, Birds, Black Knights, Bloodveld, Brine rats, Catablepon, Cave bugs, Cave crawlers, Cave horrors, Cave slimes, Chaos druids, Cockatrice, Crabs, Crawling hands, Crocodiles, Dagannoth, Dark warriors, Dogs, Dwarves, Earth warriors, Elves, Ents, Fever spiders, Fire giants, Fleshcrawlers, Ghosts, Ghouls, Goblins, Harpie bug swarms, Hill giants, Hobgoblins, Hydras, Ice giants, Ice warriors, Icefiends, Infernal mages, Jungle horrors, Kalphites, Killerwatts, Lesser demons, Lizards, Minotaurs, Mogres, Molanisks, Moss giants, Ogres, Otherworldly beings, Pirates, Pyrefiends, Rats, Red dragons, Rogues, Scabarites, Sea snakes, Shades, Shadow warriors, Sourhogs, Spiritual creatures, Terror dogs, Turoth, Tzhaar, Wall beasts, Warped Creatures, Werewolves, Wolves.
 
 | Measure | Count |
 | --- | --- |

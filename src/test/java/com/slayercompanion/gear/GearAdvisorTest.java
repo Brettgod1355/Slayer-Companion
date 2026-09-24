@@ -42,6 +42,7 @@ import static com.slayercompanion.gear.GearFixture.tier;
 import static com.slayercompanion.gear.GearFixture.tiers;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
@@ -334,7 +335,7 @@ public class GearAdvisorTest
 			GearAdvisor advisor = new GearAdvisor(world.resolver, world.owned, style(s));
 			for (TaskInfo task : data.tasks())
 			{
-				List<GearTable> tables = GearAdvisor.tablesFor(task, data.generalGear());
+				List<GearTable> tables = GearAdvisor.tablesFor(task, null, data.generalGear());
 				boolean offered = false;
 				for (GearTable t : tables)
 				{
@@ -357,14 +358,71 @@ public class GearAdvisorTest
 		GeneralGearFile general = new GeneralGearFile();
 		general.setGearTables(Collections.singletonList(MELEE));
 		TaskInfo bare = new TaskInfo();
-		assertSame(general.getGearTables(), GearAdvisor.tablesFor(bare, general));
+		assertSame(general.getGearTables(), GearAdvisor.tablesFor(bare, null, general));
 
 		TaskInfo own = new TaskInfo();
 		own.setGearTables(Collections.singletonList(table("Ranged")));
-		assertSame(own.getGearTables(), GearAdvisor.tablesFor(own, general));
+		assertEquals(own.getGearTables(), GearAdvisor.tablesFor(own, null, general));
 
-		assertTrue(GearAdvisor.tablesFor(null, general).isEmpty());
-		assertTrue(GearAdvisor.tablesFor(bare, new GeneralGearFile()).isEmpty());
+		assertTrue(GearAdvisor.tablesFor(null, null, general).isEmpty());
+		assertTrue(GearAdvisor.tablesFor(bare, null, new GeneralGearFile()).isEmpty());
+	}
+
+	// --- variant gear ---
+
+	@Test
+	public void chosenVariantShowsItsOwnTablesElseTheTasks()
+	{
+		GearTable taskMelee = table("Melee");
+		GearTable gorillaRanged = table("Ranged");
+		gorillaRanged.setVariant("Demonic gorilla");
+		TaskInfo demons = new TaskInfo();
+		demons.setGearTables(Arrays.asList(taskMelee, gorillaRanged));
+		GeneralGearFile general = new GeneralGearFile();
+		general.setGearTables(Collections.singletonList(MELEE));
+
+		assertEquals(Collections.singletonList(gorillaRanged), GearAdvisor.tablesFor(demons, "Demonic gorilla", general));
+		assertEquals("case-insensitive", Collections.singletonList(gorillaRanged), GearAdvisor.tablesFor(demons, "demonic gorilla", general));
+		assertEquals("a variant without its own tables gets the task's", Collections.singletonList(taskMelee), GearAdvisor.tablesFor(demons, "Black demon", general));
+		assertEquals("no variant chosen", Collections.singletonList(taskMelee), GearAdvisor.tablesFor(demons, null, general));
+
+		TaskInfo onlyVariant = new TaskInfo();
+		onlyVariant.setGearTables(Collections.singletonList(gorillaRanged));
+		assertSame("only another variant's tables: general gear", general.getGearTables(), GearAdvisor.tablesFor(onlyVariant, "Black demon", general));
+	}
+
+	@Test
+	public void everyBundledVariantGetsGearTables()
+	{
+		SlayerData data = new SlayerData(new Gson());
+		for (TaskInfo task : data.tasks())
+		{
+			for (com.slayercompanion.data.MonsterInfo m : task.variants())
+			{
+				List<GearTable> tables = GearAdvisor.tablesFor(task, m.getName(), data.generalGear());
+				assertFalse(task.getTask() + " / " + m.getName() + " has no gear tables at all", tables.isEmpty());
+				for (GearTable t : tables)
+				{
+					assertTrue(task.getTask() + " / " + m.getName() + " shows a table of another variant",
+						t.getVariant() == null || t.getVariant().equalsIgnoreCase(m.getName()));
+					// Checked on the data directly: advise() through the mocks for ~300 variants would keep every call.
+					for (Map.Entry<String, List<List<GearItem>>> slot : t.getSlots().entrySet())
+					{
+						assertFalse(task.getTask() + " / " + m.getName() + " " + slot.getKey() + " has no tiers", slot.getValue().isEmpty());
+						assertFalse(task.getTask() + " / " + m.getName() + " " + slot.getKey() + " has an empty best tier", slot.getValue().get(0).isEmpty());
+					}
+				}
+			}
+			for (GearTable t : task.gearTablesOrEmpty())
+			{
+				if (t.getVariant() != null)
+				{
+					assertNotNull(task.getTask() + ": table for " + t.getVariant() + " whose variant cannot be chosen", task.monster(t.getVariant()));
+					assertTrue(task.getTask() + ": table for " + t.getVariant() + " whose variant cannot be chosen",
+						task.variants().stream().anyMatch(v -> v.getName().equalsIgnoreCase(t.getVariant())));
+				}
+			}
+		}
 	}
 
 	@Test
@@ -375,7 +433,7 @@ public class GearAdvisorTest
 		GearAdvisor advisor = advisor();
 		for (TaskInfo task : data.tasks())
 		{
-			List<GearTable> tables = GearAdvisor.tablesFor(task, data.generalGear());
+			List<GearTable> tables = GearAdvisor.tablesFor(task, null, data.generalGear());
 			assertFalse(task.getTask() + " has no gear tables at all", tables.isEmpty());
 			for (GearTable t : tables)
 			{

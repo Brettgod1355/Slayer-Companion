@@ -374,7 +374,7 @@
         "name": "Mor Ul Rek - Fight Caves",
         "displayName": "TzHaar Fight Cave, Mor Ul Rek (instanced minigame)",
         "rank": 1,
-        "multi": "unknown",
+        "multi": true,
         "cannon": false,
         "wilderness": false,
         "wildernessLevelMin": null,
@@ -385,7 +385,7 @@
         ],
         "notes": "Solo minigame: TzTok-Jad 'is encountered on Wave 63 (the final wave)' of the TzHaar Fight Cave, which must be fought solo without restocking between waves. Mor Ul Rek lies underneath the Karamja Volcano.",
         "evidence": {
-          "multi": "not stated for the Fight Cave itself (Multicombat area page lists 'Mor Ul Rek' and 'Fight Pits in Mor Ul Rek' but not the Fight Cave)",
+          "multi": "not stated for the Fight Cave itself (Multicombat area page lists 'Mor Ul Rek' and 'Fight Pits in Mor Ul Rek' but not the Fight Cave) | TzHaar Fight Cave/Strategies: \"If there are monsters in the wave that were able to get trapped behind a rock, it is best to stay behind that rock and defeat the monsters you can access from there, before moving onto the monsters who are trapped, thus minimising the number of monsters you have to worry about at one time.\"; TzHaar Fight Cave/Strategies: \"An easier option for limiting the lethality of the healers is to bring a small amount of [[black chinchompa]]s to use on the healers. … You must still target each healer as Jad is too large for the chinchompas' area of effect.\"; Yt-HurKot: \"It is recommended players keep distance and try to stack the healers so that only one can attack at a time. Fight Cave healers are unable to restore Jad's health if they are more than 5 tiles away from Jad\"; TzHaar Fight Cave: \"The '''TzHaar Fight Cave''', commonly referred to as the '''Fight Caves''', is a combat minigame in the outer area of [[Mor Ul Rek]]\"; Multicombat area: \"A '''multicombat area''' … is an area of the ''[[Old School RuneScape]]'' world where a [[player]] or [[monster]] can be attacked by more than one player or monster at a time. … *[[Mor Ul Rek]]\" [2026-09-24 research pass: quote, scope and contradiction checks]",
           "cannon": "Dwarf multicannon prohibited list: 'Mor Ul Rek, TzHaar Fight Cave and TzHaar Fight Pit - The TzHaar won't be happy if you set up a cannon here.'",
           "requirements": "TzTok-Jad page: 'Players can pay 100 slayer reward points to have Duradel, Nieve, or Chaeldar assign TzHaar as a possible Slayer task. When players receive TzHaar as a slayer assignment, they will be prompted with an option to be assigned 1-3 TzTok-Jad instead.'"
         }

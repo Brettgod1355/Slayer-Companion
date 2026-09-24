@@ -148,7 +148,7 @@
         "name": "Along the River Elid",
         "displayName": "River Elid – south bank south of Pollnivneach",
         "rank": 1,
-        "multi": "unknown",
+        "multi": false,
         "cannon": "unknown",
         "wilderness": false,
         "wildernessLevelMin": null,
@@ -159,7 +159,7 @@
         ],
         "notes": "Stand on the south side of the river directly south of the small island where crocodiles spawn so they come to you. A cactus safespot lies directly west of the Nardah magic carpet. Bring waterskins; Nardah has a fountain and altar.",
         "evidence": {
-          "multi": "not stated (Crocodile); River Elid is not in the 'List of multicombat areas' (Multicombat area)",
+          "multi": "not stated (Crocodile); River Elid is not in the 'List of multicombat areas' (Multicombat area) | Multicombat area: \"Multicombat areas are identified upon entering by two crossed swords … Anywhere else is a [[Single-way combat]] area\"; Multicombat area: \"==Multicombat area map== {{Map:DeadmanAnnihilationMulticombatZones|caption={{Legend|#f54636|caption=A map of the multicombat areas on Gielinor (not including ocean zones) indicated in red}}}}\"; Single-way combat: \"Most areas of the world are single-way combat. Those that are not are [[multi-combat area]]s\"; Coordinate check – Wiki multicombat map (Module:DeadmanAnnihilationMulticombatZones.json, embedded on 'Multicombat area'): 0/31 spawns inside any polygon; the only Kharidian Desert polygon is the Bandit Camp (x3137-3199, y2952-3006), 73 tiles from the nearest spawn; Coordinate check – Multi-Lines: 0/31 spawns inside any enabled non-Wilderness area; the only mapped area in the desert (x3050-3550, y2600-3130) is 'Desert Bandit Camp' [2026-09-24 research pass: quote, scope and contradiction checks]",
           "cannon": "not stated (Crocodile); not in Dwarf multicannon prohibited list",
           "requirements": "Slayer task list row for Crocodiles: 'Combat 50' (Slayer task)"
         }
@@ -168,7 +168,7 @@
         "name": "Near the Ruins of Unkah",
         "displayName": "Ruins of Unkah – wall safespot",
         "rank": 2,
-        "multi": "unknown",
+        "multi": false,
         "cannon": "unknown",
         "wilderness": false,
         "wildernessLevelMin": null,
@@ -179,7 +179,7 @@
         ],
         "notes": "'Players may also use the wall East of the Ruins of Unkah to safespot the crocodiles, negating the need for food and waterskins (as there are plenty of cacti to refill them from).'",
         "evidence": {
-          "multi": "not stated (Crocodile)",
+          "multi": "not stated (Crocodile) | Multicombat area: \"Anywhere else is a [[Single-way combat]] area\"; Multicombat area: \"{{Legend|#f54636|caption=A map of the multicombat areas on Gielinor (not including ocean zones) indicated in red}}\"; Single-way combat: \"Most areas of the world are single-way combat. Those that are not are [[multi-combat area]]s\"; Coordinate check – Wiki multicombat map (Module:DeadmanAnnihilationMulticombatZones.json, embedded on 'Multicombat area'): 0/4 spawns inside any polygon; nearest polygon is the Bandit Camp (x3137-3199, y2952-3006), 126 tiles away; Coordinate check – Multi-Lines: 0/4 spawns inside any enabled non-Wilderness area; the only mapped area in the desert is 'Desert Bandit Camp' [2026-09-24 research pass: quote, scope and contradiction checks]",
           "cannon": "not stated (Crocodile)",
           "requirements": "Slayer task list row for Crocodiles: 'Combat 50' (Slayer task)"
         }
@@ -188,7 +188,7 @@
         "name": "Near the Ruins of Ullek",
         "displayName": "Ruins of Ullek – grassy riverbank (12 spawns, no waterskins needed)",
         "rank": 3,
-        "multi": "unknown",
+        "multi": false,
         "cannon": "unknown",
         "wilderness": false,
         "wildernessLevelMin": null,
@@ -199,7 +199,7 @@
         ],
         "notes": "'The area south of the Ruins of Ullek, south-west of the teak trees has 12 crocodile spawns and does not require water for the player to survive, so long as the player stays in the grassy area near the water.'",
         "evidence": {
-          "multi": "not stated (Crocodile)",
+          "multi": "not stated (Crocodile) | Multicombat area: \"Anywhere else is a [[Single-way combat]] area\"; Multicombat area: \"{{Legend|#f54636|caption=A map of the multicombat areas on Gielinor (not including ocean zones) indicated in red}}\"; Single-way combat: \"Most areas of the world are single-way combat. Those that are not are [[multi-combat area]]s\"; Coordinate check – Wiki multicombat map (Module:DeadmanAnnihilationMulticombatZones.json, embedded on 'Multicombat area'): 0/12 spawns inside any polygon; nearest polygon is the Bandit Camp, 213 tiles away; Coordinate check – Multi-Lines: 0/12 spawns inside any enabled non-Wilderness area; the only mapped area in the desert is 'Desert Bandit Camp' [2026-09-24 research pass: quote, scope and contradiction checks]",
           "cannon": "not stated (Crocodile)",
           "requirements": "Slayer task list row for Crocodiles: 'Combat 50' (Slayer task)"
         }

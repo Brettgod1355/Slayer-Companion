@@ -103,7 +103,7 @@
         "name": "South-west of Mage Arena",
         "displayName": "South-west of the Mage Arena (deep Wilderness, 2 level-15 rogues)",
         "rank": 2,
-        "multi": "unknown",
+        "multi": false,
         "cannon": "unknown",
         "wilderness": true,
         "wildernessLevelMin": 50,
@@ -114,7 +114,7 @@
         ],
         "notes": "Only two level 15 rogue spawns (Rogue LocLine 'South-west of Mage Arena'). The Mage Arena bank is nearby ('The nearby Mage Arena bank is one of only two banks in the entire Wilderness', Mage Arena). Wilderness level taken from Krystilia's task-wide '50-54' range, not from a page about this exact spot.",
         "evidence": {
-          "multi": "not stated for this spot on any page read",
+          "multi": "not stated for this spot on any page read | Coordinate check – Wilderness Lines (Nightfirecat, WILDERNESS_MULTI_AREAS): 0/2 spawns (3076,3916; 3079,3909) inside any multi area; nearest is 'North of lava maze' (new Rectangle(3072, 3880, 64, 24), ends at y 3903) 6-13 tiles south; Rogue: \"|location = South-west of [[Mage Arena]] |levels = 15 … |plane = 0 |x:3076,y:3916|x:3079,y:3909\"; Rogue: \"|location = South-west of [[Mage Arena]]\"; Multicombat area: \"*Several places in the [[Wilderness]] including the areas at or around: … **The [[Lava Maze]] **[[Lava Dragon Isle]] **[[Rogues' Castle]] **The [[Scorpion Pit]]\" [2026-09-24 research pass: quote, scope and contradiction checks]",
           "cannon": "not stated",
           "requirements": "Krystilia task table gives rogues' Wilderness level as '50-54' for 'Rogues' Castle, east of the Mage Arena' (Krystilia); 'located at Level 52 Wilderness' refers to the arena interior (Mage Arena)."
         }
@@ -493,7 +493,7 @@
         "name": "Wilderness (West of the Air Obelisk)",
         "displayName": "West of the Air Obelisk (Wilderness 5-9) - Krystilia",
         "rank": 7,
-        "multi": "unknown",
+        "multi": false,
         "cannon": "unknown",
         "wilderness": true,
         "wildernessLevelMin": 5,
@@ -504,7 +504,7 @@
         ],
         "notes": "Low-level Wilderness scorpions listed by Krystilia; levels 5-9 per Krystilia's table.",
         "evidence": {
-          "multi": "not stated",
+          "multi": "not stated | Coordinate check – Wilderness Lines: 0/10 spawns inside any WILDERNESS_MULTI_AREAS rectangle; nearest multi tile ('Dark warrior's palace', y>=3600) is 19+ tiles from every spawn; Scorpion: \"|location = [[Wilderness]] (West of the [[Air Obelisk]])\"; Coordinate check – Wilderness Lines: 0/10 spawns inside any WILDERNESS_MULTI_AREAS rectangle (nearest: 'Dark warrior's palace' starts at y 3600, 19+ tiles north of the northernmost spawn at y 3581; 'Wilderness north of Grand Exchange' starts at x 3136); MultiLines: 0/10; Free-to-play PvP culture: \"Low level [[Wilderness]] area north of Edgeville on [[world]] 308 remains one of the most active places to find other willing players for 1-vs-1 duels in lower combat level brackets.\"; Treasure Trails/Guide/Hot Cold/Master: \"|North of the [[Grand Exchange]], level 5 [[Wilderness]]. Clue Helper Location: Wildy (Air Obelisk) … |Multi\" [2026-09-24 research pass: quote, scope and contradiction checks]",
           "cannon": "not stated",
           "requirements": "Krystilia task table: Scorpions ... 'West of the Air Obelisk, Scorpion Pit, Lava Maze (King Scorpions)' with Wilderness levels '5-9, 39-42, 53-54' (Krystilia)"
         }
