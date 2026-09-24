@@ -234,7 +234,7 @@
         "name": "White Wolf Mountain",
         "displayName": "White Wolf Mountain (mountain path)",
         "rank": 3,
-        "multi": "unknown",
+        "multi": true,
         "cannon": true,
         "wilderness": false,
         "wildernessLevelMin": null,
@@ -243,7 +243,7 @@
         "requirements": [],
         "notes": "Safespot south of the middle dungeon marker outside the triple-ladder enclosure; level 25 and 38 wolves are aggressive unless your combat level exceeds double theirs.",
         "evidence": {
-          "multi": "CONFLICT: Multicombat area page lists 'White Wolf Mountain' as multicombat, but Slayer task/Ice giants location comparison row 'White Wolf Mountain' -> Multicombat: No; neither speaks about the warriors' spot specifically",
+          "multi": "Multicombat area list entry '*[[White Wolf Mountain]]' (Multicombat area); Slayer task/Wolves row 'White Wolf Mountain': Multicombat {{Yes}}. The dedicated list outranks the Slayer task/Ice giants row 'White Wolf Mountain' -> Multicombat: No (same resolution as the Ice giants / White Wolf Mountain On top record).",
           "cannon": "Slayer task/Ice giants location comparison row 'White Wolf Mountain' -> Cannonable: Yes",
           "requirements": "not stated"
         }
@@ -587,8 +587,8 @@
         "name": "Mos Le'Harmless",
         "displayName": "Mos Le'Harmless – north of the settlement gate",
         "rank": 1,
-        "multi": "unknown",
-        "cannon": "unknown",
+        "multi": false,
+        "cannon": true,
         "wilderness": false,
         "wildernessLevelMin": null,
         "wildernessLevelMax": null,
@@ -598,8 +598,8 @@
         ],
         "notes": "Largest camp (about 10-12) directly north of the settlement exit; one spawn near the opening in the northern wall and a group at the north-east corner of the wall can be safespotted; Joe by the gate sells stews and wine. Reach the island via Bill Teach at Port Phasmatys or the charter ships.",
         "evidence": {
-          "multi": "not stated (Mos Le'Harmless surface is not on the Multicombat area list; the multi statement on the Mos Le'Harmless Cave page covers only the cave)",
-          "cannon": "not stated for the island surface (the 'Dwarf multicannon can be used' statement is on the Mos Le'Harmless Cave page, not the island)",
+          "multi": "Slayer task/Monkeys Location Comparison row 'Mos Le'Harmless' (the island surface): Multicombat {{No}} (the Mos Le'Harmless page is silent; the multi statement on the Mos Le'Harmless Cave page covers only the cave)",
+          "cannon": "Slayer task/Monkeys Location Comparison row 'Mos Le'Harmless' (the island surface): Cannonable {{Yes}}",
           "requirements": "Jungle horror page: 'Players must have completed Cabin Fever to gain access to the island.'"
         }
       }

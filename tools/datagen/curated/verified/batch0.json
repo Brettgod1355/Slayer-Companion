@@ -993,8 +993,8 @@
         "name": "East of Mort'ton",
         "displayName": "Barrows - burial mounds east of Mort'ton",
         "rank": 1,
-        "multi": "unknown",
-        "cannon": "unknown",
+        "multi": false,
+        "cannon": false,
         "wilderness": false,
         "wildernessLevelMin": null,
         "wildernessLevelMax": null,
@@ -1004,8 +1004,8 @@
         ],
         "notes": "Reach by Barrows Teleport (Arceuus, 83 Magic) or a Barrows teleport tablet / house portal, the Shades of Mort'ton minigame teleport, fairy ring BIP with the 50 Agility stepping stone, Kharyrll teleport, or Drakan's medallion to Ver Sinhaza then the boat to Burgh de Rott.",
         "evidence": {
-          "multi": "not stated (Barrows page does not state combat type; Barrows is not on the Multicombat area list).",
-          "cannon": "not stated (Dwarf multicannon prohibited list names 'Mort'ton and Shades of Mort'ton' but not the Barrows mounds or crypts).",
+          "multi": "Single-way combat, Barrows brothers exception: 'If the player is under attack by another monster in the crypt and a brother spawns [...] If multiple brothers are present, they will all be able to hit the player simultaneously even though it is a single-way combat zone.'; Slayer task/Skeletons Location Comparison row 'Barrows': Multicombat {{No}}",
+          "cannon": "Slayer task/Skeletons Location Comparison row 'Barrows': Cannonable {{No}} (Barrows is not on the Dwarf multicannon prohibited list, which names only 'Mort'ton and Shades of Mort'ton')",
           "requirements": "Barrows Requirements: \"Completion of Priest in Peril is required to enter Morytania.\" Boss table: \"Barrows brothers (not chests) | Morytania | Slayer 1 | Completion of Priest in Peril\". Boss page (Boss slayer): \"can be assigned bosses by Konar, Nieve/Steve, Duradel/Kuradal, or Krystilia\" with Barrows brothers in the 'Only the following bosses can be assigned' table and no Konar exclusion; Ahrim the Blighted drop table: \"Brimstone keys are only dropped if killed on a Slayer task given by Konar quo Maten.\""
         }
       }
