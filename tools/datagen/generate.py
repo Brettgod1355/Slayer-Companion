@@ -195,6 +195,15 @@ STRATEGY_VARIANT_PAGES: dict[str, list[str]] = {
     "Venenatis": ["Spindel/Strategies"],
 }
 
+# GEAR_PAGES: further wiki pages with {{Recommended equipment}} tables for a task,
+# found by the gear research pass (2026-09-24) and verified with the generator's own
+# parser.  Each entry: {"page": title, "variant": monster name or None, "tabs": [labels]}.
+# "variant" attributes the tables to one selectable variant (the plugin shows them when
+# that variant is chosen); None adds them as the task's own.  "tabs", when given, keeps
+# only tables whose label is listed (pages with tabs for several monsters).
+GEAR_PAGES: dict[str, list[dict]] = {
+}
+
 # Curated location names that the normalised-name passes of apply_curated()
 # cannot match (or match ambiguously), per task display name.  The key is the
 # curated record's displayName or name (displayName is looked up first so two
@@ -863,12 +872,14 @@ def collect_gear(task_page: Page | None, strategy_pages: list[tuple[Page, bool]]
             seen.add(key)
             if prefix:
                 t["label"] = f"{prefix}: {t['label']}" if t["label"] else prefix
+                t["variant"] = prefix
             t["source"] = page.title
             tables.append(t)
             added = True
         for e in s:
             if prefix:
                 e["label"] = f"{prefix}: {e['label']}" if e["label"] else prefix
+                e["variant"] = prefix
             e["source"] = page.title
             setups.append(e)
             added = True
@@ -876,6 +887,66 @@ def collect_gear(task_page: Page | None, strategy_pages: list[tuple[Page, bool]]
             sources.append(page.title)
     _disambiguate_labels(tables)
     return tables, setups, sources
+
+
+def collect_extra_gear(cache: WikiCache, display: str, tables: list[dict], setups: list[dict],
+                       sources: list[str]) -> None:
+    """Add the tables and setups of GEAR_PAGES[display] (see its comment), skipping tables
+    identical to ones already collected.  Variant tables get the variant as label prefix."""
+    seen = {_gear_key(t) for t in tables}
+    for entry in GEAR_PAGES.get(display, []):
+        page = cache.get(entry["page"])
+        if not page.ok:
+            continue
+        variant = entry.get("variant")
+        tabs = entry.get("tabs") or None
+        g, s = parse_gear_sections(page.wikitext)
+        added = False
+        for tb in g:
+            if tabs and tb.get("label") not in tabs:
+                continue
+            key = _gear_key(tb)
+            if key in seen:
+                continue
+            seen.add(key)
+            if variant:
+                tb["label"] = f"{variant}: {tb['label']}" if tb["label"] else variant
+                tb["variant"] = variant
+            tb["source"] = page.title
+            tables.append(tb)
+            added = True
+        for e in s:
+            if tabs and e.get("label") not in tabs:
+                continue
+            if variant:
+                e["label"] = f"{variant}: {e['label']}" if e["label"] else variant
+                e["variant"] = variant
+            e["source"] = page.title
+            setups.append(e)
+            added = True
+        if added and page.title not in sources:
+            sources.append(page.title)
+    _disambiguate_labels(tables)
+
+
+def selectable_variants(task: dict) -> set[str]:
+    """Names the plugin offers as variants (TaskInfo.variants()): monster records with a
+    name that some location lists, superior excluded; lower-cased."""
+    superior = (task.get("superior") or "").lower()
+    placed = {m.lower() for loc in task.get("locations", []) for m in (loc.get("monsters") or [])}
+    return {m["name"].lower() for m in task.get("monsters", [])
+            if m.get("name") and m["name"].lower() != superior and m["name"].lower() in placed}
+
+
+def finalise_variant_gear(tasks: list[dict]) -> None:
+    """A table or setup keeps its variant only when the plugin can select that variant;
+    otherwise it becomes part of the task's own gear (its label keeps the prefix)."""
+    for task in tasks:
+        names = selectable_variants(task)
+        for item in task.get("gearTables", []) + task.get("exampleSetups", []):
+            v = item.get("variant")
+            if v is not None and v.lower() not in names:
+                del item["variant"]
 
 
 def _disambiguate_labels(tables: list[dict]) -> None:
@@ -2345,10 +2416,10 @@ def read_task_list(path: Path) -> list[TaskRow]:
 def name_variants(monsters: list[dict]) -> None:
     """Give every monster record a name the plugin can use as a variant key.
 
-    Variant names must be unique within a task and match the names in locations' `monsters`
-    lists, which use the {{LocLine}} name or else the page title. A record without an infobox
-    name, or whose name another record of the task shares (e.g. "Dagannoth" on both
-    `Dagannoth` and `Dagannoth (Waterbirth Island)`), takes its page title instead.
+    Variant names must be unique within a task. A record without an infobox name, or whose
+    name another record of the task shares (e.g. "Dagannoth" on both `Dagannoth` and
+    `Dagannoth (Waterbirth Island)`), takes its page title instead; the old name is kept in
+    `infoboxName` so build_task() can rename that page's {{LocLine}} monsters to match.
     """
     counts: dict[str, int] = {}
     for m in monsters:
@@ -2359,6 +2430,8 @@ def name_variants(monsters: list[dict]) -> None:
         if not m.get("hasInfobox"):
             continue
         if not name or (counts[name.lower()] > 1 and name != m["page"]):
+            if name:
+                m["infoboxName"] = name
             m["name"] = m["page"]
 
 
@@ -2408,6 +2481,7 @@ def build_task(cache: WikiCache, row: TaskRow, report: dict) -> dict:
             task["requirements"] = infobox["requirements"]
             task["masters"] = infobox["masters"]
         gear_tables, setups, gear_sources = collect_gear(task_page, strategy_pages)
+        collect_extra_gear(cache, row.display, gear_tables, setups, gear_sources)
         report["gearSources"][row.display] = {"pages": gear_sources, "strategyPagesTried": stried}
         task["gearTables"] = gear_tables
         task["exampleSetups"] = setups
@@ -2433,8 +2507,12 @@ def build_task(cache: WikiCache, row: TaskRow, report: dict) -> dict:
         if info:
             entry.update(info)
         task["monsters"].append(entry)
-    task["locations"] = merge_locations(raw_locs)
     name_variants(task["monsters"])
+    renamed = {m["page"]: (m["infoboxName"], m["name"]) for m in task["monsters"] if m.get("infoboxName")}
+    for loc in raw_locs:
+        if loc.get("page") in renamed and loc.get("monster") == renamed[loc["page"]][0]:
+            loc["monster"] = renamed[loc["page"]][1]
+    task["locations"] = merge_locations(raw_locs)
 
     primary = None
     for m in task["monsters"]:
@@ -2860,6 +2938,7 @@ def main(argv: list[str] | None = None) -> int:
     apply_training_summary(tasks, cache, report)
     style_sources = derive_recommended_styles(tasks, cache)
     apply_access(tasks, report)
+    finalise_variant_gear(tasks)
     report["failedPages"] = dict(cache.failed)
     report["fetches"] = cache.fetches
     report["counts"] = {

@@ -31779,7 +31779,8 @@
           "Nature rune",
           "Fire rune"
         ],
-        "source": "Brutal black dragon/Strategies"
+        "source": "Brutal black dragon/Strategies",
+        "variant": "Brutal black dragon"
       },
       {
         "equipment": {},
@@ -31835,7 +31836,8 @@
           "Nature rune",
           "Lava rune"
         ],
-        "source": "Brutal black dragon/Strategies"
+        "source": "Brutal black dragon/Strategies",
+        "variant": "Brutal black dragon"
       }
     ],
     "gearTables": [
@@ -32188,7 +32190,8 @@
           ]
         },
         "source": "Brutal black dragon/Strategies",
-        "style": "Ranged"
+        "style": "Ranged",
+        "variant": "Brutal black dragon"
       },
       {
         "label": "Brutal black dragon: Magic",
@@ -32553,7 +32556,8 @@
           ]
         },
         "source": "Brutal black dragon/Strategies",
-        "style": "Magic"
+        "style": "Magic",
+        "variant": "Brutal black dragon"
       }
     ],
     "locations": [
@@ -38371,7 +38375,8 @@
         "label": "Artio: Ranged",
         "notes": "Webweaver is the strongest weapon against Artio. Ideally you want to maximize range damage, while keeping your magic attack bonus at 0 or higher to allow for guaranteed freezes on Artio. Gear like bloodbark boots, barrows gloves, imbued god capes, god books and ring of shadows are good to keep your magic bonus high enough, without sacrificing much range dps or incurring high risk. Defence bonus -- particularly magic defence -- is also beneficial for tanking PKers.\n\nEquipment:\n\nNote: Ensure items are protected. Do not take anything into the Wilderness you are not willing to lose. The PK skull prevention option is highly recommended for added security.\n\nInventory:\n\nIf the player is 93 or higher hitpoints, blighted anglerfish are superior, cheaper, and have higher utility than the alternative manta rays. Therefore they should be used for higher levelled players. The player can also switch out a protected item for Dinh's bulwark if looking for added survivability.\n\n- Looting bag\n- Stamina potion (for running)\n- Divine ranging potion\n- Anti-venom+ in case of venom from PKers\n- Some blighted super restores\n- Some blighted ancient ice sacks or blighted entangle sacks to freeze Artio.\n- A royal seed pod to teleport at level 30 Wilderness (if you choose not to wear amulet of glory)\n- Rest of inventory spaces to be filled with food (you may want to leave 2-3 slots empty for picking up items)",
         "runePouch": [],
-        "source": "Artio/Strategies"
+        "source": "Artio/Strategies",
+        "variant": "Artio"
       },
       {
         "equipment": {},
@@ -38438,7 +38443,8 @@
         "label": "Artio: Magic",
         "notes": "Artio is significantly vulnerable to Magic. However, compared to Ranged, a Magic setup typically results in lesser defences which leaves the player more vulnerable to PKers.\n\nIt can be difficult to survive PKers if using magic equipment. Therefore, swapping out a protected item for Dinh's bulwark can aid in survivability; the player can simply switch to Dinh's if under attack. Bringing black d'hide to switch to is also wise. Players using Tumeken's shadow can get away with wearing defensive ranged items like fortified masori or Armadyl, if they have a high magic accuracy bonus (+100, or higher).\n\nEquipment:\n\nNote: Ensure items are protected. Do not take anything into the Wilderness you are not willing to lose. The PK skull prevention option is highly recommended for added security.\n\nInventory:\n\nIf the player is 93 or higher hitpoints, blighted anglerfish are superior, cheaper, and have higher utility than the alternative manta rays. Therefore they should be used for higher levelled players. The player can also switch out a protected item for Dinh's bulwark if looking for added survivability.\n\n- Looting bag\n- Stamina potion (for running)\n- Forgotten brew\n- Anti-venom+ in case of venom from PKers\n- Some blighted super restores\n- Some blighted ancient ice sacks or blighted entangle sacks to freeze Artio\n- A royal seed pod to teleport at level 30 Wilderness (regardless whether you bring an amulet of glory or not)\n- Black d'hide body and chaps (if not already wearing Ranged body…",
         "runePouch": [],
-        "source": "Artio/Strategies"
+        "source": "Artio/Strategies",
+        "variant": "Artio"
       }
     ],
     "gearTables": [
@@ -39392,7 +39398,8 @@
           ]
         },
         "source": "Artio/Strategies",
-        "style": "Ranged"
+        "style": "Ranged",
+        "variant": "Artio"
       },
       {
         "label": "Artio: Magic",
@@ -39675,7 +39682,8 @@
           ]
         },
         "source": "Artio/Strategies",
-        "style": "Magic"
+        "style": "Magic",
+        "variant": "Artio"
       }
     ],
     "locations": [
@@ -60358,6 +60366,7 @@
         },
         "immuneCannon": "No",
         "immuneThrall": "No",
+        "infoboxName": "Dagannoth",
         "locLines": 8,
         "mapLocations": 0,
         "maxHit": "20",
@@ -90099,7 +90108,7 @@
         "mapID": 0,
         "members": "n",
         "monsters": [
-          "Goblin"
+          "Goblin (Goblin Village)"
         ],
         "multi": false,
         "name": "Goblin Village",
@@ -90207,7 +90216,7 @@
           ]
         ],
         "spawnsByMonster": {
-          "Goblin": [
+          "Goblin (Goblin Village)": [
             [
               2951,
               3481
@@ -92356,7 +92365,7 @@
         "mapID": 0,
         "members": "n",
         "monsters": [
-          "Goblin"
+          "Goblin (Goblin Village)"
         ],
         "multi": "unknown",
         "name": "Tower in Goblin Village",
@@ -92380,7 +92389,7 @@
           ]
         ],
         "spawnsByMonster": {
-          "Goblin": [
+          "Goblin (Goblin Village)": [
             [
               2955,
               3496
@@ -92983,6 +92992,7 @@
         "hitpoints": 12,
         "immuneCannon": "No",
         "immuneThrall": "No",
+        "infoboxName": "Goblin",
         "locLines": 2,
         "mapLocations": 0,
         "maxHit": "1",
@@ -101184,7 +101194,7 @@
         "mapID": 7,
         "members": "Yes",
         "monsters": [
-          "Cyclops"
+          "Cyclops (God Wars Dungeon)"
         ],
         "multi": true,
         "name": "God Wars Dungeon",
@@ -101257,7 +101267,7 @@
           ]
         ],
         "spawnsByMonster": {
-          "Cyclops": [
+          "Cyclops (God Wars Dungeon)": [
             [
               2832,
               5325
@@ -101706,6 +101716,7 @@
         "hitpoints": 110,
         "immuneCannon": "No",
         "immuneThrall": "No",
+        "infoboxName": "Cyclops",
         "locLines": 1,
         "mapLocations": 0,
         "maxHit": "12",
@@ -125773,7 +125784,8 @@
           "Water rune",
           "Earth rune"
         ],
-        "source": "Lizardman shaman/Strategies"
+        "source": "Lizardman shaman/Strategies",
+        "variant": "Lizardman shaman"
       },
       {
         "equipment": {},
@@ -125833,7 +125845,8 @@
           "Water rune",
           "Earth rune"
         ],
-        "source": "Lizardman shaman/Strategies"
+        "source": "Lizardman shaman/Strategies",
+        "variant": "Lizardman shaman"
       },
       {
         "equipment": {},
@@ -125905,7 +125918,8 @@
           "Water rune",
           "Earth rune"
         ],
-        "source": "Lizardman shaman/Strategies"
+        "source": "Lizardman shaman/Strategies",
+        "variant": "Lizardman shaman"
       },
       {
         "equipment": {},
@@ -125965,7 +125979,8 @@
           "Water rune",
           "Earth rune"
         ],
-        "source": "Lizardman shaman/Strategies"
+        "source": "Lizardman shaman/Strategies",
+        "variant": "Lizardman shaman"
       },
       {
         "equipment": {},
@@ -126025,7 +126040,8 @@
           "Water rune",
           "Earth rune"
         ],
-        "source": "Lizardman shaman/Strategies"
+        "source": "Lizardman shaman/Strategies",
+        "variant": "Lizardman shaman"
       }
     ],
     "gearTables": [
@@ -126278,7 +126294,8 @@
           ]
         },
         "source": "Lizardman shaman/Strategies",
-        "style": "Ranged"
+        "style": "Ranged",
+        "variant": "Lizardman shaman"
       },
       {
         "label": "Lizardman shaman: Melee",
@@ -126533,7 +126550,8 @@
           ]
         },
         "source": "Lizardman shaman/Strategies",
-        "style": "Melee"
+        "style": "Melee",
+        "variant": "Lizardman shaman"
       }
     ],
     "locations": [
@@ -131214,7 +131232,8 @@
         "label": "Mithril dragon: Melee",
         "notes": "Melee is a very effective method of killing mithril dragons with little upkeep cost, assuming that the player has high combat stats (at least 90+), and access to either the Osmumten's fang or a dragon hunter lance. If the player does not have either the fang or lance, ghrazi rapier and zamorakian hasta are still viable options, however Magic then usually becomes more effective, depending on the player's equipment. For the best damage output, it is strongly recommended to use a defender and use extended super antifire potions to negate the dragonfire damage, instead of an anti-dragon shield or dragonfire shield.\n\nThis specific setup focuses on an offensive approach, resulting in higher kills per hour, at the cost of requiring more attention and supplies than a tank-based method.\n\nWhen meleeing, players take damage from two combat styles and will have to tank both in order to survive. It is best to wear Torva or Bandos armour for their strength bonus and good defensive bonuses, and use Protect from Magic. Players can also wear Eclipse moon chestplate and Blood moon tassets for a minimal loss of max hit, in exchange for gaining much higher Magic defence. If the player does not have Torva or Bandos armour, wearing armour with high Magic defence (such as Karil's armour or black dragonhide armour) and using Protect from Melee will suffice. Piety should also be used in conjunction with the chosen protection prayer for better damage output and higher Defence.\n\nInventory:\n\n- A games…",
         "runePouch": [],
-        "source": "Mithril dragon/Strategies"
+        "source": "Mithril dragon/Strategies",
+        "variant": "Mithril dragon"
       },
       {
         "equipment": {},
@@ -131263,7 +131282,8 @@
         "label": "Mithril dragon: Magic",
         "notes": "Magic is one of the most effective ways to kill mithril dragons with high-level equipment. With best-in-slot gear available, Tumeken's shadow offers the highest damage output off-task and second-highest on-task. Using the harmonised Nightmare staff and casting Earth Surge also offers good DPS due to the dragon's 50% elemental weakness to earth spells. Lesser powered staves, such as the sanguinesti staff or trident of the swamp are solid options as well, particularly at high Magic levels due to the way their damage scales with level. At lower Magic levels, it may be better to use strong earth spells to take advantage of the elemental weakness. Compared to Magic, using Melee is much more cost-effective, and the dragon hunter lance offers comparable or higher damage output in most cases.\n\nPlayers should wear equipment that maximises Magic damage and accuracy bonuses. When maging, players should stand at a distance and use Protect from Missiles. Lastly, Augury, Mystic Vigour, or Mystic Might should be used for better damage output and higher Magic defence.\n\nIf the player is not wearing an ancient wyvern shield or an anti-dragon shield, players must use super antifire potions (or their extended versions) to negate the dragonfire damage.\n\nInventory:\n\n- A games necklace\n- A rune pouch\n- A teleport\n- Imbued heart or magic potion(s) (optional)\n- 1-2 antifires\n- 4-5 prayer potions\n- High-healing food for the rest",
         "runePouch": [],
-        "source": "Mithril dragon/Strategies"
+        "source": "Mithril dragon/Strategies",
+        "variant": "Mithril dragon"
       },
       {
         "equipment": {},
@@ -131311,7 +131331,8 @@
         "label": "Mithril dragon: Ranged",
         "notes": "Ranged is a similar option to Magic in that damage taken will be largely prevented by Protect from Missiles and high magic defence bonuses from equipment. Due to the high ranged defence of Mithril dragons, the high Ranged Attack bonus granted against dragons by the dragon hunter crossbow is all but necessary. It is still possible to kill mithril dragons with other crossbows, but Melee and Magic set-ups will outperform the Ranged style with ease. Ruby dragon bolts (e) and diamond dragon bolts (e) are very effective, but come at a high cost and can only be used if using a Dragon crossbow or better. If using enchanted ruby dragon bolts, players should switch to their enchanted diamond dragon bolts at 100-150 HP. Amethyst broad bolts can be used instead as a more cost-effective ammunition alternative, but can significantly increase the time taken for a kill.\n\nPlayers should use Protect from Missiles with Rigour or Eagle Eye. Since Ranged armour has high Magic defence, all magic damage should be tanked but Rigour will be a large boost as unlike Eagle Eye it provides some defensive bonuses of its own.\n\nInventory:\n\n- A games necklace\n- A teleport\n- 1-2 divine ranging potions\n- 1-2 antifires\n- 4-5 prayer potions\n- High-healing food for the rest",
         "runePouch": [],
-        "source": "Mithril dragon/Strategies"
+        "source": "Mithril dragon/Strategies",
+        "variant": "Mithril dragon"
       },
       {
         "equipment": {},
@@ -131362,7 +131383,8 @@
         "label": "Mithril dragon: Melee tank",
         "notes": "While offensive armour is generally better for a high amount of kills per hour, focussing on defensive gear will allow the player to kill mithril dragons with relatively low effort and for extended amounts of kills per trip, making it a viable choice for those intending to grind out many hundreds or thousands of mithril dragons in their hunt for a dragon full helm or draconic visage.\n\nThe Osmumten's fang or dragon hunter lance are still the best choice for the weapon, but instead of offensive armour, Justiciar armour (only when wearing the full set) in combination with an elysian spirit shield can be used to effectively block out 15% + 17.5% of all incoming damage. Combined with optional recoil effects from the ring of suffering and echo boots, as well as the healing effect of the amulet of blood fury will make for an incredibly tanky setup that will allow for trips that are only terminated when the player runs out of antifire potions or prayer potions.\n\nUsing protect from Magic and piety as well as stat boosting potions will greatly help. When no or few specialized tanking equipment is owned by the player, they should consider focussing on offensive stats as listed in the 'Melee' style equipment tab instead. Where viable tanking options are lacking, the player might prefer to instead use offensive gear in that slot. Especially when justiciar armour or an elysian spirit shield is already used, it is still very viable to use a tank setup with more offensive hand, feet and…",
         "runePouch": [],
-        "source": "Mithril dragon/Strategies"
+        "source": "Mithril dragon/Strategies",
+        "variant": "Mithril dragon"
       },
       {
         "equipment": {},
@@ -131429,7 +131451,8 @@
         "label": "Adamant dragon: Melee",
         "notes": "With base 90 Melee stats and a Ghrazi rapier, dragon hunter lance, or an Osmumten's fang using melee against adamant dragons is a reliable option. With worse weapons, magic or ranged may be more effective. Adamant dragons have accurate and strong attacks, so Bandos, Justiciar or Barrows equipment is recommended along with Protect from Magic and Piety in tandem to reduce damage taken. Also, Vengeance can be used for dealing with their Blood Forfeit Ranged attacks. A dwarf multicannon may also be used here with significant accuracy.\n\nInventory:\n\n- Digsite pendant or a mounted one in POH with house tabs\n- Special attack weapon choice\n- 1 divine super combat potion, super combat potion or super set\n- 1 extended antifire, or extended super antifire if using a shield without dragonfire protection\n- 3-4 prayer potions\n- 1-2 antidote++, antidote+, superantipoison or antipoison if not using a serpentine helm\n- Rune pouch with runes to cast Vengeance or High Level Alchemy (set warning value to 162,000) (optional)\n- One-click teleport (optional)\n- Food (sharks / manta rays / anglerfish / karambwan)\n- Bracelet of slaughter (optional, if on task)\n- Dwarf multicannon\n- steel cannonball (optional, about 400 used per hour)",
         "runePouch": [],
-        "source": "Adamant dragon/Strategies"
+        "source": "Adamant dragon/Strategies",
+        "variant": "Adamant dragon"
       },
       {
         "equipment": {},
@@ -131496,7 +131519,8 @@
         "label": "Adamant dragon: Ranged",
         "notes": "With level 90 Ranged and a dragon hunter crossbow (DHCB), adamant dragons can easily be killed due to the crossbow's passive effect, as well as circumventing their melee attack. A Twisted Bow provides comparable damage to a DHCB if not slightly more depending on luck. Armadyl or Karil's equipment is recommended along with Protect from Missiles and Rigour or Eagle Eye in tandem. Also, Vengeance could be used for dealing with their Blood Forfeit Ranged attacks. A dwarf multicannon may be used here with significant accuracy.\n\nInventory:\n\n- Digsite pendant or a mounted one in POH with house tabs\n- 1 divine ranging potion or ranging potion\n- 1 extended antifire, or extended super antifire if using a shield without dragonfire protection\n- 3-4 prayer potions\n- 1-2 antidote++, antidote+, superantipoison or antipoison if not using a serpentine helm\n- Rune pouch with runes to cast Vengeance or High Level Alchemy (set warning value to 162,000) (optional)\n- One-click teleport (optional)\n- Food (sharks / manta rays / anglerfish / karambwan)\n- Bracelet of slaughter (optional, if on task)\n- dwarf multicannon (optional)\n- steel cannonball (optional, about 400 cannonballs used per hour)",
         "runePouch": [],
-        "source": "Adamant dragon/Strategies"
+        "source": "Adamant dragon/Strategies",
+        "variant": "Adamant dragon"
       },
       {
         "equipment": {},
@@ -131567,7 +131591,8 @@
           "Earth rune",
           "Death rune"
         ],
-        "source": "Adamant dragon/Strategies"
+        "source": "Adamant dragon/Strategies",
+        "variant": "Adamant dragon"
       },
       {
         "equipment": {},
@@ -131634,7 +131659,8 @@
         "label": "Adamant dragon: Magic",
         "notes": "While not as effective as using Tumeken's shadow, due to adamant dragons' elemental weakness and relatively low Magic defence, Earth spells can be a viable alternative, especially when used with a dragon hunter wand and/or while on a slayer task.\n\nInventory:\n\n- Digsite pendant or a mounted one in POH with house tabs\n- Saturated heart / imbued heart\n- 1 extended antifire, or extended super antifire if using a shield without dragonfire protection\n- 3-4 prayer potions\n- 1-2 antidote++, antidote+, superantipoison or antipoison if not using a serpentine helm\n- Rune pouch with runes to cast the spell of choice\n- One-click teleport (optional)\n- Food (sharks / manta rays / anglerfish / karambwan)\n- Bracelet of slaughter (optional, if on task)",
         "runePouch": [],
-        "source": "Adamant dragon/Strategies"
+        "source": "Adamant dragon/Strategies",
+        "variant": "Adamant dragon"
       },
       {
         "equipment": {},
@@ -131687,7 +131713,8 @@
         "label": "Rune dragon: Melee",
         "notes": "With base 90 Melee stats and Osmumten's fang or dragon hunter lance, using melee against rune dragons is a reliable option. With worse weapons, magic or ranged may be more effective. Rune dragons have accurate and strong attacks, so Bandos, Justiciar, or Barrows equipment is recommended along with Protect from Magic and Piety in tandem to reduce damage taken. Vengeance can be used against their healing Ranged attacks. As soon as a number appears in a purple hitsplat on the dragon, cast Vengeance.\n\nAdditionally, you may bring Thralls along with a Book of the Dead. Thralls deal 1-3 damage every couple of seconds so this adds up significantly.\n\nA Dwarf multicannon may also be used against rune dragons with a significant level of accuracy.\n\n- Inventory\n\n- Digsite pendant or a mounted one in POH with house tabs\n- Special attack weapon choice\n- 1 divine super combat potion, super combat potion or super set\n- 1 extended antifire, or extended super antifire if using a shield without dragonfire protection\n- 3-4 prayer potions\n- Rune pouch with runes to cast Vengeance or High Level Alchemy (set warning value to 162,000) (optional)\n- One-click teleport (optional)\n- Food (sharks / manta rays / anglerfish / karambwan)\n- Bracelet of slaughter (optional, if on task)\n- Dwarf multicannon (optional)\n- Steel cannonball (about 400 per hour)",
         "runePouch": [],
-        "source": "Rune dragon/Strategies"
+        "source": "Rune dragon/Strategies",
+        "variant": "Rune dragon"
       },
       {
         "equipment": {},
@@ -131740,7 +131767,8 @@
         "label": "Rune dragon: Ranged",
         "notes": "With level 90 Ranged and a dragon hunter crossbow, rune dragons can easily be killed due to the crossbow's passive effect, as well as circumventing their melee attack. Protect from Missiles is recommended with Rigour or Eagle Eye in tandem. Also, Vengeance could be used for dealing with their healing Ranged attacks, which hits through Protect from Missiles. As soon as a number appears in a purple hitsplat on the dragon, prepare Vengeance. Additionally, you may bring Thralls along with a Book of the Dead. Thralls deal 1-3 damage every couple of seconds so this adds up significantly. A dwarf multicannon may also be used with good accuracy due to ranged gear's high bonuses.\n\n- Inventory\n\n- Digsite pendant or a mounted one in POH with house tabs\n- 1 divine ranging potion or ranging potion\n- 1 extended antifire, or extended super antifire if using a shield without dragonfire protection\n- 3-4 prayer potions\n- Rune pouch with runes to cast Vengeance or High Level Alchemy (set warning value to 162,000) (optional)\n- One-click teleport (optional)\n- Food (sharks / manta rays / anglerfish / karambwan)\n- Bracelet of slaughter (optional, if on task)\n- Dwarf multicannon (optional)\n- Steel cannonball (optional, about 400 per hour)",
         "runePouch": [],
-        "source": "Rune dragon/Strategies"
+        "source": "Rune dragon/Strategies",
+        "variant": "Rune dragon"
       },
       {
         "equipment": {},
@@ -131788,7 +131816,8 @@
         "label": "Rune dragon: Magic",
         "notes": "Rune dragons have relatively low Magic defence. The most effective weapon for killing rune dragons across all styles is the Tumeken's shadow, surpassing even dragonbane weaponry.\n\nFor those without a Shadow, Earth spells can be a viable alternative, especially when used with a dragon hunter wand and/or while on a slayer task. Protect from Missiles is recommended due to the dragons' accurate ranged attacks.\n\n- Inventory\n\n- Digsite pendant or a mounted one in POH with house tabs\n- Saturated heart\n- 1 extended antifire, or extended super antifire if using a shield without dragonfire protection\n- 3-4 prayer potions\n- Rune pouch with runes to cast the spell of choice\n- One-click teleport (optional)\n- Food (sharks / manta rays / anglerfish / karambwan)\n- Bracelet of slaughter (optional, if on task)",
         "runePouch": [],
-        "source": "Rune dragon/Strategies"
+        "source": "Rune dragon/Strategies",
+        "variant": "Rune dragon"
       }
     ],
     "gearTables": [
@@ -133083,7 +133112,8 @@
           ]
         },
         "source": "Mithril dragon/Strategies",
-        "style": "Melee"
+        "style": "Melee",
+        "variant": "Mithril dragon"
       },
       {
         "label": "Mithril dragon: Magic",
@@ -133410,7 +133440,8 @@
           ]
         },
         "source": "Mithril dragon/Strategies",
-        "style": "Magic"
+        "style": "Magic",
+        "variant": "Mithril dragon"
       },
       {
         "label": "Mithril dragon: Ranged",
@@ -133705,7 +133736,8 @@
           ]
         },
         "source": "Mithril dragon/Strategies",
-        "style": "Ranged"
+        "style": "Ranged",
+        "variant": "Mithril dragon"
       },
       {
         "label": "Mithril dragon: Melee tank",
@@ -133984,7 +134016,8 @@
           ]
         },
         "source": "Mithril dragon/Strategies",
-        "style": "Melee tank"
+        "style": "Melee tank",
+        "variant": "Mithril dragon"
       },
       {
         "label": "Adamant dragon: Melee",
@@ -134298,7 +134331,8 @@
           ]
         },
         "source": "Adamant dragon/Strategies",
-        "style": "Melee"
+        "style": "Melee",
+        "variant": "Adamant dragon"
       },
       {
         "label": "Adamant dragon: Ranged",
@@ -134598,7 +134632,8 @@
           ]
         },
         "source": "Adamant dragon/Strategies",
-        "style": "Ranged"
+        "style": "Ranged",
+        "variant": "Adamant dragon"
       },
       {
         "label": "Adamant dragon: Magic - Tumeken's Shadow",
@@ -134839,7 +134874,8 @@
           ]
         },
         "source": "Adamant dragon/Strategies",
-        "style": "Magic - Tumeken's Shadow"
+        "style": "Magic - Tumeken's Shadow",
+        "variant": "Adamant dragon"
       },
       {
         "label": "Adamant dragon: Magic",
@@ -135156,7 +135192,8 @@
           ]
         },
         "source": "Adamant dragon/Strategies",
-        "style": "Magic"
+        "style": "Magic",
+        "variant": "Adamant dragon"
       },
       {
         "label": "Rune dragon: Melee",
@@ -135480,7 +135517,8 @@
           ]
         },
         "source": "Rune dragon/Strategies",
-        "style": "Melee"
+        "style": "Melee",
+        "variant": "Rune dragon"
       },
       {
         "label": "Rune dragon: Ranged",
@@ -135788,7 +135826,8 @@
           ]
         },
         "source": "Rune dragon/Strategies",
-        "style": "Ranged"
+        "style": "Ranged",
+        "variant": "Rune dragon"
       },
       {
         "label": "Rune dragon: Magic",
@@ -136090,7 +136129,8 @@
           ]
         },
         "source": "Rune dragon/Strategies",
-        "style": "Magic"
+        "style": "Magic",
+        "variant": "Rune dragon"
       }
     ],
     "locations": [
@@ -138455,6 +138495,7 @@
         "hitpoints": 59,
         "immuneCannon": null,
         "immuneThrall": null,
+        "infoboxName": "Mogre",
         "locLines": 3,
         "mapLocations": 0,
         "maxHit": "6",
@@ -143774,6 +143815,7 @@
         "hitpoints": 120,
         "immuneCannon": "No",
         "immuneThrall": "No",
+        "infoboxName": "Moss Giant",
         "locLines": 1,
         "mapLocations": 0,
         "maxHit": "14",
@@ -181504,7 +181546,7 @@
         "mapID": 32,
         "members": "yes",
         "monsters": [
-          "Skeleton"
+          "Skeleton (Catacombs of Kourend)"
         ],
         "multi": true,
         "name": "Catacombs of Kourend",
@@ -181544,7 +181586,7 @@
           ]
         ],
         "spawnsByMonster": {
-          "Skeleton": [
+          "Skeleton (Catacombs of Kourend)": [
             [
               1639,
               10048
@@ -181600,7 +181642,7 @@
         "mapID": 18,
         "members": "No",
         "monsters": [
-          "Skeleton"
+          "Skeleton (Stronghold of Security)"
         ],
         "multi": false,
         "name": "Stronghold of Security, Sepulchre of Death (level 4)",
@@ -181720,7 +181762,7 @@
           ]
         ],
         "spawnsByMonster": {
-          "Skeleton": [
+          "Skeleton (Stronghold of Security)": [
             [
               1957,
               4899
@@ -185325,6 +185367,7 @@
         "hitpoints": 77,
         "immuneCannon": "No",
         "immuneThrall": "No",
+        "infoboxName": "Skeleton",
         "locLines": 1,
         "mapLocations": 0,
         "maxHit": "10",
@@ -185359,6 +185402,7 @@
         "hitpoints": 29,
         "immuneCannon": "No",
         "immuneThrall": "No",
+        "infoboxName": "Skeleton",
         "locLines": 1,
         "mapLocations": 0,
         "maxHit": "3",
@@ -185409,6 +185453,7 @@
         },
         "immuneCannon": "No",
         "immuneThrall": "No",
+        "infoboxName": "Skeleton",
         "locLines": 1,
         "mapLocations": 0,
         "maxHit": "10?",
@@ -224582,7 +224627,7 @@
         "mapID": null,
         "members": "No",
         "monsters": [
-          "Zombie"
+          "Zombie (Wilderness)"
         ],
         "multi": true,
         "name": "Graveyard of Shadows (Wilderness)",
@@ -224682,7 +224727,7 @@
           ]
         ],
         "spawnsByMonster": {
-          "Zombie": [
+          "Zombie (Wilderness)": [
             [
               3152,
               3674
@@ -224796,7 +224841,7 @@
         "mapID": null,
         "members": "No",
         "monsters": [
-          "Zombie"
+          "Zombie (Wilderness)"
         ],
         "multi": false,
         "name": "Ruins (east) (Wilderness)",
@@ -224872,7 +224917,7 @@
           ]
         ],
         "spawnsByMonster": {
-          "Zombie": [
+          "Zombie (Wilderness)": [
             [
               3145,
               3742
@@ -224964,7 +225009,7 @@
         "mapID": 18,
         "members": "No",
         "monsters": [
-          "Zombie"
+          "Zombie (Stronghold of Security)"
         ],
         "multi": false,
         "name": "Stronghold of Security Catacomb of Famine (level 2)",
@@ -225188,7 +225233,7 @@
           ]
         ],
         "spawnsByMonster": {
-          "Zombie": [
+          "Zombie (Stronghold of Security)": [
             [
               1892,
               5092
@@ -227332,6 +227377,7 @@
         "hitpoints": 24,
         "immuneCannon": "No",
         "immuneThrall": "No",
+        "infoboxName": "Zombie",
         "locLines": 2,
         "mapLocations": 0,
         "maxHit": "2",
@@ -227398,6 +227444,7 @@
         "hitpoints": 30,
         "immuneCannon": "No",
         "immuneThrall": "No",
+        "infoboxName": "Zombie",
         "locLines": 3,
         "mapLocations": 0,
         "maxHit": "4",

@@ -61,14 +61,17 @@ public class GearAdvisor
 		this.config = config;
 	}
 
-	/** The task's own gear tables, or the general Slayer tables when it has none; empty without a task. */
-	public static List<GearTable> tablesFor(@Nullable TaskInfo task, GeneralGearFile general)
+	/**
+	 * The chosen variant's gear tables, else the task's own, else the general Slayer tables; empty
+	 * without a task. See {@link TaskInfo#gearTablesFor}.
+	 */
+	public static List<GearTable> tablesFor(@Nullable TaskInfo task, @Nullable String variant, GeneralGearFile general)
 	{
 		if (task == null)
 		{
 			return Collections.emptyList();
 		}
-		List<GearTable> own = task.gearTablesOrEmpty();
+		List<GearTable> own = task.gearTablesFor(variant);
 		if (own.isEmpty() && general.getGearTables() != null)
 		{
 			return general.getGearTables();

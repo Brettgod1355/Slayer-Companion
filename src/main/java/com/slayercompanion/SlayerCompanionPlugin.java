@@ -378,8 +378,8 @@ public class SlayerCompanionPlugin extends Plugin
 				itemNames.put(id, itemName(id));
 			}
 		}
-		List<com.slayercompanion.data.GearTable> gearTables = GearAdvisor.tablesFor(info, data.generalGear());
-		boolean gearIsGeneral = info != null && info.gearTablesOrEmpty().isEmpty() && data.generalGear().getGearTables() != null;
+		List<com.slayercompanion.data.GearTable> gearTables = GearAdvisor.tablesFor(info, variant, data.generalGear());
+		boolean gearIsGeneral = info != null && info.gearTablesFor(variant).isEmpty() && data.generalGear().getGearTables() != null;
 		List<List<SlotAdvice>> gearAdvice = new java.util.ArrayList<>();
 		for (com.slayercompanion.data.GearTable table : gearTables)
 		{

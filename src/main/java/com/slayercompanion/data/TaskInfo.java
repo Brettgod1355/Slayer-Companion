@@ -99,6 +99,28 @@ public class TaskInfo
 		return gearTables == null ? Collections.emptyList() : gearTables;
 	}
 
+	/**
+	 * Gear for the chosen variant: the variant's own tables when the wiki has them (e.g. Demonic
+	 * gorilla on a Black demons task), else the task's own tables (those without a variant).
+	 */
+	public List<GearTable> gearTablesFor(@Nullable String variant)
+	{
+		List<GearTable> own = new java.util.ArrayList<>();
+		List<GearTable> forVariant = new java.util.ArrayList<>();
+		for (GearTable t : gearTablesOrEmpty())
+		{
+			if (t.getVariant() == null)
+			{
+				own.add(t);
+			}
+			else if (variant != null && variant.equalsIgnoreCase(t.getVariant()))
+			{
+				forVariant.add(t);
+			}
+		}
+		return forVariant.isEmpty() ? own : forVariant;
+	}
+
 	public List<String> alternativesOrEmpty()
 	{
 		return alternatives == null ? Collections.emptyList() : alternatives;
