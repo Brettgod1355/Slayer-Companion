@@ -1,6 +1,8 @@
-# Slayer Companion datagen – coverage report (consolidation pass, 2026-09-23)
+# Slayer Companion datagen – coverage report (strategy-page + coordinates pass, 2026-09-24)
 
-Generated from `out/tasks.json` / `out/report.json` after running
+Updated after the strategy-page / coordinates pass (see the section of that name below); the
+multi/cannon, master-range and access sections are unchanged from the consolidation pass of
+2026-09-23 except for the record totals. Originally generated from `out/tasks.json` / `out/report.json` after running
 `python3 generate.py --out out` with the curated overrides in `curated/verified/*.json`
 (cache warm; 1 wiki page fetched by the generator: `Shellbane gryphon`; 2 pages fetched into
 `scratchpad/wiki/` for the cross-check: `Entrana`, `Falador`). Counts were recomputed from
@@ -14,15 +16,15 @@ so the split below is stricter.
 | --- | --- |
 | Tasks total | 148 |
 | With a wiki task page | 148 (76 `Slayer task/…` pages with `{{Infobox Slayer}}`, 72 monster pages) |
-| With `{{Recommended equipment}}` gear tables | 13 (+4 with example setups only = 17 with any equipment) |
+| With `{{Recommended equipment}}` gear tables | 60 (was 13; 188 tables; +4 with example setups only = 64 with any equipment) |
 | With locations (any record, incl. coordinate-less curated) | 148 |
-| With generated locations that have coordinates | 144 |
+| With generated locations that have coordinates | 148 (was 144) |
 | With curated locations | 148 |
 | With master assignment ranges (`{{Infobox Slayer}}`) | 76 |
 | With Slayer XP per kill | 147 |
-| Location records total (all tasks) | 913 |
-| Location records with coordinates | 827 |
-| Curated location records | 502 (417 with coordinates, 85 without) |
+| Location records total (all tasks) | 1025 (was 913) |
+| Location records with coordinates | 1019 (was 827) |
+| Curated location records | 502 (497 with coordinates, 5 without; was 417 / 85) |
 | Curated records with multi known (`true`/`false`/`partial`) | 416 of 502 ({'False': 250, 'True': 153, 'unknown': 86, 'partial': 13}) |
 | Curated records with cannon known | 435 of 502 ({'True': 285, 'False': 149, 'unknown': 67, 'partial': 1}) |
 | Tasks whose curated locations all have multi known | 95 |
@@ -31,22 +33,105 @@ so the split below is stricter.
 Generated (non-curated) location records carry `multi`/`cannon` = `"unknown"` by design; the
 plugin should only trust the curated values.
 
-Curated location matching after this pass: `unmatchedCuratedLocations` 85 (was 100),
-`ambiguousCuratedLocations` 0 (was 10), `curatedProblems` 0.
+Curated location matching after this pass: `unmatchedCuratedLocations` 5 (was 85; 100 before the
+consolidation pass), `ambiguousCuratedLocations` 0, `curatedProblems` 0.
+
+## Strategy-page + coordinates pass (2026-09-24)
+
+`generate.py` gained `resolve_strategy_pages()` / `collect_gear()` (see README → page mapping)
+with two explicit tables, `STRATEGY_PAGE_OVERRIDES` and `STRATEGY_VARIANT_PAGES`, an
+`{{Infobox Location}}` / `{{Infobox Activity}}` map fallback for entrance pages, 64 new
+pages in `EXTRA_MONSTER_PAGES`, 12 new `CURATED_LOCATION_ALIASES` and 2 changed ones (Trolls). `GearTable` and
+`ExampleSetup` (Java) gained a `@Nullable String source` (wiki page of the table). 444 wiki pages
+were fetched into the cache for this pass (137 existing pages, 307 "missing" answers, mostly
+`<page>/Strategies` probes); a rebuild from the cache fetches nothing.
+
+Gear: 13 → 60 tasks with tables. Strategy pages used (54): Abyssal Sire, Adamant dragon,
+Alchemical Hydra, Aquanite, Araxxor, Artio, Aviansie, Barrows, Basilisk Knight, Brutal black
+dragon, Callisto, Calvar'ion, Cerberus, Chaos Elemental, Chaos Fanatic, Commander Zilyana, Crazy
+archaeologist, Dagannoth Kings, Deranged archaeologist, Duke Sucellus, Frost dragon, General
+Graardor, Giant Mole, Green dragon, Inferno, K'ril Tsutsaroth, Kalphite Queen, King Black Dragon,
+Kraken, Kree'arra, Lava dragon, Lizardman shaman, Maggot King, Metal dragons, Mithril dragon,
+Phantom Muspah, Revenants, Rune dragon, Sarachnis, Scorpia, Shellbane gryphon, Skeletal Wyvern,
+Smoke devil, Spindel, The Leviathan, The Whisperer, Thermonuclear smoke devil, TzHaar Fight Cave,
+Vardorvis, Venator, Venenatis, Vet'ion, Vorkath, Zulrah (each `…/Strategies`). Every table on
+them parsed with the existing `parse_gear_sections()`; none had to be skipped. Parser notes:
+tiers 6-7 (`neck6`, `body6`, `head7`, … on about a dozen tables) are dropped as before; one stray `weapon =`
+row without a tier number (Thermonuclear smoke devil, not rendered by the wiki either) is ignored;
+free-text cells ("None if using a two-handed weapon", "See magic section") become `slotNotes`.
+
+Deliberately **not** pulled in: strategy pages of alternatives that are separate encounters
+(Abyssal Sire for Abyssal demons, Cerberus for Hellhounds, Vorkath for Blue dragons / Zombies,
+Kree'arra for Aviansies, Demonic gorilla / Skotizo for Black demons, Araxxor / Sarachnis /
+Venenatis for Spiders, K'ril Tsutsaroth / Tormented Demon for Greater demons, Revenants for
+Ghosts, Scorpia for Scorpions, Brutus for Cows, Amoxliatl for Lesser Nagua, KBD for Black
+dragons, Shellbane gryphon for Gryphons); those tasks keep the plugin's general-gear fallback.
+Add a page to `STRATEGY_VARIANT_PAGES` to opt in.
+
+Coordinates: 85 → 5 curated records without coordinates. Pages added to `EXTRA_MONSTER_PAGES`
+(each has an `{{Infobox Monster}}` whose Slayer `cat` names the task): Deviant spectre, Twisted
+Banshee, Giant bat, Grizzly bear, Black bear, Bear cub, Brutal black/blue/red dragon, Elder Chaos
+druid, Moonlight Cockatrice, Dagannoth (Waterbirth Island), Wild dog, Guard dog, Chaos dwarf, Elf
+Warrior, Elf Archer, Guard (Prifddinas), Cave goblin miner, Cave goblin guard, Cave goblin
+(monster), Goblin (Goblin Village), Cyclops (God Wars Dungeon), Warped Jelly, Chilled jelly,
+Earthen Nagua, Lizardman shaman, Sulphur lizard, Grimy lizard, Desert Lizard, Mogre (sea), Monkey
+(monster), Monkey Zombie, Monkey Guard, Moss Giant (Iorwerth Dungeon), Greater Nechryael, Ogress
+Warrior, Ogress Shaman, Zombie pirate (Pirates, Zombies), Crypt rat, Giant rat, Small scarab, King
+Scorpion, Skeleton (Ape Atoll / Catacombs of Kourend / Stronghold of Security), Giant spider,
+Mountain troll, Ice troll, Ice troll runt/male/female/grunt, Feral Vampyre, Venator, Undead Druid,
+Zombie (Wilderness), Zombie (Stronghold of Security), Undead cow, Undead chicken; plus the
+entrance pages TzHaar Fight Cave, Inferno and Zul-Andra (infobox `{{Map}}`; Barrows was already
+listed). Mourner (Elves) and Undead one (Zombies) were checked and left out: their `cat` is not
+the task's.
+
+New and changed aliases (`CURATED_LOCATION_ALIASES`):
+
+| Task | Curated name | Generated id | Why |
+| --- | --- | --- | --- |
+| Barrows Brothers | East of Mort'ton | `barrows-p0` | Barrows infobox `{{Map}}` (3567,3291) |
+| TzTok-Jad | Mor Ul Rek - Fight Caves | `tzhaar-fight-cave-p0` | TzHaar Fight Cave infobox `{{Map}}`, the cave entrance (2439,5172) |
+| Zulrah | Zulrah's Shrine (east of Zul-Andra) | `zul-andra-p0` | Zul-Andra infobox `{{Map}}`; the shrine is reached by boat from there |
+| Bears | Fremennik Province - woods outside of Rellekka | `woods-outside-of-rellekka-p0` | Bear Cub LocLine 'Woods outside of Rellekka' |
+| Bears | West of the Graveyard of Shadows | `north-west-of-the-ferox-enclave-p0` | the task page's map pins for this row are exactly the 10 Grizzly bear spawns of that LocLine |
+| Dagannoth | Waterbirth Island Dungeon | `waterbirth-island-dungeon-entrance-hall-p0` | four LocLines match; entrance hall (54 spawns) chosen – approximation |
+| Elves | Lletya | `lletya-p0` | ground floor (was ambiguous with the 1st-floor archer) |
+| Monkeys | Temple of Marimbo | `temple-of-marimbo-p0` | ground floor, 9 of 12 Monkey Guards (was ambiguous) |
+| Mogres | Ardent Ocean | `mudskipper-sound-south-of-musa-point-p0` | curated record covers three straits; the first named – approximation |
+| Rats | Barrows crypt | `barrows-tunnels-p0` | Crypt rat LocLine 'Barrows (tunnels)' |
+| Skeletons | Stronghold of Security | `stronghold-of-security-sepulchre-of-death-level-4-p0` | curated displayName says Sepulchre of Death |
+| Trolls | Northern Jatizso and Neitiznot | `fremennik-isles-p0` | ice troll runt/male/female/grunt LocLines |
+| Trolls | Troll Stronghold (Surface) | `troll-stronghold-surface-p0` | Mountain troll LocLine (was forced to no match) |
+| Trolls | Troll Stronghold (Underground) | `troll-stronghold-underground-p0` | Mountain troll LocLine (was a troll-boss spawn used as a proxy) |
+
+TzKal-Zuk's "Inferno (Mor Ul Rek)" matches the new `inferno-p0` record by name.
+
+Side effect: `xpPerKill` is the Slayer XP of the first monster page with one, and
+`EXTRA_MONSTER_PAGES` come before the task-list alternatives, so it changed for tasks whose
+primary guess is an overview page: Bears 1300 (Callisto) → 27 (Grizzly bear), Dogs 27 (Jackal) →
+62 (Wild dog), Lesser Nagua 105 (Sulphur Nagua) → 165 (Earthen Nagua), Monkeys 210 (Tortured
+gorilla) → 6 (Monkey), Scabarites 1 → 40 (Small scarab), Trolls 126 (Dad) → 90 (Mountain troll),
+Vampyres 90 (Vyrewatch) → 40 (Feral Vampyre). The plugin's default variant (first placed
+monster) moves the same way.
 
 ## Tasks lacking each
 
 ### No task page
 none.
 
-### No gear tables (135)
-Aberrant spectres, The Abyssal Sire, The Alchemical Hydra, Ankou, Araxxor, Araxytes, Aviansies, Bandits, Banshees, Barrows Brothers, Basilisks, Bats, Bears, Birds, Black demons, Black dragons, Black Knights, Bloodveld, Blue dragons, Brine rats, Callisto, Catablepon, Cave bugs, Cave crawlers, Cave horrors, Cave kraken, Cave slimes, Cerberus, Chaos druids, The Chaos Elemental, The Chaos Fanatic, Cockatrice, Cows, Crabs, Crawling hands, Crazy Archaeologists, Crocodiles, Custodian Stalkers, Dagannoth, Dagannoth Kings, Dark warriors, Deranged Archaeologist, Dogs, Duke Sucellus, Dwarves, Earth warriors, Elves, Ents, Fever spiders, Fire giants, Fleshcrawlers, Frost dragons, General Graardor, Ghosts, Ghouls, The Giant Mole, Goblins, Greater demons, Green dragons, Gryphons, Harpie bug swarms, Hellhounds, Hill giants, Hobgoblins, Hydras, Icefiends, Ice giants, Ice warriors, Infernal mages, TzTok-Jad, Jungle horrors, Kalphites, The Kalphite Queen, Killerwatts, The King Black Dragon, The Cave Kraken Boss, Kree'arra, K'ril Tsutsaroth, Kurask, Lava Dragons, Lesser demons, Lesser Nagua, Lizardmen, Lizards, The Maggot King, Magic axes, Mammoths, Metal dragons, Minotaurs, Mogres, Molanisks, Monkeys, Moss giants, Ogres, Otherworldly beings, The Phantom Muspah, Pirates, Pyrefiends, Rats, Red dragons, Revenants, Rogues, Sarachnis, Scabarites, Scorpia, Scorpions, Sea snakes, Shades, Shadow warriors, The Shellbane Gryphon, Skeletal wyverns, Smoke devils, Sourhogs, Spiders, Spiritual creatures, Terror dogs, The Leviathan, The Whisperer, The Thermonuclear Smoke Devil, Turoth, Tzhaar, Vampyres, Vardorvis, Venators, Venenatis, Vet'ion, Vorkath, Wall beasts, Warped Creatures, Werewolves, Wolves, Commander Zilyana, Zombies, TzKal-Zuk, Zulrah
+### No gear tables (88)
+Aberrant spectres, Ankou, Araxytes, Bandits, Banshees, Bats, Bears, Birds, Black demons, Black Knights, Bloodveld, Blue dragons, Brine rats, Catablepon, Cave bugs, Cave crawlers, Cave horrors, Cave kraken, Cave slimes, Chaos druids, Cockatrice, Cows, Crabs, Crawling hands, Crocodiles, Custodian Stalkers, Dagannoth, Dark warriors, Dogs, Dwarves, Earth warriors, Elves, Ents, Fever spiders, Fire giants, Fleshcrawlers, Ghosts, Ghouls, Goblins, Greater demons, Gryphons, Harpie bug swarms, Hellhounds, Hill giants, Hobgoblins, Hydras, Icefiends, Ice giants, Ice warriors, Infernal mages, Jungle horrors, Kalphites, Killerwatts, Kurask, Lesser demons, Lesser Nagua, Lizards, Magic axes, Mammoths, Minotaurs, Mogres, Molanisks, Monkeys, Moss giants, Ogres, Otherworldly beings, Pirates, Pyrefiends, Rats, Red dragons, Rogues, Scabarites, Scorpions, Sea snakes, Shades, Shadow warriors, Sourhogs, Spiders, Spiritual creatures, Terror dogs, Turoth, Tzhaar, Vampyres, Wall beasts, Warped Creatures, Werewolves, Wolves, Zombies
 
-Of these, 131 also have no example setup (the 4 with setups only: Araxytes, Cave horrors, Gryphons, Warped Creatures).
-The 13 with tables: Abyssal demons, Aquanites, Dark beasts, Drakes, Dust devils, Fossil island wyverns, Jellies, Nechryael, Skeletons, Suqahs, Trolls, Waterfiends, Wyrms.
+Of these, 84 also have no example setup (the 4 with setups only: Araxytes, Cave horrors, Gryphons, Warped Creatures).
+None of them has a `<task page>/Strategies` or `<primary monster>/Strategies` page on the wiki
+(see `report.json → gearSources` for the titles tried). Checked by hand and also missing: Black
+demon, Hellhound, Kurask, Bloodveld, Hydra, Ankou, Gargoyle, Cave horror, Deviant spectre, Wyrm,
+Ice troll, Warped Creature, Custodian stalker, Araxyte, Revenant, Frost/Sulphur Nagua, Brutal
+blue/red dragon, Spiritual creatures, God Wars Dungeon (all `…/Strategies`).
+The 60 with tables: Abyssal demons, The Abyssal Sire, The Alchemical Hydra, Aquanites, Araxxor, Aviansies, Barrows Brothers, Basilisks, Black dragons, Callisto, Cerberus, The Chaos Elemental, The Chaos Fanatic, Crazy Archaeologists, Dagannoth Kings, Dark beasts, Deranged Archaeologist, Drakes, Duke Sucellus, Dust devils, Fossil island wyverns, Frost dragons, General Graardor, The Giant Mole, Green dragons, TzTok-Jad, Jellies, The Kalphite Queen, The King Black Dragon, The Cave Kraken Boss, Kree'arra, K'ril Tsutsaroth, Lava Dragons, Lizardmen, The Maggot King, Metal dragons, Nechryael, The Phantom Muspah, Revenants, Sarachnis, Scorpia, The Shellbane Gryphon, Skeletal wyverns, Skeletons, Smoke devils, Suqahs, The Leviathan, The Whisperer, The Thermonuclear Smoke Devil, Trolls, Vardorvis, Venators, Venenatis, Vet'ion, Vorkath, Waterfiends, Wyrms, Commander Zilyana, TzKal-Zuk, Zulrah.
 
-### No generated locations at all (4) – curated-only, no coordinates
-Barrows Brothers, TzTok-Jad, TzKal-Zuk, Zulrah (instanced encounters; the wiki has no `{{LocLine}}` for them).
+### No generated locations at all
+none (was 4: Barrows Brothers, TzTok-Jad, TzKal-Zuk and Zulrah now get their entrance from the
+activity/location page's infobox `{{Map}}`).
 
 ### No master ranges (72)
 Monster-page tasks without `{{Infobox Slayer}}` (the plugin reads live ranges from the game cache):
@@ -158,96 +243,12 @@ No weighting values on these pages (`weight` is `null` for all five).
 
 ## Remaining unknowns
 
-### Curated locations without coordinates (85)
-No generated `{{LocLine}}` exists for them because the variant monster's page is not among the
-task's monster pages (or the encounter is instanced). Adding the named page to
-`EXTRA_MONSTER_PAGES` and re-running with `--only` would supply most of them (about 45 new
-fetches; not done in this pass).
-- Aberrant spectres: Catacombs of Kourend (would come from: Deviant spectre)
-- Banshees: Catacombs of Kourend (would come from: Twisted Banshee)
-- Barrows Brothers: East of Mort'ton (would come from: instanced / no LocLine on the wiki)
-- Bats: Coal Trucks (would come from: Giant bat)
-- Bats: Taverley Dungeon (would come from: Giant bat)
-- Bears: Fremennik Province - woods outside of Rellekka (would come from: Grizzly bear)
-- Bears: Kebos Lowlands - south of Mount Quidamortem (would come from: Grizzly bear)
-- Bears: North-east of Ardougne (would come from: Grizzly bear / Black bear)
-- Bears: Outside of the Mind Altar (would come from: Grizzly bear)
-- Bears: Varrock south-east mine (would come from: Black bear)
-- Bears: West of the Graveyard of Shadows (would come from: Grizzly bear)
-- Black dragons: Catacombs of Kourend (would come from: Brutal black dragon)
-- Blue dragons: Catacombs of Kourend (north-west) (would come from: Brutal blue dragon)
-- Chaos druids: Chaos Temple (Wilderness) (would come from: Elder Chaos druid)
-- Cockatrice: Neypotzli - Earthbound Cavern (would come from: unknown variant page)
-- Dagannoth: Waterbirth Island Dungeon (would come from: Dagannoth (Waterbirth Island))
-- Dogs: Brimhaven Dungeon (would come from: Wild dog)
-- Dogs: Handelmort Mansion (would come from: Guard dog)
-- Dogs: Hosidius (would come from: Wild dog / Guard dog)
-- Dwarves: Deep Wilderness Dungeon (would come from: Chaos dwarf)
-- Dwarves: Taverley Dungeon (would come from: Chaos dwarf)
-- Elves: Lletya (would come from: Elf Warrior / Elf Archer)
-- Elves: Mourner Headquarters (would come from: Mourner)
-- Elves: Prifddinas (would come from: Elf Warrior / Elf Archer / Guard (Prifddinas))
-- Goblins: Dorgeshuun Mines (would come from: Cave goblin miner / guard)
-- Goblins: Goblin Village (would come from: not on the Goblin page LocLines (separate NPC page))
-- Goblins: Lumbridge Swamp Caves (would come from: Cave goblin (monster))
-- Goblins: Stronghold of Security (would come from: separate NPC page)
-- Hill giants: God Wars Dungeon (would come from: Cyclops page only lists Warriors' Guild)
-- Jellies: Catacombs of Kourend (would come from: Warped Jelly)
-- Jellies: Grimstone Dungeon (would come from: Chilled jelly)
-- Jellies: Ruins of Tapoyauik (would come from: Chilled jelly)
-- Lesser Nagua: Tonali Cavern - Sun Chamber (would come from: Earthen Nagua)
-- Lizardmen: Lizardman Caves, underneath Lizardman Settlement (Slayer task only) (would come from: Lizardman shaman)
-- Lizardmen: Lizardman Temple, beneath Molch (would come from: Lizardman shaman)
-- Lizards: Karuulm Slayer Dungeon (middle level) (would come from: Sulphur lizard)
-- Lizards: Neypotzli - Streambound Cavern (would come from: Grimy lizard)
-- Lizards: West of Ruins of Ullek (would come from: Desert Lizard)
-- Mogres: Ardent Ocean (would come from: Mogre (sea) - no page fetched)
-- Monkeys: Ape Atoll Dungeon (would come from: Monkey Zombie)
-- Monkeys: Ardougne Zoo (would come from: Monkey (overview page has no LocLine))
-- Monkeys: Karamja, near the volcano (would come from: Monkey (Karamja) variant)
-- Monkeys: Mos Le'Harmless (would come from: Monkey variant)
-- Monkeys: North-east of Shilo Village (would come from: Monkey variant)
-- Monkeys: Temple of Marimbo (would come from: Monkey Guard)
-- Moss giants: Iorwerth Dungeon (would come from: not on the Moss giant LocLines (separate variant page))
-- Nechryael: Catacombs of Kourend (would come from: Greater Nechryael)
-- Nechryael: Iorwerth Dungeon (would come from: Greater Nechryael)
-- Nechryael: Wilderness Slayer Cave (would come from: Greater Nechryael)
-- Ogres: Corsair Cove Dungeon (would come from: Ogress Warrior / Ogress Shaman (Ogress overview page has no LocLine))
-- Pirates: Chaos Temple (Wilderness) (would come from: Zombie pirate)
-- Rats: Barrows crypt (would come from: Crypt rat)
-- Rats: Lumbridge Swamp (would come from: Giant rat)
-- Red dragons: Catacombs of Kourend (would come from: Brutal red dragon)
-- Scabarites: Uzer Mastaba - lower level (would come from: Small scarab)
-- Scorpions: Lava Maze (would come from: King Scorpion)
-- Skeletons: Ape Atoll Dungeon (would come from: Monkey skeleton)
-- Skeletons: Catacombs of Kourend (would come from: separate Skeleton variant page)
-- Skeletons: Skeletal Tomb (would come from: Calvar'ion page has no LocLine)
-- Skeletons: Stronghold of Security (would come from: separate Skeleton variant page)
-- Spiders: East side of Lumbridge (would come from: Giant spider)
-- Spiders: Web Chasm (would come from: Spindel)
-- Trolls: Ice Path (would come from: Ice troll)
-- Trolls: North of the Troll arena (would come from: Mountain troll)
-- Trolls: Northern Jatizso and Neitiznot (would come from: Ice troll)
-- Trolls: South of Mount Quidamortem (would come from: Mountain troll)
-- Trolls: Troll Stronghold (Surface) (would come from: Mountain troll)
-- Trolls: Trollweiss Dungeon (would come from: Ice troll)
-- Trolls: Tunnel entrance to Keldagrim (would come from: Mountain troll)
-- Trolls: Wyrmscraig Cavern (would come from: Troll variant)
-- TzKal-Zuk: Inferno (Mor Ul Rek) (would come from: instanced / no LocLine)
-- TzTok-Jad: Mor Ul Rek - Fight Caves (would come from: instanced / no LocLine)
-- Vampyres: Apsul Hunting Ground (would come from: Venator)
-- Vampyres: God Wars Dungeon (would come from: Vampyre (GWD variant page))
-- Vampyres: Haunted Woods (would come from: Vampyre Juvinate / Feral Vampyre)
-- Vampyres: West of Burgh De Rott (would come from: Vampyre Juvinate)
-- Vampyres: Wilderness God Wars Dungeon (would come from: Vampyre (GWD variant page))
-- Werewolves: Canifis (would come from: Werewolf page lists Canifis only as a bullet ('but in human form'), not as a LocLine)
-- Zombies: Alice's farm west of the Ectofuntus (would come from: unknown)
-- Zombies: Chaos Temple (Wilderness) (would come from: Zombie pirate)
-- Zombies: Forthos Dungeon (would come from: Undead Druid)
-- Zombies: Graveyard of Shadows (Wilderness) (would come from: separate Zombie variant page)
-- Zombies: Ruins (east) (Wilderness) (would come from: separate Zombie variant page)
-- Zombies: Stronghold of Security (Catacomb of Famine) (would come from: Zombie (Stronghold of Security))
-- Zulrah: Zulrah's Shrine (east of Zul-Andra) (would come from: instanced / no LocLine)
+### Curated locations without coordinates (5)
+- Elves: Mourner Headquarters (the Mourner page's Slayer `cat` is None and its LocLines are Arandar / Mourner Tunnels; not added)
+- Goblins: Stronghold of Security (Goblin (Vault of War) LocLines are bare room names such as "Western room"; not aliased because the plugin would show that name)
+- Skeletons: Skeletal Tomb (Calvar'ion page has neither LocLine nor `{{Map}}`)
+- Spiders: Web Chasm (Spindel page has neither LocLine nor `{{Map}}`)
+- Werewolves: Canifis (human-form werewolves are separate NPC pages; the Werewolf page lists Canifis only in prose)
 
 ### Curated locations with multi = "unknown" (86)
 - Barrows Brothers: East of Mort'ton
@@ -346,7 +347,7 @@ fetches; not done in this pass).
 
 ### Other
 - 72 tasks have no master ranges (no `{{Infobox Slayer}}`); the plugin is expected to read live ranges from the game cache.
-- 135 tasks have no wiki gear tables; gear for them exists only as curated `requiredItems`/`usefulItems`.
+- 88 tasks have no wiki gear tables; gear for them exists only as curated `requiredItems`/`usefulItems` (the plugin shows its general Slayer gear instead).
 - Ents: no Slayer XP per kill on the wiki infobox.
 - Aliases that are approximations rather than exact spots: Crabs/Ruins of Tapoyauik (middle floor only), Spiders/Forthos Dungeon (Sarachnis tomb, not the Spider's Den), Trolls/Troll Stronghold (Underground) (a troll-boss spawn inside the stronghold), Fire giants/Brimhaven Dungeon (1st floor only), Rats/Stronghold of Security (Vault of War only).
 - `xcheck_area_rules.py` is a name-substring heuristic; areas whose curated name does not contain the wiki area title were not cross-checked.
@@ -359,7 +360,7 @@ passes 90 checks.
 
 | Measure | Count |
 | --- | --- |
-| Location records (all tasks) | 913 |
+| Location records (all tasks) | 1025 (913 before the coordinates pass; the new records carry no requirements) |
 | Requirement strings on them | 537 (377 distinct) |
 | Access groups total | 551 |
 | Groups with at least one checkable rule (`any` non-empty) | 264 |

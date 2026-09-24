@@ -114,9 +114,85 @@ EXTRA_MONSTER_PAGES: dict[str, list[str]] = {
     "Barrows Brothers": ["Barrows"],
     # variant pages that carry the LocLines the curated data refers to
     "Callisto": ["Artio"],                 # Hunter's End
-    "Black dragons": ["King Black Dragon"],  # King Black Dragon Lair (Wilderness)
-    "Rats": ["Brine rat"],                 # Brine Rat Cavern
+    "Black dragons": ["King Black Dragon",   # King Black Dragon Lair (Wilderness)
+                      "Brutal black dragon"],  # Catacombs of Kourend
+    "Rats": ["Brine rat",                  # Brine Rat Cavern
+             "Crypt rat",                  # Barrows crypt (alias)
+             "Giant rat"],                 # Lumbridge Swamp
     "Gryphons": ["Shellbane gryphon"],     # Shellbane Gryphon Cave ({{Map}} on the boss page)
+    # Every page below has an {{Infobox Monster}} whose Slayer `cat` names the
+    # task (checked when added); each supplies the LocLine of a curated location.
+    "Aberrant spectres": ["Deviant spectre"],        # Catacombs of Kourend
+    "Banshees": ["Twisted Banshee"],                 # Catacombs of Kourend
+    "Bats": ["Giant bat"],                           # Coal Trucks, Taverley Dungeon
+    "Bears": ["Grizzly bear", "Black bear",          # Ardougne, Mind Altar, Varrock, Wilderness, ...
+              "Bear cub"],                             # Woods outside of Rellekka (alias)
+    "Blue dragons": ["Brutal blue dragon"],          # Catacombs of Kourend (north-west)
+    "Chaos druids": ["Elder Chaos druid"],           # Chaos Temple (Wilderness)
+    "Cockatrice": ["Moonlight Cockatrice"],          # Neypotzli - Earthbound Cavern
+    "Dagannoth": ["Dagannoth (Waterbirth Island)"],  # Waterbirth Island Dungeon (alias)
+    "Dogs": ["Wild dog", "Guard dog"],               # Brimhaven Dungeon, Handelmort Mansion, Hosidius
+    "Dwarves": ["Chaos dwarf"],                      # Taverley Dungeon, Deep Wilderness Dungeon
+    "Elves": ["Elf Warrior", "Elf Archer", "Guard (Prifddinas)"],  # Lletya, Prifddinas
+    "Goblins": ["Cave goblin miner", "Cave goblin guard",          # Dorgeshuun Mines
+                "Cave goblin (monster)",                           # Lumbridge Swamp Caves
+                "Goblin (Goblin Village)"],                        # Goblin Village
+    "Hill giants": ["Cyclops (God Wars Dungeon)"],   # God Wars Dungeon
+    "Jellies": ["Warped Jelly", "Chilled jelly"],    # Catacombs, Grimstone Dungeon, Ruins of Tapoyauik
+    "Lesser Nagua": ["Earthen Nagua"],               # Tonali Cavern - Sun Chamber
+    "Lizardmen": ["Lizardman shaman"],               # Lizardman Caves, Lizardman Temple
+    "Lizards": ["Sulphur lizard", "Grimy lizard", "Desert Lizard"],  # Karuulm, Neypotzli, Ullek
+    "Mogres": ["Mogre (sea)"],                       # Ardent Ocean (alias)
+    "Monkeys": ["Monkey (monster)", "Monkey Zombie", "Monkey Guard"],  # Karamja, zoo, Ape Atoll, Marimbo
+    "Moss giants": ["Moss Giant (Iorwerth Dungeon)"],  # Iorwerth Dungeon
+    "Nechryael": ["Greater Nechryael"],              # Catacombs, Iorwerth Dungeon, Wilderness Slayer Cave
+    "Ogres": ["Ogress Warrior", "Ogress Shaman"],    # Corsair Cove Dungeon
+    "Pirates": ["Zombie pirate"],                    # Chaos Temple (Wilderness)
+    "Red dragons": ["Brutal red dragon"],            # Catacombs of Kourend
+    "Scabarites": ["Small scarab"],                  # Uzer Mastaba - lower level
+    "Scorpions": ["King Scorpion"],                  # Lava Maze
+    "Skeletons": ["Skeleton (Ape Atoll)", "Skeleton (Catacombs of Kourend)",
+                  "Skeleton (Stronghold of Security)"],  # Ape Atoll Dungeon, Catacombs, SoS (alias)
+    "Spiders": ["Giant spider"],                     # East side of Lumbridge
+    "Trolls": ["Mountain troll", "Ice troll",        # Trollheim, Keldagrim tunnel, Ice Path, ...
+               "Ice troll runt", "Ice troll male", "Ice troll female", "Ice troll grunt"],  # Fremennik Isles
+    "Vampyres": ["Feral Vampyre", "Venator"],        # Haunted Woods, Burgh de Rott, GWD; Apsul
+    "Zombies": ["Undead Druid", "Zombie pirate",     # Forthos Dungeon, Chaos Temple
+                "Zombie (Wilderness)",               # Graveyard of Shadows, Ruins (east)
+                "Zombie (Stronghold of Security)",   # Catacomb of Famine
+                "Undead cow", "Undead chicken"],     # Alice's farm
+    # instanced encounters: the entrance from the activity/location page's
+    # infobox {{Map}} (parse_map_locations fallback)
+    "TzTok-Jad": ["TzHaar Fight Cave"],
+    "TzKal-Zuk": ["Inferno"],
+    "Zulrah": ["Zul-Andra"],
+}
+
+# Recommended-equipment tables mostly live on "<Monster>/Strategies" subpages.
+# resolve_strategy_pages() tries "<task page>/Strategies" and
+# "<primary monster page>/Strategies" automatically; these tables add pages
+# that do not follow that pattern.
+#
+# STRATEGY_PAGE_OVERRIDES: the task's own strategy page under another name;
+# tab labels are kept as they are.
+STRATEGY_PAGE_OVERRIDES: dict[str, list[str]] = {
+    "Barrows Brothers": ["Barrows/Strategies"],
+    "TzTok-Jad": ["TzHaar Fight Cave/Strategies"],
+    "TzKal-Zuk": ["Inferno/Strategies"],
+    "Metal dragons": ["Metal dragons/Strategies"],  # bronze, iron and steel dragons
+}
+# STRATEGY_VARIANT_PAGES: strategy pages of a variant that counts for the task
+# but is not the task's own monster; each label gets the page subject as
+# prefix ("Artio: Melee").
+STRATEGY_VARIANT_PAGES: dict[str, list[str]] = {
+    "Metal dragons": ["Mithril dragon/Strategies", "Adamant dragon/Strategies",
+                      "Rune dragon/Strategies"],
+    "Black dragons": ["Brutal black dragon/Strategies"],
+    "Basilisks": ["Basilisk Knight/Strategies"],
+    "Lizardmen": ["Lizardman shaman/Strategies"],
+    "Callisto": ["Artio/Strategies"],
+    "Vet'ion": ["Calvar'ion/Strategies"],
+    "Venenatis": ["Spindel/Strategies"],
 }
 
 # Curated location names that the normalised-name passes of apply_curated()
@@ -142,13 +218,26 @@ CURATED_LOCATION_ALIASES: dict[str, dict[str, str | None]] = {
     "Hobgoblins": {"Tree Gnome Village dungeon": "tree-gnome-village-dungeon-roaming-p0"},
     "The Maggot King": {"Vampyrium": "maggot-king-p0"},
     "Moss giants": {"Tonali Cavern": "tonali-cavern-southern-chamber-p0"},
-    "Rats": {"Stronghold of Security": "stronghold-of-security-vault-of-war-p0"},
+    "Rats": {"Stronghold of Security": "stronghold-of-security-vault-of-war-p0",
+             "Barrows crypt": "barrows-tunnels-p0"},  # Crypt rat LocLine "Barrows (tunnels)"
     "Rogues": {"Rogues' Castle": "rogues-castle-p0"},
     "Scorpions": {"Stonecutter Outpost temple": "south-west-of-stonecutter-outpost-p0"},
     "The Shellbane Gryphon": {"Shellbane Gryphon Cave": "shellbane-gryphon-p0"},
     "Spiders": {"Forthos Dungeon": "forthos-dungeon-burial-tomb-p0"},
-    "Trolls": {"Troll Stronghold (Surface)": None,  # outside; only troll-boss spawns inside are generated
-               "Troll Stronghold (Underground)": "troll-stronghold-bottom-level-p0"},
+    "Trolls": {"Troll Stronghold (Surface)": "troll-stronghold-surface-p0",        # Mountain troll LocLines
+               "Troll Stronghold (Underground)": "troll-stronghold-underground-p0",
+               "Northern Jatizso and Neitiznot": "fremennik-isles-p0"},          # ice troll variants
+    "Barrows Brothers": {"East of Mort'ton": "barrows-p0"},       # Barrows infobox {{Map}}
+    "Bears": {"Fremennik Province - woods outside of Rellekka": "woods-outside-of-rellekka-p0",  # Bear Cub
+              # the task page's map pins for this row are the 10 Grizzly bear spawns of this LocLine
+              "West of the Graveyard of Shadows": "north-west-of-the-ferox-enclave-p0"},
+    "Elves": {"Lletya": "lletya-p0"},                          # ground floor (1st floor has 1 archer)
+    "Monkeys": {"Temple of Marimbo": "temple-of-marimbo-p0"},  # ground floor (9 of 12 Monkey Guards)
+    "TzTok-Jad": {"Mor Ul Rek - Fight Caves": "tzhaar-fight-cave-p0"},  # cave entrance in Mor Ul Rek
+    "Zulrah": {"Zulrah's Shrine (east of Zul-Andra)": "zul-andra-p0"},  # boat to the shrine
+    "Dagannoth": {"Waterbirth Island Dungeon": "waterbirth-island-dungeon-entrance-hall-p0"},
+    "Mogres": {"Ardent Ocean": "mudskipper-sound-south-of-musa-point-p0"},  # first of the three straits
+    "Skeletons": {"Stronghold of Security": "stronghold-of-security-sepulchre-of-death-level-4-p0"},
     "Vampyres": {"Meiyerditch": "meiyerditch-p0"},
     "Zombies": {"Varrock Sewers": "varrock-sewers-hallway-p0"},
 }
@@ -670,10 +759,13 @@ def resolve_task_page(cache: WikiCache, display: str) -> tuple[Page | None, list
 
 
 def resolve_monster_pages(cache: WikiCache, display: str, alternatives: list[str],
-                          task_page: Page | None) -> tuple[list[Page], list[str]]:
+                          task_page: Page | None) -> tuple[list[Page], list[str], list[Page]]:
     """Monster pages: override list or first existing singular guess, plus every
-    alternative NPC name, plus the task page itself if it is a monster page."""
+    alternative NPC name, plus the task page itself if it is a monster page.
+    The third value is the task's own (primary) pages: the override list or
+    the singular guess, without alternatives or EXTRA_MONSTER_PAGES."""
     pages: list[Page] = []
+    primary: list[Page] = []
     tried: list[str] = []
     seen_titles: set[str] = set()
 
@@ -685,13 +777,17 @@ def resolve_monster_pages(cache: WikiCache, display: str, alternatives: list[str
     if display in MONSTER_PAGE_OVERRIDES:
         for t in MONSTER_PAGE_OVERRIDES[display]:
             tried.append(t)
-            add(cache.get(t))
+            p = cache.get(t)
+            add(p)
+            if p.ok:
+                primary.append(p)
     else:
         for s in singular_variants(display):
             tried.append(s)
             p = cache.get(s)
             if p.ok and "{{infobox monster" in p.wikitext.lower():
                 add(p)
+                primary.append(p)
                 break
     for extra in EXTRA_MONSTER_PAGES.get(display, []) + alternatives:
         extra = extra.strip()
@@ -700,7 +796,122 @@ def resolve_monster_pages(cache: WikiCache, display: str, alternatives: list[str
             add(cache.get(extra))
     if task_page and task_page.ok and "{{infobox monster" in task_page.wikitext.lower():
         add(task_page)
-    return pages, tried
+    return pages, tried, primary
+
+
+def strategy_subject(title: str) -> str:
+    """'Mithril dragon/Strategies' -> 'Mithril dragon'."""
+    return re.sub(r"/Strategies$", "", title)
+
+
+def resolve_strategy_pages(cache: WikiCache, display: str, task_page: Page | None,
+                           primary: list[Page]) -> tuple[list[tuple[Page, bool]], list[str]]:
+    """Strategy pages whose gear sections are added to the task's own.
+
+    Tried in order: '<task page>/Strategies', '<primary monster page>/Strategies'
+    for each primary page, STRATEGY_PAGE_OVERRIDES[display], then
+    STRATEGY_VARIANT_PAGES[display].  Returns [(page, is_variant)] deduplicated
+    by final title (a redirect back to the task page itself is dropped) and the
+    list of titles tried.  Alternatives and EXTRA_MONSTER_PAGES are not tried
+    automatically: they are mostly other encounters (bosses) that also count
+    for the task; list them in STRATEGY_VARIANT_PAGES to opt in."""
+    candidates: list[tuple[str, bool]] = []
+    if task_page:
+        candidates.append((f"{task_page.title}/Strategies", False))
+    for p in primary:
+        candidates.append((f"{p.title}/Strategies", False))
+    candidates += [(t, False) for t in STRATEGY_PAGE_OVERRIDES.get(display, [])]
+    candidates += [(t, True) for t in STRATEGY_VARIANT_PAGES.get(display, [])]
+    seen = {task_page.title} if task_page else set()
+    tried: list[str] = []
+    out: list[tuple[Page, bool]] = []
+    for title, variant in candidates:
+        if title in tried:
+            continue
+        tried.append(title)
+        page = cache.get(title)
+        if page.ok and page.title not in seen:
+            seen.add(page.title)
+            out.append((page, variant))
+    return out, tried
+
+
+def _gear_key(table: dict) -> str:
+    return json.dumps([table.get("style"), table.get("slots")], sort_keys=True)
+
+
+def collect_gear(task_page: Page | None, strategy_pages: list[tuple[Page, bool]]) -> tuple[list[dict], list[dict], list[str]]:
+    """gearTables / exampleSetups from the task page followed by its strategy
+    pages.  Every table and setup records its wiki page in `source`.  Tables of
+    STRATEGY_VARIANT_PAGES get the page subject as label prefix ("Artio: Melee")
+    so they cannot be mistaken for the task's own monster.  A table identical
+    (style + slots) to one already collected is skipped.  Returns (tables,
+    setups, pages that contributed)."""
+    tables: list[dict] = []
+    setups: list[dict] = []
+    sources: list[str] = []
+    seen: set[str] = set()
+    pages = ([(task_page, False)] if task_page else []) + strategy_pages
+    for page, variant in pages:
+        g, s = parse_gear_sections(page.wikitext)
+        prefix = strategy_subject(page.title) if variant else None
+        added = False
+        for t in g:
+            key = _gear_key(t)
+            if key in seen:
+                continue
+            seen.add(key)
+            if prefix:
+                t["label"] = f"{prefix}: {t['label']}" if t["label"] else prefix
+            t["source"] = page.title
+            tables.append(t)
+            added = True
+        for e in s:
+            if prefix:
+                e["label"] = f"{prefix}: {e['label']}" if e["label"] else prefix
+            e["source"] = page.title
+            setups.append(e)
+            added = True
+        if added:
+            sources.append(page.title)
+    _disambiguate_labels(tables)
+    return tables, setups, sources
+
+
+def _disambiguate_labels(tables: list[dict]) -> None:
+    """The plugin lists tables by label, so a repeated label (two tabbers on one
+    page, e.g. Abyssal Sire phase 1 / phase 2 "Ranged", or the same tab on the task
+    page and its strategy page) is extended on its second and later occurrence.
+    When its style differs from the first table's: the style itself if it starts
+    with the label ("Melee" -> "Melee (Punish)"), else "<label> (<style>)";
+    otherwise "<label> (<source page>)", else "<label> #n"."""
+    used: set[str] = set()
+    first_source: dict[str, str] = {}
+    first_style: dict[str, str] = {}
+    for t in tables:
+        label = t.get("label")
+        if label is None:
+            continue
+        if label not in used:
+            used.add(label)
+            first_source[label] = t.get("source")
+            first_style[label] = t.get("style") or ""
+            continue
+        style = t.get("style") or ""
+        options = []
+        if style and style != label and style != first_style[label]:
+            if style.lower().startswith(label.lower()):
+                options.append(style)
+            options.append(f"{label} ({style})")
+        if t.get("source") and t.get("source") != first_source.get(label):
+            options.append(f"{label} ({t['source']})")
+        n = 2
+        while f"{label} #{n}" in used:
+            n += 1
+        options.append(f"{label} #{n}")
+        new = next(o for o in options if o not in used)
+        used.add(new)
+        t["label"] = new
 
 
 # --------------------------------------------------------------------------
@@ -820,11 +1031,16 @@ def parse_recommended_equipment(t: Template, efn_names: dict[str, str]) -> dict:
     _, named = t.args
     slots: dict[str, list[list[dict]]] = {}
     slot_notes: dict[str, list[str]] = {}
+    # "2h1", "2h2", … (two-handed weapon row, e.g. Kree'arra/Strategies) fill the
+    # weapon slot when the table has no weaponN row of its own.
+    two_handed_as_weapon = not any(re.fullmatch(r"weapon\d", k) for k in named)
     for key, value in named.items():
-        m = re.fullmatch(r"([a-z]+)(\d)", key)
+        m = re.fullmatch(r"([a-z]+|2h)(\d)", key)
         if not m:
             continue
         slot, tier = m.group(1), int(m.group(2))
+        if slot == "2h" and two_handed_as_weapon:
+            slot = "weapon"
         if slot not in GEAR_SLOTS or not (1 <= tier <= 5):
             continue
         notes = []
@@ -907,9 +1123,40 @@ def parse_rune_pouch(t: Template) -> list[str]:
     return [runes[k] for k in sorted(runes)]
 
 
+def _tab_label(tab: str) -> tuple[str | None, str]:
+    lm = re.match(r"\s*([^=\n{}]+?)\s*=(.*)$", tab, re.S)
+    if lm:
+        return lm.group(1).strip(), lm.group(2)
+    return None, tab
+
+
+def _nested_tabber_chunks(label: str | None, tab: str) -> list[tuple[str | None, str]]:
+    """A tab may hold a nested {{#tag:tabber|A=…{{!}}-{{!}}B=…}} (strategy pages
+    such as Kalphite Queen/Strategies).  Each inner tab becomes its own chunk
+    labelled "<outer> - <inner>"; the rest of the outer tab keeps the outer label."""
+    nested = find_templates(tab, ("#tag:tabber",))
+    top = [t for t in nested if not any(o.start < t.start and t.end <= o.end for o in nested)]
+    if not top:
+        return [(label, tab)]
+    rest: list[str] = []
+    inner_chunks: list[tuple[str | None, str]] = []
+    pos = 0
+    for t in top:
+        rest.append(tab[pos:t.start])
+        pos = t.end
+        for inner in re.split(r"\{\{!\}\}-\{\{!\}\}", t.body):
+            inner_label, inner_text = _tab_label(inner)
+            if label and inner_label:
+                inner_label = f"{label} - {inner_label}"
+            inner_chunks.append((inner_label or label, inner_text))
+    rest.append(tab[pos:])
+    return [(label, "".join(rest))] + inner_chunks
+
+
 def _chunks(text: str) -> list[tuple[str | None, str]]:
     """Split a page into (label, text) chunks: one per <tabber> tab (label = tab
-    label) and, for text outside tabbers, one per level-2 section."""
+    label; nested {{#tag:tabber}} tabs get "<outer> - <inner>") and, for text
+    outside tabbers, one per level-2 section."""
     chunks: list[tuple[str | None, str]] = []
     outside: list[str] = []
     pos = 0
@@ -917,11 +1164,7 @@ def _chunks(text: str) -> list[tuple[str | None, str]]:
         outside.append(text[pos:m.start()])
         pos = m.end()
         for tab in re.split(r"\|-\|", m.group(1)):
-            lm = re.match(r"\s*([^=\n{}]+?)\s*=(.*)$", tab, re.S)
-            if lm:
-                chunks.append((lm.group(1).strip(), lm.group(2)))
-            else:
-                chunks.append((None, tab))
+            chunks.extend(_nested_tabber_chunks(*_tab_label(tab)))
     outside.append(text[pos:])
     rest = "\n".join(outside)
     secs = sections(rest)
@@ -1168,38 +1411,54 @@ def parse_loclines(text: str, page_title: str) -> list[dict]:
     return locs
 
 
+def _map_location(t: Template, page_title: str) -> dict | None:
+    pos, named = t.args
+    spawns: list[list[int]] = []
+    titles: list[str] = []
+    for p in pos:
+        for x, y, _pl in coords_in_arg(p):
+            spawns.append([x, y])
+            tm = re.search(r"title\s*:\s*([^,|]+)", p)
+            if tm:
+                titles.append(tm.group(1).strip())
+    if to_int(named.get("x")) is not None and to_int(named.get("y")) is not None:
+        spawns.append([to_int(named["x"]), to_int(named["y"])])
+    if not spawns:
+        return None
+    caption = plain_text(named.get("caption", "")) or plain_text(named.get("name", ""))
+    if caption == page_title:
+        caption = ""
+    display = f"{page_title} ({caption.rstrip('.')})" if caption else page_title
+    return {
+        "name": page_title, "displayName": display, "link": page_title,
+        "annotations": [{"raw": None, "text": tt} for tt in ([caption] if caption else []) + titles],
+        "monster": page_title, "page": page_title, "levels": [], "levelsRaw": None,
+        "members": None, "mapID": to_int(named.get("mapid")),
+        "plane": to_int(named.get("plane")) or 0, "dropversion": None,
+        "spawns": spawns, "source": "map",
+    }
+
+
 def parse_map_locations(text: str, page_title: str) -> list[dict]:
     """Fallback for pages without {{LocLine}} (instanced bosses): {{Map}} templates
-    inside ==Location== / ==Transportation== sections."""
+    inside ==Location== / ==Transportation== sections; failing that, the `map`
+    field of an {{Infobox Location}} or {{Infobox Activity}} (pages such as Barrows, TzHaar Fight
+    Cave, Inferno, Zul-Andra listed in EXTRA_MONSTER_PAGES for their entrance)."""
     locs: list[dict] = []
     for s in sections(text):
         if not re.fullmatch(r"(locations?|transportation|getting there)", s["title"], re.I):
             continue
         body = text[s["start"]:s["end"]]
         for t in find_templates(body, ("map",)):
-            pos, named = t.args
-            spawns: list[list[int]] = []
-            titles: list[str] = []
-            for p in pos:
-                for x, y, _pl in coords_in_arg(p):
-                    spawns.append([x, y])
-                    tm = re.search(r"title\s*:\s*([^,|]+)", p)
-                    if tm:
-                        titles.append(tm.group(1).strip())
-            if to_int(named.get("x")) is not None and to_int(named.get("y")) is not None:
-                spawns.append([to_int(named["x"]), to_int(named["y"])])
-            if not spawns:
-                continue
-            caption = plain_text(named.get("caption", "")) or plain_text(named.get("name", ""))
-            display = f"{page_title} ({caption.rstrip('.')})" if caption else page_title
-            locs.append({
-                "name": page_title, "displayName": display, "link": page_title,
-                "annotations": [{"raw": None, "text": tt} for tt in ([caption] if caption else []) + titles],
-                "monster": page_title, "page": page_title, "levels": [], "levelsRaw": None,
-                "members": None, "mapID": to_int(named.get("mapid")),
-                "plane": to_int(named.get("plane")) or 0, "dropversion": None,
-                "spawns": spawns, "source": "map",
-            })
+            loc = _map_location(t, page_title)
+            if loc:
+                locs.append(loc)
+    if not locs:
+        for box in find_templates(text, ("infobox location", "infobox activity")):
+            for t in find_templates(box.args[1].get("map", ""), ("map",)):
+                loc = _map_location(t, page_title)
+                if loc:
+                    locs.append(loc)
     return locs
 
 
@@ -2084,7 +2343,8 @@ def read_task_list(path: Path) -> list[TaskRow]:
 def build_task(cache: WikiCache, row: TaskRow, report: dict) -> dict:
     print(f"== {row.display}", file=sys.stderr)
     task_page, tried = resolve_task_page(cache, row.display)
-    monster_pages, mtried = resolve_monster_pages(cache, row.display, row.alternatives, task_page)
+    monster_pages, mtried, primary_pages = resolve_monster_pages(cache, row.display, row.alternatives, task_page)
+    strategy_pages, stried = resolve_strategy_pages(cache, row.display, task_page, primary_pages)
 
     task: dict = {
         "enum": row.enum,
@@ -2125,7 +2385,8 @@ def build_task(cache: WikiCache, row: TaskRow, report: dict) -> dict:
             task["taskId"] = infobox["taskId"]
             task["requirements"] = infobox["requirements"]
             task["masters"] = infobox["masters"]
-        gear_tables, setups = parse_gear_sections(text)
+        gear_tables, setups, gear_sources = collect_gear(task_page, strategy_pages)
+        report["gearSources"][row.display] = {"pages": gear_sources, "strategyPagesTried": stried}
         task["gearTables"] = gear_tables
         task["exampleSetups"] = setups
         task["strategy"], task["summary"] = parse_strategy(text)
@@ -2544,6 +2805,7 @@ def main(argv: list[str] | None = None) -> int:
         "tasksWithoutTaskPage": [],
         "tasksWithoutMonsterPage": [],
         "tasksWithoutEquipment": [],
+        "gearSources": {},
         "tasksWithoutLocations": [],
         "tasksWithoutMasters": [],
         "unmatchedCuratedLocations": [],
