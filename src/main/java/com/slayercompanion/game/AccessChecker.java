@@ -141,18 +141,20 @@ public class AccessChecker
 				continue;
 			}
 			Boolean satisfied = null;
+			boolean unevaluated = false;
 			for (AccessRule rule : rules)
 			{
 				Boolean r = evaluate(rule);
 				if (r == null)
 				{
+					unevaluated = true;
 					continue;
 				}
 				satisfied = satisfied == null ? r : (satisfied || r);
 			}
-			if (satisfied == null)
+			if (satisfied == null || (!satisfied && unevaluated))
 			{
-				// Nothing in this group could be evaluated.
+				// Nothing in this group could be evaluated, or the only alternatives that might hold cannot be.
 				if (group.getText() != null)
 				{
 					manual.add(group.getText());

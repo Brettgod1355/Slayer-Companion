@@ -27,6 +27,7 @@ package com.slayercompanion.gear;
 import com.slayercompanion.SlayerCompanionConfig;
 import com.slayercompanion.data.GearItem;
 import com.slayercompanion.data.GearTable;
+import com.slayercompanion.data.GeneralGearFile;
 import com.slayercompanion.data.TaskInfo;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -58,6 +59,21 @@ public class GearAdvisor
 		this.resolver = resolver;
 		this.owned = owned;
 		this.config = config;
+	}
+
+	/** The task's own gear tables, or the general Slayer tables when it has none; empty without a task. */
+	public static List<GearTable> tablesFor(@Nullable TaskInfo task, GeneralGearFile general)
+	{
+		if (task == null)
+		{
+			return Collections.emptyList();
+		}
+		List<GearTable> own = task.gearTablesOrEmpty();
+		if (own.isEmpty() && general.getGearTables() != null)
+		{
+			return general.getGearTables();
+		}
+		return own;
 	}
 
 	/** Index of the table to show first: preferred style, else the task's recommended style, else 0. */

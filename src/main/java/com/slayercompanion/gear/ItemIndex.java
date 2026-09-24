@@ -117,6 +117,13 @@ public class ItemIndex
 		return l == null ? Collections.emptyList() : l;
 	}
 
+	/** The name without a trailing parenthesised variant: "slayer helmet (i)" -> "slayer helmet". */
+	static String baseName(String name)
+	{
+		int paren = name.lastIndexOf(" (");
+		return paren > 0 && name.endsWith(")") ? name.substring(0, paren) : name;
+	}
+
 	@Subscribe
 	public void onGameStateChanged(GameStateChanged event)
 	{
@@ -165,7 +172,9 @@ public class ItemIndex
 					continue;
 				}
 				String key = name.toLowerCase();
-				if (wanted.contains(key))
+				// Variants of a wanted name ("slayer helmet (i)", "dragon defender (t)") are what
+				// ItemNameResolver looks up next, and untradeable ones are only found here.
+				if (wanted.contains(key) || wanted.contains(baseName(key)))
 				{
 					byName.computeIfAbsent(key, k -> new ArrayList<>()).add(id);
 				}
