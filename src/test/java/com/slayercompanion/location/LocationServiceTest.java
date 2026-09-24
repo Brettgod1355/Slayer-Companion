@@ -198,7 +198,9 @@ public class LocationServiceTest
 				assertFalse(t.getTask() + " / " + m.getName() + " has no spots", spots.isEmpty());
 				for (TaskLocation l : spots)
 				{
-					assertTrue(t.getTask() + ": " + l.getId() + " does not have " + m.getName(), l.getMonsters().contains(m.getName()));
+					boolean own = l.getMonsters().contains(m.getName());
+					boolean shared = t.variants().stream().noneMatch(v -> l.getMonsters().contains(v.getName()));
+					assertTrue(t.getTask() + ": " + l.getId() + " belongs to another variant, not " + m.getName(), own || shared);
 				}
 				Integer xp = t.xpPerKillFor(m.getName());
 				assertEquals(m.getSlayerXp() != null ? m.getSlayerXp() : t.getXpPerKill(), xp);
@@ -206,6 +208,44 @@ public class LocationServiceTest
 			}
 		}
 		assertTrue(checked > 0);
+	}
+
+	@Test
+	public void everyBundledSpotShowsForSomeVariant()
+	{
+		SlayerData data = new SlayerData(new Gson());
+		for (TaskInfo t : data.tasks())
+		{
+			if (t.variants().isEmpty())
+			{
+				continue;
+			}
+			java.util.Set<String> shown = new java.util.HashSet<>();
+			for (MonsterInfo m : t.variants())
+			{
+				for (TaskLocation l : service.forTask(t, m.getName()))
+				{
+					shown.add(l.getId());
+				}
+			}
+			for (TaskLocation l : t.locationsOrEmpty())
+			{
+				assertTrue(t.getTask() + ": " + l.getId() + " is hidden whichever variant is chosen", shown.contains(l.getId()));
+			}
+		}
+	}
+
+	@Test
+	public void spotWithoutAnyVariantShowsForEveryVariant()
+	{
+		TaskInfo t = demons();
+		List<TaskLocation> locs = new ArrayList<>(t.getLocations());
+		locs.add(loc("task-wide", 3));
+		t.setLocations(locs);
+		for (MonsterInfo m : t.variants())
+		{
+			assertTrue(m.getName(), service.forTask(t, m.getName()).stream().anyMatch(l -> l.getId().equals("task-wide")));
+		}
 	}
 
 	// --- favourites ---

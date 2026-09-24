@@ -1,4 +1,4 @@
-# Slayer Companion datagen – coverage report (strategy-page + coordinates pass, 2026-09-24)
+# Slayer Companion datagen – coverage report (gear-per-variant pass, 2026-09-24)
 
 Updated after the strategy-page / coordinates pass (see the section of that name below); the
 multi/cannon, master-range and access sections are unchanged from the consolidation pass of
@@ -11,6 +11,33 @@ counts a task as "withLocations" even when its only locations are coordinate-les
 so the split below is stricter.
 
 ## Counts
+
+## Gear-per-variant and coverage pass (2026-09-24, later)
+
+Research workflow (21 groups of tasks: researcher → verifier that ran the generator's own parsers on
+every proposed page → completeness searcher → verifier) looked for wiki gear tables for every task
+AND every variant, and for coordinates of every spot and variant. Accepted pages went into
+`GEAR_PAGES` (with variant and tab filters), `EXTRA_MONSTER_PAGES` and the new
+`EXTRA_LOCATION_PAGES`. Rejected on review: two Combat Achievement pages ("Fighting as Intended",
+"Fighting as Intended II" — restricted-gear challenges) and a user guide page for Commander
+Zilyana whose "tables" were skills and inventory.
+
+| Measure | Now | Before this pass |
+| --- | --- | --- |
+| Tasks with any wiki gear tables | 79 | 60 |
+| Tasks with their own (task-level) tables | 61 | 60 |
+| Gear tables | 282 (106 for a specific variant) | 188 |
+| Selectable variants | 359 | 309 |
+| Variants with their own tables | 43 | 0 (variant tables were not told apart) |
+| Variants that get wiki gear (own or the task's) | 137 of 359 | – |
+| Location records / with coordinates | 1065 / 1062 | 1025 / 1019 |
+
+Still without coordinates (3): Hill giants – Obor's Lair (Edgeville Dungeon); Skeletons – Skeletal Tomb; Spiders – Web Chasm (instanced lairs with no
+{{LocLine}} or {{Map}} coordinates on the wiki).
+
+Tasks with no wiki gear table at all (69; the plugin shows the general Slayer gear — each was
+searched twice). A further 18 tasks have tables only for a variant (e.g. Black demons → Demonic
+gorilla, Skotizo), so their normal monster also shows the general gear: Aberrant spectres, Ankou, Bandits, Banshees, Bats, Birds, Black Knights, Bloodveld, Brine rats, Catablepon, Cave bugs, Cave crawlers, Cave horrors, Cave slimes, Chaos druids, Cockatrice, Crabs, Crawling hands, Crocodiles, Dagannoth, Dark warriors, Dogs, Dwarves, Earth warriors, Elves, Ents, Fever spiders, Fire giants, Fleshcrawlers, Ghosts, Ghouls, Goblins, Harpie bug swarms, Hill giants, Hobgoblins, Hydras, Ice giants, Ice warriors, Icefiends, Infernal mages, Jungle horrors, Kalphites, Killerwatts, Lesser demons, Lizards, Minotaurs, Mogres, Molanisks, Moss giants, Ogres, Otherworldly beings, Pirates, Pyrefiends, Rats, Red dragons, Rogues, Scabarites, Sea snakes, Shades, Shadow warriors, Sourhogs, Spiritual creatures, Terror dogs, Turoth, Tzhaar, Wall beasts, Warped Creatures, Werewolves, Wolves.
 
 | Measure | Count |
 | --- | --- |
