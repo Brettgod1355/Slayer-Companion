@@ -22,7 +22,7 @@
         "name": "South of the Slayer Tower",
         "displayName": "Ghoul grounds south of the Slayer Tower (west of Canifis)",
         "rank": 1,
-        "multi": "unknown",
+        "multi": false,
         "cannon": "unknown",
         "wilderness": false,
         "wildernessLevelMin": null,
@@ -33,7 +33,7 @@
         ],
         "notes": "12 ghoul spawns (12 LocLine pins) on the grounds south of the Slayer Tower and west of Canifis; the Canifis page says 'The northern ghoul grounds features 12 ghouls, great for Slayer tasks'. Reach it via the Kharyrll Teleport (Canifis bank), a Slayer ring to the Slayer Tower entrance north of the town, or fairy ring CKS just west of Canifis (Canifis page teleport list).",
         "evidence": {
-          "multi": "not stated on Ghoul, Canifis or Slayer Tower pages; not in the 'List of multicombat areas' (Multicombat area)",
+          "multi": "Single-way combat, Ghouls exception: 'If multiple [[ghoul]]s attempt to attack the player, it is possible for them to do simultaneously even though it is single-way combat.' (the Ghoul page has only two LocLines: this one and North of Mort Myre Swamp)",
           "cannon": "not stated; not in the Dwarf multicannon prohibited list",
           "requirements": "Slayer task list row for Ghouls, Required Items/Requirements column: 'Priest in Peril', 'Combat 25' (Slayer task)"
         }
@@ -42,7 +42,7 @@
         "name": "North of Mort Myre Swamp",
         "displayName": "Salve graveyard north of Mort Myre Swamp (ranged safespot)",
         "rank": 2,
-        "multi": "unknown",
+        "multi": false,
         "cannon": "unknown",
         "wilderness": false,
         "wildernessLevelMin": null,
@@ -53,7 +53,7 @@
         ],
         "notes": "10 ghouls (10 LocLine pins) walk the Salve graveyard 'just north of the swamp' (Canifis). The Salve Graveyard Teleport lands 'slightly west of the town' and fairy ring CKS is nearby. The Ghoul page's safespot 'between two gravestones and a cross on the eastern side, directly north from the Large grave' is described for 'the ghouls to the west of Canifis' without naming the cluster; the Large grave page places one large grave at the eastern edge of this cluster (3434,3457) and another south of the Slayer Tower cluster (3413,3495), so it may apply to either. Retreating ghouls 'walk back to the water and will still be within range'.",
         "evidence": {
-          "multi": "not stated on Ghoul or Canifis pages; not in the 'List of multicombat areas' (Multicombat area)",
+          "multi": "Single-way combat, Ghouls exception: 'If multiple [[ghoul]]s attempt to attack the player, it is possible for them to do simultaneously even though it is single-way combat.' (the Ghoul page has only two LocLines: this one and South of the Slayer Tower)",
           "cannon": "not stated; not in the Dwarf multicannon prohibited list",
           "requirements": "Slayer task list row for Ghouls: 'Priest in Peril' (Slayer task)"
         }
@@ -99,7 +99,7 @@
         "displayName": "Mole Hole beneath Falador Park",
         "rank": 1,
         "multi": true,
-        "cannon": "unknown",
+        "cannon": true,
         "wilderness": false,
         "wildernessLevelMin": null,
         "wildernessLevelMax": null,
@@ -112,7 +112,7 @@
         "notes": "'The Giant Mole is accessed by digging with a spade on top of the mole hills in the Falador Park. A light source is required to navigate the tunnels without taking damage.' The exit rope at the southern end leads to a well south of White Knights' Castle. A paid private instance is available from the spade at the north-western mole hill.",
         "evidence": {
           "multi": "'Mole Hole' appears in the 'List of multicombat areas' (Multicombat area)",
-          "cannon": "not stated on Giant Mole or Mole Hole pages; Mole Hole is not in the Dwarf multicannon prohibited list",
+          "cannon": "Giant Mole/Strategies: 'A dwarf multicannon can also be brought to speed up kills.' and image caption 'Cannon double hit spot when using the western safespot at the centre of the cave.'; Mole Hole is not on the Dwarf multicannon prohibited list",
           "requirements": "'Players who have unlocked the Like a boss ability via spending 200 Slayer reward points can be assigned bosses by Konar, Nieve/Steve, Duradel/Kuradal, or Krystilia' and boss table row 'Giant Mole | Mole Lair | Slayer 1 | (no other requirement)' (Boss); 'A light source is required to navigate the tunnels' (Giant Mole)"
         }
       }
@@ -304,7 +304,7 @@
         "displayName": "God Wars Dungeon – Bandos goblins",
         "rank": 9,
         "multi": true,
-        "cannon": "unknown",
+        "cannon": false,
         "wilderness": false,
         "wildernessLevelMin": null,
         "wildernessLevelMax": null,
@@ -316,7 +316,7 @@
         "notes": "14 goblins per the task table (God Wars Dungeon gallery lists 'Goblin (12-17) - melee'). The Bandos sergeants in the boss room also count but need 40 kill count.",
         "evidence": {
           "multi": "Slayer task/Goblins Location Variants table, God Wars Dungeon row: Multicombat Yes; 'God Wars Dungeon' in the 'List of multicombat areas' (Multicombat area)",
-          "cannon": "Slayer task/Goblins Location Variants table, God Wars Dungeon row: Cannonable Unknown",
+          "cannon": "Slayer task/Goblins Location Variants table, God Wars Dungeon row: Cannonable Unknown. Location Comparison rows for the Bandos' Stronghold / God Wars Dungeon: Cannonable {{No}} in Slayer task/Hill giants ('God Wars Dungeon (Bandos' Stronghold)') and Slayer task/Hobgoblins ('God Wars Dungeon'), as in most other God Wars Dungeon rows (Aviansies, Bloodveld, Hellhounds, Icefiends, Pyrefiends, Spiritual creatures); Dwarf multicannon page: 'The Kalphite Queen, King Black Dragon, Thermonuclear smoke devil, and inhabitants of the God Wars Dungeon may also destroy a cannon if a player attempts to use it'. (Slayer task/Ogres and Slayer task/Vampyres mark their God Wars Dungeon rows Cannonable {{Yes}}; the majority and the Dwarf multicannon caveat were followed.)",
           "requirements": "'Accessing it requires partial completion of Troll Stronghold (defeating Dad) or full completion of the Easy Combat Achievements' and 'Rope (to access the dungeon itself for the first time)' (God Wars Dungeon)"
         }
       },
@@ -325,7 +325,7 @@
         "displayName": "Clock Tower Dungeon (14 goblins)",
         "rank": 10,
         "multi": false,
-        "cannon": "unknown",
+        "cannon": true,
         "wilderness": false,
         "wildernessLevelMin": null,
         "wildernessLevelMax": null,
@@ -334,7 +334,7 @@
         "notes": "14 goblins (levels 2, 5 and 13; 14 LocLine pins).",
         "evidence": {
           "multi": "Slayer task/Goblins Location Variants table, Clock Tower Dungeon row: Multicombat No",
-          "cannon": "Slayer task/Goblins Location Variants table, Clock Tower Dungeon row: Cannonable Unknown",
+          "cannon": "Slayer task/Goblins Location Variants table, Clock Tower Dungeon row: Cannonable Unknown; Slayer task/Ogres Location Comparison row 'Clock Tower Dungeon': Cannonable {{Yes}}",
           "requirements": "not stated"
         }
       },
@@ -603,8 +603,8 @@
         "name": "Sisterhood Sanctuary",
         "displayName": "Sisterhood Sanctuary beneath Slepe (4 demons)",
         "rank": 11,
-        "multi": "unknown",
-        "cannon": "unknown",
+        "multi": false,
+        "cannon": true,
         "wilderness": false,
         "wildernessLevelMin": null,
         "wildernessLevelMax": null,
@@ -612,8 +612,8 @@
         "requirements": [],
         "notes": "4 level-92 demons (Greater demon LocLine, 4 pins; Sisterhood Sanctuary monster list '4 greater demons'). Not in the task page location table. Reached via Slepe (Drakan's medallion 'Slepe' option after using a Slepey tablet, or Ver Sinhaza then run north).",
         "evidence": {
-          "multi": "not stated on the Sisterhood Sanctuary page; not in the task table",
-          "cannon": "not stated; not in the Dwarf multicannon prohibited list",
+          "multi": "Sisterhood Sanctuary: 'Various demonic monsters can be found in the sanctuary, including: [...] 4 [[greater demon]]s [...] This area is single-way combat.'",
+          "cannon": "Location Comparison rows 'Sisterhood Sanctuary': Cannonable {{Yes}} in Slayer task/Lesser demon, Slayer task/Pyrefiends and Slayer task/Spiders (same sanctuary); not on the Dwarf multicannon prohibited list",
           "requirements": "not stated on the pages read"
         }
       }
@@ -1328,16 +1328,16 @@
         "name": "Lava Maze",
         "displayName": "Lava Maze (level 40-45 Wilderness)",
         "rank": 8,
-        "multi": "unknown",
+        "multi": true,
         "cannon": true,
         "wilderness": true,
         "wildernessLevelMin": 40,
         "wildernessLevelMax": 45,
         "konarAssignable": false,
         "requirements": [],
-        "notes": "4 giants inside the maze (4 LocLine pins); webs 'must be cut with a slash weapon or a knife'. 'The Lava Maze is a maze located deep in the Wilderness, around level 40-45.' The task table says single-way while the Multicombat area list names 'The Lava Maze' among multi areas; left unknown.",
+        "notes": "4 giants inside the maze (4 LocLine pins); webs 'must be cut with a slash weapon or a knife'. 'The Lava Maze is a maze located deep in the Wilderness, around level 40-45.' The task table says single-way while the Multicombat area list names 'The Lava Maze' among multi areas; the list is followed (see evidence).",
         "evidence": {
-          "multi": "conflict: Slayer task/Hill giants table, Lava Maze row: Multicombat No, versus 'The Lava Maze' in the 'List of multicombat areas' (Multicombat area)",
+          "multi": "'Several places in the Wilderness including the areas at or around: [...] The Lava Maze' (Multicombat area). Conflicts with the Location Comparison row 'Lava Maze': Multicombat {{No}} in Slayer task/Hill giants and Slayer task/Lesser demon; the dedicated list outranks a task-table cell and names the area, so the safer Wilderness answer (multi) is used. The Lava Maze page itself does not state the combat type.",
           "cannon": "Slayer task/Hill giants table, Lava Maze row: Cannonable Yes",
           "requirements": "not stated"
         }
@@ -1683,8 +1683,8 @@
         "name": "Crandor",
         "displayName": "Crandor (5 hobgoblins)",
         "rank": 10,
-        "multi": "unknown",
-        "cannon": "unknown",
+        "multi": false,
+        "cannon": true,
         "wilderness": false,
         "wildernessLevelMin": null,
         "wildernessLevelMax": null,
@@ -1692,8 +1692,8 @@
         "requirements": [],
         "notes": "5 level-28 hobgoblins (5 LocLine pins) on Crandor.",
         "evidence": {
-          "multi": "not in the Slayer task/Hobgoblins Location Comparison table; not stated on the pages read",
-          "cannon": "not in the Slayer task/Hobgoblins Location Comparison table; not in the Dwarf multicannon prohibited list",
+          "multi": "Location Comparison rows 'Crandor': Multicombat {{No}} in Slayer task/Moss giants and Slayer task/Lesser demon (surface of the island; the dungeon has its own 'Crandor and Karamja Dungeon' row)",
+          "cannon": "Location Comparison rows 'Crandor': Cannonable {{Yes}} in Slayer task/Moss giants and Slayer task/Lesser demon",
           "requirements": "not stated"
         }
       },
@@ -1701,8 +1701,8 @@
         "name": "Witchaven Dungeon",
         "displayName": "Witchaven Dungeon entrance room (4 hobgoblins)",
         "rank": 11,
-        "multi": "unknown",
-        "cannon": "unknown",
+        "multi": false,
+        "cannon": true,
         "wilderness": false,
         "wildernessLevelMin": null,
         "wildernessLevelMax": null,
@@ -1710,8 +1710,8 @@
         "requirements": [],
         "notes": "4 level-28 hobgoblins (4 LocLine pins): 'When you enter the dungeon, you will come into a room containing aggressive level 28 hobgoblins' (Witchaven Dungeon).",
         "evidence": {
-          "multi": "not in the Slayer task/Hobgoblins Location Comparison table; not stated on the pages read",
-          "cannon": "not in the Slayer task/Hobgoblins Location Comparison table; not in the Dwarf multicannon prohibited list",
+          "multi": "Witchaven Dungeon: 'The entire dungeon is single way combat and the dwarf multi-cannon is usable here.'",
+          "cannon": "Witchaven Dungeon: 'The entire dungeon is single way combat and the dwarf multi-cannon is usable here.'",
           "requirements": "not stated"
         }
       },
@@ -1755,8 +1755,8 @@
         "name": "Clock Tower Dungeon",
         "displayName": "Clock Tower Dungeon (2 hobgoblins)",
         "rank": 14,
-        "multi": "unknown",
-        "cannon": "unknown",
+        "multi": false,
+        "cannon": true,
         "wilderness": false,
         "wildernessLevelMin": null,
         "wildernessLevelMax": null,
@@ -1764,8 +1764,8 @@
         "requirements": [],
         "notes": "2 level-28 hobgoblins (2 LocLine pins).",
         "evidence": {
-          "multi": "not in the Slayer task/Hobgoblins Location Comparison table; not stated on the pages read",
-          "cannon": "not in the Slayer task/Hobgoblins Location Comparison table; not in the Dwarf multicannon prohibited list",
+          "multi": "Location Comparison rows 'Clock Tower Dungeon': Multicombat {{No}} in Slayer task/Goblins and Slayer task/Ogres",
+          "cannon": "Slayer task/Ogres Location Comparison row 'Clock Tower Dungeon': Cannonable {{Yes}}",
           "requirements": "not stated"
         }
       },

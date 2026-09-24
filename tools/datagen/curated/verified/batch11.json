@@ -544,7 +544,7 @@
         "name": "Lumbridge Swamp Caves",
         "displayName": "Lumbridge Swamp Caves (south-west corner spawns)",
         "rank": 1,
-        "multi": "unknown",
+        "multi": false,
         "cannon": true,
         "wilderness": false,
         "wildernessLevelMin": null,
@@ -558,7 +558,7 @@
         ],
         "notes": "Only location. Enter by rope from the swamp near the candle seller, or from the Lumbridge castle cellar after starting The Lost Tribe. Wall beasts are aggressive holes in the wall; skip the tile in front of a hole to avoid being grabbed. The beast by the entrance respawns if you exit and re-enter.",
         "evidence": {
-          "multi": "not stated (Lumbridge Swamp Caves page does not state single or multi; not on the Multicombat area list)",
+          "multi": "Slayer task/Goblins Location Comparison row 'Lumbridge Swamp Caves': Multicombat {{No}} (the Lumbridge Swamp Caves page and the Multicombat area list are silent)",
           "cannon": "Lumbridge Swamp Caves: 'A Dwarf multicannon can be used in the caves.'; Wall beast infobox: immunecannon = No",
           "requirements": "Slayer task/Wall beast: 'Wall beasts can be assigned as a Slayer task by Mazchna at 35 Slayer and 5 Defence in order to equip a Spiny helmet. They are only found in the Lumbridge Swamp Caves.'; Wall beast: 'A light source is required to fight wall beasts.'"
         }

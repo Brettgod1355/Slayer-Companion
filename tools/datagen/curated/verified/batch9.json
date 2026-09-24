@@ -514,7 +514,7 @@
         "displayName": "Lava Maze King Scorpions (Wilderness 39-42, multi) - Krystilia",
         "rank": 8,
         "multi": true,
-        "cannon": "unknown",
+        "cannon": true,
         "wilderness": true,
         "wildernessLevelMin": 39,
         "wildernessLevelMax": 42,
@@ -525,7 +525,7 @@
         "notes": "King Scorpions (level 32, 30 Slayer XP, LocLine 'Lava Maze' on the King Scorpion page) count for Krystilia's task.",
         "evidence": {
           "multi": "'The Lava Maze' is in the Multicombat area list (Multicombat area).",
-          "cannon": "not stated",
+          "cannon": "Location Comparison rows 'Lava Maze': Cannonable {{Yes}} in Slayer task/Hill giants and Slayer task/Lesser demon; the Lava Maze is not on the Dwarf multicannon prohibited list",
           "requirements": "Krystilia task table Wilderness levels '5-9, 39-42, 53-54' for scorpions (Krystilia); King Scorpion page: 'King Scorpions are aggressive monsters found in the Dwarven Mine, the Lava Maze, in the Wilderness'."
         }
       }
@@ -630,7 +630,7 @@
         "displayName": "Mort'ton (25 Loar shades, fastest)",
         "rank": 1,
         "multi": false,
-        "cannon": "unknown",
+        "cannon": "partial",
         "wilderness": false,
         "wildernessLevelMin": null,
         "wildernessLevelMax": null,
@@ -641,7 +641,7 @@
         "notes": "Loar shades are aggressive and roam the town; Mort'ton teleport lands in the centre. Cannon placement is limited to the eastern boundary per the task page, but the Dwarf multicannon page lists Mort'ton as prohibited.",
         "evidence": {
           "multi": "Location Comparison: 'Mort'ton ... Multicombat: No' (Slayer task/Shades)",
-          "cannon": "Conflict: 'Cannon placement is limited, but it is possible to set one up along the eastern boundary of Mort'ton.' and table 'Cannonable: Yes' (Slayer task/Shades) versus 'Mort'ton and Shades of Mort'ton ... You can't set up a cannon here.' (Dwarf multicannon prohibited list); recorded as unknown.",
+          "cannon": "Partial: most of the town is prohibited - Dwarf multicannon prohibited list: '[[Mort'ton]] and [[Shades of Mort'ton (minigame)|Shades of Mort'ton]] (you can however set up a cannon in the [[Shade catacombs]] [...]) - You can't set up a cannon here.' - but the eastern edge is allowed: Slayer task/Shades row 'Mort'ton': Cannonable {{Yes}}, 'Cannon placement is limited, but it is possible to set one up along the eastern boundary of Mort'ton.'",
           "requirements": "'Priest in Peril is required to access Mort'ton.' (Slayer task/Shades)"
         }
       },
@@ -740,7 +740,7 @@
         "name": "Legends' Guild Dungeon",
         "displayName": "Legends' Guild basement (19 shadow warriors, cannon allowed)",
         "rank": 1,
-        "multi": "unknown",
+        "multi": false,
         "cannon": true,
         "wilderness": false,
         "wildernessLevelMin": null,
@@ -751,7 +751,7 @@
         ],
         "notes": "Take the stairs down inside the guild; giant bats and pit scorpions share the dungeon. Safespot through the fence separating them from the pit scorpions, or behind the fungus near the cavern wall once they lose aggression. Fairy ring BLR is just east of the entrance.",
         "evidence": {
-          "multi": "not stated (Legends' Guild page and Shadow warrior page do not state single/multi; not in the Multicombat area list)",
+          "multi": "Slayer task/Bats Location Comparison row 'Legends' Guild basement': Multicombat {{No}} (Legends' Guild and Shadow warrior pages are silent)",
           "cannon": "'A dwarf multicannon can be used.' (Legends' Guild, Dungeon section)",
           "requirements": "'to enter the actual building, players must have completed the entire quest.' (Legends' Guild); Slayer task list row: Legends' Quest, Combat 60."
         }

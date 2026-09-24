@@ -151,8 +151,8 @@
         "name": "East side of Lumbridge",
         "displayName": "Lumbridge surroundings (giant spiders, beginner)",
         "rank": 1,
-        "multi": "unknown",
-        "cannon": "unknown",
+        "multi": false,
+        "cannon": true,
         "wilderness": false,
         "wildernessLevelMin": null,
         "wildernessLevelMax": null,
@@ -160,8 +160,8 @@
         "requirements": [],
         "notes": "Level 2 giant spiders spawn east and west of Lumbridge (Giant spider LocLines); the task page calls the spiders around Lumbridge a reasonable spot for low levels. Aggressive but very weak.",
         "evidence": {
-          "multi": "not stated",
-          "cannon": "not stated",
+          "multi": "Slayer task/Goblins Location Comparison row 'Lumbridge': Multicombat {{No}} (same Lumbridge surroundings; Lumbridge is not in the Multicombat area list)",
+          "cannon": "Slayer task/Goblins Location Comparison row 'Lumbridge': Cannonable {{Yes}}",
           "requirements": "'for low-levels, the spiders around Lumbridge are a reasonable spot' (Slayer task/Spiders); Giant spider LocLines 'East side of Lumbridge', 'West of Lumbridge', 'Lumbridge' (level 2); 'Giant spiders are very large spiders most commonly seen around Lumbridge.' (Giant spider)."
         }
       },
@@ -341,7 +341,7 @@
         "name": "Sisterhood Sanctuary",
         "displayName": "Sisterhood Sanctuary (level 1 spiders)",
         "rank": 11,
-        "multi": true,
+        "multi": false,
         "cannon": true,
         "wilderness": false,
         "wildernessLevelMin": null,
@@ -350,7 +350,7 @@
         "requirements": [],
         "notes": "11 level 1 spiders (task page table); Spider LocLine 'Sisterhood Sanctuary'. Access requirements not checked in this run.",
         "evidence": {
-          "multi": "Location Comparison row 'Sisterhood Sanctuary' Multicombat {{Yes}} (Slayer task/Spiders).",
+          "multi": "Sisterhood Sanctuary page: 'Various demonic monsters can be found in the sanctuary [...] This area is single-way combat.'; Location Comparison rows 'Sisterhood Sanctuary': Multicombat {{No}} in Slayer task/Lesser demon and Slayer task/Pyrefiends. The area page outranks the Slayer task/Spiders row 'Sisterhood Sanctuary': Multicombat {{Yes}}; the spider spawns (Spider LocLine) are spread through the same sanctuary as the demons. Changed True -> False in the multi/cannon unknowns pass (2026-09-24).",
           "cannon": "Location Comparison row 'Sisterhood Sanctuary' Cannonable {{Yes}} (Slayer task/Spiders).",
           "requirements": "not stated"
         }
@@ -1033,7 +1033,7 @@
         "displayName": "Wyrmscraig Cavern (7 mountain trolls) - Konar",
         "rank": 8,
         "multi": "unknown",
-        "cannon": "unknown",
+        "cannon": true,
         "wilderness": false,
         "wildernessLevelMin": null,
         "wildernessLevelMax": null,
@@ -1044,7 +1044,7 @@
         "notes": "Mountain troll LocLine and one of Konar's troll locations; 7 mountain trolls; a Slayer ring can teleport to the cavern after completing Fallen From Grace.",
         "evidence": {
           "multi": "not stated",
-          "cannon": "not stated",
+          "cannon": "Karuulm Slayer Dungeon: 'A dwarf multicannon can be used in all areas here except the wyrm and Alchemical Hydra areas; the former states that the electricity the wyrms discharge would render the cannon useless (however, does not stop the cannon from working on the wyrms in Wyrmscraig Cavern)'; Wyrmscraig Cavern is not on the Dwarf multicannon prohibited list",
           "requirements": "'accessible after partial completion of Fallen From Grace' and '7 Mountain trolls' and 'A Slayer ring can teleport to the cavern, after completion of Fallen From Grace.' (Wyrmscraig Cavern); Konar quo Maten table lists Wyrmscraig Cavern under Trolls; Mountain troll LocLine 'Wyrmscraig Cavern' (69)."
         }
       },

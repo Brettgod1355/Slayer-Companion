@@ -1359,8 +1359,8 @@
         "name": "Barrows crypt",
         "displayName": "Barrows crypts - crypt rats and giant crypt rats (Priest in Peril)",
         "rank": 5,
-        "multi": "unknown",
-        "cannon": "unknown",
+        "multi": false,
+        "cannon": false,
         "wilderness": false,
         "wildernessLevelMin": null,
         "wildernessLevelMax": null,
@@ -1370,8 +1370,8 @@
         ],
         "notes": "Crypt rats (35 xp per infobox; the task page table says 45) and giant crypt rats (70 xp) inside the Barrows tunnels; killing them also changes reward potential in the minigame.",
         "evidence": {
-          "multi": "not stated",
-          "cannon": "not stated",
+          "multi": "Single-way combat, Barrows brothers exception: 'If the player is under attack by another monster in the crypt and a brother spawns [...] If multiple brothers are present, they will all be able to hit the player simultaneously even though it is a single-way combat zone.'; Slayer task/Skeletons Location Comparison row 'Barrows': Multicombat {{No}}",
+          "cannon": "Slayer task/Skeletons Location Comparison row 'Barrows': Cannonable {{No}} (Barrows is not on the Dwarf multicannon prohibited list, which names only 'Mort'ton and Shades of Mort'ton')",
           "requirements": "Slayer task/Rats: 'Requires Priest in Peril completion for access to Morytania.'"
         }
       }
@@ -1524,7 +1524,7 @@
         "name": "Dragon Nest",
         "displayName": "Dragon Nest - east of Tal Teklan (5 adults + 2 babies, cannon, monster page only)",
         "rank": 6,
-        "multi": "unknown",
+        "multi": false,
         "cannon": true,
         "wilderness": false,
         "wildernessLevelMin": null,
@@ -1535,7 +1535,7 @@
         ],
         "notes": "Listed on the Red dragon LocLine list but not on the task page. Dragon Nest page: 5 blue dragons, 5 red dragons, 2 baby blue dragons and 2 baby red dragons, plus burnt bones and coin spawns.",
         "evidence": {
-          "multi": "not stated",
+          "multi": "Slayer task/Blue dragons Location Comparison row 'Dragon Nest' (the same cave; 5 adults, 2 babies): Multicombat {{No}}",
           "cannon": "Dragon Nest: 'A cannon can be set up in the cave.'",
           "requirements": "Dragon Nest: 'It is visited as part of the Scrambled! quest'"
         }

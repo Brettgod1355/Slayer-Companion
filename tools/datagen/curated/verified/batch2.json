@@ -26,7 +26,7 @@
         "name": "Lumbridge Swamp Caves",
         "displayName": "Lumbridge Swamp Caves (level 6 cave bugs)",
         "rank": 1,
-        "multi": "unknown",
+        "multi": false,
         "cannon": true,
         "wilderness": false,
         "wildernessLevelMin": null,
@@ -38,7 +38,7 @@
         ],
         "notes": "Enter via the rope hole in Lumbridge Swamp near the candle seller. Level 6 bugs are aggressive but max hit 1. Open light sources can ignite swamp gas in the north-west and south-middle sections; wall beasts sit in narrow corridors, so stop one square behind the hole in the wall and run past.",
         "evidence": {
-          "multi": "not stated (Lumbridge Swamp Caves page and Multicombat area list say nothing about this cave)",
+          "multi": "Slayer task/Goblins Location Comparison row 'Lumbridge Swamp Caves': Multicombat {{No}} (the Lumbridge Swamp Caves page and the Multicombat area list are silent)",
           "cannon": "'A Dwarf multicannon can be used in the caves.' (Lumbridge Swamp Caves)",
           "requirements": "'The caves require a light source, unless the player has lit a fire of eternal light near the rope entrance.' and 'From the swamp near the candle seller, requiring a rope to enter. After one rope has been used, further ropes are not required.' (Lumbridge Swamp Caves)"
         }
@@ -99,7 +99,7 @@
         "name": "Fremennik Slayer Dungeon",
         "displayName": "Fremennik Slayer Dungeon – first chamber",
         "rank": 1,
-        "multi": "unknown",
+        "multi": false,
         "cannon": false,
         "wilderness": false,
         "wildernessLevelMin": null,
@@ -108,7 +108,7 @@
         "requirements": [],
         "notes": "Eight cave crawlers in the first chamber; fairy ring AJR is just outside for banking. Aggressive only to players of combat level 46 and below. Use the rocks around the room walls as safespots for Ranged or Magic.",
         "evidence": {
-          "multi": "not stated (Fremennik Slayer Dungeon page and Multicombat area list say nothing)",
+          "multi": "Location Comparison rows 'Fremennik Slayer Dungeon' / 'Fremennik Slayer Cave': Multicombat {{No}} in Slayer task/Basilisks, Slayer task/Jellies, Slayer task/Kurasks, Slayer task/Turoth and Slayer task/Pyrefiends (the Fremennik Slayer Dungeon page is silent)",
           "cannon": "'Players cannot set up a dwarf multicannon within the caves. Attempting to do so yields the chatbox message: The air is too dank for you to set up a cannon here.' (Fremennik Slayer Dungeon); also on the Dwarf multicannon prohibited list",
           "requirements": "'The first chamber contains eight cave crawlers (level 10 Slayer is required to kill them).' (Fremennik Slayer Dungeon)"
         }
@@ -117,7 +117,7 @@
         "name": "Lumbridge Swamp Caves",
         "displayName": "Lumbridge Swamp Caves",
         "rank": 2,
-        "multi": "unknown",
+        "multi": false,
         "cannon": true,
         "wilderness": false,
         "wildernessLevelMin": null,
@@ -129,7 +129,7 @@
         ],
         "notes": "Only three spawns. Exposed light sources such as candles may explode, so bring a bullseye or oil lantern. A safespot exists at 3180,9591. The Zanaris shed in the swamp is a fast banking route.",
         "evidence": {
-          "multi": "not stated",
+          "multi": "Slayer task/Goblins Location Comparison row 'Lumbridge Swamp Caves': Multicombat {{No}} (the Lumbridge Swamp Caves page and the Multicombat area list are silent)",
           "cannon": "'A Dwarf multicannon can be used in the caves.' (Lumbridge Swamp Caves)",
           "requirements": "'The caves require a light source, unless the player has lit a fire of eternal light near the rope entrance.' (Lumbridge Swamp Caves)"
         }
@@ -324,7 +324,7 @@
         "name": "Lumbridge Swamp Caves",
         "displayName": "Lumbridge Swamp Caves – southern slime room (gas-free)",
         "rank": 1,
-        "multi": "unknown",
+        "multi": false,
         "cannon": true,
         "wilderness": false,
         "wildernessLevelMin": null,
@@ -336,7 +336,7 @@
         ],
         "notes": "Slimes are in two rooms; open light sources ignite gas in the northern room but the entire southern room is risk free. You pass a wall beast to reach either room. Not aggressive.",
         "evidence": {
-          "multi": "not stated",
+          "multi": "Slayer task/Goblins Location Comparison row 'Lumbridge Swamp Caves': Multicombat {{No}} (the Lumbridge Swamp Caves page and the Multicombat area list are silent)",
           "cannon": "'A Dwarf multicannon can be used in the caves.' (Lumbridge Swamp Caves)",
           "requirements": "'As they are located in the Lumbridge Swamp Caves, a rope is needed if you have not entered the dungeon before. A light source is also required, but be aware that any exposed light sources (such as a candle) may explode' (Cave slime)"
         }
@@ -445,7 +445,7 @@
         "name": "Edgeville Dungeon (Wilderness)",
         "displayName": "Edgeville Dungeon – Wilderness section (level 1-5)",
         "rank": 1,
-        "multi": "unknown",
+        "multi": false,
         "cannon": true,
         "wilderness": true,
         "wildernessLevelMin": 1,
@@ -454,7 +454,7 @@
         "requirements": [],
         "notes": "11 spawns in the members-only northern half of the dungeon, next to the Obelisk of Earth. Reach it via Paddewwa Teleport or by walking north from the Edgeville entrance.",
         "evidence": {
-          "multi": "not stated (Edgeville Dungeon page and Multicombat area list say nothing about the dungeon)",
+          "multi": "Slayer task/Earth warriors Location Comparison row 'Edgeville Dungeon (Wilderness)': Multicombat {{No}}; Slayer task/Skeletons row 'Edgeville Dungeon' (19, 7 in wild): Multicombat {{No}} (Edgeville Dungeon page and Multicombat area list are silent)",
           "cannon": "'The Dwarf Multicannon can be used here.' (Edgeville Dungeon)",
           "requirements": "'Only kills within the Wilderness count towards her tasks.' (Krystilia); Wilderness page table: 'Northern Edgeville Dungeon | 1 - 5 | Monsters include Black demons, Earth warriors, and Chaos druids.'"
         }
@@ -463,8 +463,8 @@
         "name": "Chaos Temple (Wilderness)",
         "displayName": "Chaos Temple – eastern Wilderness (Elder Chaos druids, level 11-13)",
         "rank": 2,
-        "multi": "unknown",
-        "cannon": "unknown",
+        "multi": true,
+        "cannon": true,
         "wilderness": true,
         "wildernessLevelMin": 11,
         "wildernessLevelMax": 13,
@@ -472,8 +472,8 @@
         "requirements": [],
         "notes": "13 level 129 Elder Chaos druids around the altar, never tolerant, able to teleblock and pull you within melee range from 20 tiles unless you have read a teleport anchoring scroll. Burning amulet teleports to the north entrance in level 15 Wilderness; the altar restores prayer for Protect from Magic.",
         "evidence": {
-          "multi": "Sources conflict: Multicombat area list names 'The Chaos Temple in the western Wilderness (not the Chaos Temple in the eastern Wilderness)', while the Chaos Temple (Wilderness) page says 'The area is also multi-combat, and contains many elder chaos druids'. Downgraded to unknown.",
-          "cannon": "not stated",
+          "multi": "Chaos Temple (Wilderness): 'The area is also [[multi-combat]], and contains many [[Elder Chaos druid|elder chaos druids]]'; Slayer task/Pirate: 'located at the [[Chaos Temple (Wilderness)|Chaos Temple]]. It is located in [[multi-way combat]] and a [[Dwarf multicannon|cannon]] can be used.' plus row 'Chaos Temple (Wilderness)': Multicombat {{Yes}}. The Multicombat area list names 'The Chaos Temple (church) in the western Wilderness (not the Chaos Temple in the eastern Wilderness)'; the area's own page outranks the list, and multi is also the safer Wilderness answer.",
+          "cannon": "Slayer task/Pirate (zombie pirates at the same temple): 'It is located in [[multi-way combat]] and a [[Dwarf multicannon|cannon]] can be used.'; row 'Chaos Temple (Wilderness)': Cannonable {{Yes}}; not on the Dwarf multicannon prohibited list",
           "requirements": "'Elder Chaos druids are high-level mages found at the Chaos Temple in the Wilderness.' (Elder Chaos druid); Krystilia task table lists Chaos druids at 'Edgeville Dungeon, Chaos Temple (Elder Chaos druids)' with Wilderness levels '1-5, 11-12'; Chaos Temple (Wilderness) page: 'located around level 11 Wilderness'; Wilderness page table lists Chaos Temple at level 13"
         }
       }
@@ -609,7 +609,7 @@
         "name": "Fremennik Slayer Cave",
         "displayName": "Fremennik Slayer Dungeon – third chamber",
         "rank": 1,
-        "multi": "unknown",
+        "multi": false,
         "cannon": false,
         "wilderness": false,
         "wildernessLevelMin": null,
@@ -621,7 +621,7 @@
         ],
         "notes": "Seven cockatrice in the third chamber; not aggressive. Fairy ring AJR is just outside. They commonly drop medium clue scrolls.",
         "evidence": {
-          "multi": "not stated (Fremennik Slayer Dungeon page and Multicombat area list say nothing)",
+          "multi": "Location Comparison rows 'Fremennik Slayer Dungeon' / 'Fremennik Slayer Cave': Multicombat {{No}} in Slayer task/Basilisks, Slayer task/Jellies, Slayer task/Kurasks, Slayer task/Turoth and Slayer task/Pyrefiends (the Fremennik Slayer Dungeon page is silent)",
           "cannon": "'A dwarf multicannon cannot be set up in the Fremmenik Slayer Caves.' (Cockatrice); 'Players cannot set up a dwarf multicannon within the caves.' (Fremennik Slayer Dungeon); Dwarf multicannon prohibited list",
           "requirements": "'The third chamber contains seven cockatrice. They require level 25 Slayer and a mirror shield - without one, the player's stats (including life points) will be dangerously reduced.' (Fremennik Slayer Dungeon); 'As 20 Defence is needed to be able to wield a mirror shield, players who do not meet this requirement will not be assigned them as a task.' (Cockatrice)"
         }
@@ -700,8 +700,8 @@
         "name": "Lumbridge East farm",
         "displayName": "Lumbridge east cow field (north of the Al Kharid gate)",
         "rank": 2,
-        "multi": "unknown",
-        "cannon": "unknown",
+        "multi": false,
+        "cannon": true,
         "wilderness": false,
         "wildernessLevelMin": null,
         "wildernessLevelMax": null,
@@ -709,8 +709,8 @@
         "requirements": [],
         "notes": "Named in the Slayer task list as 'North of Al Kharid gate'. Often crowded with new players; the spot north of the windmill north-west of Lumbridge is usually emptier.",
         "evidence": {
-          "multi": "not stated",
-          "cannon": "not stated",
+          "multi": "Slayer task/Goblins Location Comparison row 'Lumbridge': Multicombat {{No}} (same Lumbridge surroundings; Lumbridge is not in the Multicombat area list)",
+          "cannon": "Slayer task/Goblins Location Comparison row 'Lumbridge': Cannonable {{Yes}}",
           "requirements": "not stated"
         }
       },
@@ -929,7 +929,7 @@
         "name": "Isle of Souls",
         "displayName": "Isle of Souls (Sand Crabs)",
         "rank": 9,
-        "multi": "unknown",
+        "multi": false,
         "cannon": false,
         "wilderness": false,
         "wildernessLevelMin": null,
@@ -938,7 +938,7 @@
         "requirements": [],
         "notes": "Reach it through the Soul Wars portal near the Edgeville ruins, the portal in the Ferox Enclave Dungeon or the Soul Wars Minigame Teleport. The only bank is in the Soul Wars lobby.",
         "evidence": {
-          "multi": "not stated",
+          "multi": "Isle of Souls: 'Apart from a small area in the north where there are a few [[bird]]s, the entire island is [[single-way combat]].'",
           "cannon": "Sand Crab infobox immunecannon = Yes; 'The dwarf multicannon cannot be used against them.' (Sand Crab)",
           "requirements": "'The isle can be accessed through a few different means: Entering the Soul Wars Portal near the Edgeville ruins. Entering the Soul Wars Portal inside the Ferox Enclave Dungeon. Using the Soul Wars Minigame Teleport.' (Isle of Souls); Sand Crab LocLine 'Isle of Souls'"
         }

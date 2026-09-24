@@ -446,8 +446,8 @@
         "name": "Lumbridge East Farm",
         "displayName": "Lumbridge east farm (chickens)",
         "rank": 2,
-        "multi": "unknown",
-        "cannon": "unknown",
+        "multi": false,
+        "cannon": true,
         "wilderness": false,
         "wildernessLevelMin": null,
         "wildernessLevelMax": null,
@@ -455,8 +455,8 @@
         "requirements": [],
         "notes": "Free-to-play chicken farm east of the River Lum next to Lumbridge; often crowded.",
         "evidence": {
-          "multi": "not stated (Chicken page LocLine only)",
-          "cannon": "not stated",
+          "multi": "Slayer task/Goblins Location Comparison row 'Lumbridge': Multicombat {{No}} (same Lumbridge surroundings; Lumbridge is not in the Multicombat area list)",
+          "cannon": "Slayer task/Goblins Location Comparison row 'Lumbridge': Cannonable {{Yes}}",
           "requirements": "not stated"
         }
       },
@@ -950,7 +950,7 @@
         "displayName": "Lava Maze (Wilderness level 40-45)",
         "rank": 1,
         "multi": true,
-        "cannon": "unknown",
+        "cannon": true,
         "wilderness": true,
         "wildernessLevelMin": 40,
         "wildernessLevelMax": 45,
@@ -961,7 +961,7 @@
         "notes": "9 black knight spawns inside the maze; fastest access is the burning amulet Lava Maze teleport to the west entrance, or the level 44 obelisk.",
         "evidence": {
           "multi": "Multicombat area list: 'Several places in the Wilderness including the areas at or around: The Lava Maze' (Multicombat area)",
-          "cannon": "not stated",
+          "cannon": "Location Comparison rows 'Lava Maze': Cannonable {{Yes}} in Slayer task/Hill giants and Slayer task/Lesser demon; the Lava Maze is not on the Dwarf multicannon prohibited list",
           "requirements": "'In the entrance and partway through the maze, there are spiderwebs that must be cut with a slash weapon or a knife.' (Lava Maze); Krystilia task table: Black Knights at 'South of Silk Chasm, Lava Maze' Wilderness level '~35, ~40' (Krystilia)"
         }
       },
