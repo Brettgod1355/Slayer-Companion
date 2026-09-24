@@ -102,6 +102,16 @@ public class UpgradeAdvisorTest
 	}
 
 	@Test
+	public void itemCountsAtItsBestTierWhateverTheTableOrder()
+	{
+		// Second tier in the first table, top tier in the second: the task counts it as top tier.
+		task("Abyssal demons",
+			table("Melee", "weapon", tiers(tier("Abyssal tentacle"), tier("Abyssal whip"))),
+			table("Ranged", "weapon", tiers(tier("Abyssal whip"))));
+		assertEquals(1.0, find(advisor().suggest(null, null), "Abyssal whip").getScore(), EPS);
+	}
+
+	@Test
 	public void eachTaskHelpedAddsToTheScore()
 	{
 		task("Abyssal demons", table("Melee", "head", tiers(tier("Slayer helmet (i)"))));

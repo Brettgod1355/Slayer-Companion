@@ -1064,10 +1064,12 @@ def parse_recommended_equipment(t: Template, efn_names: dict[str, str]) -> dict:
         tiers[tier - 1] = items
         if notes:
             slot_notes.setdefault(slot, []).extend(notes)
-    # trim trailing empty tiers
-    for slot, tiers in slots.items():
-        while tiers and not tiers[-1]:
-            tiers.pop()
+    # Drop empty tiers (the wiki leaves some rows blank, e.g. no ammo in a melee setup): tiers are an
+    # order of preference, so the next filled row moves up. Slots left with nothing are dropped.
+    for slot in list(slots):
+        slots[slot] = [tier for tier in slots[slot] if tier]
+        if not slots[slot]:
+            del slots[slot]
     return {
         "style": plain_text(named.get("style", "")) or None,
         "slots": slots,
@@ -2340,6 +2342,26 @@ def read_task_list(path: Path) -> list[TaskRow]:
     return rows
 
 
+def name_variants(monsters: list[dict]) -> None:
+    """Give every monster record a name the plugin can use as a variant key.
+
+    Variant names must be unique within a task and match the names in locations' `monsters`
+    lists, which use the {{LocLine}} name or else the page title. A record without an infobox
+    name, or whose name another record of the task shares (e.g. "Dagannoth" on both
+    `Dagannoth` and `Dagannoth (Waterbirth Island)`), takes its page title instead.
+    """
+    counts: dict[str, int] = {}
+    for m in monsters:
+        if m.get("name"):
+            counts[m["name"].lower()] = counts.get(m["name"].lower(), 0) + 1
+    for m in monsters:
+        name = m.get("name")
+        if not m.get("hasInfobox"):
+            continue
+        if not name or (counts[name.lower()] > 1 and name != m["page"]):
+            m["name"] = m["page"]
+
+
 def build_task(cache: WikiCache, row: TaskRow, report: dict) -> dict:
     print(f"== {row.display}", file=sys.stderr)
     task_page, tried = resolve_task_page(cache, row.display)
@@ -2412,6 +2434,7 @@ def build_task(cache: WikiCache, row: TaskRow, report: dict) -> dict:
             entry.update(info)
         task["monsters"].append(entry)
     task["locations"] = merge_locations(raw_locs)
+    name_variants(task["monsters"])
 
     primary = None
     for m in task["monsters"]:

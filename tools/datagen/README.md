@@ -342,3 +342,13 @@ Access: 1025 location records carry 537 requirement strings (377 distinct) →
    tables (mostly low-level tasks); `gearSources` shows which `/Strategies` titles were tried. When
    the wiki has a strategy page under another name, add it to `STRATEGY_PAGE_OVERRIDES` (the task's
    own monster) or `STRATEGY_VARIANT_PAGES` (a variant; labels get a prefix).
+
+### Variant names and empty tiers
+
+* `name_variants()` gives every monster record a name that works as the plugin's variant key: a
+  record without an infobox name, or one whose name another record of the same task shares
+  (`Dagannoth` vs `Dagannoth (Waterbirth Island)`), takes its page title. Locations' `monsters`
+  lists already use the page title in those cases, so the variant filter lines up.
+* Gear slots drop empty tiers (the wiki leaves some rows blank); the next filled row moves up and
+  a slot with nothing left is removed.
+

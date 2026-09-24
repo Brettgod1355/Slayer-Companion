@@ -109,7 +109,7 @@ public class UpgradeAdvisor
 			{
 				continue;
 			}
-			Set<String> countedForTask = new java.util.HashSet<>();
+			Map<String, Double> bestForTask = new java.util.HashMap<>();
 			for (GearTable table : task.gearTablesOrEmpty())
 			{
 				if (styleFilter != null && (table.getStyle() == null || !table.getStyle().equalsIgnoreCase(styleFilter)))
@@ -138,16 +138,21 @@ public class UpgradeAdvisor
 								continue;
 							}
 							String name = item.label();
-							if (!countedForTask.add(name))
+							// Count an item once per task, at its best tier across this task's tables and slots.
+							Double prev = bestForTask.get(name);
+							if (prev == null || tierWeight > prev)
 							{
-								continue;
+								bestForTask.put(name, tierWeight);
 							}
-							score.merge(name, w * tierWeight, Double::sum);
 							helps.computeIfAbsent(name, k -> new LinkedHashSet<>()).add(task.getTask());
 							slotOf.putIfAbsent(name, slot.getKey());
 						}
 					}
 				}
+			}
+			for (Map.Entry<String, Double> e : bestForTask.entrySet())
+			{
+				score.merge(e.getKey(), w * e.getValue(), Double::sum);
 			}
 		}
 

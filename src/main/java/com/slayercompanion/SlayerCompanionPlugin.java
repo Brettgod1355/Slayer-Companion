@@ -92,7 +92,7 @@ import net.runelite.client.util.LinkBrowser;
 public class SlayerCompanionPlugin extends Plugin
 {
 	/** Shown in the panel footer; bumped together with build.gradle and runelite-plugin.properties. */
-	public static final String VERSION = "0.3.2";
+	public static final String VERSION = "0.4.0";
 
 	private static final String WIKI_BASE = "https://oldschool.runescape.wiki/w/";
 	/** Refresh the Wilderness numbers at most this often (game ticks). */
@@ -340,7 +340,7 @@ public class SlayerCompanionPlugin extends Plugin
 				variantNames.add(mon.getName());
 			}
 		}
-		String favourite = task == null ? null : locationService.favourite(task.getName());
+		String favourite = info == null ? null : locationService.favourite(info.getTask());
 		java.util.Map<String, com.slayercompanion.game.LockState> locks = new java.util.HashMap<>();
 		if (loggedIn)
 		{
@@ -463,10 +463,12 @@ public class SlayerCompanionPlugin extends Plugin
 		@Override
 		public void setFavourite(String taskName, @Nullable String locationId)
 		{
-			locationService.setFavourite(taskName, locationId);
+			// Key by the bundled task name, as the readers do; the game's name can be an alternative ("Artio").
+			String key = data.task(taskName).map(com.slayercompanion.data.TaskInfo::getTask).orElse(taskName);
+			locationService.setFavourite(key, locationId);
 			clientThread.invokeLater(() ->
 			{
-				data.task(taskName).ifPresent(SlayerCompanionPlugin.this::updateMarkers);
+				data.task(key).ifPresent(SlayerCompanionPlugin.this::updateMarkers);
 				requestRefresh();
 			});
 		}
@@ -474,10 +476,12 @@ public class SlayerCompanionPlugin extends Plugin
 		@Override
 		public void setVariant(String taskName, @Nullable String monsterName)
 		{
-			locationService.setVariant(taskName, monsterName);
+			// Key by the bundled task name, as the readers do; the game's name can be an alternative ("Artio").
+			String key = data.task(taskName).map(com.slayercompanion.data.TaskInfo::getTask).orElse(taskName);
+			locationService.setVariant(key, monsterName);
 			clientThread.invokeLater(() ->
 			{
-				data.task(taskName).ifPresent(SlayerCompanionPlugin.this::updateMarkers);
+				data.task(key).ifPresent(SlayerCompanionPlugin.this::updateMarkers);
 				requestRefresh();
 			});
 		}

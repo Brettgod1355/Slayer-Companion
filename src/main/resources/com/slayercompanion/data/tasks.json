@@ -3845,7 +3845,6 @@
         },
         "slots": {
           "ammo": [
-            [],
             [
               {
                 "name": "Rada's blessing 4"
@@ -5601,7 +5600,6 @@
                 "name": "Dragon hunter crossbow"
               }
             ],
-            [],
             [
               {
                 "name": "Bow of Faerdhinen"
@@ -11249,7 +11247,6 @@
             ]
           ],
           "shield": [
-            [],
             [
               {
                 "name": "Book of Law"
@@ -11346,7 +11343,6 @@
                 "name": "Black mask (i)"
               }
             ],
-            [],
             [
               {
                 "name": "Mitre",
@@ -11391,7 +11387,6 @@
               }
             ]
           ],
-          "shield": [],
           "weapon": [
             [
               {
@@ -14356,7 +14351,6 @@
               }
             ]
           ],
-          "feet": [],
           "hands": [
             [
               {
@@ -14464,7 +14458,6 @@
               }
             ]
           ],
-          "ring": [],
           "special": [
             [
               {
@@ -14537,7 +14530,7 @@
         },
         "annotations": [],
         "annotationsRaw": [],
-        "cannon": "unknown",
+        "cannon": false,
         "coordsMissing": false,
         "curated": true,
         "curatedName": "East of Mort'ton",
@@ -14552,7 +14545,7 @@
         "monsters": [
           "Barrows"
         ],
-        "multi": "unknown",
+        "multi": false,
         "name": "Barrows",
         "notes": "Reach by Barrows Teleport (Arceuus, 83 Magic) or a Barrows teleport tablet / house portal, the Shades of Mort'ton minigame teleport, fairy ring BIP with the 50 Agility stepping stone, Kharyrll teleport, or Drakan's medallion to Ver Sinhaza then the boat to Burgh de Rott.",
         "pages": [
@@ -15777,7 +15770,6 @@
                 "name": "Magus ring"
               }
             ],
-            [],
             [
               {
                 "name": "Seers ring (i)"
@@ -23152,7 +23144,7 @@
         },
         "annotations": [],
         "annotationsRaw": [],
-        "cannon": "unknown",
+        "cannon": true,
         "coordsMissing": false,
         "curated": true,
         "curatedName": "Lumbridge East Farm",
@@ -23169,7 +23161,7 @@
         "monsters": [
           "Chicken"
         ],
-        "multi": "unknown",
+        "multi": false,
         "name": "Lumbridge East Farm",
         "notes": "Free-to-play chicken farm east of the River Lum next to Lumbridge; often crowded.",
         "pages": [
@@ -33730,7 +33722,7 @@
         },
         "annotations": [],
         "annotationsRaw": [],
-        "cannon": "unknown",
+        "cannon": true,
         "coordsMissing": false,
         "curated": true,
         "curatedName": "Lava Maze (Wilderness)",
@@ -38675,7 +38667,6 @@
             ]
           ],
           "shield": [
-            [],
             [
               {
                 "name": "Twisted buckler"
@@ -40385,7 +40376,7 @@
         "monsters": [
           "Cave bug"
         ],
-        "multi": "unknown",
+        "multi": false,
         "name": "Lumbridge Swamp Caves",
         "notes": "Enter via the rope hole in Lumbridge Swamp near the candle seller. Level 6 bugs are aggressive but max hit 1. Open light sources can ignite swamp gas in the north-west and south-middle sections; wall beasts sit in narrow corridors, so stop one square behind the hole in the wall and run past.",
         "pages": [
@@ -40932,7 +40923,7 @@
         "monsters": [
           "Cave crawler"
         ],
-        "multi": "unknown",
+        "multi": false,
         "name": "Fremennik Slayer Dungeon",
         "notes": "Eight cave crawlers in the first chamber; fairy ring AJR is just outside for banking. Aggressive only to players of combat level 46 and below. Use the rocks around the room walls as safespots for Ranged or Magic.",
         "pages": [
@@ -41053,7 +41044,7 @@
         "monsters": [
           "Cave crawler"
         ],
-        "multi": "unknown",
+        "multi": false,
         "name": "Lumbridge Swamp Caves",
         "notes": "Only three spawns. Exposed light sources such as candles may explode, so bring a bullseye or oil lantern. A safespot exists at 3180,9591. The Zanaris shed in the swamp is a fast banking route.",
         "pages": [
@@ -43079,7 +43070,7 @@
         "locLines": 1,
         "mapLocations": 0,
         "maxHit": "13",
-        "name": null,
+        "name": "Cave kraken",
         "npcIds": [
           493
         ],
@@ -43129,7 +43120,7 @@
         "locLines": 1,
         "mapLocations": 0,
         "maxHit": "28",
-        "name": null,
+        "name": "Kraken",
         "npcIds": [
           496
         ],
@@ -43266,7 +43257,7 @@
         "monsters": [
           "Cave slime"
         ],
-        "multi": "unknown",
+        "multi": false,
         "name": "Lumbridge Swamp Caves",
         "notes": "Slimes are in two rooms; open light sources ignite gas in the northern room but the entire southern room is risk free. You pass a wall beast to reach either room. Not aggressive.",
         "pages": [
@@ -43969,7 +43960,6 @@
                 "name": "Berserker ring (i)"
               }
             ],
-            [],
             [
               {
                 "name": "Lightbearer"
@@ -44296,7 +44286,6 @@
                 "name": "Ring of suffering (ri)"
               }
             ],
-            [],
             [
               {
                 "name": "Ring of the gods (i)"
@@ -44560,7 +44549,7 @@
         "monsters": [
           "Chaos druid"
         ],
-        "multi": "unknown",
+        "multi": false,
         "name": "Edgeville Dungeon (Wilderness)",
         "notes": "11 spawns in the members-only northern half of the dungeon, next to the Obelisk of Earth. Reach it via Paddewwa Teleport or by walking north from the Edgeville entrance.",
         "pages": [
@@ -44677,7 +44666,7 @@
         },
         "annotations": [],
         "annotationsRaw": [],
-        "cannon": "unknown",
+        "cannon": true,
         "coordsMissing": false,
         "curated": true,
         "curatedName": "Chaos Temple (Wilderness)",
@@ -44694,7 +44683,7 @@
         "monsters": [
           "Elder Chaos druid"
         ],
-        "multi": "unknown",
+        "multi": true,
         "name": "Chaos Temple (Wilderness)",
         "notes": "13 level 129 Elder Chaos druids around the altar, never tolerant, able to teleblock and pull you within melee range from 20 tiles unless you have read a teleport anchoring scroll. Burning amulet teleports to the north entrance in level 15 Wilderness; the altar restores prayer for Protect from Magic.",
         "pages": [
@@ -45683,7 +45672,6 @@
             ]
           ],
           "shield": [
-            [],
             [
               {
                 "name": "Book of Law"
@@ -46681,7 +46669,7 @@
         "monsters": [
           "Cockatrice"
         ],
-        "multi": "unknown",
+        "multi": false,
         "name": "Fremennik Slayer Cave",
         "notes": "Seven cockatrice in the third chamber; not aggressive. Fairy ring AJR is just outside. They commonly drop medium clue scrolls.",
         "pages": [
@@ -47173,7 +47161,7 @@
         },
         "annotations": [],
         "annotationsRaw": [],
-        "cannon": "unknown",
+        "cannon": true,
         "coordsMissing": false,
         "curated": true,
         "curatedName": "Lumbridge East farm",
@@ -47190,7 +47178,7 @@
         "monsters": [
           "Cow"
         ],
-        "multi": "unknown",
+        "multi": false,
         "name": "Lumbridge East farm",
         "notes": "Named in the Slayer task list as 'North of Al Kharid gate'. Often crowded with new players; the spot north of the windmill north-west of Lumbridge is usually emptier.",
         "pages": [
@@ -51678,7 +51666,7 @@
         "monsters": [
           "Sand Crab"
         ],
-        "multi": "unknown",
+        "multi": false,
         "name": "Isle of Souls",
         "notes": "Reach it through the Soul Wars portal near the Edgeville ruins, the portal in the Ferox Enclave Dungeon or the Soul Wars Minigame Teleport. The only bank is in the Soul Wars lobby.",
         "pages": [
@@ -55068,7 +55056,7 @@
         "locLines": 2,
         "mapLocations": 0,
         "maxHit": "1",
-        "name": null,
+        "name": "Frost Crab",
         "npcIds": [
           13789,
           13791
@@ -55116,7 +55104,7 @@
         "locLines": 2,
         "mapLocations": 0,
         "maxHit": "6",
-        "name": null,
+        "name": "King Sand Crab",
         "npcIds": [
           7266
         ],
@@ -55161,7 +55149,7 @@
         "locLines": 6,
         "mapLocations": 0,
         "maxHit": "1",
-        "name": null,
+        "name": "Rock Crab",
         "npcIds": [
           100,
           102
@@ -55258,7 +55246,7 @@
         "locLines": 9,
         "mapLocations": 0,
         "maxHit": "1",
-        "name": null,
+        "name": "Sand Crab",
         "npcIds": [
           5935,
           7206
@@ -55306,7 +55294,7 @@
         "locLines": 2,
         "mapLocations": 0,
         "maxHit": "1",
-        "name": null,
+        "name": "Swamp Crab",
         "npcIds": [
           8297
         ],
@@ -55446,7 +55434,7 @@
         "monsters": [
           "Crawling Hand"
         ],
-        "multi": "unknown",
+        "multi": false,
         "name": "Slayer Tower",
         "notes": "24 crawling hand spawns in the west wing and part of the east wing; banshees share the east wing. Reached from Canifis (Slayer ring or Kharyrll/Fenkenstrain teleports nearby). Do not climb the 61 Agility spiked chain without a nose peg or Slayer helmet because aberrant spectres are upstairs.",
         "pages": [
@@ -60377,7 +60365,7 @@
           "Level 88": "20",
           "Level 90": "15"
         },
-        "name": "Dagannoth",
+        "name": "Dagannoth (Waterbirth Island)",
         "npcIds": [
           2259,
           5942
@@ -62533,7 +62521,6 @@
                 "name": "Burning claws"
               }
             ],
-            [],
             [
               {
                 "name": "Voidwaker"
@@ -62615,7 +62602,6 @@
                 "name": "Sunfire fanatic cuirass"
               }
             ],
-            [],
             [
               {
                 "name": "Proselyte hauberk"
@@ -62753,7 +62739,6 @@
                 "name": "Sunfire fanatic chausses"
               }
             ],
-            [],
             [
               {
                 "name": "Proselyte cuisse"
@@ -68073,7 +68058,6 @@
                 "name": "Echo boots"
               }
             ],
-            [],
             [
               {
                 "name": "Dragon boots"
@@ -69465,7 +69449,6 @@
               }
             ]
           ],
-          "shield": [],
           "special": [
             [
               {
@@ -80603,7 +80586,7 @@
         "monsters": [
           "Frost Dragon"
         ],
-        "multi": "unknown",
+        "multi": false,
         "name": "Grimstone Dungeon",
         "notes": "The only location for frost dragons. The dragons are in the centre of the dungeon, reached by climbing up the rock face from the north or south (the south climb needs 83 Agility, boostable). Loot spawns on the dragon's central north-eastern tile. Off-task attacks on the western cave give the message 'You feel a strange coldness wash over you'.",
         "pages": [
@@ -83419,7 +83402,6 @@
                 "name": "Zaryte vambraces"
               }
             ],
-            [],
             [
               {
                 "name": "Barrows gloves"
@@ -83944,7 +83926,7 @@
         },
         "annotations": [],
         "annotationsRaw": [],
-        "cannon": "unknown",
+        "cannon": false,
         "coordsMissing": false,
         "curated": true,
         "curatedName": "God Wars Dungeon (Bandos boss room)",
@@ -86554,7 +86536,7 @@
         "monsters": [
           "Ghoul"
         ],
-        "multi": "unknown",
+        "multi": false,
         "name": "South of the Slayer Tower",
         "notes": "12 ghoul spawns (12 LocLine pins) on the grounds south of the Slayer Tower and west of Canifis; the Canifis page says 'The northern ghoul grounds features 12 ghouls, great for Slayer tasks'. Reach it via the Kharyrll Teleport (Canifis bank), a Slayer ring to the Slayer Tower entrance north of the town, or fairy ring CKS just west of Canifis (Canifis page teleport list).",
         "pages": [
@@ -86711,7 +86693,7 @@
         "monsters": [
           "Ghoul"
         ],
-        "multi": "unknown",
+        "multi": false,
         "name": "North of Mort Myre Swamp",
         "notes": "10 ghouls (10 LocLine pins) walk the Salve graveyard 'just north of the swamp' (Canifis). The Salve Graveyard Teleport lands 'slightly west of the town' and fairy ring CKS is nearby. The Ghoul page's safespot 'between two gravestones and a cross on the eastern side, directly north from the Large grave' is described for 'the ghouls to the west of Canifis' without naming the cluster; the Large grave page places one large grave at the eastern edge of this cluster (3434,3457) and another south of the Slayer Tower cluster (3413,3495), so it may apply to either. Retreating ghouls 'walk back to the water and will still be within range'.",
         "pages": [
@@ -88647,7 +88629,7 @@
         },
         "annotations": [],
         "annotationsRaw": [],
-        "cannon": "unknown",
+        "cannon": true,
         "coordsMissing": false,
         "curated": true,
         "curatedName": "Mole Hole (Under Falador Park)",
@@ -91113,7 +91095,7 @@
         },
         "annotations": [],
         "annotationsRaw": [],
-        "cannon": "unknown",
+        "cannon": false,
         "coordsMissing": false,
         "curated": true,
         "curatedName": "God Wars Dungeon",
@@ -91195,7 +91177,7 @@
         },
         "annotations": [],
         "annotationsRaw": [],
-        "cannon": "unknown",
+        "cannon": true,
         "coordsMissing": false,
         "curated": true,
         "curatedName": "Clock Tower Dungeon",
@@ -93004,7 +92986,7 @@
         "locLines": 2,
         "mapLocations": 0,
         "maxHit": "1",
-        "name": "Goblin",
+        "name": "Goblin (Goblin Village)",
         "npcIds": [
           655,
           656,
@@ -94338,7 +94320,7 @@
         },
         "annotations": [],
         "annotationsRaw": [],
-        "cannon": "unknown",
+        "cannon": true,
         "coordsMissing": false,
         "curated": true,
         "curatedName": "Sisterhood Sanctuary",
@@ -94357,7 +94339,7 @@
         "monsters": [
           "Greater demon"
         ],
-        "multi": "unknown",
+        "multi": false,
         "name": "Sisterhood Sanctuary",
         "notes": "4 level-92 demons (Greater demon LocLine, 4 pins; Sisterhood Sanctuary monster list '4 greater demons'). Not in the task page location table. Reached via Slepe (Drakan's medallion 'Slepe' option after using a Slepey tablet, or Ver Sinhaza then run north).",
         "pages": [
@@ -100516,9 +100498,9 @@
         "monsters": [
           "Hill Giant"
         ],
-        "multi": "unknown",
+        "multi": true,
         "name": "Lava Maze",
-        "notes": "4 giants inside the maze (4 LocLine pins); webs 'must be cut with a slash weapon or a knife'. 'The Lava Maze is a maze located deep in the Wilderness, around level 40-45.' The task table says single-way while the Multicombat area list names 'The Lava Maze' among multi areas; left unknown.",
+        "notes": "4 giants inside the maze (4 LocLine pins); webs 'must be cut with a slash weapon or a knife'. 'The Lava Maze is a maze located deep in the Wilderness, around level 40-45.' The task table says single-way while the Multicombat area list names 'The Lava Maze' among multi areas; the list is followed (see evidence).",
         "pages": [
           "Hill Giant"
         ],
@@ -101727,7 +101709,7 @@
         "locLines": 1,
         "mapLocations": 0,
         "maxHit": "12",
-        "name": "Cyclops",
+        "name": "Cyclops (God Wars Dungeon)",
         "npcIds": [
           2235
         ],
@@ -103239,7 +103221,7 @@
         },
         "annotations": [],
         "annotationsRaw": [],
-        "cannon": "unknown",
+        "cannon": true,
         "coordsMissing": false,
         "curated": true,
         "curatedName": "Crandor",
@@ -103258,7 +103240,7 @@
         "monsters": [
           "Hobgoblin"
         ],
-        "multi": "unknown",
+        "multi": false,
         "name": "Crandor",
         "notes": "5 level-28 hobgoblins (5 LocLine pins) on Crandor.",
         "pages": [
@@ -103327,7 +103309,7 @@
         },
         "annotations": [],
         "annotationsRaw": [],
-        "cannon": "unknown",
+        "cannon": true,
         "coordsMissing": false,
         "curated": true,
         "curatedName": "Witchaven Dungeon",
@@ -103346,7 +103328,7 @@
         "monsters": [
           "Hobgoblin"
         ],
-        "multi": "unknown",
+        "multi": false,
         "name": "Witchaven Dungeon",
         "notes": "4 level-28 hobgoblins (4 LocLine pins): 'When you enter the dungeon, you will come into a room containing aggressive level 28 hobgoblins' (Witchaven Dungeon).",
         "pages": [
@@ -103543,7 +103525,7 @@
         },
         "annotations": [],
         "annotationsRaw": [],
-        "cannon": "unknown",
+        "cannon": true,
         "coordsMissing": false,
         "curated": true,
         "curatedName": "Clock Tower Dungeon",
@@ -103562,7 +103544,7 @@
         "monsters": [
           "Hobgoblin"
         ],
-        "multi": "unknown",
+        "multi": false,
         "name": "Clock Tower Dungeon",
         "notes": "2 level-28 hobgoblins (2 LocLine pins).",
         "pages": [
@@ -106489,7 +106471,7 @@
         "monsters": [
           "Ice warrior"
         ],
-        "multi": "unknown",
+        "multi": true,
         "name": "White Wolf Mountain",
         "notes": "Safespot south of the middle dungeon marker outside the triple-ladder enclosure; level 25 and 38 wolves are aggressive unless your combat level exceeds double theirs.",
         "pages": [
@@ -109056,7 +109038,6 @@
                 "name": "Holy sandals"
               }
             ],
-            [],
             [
               {
                 "name": "Fancy boots"
@@ -112035,7 +112016,7 @@
         },
         "annotations": [],
         "annotationsRaw": [],
-        "cannon": "unknown",
+        "cannon": true,
         "coordsMissing": false,
         "curated": true,
         "curatedName": "Mos Le'Harmless",
@@ -112052,7 +112033,7 @@
         "monsters": [
           "Jungle horror"
         ],
-        "multi": "unknown",
+        "multi": false,
         "name": "Mos Le'Harmless",
         "notes": "Largest camp (about 10-12) directly north of the settlement exit; one spawn near the opening in the northern wall and a group at the north-east corner of the wall can be safespotted; Joe by the gate sells stews and wine. Reach the island via Bill Teach at Port Phasmatys or the charter ships.",
         "pages": [
@@ -116354,7 +116335,6 @@
                 "name": "Neitiznot faceguard"
               }
             ],
-            [],
             [
               {
                 "name": "Helm of Neitiznot"
@@ -117063,7 +117043,6 @@
                 "name": "Zaryte vambraces"
               }
             ],
-            [],
             [
               {
                 "name": "Barrows gloves"
@@ -117955,7 +117934,7 @@
         "locLines": 1,
         "mapLocations": 0,
         "maxHit": "28",
-        "name": null,
+        "name": "Kraken",
         "npcIds": [
           496
         ],
@@ -118789,7 +118768,6 @@
                 "name": "Diamond bolts (e)"
               }
             ],
-            [],
             [
               {
                 "name": "Ruby bolts (e)"
@@ -123732,7 +123710,7 @@
         "monsters": [
           "Lesser demon"
         ],
-        "multi": "unknown",
+        "multi": true,
         "name": "Wilderness - by the muddy chest in the Lava Maze",
         "notes": "'Slash weapon or knife needed', 'Level 40-45 wilderness'. Only 2 demons; deep Wilderness.",
         "pages": [
@@ -126128,7 +126106,6 @@
                 "name": "Ardougne cloak 4"
               }
             ],
-            [],
             [
               {
                 "name": "Ava's accumulator"
@@ -126233,7 +126210,6 @@
             ]
           ],
           "shield": [
-            [],
             [
               {
                 "name": "Antler guard"
@@ -138482,7 +138458,7 @@
         "locLines": 3,
         "mapLocations": 0,
         "maxHit": "6",
-        "name": "Mogre",
+        "name": "Mogre (sea)",
         "npcIds": [
           15230,
           15232
@@ -143801,7 +143777,7 @@
         "locLines": 1,
         "mapLocations": 0,
         "maxHit": "14",
-        "name": "Moss Giant",
+        "name": "Moss Giant (Iorwerth Dungeon)",
         "npcIds": [
           8736
         ],
@@ -144256,7 +144232,6 @@
                 "name": "Occult necklace"
               }
             ],
-            [],
             [
               {
                 "name": "Bonecrusher necklace"
@@ -144636,7 +144611,6 @@
                 "name": "Berserker ring (i)"
               }
             ],
-            [],
             [
               {
                 "name": "Ring of shadows"
@@ -149092,7 +149066,6 @@
                 "txt": "Ring of suffering (ri)"
               }
             ],
-            [],
             [
               {
                 "name": "Ring of shadows"
@@ -153857,7 +153830,7 @@
         },
         "annotations": [],
         "annotationsRaw": [],
-        "cannon": "unknown",
+        "cannon": false,
         "coordsMissing": false,
         "curated": true,
         "curatedName": "Barrows crypt",
@@ -153874,7 +153847,7 @@
         "monsters": [
           "Crypt rat"
         ],
-        "multi": "unknown",
+        "multi": false,
         "name": "Barrows (tunnels)",
         "notes": "Crypt rats (35 xp per infobox; the task page table says 45) and giant crypt rats (70 xp) inside the Barrows tunnels; killing them also changes reward potential in the minigame.",
         "pages": [
@@ -166165,7 +166138,7 @@
         "monsters": [
           "Red dragon"
         ],
-        "multi": "unknown",
+        "multi": false,
         "name": "Dragon Nest",
         "notes": "Listed on the Red dragon LocLine list but not on the task page. Dragon Nest page: 5 blue dragons, 5 red dragons, 2 baby blue dragons and 2 baby red dragons, plus burnt bones and coin spawns.",
         "pages": [
@@ -167229,7 +167202,6 @@
                 "name": "Crystal shield"
               }
             ],
-            [],
             [
               {
                 "name": "Toktz-ket-xil"
@@ -169672,9 +169644,6 @@
                 "name": "Amulet of fury"
               }
             ],
-            [],
-            [],
-            [],
             [
               {
                 "name": "Amulet of glory"
@@ -169732,8 +169701,6 @@
                 "name": "Dragon dagger"
               }
             ],
-            [],
-            [],
             [
               {
                 "name": "Dragon mace"
@@ -170208,7 +170175,6 @@
               }
             ]
           ],
-          "special": [],
           "weapon": [
             [
               {
@@ -173128,7 +173094,7 @@
         },
         "annotations": [],
         "annotationsRaw": [],
-        "cannon": "unknown",
+        "cannon": true,
         "coordsMissing": false,
         "curated": true,
         "curatedName": "Lava Maze",
@@ -175557,7 +175523,7 @@
         },
         "annotations": [],
         "annotationsRaw": [],
-        "cannon": "unknown",
+        "cannon": "partial",
         "coordsMissing": false,
         "curated": true,
         "curatedName": "Mort'ton",
@@ -176833,7 +176799,7 @@
         "locLines": 1,
         "mapLocations": 0,
         "maxHit": "4",
-        "name": null,
+        "name": "Loar Shade",
         "npcIds": [
           1277
         ],
@@ -176881,7 +176847,7 @@
         "locLines": 1,
         "mapLocations": 0,
         "maxHit": "6",
-        "name": null,
+        "name": "Phrin Shade",
         "npcIds": [
           1280
         ],
@@ -176929,7 +176895,7 @@
         "locLines": 1,
         "mapLocations": 0,
         "maxHit": "6",
-        "name": null,
+        "name": "Riyl Shade",
         "npcIds": [
           1282
         ],
@@ -176977,7 +176943,7 @@
         "locLines": 1,
         "mapLocations": 0,
         "maxHit": "9",
-        "name": null,
+        "name": "Asyn Shade",
         "npcIds": [
           1284
         ],
@@ -177025,7 +176991,7 @@
         "locLines": 1,
         "mapLocations": 0,
         "maxHit": "11",
-        "name": null,
+        "name": "Fiyr Shade",
         "npcIds": [
           1286
         ],
@@ -177073,7 +177039,7 @@
         "locLines": 1,
         "mapLocations": 0,
         "maxHit": "13",
-        "name": null,
+        "name": "Urium Shade",
         "npcIds": [
           10589
         ],
@@ -177187,7 +177153,7 @@
         "monsters": [
           "Shadow warrior"
         ],
-        "multi": "unknown",
+        "multi": false,
         "name": "Legends' Guild Dungeon",
         "notes": "Take the stairs down inside the guild; giant bats and pit scorpions share the dungeon. Safespot through the fence separating them from the pit scorpions, or behind the fungus near the cavern wall once they lose aggression. Fairy ring BLR is just east of the entrance.",
         "pages": [
@@ -185362,7 +185328,7 @@
         "locLines": 1,
         "mapLocations": 0,
         "maxHit": "10",
-        "name": "Skeleton",
+        "name": "Skeleton (Ape Atoll)",
         "npcIds": [
           5237
         ],
@@ -185396,7 +185362,7 @@
         "locLines": 1,
         "mapLocations": 0,
         "maxHit": "3",
-        "name": "Skeleton",
+        "name": "Skeleton (Catacombs of Kourend)",
         "npcIds": [
           7265
         ],
@@ -185446,7 +185412,7 @@
         "locLines": 1,
         "mapLocations": 0,
         "maxHit": "10?",
-        "name": "Skeleton",
+        "name": "Skeleton (Stronghold of Security)",
         "npcIds": [
           2521
         ],
@@ -186863,7 +186829,7 @@
         },
         "annotations": [],
         "annotationsRaw": [],
-        "cannon": "unknown",
+        "cannon": true,
         "coordsMissing": false,
         "curated": true,
         "curatedName": "East side of Lumbridge",
@@ -186880,7 +186846,7 @@
         "monsters": [
           "Giant spider"
         ],
-        "multi": "unknown",
+        "multi": false,
         "name": "East side of Lumbridge",
         "notes": "Level 2 giant spiders spawn east and west of Lumbridge (Giant spider LocLines); the task page calls the spiders around Lumbridge a reasonable spot for low levels. Aggressive but very weak.",
         "pages": [
@@ -188828,7 +188794,7 @@
         "monsters": [
           "Spider"
         ],
-        "multi": true,
+        "multi": false,
         "name": "Sisterhood Sanctuary",
         "notes": "11 level 1 spiders (task page table); Spider LocLine 'Sisterhood Sanctuary'. Access requirements not checked in this run.",
         "pages": [
@@ -195853,7 +195819,7 @@
           "Zamorak": "15",
           "Zaros": "20, 35 (special)"
         },
-        "name": null,
+        "name": "Spiritual ranger",
         "npcIds": [
           3160
         ],
@@ -195961,7 +195927,7 @@
           "Zamorak": "19",
           "Zaros": "38"
         },
-        "name": null,
+        "name": "Spiritual mage",
         "npcIds": [
           3161
         ],
@@ -196093,7 +196059,7 @@
           "Zamorak": "11",
           "Zaros": "20, 40 (special)"
         },
-        "name": null,
+        "name": "Spiritual warrior",
         "npcIds": [
           3159
         ],
@@ -200903,7 +200869,6 @@
                 "name": "Barrows gloves"
               }
             ],
-            [],
             [
               {
                 "name": "Regen bracelet"
@@ -203404,7 +203369,7 @@
         },
         "annotations": [],
         "annotationsRaw": [],
-        "cannon": "unknown",
+        "cannon": true,
         "coordsMissing": false,
         "curated": true,
         "curatedName": "Wyrmscraig Cavern",
@@ -210911,7 +210876,6 @@
                 "name": "Echo boots"
               }
             ],
-            [],
             [
               {
                 "name": "Primordial boots"
@@ -213532,7 +213496,6 @@
                 "name": "Ring of shadows"
               }
             ],
-            [],
             [
               {
                 "name": "Ring of wealth (i)"
@@ -214297,7 +214260,6 @@
                 "name": "Climbing boots"
               }
             ],
-            [],
             [
               {
                 "name": "Fremennik sea boots 4"
@@ -216168,7 +216130,7 @@
         "monsters": [
           "Wall beast"
         ],
-        "multi": "unknown",
+        "multi": false,
         "name": "Lumbridge Swamp Caves",
         "notes": "Only location. Enter by rope from the swamp near the candle seller, or from the Lumbridge castle cellar after starting The Lost Tribe. Wall beasts are aggressive holes in the wall; skip the tile in front of a hole to avoid being grabbed. The beast by the entrance respawns if you exit and re-enter.",
         "pages": [
@@ -216283,7 +216245,7 @@
         "locLines": 1,
         "mapLocations": 0,
         "maxHit": "4 (Melee), 18 (without Spiny helmet)",
-        "name": null,
+        "name": "Wall beast",
         "npcIds": [
           476
         ],
@@ -222040,7 +222002,6 @@
               }
             ]
           ],
-          "special": [],
           "weapon": [
             [
               {
@@ -223436,7 +223397,6 @@
                 "txt": "God blessing"
               }
             ],
-            [],
             [
               {
                 "name": "Seeking amethyst arrow"
@@ -223623,7 +223583,6 @@
                 "name": "Ring of suffering (ri)"
               }
             ],
-            [],
             [
               {
                 "name": "Venator ring"
@@ -227376,7 +227335,7 @@
         "locLines": 2,
         "mapLocations": 0,
         "maxHit": "2",
-        "name": "Zombie",
+        "name": "Zombie (Wilderness)",
         "npcIds": [
           45
         ],
@@ -227442,7 +227401,7 @@
         "locLines": 3,
         "mapLocations": 0,
         "maxHit": "4",
-        "name": "Zombie",
+        "name": "Zombie (Stronghold of Security)",
         "npcIds": [
           2501
         ],
@@ -229789,8 +229748,6 @@
                 "name": "Barrows gloves"
               }
             ],
-            [],
-            [],
             [
               {
                 "name": "Void knight gloves"
@@ -230220,7 +230177,6 @@
                 "name": "Lightbearer"
               }
             ],
-            [],
             [
               {
                 "name": "Ring of recoil"
@@ -230330,7 +230286,6 @@
                 "name": "Aranea boots"
               }
             ],
-            [],
             [
               {
                 "name": "Bloodbark boots"
