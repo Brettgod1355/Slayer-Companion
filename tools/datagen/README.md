@@ -68,9 +68,38 @@ page but are *not* bosses.
 
 Locations come from `{{LocLine}}` templates (`source: "locline"`). A monster page without any
 LocLine falls back to `{{Map}}` templates in its `==Location==` / `==Transportation==` section
-(`source: "map"`, named after the page, caption and pin titles kept as annotations). Instanced
-bosses with neither (Zulrah, TzTok-Jad, TzKal-Zuk) and the Barrows Brothers end up with no
-locations and must be curated.
+(`source: "map"`, named after the page, caption and pin titles kept as annotations), and failing
+that to the `map` field of an `{{Infobox Location}}` / `{{Infobox Activity}}`. The latter only
+matters for the location pages listed in `EXTRA_MONSTER_PAGES` to give an instanced encounter its
+entrance: `Barrows` (Barrows Brothers), `TzHaar Fight Cave` (TzTok-Jad), `Inferno` (TzKal-Zuk),
+`Zul-Andra` (Zulrah, the boat to the shrine).
+
+Strategy pages (gear): most `{{Recommended equipment}}` tables live on `<Monster>/Strategies`
+subpages. `resolve_strategy_pages()` tries, in order, `<task page>/Strategies`,
+`<primary monster page>/Strategies` (primary = the `MONSTER_PAGE_OVERRIDES` list or the singular
+guess; alternatives and `EXTRA_MONSTER_PAGES` are **not** tried, they are mostly other encounters
+such as bosses that also count for the task), then `STRATEGY_PAGE_OVERRIDES[display]` (the task's
+own strategy page under another name, e.g. `TzHaar Fight Cave/Strategies` for TzTok-Jad,
+`Inferno/Strategies`, `Barrows/Strategies`, `Metal dragons/Strategies`) and
+`STRATEGY_VARIANT_PAGES[display]` (a variant that counts for the task, e.g. `Brutal black
+dragon/Strategies`, `Artio/Strategies` for Callisto, `Lizardman shaman/Strategies`). Pages are
+de-duplicated by final title; a `/Strategies` redirect back to the task page itself (e.g. `Dark
+beast/Strategies` → `Slayer task/Dark beast`) is dropped. `collect_gear()` runs every page through
+`parse_gear_sections()` after the task page's own tables:
+
+* every table and setup gets `source` = the wiki page it came from;
+* labels of `STRATEGY_VARIANT_PAGES` tables are prefixed with the page subject (`Artio: Ranged`);
+* a table identical (style + slots) to one already collected is skipped;
+* a label that repeats within a task (two tabbers on one page, e.g. Abyssal Sire phase 1 / phase 2
+  "Ranged") is extended on its second occurrence: with the style when it differs from the first
+  table's (`Melee (Punish)`, `Ranged (Phase 2 Ranged)`), else with the source page
+  (`Melee Slash/Stab (Aquanite/Strategies)`), else `#n`.
+
+A nested `{{#tag:tabber|A=…{{!}}-{{!}}B=…}}` inside a `<tabber>` tab (Kalphite Queen,
+Lizardman shaman) gives each inner tab its own label `"<outer> - <inner>"`. Rows `2h1`…`2h5`
+(two-handed weapon, Kree'arra) fill the `weapon` slot when the table has no `weaponN` row. Tiers
+above 5 (`neck6`, `body6`, …) are ignored, as before. `report.json → gearSources{task → {pages,
+strategyPagesTried}}` lists the pages that contributed and every strategy title tried.
 
 ### Curated overrides
 
@@ -126,8 +155,8 @@ All JSON is pretty-printed, keys sorted, UTF-8, `ensure_ascii=False`.
 | `recommendedStyle`, `styleNotes[]` | | style of the first gear table; `"<label>: <style>"` for each table |
 | `requiredItems[]`, `usefulItems[]`, `superior` | | curated only (empty/null otherwise) |
 | `xpPerKill` | int/null | first monster page's `slayxp` |
-| `gearTables[]` | `{label, style, slots{slot → [tier1[], … tier5[]]}, slotNotes{slot → text}}` | every `{{Recommended equipment}}`; `label` is the `<tabber>` tab label (or level-2 heading / null); tier entries are `{name, txt?, pic?}` from `{{plink|Name|txt=…|pic=…}}` (`name` has any `#anchor` removed); `{{efn}}` footnotes and leftover text such as "(task only)" become `slotNotes` prefixed with `tier N:` |
-| `exampleSetups[]` | `{label, equipment{slot → item}, inventory[], inventoryGrid[28], runePouch[], notes}` | `{{Equipment}}`, `{{Inventory}}`, `{{Rune pouch}}` in the same tab/section; `notes` is the tab's prose (≤ 1500 chars) |
+| `gearTables[]` | `{label, style, slots{slot → [tier1[], … tier5[]]}, slotNotes{slot → text}, source}` | every `{{Recommended equipment}}` of the task page and its strategy pages (see page mapping); `source` is the wiki page; `label` is the `<tabber>` tab label (or level-2 heading / null); tier entries are `{name, txt?, pic?}` from `{{plink|Name|txt=…|pic=…}}` (`name` has any `#anchor` removed); `{{efn}}` footnotes and leftover text such as "(task only)" become `slotNotes` prefixed with `tier N:` |
+| `exampleSetups[]` | `{label, equipment{slot → item}, inventory[], inventoryGrid[28], runePouch[], notes, source}` | `{{Equipment}}`, `{{Inventory}}`, `{{Rune pouch}}` in the same tab/section; `notes` is the tab's prose (≤ 1500 chars) |
 | `strategy[]` | strings | first 3 intro paragraphs + all `==Strategy==` paragraphs, plain text, capped at 2500 chars; bullet lists become `- ` lines inside one paragraph |
 | `unlocks[]` | `{name, cost, note}` | "Related slayer shop options" / "Slayer unlocks" table |
 | `monsters[]` | `{page, redirected, hasInfobox, locLines, mapLocations, name, versions[], slayerXp, slayerLevel, combat, hitpoints, maxHit, attackStyles[], weakness, attributes, size, aggressive, poisonous, attackSpeed, immuneCannon, immuneThrall, npcIds[], slayerCategory, assignedBy[]}` + `<field>ByVersion{version → value}` when the infobox is versioned | `{{Infobox Monster}}` of every monster page |
@@ -164,6 +193,7 @@ are curated per task (a task-only cave is task-only for one task), so they and t
 
 `counts` (tasks, withTaskPage, withSlayerInfobox, withGearTables, withAnyEquipment, withLocations,
 withMasters, withStrategy, withUnlocks, withXp, curatedTasks), `fetches`, `failedPages{title → error}`,
+`gearSources{task → {pages[], strategyPagesTried[]}}`,
 `tasksWithoutTaskPage[{task, tried}]`, `tasksWithoutMonsterPage[]`, `tasksWithoutEquipment[]`,
 `tasksWithoutLocations[]`, `tasksWithoutMasters[]`, `unmatchedCuratedLocations[]`,
 `ambiguousCuratedLocations[]`, `curatedProblems[]`, `curatedTasksUnused[]`.
@@ -291,11 +321,13 @@ carry it, so the maintainer can add an alias or fix the curated text. `accessCou
 ## Coverage of the current build (2026-09-23)
 
 148 tasks: 148 with a task page (76 `Slayer task/…` pages with `{{Infobox Slayer}}`, 72 monster
-pages of which 35 are boss tasks), 13 with `{{Recommended equipment}}` tables (+4 with example
-setups only), 144 with locations, 147 with XP per kill, 31 with a Slayer-unlock table; 540 fetches,
-0 failed pages. Missing locations: Barrows Brothers, TzTok-Jad, TzKal-Zuk, Zulrah (instanced /
-no `{{LocLine}}` on the wiki). Missing XP: Ents only (the `Ent` infobox has no `slayxp`).
-Access: 913 location records carry 537 requirement strings (377 distinct) →
+pages of which 35 are boss tasks), 60 with `{{Recommended equipment}}` tables (188 tables from
+the task pages and 54 strategy pages; +4 with example setups only), 148 with located records
+(1025 location records, 1019 with coordinates; 5 curated records without), 147 with XP per kill,
+31 with a Slayer-unlock table; 0 failed pages (a warm cache needs 0 fetches). Instanced encounters
+get their entrance from the activity page's infobox `{{Map}}`. Missing XP: Ents only (the `Ent`
+infobox has no `slayxp`).
+Access: 1025 location records carry 537 requirement strings (377 distinct) →
 551 groups, 264 with rules (252 fully checkable), 298 manual;
 19 strings listed in `accessUnparsed` (see COVERAGE.md).
 
@@ -306,5 +338,7 @@ Access: 913 location records carry 537 requirement strings (377 distinct) →
    look at `tried` and add the right page to `TASK_PAGE_OVERRIDES`, `MONSTER_PAGE_OVERRIDES` or
    `EXTRA_MONSTER_PAGES`.
 3. Re-run with `--only "<task>"` – the cache makes this instant unless a new page is needed.
-4. `tasksWithoutEquipment` is expected for tasks whose wiki page has no gear tables (many low-level
-   tasks and all boss pages); fill those through curated data if wanted.
+4. `tasksWithoutEquipment` is expected for tasks whose wiki page and strategy pages have no gear
+   tables (mostly low-level tasks); `gearSources` shows which `/Strategies` titles were tried. When
+   the wiki has a strategy page under another name, add it to `STRATEGY_PAGE_OVERRIDES` (the task's
+   own monster) or `STRATEGY_VARIANT_PAGES` (a variant; labels get a prefix).

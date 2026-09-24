@@ -39,4 +39,7 @@ public class ExampleSetup
 	private List<String> inventory;
 	@Nullable
 	private List<String> runePouch;
+	/** Wiki page the setup was taken from, for attribution. */
+	@Nullable
+	private String source;
 }
