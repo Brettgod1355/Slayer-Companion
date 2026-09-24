@@ -359,7 +359,7 @@
         "name": "Wilderness - by the muddy chest in the Lava Maze",
         "displayName": "Lava Maze muddy chest, level 40-45 Wilderness (2 demons; Krystilia)",
         "rank": 7,
-        "multi": "unknown",
+        "multi": true,
         "cannon": true,
         "wilderness": true,
         "wildernessLevelMin": 40,
@@ -370,7 +370,7 @@
         ],
         "notes": "'Slash weapon or knife needed', 'Level 40-45 wilderness'. Only 2 demons; deep Wilderness.",
         "evidence": {
-          "multi": "CONFLICT, recorded as unknown: Location Comparison row 'Lava Maze': Multicombat = No (Slayer task/Lesser demon) but 'The Lava Maze' is listed under 'List of multicombat areas' (Multicombat area); the Lava Maze page itself does not state combat type.",
+          "multi": "'Several places in the Wilderness including the areas at or around: [...] The Lava Maze' (Multicombat area). Conflicts with the Location Comparison row 'Lava Maze': Multicombat {{No}} in Slayer task/Hill giants and Slayer task/Lesser demon; the dedicated list outranks a task-table cell and names the area, so the safer Wilderness answer (multi) is used. The Lava Maze page itself does not state the combat type.",
           "cannon": "Location Comparison row 'Lava Maze': Cannonable = Yes (Slayer task/Lesser demon).",
           "requirements": "'Slash weapon or knife needed' and 'Level 40-45 wilderness' (Slayer task/Lesser demon); Lava Maze infobox wilderness = 40-45 and 'spiderwebs that must be cut with a slash weapon or a knife' (Lava Maze)."
         }

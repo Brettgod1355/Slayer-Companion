@@ -24,7 +24,7 @@
         "name": "Slayer Tower (ground floor)",
         "displayName": "Slayer Tower – ground floor (west and east wings)",
         "rank": 1,
-        "multi": "unknown",
+        "multi": false,
         "cannon": false,
         "wilderness": false,
         "wildernessLevelMin": null,
@@ -35,7 +35,7 @@
         ],
         "notes": "24 crawling hand spawns in the west wing and part of the east wing; banshees share the east wing. Reached from Canifis (Slayer ring or Kharyrll/Fenkenstrain teleports nearby). Do not climb the 61 Agility spiked chain without a nose peg or Slayer helmet because aberrant spectres are upstairs.",
         "evidence": {
-          "multi": "not stated on Slayer Tower or Crawling Hand pages; Slayer Tower is not in the 'List of multicombat areas' (Multicombat area)",
+          "multi": "Single-way combat: '([[Chaotic death spawn|Chaotic]]) [[death spawn]]s summoned by [[nechryael]] or [[nechryarch]] in the [[Slayer Tower]] are able to attack the player even though it is single-way combat.'; Slayer task/Banshees Location Comparison row 'Slayer Tower (ground floor)': Multicombat {{No}}",
           "cannon": "'Dwarf multicannons cannot be used here. If attempted, players will receive the message, \"A strange magical force won't let you set up a cannon here.\"' (Slayer Tower); also Dwarf multicannon prohibited list: Slayer Tower",
           "requirements": "Slayer task list row for Crawling Hands, Required Items/Requirements column: 'Priest in Peril' (Slayer task)"
         }

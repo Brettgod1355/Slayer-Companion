@@ -1042,7 +1042,7 @@
         "name": "Grimstone Dungeon",
         "displayName": "Grimstone Dungeon – central area and western task-only cave",
         "rank": 1,
-        "multi": "unknown",
+        "multi": false,
         "cannon": false,
         "wilderness": false,
         "wildernessLevelMin": null,
@@ -1054,7 +1054,7 @@
         ],
         "notes": "The only location for frost dragons. The dragons are in the centre of the dungeon, reached by climbing up the rock face from the north or south (the south climb needs 83 Agility, boostable). Loot spawns on the dragon's central north-eastern tile. Off-task attacks on the western cave give the message 'You feel a strange coldness wash over you'.",
         "evidence": {
-          "multi": "not stated (Frost dragon and Grimstone Dungeon pages say nothing; not on the Multicombat area list)",
+          "multi": "Slayer task/Jellies Location Comparison row 'Grimstone Dungeon': Multicombat {{No}} (Frost dragon and Grimstone Dungeon pages are silent; not on the Multicombat area list)",
           "cannon": "'Attempting to set up a Dwarf multicannon anywhere in the dungeon will result in the message It's far too cold for you to set up a cannon here.' (Grimstone Dungeon); Frost dragon infobox immunecannon = yes",
           "requirements": "'requiring 87 Sailing to access. A combat level of 85 is required to be assigned them as a slayer task, along with the Sailing requirement to access the island. Once players have moored on the island at least once, it can also be accessed via fairy ring code' DLP (Frost dragon); 'To the west of this area is another cave with frost dragons, though these can only be killed on a slayer task.' (Grimstone Dungeon)"
         }
@@ -1098,7 +1098,7 @@
         "displayName": "God Wars Dungeon – Bandos' Stronghold",
         "rank": 1,
         "multi": true,
-        "cannon": "unknown",
+        "cannon": false,
         "wilderness": false,
         "wildernessLevelMin": null,
         "wildernessLevelMax": null,
@@ -1113,7 +1113,7 @@
         "notes": "Entrance north of Trollheim. Goblins are the easiest Bandos followers for kill count; the count needed drops to 35/30/25/15 with the hard/elite/master/grandmaster Combat Achievement tiers.",
         "evidence": {
           "multi": "Multicombat area list: 'God Wars Dungeon' (Multicombat area)",
-          "cannon": "not stated as prohibited; Dwarf multicannon page: 'The Kalphite Queen, King Black Dragon, Thermonuclear smoke devil, and inhabitants of the God Wars Dungeon may also destroy a cannon if a player attempts to use it'",
+          "cannon": "Location Comparison rows for the Bandos' Stronghold / God Wars Dungeon: Cannonable {{No}} in Slayer task/Hill giants ('God Wars Dungeon (Bandos' Stronghold)') and Slayer task/Hobgoblins ('God Wars Dungeon'), as in most other God Wars Dungeon rows (Aviansies, Bloodveld, Hellhounds, Icefiends, Pyrefiends, Spiritual creatures); Dwarf multicannon page: 'The Kalphite Queen, King Black Dragon, Thermonuclear smoke devil, and inhabitants of the God Wars Dungeon may also destroy a cannon if a player attempts to use it'. (Slayer task/Ogres and Slayer task/Vampyres mark their God Wars Dungeon rows Cannonable {{Yes}}; the majority and the Dwarf multicannon caveat were followed.)",
           "requirements": "'He is found in Bandos' Stronghold, which requires a Strength level of 70 and a hammer to access. To enter his quarters, players must have an ecumenical key in their inventory or have killed 40' of Bandos' followers (General Graardor); 'To get Slayer assignments related to the God Wars Dungeon, such as boss tasks, players must complete the Death Plateau quest.'; 'Accessing it requires partial completion of Troll Stronghold (defeating Dad) or full completion of the Easy Combat Achievements (in order to use the teleport on Ghommal's hilt 1)'; 'and either 60 Strength or 60 Agility. A rope is also required the first time.' (God Wars Dungeon)"
         }
       }

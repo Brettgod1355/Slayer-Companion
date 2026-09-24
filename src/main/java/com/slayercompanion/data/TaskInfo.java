@@ -153,6 +153,14 @@ public class TaskInfo
 		return null;
 	}
 
+	/** Slayer XP per kill of the chosen variant when the wiki gives one, else the task's own figure. */
+	@Nullable
+	public Integer xpPerKillFor(@Nullable String variant)
+	{
+		MonsterInfo chosen = monster(variant);
+		return chosen != null && chosen.getSlayerXp() != null ? chosen.getSlayerXp() : xpPerKill;
+	}
+
 	/** All NPC ids the wiki lists for this task's monsters. */
 	public java.util.Set<Integer> npcIds()
 	{

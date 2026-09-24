@@ -514,7 +514,7 @@
     "Duke Sucellus",
     "General Graardor",
     "The Giant Mole",
-    "Grotesque Guardians (Task enum: Gargoyles alt 'Dusk'/'Dawn')",
+    "Gargoyles",
     "K'ril Tsutsaroth",
     "The Kalphite Queen",
     "The King Black Dragon",
@@ -645,8 +645,7 @@
   },
   {
    "affectsTasks": [
-    "Gargoyles",
-    "Grotesque Guardians (Task enum: Gargoyles alt 'Dusk'/'Dawn')"
+    "Gargoyles"
    ],
    "audience": [
     "situational",

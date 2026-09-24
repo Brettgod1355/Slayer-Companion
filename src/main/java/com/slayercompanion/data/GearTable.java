@@ -45,4 +45,7 @@ public class GearTable
 	private Map<String, List<List<GearItem>>> slots;
 	@Nullable
 	private Map<String, String> slotNotes;
+	/** Wiki page the table was taken from (a task page or a "/Strategies" subpage), for attribution. */
+	@Nullable
+	private String source;
 }

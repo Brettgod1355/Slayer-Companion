@@ -45,7 +45,7 @@ import net.runelite.http.api.item.ItemPrice;
 public class ItemNameResolver
 {
 	private static final String[] VARIANT_SUFFIXES = {
-		" (i)", " (or)", " (t)", " (g)", " (e)", " (f)", " (uncharged)", " (charged)", " (full)",
+		" (i)", " (or)", " (t)", " (g)", " (e)", " (f)", " (uncharged)", " (charged)", " (full)", " (empty)",
 		" (max)", " (nz)", " (u)", " (l)", " (bh)", " (kit)", " (4)", " (3)", " (2)", " (1)",
 	};
 

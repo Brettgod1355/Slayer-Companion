@@ -31,6 +31,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import javax.annotation.Nullable;
 import javax.inject.Inject;
 import javax.inject.Singleton;
 import net.runelite.api.Client;
@@ -131,11 +132,21 @@ public class WildernessAdvisor
 	public int wildernessLevel()
 	{
 		Widget w = client.getWidget(InterfaceID.PvpIcons.WILDERNESSLEVEL);
-		if (w == null || w.isHidden() || w.getText() == null)
+		if (w == null || w.isHidden())
 		{
 			return 0;
 		}
-		Matcher m = WILDERNESS_LEVEL.matcher(w.getText());
+		return parseWildernessLevel(w.getText());
+	}
+
+	/** Level from the indicator text ("Level: 23"), 0 when the text is not a level. */
+	static int parseWildernessLevel(@Nullable String text)
+	{
+		if (text == null)
+		{
+			return 0;
+		}
+		Matcher m = WILDERNESS_LEVEL.matcher(text);
 		return m.matches() ? Integer.parseInt(m.group(1)) : 0;
 	}
 

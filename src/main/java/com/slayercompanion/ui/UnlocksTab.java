@@ -86,23 +86,12 @@ class UnlocksTab extends JPanel
 			col.add(Ui.wrap(Ui.num(m.getPoints()) + " points to spend", Color.WHITE));
 			col.add(Ui.gap(4));
 
-			List<UnlockAdvice> next = new ArrayList<>();
-			for (UnlockAdvice u : shop)
-			{
-				// General purchases only: extensions depend on the task and show under "For your task";
-				// free toggles are settings, not purchases.
-				if (!owned(u) && u.getCost() > 0 && u.getPriority() <= BUY_NEXT_MAX_PRIORITY
-					&& ("unlock".equals(u.getCategory()) || "buy".equals(u.getCategory())))
-				{
-					next.add(u);
-				}
-			}
-			next.sort(Comparator.comparingInt(UnlockAdvice::getPriority).thenComparingInt(UnlockAdvice::getCost));
+			List<UnlockAdvice> next = buyNext(shop);
 			if (!next.isEmpty())
 			{
 				JPanel card = Ui.card();
 				card.add(Ui.section("unlocks.next", "Buy next", false));
-				for (UnlockAdvice u : next.subList(0, Math.min(BUY_NEXT, next.size())))
+				for (UnlockAdvice u : next)
 				{
 					addDetailed(card, u);
 				}
@@ -112,21 +101,11 @@ class UnlocksTab extends JPanel
 
 			if (m.getTask() != null)
 			{
-				String task = SlayerData.normalise(m.getTask().getName());
-				List<UnlockAdvice> forTask = new ArrayList<>();
-				for (UnlockAdvice u : shop)
-				{
-					if (!owned(u) && u.getCost() > 0 && u.getAffectsTasks() != null
-						&& u.getAffectsTasks().stream().anyMatch(t -> SlayerData.normalise(t).equals(task)))
-					{
-						forTask.add(u);
-					}
-				}
+				List<UnlockAdvice> forTask = forTask(shop, m.getTask().getName());
 				if (!forTask.isEmpty())
 				{
 					JPanel card = Ui.card();
 					card.add(Ui.section("unlocks.task", "For your " + m.getTask().getName() + " task", false));
-					forTask.sort(Comparator.comparingInt(UnlockAdvice::getCost));
 					for (UnlockAdvice u : forTask)
 					{
 						addDetailed(card, u);
@@ -193,6 +172,41 @@ class UnlocksTab extends JPanel
 		add(col, BorderLayout.NORTH);
 		revalidate();
 		repaint();
+	}
+
+	/** The "Buy next" card: unowned paid unlocks and items at priority 1-3, best priority then cheapest, at most five. */
+	static List<UnlockAdvice> buyNext(List<UnlockAdvice> shop)
+	{
+		List<UnlockAdvice> next = new ArrayList<>();
+		for (UnlockAdvice u : shop)
+		{
+			// General purchases only: extensions depend on the task and show under "For your task";
+			// free toggles are settings, not purchases.
+			if (!owned(u) && u.getCost() > 0 && u.getPriority() <= BUY_NEXT_MAX_PRIORITY
+				&& ("unlock".equals(u.getCategory()) || "buy".equals(u.getCategory())))
+			{
+				next.add(u);
+			}
+		}
+		next.sort(Comparator.comparingInt(UnlockAdvice::getPriority).thenComparingInt(UnlockAdvice::getCost));
+		return next.subList(0, Math.min(BUY_NEXT, next.size()));
+	}
+
+	/** The "For your task" card: unowned paid entries naming the task (compared with {@link SlayerData#normalise}), cheapest first. */
+	static List<UnlockAdvice> forTask(List<UnlockAdvice> shop, String taskName)
+	{
+		String task = SlayerData.normalise(taskName);
+		List<UnlockAdvice> forTask = new ArrayList<>();
+		for (UnlockAdvice u : shop)
+		{
+			if (!owned(u) && u.getCost() > 0 && u.getAffectsTasks() != null
+				&& u.getAffectsTasks().stream().anyMatch(t -> SlayerData.normalise(t).equals(task)))
+			{
+				forTask.add(u);
+			}
+		}
+		forTask.sort(Comparator.comparingInt(UnlockAdvice::getCost));
+		return forTask;
 	}
 
 	private static void addDetailed(JPanel card, UnlockAdvice u)
