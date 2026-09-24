@@ -969,8 +969,8 @@
         "name": "North-east of Bone Yard (Wilderness)",
         "displayName": "North-east of the Bone Yard / south of the Silk Chasm (Wilderness ~35)",
         "rank": 2,
-        "multi": "unknown",
-        "cannon": "unknown",
+        "multi": true,
+        "cannon": true,
         "wilderness": true,
         "wildernessLevelMin": 35,
         "wildernessLevelMax": 35,
@@ -978,8 +978,8 @@
         "requirements": [],
         "notes": "7 black knights on the surface between the Bone Yard and the Silk Chasm; Krystilia's page puts them at roughly level 35 Wilderness.",
         "evidence": {
-          "multi": "not stated",
-          "cannon": "not stated",
+          "multi": "not stated | Coordinate check – Wilderness Lines: 7/7 spawns inside 'North-mid east f2p wilderness' (Rectangle 3152,3752,176,88); every spawn is at least 11 tiles from the nearest single-way tile; Black Knight: \"|location = North-east of [[Bone Yard]] (Wilderness)\"; White equipment: \"Alternatively, a cannon can be used to kill the black knights north-east of the [[Bone Yard]] in level 32 [[Wilderness]]. Since the area is [[Multicombat area|multicombat]], a safespot is not necessary.\"; Coordinate check – Wilderness Lines: 7/7 spawns inside 'North-mid east f2p wilderness' (Rectangle 3152,3752,176,88); MultiLines Wilderness data agrees (7/7 in 'North-mid east f2p wilderness'); Treasure Trails/Guide/Hot Cold/Master: \"|South of the [[Silk Chasm]], level 32 [[Wilderness]]. … |Multi\" [2026-09-24 research pass: quote, scope and contradiction checks]",
+          "cannon": "not stated | White equipment: \"Alternatively, a cannon can be used to kill the black knights north-east of the [[Bone Yard]] in level 32 [[Wilderness]]. Since the area is [[Multicombat area|multicombat]], a safespot is not necessary. The knights will also be aggressive regardless of the player's combat level due to their location in the Wildernes…\"; Venenatis: \"A [[dwarf multicannon]] cannot be set up in the Silk Chasm; if attempted, you will receive the message: {{mes|It doesn't seem safe to set up a cannon here.}}\" [2026-09-24 research pass: quote, scope and contradiction checks]",
           "requirements": "Krystilia task table: Black Knights at 'South of Silk Chasm, Lava Maze' Wilderness level '~35, ~40' (Krystilia); 'The number of black knights north of Venenatis were increased from 2 to 7' (Krystilia)"
         }
       }

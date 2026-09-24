@@ -549,7 +549,7 @@
         "name": "East of Chaos Temple (Wilderness)",
         "displayName": "Forest east of the Chaos Temple (Wilderness, about level 9-14)",
         "rank": 1,
-        "multi": "unknown",
+        "multi": true,
         "cannon": "unknown",
         "wilderness": true,
         "wildernessLevelMin": 9,
@@ -558,7 +558,7 @@
         "requirements": [],
         "notes": "4 spawns (Ent LocLine pins). Reach with a burning amulet teleport to the Chaos Temple's north entrance in level 15 Wilderness and walk east. Elder chaos druids in the temple itself can teleblock players who get too close. In the Wilderness the trunk gives two noted logs per success.",
         "evidence": {
-          "multi": "not stated for the forests; the Chaos Temple (Wilderness) page says 'The area is also multi-combat', while the Multicombat area list names only 'The Chaos Temple (church) in the western Wilderness (not the Chaos Temple in the eastern Wilderness)'",
+          "multi": "not stated for the forests; the Chaos Temple (Wilderness) page says 'The area is also multi-combat', while the Multicombat area list names only 'The Chaos Temple (church) in the western Wilderness (not the Chaos Temple in the eastern Wilderness)' | Coordinate check – Wilderness Lines: 4/4 spawns inside 'East f2p wilderness' (Rectangle 3192,3525,136,227); every spawn is at least 22 tiles from the nearest single-way tile; Chaos Temple (Wilderness): \"The area is also [[multi-combat]], and contains many [[Elder Chaos druid|elder chaos druids]] who will [[teleblock]] any players who get too close.\"; Ent: \"'''Ents''' are [[monsters]] found in the dungeon beneath the [[Woodcutting Guild]] and in the forests north and east of the [[Chaos Temple (Wilderness)|Chaos Temple]].\"; Coordinate check – Wilderness Lines: 4/4 spawns inside 'East f2p wilderness' (Rectangle 3192,3525,136,227); MultiLines Wilderness data agrees (4/4); Free-to-play PvP culture: \"Some less active areas include [[Dark Warriors' Fortress]], [[Chaos Temple (Wilderness)|Zamorak temple]] and hill giants north-east of the Zamorak temple.\" [2026-09-24 research pass: quote, scope and contradiction checks]",
           "cannon": "not stated",
           "requirements": "not stated; route: 'Burning amulet teleport to the north entrance in level 15 Wilderness.' (Chaos Temple (Wilderness))"
         }
@@ -567,7 +567,7 @@
         "name": "North of Chaos Temple (Wilderness)",
         "displayName": "Forest north of the Chaos Temple (Wilderness, about level 20-24)",
         "rank": 2,
-        "multi": "unknown",
+        "multi": true,
         "cannon": "unknown",
         "wilderness": true,
         "wildernessLevelMin": 20,
@@ -576,7 +576,7 @@
         "requirements": [],
         "notes": "6 spawns (Ent LocLine pins), deeper than the eastern forest; same trunk-chopping mechanics. Do not bring anything you cannot afford to lose.",
         "evidence": {
-          "multi": "not stated for the forests (see east forest evidence)",
+          "multi": "not stated for the forests (see east forest evidence) | Coordinate check – Wilderness Lines: 6/6 spawns inside 'East f2p wilderness' (Rectangle 3192,3525,136,227); westernmost spawn (3201,3684) is ~10 tiles inside the x=3192 boundary; Chaos Temple (Wilderness): \"The area is also [[multi-combat]]\"; Coordinate check – Wilderness Lines: 6/6 spawns inside 'East f2p wilderness' (Rectangle 3192,3525,136,227); MultiLines Wilderness data agrees (6/6); Treasure Trails/Guide/Hot Cold/Master: \"|East of the [[Corporeal Beast's Lair]], level 20 [[Wilderness]]. … |Multi\"; Wilderness Obelisk: \"|18-19 |{{Map|name=Wilderness Obelisk|x=3227|y=3667|r=4|caption=East of the [[Graveyard of Shadows]]|mtype=square|group=1}} |{{Yes}} |{{Yes}}\" [2026-09-24 research pass: quote, scope and contradiction checks]",
           "cannon": "not stated",
           "requirements": "not stated"
         }
@@ -620,7 +620,7 @@
         "displayName": "Braindeath Island – brewery basement",
         "rank": 1,
         "multi": "unknown",
-        "cannon": "unknown",
+        "cannon": true,
         "wilderness": false,
         "wildernessLevelMin": null,
         "wildernessLevelMax": null,
@@ -633,7 +633,7 @@
         "notes": "The only place fever spiders exist. Talk to Pirate Pete at the dock north-east of Port Phasmatys (Ectophial then run north); the spiders are two tiles wide so many crate-edge safespots exist.",
         "evidence": {
           "multi": "not stated (Fever spider and Braindeath Island pages say nothing; not on the Multicombat area list)",
-          "cannon": "not stated (not on the Dwarf multicannon prohibited list; no page read says a cannon can be used)",
+          "cannon": "not stated (not on the Dwarf multicannon prohibited list; no page read says a cannon can be used) | Money making guide/Killing fever spiders: \"|Location = [[Braindeath Island]] … It is not worth using a [[Dwarf multicannon]] to speed up kills as the cost of [[steel cannonball]]s outweighs the increased loot from more kills per hour.\"; Fever spider: \"|immunecannon = No\"; Slayer task/Zombies: \"|[[Braindeath Island]] | |18 |{{No}} |{{Yes}} |{{Yes}}\"; Dwarf multicannon: \"A non-exhaustive list of these prohibited areas are:\"; Slayer task/Zombies: \"|[[Braindeath Island]] | |18 |{{No}} |{{Yes}} |{{Yes}} |Requires partial completion of [[Rum Deal]]. (Cannonable column = Yes)\" [2026-09-24 research pass: quote, scope and contradiction checks]",
           "requirements": "'found only on Braindeath Island, in the brewery basement. This indirectly means players must also have started the Rum Deal quest in order to access them. Players must wear slayer gloves while fighting them, or face being damaged for 12.5% of their Hitpoints level and becoming diseased.' (Fever spider)"
         }
       }

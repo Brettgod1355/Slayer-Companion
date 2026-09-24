@@ -733,7 +733,7 @@
         "name": "West of Ruins of Ullek",
         "displayName": "West of the Ruins of Ullek (4 desert, 5 small lizards; ice coolers)",
         "rank": 4,
-        "multi": "unknown",
+        "multi": false,
         "cannon": "unknown",
         "wilderness": false,
         "wildernessLevelMin": null,
@@ -744,7 +744,7 @@
         ],
         "notes": "Second desert cluster listed on the Desert Lizard and Small Lizard monster pages (4 desert-lizard pins at level 24, 5 small-lizard pins at level 12). Not in the task page's location comparison, so combat type and cannon use are not stated.",
         "evidence": {
-          "multi": "not stated (this spot is not in the Slayer task/Lizards Location comparison table).",
+          "multi": "not stated (this spot is not in the Slayer task/Lizards Location comparison table). | Multicombat area: \"Anywhere else is a [[Single-way combat]] area\"; Multicombat area: \"{{Legend|#f54636|caption=A map of the multicombat areas on Gielinor (not including ocean zones) indicated in red}}\"; Single-way combat: \"Most areas of the world are single-way combat. Those that are not are [[multi-combat area]]s\"; Coordinate check – Wiki multicombat map (Module:DeadmanAnnihilationMulticombatZones.json, embedded on 'Multicombat area'): 0/4 spawns inside any polygon; nearest polygon is the Bandit Camp, 154 tiles away; Coordinate check – Multi-Lines: 0/4 spawns inside any enabled non-Wilderness area; the only mapped area in the desert is 'Desert Bandit Camp' [2026-09-24 research pass: quote, scope and contradiction checks]",
           "cannon": "not stated.",
           "requirements": "Desert Lizard LocLine 'West of Ruins of Ullek' (levels 24, 4 pins) and Small Lizard LocLine 'West of Ruins of Ullek' (levels 12, 5 pins); ice coolers per 'In order to kill a desert lizard, an ice cooler must be used when it has less than 5 Hitpoints.' (Desert Lizard). Konar does not assign lizards (assignedby = turael,spria,mazchna)."
         }
@@ -786,7 +786,7 @@
         "name": "Vampyrium",
         "displayName": "Vampyrium - Maggot King's lair east of Sangvesti (solo instance)",
         "rank": 1,
-        "multi": "unknown",
+        "multi": true,
         "cannon": "unknown",
         "wilderness": false,
         "wildernessLevelMin": null,
@@ -798,7 +798,7 @@
         ],
         "notes": "'Use Drakan's medallion to get to Castle Drakan, enter Vampyrium, and then run east. Before fighting the boss, players should unlock a quick-travel method by rescuing an aranei scout south-east of Sangvesti.' (Maggot King). 'a pickaxe is required to clear rubble south of the shortcut' for the Agility shortcut to the Hunting Grounds (Vampyrium); the two woodland shortcuts need 64 Agility (Maggot King). 'If players die anywhere in Vampyrium post quest ... it is an unsafe death but they will respawn next to the portal in the Vampyrium castle courtyard' (Vampyrium).",
         "evidence": {
-          "multi": "not stated; 'Players may only fight the boss by themselves, and the fight takes place inside an instance.' (Maggot King). Not in 'List of multicombat areas' (Multicombat area).",
+          "multi": "not stated; 'Players may only fight the boss by themselves, and the fight takes place inside an instance.' (Maggot King). Not in 'List of multicombat areas' (Multicombat area). | Maggot King/Strategies: \"When the boss reaches ~299 (~19%) health, it will launch multiple larvae at once, with a maximum of four (for each row in the arena. … A [[venator bow]] is useful for this part as the bounces allow easier control of larger groups.\"; Maggot King: \"* Fixed an issue where ur-maggot larvae could occasionally survive venator bow bounce attacks.\"; Venator bow: \"When attacking a target in a [[multicombat area]], the arrow will try to bounce to another target near the first.\"; Venator bow: \"The bow is ineffective in single-combat areas\"; Maggot King's lair: \"The '''Maggot King's lair''' is a location on [[Vampyrium]] in which the [[Maggot King]] can be fought. It is an [[instance]]d area which only one player may enter.\" [2026-09-24 research pass: quote, scope and contradiction checks]",
           "cannon": "not stated: the Maggot King infobox has immunethrall = No but no immunecannon line; the Maggot King and Vampyrium pages do not mention a cannon; not in the Dwarf multicannon prohibited list.",
           "requirements": "'requires completion of The Blood Moon Rises to kill' (Maggot King); Boss page Slayer bosses row: 'Maggot King | Vampyrium | Slayer 74 | Completion of The Blood Moon Rises' (Boss); infobox assignedby = konar,nieve,duradel (Maggot King)."
         }
@@ -892,7 +892,7 @@
         "name": "South-east of Ferox Enclave",
         "displayName": "West of the Chaos Temple / south-east of Ferox Enclave, Wilderness 7-14 (cannon, safespots)",
         "rank": 1,
-        "multi": "unknown",
+        "multi": true,
         "cannon": true,
         "wilderness": true,
         "wildernessLevelMin": 7,
@@ -901,7 +901,7 @@
         "requirements": [],
         "notes": "'Mammoths can be easily safespotted due to their large size (3x3). Players can use the many trees or tree stumps in the area to safespot them from behind.' 'a nearby altar providing unlimited Prayer for boosts, and the short walk to the Enclave for resupplying.' The Mammoth page adds that players 'are therefore advised not to carry too many supplies on them at once' because of player killers. 'Killing a Mammoth is a task in the Easy Wilderness Diary.' (Mammoth).",
         "evidence": {
-          "multi": "not stated on the Mammoth page; the mammoth area is not in 'List of multicombat areas' (Multicombat area). The Chaos Temple (Wilderness) page says 'The area is also multi-combat' about the temple itself (level 11), but the mammoths are 'West of the Chaos Temple' (Krystilia) / 'south-east of the Ferox Enclave' (Mammoth), so this is left unknown.",
+          "multi": "not stated on the Mammoth page; the mammoth area is not in 'List of multicombat areas' (Multicombat area). The Chaos Temple (Wilderness) page says 'The area is also multi-combat' about the temple itself (level 11), but the mammoths are 'West of the Chaos Temple' (Krystilia) / 'south-east of the Ferox Enclave' (Mammoth), so this is left unknown. | Coordinate check – Wilderness Lines: 8/8 spawns inside 'SE of Ferox 1' (Rectangle 3152,3584,40,36); every spawn is at least 8 tiles from the nearest single-way tile; Mammoth: \"'''Mammoths''' are a species of elephant-like creatures that inhabit the area south-east of the [[Ferox Enclave]].\"; Coordinate check – Wilderness Lines: 8/8 spawns inside 'SE of Ferox 1' (Rectangle 3152,3584,40,36); MultiLines Wilderness data agrees (8/8 in 'Ferox Enclave' multi area); Wilderness Obelisk: \"|13 |{{Map|name=Wilderness Obelisk|x=3156|y=3620|r=4|caption=South-east of the [[Ferox Enclave]]|mtype=square|group=1}} |{{Yes}} |{{Yes}}\"; Free-to-play PvP culture: \"* Southern area based on the [[Grand Exchange]] main entrance at around 12 wilderness level. South-eastern area is multi-combat.\" [2026-09-24 research pass: quote, scope and contradiction checks]",
           "cannon": "'It is an efficient place to train with a Dwarf multicannon due to the high hitpoints of the Mammoths' (Mammoth).",
           "requirements": "not stated (Slayer task list row: no required items, no requirements). Wilderness levels '7-14' from Krystilia's Mammoths row, location 'West of the Chaos Temple' (Krystilia)."
         }

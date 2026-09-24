@@ -291,7 +291,7 @@
         "name": "Inferno (Mor Ul Rek)",
         "displayName": "The Inferno – Mor Ul Rek (solo minigame)",
         "rank": 1,
-        "multi": "unknown",
+        "multi": true,
         "cannon": false,
         "wilderness": false,
         "wildernessLevelMin": null,
@@ -304,7 +304,7 @@
         ],
         "notes": "The TzHaar task page has no LocLine; location taken from the Inferno page infobox ('|location = [[Mor Ul Rek]]'). The task covers all monsters inside the Inferno and is cancelled if the player is defeated.",
         "evidence": {
-          "multi": "not stated on the TzKal-Zuk or Inferno pages; the Multicombat area page lists 'Mor Ul Rek' and 'Fight Pits in Mor Ul Rek' but not the Inferno itself.",
+          "multi": "not stated on the TzKal-Zuk or Inferno pages; the Multicombat area page lists 'Mor Ul Rek' and 'Fight Pits in Mor Ul Rek' but not the Inferno itself. | Inferno/Strategies: \"An easy way to tell if the cast will kill them without waiting for the hitsplat is by looking at the [[experience]] drop: when using [[Ice Barrage]], 152 experience (112 Magic and 40 Hitpoints) will mean that all three were killed in one cast\"; Inferno/Strategies: \"An extension to this rule is that multi-combat attacks, namely barrage spells in the Inferno, hit the south-west corner of the monster. … you can attack the mager with a barrage spell and it should damage the nibbler.\"; Inferno/Strategies: \"Multiple monsters targeting the player at the same time is common, so alternating protection prayers between them is highly recommended, if not required.\"; Multicombat area: \"Most of them can still be used in [[single-combat area]]s, but they can only hit multiple opponents while in a multi-combat area.\"; Yt-HurKot: \"It is recommended players keep distance and try to stack the healers so that only one can attack at a time.\" [2026-09-24 research pass: quote, scope and contradiction checks]",
           "cannon": "Dwarf multicannon prohibited list: '*[[Mor Ul Rek]], [[TzHaar Fight Cave]] and [[TzHaar Fight Pit]] - The TzHaar won't be happy if you set up a cannon here.'",
           "requirements": "'Zuk can be killed in place of a TzHaar slayer assignment after unlocking the perk Hot Stuff for 100 slayer reward points. Unlike TzTok-Jad, in order to be given the option to be assigned Zuk, the player must have defeated him at least once off-task.' (TzKal-Zuk); 'In order to access the Inferno, players must give TzHaar-Ket-Keh a fire cape. This is a one-time fee' (Inferno)."
         }
@@ -347,7 +347,7 @@
         "name": "Zulrah's Shrine (east of Zul-Andra)",
         "displayName": "Zulrah's Shrine – east of Zul-Andra, Poison Waste (instanced, solo)",
         "rank": 1,
-        "multi": "unknown",
+        "multi": true,
         "cannon": false,
         "wilderness": false,
         "wildernessLevelMin": null,
@@ -360,7 +360,7 @@
         ],
         "notes": "Travel by Zul-andra teleport scroll or fairy ring BJS and the stepping stones (76 Agility, boostable); board the sacrificial boat at Zul-Andra. Death items are held by Priestess Zul-Gwenwynig and are permanently lost on a further unsafe death before reclaiming.",
         "evidence": {
-          "multi": "not stated; the Zulrah page only says it is a 'solo-only snake boss' and the shrine is not on the Multicombat area list.",
+          "multi": "not stated; the Zulrah page only says it is a 'solo-only snake boss' and the shrine is not on the Multicombat area list. | Multicombat area: \"{{Map:DeadmanAnnihilationMulticombatZones|caption={{Legend|#f54636|caption=A map of the multicombat areas on Gielinor (not including ocean zones) indicated in red}}}}\"; Coordinate check – Module:DeadmanAnnihilationMulticombatZones.json (the map used on the Multicombat area page) feature #15: a U-shaped 83-tile multicombat polygon spanning x 2262-2275, y 3068-3079, entirely inside the Zulrah's shrine area from the Coil music map (2256-2280, 3066-3080). Multi-Lines: enabled non-Wilderness area 'Zulrah…; Coil: \"|location = [[Zulrah]]'s shrine … |map = {{Map|2256,3066|2280,3066|2280,3080|2256,3080|plane=0|height=150|group=1|mapID=0|mtype=polygon|bucket=yes}}\"; Zulrah: \"The shrine is a small U-shaped island with two pillars in the middle corners, and Zulrah swims in the swampy water around the island throughout the fight.\"; Zulrah/Strategies: \"it is nearly impossible to flick multiple snakelings and Zulrah attacking together.\" [2026-09-24 research pass: quote, scope and contradiction checks]",
           "cannon": "Dwarf multicannon prohibited list: \"*[[Zulrah's Shrine]] - It's far too damp for you to set up a cannon here.\"",
           "requirements": "'Before the player can fight Zulrah, players must have completed Regicide to the point of reaching Port Tyras, as well as having spoken with High Priestess Zul-Harcinqa to offer themselves as the sacrifice in place of the gnome child' (Zulrah); Boss page boss-slayer table row: 'Zulrah | Poison Waste | Slayer 1 | Completion of Regicide' (Boss)."
         }

@@ -44988,7 +44988,7 @@
         },
         "annotations": [],
         "annotationsRaw": [],
-        "cannon": "unknown",
+        "cannon": true,
         "coordsMissing": false,
         "curated": true,
         "curatedName": "North-east of Bone Yard (Wilderness)",
@@ -45005,7 +45005,7 @@
         "monsters": [
           "Black Knight"
         ],
-        "multi": "unknown",
+        "multi": true,
         "name": "North-east of Bone Yard (Wilderness)",
         "notes": "7 black knights on the surface between the Bone Yard and the Silk Chasm; Krystilia's page puts them at roughly level 35 Wilderness.",
         "pages": [
@@ -53389,7 +53389,7 @@
         "monsters": [
           "Cave crawler"
         ],
-        "multi": "unknown",
+        "multi": true,
         "name": "Ruins of Tapoyauik - top level",
         "notes": "Seven icy cave crawler spawns on the top level; same combat level and Slayer XP as the standard variant but 50% weak to fire spells. Only accessible after completing The Heart of Darkness.",
         "pages": [
@@ -60613,7 +60613,7 @@
           "Cow",
           "Cow calf"
         ],
-        "multi": "unknown",
+        "multi": true,
         "name": "South Falador Farm",
         "notes": "Large pasture of cows just south of Falador; the Slayer task list names 'South of Falador' first. Cabbages spawn in the patch nearby for food.",
         "pages": [
@@ -63439,7 +63439,7 @@
         "monsters": [
           "Sand Crab"
         ],
-        "multi": "unknown",
+        "multi": true,
         "name": "Hosidius - southern coast",
         "notes": "Sand crabs give 60 Slayer XP. There is a bank chest in the centre of the beach and a nearby altar. Reach it from a Hosidius house portal, the Tithe Farm minigame teleport, the Lovakengj minecart 'Hosidius South' stop, or fairy ring AKR. Often crowded; the Avium Savannah coast in Varlamore is a quieter alternative.",
         "pages": [
@@ -64264,7 +64264,7 @@
         "monsters": [
           "Ammonite Crab"
         ],
-        "multi": "unknown",
+        "multi": true,
         "name": "Mushroom Forest",
         "notes": "Ammonite crabs give 100 Slayer XP and have 100 hitpoints and level 1 in every other stat. Found in the Mushroom Forest, around the Fossil Island Volcano and in the northern Wyvern Cave.",
         "pages": [
@@ -64542,7 +64542,7 @@
         "monsters": [
           "Sand Crab"
         ],
-        "multi": "unknown",
+        "multi": true,
         "name": "Crabclaw Isle",
         "notes": "40 sand crabs on a small island south of the Hosidius coast, with several spots where three or four crabs surround one tile. Spots may be occupied.",
         "pages": [
@@ -65344,7 +65344,7 @@
         "monsters": [
           "Rock Crab"
         ],
-        "multi": "unknown",
+        "multi": false,
         "name": "Waterbirth Island",
         "notes": "Rock crabs are scattered across the island in their disguised rock form. Also reachable by Waterbirth Teleport (72 Magic, Lunar) or a house portal.",
         "pages": [
@@ -65544,7 +65544,7 @@
         "monsters": [
           "Rock Crab"
         ],
-        "multi": "unknown",
+        "multi": "partial",
         "name": "West of Mount Quidamortem",
         "notes": "28 rock crabs at the base of the mountain near the mountain troll settlements; aggressive lizardmen patrol the east side, so bring poison protection.",
         "pages": [
@@ -66017,7 +66017,7 @@
         "monsters": [
           "Sand Crab"
         ],
-        "multi": "unknown",
+        "multi": true,
         "name": "Avium Savannah - southern coast",
         "notes": "From Civitas illa Fortis go south to the beach and west to the sand crabs. Faces much less competition than the Hosidius crabs.",
         "pages": [
@@ -66696,7 +66696,7 @@
         "monsters": [
           "Frost Crab"
         ],
-        "multi": "unknown",
+        "multi": true,
         "name": "Ruins of Tapoyauik middle floor",
         "notes": "Frost crabs give 60 Slayer XP and are 100% weak to fire spells. Cannon cannot be placed in the ruins and frost crabs are cannon-immune anyway.",
         "pages": [
@@ -70761,7 +70761,7 @@
         "monsters": [
           "Crocodile"
         ],
-        "multi": "unknown",
+        "multi": false,
         "name": "Along the River Elid",
         "notes": "Stand on the south side of the river directly south of the small island where crocodiles spawn so they come to you. A cactus safespot lies directly west of the Nardah magic carpet. Bring waterskins; Nardah has a fountain and altar.",
         "pages": [
@@ -71064,7 +71064,7 @@
         "monsters": [
           "Crocodile"
         ],
-        "multi": "unknown",
+        "multi": false,
         "name": "Near the Ruins of Unkah",
         "notes": "'Players may also use the wall East of the Ruins of Unkah to safespot the crocodiles, negating the need for food and waterskins (as there are plenty of cacti to refill them from).'",
         "pages": [
@@ -71151,7 +71151,7 @@
         "monsters": [
           "Crocodile"
         ],
-        "multi": "unknown",
+        "multi": false,
         "name": "Near the Ruins of Ullek",
         "notes": "'The area south of the Ruins of Ullek, south-west of the teak trees has 12 crocodile spawns and does not require water for the player to survive, so long as the player stays in the grassy area near the water.'",
         "pages": [
@@ -91837,7 +91837,7 @@
         "monsters": [
           "Ent"
         ],
-        "multi": "unknown",
+        "multi": true,
         "name": "East of Chaos Temple (Wilderness)",
         "notes": "4 spawns (Ent LocLine pins). Reach with a burning amulet teleport to the Chaos Temple's north entrance in level 15 Wilderness and walk east. Elder chaos druids in the temple itself can teleblock players who get too close. In the Wilderness the trunk gives two noted logs per success.",
         "pages": [
@@ -91915,7 +91915,7 @@
         "monsters": [
           "Ent"
         ],
-        "multi": "unknown",
+        "multi": true,
         "name": "North of Chaos Temple (Wilderness)",
         "notes": "6 spawns (Ent LocLine pins), deeper than the eastern forest; same trunk-chopping mechanics. Do not bring anything you cannot afford to lose.",
         "pages": [
@@ -92333,7 +92333,7 @@
         },
         "annotations": [],
         "annotationsRaw": [],
-        "cannon": "unknown",
+        "cannon": true,
         "coordsMissing": false,
         "curated": true,
         "curatedName": "Braindeath Island",
@@ -104454,7 +104454,7 @@
         },
         "annotations": [],
         "annotationsRaw": [],
-        "cannon": "unknown",
+        "cannon": true,
         "coordsMissing": false,
         "curated": true,
         "curatedName": "North of Mort Myre Swamp",
@@ -118582,7 +118582,7 @@
         "monsters": [
           "Green dragon"
         ],
-        "multi": "unknown",
+        "multi": false,
         "name": "North of the Graveyard of Shadows",
         "notes": "'In the Wilderness. Close to Ferox Enclave.' (5 LocLine pins). The task table lists multi, cannon and safespot as Unknown. The Multicombat area page only says the Wilderness is multi 'at or around ... The Graveyard of Shadows', which does not prove the dragons north of it are in multi. Level not stated on the pages read.",
         "pages": [
@@ -118670,7 +118670,7 @@
         "monsters": [
           "Green dragon"
         ],
-        "multi": "unknown",
+        "multi": false,
         "name": "South of the Lava Maze",
         "notes": "'The dragons near the Lava Maze are above level 30 Wilderness, and thus it is not recommended to kill them there.' (5 LocLine pins). 'The Lava Maze is a maze located deep in the Wilderness, around level 40-45' (Lava Maze). The task table lists multi as Unknown; the Multicombat area page names 'areas at or around ... The Lava Maze' but not these spawns specifically.",
         "pages": [
@@ -120669,7 +120669,7 @@
         },
         "annotations": [],
         "annotationsRaw": [],
-        "cannon": "unknown",
+        "cannon": true,
         "coordsMissing": false,
         "curated": true,
         "curatedName": "East of the Colossal Wyrm Remains",
@@ -120686,7 +120686,7 @@
         "monsters": [
           "Harpie Bug Swarm"
         ],
-        "multi": "unknown",
+        "multi": true,
         "name": "East of the Colossal Wyrm Remains",
         "notes": "18 spawns. '(Recommended) Building a quetzal landing site at Colossal Wyrm Remains opens up a very convenient, quick shortcut to a bank at Auburnvale and a prayer altar at The Teomat.' Nearest fairy ring is AJP; 'this location is very accessible, offers several safespots, and is free of dangers associated with Karamja'.",
         "pages": [
@@ -120888,7 +120888,7 @@
         "monsters": [
           "Harpie Bug Swarm"
         ],
-        "multi": "unknown",
+        "multi": false,
         "name": "North-east of Tai Bwo Wannai",
         "notes": "14 spawns. Fairy ring DKP then run south past the Shaikahan and aggressive jogres; 'There are two safespots: one between the two trees to the south behind the small jungle plant, and another to the north on the beaches of the fairy ring'. 'It is highly recommended to bring antipoison due to the presence of other aggressive, poisonous creatures.' Tai Bwo Wannai Trio unlocks the nearby Tribal Statue prayer recharge.",
         "pages": [
@@ -126177,7 +126177,7 @@
         "monsters": [
           "Hobgoblin"
         ],
-        "multi": "unknown",
+        "multi": false,
         "name": "Bandit Camp mine (Wilderness)",
         "notes": "26 hobgoblins (26 LocLine pins; Bandit Camp Mine monster table: 26 spawns). 'found north-east of the Bandit Camp in the Wilderness from levels 32 to 35 and east of the Wilderness God Wars Dungeon' and 'occupied by a large number of aggressive hobgoblins' (Bandit Camp Mine). The task table says single-way, but the Multicombat area list names 'The Wilderness Bandit Camp' area; left unknown. Krystilia does not assign hobgoblins.",
         "pages": [
@@ -126877,7 +126877,7 @@
         },
         "annotations": [],
         "annotationsRaw": [],
-        "cannon": "unknown",
+        "cannon": true,
         "coordsMissing": false,
         "curated": true,
         "curatedName": "Tree Gnome Village dungeon",
@@ -126896,7 +126896,7 @@
         "monsters": [
           "Hobgoblin"
         ],
-        "multi": "unknown",
+        "multi": false,
         "name": "Tree Gnome Village dungeon (roaming)",
         "notes": "9 roaming plus 7 imprisoned level-28 hobgoblins (LocLine pins). 'Tree Gnome Village dungeon (requires a key), contain many level 28 hobgoblins with no level 42 variants present' (Hobgoblin).",
         "pages": [
@@ -126999,7 +126999,7 @@
         },
         "annotations": [],
         "annotationsRaw": [],
-        "cannon": "unknown",
+        "cannon": true,
         "coordsMissing": false,
         "curated": true,
         "curatedName": "North of Rellekka",
@@ -127018,7 +127018,7 @@
         "monsters": [
           "Hobgoblin"
         ],
-        "multi": "unknown",
+        "multi": true,
         "name": "North of Rellekka",
         "notes": "5 level-42 hobgoblins (49 Slayer XP each; 5 LocLine pins).",
         "pages": [
@@ -127255,7 +127255,7 @@
         },
         "annotations": [],
         "annotationsRaw": [],
-        "cannon": "unknown",
+        "cannon": true,
         "coordsMissing": false,
         "curated": true,
         "curatedName": "South of Tai Bwo Wannai",
@@ -127274,7 +127274,7 @@
         "monsters": [
           "Hobgoblin"
         ],
-        "multi": "unknown",
+        "multi": false,
         "name": "South of Tai Bwo Wannai",
         "notes": "3 level-28 hobgoblins (3 LocLine pins).",
         "pages": [
@@ -127346,7 +127346,7 @@
         "monsters": [
           "Hobgoblin"
         ],
-        "multi": "unknown",
+        "multi": false,
         "name": "Waterbirth Island",
         "notes": "2 level-28 hobgoblins (2 LocLine pins).",
         "pages": [
@@ -133621,7 +133621,7 @@
         "monsters": [
           "TzHaar Fight Cave"
         ],
-        "multi": "unknown",
+        "multi": true,
         "name": "TzHaar Fight Cave",
         "notes": "Solo minigame: TzTok-Jad 'is encountered on Wave 63 (the final wave)' of the TzHaar Fight Cave, which must be fought solo without restocking between waves. Mor Ul Rek lies underneath the Karamja Volcano.",
         "pages": [
@@ -153935,7 +153935,7 @@
         "monsters": [
           "Desert Lizard"
         ],
-        "multi": "unknown",
+        "multi": false,
         "name": "West of Ruins of Ullek",
         "notes": "Second desert cluster listed on the Desert Lizard and Small Lizard monster pages (4 desert-lizard pins at level 24, 5 small-lizard pins at level 12). Not in the task page's location comparison, so combat type and cannon use are not stated.",
         "pages": [
@@ -155557,7 +155557,7 @@
         "monsters": [
           "Maggot King"
         ],
-        "multi": "unknown",
+        "multi": true,
         "name": "Maggot King",
         "notes": "'Use Drakan's medallion to get to Castle Drakan, enter Vampyrium, and then run east. Before fighting the boss, players should unlock a quick-travel method by rescuing an aranei scout south-east of Sangvesti.' (Maggot King). 'a pickaxe is required to clear rubble south of the shortcut' for the Agility shortcut to the Hunting Grounds (Vampyrium); the two woodland shortcuts need 64 Agility (Maggot King). 'If players die anywhere in Vampyrium post quest ... it is an unsafe death but they will respawn next to the portal in the Vampyrium castle courtyard' (Vampyrium).",
         "pages": [
@@ -156564,7 +156564,7 @@
         "monsters": [
           "Mammoth"
         ],
-        "multi": "unknown",
+        "multi": true,
         "name": "South-east of Ferox Enclave",
         "notes": "'Mammoths can be easily safespotted due to their large size (3x3). Players can use the many trees or tree stumps in the area to safespot them from behind.' 'a nearby altar providing unlimited Prayer for boosts, and the short walk to the Enclave for resupplying.' The Mammoth page adds that players 'are therefore advised not to carry too many supplies on them at once' because of player killers. 'Killing a Mammoth is a task in the Easy Wilderness Diary.' (Mammoth).",
         "pages": [
@@ -174954,7 +174954,7 @@
         "monsters": [
           "Moss giant"
         ],
-        "multi": "unknown",
+        "multi": false,
         "name": "West of Ralos' Rise",
         "notes": "6 level 42 spawns listed only on the Moss giant monster page LocLine list; not on the task page, so no multi/cannon/safespot data.",
         "pages": [
@@ -175067,7 +175067,7 @@
         "monsters": [
           "Moss giant"
         ],
-        "multi": "unknown",
+        "multi": false,
         "name": "Tonali Cavern - Southern Chamber",
         "notes": "5 spawns on the ground floor and 3 on the first floor of the southern chamber, listed only on the Moss giant monster page; not on the task page.",
         "pages": [
@@ -181577,7 +181577,7 @@
         },
         "annotations": [],
         "annotationsRaw": [],
-        "cannon": "unknown",
+        "cannon": true,
         "coordsMissing": false,
         "curated": true,
         "curatedName": "Zanaris",
@@ -181594,7 +181594,7 @@
         "monsters": [
           "Otherworldly being"
         ],
-        "multi": "unknown",
+        "multi": false,
         "name": "Zanaris",
         "notes": "Six spawns just south of the Zanaris bank. Five of the six have a wander radius that allows pond safespotting; one retreats if attacked horizontally across the pond, another vertically, the other three never retreat while you stay next to the pond.",
         "pages": [
@@ -186122,7 +186122,7 @@
         },
         "annotations": [],
         "annotationsRaw": [],
-        "cannon": "unknown",
+        "cannon": true,
         "coordsMissing": false,
         "curated": true,
         "curatedName": "Lumbridge Swamp",
@@ -186142,7 +186142,7 @@
         "monsters": [
           "Giant rat"
         ],
-        "multi": "unknown",
+        "multi": false,
         "name": "Lumbridge Swamp",
         "notes": "Level 3 and 6 giant rats in the swamp and lighter grey ones behind Lumbridge Castle; ordinary level 1 rats in and around Lumbridge.",
         "pages": [
@@ -202052,7 +202052,7 @@
         "monsters": [
           "Rogue"
         ],
-        "multi": "unknown",
+        "multi": false,
         "name": "South-west of Mage Arena",
         "notes": "Only two level 15 rogue spawns (Rogue LocLine 'South-west of Mage Arena'). The Mage Arena bank is nearby ('The nearby Mage Arena bank is one of only two banks in the entire Wilderness', Mage Arena). Wilderness level taken from Krystilia's task-wide '50-54' range, not from a page about this exact spot.",
         "pages": [
@@ -206578,7 +206578,7 @@
         "monsters": [
           "Scorpion"
         ],
-        "multi": "unknown",
+        "multi": false,
         "name": "Wilderness (West of the Air Obelisk)",
         "notes": "Low-level Wilderness scorpions listed by Krystilia; levels 5-9 per Krystilia's table.",
         "pages": [
@@ -221314,7 +221314,7 @@
         "monsters": [
           "Sourhog"
         ],
-        "multi": "unknown",
+        "multi": false,
         "name": "Sourhog Cave",
         "notes": "Only location, 8 sourhog spawns; the cave entrance is just east of Draynor Manor. Sourhogs are aggressive to players of any combat level.",
         "pages": [
@@ -224286,7 +224286,7 @@
         "monsters": [
           "Spider"
         ],
-        "multi": "unknown",
+        "multi": true,
         "name": "Wilderness spider nest holding a Sapphire spawn",
         "notes": "Aggressive low-HP spiders around a cut sapphire spawn at roughly level 46 Wilderness (Spider LocLine pins around 3168,3886); a cannon or fast darts/knives on the 2 HP spiderlings finishes even a 100 task in about 5 minutes. Player killers can arrive.",
         "pages": [
@@ -234210,7 +234210,7 @@
         "monsters": [
           "Suqah"
         ],
-        "multi": "unknown",
+        "multi": true,
         "name": "Lady Zay - Cage on the bottom floor",
         "notes": "Listed as a Suqah LocLine: a single 27th suqah kept in a cage below the deck of the Lady Zay; not a practical task location.",
         "pages": [
@@ -235897,7 +235897,7 @@
         "monsters": [
           "The Whisperer"
         ],
-        "multi": "unknown",
+        "multi": true,
         "name": "Lassar Undercity - Sunken Cathedral",
         "notes": "'The undercity is accessible from the sinkhole north-west of Ruins of Camdozaal, located under Ice Mountain.' (The Whisperer); 'Players can access this area by climbing down the Bottomless Pit north of the Camdozaal Mines. Both the pre- and post-quest versions of the Undercity are instanced, and logging out in either version will bring players back to the rope leading to the palace.' (Lassar Undercity).",
         "pages": [
@@ -243175,7 +243175,7 @@
         },
         "annotations": [],
         "annotationsRaw": [],
-        "cannon": "unknown",
+        "cannon": true,
         "coordsMissing": false,
         "curated": true,
         "curatedName": "Ice Path",
@@ -243195,7 +243195,7 @@
         "monsters": [
           "Ice troll"
         ],
-        "multi": "unknown",
+        "multi": false,
         "name": "Ice Path",
         "notes": "Ice troll LocLine; 'players cannot run after passing the Ice Gate' and the chill 'drains your Hitpoints periodically by 1-2 and other stats' (Ice Path). Task page: not worth killing.",
         "pages": [
@@ -243533,7 +243533,7 @@
         "monsters": [
           "Mountain troll"
         ],
-        "multi": "unknown",
+        "multi": false,
         "name": "North of the Troll arena",
         "notes": "Mountain troll LocLines 'North of the Troll arena' and 'Tunnel between Troll arena and Trollheim' (levels 69, 71); level 68 thrower trolls range players on the northern part of the mountain (Troll Stronghold quest page). Trollheim is one of the Slayer task list row's locations.",
         "pages": [
@@ -271602,7 +271602,7 @@
         "monsters": [
           "Inferno"
         ],
-        "multi": "unknown",
+        "multi": true,
         "name": "Inferno",
         "notes": "The TzHaar task page has no LocLine; location taken from the Inferno page infobox ('|location = [[Mor Ul Rek]]'). The task covers all monsters inside the Inferno and is cancelled if the player is defeated.",
         "pages": [
@@ -273356,7 +273356,7 @@
         "monsters": [
           "Zul-Andra"
         ],
-        "multi": "unknown",
+        "multi": true,
         "name": "Zul-Andra",
         "notes": "Travel by Zul-andra teleport scroll or fairy ring BJS and the stepping stones (76 Agility, boostable); board the sacrificial boat at Zul-Andra. Death items are held by Priestess Zul-Gwenwynig and are permanently lost on a further unsafe death before reclaiming.",
         "pages": [
