@@ -705,6 +705,174 @@ def sanitise_title(title: str) -> str:
     return title.replace("/", "__").replace(" ", "_").replace(":", "_")
 
 
+# --------------------------------------------------------------------------
+# Bucket: the wiki's structured-data API for external tools
+# --------------------------------------------------------------------------
+#
+# The OSRS Wiki asks external users to read its data through Bucket
+# (api.php?action=bucket, https://oldschool.runescape.wiki/w/RuneScape:Bucket)
+# "without needing to scrape or parse wiki pages".  The generator asks Bucket
+# first and only reads a page for what Bucket does not hold (location names of
+# {{LocLine}}s, gear tab labels and tiers, {{Infobox Slayer}}, prose).
+
+BUCKET_PAGE_SIZE = 5000
+MONSTER_BUCKET_FIELDS = ["page_name", "page_name_sub", "default_version", "name", "id", "combat_level",
+                         "hitpoints", "size", "attack_speed", "slayer_level", "slayer_experience",
+                         "slayer_category", "assigned_by", "cannon_immune"]
+
+
+class BucketClient:
+    """Runs Bucket queries, caching every answer under cache/bucket/ (one file per query).
+
+    A failed query returns None; callers then fall back to reading pages."""
+
+    def __init__(self, cache_dir: Path, refresh: bool = False, sleep: float = FETCH_SLEEP):
+        self.dir = cache_dir / "bucket"
+        self.dir.mkdir(parents=True, exist_ok=True)
+        self.refresh = refresh
+        self.sleep = sleep
+        self.fetches = 0
+        self.failed: dict[str, str] = {}
+
+    def run(self, query: str) -> list[dict] | None:
+        import hashlib
+        path = self.dir / (hashlib.sha1(query.encode("utf-8")).hexdigest() + ".json")
+        if not self.refresh and path.exists():
+            return json.loads(path.read_text(encoding="utf-8"))["rows"]
+        url = API_URL + "?" + urllib.parse.urlencode({"action": "bucket", "query": query, "format": "json"})
+        req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+        for attempt in range(len(BACKOFF_SECONDS) + 1):
+            try:
+                self.fetches += 1
+                print(f"  bucket [{self.fetches}] {query[:100]}", file=sys.stderr)
+                with urllib.request.urlopen(req, timeout=120) as resp:
+                    data = json.load(resp)
+                time.sleep(self.sleep)
+                break
+            except urllib.error.HTTPError as e:
+                if e.code == 429 and attempt < len(BACKOFF_SECONDS):
+                    time.sleep(BACKOFF_SECONDS[attempt])
+                    continue
+                self.failed[query] = f"HTTP {e.code}"
+                return None
+            except (urllib.error.URLError, TimeoutError, json.JSONDecodeError) as e:
+                self.failed[query] = str(e)
+                return None
+        if "error" in data or "bucket" not in data:
+            self.failed[query] = str(data.get("error", "no bucket in answer"))
+            return None
+        rows = data["bucket"]
+        path.write_text(json.dumps({"query": query, "fetched": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+                                    "rows": rows}, ensure_ascii=False), encoding="utf-8")
+        return rows
+
+    def table(self, bucket: str, fields: list[str]) -> list[dict] | None:
+        """Every row of a bucket (the selected fields), fetched BUCKET_PAGE_SIZE rows at a time."""
+        out: list[dict] = []
+        offset = 0
+        select = ",".join(f"'{f}'" for f in fields)
+        while True:
+            rows = self.run(f"bucket('{bucket}').select({select}).limit({BUCKET_PAGE_SIZE}).offset({offset}).run()")
+            if rows is None:
+                return None
+            out += rows
+            if len(rows) < BUCKET_PAGE_SIZE:
+                return out
+            offset += BUCKET_PAGE_SIZE
+
+
+class BucketData:
+    """The parts of Bucket the generator uses, loaded once per run."""
+
+    def __init__(self, client: BucketClient | None):
+        self.monsters: dict[str, list[dict]] = {}
+        self.gear_pages: set[str] | None = None
+        if client is None:
+            return
+        rows = client.table("infobox_monster", MONSTER_BUCKET_FIELDS)
+        for r in rows or []:
+            self.monsters.setdefault(r.get("page_name"), []).append(r)
+        gear = client.table("recommended_equipment", ["page_name"])
+        if gear is not None:
+            self.gear_pages = {r.get("page_name") for r in gear if r.get("page_name")}
+
+
+BUCKET: BucketData = BucketData(None)
+
+
+def _bucket_scalar(rows: list[dict], field: str, conv):
+    """The field's value when every row (version) of the page that has it agrees, else None."""
+    values = []
+    for r in rows:
+        if r.get(field) not in (None, "", []):
+            v = conv(r[field])
+            if v is not None and v not in values:
+                values.append(v)
+    return values[0] if len(values) == 1 else None
+
+
+def _bucket_ids(v) -> list[int] | None:
+    ids = [to_int(x) for part in (v if isinstance(v, list) else [v]) for x in str(part).split(",")]
+    ids = [i for i in ids if i is not None]
+    return ids or None
+
+
+def _bucket_list(v) -> list[str]:
+    return [str(x).strip() for x in (v if isinstance(v, list) else [v]) if str(x).strip()]
+
+
+_BUCKET_MONSTER_FIELDS = {
+    # our key: (bucket field, converter)
+    "slayerXp": ("slayer_experience", lambda v: int(float(v)) if v not in (None, "") else None),
+    "slayerLevel": ("slayer_level", to_int),
+    "combat": ("combat_level", to_int),
+    "hitpoints": ("hitpoints", to_int),
+    "size": ("size", to_int),
+    "attackSpeed": ("attack_speed", lambda v: to_int(v) or None),  # 0 means "not set"
+    "slayerCategory": ("slayer_category", lambda v: ", ".join(_bucket_list(v)) or None),
+    "assignedBy": ("assigned_by", lambda v: tuple(x.lower() for x in _bucket_list(v)) or None),
+    "immuneCannon": ("cannon_immune", lambda v: {"immune": "Yes", "not immune": "No"}.get(str(v).strip().lower(), str(v).strip() or None)),
+    "npcIds": ("id", lambda v: tuple(_bucket_ids(v) or ()) or None),
+}
+
+
+def monster_info(page: "Page") -> tuple[dict | None, str]:
+    """{{Infobox Monster}} facts for a page: Bucket first, the page's own infobox for the
+    rest.  Returns (info, source) with source "bucket", "bucket+page", "page" or "none"."""
+    from_page = parse_infobox_monster(page.wikitext)
+    rows = BUCKET.monsters.get(page.title) or []
+    if not rows:
+        return from_page, "page" if from_page else "none"
+    # The name stays the page's: Bucket's default version of a disguised monster is the
+    # disguise ("Rocks" for a Rock Crab), and name_variants() falls back to the page title.
+    info = dict(from_page) if from_page else {"name": None, "versions": []}
+    for key, (field, conv) in _BUCKET_MONSTER_FIELDS.items():
+        v = _bucket_scalar(rows, field, conv)
+        if v is not None:
+            info[key] = list(v) if isinstance(v, tuple) else v
+    return info, "bucket+page" if from_page else "bucket"
+
+
+def bucket_category_candidates(tasks: list[dict]) -> dict[str, list[str]]:
+    """Maintainer hint in report.json: monster pages whose Bucket slayer_category names one of a
+    task's categories but that the task does not include yet (candidates for
+    EXTRA_MONSTER_PAGES; review each, many are quest or event monsters)."""
+    by_category: dict[str, set[str]] = {}
+    for page, rows in BUCKET.monsters.items():
+        for r in rows:
+            for c in _bucket_list(r.get("slayer_category") or []):
+                by_category.setdefault(c.lower(), set()).add(page)
+    out: dict[str, list[str]] = {}
+    for t in tasks:
+        cats = {c.strip().lower() for m in t.get("monsters", []) for c in (m.get("slayerCategory") or "").split(",") if c.strip()}
+        cats.discard("bosses")
+        have = {m.get("page") for m in t.get("monsters", [])}
+        missing = sorted(set().union(*(by_category.get(c, set()) for c in cats)) - have) if cats else []
+        if missing:
+            out[t["task"]] = missing
+    return out
+
+
 class WikiCache:
     """Fetches wikitext via the MediaWiki API, caching every answer on disk."""
 
@@ -716,6 +884,10 @@ class WikiCache:
         self.fetches = 0
         self.failed: dict[str, str] = {}
         self._mem: dict[str, Page] = {}
+
+    def has(self, title: str) -> bool:
+        """Whether the page's answer (ok or missing) is already cached."""
+        return title.strip() in self._mem or self._paths(title.strip())[1].exists()
 
     def _paths(self, title: str) -> tuple[Path, Path]:
         base = self.cache_dir / sanitise_title(title)
@@ -910,6 +1082,7 @@ def resolve_strategy_pages(cache: WikiCache, display: str, task_page: Page | Non
         candidates.append((f"{task_page.title}/Strategies", False))
     for p in primary:
         candidates.append((f"{p.title}/Strategies", False))
+    automatic = {c for c, _ in candidates}
     candidates += [(t, False) for t in STRATEGY_PAGE_OVERRIDES.get(display, [])]
     candidates += [(t, True) for t in STRATEGY_VARIANT_PAGES.get(display, [])]
     seen = {task_page.title} if task_page else set()
@@ -919,6 +1092,11 @@ def resolve_strategy_pages(cache: WikiCache, display: str, task_page: Page | Non
         if title in tried:
             continue
         tried.append(title)
+        # Only the automatic "/Strategies" guesses are checked against Bucket's list of pages
+        # with gear tables; a guess not on it is not fetched (it was usually a missing page).
+        if (title in automatic and BUCKET.gear_pages is not None and title not in BUCKET.gear_pages
+                and not cache.has(title)):
+            continue
         page = cache.get(title)
         if page.ok and page.title not in seen:
             seen.add(page.title)
@@ -2596,7 +2774,9 @@ def build_task(cache: WikiCache, row: TaskRow, report: dict) -> dict:
 
     raw_locs: list[dict] = []
     for p in monster_pages:
-        info = parse_infobox_monster(p.wikitext)
+        info, info_source = monster_info(p)
+        report.setdefault("monsterInfoSources", {}).setdefault(info_source, 0)
+        report["monsterInfoSources"][info_source] += 1
         locs = parse_loclines(p.wikitext, p.title)
         map_locs = [] if locs else parse_map_locations(p.wikitext, p.title)
         raw_locs.extend(locs + map_locs)
@@ -3001,12 +3181,17 @@ def main(argv: list[str] | None = None) -> int:
                                   "other tasks are loaded from the existing out/tasks.json")
     ap.add_argument("--limit", type=int, default=0, help="stop after N tasks (testing)")
     ap.add_argument("--sleep", type=float, default=FETCH_SLEEP)
+    ap.add_argument("--no-bucket", action="store_true",
+                    help="do not use the Bucket API (pages only; for comparing outputs)")
     ap.add_argument("--self-test", action="store_true", help="run the parse_access() unit tests and exit")
     args = ap.parse_args(argv)
     if args.self_test:
         return self_test()
 
     cache = WikiCache(args.cache, refresh=args.refresh, sleep=args.sleep)
+    global BUCKET
+    bucket_client = None if args.no_bucket else BucketClient(args.cache, refresh=args.refresh, sleep=args.sleep)
+    BUCKET = BucketData(bucket_client)
     rows = read_task_list(args.tasks)
     if args.limit:
         rows = rows[:args.limit]
@@ -3064,6 +3249,9 @@ def main(argv: list[str] | None = None) -> int:
     finalise_variant_gear(tasks)
     report["failedPages"] = dict(cache.failed)
     report["fetches"] = cache.fetches
+    report["bucketQueries"] = bucket_client.fetches if bucket_client else 0
+    report["bucketFailed"] = dict(bucket_client.failed) if bucket_client else {}
+    report["bucketCategoryCandidates"] = bucket_category_candidates(tasks)
     report["counts"] = {
         "tasks": len(tasks),
         "withTaskPage": sum(1 for t in tasks if t["wikiTaskPage"]),
