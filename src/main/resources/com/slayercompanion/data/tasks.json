@@ -20332,7 +20332,7 @@
         "combat": 204,
         "hasInfobox": true,
         "hitpoints": 300,
-        "immuneCannon": "yes",
+        "immuneCannon": "Yes",
         "immuneThrall": "yes",
         "locLines": 1,
         "mapLocations": 0,
@@ -55592,7 +55592,7 @@
         "combat": 127,
         "hasInfobox": true,
         "hitpoints": 125,
-        "immuneCannon": "yes",
+        "immuneCannon": "Yes",
         "immuneThrall": "yes",
         "locLines": 1,
         "mapLocations": 0,
@@ -55635,7 +55635,7 @@
           "Magic (100% prayer penetration)"
         ],
         "attributes": null,
-        "combat": null,
+        "combat": 291,
         "combatByVersion": {
           "Kraken": 291,
           "Whirlpool": null
@@ -73232,7 +73232,7 @@
         "combat": 142,
         "hasInfobox": true,
         "hitpoints": 250,
-        "immuneCannon": "no",
+        "immuneCannon": "No",
         "immuneThrall": "no",
         "locLines": 2,
         "mapLocations": 0,
@@ -73267,7 +73267,7 @@
         "combat": 117,
         "hasInfobox": true,
         "hitpoints": 190,
-        "immuneCannon": "no",
+        "immuneCannon": "No",
         "immuneThrall": "no",
         "locLines": 2,
         "mapLocations": 0,
@@ -92220,7 +92220,9 @@
     "monsters": [
       {
         "aggressive": "Yes",
-        "assignedBy": null,
+        "assignedBy": [
+          "krystilia"
+        ],
         "attackSpeed": 4,
         "attackStyles": [
           "Crush"
@@ -92242,9 +92244,9 @@
         "poisonous": "No",
         "redirected": false,
         "size": 2,
-        "slayerCategory": null,
+        "slayerCategory": "Ents",
         "slayerLevel": null,
-        "slayerXp": null,
+        "slayerXp": 107,
         "versions": [],
         "weakness": null
       }
@@ -92288,7 +92290,7 @@
       "Slayer task/Ent",
       "Ents"
     ],
-    "xpPerKill": null
+    "xpPerKill": 107
   },
   {
     "alternatives": [],
@@ -94218,7 +94220,7 @@
         "combat": 350,
         "hasInfobox": true,
         "hitpoints": 600,
-        "immuneCannon": "yes",
+        "immuneCannon": "Yes",
         "immuneThrall": null,
         "locLines": 0,
         "mapLocations": 0,
@@ -98289,7 +98291,7 @@
         "combat": 202,
         "hasInfobox": true,
         "hitpoints": 230,
-        "immuneCannon": "yes",
+        "immuneCannon": "Yes",
         "immuneThrall": "No",
         "locLines": 1,
         "mapLocations": 0,
@@ -106477,7 +106479,7 @@
         "combat": 230,
         "hasInfobox": true,
         "hitpoints": 200,
-        "immuneCannon": "no",
+        "immuneCannon": "No",
         "immuneThrall": "no",
         "locLines": 1,
         "mapLocations": 0,
@@ -120514,7 +120516,7 @@
         "combat": 95,
         "hasInfobox": true,
         "hitpoints": 110,
-        "immuneCannon": "no",
+        "immuneCannon": "No",
         "immuneThrall": "no",
         "locLines": 2,
         "mapLocations": 0,
@@ -129955,7 +129957,7 @@
         "combat": 350,
         "hasInfobox": true,
         "hitpoints": 600,
-        "immuneCannon": "yes",
+        "immuneCannon": "Yes",
         "immuneThrall": null,
         "locLines": 0,
         "mapLocations": 0,
@@ -141795,7 +141797,7 @@
           "Magic (100% prayer penetration)"
         ],
         "attributes": null,
-        "combat": null,
+        "combat": 291,
         "combatByVersion": {
           "Kraken": 291,
           "Whirlpool": null
@@ -146942,7 +146944,7 @@
         "combat": 106,
         "hasInfobox": true,
         "hitpoints": 97,
-        "immuneCannon": "yes",
+        "immuneCannon": "Yes",
         "immuneThrall": "yes",
         "locLines": 4,
         "mapLocations": 0,
@@ -150923,7 +150925,7 @@
         "poisonous": "No",
         "redirected": false,
         "size": 3,
-        "slayerCategory": "Lesser Nagua",
+        "slayerCategory": "Bosses, Lesser Nagua",
         "slayerLevel": 48,
         "slayerXp": 546,
         "slayerXpByVersion": {
@@ -198647,7 +198649,7 @@
           "Level 3": 5,
           "Level 6": 10
         },
-        "immuneCannon": "no",
+        "immuneCannon": "No",
         "immuneThrall": "no",
         "locLines": 23,
         "mapLocations": 0,
@@ -220218,7 +220220,7 @@
         "combat": 264,
         "hasInfobox": true,
         "hitpoints": 150,
-        "immuneCannon": "Not immune",
+        "immuneCannon": "No",
         "immuneThrall": "Not immune",
         "locLines": 0,
         "mapLocations": 0,

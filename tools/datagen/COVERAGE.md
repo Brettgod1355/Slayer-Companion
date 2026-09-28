@@ -258,7 +258,7 @@ Monster-page tasks without `{{Infobox Slayer}}` (the plugin reads live ranges fr
 The Abyssal Sire, The Alchemical Hydra, Araxxor, Barrows Brothers, Black Knights, Brine rats, Callisto, Catablepon, Cave bugs, Cave crawlers, Cave slimes, Cerberus, Chaos druids, The Chaos Elemental, The Chaos Fanatic, Cockatrice, Cows, Crawling hands, Crazy Archaeologists, Crocodiles, Custodian Stalkers, Dagannoth Kings, Dark warriors, Deranged Archaeologist, Duke Sucellus, Ents, Fever spiders, Fleshcrawlers, Frost dragons, General Graardor, Ghouls, The Giant Mole, Harpie bug swarms, Ice warriors, Infernal mages, TzTok-Jad, Jungle horrors, The Kalphite Queen, Killerwatts, The King Black Dragon, The Cave Kraken Boss, Kree'arra, K'ril Tsutsaroth, Kurask, Lava Dragons, The Maggot King, Magic axes, Mammoths, Minotaurs, Mogres, Otherworldly beings, The Phantom Muspah, Revenants, Rogues, Sarachnis, Scorpia, Shadow warriors, The Shellbane Gryphon, Skeletal wyverns, Sourhogs, Terror dogs, The Leviathan, The Whisperer, The Thermonuclear Smoke Devil, Vardorvis, Venenatis, Vet'ion, Vorkath, Werewolves, Commander Zilyana, TzKal-Zuk, Zulrah
 
 ### No Slayer XP per kill
-Ents (the `Ent` infobox has no `slayxp`).
+None since the Bucket switch (2026-09-28): the `infobox_monster` bucket gives Ents 107.
 
 ## Alias fixes made (step 2)
 

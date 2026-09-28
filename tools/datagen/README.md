@@ -136,6 +136,30 @@ strategyPagesTried}}` lists the pages that contributed and every strategy title 
   points at an id the task does not have is listed in `report.json → curatedProblems`.
 * The directory may be empty or missing.
 
+## Reading the wiki: Bucket first, pages second
+
+The OSRS Wiki asks external tools to read its data through **Bucket**
+(`api.php?action=bucket`, see https://oldschool.runescape.wiki/w/RuneScape:Bucket), "without needing
+to scrape or parse wiki pages". The generator asks Bucket first and reads a page only for what
+Bucket does not hold:
+
+| Data | Source |
+| --- | --- |
+| Monster facts (Slayer XP and level, combat, hitpoints, size, attack speed, category, masters, cannon immunity, NPC ids) | `infobox_monster` bucket (the whole table, one query per 5000 rows); the page's own infobox fills fields Bucket lacks, and fields whose value differs between versions |
+| Which pages have gear tables | `recommended_equipment` bucket (list of pages). Automatic `/Strategies` guesses not on it are not fetched (about 200 fewer page reads on a full refresh) |
+| Gear tables themselves | page (Bucket stores no tab labels and flattens tiers) |
+| Spawn locations | page `{{LocLine}}`s (Bucket's `locline` has coordinates but no location names) |
+| `{{Infobox Slayer}}`, strategy prose, shop unlocks | page (no bucket) |
+
+Bucket answers are cached under `cache/bucket/` (one file per query) like pages; `--refresh`
+re-asks. `--no-bucket` builds from pages only, for comparing outputs. `report.json` gains
+`bucketQueries`, `bucketFailed`, `monsterInfoSources` and `bucketCategoryCandidates` (monster
+pages whose Slayer category names a task but that the task does not include yet — review each;
+many are quest, Nightmare Zone or random-event monsters). A failed Bucket query falls back to pages.
+
+Be polite: this tool runs only when the maintainer asks for a refresh, identifies itself with
+`USER_AGENT`, sleeps between requests and never re-asks for something it has cached.
+
 ## Outputs
 
 All JSON is pretty-printed, keys sorted, UTF-8, `ensure_ascii=False`.
