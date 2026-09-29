@@ -184,6 +184,24 @@ public class LoadoutStoreTest
 	}
 
 	@Test
+	public void recommendedGearReplacesOnlyTheWornPart()
+	{
+		saved();
+		Map<Integer, Integer> gear = new HashMap<>();
+		gear.put(WEAPON, RUNE_SCIMITAR);
+		store.saveEquipment("Aberrant spectres", gear);
+		Loadout loaded = store.get("Aberrant spectres").get();
+		assertEquals(1, loaded.getEquipment().size());
+		assertEquals(RUNE_SCIMITAR, loaded.getEquipment().get(WEAPON).getId());
+		assertEquals(DEATH_RUNE, loaded.getInventory().get(0).getId());
+
+		world.bank(RUNE_SCIMITAR);
+		LoadoutDisplay d = store.displayEquipment(gear);
+		assertEquals(LoadoutDisplay.Status.IN_BANK, d.getEquipment().get(WEAPON).getStatus());
+		assertTrue(d.getInventory().stream().allMatch(s -> s == null));
+	}
+
+	@Test
 	public void linkAndUnlinkAnInventorySetup()
 	{
 		assertFalse(store.linkedSetup("Vorkath").isPresent());

@@ -122,6 +122,34 @@ public class LoadoutStore
 		return loadout;
 	}
 
+	/** Save {@code equipment} (slot to item id) as the task's worn gear, keeping its saved inventory. */
+	public void saveEquipment(String taskName, Map<Integer, Integer> equipment)
+	{
+		Loadout loadout = get(taskName).orElseGet(Loadout::new);
+		loadout.getEquipment().clear();
+		for (Map.Entry<Integer, Integer> e : equipment.entrySet())
+		{
+			loadout.getEquipment().put(e.getKey(), new Loadout.Slot(e.getValue(), 1));
+		}
+		while (loadout.getInventory().size() < Loadout.INVENTORY_SIZE)
+		{
+			loadout.getInventory().add(new Loadout.Slot(-1, 0));
+		}
+		loadout.setSavedAtEpochMs(System.currentTimeMillis());
+		configManager.setRSProfileConfiguration(SlayerCompanionConfig.GROUP, LOADOUT_PREFIX + LocationService.slug(taskName), gson.toJson(loadout));
+	}
+
+	/** Where the player has each item of an equipment-only set. Client thread only. */
+	public LoadoutDisplay displayEquipment(Map<Integer, Integer> equipment)
+	{
+		Loadout loadout = new Loadout();
+		for (Map.Entry<Integer, Integer> e : equipment.entrySet())
+		{
+			loadout.getEquipment().put(e.getKey(), new Loadout.Slot(e.getValue(), 1));
+		}
+		return display(loadout);
+	}
+
 	/** Name of the Inventory Setups setup linked to the task. */
 	public Optional<String> linkedSetup(String taskName)
 	{

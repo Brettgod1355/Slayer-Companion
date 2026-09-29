@@ -72,6 +72,13 @@ public class PanelModel
 	/** The Inventory Setups setup linked to this task. */
 	@Nullable
 	String linkedSetup;
+	/** Best-DPS gear from the bank for the current task and variant; null until asked for. */
+	@Nullable
+	com.slayercompanion.dps.Recommendation recommendation;
+	/** Where each recommended item is, one per {@code recommendation} option. */
+	List<LoadoutDisplay> recommendationDisplays;
+	/** True while the recommendation is being worked out. */
+	boolean recommending;
 	@Nullable
 	PointsPlan pointsPlan;
 	/** Do / skip / block for the current task. */

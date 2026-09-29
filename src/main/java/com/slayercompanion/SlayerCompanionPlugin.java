@@ -28,6 +28,9 @@ import com.google.inject.Provides;
 import com.slayercompanion.data.SlayerData;
 import com.slayercompanion.data.TaskInfo;
 import com.slayercompanion.data.TaskLocation;
+import com.slayercompanion.dps.LoadoutOptimizer;
+import com.slayercompanion.dps.LoadoutRecommender;
+import com.slayercompanion.dps.Recommendation;
 import com.slayercompanion.events.OwnedItemsChanged;
 import com.slayercompanion.events.SessionUpdated;
 import com.slayercompanion.events.TaskChanged;
@@ -92,12 +95,12 @@ import net.runelite.client.util.LinkBrowser;
 @PluginDescriptor(
 	name = "Slayer Companion",
 	description = "A do/skip/block verdict with what the task is worth, locations, routing, the wiki's recommended gear and strategy, your own loadout per task, points planning, supplies and profit, wilderness risk and unlock advice for your Slayer task",
-	tags = {"slayer", "task", "verdict", "loot", "achievements", "gear", "loadout", "inventory", "setups", "location", "wilderness", "points", "konar", "supplies", "profit", "unlocks"}
+	tags = {"slayer", "task", "verdict", "loot", "achievements", "gear", "loadout", "dps", "inventory", "setups", "location", "wilderness", "points", "konar", "supplies", "profit", "unlocks"}
 )
 public class SlayerCompanionPlugin extends Plugin
 {
 	/** Shown in the panel footer; bumped together with build.gradle and runelite-plugin.properties. */
-	public static final String VERSION = "0.8.0";
+	public static final String VERSION = "0.9.0";
 
 	private static final String WIKI_BASE = "https://oldschool.runescape.wiki/w/";
 	/** Refresh the Wilderness numbers at most this often (game ticks). */
@@ -143,6 +146,8 @@ public class SlayerCompanionPlugin extends Plugin
 	@Inject
 	private LootEstimator lootEstimator;
 	@Inject
+	private LoadoutRecommender recommender;
+	@Inject
 	private InventorySetupsLink inventorySetupsLink;
 	@Inject
 	private SpriteManager spriteManager;
@@ -165,6 +170,9 @@ public class SlayerCompanionPlugin extends Plugin
 	private int tickCounter;
 	private final java.util.concurrent.atomic.AtomicBoolean refreshQueued = new java.util.concurrent.atomic.AtomicBoolean();
 	private boolean indexWasComplete;
+	/** The last best-in-bank result; shown only while its task and variant are current. */
+	private volatile Recommendation recommendation;
+	private volatile boolean recommending;
 
 	@Override
 	protected void startUp()
@@ -440,6 +448,21 @@ public class SlayerCompanionPlugin extends Plugin
 			}
 		}
 
+		String recommendationKey = info == null ? null : LoadoutRecommender.key(info.getTask(), variant);
+		Recommendation rec = recommendation;
+		if (rec != null && !rec.getKey().equals(recommendationKey))
+		{
+			rec = null;
+		}
+		List<com.slayercompanion.gear.LoadoutDisplay> recommendationDisplays = new java.util.ArrayList<>();
+		if (rec != null && loggedIn)
+		{
+			for (LoadoutOptimizer.Option o : rec.getOptions())
+			{
+				recommendationDisplays.add(loadoutStore.displayEquipment(LoadoutOptimizer.itemIds(o.getGear(), rec.getOwned())));
+			}
+		}
+
 		return PanelModel.builder()
 			.loggedIn(loggedIn)
 			.task(task)
@@ -455,6 +478,9 @@ public class SlayerCompanionPlugin extends Plugin
 			.loadout(loadout)
 			.inventorySetups(inventorySetupsLink.setups())
 			.linkedSetup(linkedSetup)
+			.recommendation(rec)
+			.recommendationDisplays(recommendationDisplays)
+			.recommending(recommending)
 			.pointsPlan(loggedIn ? pointsPlanner.plan(points, shared, task) : null)
 			.verdict(task == null ? null : VerdictAdvisor.verdict(info, masterInfo, points))
 			.lootEstimate(estimate)
@@ -574,6 +600,44 @@ public class SlayerCompanionPlugin extends Plugin
 		public void openInventorySetup(String setupName)
 		{
 			inventorySetupsLink.open(setupName);
+		}
+
+		@Override
+		public void recommendLoadout(String taskName)
+		{
+			clientThread.invokeLater(() ->
+			{
+				TaskInfo info = data.task(taskName).orElse(null);
+				if (info == null)
+				{
+					return;
+				}
+				recommending = true;
+				requestRefresh();
+				recommender.recommend(info, locationService.variant(info), r ->
+				{
+					recommendation = r;
+					recommending = false;
+					requestRefresh();
+				});
+			});
+		}
+
+		@Override
+		public void useRecommendation(String taskName, int index)
+		{
+			Recommendation r = recommendation;
+			if (r == null || index < 0 || index >= r.getOptions().size())
+			{
+				return;
+			}
+			String key = bundledName(taskName);
+			java.util.Map<Integer, Integer> ids = LoadoutOptimizer.itemIds(r.getOptions().get(index).getGear(), r.getOwned());
+			clientThread.invokeLater(() ->
+			{
+				loadoutStore.saveEquipment(key, ids);
+				requestRefresh();
+			});
 		}
 
 		@Override

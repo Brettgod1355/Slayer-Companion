@@ -972,15 +972,20 @@ def item_id_map(items: list[dict] | None) -> dict[str, int]:
 
 
 def build_items(bonuses: list[dict] | None, items: list[dict] | None) -> list[dict]:
-    """Equipment bonuses per item version, with every item id of that version."""
+    """Equipment bonuses per item version, with every item id of that version.  An id that two
+    versions share (the wiki lists some ids under several versions) stays only with the default
+    version, else with the first version listed."""
     ids_by_sub: dict[str, list[int]] = {}
     names_by_sub: dict[str, str] = {}
+    default_subs: set[str] = set()
     for r in items or []:
         sub = r.get("page_name_sub") or r.get("page_name")
         ids = _bucket_ids(r.get("item_id"))
         if sub and ids:
             ids_by_sub.setdefault(sub, []).extend(i for i in ids if i not in ids_by_sub.get(sub, []))
             names_by_sub[sub] = r.get("item_name") or r.get("page_name")
+            if "default_version" in r:
+                default_subs.add(sub)
     out: list[dict] = []
     for r in bonuses or []:
         sub = r.get("page_name_sub") or r.get("page_name")
@@ -1005,9 +1010,19 @@ def build_items(bonuses: list[dict] | None, items: list[dict] | None) -> list[di
         if slot in ("weapon", "2h"):
             item["speed"] = to_int(r.get("weapon_attack_speed")) or None
             item["category"] = (r.get("combat_style") or "").strip() or None
+        item["_default"] = sub in default_subs
         out.append(item)
-    out.sort(key=lambda i: (i["name"] or "", i["ids"]))
-    return out
+    # One row per id: default versions first, then page order.
+    taken: set[int] = set()
+    kept: list[dict] = []
+    for item in sorted(out, key=lambda i: not i["_default"]):
+        item["ids"] = [i for i in item["ids"] if i not in taken]
+        taken.update(item["ids"])
+        del item["_default"]
+        if item["ids"]:
+            kept.append(item)
+    kept.sort(key=lambda i: (i["name"] or "", i["ids"]))
+    return kept
 
 
 def apply_bucket_extras(tasks: list[dict], client: "BucketClient", report: dict) -> tuple[list[dict], list[dict]]:
