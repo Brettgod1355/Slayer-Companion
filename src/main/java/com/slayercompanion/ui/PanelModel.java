@@ -26,6 +26,7 @@ package com.slayercompanion.ui;
 
 import com.slayercompanion.data.TaskInfo;
 import com.slayercompanion.data.TaskLocation;
+import com.slayercompanion.gear.LoadoutDisplay;
 import com.slayercompanion.points.PointsPlan;
 import com.slayercompanion.task.CurrentTask;
 import com.slayercompanion.tracker.TaskSession;
@@ -61,6 +62,14 @@ public class PanelModel
 	boolean shortestPathAvailable;
 	boolean bankKnown;
 	List<String> missingRequiredItems;
+	/** The player's saved loadout for this task with where each item is now; null when none is saved. */
+	@Nullable
+	LoadoutDisplay loadout;
+	/** Setup names from the Inventory Setups plugin; empty when it is not installed or has none. */
+	List<String> inventorySetups;
+	/** The Inventory Setups setup linked to this task. */
+	@Nullable
+	String linkedSetup;
 	@Nullable
 	PointsPlan pointsPlan;
 	int sharedStreak;

@@ -32,9 +32,12 @@ import com.slayercompanion.events.OwnedItemsChanged;
 import com.slayercompanion.events.SessionUpdated;
 import com.slayercompanion.events.TaskChanged;
 import com.slayercompanion.game.LiveSlayerCatalog;
+import com.slayercompanion.gear.InventorySetupsLink;
 import com.slayercompanion.gear.ItemIndex;
 import com.slayercompanion.gear.ItemNameResolver;
 import com.slayercompanion.gear.OwnedItems;
+import com.slayercompanion.gear.LoadoutDisplay;
+import com.slayercompanion.gear.LoadoutStore;
 import com.slayercompanion.gear.RequiredItems;
 import com.slayercompanion.location.LocationService;
 import com.slayercompanion.location.MapMarkerService;
@@ -69,7 +72,10 @@ import net.runelite.client.callback.ClientThread;
 import net.runelite.client.config.ConfigManager;
 import net.runelite.client.eventbus.Subscribe;
 import net.runelite.client.events.ConfigChanged;
+import net.runelite.client.events.PluginChanged;
+import net.runelite.client.events.PluginMessage;
 import net.runelite.client.game.ItemManager;
+import net.runelite.client.game.SpriteManager;
 import net.runelite.client.plugins.Plugin;
 import net.runelite.client.plugins.PluginDescriptor;
 import net.runelite.client.ui.ClientToolbar;
@@ -81,13 +87,13 @@ import net.runelite.client.util.LinkBrowser;
 @Slf4j
 @PluginDescriptor(
 	name = "Slayer Companion",
-	description = "Locations, routing, the wiki's recommended gear and strategy, points planning, supplies and profit, wilderness risk and unlock advice for your Slayer task",
-	tags = {"slayer", "task", "gear", "location", "wilderness", "points", "konar", "supplies", "profit", "unlocks"}
+	description = "Locations, routing, the wiki's recommended gear and strategy, your own loadout per task, points planning, supplies and profit, wilderness risk and unlock advice for your Slayer task",
+	tags = {"slayer", "task", "gear", "loadout", "inventory", "setups", "location", "wilderness", "points", "konar", "supplies", "profit", "unlocks"}
 )
 public class SlayerCompanionPlugin extends Plugin
 {
 	/** Shown in the panel footer; bumped together with build.gradle and runelite-plugin.properties. */
-	public static final String VERSION = "0.6.0";
+	public static final String VERSION = "0.7.0";
 
 	private static final String WIKI_BASE = "https://oldschool.runescape.wiki/w/";
 	/** Refresh the Wilderness numbers at most this often (game ticks). */
@@ -129,6 +135,12 @@ public class SlayerCompanionPlugin extends Plugin
 	@Inject
 	private RequiredItems requiredItems;
 	@Inject
+	private LoadoutStore loadoutStore;
+	@Inject
+	private InventorySetupsLink inventorySetupsLink;
+	@Inject
+	private SpriteManager spriteManager;
+	@Inject
 	private PointsPlanner pointsPlanner;
 	@Inject
 	private TaskSessionTracker sessionTracker;
@@ -151,7 +163,7 @@ public class SlayerCompanionPlugin extends Plugin
 	@Override
 	protected void startUp()
 	{
-		panel = new SlayerCompanionPanel(new Actions(), data.wilderness());
+		panel = new SlayerCompanionPanel(new Actions(), data.wilderness(), itemManager, spriteManager);
 		BufferedImage icon = ImageUtil.loadImageResource(getClass(), "/com/slayercompanion/panel_icon.png");
 		navButton = NavigationButton.builder()
 			.tooltip("Slayer Companion")
@@ -174,6 +186,7 @@ public class SlayerCompanionPlugin extends Plugin
 		ownedItems.startUp();
 		sessionTracker.startUp();
 		taskTracker.startUp();
+		inventorySetupsLink.refresh();
 		requestRefresh();
 		log.debug("Slayer Companion {} started", VERSION);
 	}
@@ -190,6 +203,7 @@ public class SlayerCompanionPlugin extends Plugin
 		overlayManager.remove(overlay);
 		clientToolbar.removeNavigation(navButton);
 		catalog.reset();
+		inventorySetupsLink.reset();
 		panel = null;
 		overlayTask = null;
 		overlaySession = null;
@@ -208,8 +222,26 @@ public class SlayerCompanionPlugin extends Plugin
 		if (event.getGameState() == GameState.LOGGED_IN || event.getGameState() == GameState.LOGIN_SCREEN)
 		{
 			catalog.reset();
+			inventorySetupsLink.refresh();
 			requestRefresh();
 		}
+	}
+
+	@Subscribe
+	public void onPluginMessage(PluginMessage message)
+	{
+		if (inventorySetupsLink.onPluginMessage(message))
+		{
+			requestRefresh();
+		}
+	}
+
+	@Subscribe
+	public void onPluginChanged(PluginChanged event)
+	{
+		// Inventory Setups may have been turned on or off.
+		inventorySetupsLink.refresh();
+		requestRefresh();
 	}
 
 	@Subscribe
@@ -223,6 +255,10 @@ public class SlayerCompanionPlugin extends Plugin
 		}
 		else if (event.isNewAssignment())
 		{
+			if (config.openLinkedSetup())
+			{
+				loadoutStore.linkedSetup(bundledName(task.getName())).ifPresent(inventorySetupsLink::open);
+			}
 			data.task(task.getName()).ifPresent(info ->
 			{
 				updateMarkers(info);
@@ -346,6 +382,9 @@ public class SlayerCompanionPlugin extends Plugin
 		int mortimerStreak = loggedIn ? client.getVarpValue(VarPlayerID.SLAYER_MORTIMER_TASKS_COMPLETED) : 0;
 
 		List<String> missingRequired = info == null ? Collections.emptyList() : requiredItems.missing(info.getRequiredItems());
+		String taskKey = task == null ? null : info == null ? task.getName() : info.getTask();
+		LoadoutDisplay loadout = loggedIn && taskKey != null ? loadoutStore.get(taskKey).map(loadoutStore::display).orElse(null) : null;
+		String linkedSetup = loggedIn && taskKey != null ? loadoutStore.linkedSetup(taskKey).orElse(null) : null;
 
 		WildernessStatus wilderness = loggedIn ? wildernessAdvisor.status() : null;
 		overlayWilderness = wilderness;
@@ -377,6 +416,9 @@ public class SlayerCompanionPlugin extends Plugin
 			.shortestPathAvailable(routeService.isShortestPathAvailable())
 			.bankKnown(ownedItems.isBankKnown())
 			.missingRequiredItems(missingRequired)
+			.loadout(loadout)
+			.inventorySetups(inventorySetupsLink.setups())
+			.linkedSetup(linkedSetup)
 			.pointsPlan(loggedIn ? pointsPlanner.plan(points, shared, task) : null)
 			.sharedStreak(shared)
 			.wildernessStreak(wildStreak)
@@ -412,6 +454,12 @@ public class SlayerCompanionPlugin extends Plugin
 		}
 	}
 
+	/** The bundled task name, as favourites and loadouts are keyed; the game's name can be an alternative ("Artio"). */
+	private String bundledName(String taskName)
+	{
+		return data.task(taskName).map(TaskInfo::getTask).orElse(taskName);
+	}
+
 	private String itemName(int itemId)
 	{
 		return itemManager.getItemComposition(itemId).getName();
@@ -435,8 +483,7 @@ public class SlayerCompanionPlugin extends Plugin
 		@Override
 		public void setFavourite(String taskName, @Nullable String locationId)
 		{
-			// Key by the bundled task name, as the readers do; the game's name can be an alternative ("Artio").
-			String key = data.task(taskName).map(com.slayercompanion.data.TaskInfo::getTask).orElse(taskName);
+			String key = bundledName(taskName);
 			locationService.setFavourite(key, locationId);
 			clientThread.invokeLater(() ->
 			{
@@ -448,14 +495,44 @@ public class SlayerCompanionPlugin extends Plugin
 		@Override
 		public void setVariant(String taskName, @Nullable String monsterName)
 		{
-			// Key by the bundled task name, as the readers do; the game's name can be an alternative ("Artio").
-			String key = data.task(taskName).map(com.slayercompanion.data.TaskInfo::getTask).orElse(taskName);
+			String key = bundledName(taskName);
 			locationService.setVariant(key, monsterName);
 			clientThread.invokeLater(() ->
 			{
 				data.task(key).ifPresent(SlayerCompanionPlugin.this::updateMarkers);
 				requestRefresh();
 			});
+		}
+
+		@Override
+		public void saveLoadout(String taskName)
+		{
+			String key = bundledName(taskName);
+			clientThread.invokeLater(() ->
+			{
+				loadoutStore.saveCurrent(key);
+				requestRefresh();
+			});
+		}
+
+		@Override
+		public void deleteLoadout(String taskName)
+		{
+			loadoutStore.delete(bundledName(taskName));
+			requestRefresh();
+		}
+
+		@Override
+		public void linkInventorySetup(String taskName, @Nullable String setupName)
+		{
+			loadoutStore.link(bundledName(taskName), setupName);
+			requestRefresh();
+		}
+
+		@Override
+		public void openInventorySetup(String setupName)
+		{
+			inventorySetupsLink.open(setupName);
 		}
 
 		@Override

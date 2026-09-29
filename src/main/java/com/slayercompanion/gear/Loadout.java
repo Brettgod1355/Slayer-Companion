@@ -22,37 +22,35 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package com.slayercompanion.ui;
+package com.slayercompanion.gear;
 
-import com.slayercompanion.data.TaskLocation;
-import javax.annotation.Nullable;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-/** Callbacks from the panel into the plugin. Implementations hop to the client thread as needed. */
-public interface PanelActions
+/** A loadout the player saved for one task: what they wore and carried. Stored as JSON per account. */
+@Data
+public class Loadout
 {
-	void routeTo(TaskLocation location);
+	public static final int INVENTORY_SIZE = 28;
 
-	void clearRoute();
+	@Data
+	@NoArgsConstructor
+	@AllArgsConstructor
+	public static class Slot
+	{
+		/** Item id as it was in the container; -1 for an empty inventory slot. */
+		private int id;
+		private int quantity;
+	}
 
-	void setFavourite(String taskName, @Nullable String locationId);
-
-	/** Choose which monster variant of the task the player is doing (filters locations and XP). */
-	void setVariant(String taskName, @Nullable String monsterName);
-
-	/** Save what the player is wearing and carrying as the task's loadout. */
-	void saveLoadout(String taskName);
-
-	void deleteLoadout(String taskName);
-
-	/** Link one of the player's Inventory Setups setups to the task; null unlinks. */
-	void linkInventorySetup(String taskName, @Nullable String setupName);
-
-	/** Ask Inventory Setups to open the setup (it filters the bank to it). */
-	void openInventorySetup(String setupName);
-
-	void resetSession();
-
-	void refresh();
-
-	void openWiki(String pageTitle);
+	/** Equipment slot index ({@code EquipmentInventorySlot.getSlotIdx()}) to the item worn there. */
+	private Map<Integer, Slot> equipment = new HashMap<>();
+	/** The 28 inventory slots in order. */
+	private List<Slot> inventory = new ArrayList<>();
+	private long savedAtEpochMs;
 }
