@@ -90,6 +90,8 @@ public class TaskInfo
 	private TrainingSummary trainingSummary;
 	@Nullable
 	private String recommendedStyleSource;
+	@Nullable
+	private List<CombatAchievementInfo> combatAchievements;
 
 	public List<TaskLocation> locationsOrEmpty()
 	{
@@ -169,6 +171,28 @@ public class TaskInfo
 			}
 		}
 		return null;
+	}
+
+	/** The chosen variant, else the task's main monster (the first one the wiki places), else the first monster. */
+	@Nullable
+	public MonsterInfo mainMonster(@Nullable String variant)
+	{
+		MonsterInfo chosen = monster(variant);
+		if (chosen != null)
+		{
+			return chosen;
+		}
+		List<MonsterInfo> placed = variants();
+		if (!placed.isEmpty())
+		{
+			return placed.get(0);
+		}
+		return monstersOrEmpty().isEmpty() ? null : monstersOrEmpty().get(0);
+	}
+
+	public List<CombatAchievementInfo> combatAchievementsOrEmpty()
+	{
+		return combatAchievements == null ? Collections.emptyList() : combatAchievements;
 	}
 
 	/** Slayer XP per kill of the chosen variant when the wiki gives one, else the task's own figure. */

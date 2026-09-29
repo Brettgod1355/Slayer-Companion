@@ -32,6 +32,8 @@ import com.slayercompanion.task.CurrentTask;
 import com.slayercompanion.tracker.TaskSession;
 import com.slayercompanion.unlocks.UnlockAdvice;
 import com.slayercompanion.wilderness.WildernessStatus;
+import com.slayercompanion.worth.LootEstimate;
+import com.slayercompanion.worth.Verdict;
 import java.util.List;
 import javax.annotation.Nullable;
 import lombok.Builder;
@@ -72,6 +74,19 @@ public class PanelModel
 	String linkedSetup;
 	@Nullable
 	PointsPlan pointsPlan;
+	/** Do / skip / block for the current task. */
+	@Nullable
+	Verdict verdict;
+	/** Average loot for the kills left, from the wiki's drop rates and GE prices. */
+	@Nullable
+	LootEstimate lootEstimate;
+	/** Average loot for the current session's kills (the luck line compares loot with it). */
+	@Nullable
+	Long sessionExpected;
+	/** Average loot for each {@code history} entry's kills, same order; null where unknown. */
+	List<Long> historyExpected;
+	/** Combat Achievement task ids the player has completed (only the current task's are read). */
+	java.util.Set<Integer> completedAchievements;
 	int sharedStreak;
 	int wildernessStreak;
 	int mortimerStreak;

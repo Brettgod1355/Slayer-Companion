@@ -24,48 +24,44 @@
  */
 package com.slayercompanion.data;
 
+import java.util.Collections;
 import java.util.List;
 import javax.annotation.Nullable;
 import lombok.Data;
 
-/** Monster infobox facts for one of the task's monster pages. */
+/** An item's equipment bonuses (wiki Bucket "infobox_bonuses", one version). */
 @Data
-public class MonsterInfo
+public class ItemStats
 {
+	@Nullable
+	private List<Integer> ids;
 	private String name;
+	/** head, cape, neck, ammo, weapon, 2h, body, shield, legs, hands, feet, ring. */
+	private String slot;
+	private int stab;
+	private int slash;
+	private int crush;
+	private int ranged;
+	private int magic;
+	private int str;
+	private int rangedStr;
+	/** Magic damage bonus in percent. */
+	private double magicDmg;
+	private int prayer;
+	/** Weapons only: attack speed in ticks. */
 	@Nullable
-	private String page;
+	private Integer speed;
+	/** Weapons only: the wiki's weapon category ("Whip", "Slash Sword", "Crossbow", "Powered Staff"). */
 	@Nullable
-	private List<Integer> npcIds;
-	@Nullable
-	private Integer combat;
-	@Nullable
-	private Integer hitpoints;
-	@Nullable
-	private List<String> attackStyles;
-	@Nullable
-	private String maxHit;
-	@Nullable
-	private String weakness;
-	@Nullable
-	private String aggressive;
-	@Nullable
-	private String poisonous;
-	@Nullable
-	private String immuneCannon;
-	@Nullable
-	private String immuneThrall;
-	@Nullable
-	private String attributes;
-	@Nullable
-	private Integer slayerLevel;
-	@Nullable
-	private Integer slayerXp;
-	@Nullable
-	private Integer attackSpeed;
-	@Nullable
-	private Integer size;
-	/** Defensive stats of the default version, from the wiki's Bucket. */
-	@Nullable
-	private MonsterCombatStats combatStats;
+	private String category;
+
+	public List<Integer> idsOrEmpty()
+	{
+		return ids == null ? Collections.emptyList() : ids;
+	}
+
+	public boolean isTwoHanded()
+	{
+		return "2h".equals(slot);
+	}
 }

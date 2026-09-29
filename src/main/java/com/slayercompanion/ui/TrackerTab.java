@@ -55,6 +55,12 @@ class TrackerTab extends JPanel
 		if (s == null)
 		{
 			col.add(Ui.wrap("No task session. Tracking starts when a task is assigned."));
+			List<TaskSession> history = m.getHistory();
+			if (!history.isEmpty() && history.get(0).isCompleted())
+			{
+				col.add(Ui.gap(4));
+				col.add(summaryCard(history.get(0), expected(m, 0)));
+			}
 		}
 		else
 		{
@@ -66,6 +72,7 @@ class TrackerTab extends JPanel
 			card.add(Ui.keyValue("Kills / hour", Ui.num(Math.round(s.getKills() / h))));
 			card.add(Ui.keyValue("Slayer XP", Ui.num(s.getSlayerXpGained())));
 			card.add(Ui.keyValue("Loot", Ui.gp(s.getLootValue()), Ui.GOOD));
+			addLuck(card, s, m.getSessionExpected());
 			card.add(Ui.keyValue("Supplies", Ui.gp(s.getSuppliesValue()), Ui.WARN));
 			long profit = s.getProfit();
 			card.add(Ui.keyValue("Profit", Ui.gp(profit), profit >= 0 ? Ui.GOOD : Ui.BAD));
@@ -106,7 +113,9 @@ class TrackerTab extends JPanel
 			int shown = 0;
 			for (TaskSession t : m.getHistory())
 			{
-				hist.add(Ui.keyValue(t.getTaskName(), Ui.gp(t.getProfit()) + " in " + duration(t.getDurationMs()),
+				Long exp = expected(m, shown);
+				String luck = exp == null || exp <= 0 ? "" : ", luck " + luck(t.getLootValue(), exp);
+				hist.add(Ui.keyValue(t.getTaskName(), Ui.gp(t.getProfit()) + " in " + duration(t.getDurationMs()) + luck,
 					t.getProfit() >= 0 ? Ui.GOOD : Ui.BAD));
 				if (++shown >= 8)
 				{
@@ -118,6 +127,46 @@ class TrackerTab extends JPanel
 		add(col, BorderLayout.NORTH);
 		revalidate();
 		repaint();
+	}
+
+	/** The last finished task at a glance. */
+	private static JPanel summaryCard(TaskSession t, Long expected)
+	{
+		JPanel card = Ui.card();
+		card.add(Ui.title("Last task: " + t.getTaskName()));
+		card.add(Ui.keyValue("Kills", Ui.num(t.getKills())));
+		card.add(Ui.keyValue("Time", duration(t.getDurationMs())));
+		card.add(Ui.keyValue("Slayer XP", Ui.num(t.getSlayerXpGained())));
+		card.add(Ui.keyValue("Loot", Ui.gp(t.getLootValue()), Ui.GOOD));
+		addLuck(card, t, expected);
+		card.add(Ui.keyValue("Profit", Ui.gp(t.getProfit()), t.getProfit() >= 0 ? Ui.GOOD : Ui.BAD));
+		return card;
+	}
+
+	/** Loot against the wiki average for the same number of kills. */
+	private static void addLuck(JPanel card, TaskSession s, Long expected)
+	{
+		if (expected == null || expected <= 0 || s.getKills() == 0)
+		{
+			return;
+		}
+		long diff = s.getLootValue() - expected;
+		JPanel row = Ui.keyValue("Luck", luck(s.getLootValue(), expected), diff >= 0 ? Ui.GOOD : Ui.WARN);
+		row.setToolTipText("Average loot for " + Ui.num(s.getKills()) + " kills is about " + Ui.gp(expected)
+			+ " (wiki drop rates, today's GE prices).");
+		card.add(row);
+	}
+
+	static String luck(long loot, long expected)
+	{
+		long pct = Math.round((loot - expected) * 100.0 / expected);
+		return (pct >= 0 ? "+" : "\u2212") + Math.abs(pct) + "%";
+	}
+
+	private static Long expected(PanelModel m, int index)
+	{
+		List<Long> list = m.getHistoryExpected();
+		return list == null || index >= list.size() ? null : list.get(index);
 	}
 
 	private static List<Map.Entry<Integer, Integer>> top(Map<Integer, Integer> map, int n)

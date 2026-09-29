@@ -15,12 +15,13 @@ python3 generate.py --only "Bloodveld,Elves" # rebuild only these tasks, keep th
 python3 generate.py --refresh                # ignore the cache and re-fetch every page
 python3 generate.py --limit 5                # smoke test on the first five tasks
 python3 generate.py --self-test              # unit tests for parse_access() (no network, no cache)
+python3 generate.py --buckets-only --out DIR  # only the Bucket extras (drops, combat stats, CAs, items.json) on DIR/tasks.json; no page reads
 ```
 
 | Option | Default | Meaning |
 | --- | --- | --- |
 | `--tasks PATH` | `../research/task-enum.txt` | tab-separated `ENUM_NAME<TAB>display name<TAB>alt1|alt2` |
-| `--out DIR` | `out/` | where `tasks.json`, `locations.json`, `report.json` are written |
+| `--out DIR` | `out/` | where `tasks.json`, `drops.json`, `items.json`, `locations.json`, `report.json` are written |
 | `--cache DIR` | `cache/` | raw wikitext cache (`<sanitised title>.wikitext` + `.meta.json`) |
 | `--curated DIR` | `curated/verified/` | curated override files (may be empty or absent) |
 | `--refresh` | off | re-fetch even if cached |
@@ -28,6 +29,7 @@ python3 generate.py --self-test              # unit tests for parse_access() (no
 | `--limit N` | 0 | only the first N tasks (testing) |
 | `--sleep S` | 0.5 | seconds between network fetches |
 | `--self-test` | off | run the `parse_access()` assertions and exit (90 checks on the tricky requirement strings) |
+| `--buckets-only` | off | apply only the Bucket extras below to the existing `DIR/tasks.json` and write `drops.json` / `items.json`; reads no pages (16 table-wide queries on a cold cache) |
 
 Progress goes to stderr; a summary of the `counts` block of `report.json` goes to stdout.
 
@@ -186,6 +188,8 @@ All JSON is pretty-printed, keys sorted, UTF-8, `ensure_ascii=False`.
 | `monsters[]` | `{page, redirected, hasInfobox, locLines, mapLocations, name, versions[], slayerXp, slayerLevel, combat, hitpoints, maxHit, attackStyles[], weakness, attributes, size, aggressive, poisonous, attackSpeed, immuneCannon, immuneThrall, npcIds[], slayerCategory, assignedBy[]}` + `<field>ByVersion{version → value}` when the infobox is versioned | `{{Infobox Monster}}` of every monster page |
 | `locations[]` | see below | merged `{{LocLine}}` records + curated |
 | `curatedFile` | string/null | which curated file matched |
+| `monsters[].combatStats` | `{defenceLevel, magicLevel, hitpoints, size, stab, slash, crush, magic, ranged?, rangedLight, rangedStandard, rangedHeavy, flatArmour?, weakness?, weaknessPercent?, attributes[], version}` | Bucket `infobox_monster`, the page's default version (for the plugin's DPS estimate) |
+| `combatAchievements[]` | `{id, name, monster, task, tier, type}` | Bucket `combat_achievement` rows whose `monster` is one of the task's monster pages, `wikiTaskPage` or `wikiMonsterPages`; `id` is the game's task id |
 
 `locations[]` entry (TaskLocation):
 
@@ -204,6 +208,23 @@ All JSON is pretty-printed, keys sorted, UTF-8, `ensure_ascii=False`.
 | `rank`, `multi`, `cannon`, `wilderness`, `wildernessLevelMin`, `wildernessLevelMax`, `konarAssignable`, `requirements[]`, `notes` | curated fields (defaults: `null`, `"unknown"`, `"unknown"`, heuristic bool, `null`, `null`, `"unknown"`, `[]`, `null`). `wilderness` defaults to true when the name contains "Wilderness" or a spawn lies in the surface Wilderness box |
 | `curated`, `curatedName` | whether a curated record matched and under which name |
 | `access` | `{groups[]}` derived from `requirements[]` by `parse_access()`, see below |
+
+### `out/drops.json` – kill drops per monster page (Bucket extras)
+
+One record per line: `{page, version, drops[{item, itemId, rarity, rate, rolls, quantityLow, quantityHigh, rareDropTable?}]}`
+for every monster page of every task. From Bucket `dropsline` (the `drop_json` field); only drop types
+`combat` and `reward` (pickpocketing and the like are left out); one version per page: the monster's
+default version when the drop rows name it (`Abyssal demon#Standard`), else the version with the most
+rows. `rate` is the chance per roll from `Rarity` ("Always" = 1, "4/128", "~1/200", "2 × 1/128" = 2/128;
+"Varies" and the like = null). `itemId` comes from Bucket `infobox_item` (item name → default version's
+first id).
+
+### `out/items.json` – equipment bonuses (Bucket extras)
+
+One record per line: `{ids[], name, slot, stab, slash, crush, ranged, magic, str, rangedStr, magicDmg,
+prayer, speed?, category?}` per item version, from Bucket `infobox_bonuses` joined to `infobox_item` on
+`page_name_sub` (the version). `speed` and `category` (the wiki's weapon type: "Whip", "Crossbow",
+"Powered Staff", …) only for weapons.
 
 ### `out/locations.json` – array of unique locations across all tasks
 

@@ -54,6 +54,10 @@ import com.slayercompanion.ui.TaskOverlay;
 import com.slayercompanion.unlocks.UnlockAdvisor;
 import com.slayercompanion.wilderness.WildernessAdvisor;
 import com.slayercompanion.wilderness.WildernessStatus;
+import com.slayercompanion.worth.CombatAchievements;
+import com.slayercompanion.worth.LootEstimate;
+import com.slayercompanion.worth.LootEstimator;
+import com.slayercompanion.worth.VerdictAdvisor;
 import java.awt.image.BufferedImage;
 import java.util.Collections;
 import java.util.List;
@@ -87,13 +91,13 @@ import net.runelite.client.util.LinkBrowser;
 @Slf4j
 @PluginDescriptor(
 	name = "Slayer Companion",
-	description = "Locations, routing, the wiki's recommended gear and strategy, your own loadout per task, points planning, supplies and profit, wilderness risk and unlock advice for your Slayer task",
-	tags = {"slayer", "task", "gear", "loadout", "inventory", "setups", "location", "wilderness", "points", "konar", "supplies", "profit", "unlocks"}
+	description = "A do/skip/block verdict with what the task is worth, locations, routing, the wiki's recommended gear and strategy, your own loadout per task, points planning, supplies and profit, wilderness risk and unlock advice for your Slayer task",
+	tags = {"slayer", "task", "verdict", "loot", "achievements", "gear", "loadout", "inventory", "setups", "location", "wilderness", "points", "konar", "supplies", "profit", "unlocks"}
 )
 public class SlayerCompanionPlugin extends Plugin
 {
 	/** Shown in the panel footer; bumped together with build.gradle and runelite-plugin.properties. */
-	public static final String VERSION = "0.7.0";
+	public static final String VERSION = "0.8.0";
 
 	private static final String WIKI_BASE = "https://oldschool.runescape.wiki/w/";
 	/** Refresh the Wilderness numbers at most this often (game ticks). */
@@ -136,6 +140,8 @@ public class SlayerCompanionPlugin extends Plugin
 	private RequiredItems requiredItems;
 	@Inject
 	private LoadoutStore loadoutStore;
+	@Inject
+	private LootEstimator lootEstimator;
 	@Inject
 	private InventorySetupsLink inventorySetupsLink;
 	@Inject
@@ -404,6 +410,36 @@ public class SlayerCompanionPlugin extends Plugin
 			}
 		}
 
+		com.slayercompanion.data.MasterInfo masterInfo = task == null || task.getMaster() == null ? null : data.master(task.getMaster()).orElse(null);
+		LootEstimate estimate = loggedIn && info != null ? lootEstimator.estimate(info, variant, task.getRemaining()).orElse(null) : null;
+		Long sessionExpected = null;
+		if (loggedIn && overlaySession != null)
+		{
+			TaskInfo sessionInfo = data.task(overlaySession.getTaskName()).orElse(null);
+			String sessionVariant = sessionInfo == info ? variant : null;
+			sessionExpected = sessionInfo == null ? null
+				: lootEstimator.estimate(sessionInfo, sessionVariant, overlaySession.getKills()).map(LootEstimate::getTotal).orElse(null);
+		}
+		List<TaskSession> history = sessionTracker.history();
+		List<Long> historyExpected = new java.util.ArrayList<>();
+		for (int i = 0; loggedIn && i < Math.min(history.size(), 8); i++)
+		{
+			TaskSession h = history.get(i);
+			historyExpected.add(data.task(h.getTaskName()).flatMap(t -> lootEstimator.estimate(t, null, h.getKills()))
+				.map(LootEstimate::getTotal).orElse(null));
+		}
+		java.util.Set<Integer> completedAchievements = new java.util.HashSet<>();
+		if (loggedIn && info != null)
+		{
+			for (com.slayercompanion.data.CombatAchievementInfo ca : info.combatAchievementsOrEmpty())
+			{
+				if (ca.getId() != null && Boolean.TRUE.equals(CombatAchievements.isDone(client, ca.getId())))
+				{
+					completedAchievements.add(ca.getId());
+				}
+			}
+		}
+
 		return PanelModel.builder()
 			.loggedIn(loggedIn)
 			.task(task)
@@ -420,12 +456,17 @@ public class SlayerCompanionPlugin extends Plugin
 			.inventorySetups(inventorySetupsLink.setups())
 			.linkedSetup(linkedSetup)
 			.pointsPlan(loggedIn ? pointsPlanner.plan(points, shared, task) : null)
+			.verdict(task == null ? null : VerdictAdvisor.verdict(info, masterInfo, points))
+			.lootEstimate(estimate)
+			.sessionExpected(sessionExpected)
+			.historyExpected(historyExpected)
+			.completedAchievements(completedAchievements)
 			.sharedStreak(shared)
 			.wildernessStreak(wildStreak)
 			.mortimerStreak(mortimerStreak)
 			.points(points)
 			.session(overlaySession)
-			.history(sessionTracker.history())
+			.history(history)
 			.wilderness(wilderness)
 			.unlocks(loggedIn ? unlockAdvisor.advise(points) : Collections.emptyList())
 			.itemNames(itemNames)

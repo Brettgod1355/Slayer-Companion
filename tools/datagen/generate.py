@@ -836,6 +836,232 @@ _BUCKET_MONSTER_FIELDS = {
 }
 
 
+# --------------------------------------------------------------------------
+# Bucket-only extras: combat stats, drops, Combat Achievements, item bonuses
+# --------------------------------------------------------------------------
+#
+# Read with table-wide Bucket queries only (no page reads).  --buckets-only applies them to the
+# existing tasks.json, so a refresh of these needs no page cache.
+
+MONSTER_COMBAT_FIELDS = ["page_name", "page_name_sub", "version_anchor", "default_version", "attribute",
+                         "defence_level", "magic_level", "stab_defence_bonus", "slash_defence_bonus",
+                         "crush_defence_bonus", "magic_defence_bonus", "range_defence_bonus",
+                         "light_range_defence_bonus", "standard_range_defence_bonus",
+                         "heavy_range_defence_bonus", "elemental_weakness", "elemental_weakness_percent",
+                         "flat_armour", "hitpoints", "size"]
+BONUS_FIELDS = ["page_name", "page_name_sub", "stab_attack_bonus", "slash_attack_bonus", "crush_attack_bonus",
+                "range_attack_bonus", "magic_attack_bonus", "strength_bonus", "ranged_strength_bonus",
+                "magic_damage_bonus", "prayer_bonus", "equipment_slot", "weapon_attack_speed", "combat_style"]
+ITEM_FIELDS = ["page_name", "page_name_sub", "item_name", "item_id", "default_version", "tradeable"]
+DROP_FIELDS = ["page_name", "item_name", "drop_json", "rare_drop_table"]
+CA_FIELDS = ["id", "name", "monster", "task", "tier", "type"]
+
+_COMBAT_KEYS = {
+    "defenceLevel": "defence_level", "magicLevel": "magic_level", "stab": "stab_defence_bonus",
+    "slash": "slash_defence_bonus", "crush": "crush_defence_bonus", "magic": "magic_defence_bonus",
+    "ranged": "range_defence_bonus", "rangedLight": "light_range_defence_bonus",
+    "rangedStandard": "standard_range_defence_bonus", "rangedHeavy": "heavy_range_defence_bonus",
+    "flatArmour": "flat_armour", "hitpoints": "hitpoints", "size": "size",
+    "weaknessPercent": "elemental_weakness_percent",
+}
+
+
+def _default_row(rows: list[dict]) -> dict:
+    """The page's default version (Bucket marks it with a default_version key), else the first."""
+    return next((r for r in rows if "default_version" in r), rows[0])
+
+
+def _by_page(rows: list[dict] | None) -> dict[str, list[dict]]:
+    out: dict[str, list[dict]] = {}
+    for r in rows or []:
+        if r.get("page_name"):
+            out.setdefault(r["page_name"], []).append(r)
+    return out
+
+
+def monster_combat_stats(row: dict) -> dict:
+    """Defensive stats and attributes of one monster version, for the plugin's DPS estimate."""
+    out: dict = {k: to_int(row.get(f)) for k, f in _COMBAT_KEYS.items() if to_int(row.get(f)) is not None}
+    out["attributes"] = sorted({a.strip().lower() for a in _bucket_list(row.get("attribute")) if a.strip()})
+    if row.get("elemental_weakness"):
+        out["weakness"] = str(row["elemental_weakness"]).strip().lower()
+    out["version"] = row.get("version_anchor") or None
+    return out
+
+
+_RARITY = re.compile(r"([\d.,]+)\s*/\s*([\d.,]+)")
+
+
+def parse_rarity(text: str | None) -> float | None:
+    """Chance per roll: "Always" is 1, "4/128" or "~1/200" a fraction; anything else unknown."""
+    if not text:
+        return None
+    t = str(text).strip().lower()
+    if t == "always":
+        return 1.0
+    m = _RARITY.search(t)
+    if not m:
+        return None
+    try:
+        num, den = float(m.group(1).replace(",", "")), float(m.group(2).replace(",", ""))
+    except ValueError:
+        return None
+    times = re.match(r"\s*(\d+)\s*[×x]\s*", t)  # "2 × 1/128": two separate chances
+    return (int(times.group(1)) if times else 1) * num / den if den > 0 else None
+
+
+# Drops that come from killing the monster (a boss's reward chest counts); pickpocketing etc. do not.
+KILL_DROP_TYPES = {"combat", "reward", None}
+
+
+def parse_drop(row: dict, item_ids: dict[str, int]) -> dict | None:
+    try:
+        d = json.loads(row.get("drop_json") or "{}")
+    except json.JSONDecodeError:
+        return None
+    if (d.get("Drop type") or None) not in KILL_DROP_TYPES:
+        return None
+    name = d.get("Dropped item") or row.get("item_name")
+    if not name:
+        return None
+    rate = parse_rarity(d.get("Rarity"))
+    lo, hi = to_int(d.get("Quantity Low")), to_int(d.get("Quantity High"))
+    drop = {
+        "item": name,
+        "itemId": item_ids.get(name.lower()),
+        "rarity": d.get("Rarity") or None,
+        "rate": round(rate, 8) if rate is not None else None,
+        "rolls": to_int(d.get("Rolls")) or 1,
+        "quantityLow": lo if lo is not None else 1,
+        "quantityHigh": hi if hi is not None else (lo if lo is not None else 1),
+        "from": d.get("Dropped from") or None,
+    }
+    if "rare_drop_table" in row:
+        drop["rareDropTable"] = True
+    return drop
+
+
+def drops_for_page(rows: list[dict], item_ids: dict[str, int], default_version: str | None) -> tuple[str | None, list[dict]]:
+    """One version's drop table: the monster's default version when its rows name it
+    ("Abyssal demon#Standard"), else the version with the most rows.  Returns (version, drops)."""
+    drops = [d for d in (parse_drop(r, item_ids) for r in rows) if d]
+    versions: dict[str, list[dict]] = {}
+    for d in drops:
+        anchor = (d.get("from") or "").partition("#")[2]
+        versions.setdefault(anchor, []).append(d)
+    if default_version and default_version in versions:
+        version = default_version
+    else:
+        version = max(versions, key=lambda v: len(versions[v])) if versions else None
+    chosen = versions.get(version, []) if version is not None else []
+    for d in chosen:
+        d.pop("from", None)
+    return version or None, chosen
+
+
+def item_id_map(items: list[dict] | None) -> dict[str, int]:
+    """Lower-case item name to its item id (the default version's first id)."""
+    out: dict[str, int] = {}
+    for rows in _by_page(items).values():
+        for r in sorted(rows, key=lambda r: "default_version" not in r):
+            ids = _bucket_ids(r.get("item_id"))
+            name = (r.get("item_name") or r.get("page_name") or "").lower()
+            if ids and name and name not in out:
+                out[name] = ids[0]
+    return out
+
+
+def build_items(bonuses: list[dict] | None, items: list[dict] | None) -> list[dict]:
+    """Equipment bonuses per item version, with every item id of that version."""
+    ids_by_sub: dict[str, list[int]] = {}
+    names_by_sub: dict[str, str] = {}
+    for r in items or []:
+        sub = r.get("page_name_sub") or r.get("page_name")
+        ids = _bucket_ids(r.get("item_id"))
+        if sub and ids:
+            ids_by_sub.setdefault(sub, []).extend(i for i in ids if i not in ids_by_sub.get(sub, []))
+            names_by_sub[sub] = r.get("item_name") or r.get("page_name")
+    out: list[dict] = []
+    for r in bonuses or []:
+        sub = r.get("page_name_sub") or r.get("page_name")
+        ids = ids_by_sub.get(sub) or ids_by_sub.get(r.get("page_name"))
+        slot = (r.get("equipment_slot") or "").strip().lower()
+        if not ids or not slot:
+            continue
+        item = {
+            "ids": sorted(set(ids)),
+            "name": names_by_sub.get(sub) or r.get("page_name"),
+            "slot": slot,
+            "stab": to_int(r.get("stab_attack_bonus")) or 0,
+            "slash": to_int(r.get("slash_attack_bonus")) or 0,
+            "crush": to_int(r.get("crush_attack_bonus")) or 0,
+            "ranged": to_int(r.get("range_attack_bonus")) or 0,
+            "magic": to_int(r.get("magic_attack_bonus")) or 0,
+            "str": to_int(r.get("strength_bonus")) or 0,
+            "rangedStr": to_int(r.get("ranged_strength_bonus")) or 0,
+            "magicDmg": float(r.get("magic_damage_bonus") or 0),
+            "prayer": to_int(r.get("prayer_bonus")) or 0,
+        }
+        if slot in ("weapon", "2h"):
+            item["speed"] = to_int(r.get("weapon_attack_speed")) or None
+            item["category"] = (r.get("combat_style") or "").strip() or None
+        out.append(item)
+    out.sort(key=lambda i: (i["name"] or "", i["ids"]))
+    return out
+
+
+def apply_bucket_extras(tasks: list[dict], client: "BucketClient", report: dict) -> tuple[list[dict], list[dict]]:
+    """Combat stats on every monster record and Combat Achievements on every task; returns the item
+    bonus list (items.json) and one drop table per monster page (drops.json)."""
+    monsters = _by_page(client.table("infobox_monster", MONSTER_COMBAT_FIELDS))
+    items = client.table("infobox_item", ITEM_FIELDS)
+    ids = item_id_map(items)
+    drops = _by_page(client.table("dropsline", DROP_FIELDS))
+    cas = client.table("combat_achievement", CA_FIELDS) or []
+    ca_by_monster: dict[str, list[dict]] = {}
+    for r in cas:
+        for m in _bucket_list(r.get("monster")):
+            ca_by_monster.setdefault(m.lower(), []).append({
+                "id": to_int(r.get("id")), "name": r.get("name"), "monster": m,
+                "task": r.get("task"), "tier": r.get("tier"), "type": r.get("type")})
+    missing_drops: list[str] = []
+    drop_tables: dict[str, dict] = {}
+    for t in tasks:
+        pages = []
+        for mon in t.get("monsters", []):
+            page = mon.get("page")
+            rows = monsters.get(page)
+            default = _default_row(rows) if rows else {}
+            if rows:
+                mon["combatStats"] = monster_combat_stats(default)
+            if page and page not in drop_tables:
+                version, table = drops_for_page(drops.get(page, []), ids, default.get("version_anchor"))
+                drop_tables[page] = {"page": page, "version": version, "drops": table}
+                if not table:
+                    missing_drops.append(page)
+            pages.append((page or "").lower())
+        for extra in [t.get("wikiTaskPage")] + t.get("wikiMonsterPages", []):
+            if extra:
+                pages.append(extra.lower())
+        seen: set[int] = set()
+        t["combatAchievements"] = []
+        for page in pages:
+            for ca in ca_by_monster.get(page, []):
+                if ca["id"] is not None and ca["id"] not in seen:
+                    seen.add(ca["id"])
+                    t["combatAchievements"].append(ca)
+        t["combatAchievements"].sort(key=lambda c: c["id"])
+    report["bucketExtras"] = {
+        "monstersWithCombatStats": sum(1 for t in tasks for m in t.get("monsters", []) if m.get("combatStats")),
+        "monsterPagesWithDrops": sum(1 for d in drop_tables.values() if d["drops"]),
+        "monsterPagesWithoutDrops": missing_drops,
+        "tasksWithCombatAchievements": sum(1 for t in tasks if t["combatAchievements"]),
+        "itemNamesWithIds": len(ids),
+    }
+    tables = sorted((d for d in drop_tables.values() if d["drops"]), key=lambda d: d["page"])
+    return build_items(client.table("infobox_bonuses", BONUS_FIELDS), items), tables
+
+
 def monster_info(page: "Page") -> tuple[dict | None, str]:
     """{{Infobox Monster}} facts for a page: Bucket first, the page's own infobox for the
     rest.  Returns (info, source) with source "bucket", "bucket+page", "page" or "none"."""
@@ -3154,8 +3380,33 @@ def apply_gear_pages(tasks: list[dict]) -> None:
         t["variantGearPages"] = pages
 
 
+def buckets_only(args) -> int:
+    """--buckets-only: apply the Bucket extras to out/tasks.json and write items.json."""
+    path = args.out / "tasks.json"
+    tasks = json.loads(path.read_text(encoding="utf-8"))
+    client = BucketClient(args.cache, refresh=args.refresh, sleep=args.sleep)
+    report: dict = {}
+    items, drops = apply_bucket_extras(tasks, client, report)
+    if client.failed:
+        print(f"Bucket queries failed, nothing written: {client.failed}", file=sys.stderr)
+        return 1
+    write_json(path, tasks)
+    write_json_rows(args.out / "items.json", items)
+    write_json_rows(args.out / "drops.json", drops)
+    print(json.dumps({k: v for k, v in report["bucketExtras"].items() if k != "monsterPagesWithoutDrops"}, indent=2))
+    print(f"items.json: {len(items)} items; drops.json: {len(drops)} monster pages; bucket queries this run: {client.fetches}; "
+          f"monster pages without drops: {len(report['bucketExtras']['monsterPagesWithoutDrops'])}")
+    return 0
+
+
 def write_json(path: Path, data) -> None:
     path.write_text(json.dumps(data, indent=2, sort_keys=True, ensure_ascii=False) + "\n", encoding="utf-8")
+
+
+def write_json_rows(path: Path, rows: list) -> None:
+    """A JSON array with one compact record per line: small, and still diffs per record."""
+    lines = [json.dumps(r, sort_keys=True, ensure_ascii=False, separators=(",", ":")) for r in rows]
+    path.write_text("[\n" + ",\n".join(lines) + "\n]\n", encoding="utf-8")
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -3173,9 +3424,14 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--no-bucket", action="store_true",
                     help="do not use the Bucket API (pages only; for comparing outputs)")
     ap.add_argument("--self-test", action="store_true", help="run the parse_access() unit tests and exit")
+    ap.add_argument("--buckets-only", action="store_true",
+                    help="only (re)apply the Bucket extras (combat stats, drops, Combat Achievements, "
+                         "items.json) to the existing out/tasks.json; reads no pages")
     args = ap.parse_args(argv)
     if args.self_test:
         return self_test()
+    if args.buckets_only:
+        return buckets_only(args)
 
     cache = WikiCache(args.cache, refresh=args.refresh, sleep=args.sleep)
     global BUCKET
@@ -3261,9 +3517,13 @@ def main(argv: list[str] | None = None) -> int:
         "accessUnparsed": len(report["accessUnparsed"]),
     }
 
+    extras = apply_bucket_extras(tasks, bucket_client, report) if bucket_client else None
     apply_gear_pages(tasks)
     args.out.mkdir(parents=True, exist_ok=True)
     write_json(args.out / "tasks.json", tasks)
+    if extras is not None:
+        write_json_rows(args.out / "items.json", extras[0])
+        write_json_rows(args.out / "drops.json", extras[1])
     write_json(args.out / "locations.json", build_locations_index(tasks))
     write_json(args.out / "report.json", report)
 

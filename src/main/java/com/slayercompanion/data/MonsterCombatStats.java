@@ -24,48 +24,60 @@
  */
 package com.slayercompanion.data;
 
+import java.util.Collections;
 import java.util.List;
 import javax.annotation.Nullable;
 import lombok.Data;
 
-/** Monster infobox facts for one of the task's monster pages. */
+/** A monster's defensive stats and attributes (wiki infobox, default version), for DPS estimates. */
 @Data
-public class MonsterInfo
+public class MonsterCombatStats
 {
-	private String name;
 	@Nullable
-	private String page;
+	private Integer defenceLevel;
 	@Nullable
-	private List<Integer> npcIds;
-	@Nullable
-	private Integer combat;
+	private Integer magicLevel;
 	@Nullable
 	private Integer hitpoints;
 	@Nullable
-	private List<String> attackStyles;
+	private Integer size;
 	@Nullable
-	private String maxHit;
+	private Integer stab;
+	@Nullable
+	private Integer slash;
+	@Nullable
+	private Integer crush;
+	@Nullable
+	private Integer magic;
+	/** Older single ranged defence; newer infoboxes split it into light/standard/heavy. */
+	@Nullable
+	private Integer ranged;
+	@Nullable
+	private Integer rangedLight;
+	@Nullable
+	private Integer rangedStandard;
+	@Nullable
+	private Integer rangedHeavy;
+	@Nullable
+	private Integer flatArmour;
+	/** Elemental weakness ("fire", "water", ...) and its percentage. */
 	@Nullable
 	private String weakness;
 	@Nullable
-	private String aggressive;
+	private Integer weaknessPercent;
+	/** "demon", "dragon", "undead", "kalphite", "leafy", ... */
 	@Nullable
-	private String poisonous;
+	private List<String> attributes;
 	@Nullable
-	private String immuneCannon;
-	@Nullable
-	private String immuneThrall;
-	@Nullable
-	private String attributes;
-	@Nullable
-	private Integer slayerLevel;
-	@Nullable
-	private Integer slayerXp;
-	@Nullable
-	private Integer attackSpeed;
-	@Nullable
-	private Integer size;
-	/** Defensive stats of the default version, from the wiki's Bucket. */
-	@Nullable
-	private MonsterCombatStats combatStats;
+	private String version;
+
+	public List<String> attributesOrEmpty()
+	{
+		return attributes == null ? Collections.emptyList() : attributes;
+	}
+
+	public boolean is(String attribute)
+	{
+		return attributesOrEmpty().contains(attribute);
+	}
 }
