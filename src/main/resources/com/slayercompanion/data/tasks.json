@@ -2793,7 +2793,7 @@
     },
     "strategy": [
       "The Alchemical Hydra is a boss version of hydra, found in the lower level of the Karuulm Slayer Dungeon in Mount Karuulm, requiring level 95 Slayer to kill. The Alchemical Hydra was the creation of a Dragonkin named Karuulm. While Karuulm saw promise in his creation, he nevertheless saw it as a failure because he could not replicate its traits, and abandoned it along with his other creations: the Wyrms, Drakes, and Hydras.",
-      "Unlike normal hydras, the Alchemical Hydra can only be killed while on a hydra Slayer task, which are only assigned by Konar quo Maten and Mortimer. Likewise, it can be assigned for boss slayer, but only by Konar.",
+      "Unlike normal hydras, the Alchemical Hydra can only be killed while on a hydra Slayer task, which are only assigned by Konar and Mortimer. Likewise, it can be assigned for boss slayer, but only by Konar.",
       "In addition, as it is found within the volcano, players who have not completed the elite Kourend & Kebos Diary must wear boots of stone, boots of brimstone, or granite boots to protect themselves from the extreme heat of the dungeon floor. This also applies to attempting to use the Item Retrieval Service, where the rapid damage will interrupt actions and dying a second time will wipe the storage."
     ],
     "styleNotes": [
@@ -4813,7 +4813,7 @@
       "slayer": 92
     },
     "strategy": [
-      "Araxxor is the boss version of araxytes found within the Morytania Spider Cave, requiring level 92 Slayer and access to Morytania to kill. As a Slayer boss, he may only be killed while on a spider or araxyte Slayer task. Konar quo Maten can also assign Araxxor specifically when she assigns a boss task.",
+      "Araxxor is the boss version of araxytes found within the Morytania Spider Cave, requiring level 92 Slayer and access to Morytania to kill. As a Slayer boss, he may only be killed while on a spider or araxyte Slayer task. Konar can also assign Araxxor specifically when she assigns a boss task.",
       "Araxxor is currently the strongest Slayer boss in-game by combat level. He uniquely drops pieces of the noxious halberd, a strong two-handed slash weapon, and the araxyte fang, which can be combined with the amulet of torture to create the amulet of rancour, the best-in-slot melee amulet."
     ],
     "styleNotes": [
@@ -56626,7 +56626,7 @@
     "strategy": [
       "The Deranged archaeologist is a relatively simple boss that resides at the southern end of the Tar Swamp on Fossil Island. His special attack mechanic is similar to that of the Crazy archaeologist and the Chaos Fanatic.",
       "The deranged archaeologist is notable for his unique steel ring drop, the best-in-slot melee defensive ring. Compared to his crazed counterpart, his common drops are slightly more valuable, though the steel ring is his only unique drop.",
-      "The deranged archaeologist may be killed as an alternative on a crazy archaeologist boss Slayer task, unless the Wilderness is specified as the task location when given by Krystilia or Konar quo Maten."
+      "The deranged archaeologist may be killed as an alternative on a crazy archaeologist boss Slayer task, unless the Wilderness is specified as the task location when given by Krystilia or Konar."
     ],
     "styleNotes": [
       "Equipment: Magic"
@@ -88833,7 +88833,7 @@
       "slayer": 95
     },
     "strategy": [
-      "Hydras can be assigned as a slayer task at level 95 Slayer. This is a task exclusive to both Konar quo Maten and Mortimer; the latter requires partial completion of Fallen From Grace.",
+      "Hydras can be assigned as a slayer task at level 95 Slayer. This is a task exclusive to both Konar and Mortimer; the latter requires partial completion of Fallen From Grace.",
       "Mortimer is the best way for players to obtain hydra tasks. Not only does Mortimer assign more on average, he also has various incentives when completing these tasks from him, such as additional kills, increased clue scrolls or superior drop rates. Given the nature of his assignments however, players should try to complete the task accordingly to benefit from the incentive. Mortimer has a small pool of tasks, and coupled with his unique ability for the player to assign themselves appropriately from two or three (after completing 50 tasks with him), means it is very easy to be given hydras from him. Assuming that every task can be offered with two of the normal tasks (which have a weight of 10) are blocked, there is a 4.0% chance for hydras to be offered.",
       "Konar, the original master who could assign hydras, has a huge pool despite having a total lower weight of 250. To get the best possible chance to be given a hydra task, the player must block a lot of other tasks, especially ones that are the same, close to or higher than hers, such as metal dragons, drakes and wyrms (both of which share the same weight as hydra tasks). Because of the larger pool of tasks and traditional slayer assignments, it is harder to get a task from Konar compared to Mortimer, and the only incentive for completing the task from Konar are slayer points and the chance for brimstone keys."
     ],
@@ -100818,7 +100818,7 @@
       "slayer": 48
     },
     "strategy": [
-      "Lesser Nagua are a potential Slayer assignment rarely assigned by Konar quo Maten or Chaeldar after completion of Perilous Moons.",
+      "Lesser Nagua are a potential Slayer assignment rarely assigned by Konar or Chaeldar after completion of Perilous Moons.",
       "Players have three options when assigned Lesser Nagua, depending on their quest completion:",
       "- Players who have completed Perilous Moons can be assigned to kill Nagua at Neypotzli, where Sulphur Nagua can be found.\n- Players who have completed The Heart of Darkness can be assigned to kill Nagua at the Ruins of Tapoyauik, where Frost Nagua and Amoxliatl can be found.\n- Players who have completed The Final Dawn can also be assigned to kill Nagua at the Crypt of Tonali, where Earthen Nagua can be found."
     ],
@@ -147872,7 +147872,7 @@
       "slayer": 51
     },
     "strategy": [
-      "The shellbane gryphon is the boss version of gryphons found in a cave in the centre of the Great Conch, requiring level 51 Slayer and completion of Troubled Tortugans to kill. As a Slayer boss, it may only be killed while on a gryphons Slayer task. Gryphon Slayer tasks must be unlocked by purchasing the 'Wings Spread' reward from a Slayer master for 80 Slayer Points in order to be assigned them by Nieve/Steve or Duradel/Kuradal, though this unlock is not required for the shellbane gryphon to be assigned as a boss task from those Slayer masters. Konar quo Maten can also assign the shellbane gryphon specifically when she assigns a boss task.",
+      "The shellbane gryphon is the boss version of gryphons found in a cave in the centre of the Great Conch, requiring level 51 Slayer and completion of Troubled Tortugans to kill. As a Slayer boss, it may only be killed while on a gryphons Slayer task. Gryphon Slayer tasks must be unlocked by purchasing the 'Wings Spread' reward from a Slayer master for 80 Slayer Points in order to be assigned them by Nieve/Steve or Duradel/Kuradal, though this unlock is not required for the shellbane gryphon to be assigned as a boss task from those Slayer masters. Konar can also assign the shellbane gryphon specifically when she assigns a boss task.",
       "The shellbane gryphon can also be killed off-task only if the player has the elite clue step to kill the gryphon. Dropping the elite clue scroll while in the cave will delete the item. Combat Achievements can still be completed when killing the gryphon via this method, though not all are possible due to some requiring several kills without leaving the cave. The gryphon will also not drop anything if the clue is not in your inventory when it dies.",
       "Elder Nama at the cave entrance enforces these rules, and also acts as a scoreboard for the boss, displaying the player's statistics for the fight as well as global statistics."
     ],
@@ -169654,7 +169654,7 @@
       "slayer": 55
     },
     "strategy": [
-      "Turoth can be assigned as a Slayer task from Vannaka, Nieve/Steve, Chaeldar, Konar quo Maten, or Mortimer, requiring 55 Slayer and 60 combat. They are melee based, and as such Protect from Melee will negate all of their damage. They are only found in the Fremennik Slayer Dungeon.",
+      "Turoth can be assigned as a Slayer task from Vannaka, Nieve/Steve, Chaeldar, Konar, or Mortimer, requiring 55 Slayer and 60 combat. They are melee based, and as such Protect from Melee will negate all of their damage. They are only found in the Fremennik Slayer Dungeon.",
       "Turoth can only be damaged with leaf-bladed weapons, broad arrows and bolts, or the Magic Dart spell. Attacking with any other weapons or spells will always deal 0 damage.",
       "The superior variant is the spiked turoth; the Bigger and Badder Slayer reward must be unlocked for it to spawn.",
       "Melee:",
@@ -179424,7 +179424,7 @@
       "slayer": null
     },
     "strategy": [
-      "Waterfiends can be assigned as a slayer task at 75 combat level by two Slayer masters, Konar quo Maten and Duradel. Waterfiends can only be assigned as a slayer task after being granted access to the Ancient Cavern. They are found in the Ancient Cavern, Kraken Cove, and Iorwerth Dungeon. Iorwerth Dungeon is only accessible after completing Song of the Elves.",
+      "Waterfiends can be assigned as a slayer task at 75 combat level by two Slayer masters, Konar and Duradel. Waterfiends can only be assigned as a slayer task after being granted access to the Ancient Cavern. They are found in the Ancient Cavern, Kraken Cove, and Iorwerth Dungeon. Iorwerth Dungeon is only accessible after completing Song of the Elves.",
       "Waterfiends attack with Magic and magical Ranged so protection Prayers cannot be used to negate all of their damage. However, both types of attacks roll against the player's Magic Defence, so armour with Magic Defence bonuses, such as fortified Masori armour, Eclipse moon armour, or Dragonhide armour is most helpful when fighting them. A saturated or imbued heart can also help slightly increase magic defence. Protect from Missiles will be the most helpful if they are dealing too much damage.",
       "Waterfiends have low crush Defence, so crush weapons are recommended, such as an Soulreaper axe (on crush), inquisitor's mace, or abyssal bludgeon. Ranged can also be used in the case of Ranged armour being used to defend against their attacks."
     ],

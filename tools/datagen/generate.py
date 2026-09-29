@@ -590,6 +590,8 @@ def plain_text(wikitext: str) -> str:
     t = re.sub(r"'''''|'''|''", "", t)
     t = re.sub(r"<[^>]+>", "", t)
     t = html.unescape(t)
+    # The panel calls her "Konar" everywhere.
+    t = t.replace("Konar quo Maten", "Konar")
     t = re.sub(r"[ \t]+", " ", t)
     t = re.sub(r" *\n *", "\n", t)
     t = re.sub(r"\(\s*\)", "", t)
