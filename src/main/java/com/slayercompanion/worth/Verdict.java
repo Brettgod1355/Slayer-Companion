@@ -22,50 +22,29 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package com.slayercompanion.data;
+package com.slayercompanion.worth;
 
 import java.util.List;
 import javax.annotation.Nullable;
-import lombok.Data;
+import lombok.Value;
 
-/** Monster infobox facts for one of the task's monster pages. */
-@Data
-public class MonsterInfo
+/** Do / skip / block for the current task: the wiki's recommendation plus what it costs you. */
+@Value
+public class Verdict
 {
-	private String name;
+	public enum Kind
+	{
+		DO, SKIP, BLOCK,
+		/** The wiki's advice depends on what you want ("Do for profit; skip for XP"). */
+		DEPENDS,
+		/** The wiki gives no advice for this task. */
+		NONE
+	}
+
+	Kind kind;
+	/** The wiki's words, when it has any. */
 	@Nullable
-	private String page;
-	@Nullable
-	private List<Integer> npcIds;
-	@Nullable
-	private Integer combat;
-	@Nullable
-	private Integer hitpoints;
-	@Nullable
-	private List<String> attackStyles;
-	@Nullable
-	private String maxHit;
-	@Nullable
-	private String weakness;
-	@Nullable
-	private String aggressive;
-	@Nullable
-	private String poisonous;
-	@Nullable
-	private String immuneCannon;
-	@Nullable
-	private String immuneThrall;
-	@Nullable
-	private String attributes;
-	@Nullable
-	private Integer slayerLevel;
-	@Nullable
-	private Integer slayerXp;
-	@Nullable
-	private Integer attackSpeed;
-	@Nullable
-	private Integer size;
-	/** Defensive stats of the default version, from the wiki's Bucket. */
-	@Nullable
-	private MonsterCombatStats combatStats;
+	String wikiSays;
+	/** Points context: what skipping or blocking costs and whether you can afford it. */
+	List<String> notes;
 }

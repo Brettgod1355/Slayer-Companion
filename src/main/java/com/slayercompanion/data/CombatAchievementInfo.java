@@ -24,48 +24,21 @@
  */
 package com.slayercompanion.data;
 
-import java.util.List;
 import javax.annotation.Nullable;
 import lombok.Data;
 
-/** Monster infobox facts for one of the task's monster pages. */
+/** A Combat Achievement for one of the task's monsters (wiki Bucket "combat_achievement"). */
 @Data
-public class MonsterInfo
+public class CombatAchievementInfo
 {
+	/** The game's task id; completion is bit {@code id % 32} of varp {@code CA_TASK_COMPLETED_(id / 32)}. */
+	@Nullable
+	private Integer id;
 	private String name;
-	@Nullable
-	private String page;
-	@Nullable
-	private List<Integer> npcIds;
-	@Nullable
-	private Integer combat;
-	@Nullable
-	private Integer hitpoints;
-	@Nullable
-	private List<String> attackStyles;
-	@Nullable
-	private String maxHit;
-	@Nullable
-	private String weakness;
-	@Nullable
-	private String aggressive;
-	@Nullable
-	private String poisonous;
-	@Nullable
-	private String immuneCannon;
-	@Nullable
-	private String immuneThrall;
-	@Nullable
-	private String attributes;
-	@Nullable
-	private Integer slayerLevel;
-	@Nullable
-	private Integer slayerXp;
-	@Nullable
-	private Integer attackSpeed;
-	@Nullable
-	private Integer size;
-	/** Defensive stats of the default version, from the wiki's Bucket. */
-	@Nullable
-	private MonsterCombatStats combatStats;
+	/** The monster's wiki page. */
+	private String monster;
+	/** What to do, in the wiki's words. */
+	private String task;
+	private String tier;
+	private String type;
 }

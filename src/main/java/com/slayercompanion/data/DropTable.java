@@ -24,48 +24,52 @@
  */
 package com.slayercompanion.data;
 
+import java.util.Collections;
 import java.util.List;
 import javax.annotation.Nullable;
 import lombok.Data;
 
-/** Monster infobox facts for one of the task's monster pages. */
+/** One monster page's kill drops (wiki Bucket "dropsline", one version). */
 @Data
-public class MonsterInfo
+public class DropTable
 {
-	private String name;
-	@Nullable
+	@Data
+	public static class Drop
+	{
+		private String item;
+		@Nullable
+		private Integer itemId;
+		/** As the wiki writes it: "Always", "4/128", "~1/200". */
+		@Nullable
+		private String rarity;
+		/** Chance per roll; null when the wiki gives none ("Varies"). */
+		@Nullable
+		private Double rate;
+		private int rolls = 1;
+		private int quantityLow = 1;
+		private int quantityHigh = 1;
+		private boolean rareDropTable;
+
+		/** Chance of this drop on one kill (all rolls), capped at 1. */
+		public double chancePerKill()
+		{
+			return rate == null ? 0 : Math.min(1, rate * Math.max(1, rolls));
+		}
+
+		public double averageQuantity()
+		{
+			return (quantityLow + Math.max(quantityLow, quantityHigh)) / 2.0;
+		}
+	}
+
 	private String page;
 	@Nullable
-	private List<Integer> npcIds;
+	private String version;
 	@Nullable
-	private Integer combat;
-	@Nullable
-	private Integer hitpoints;
-	@Nullable
-	private List<String> attackStyles;
-	@Nullable
-	private String maxHit;
-	@Nullable
-	private String weakness;
-	@Nullable
-	private String aggressive;
-	@Nullable
-	private String poisonous;
-	@Nullable
-	private String immuneCannon;
-	@Nullable
-	private String immuneThrall;
-	@Nullable
-	private String attributes;
-	@Nullable
-	private Integer slayerLevel;
-	@Nullable
-	private Integer slayerXp;
-	@Nullable
-	private Integer attackSpeed;
-	@Nullable
-	private Integer size;
-	/** Defensive stats of the default version, from the wiki's Bucket. */
-	@Nullable
-	private MonsterCombatStats combatStats;
+	private List<Drop> drops;
+
+	public List<Drop> dropsOrEmpty()
+	{
+		return drops == null ? Collections.emptyList() : drops;
+	}
 }

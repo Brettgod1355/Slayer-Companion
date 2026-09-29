@@ -110,6 +110,29 @@ public class SlayerDataTest
 	}
 
 	@Test
+	public void bucketExtrasLoad()
+	{
+		TaskInfo abyssal = data.task("Abyssal demons").get();
+		MonsterCombatStats demon = abyssal.mainMonster(null).getCombatStats();
+		assertEquals(Integer.valueOf(135), demon.getDefenceLevel());
+		assertTrue(demon.is("demon"));
+
+		DropTable drops = data.drops("Abyssal demon").get();
+		DropTable.Drop whip = drops.dropsOrEmpty().stream().filter(d -> d.getItem().equals("Abyssal whip")).findFirst().get();
+		assertEquals(Integer.valueOf(4151), whip.getItemId());
+		assertEquals(1 / 512.0, whip.chancePerKill(), 1e-6);
+
+		ItemStats whipStats = data.itemStats().get(4151);
+		assertEquals("weapon", whipStats.getSlot());
+		assertEquals(82, whipStats.getSlash());
+		assertEquals("Whip", whipStats.getCategory());
+		assertEquals(Integer.valueOf(4), whipStats.getSpeed());
+
+		assertTrue(data.task("The Abyssal Sire").get().combatAchievementsOrEmpty().stream()
+			.anyMatch(c -> "Abyssal Adept".equals(c.getName()) && c.getId() != null));
+	}
+
+	@Test
 	public void requiredItemNamesSplitAlternativesAndVariants()
 	{
 		java.util.Set<String> names = data.requiredItemNames();

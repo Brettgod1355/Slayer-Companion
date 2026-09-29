@@ -58,6 +58,8 @@ public class SlayerData
 	private volatile UnlocksFile unlocks;
 	private volatile WildernessInfo wilderness;
 	private volatile AreaRules areaRules;
+	private volatile java.util.Map<String, DropTable> drops;
+	private volatile java.util.Map<Integer, ItemStats> itemStats;
 
 	@Inject
 	public SlayerData(Gson gson)
@@ -197,6 +199,53 @@ public class SlayerData
 			}
 		}
 		return areaRules;
+	}
+
+	/** The kill drops of a monster page, if the wiki's drop data has any. */
+	public Optional<DropTable> drops(@Nullable String page)
+	{
+		if (drops == null)
+		{
+			synchronized (this)
+			{
+				if (drops == null)
+				{
+					java.util.Map<String, DropTable> map = new java.util.HashMap<>();
+					DropTable[] arr = load("drops.json", DropTable[].class);
+					for (DropTable t : arr == null ? new DropTable[0] : arr)
+					{
+						map.put(t.getPage(), t);
+					}
+					drops = map;
+				}
+			}
+		}
+		return page == null ? Optional.empty() : Optional.ofNullable(drops.get(page));
+	}
+
+	/** Equipment bonuses by item id (every version of every equippable item the wiki lists). */
+	public java.util.Map<Integer, ItemStats> itemStats()
+	{
+		if (itemStats == null)
+		{
+			synchronized (this)
+			{
+				if (itemStats == null)
+				{
+					java.util.Map<Integer, ItemStats> map = new java.util.HashMap<>();
+					ItemStats[] arr = load("items.json", ItemStats[].class);
+					for (ItemStats s : arr == null ? new ItemStats[0] : arr)
+					{
+						for (int id : s.idsOrEmpty())
+						{
+							map.putIfAbsent(id, s);
+						}
+					}
+					itemStats = java.util.Collections.unmodifiableMap(map);
+				}
+			}
+		}
+		return itemStats;
 	}
 
 	/** Every required item name of the bundled tasks: what the Bring list checks against the bank. */

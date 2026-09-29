@@ -28,6 +28,8 @@ import com.slayercompanion.data.MasterAssignmentInfo;
 import com.slayercompanion.data.MonsterInfo;
 import com.slayercompanion.data.TaskInfo;
 import com.slayercompanion.task.CurrentTask;
+import com.slayercompanion.worth.LootEstimate;
+import com.slayercompanion.worth.Verdict;
 import java.awt.Color;
 import java.util.List;
 import javax.swing.JPanel;
@@ -76,6 +78,9 @@ class TaskTab extends JPanel
 				col.add(variant);
 				col.add(Ui.gap(4));
 			}
+			col.add(verdictCard(m, info));
+			col.add(Ui.gap(4));
+
 			if (info.getSummary() != null && !info.getSummary().isEmpty())
 			{
 				JPanel card = Ui.card();
@@ -214,28 +219,10 @@ class TaskTab extends JPanel
 				col.add(Ui.gap(4));
 			}
 
-			if (info.getTrainingSummary() != null)
+			JPanel achievements = achievementsCard(m, info);
+			if (achievements != null)
 			{
-				com.slayercompanion.data.TrainingSummary ts = info.getTrainingSummary();
-				JPanel sum = Ui.card();
-				sum.add(Ui.title("Worth doing?"));
-				if (ts.getRecommendation() != null && !ts.getRecommendation().isEmpty())
-				{
-					sum.add(Ui.wrap(ts.getRecommendation(), Color.WHITE));
-				}
-				if (ts.getPros() != null && !ts.getPros().isEmpty())
-				{
-					sum.add(Ui.wrap("+ " + ts.getPros(), Ui.GOOD));
-				}
-				if (ts.getCons() != null && !ts.getCons().isEmpty())
-				{
-					sum.add(Ui.wrap("\u2212 " + ts.getCons(), Ui.WARN));
-				}
-				if (ts.getXpPerHour() != null && !ts.getXpPerHour().isEmpty())
-				{
-					sum.add(Ui.keyValue("XP / hour", ts.getXpPerHour()));
-				}
-				col.add(sum);
+				col.add(achievements);
 				col.add(Ui.gap(4));
 			}
 
@@ -267,5 +254,137 @@ class TaskTab extends JPanel
 		add(col, java.awt.BorderLayout.NORTH);
 		revalidate();
 		repaint();
+	}
+
+	/** The wiki's do / skip / block advice, what it costs, and what the kills left are worth. */
+	private static JPanel verdictCard(PanelModel m, TaskInfo info)
+	{
+		JPanel card = Ui.card();
+		card.add(Ui.title("Verdict"));
+		Verdict v = m.getVerdict();
+		if (v != null)
+		{
+			card.add(headline(v.getKind()));
+			card.add(Ui.wrap(v.getWikiSays() == null ? "The wiki's Slayer training guide has no advice for this task." : "Wiki: " + v.getWikiSays(), Ui.MUTED));
+			for (String note : v.getNotes())
+			{
+				card.add(Ui.wrap(note, Ui.MUTED));
+			}
+		}
+		com.slayercompanion.data.TrainingSummary ts = info.getTrainingSummary();
+		if (ts != null)
+		{
+			if (ts.getPros() != null && !ts.getPros().isEmpty())
+			{
+				card.add(Ui.wrap("+ " + ts.getPros(), Ui.GOOD));
+			}
+			if (ts.getCons() != null && !ts.getCons().isEmpty())
+			{
+				card.add(Ui.wrap("\u2212 " + ts.getCons(), Ui.WARN));
+			}
+			if (ts.getXpPerHour() != null && !ts.getXpPerHour().isEmpty())
+			{
+				card.add(Ui.keyValue("XP / hour", ts.getXpPerHour()));
+			}
+		}
+
+		card.add(Ui.gap(4));
+		LootEstimate e = m.getLootEstimate();
+		if (e == null)
+		{
+			com.slayercompanion.data.MonsterInfo mon = info.mainMonster(m.getSelectedVariant());
+			card.add(Ui.wrap("The wiki has no drop rates for " + (mon == null ? info.getTask() : mon.getName()) + ", so no loot estimate.", Ui.MUTED));
+			return card;
+		}
+		card.add(Ui.keyValue("Loot for " + Ui.num(e.getKills()) + " left", "\u2248 " + Ui.gp(e.getTotal()), Ui.GOOD));
+		card.add(Ui.keyValue("Per kill", "\u2248 " + Ui.gp(e.getPerKill())));
+		for (LootEstimate.Unique u : e.getUniques())
+		{
+			card.add(Ui.wrap(u.getItem() + " (" + u.getRarity() + "): " + percent(u.getChanceOverKills()) + " chance before the task ends", Color.WHITE));
+		}
+		card.add(Ui.wrap("Average for " + e.getMonster() + " from the wiki's drop rates and today's GE prices; untradeables count as 0.", Ui.MUTED));
+		return card;
+	}
+
+	private static javax.swing.JLabel headline(Verdict.Kind kind)
+	{
+		String text;
+		Color color;
+		switch (kind)
+		{
+			case DO:
+				text = "Do it";
+				color = Ui.GOOD;
+				break;
+			case SKIP:
+				text = "Skip it";
+				color = Ui.WARN;
+				break;
+			case BLOCK:
+				text = "Block it";
+				color = Ui.BAD;
+				break;
+			case DEPENDS:
+				text = "Depends what you want";
+				color = Color.WHITE;
+				break;
+			default:
+				text = "Your call";
+				color = Ui.MUTED;
+				break;
+		}
+		javax.swing.JLabel l = Ui.wrap(text, color);
+		l.setFont(net.runelite.client.ui.FontManager.getRunescapeBoldFont());
+		return l;
+	}
+
+	/** Combat Achievements for the task's monsters (only the chosen variant's when one is picked); null when none. */
+	@javax.annotation.Nullable
+	private static JPanel achievementsCard(PanelModel m, TaskInfo info)
+	{
+		com.slayercompanion.data.MonsterInfo picked = info.monster(m.getSelectedVariant());
+		List<com.slayercompanion.data.CombatAchievementInfo> list = new java.util.ArrayList<>();
+		for (com.slayercompanion.data.CombatAchievementInfo ca : info.combatAchievementsOrEmpty())
+		{
+			if (picked == null || ca.getMonster().equalsIgnoreCase(picked.getPage()) || ca.getMonster().equalsIgnoreCase(picked.getName()))
+			{
+				list.add(ca);
+			}
+		}
+		if (list.isEmpty())
+		{
+			return null;
+		}
+		java.util.Set<Integer> completed = m.getCompletedAchievements() == null ? java.util.Collections.emptySet() : m.getCompletedAchievements();
+		int done = 0;
+		for (com.slayercompanion.data.CombatAchievementInfo ca : list)
+		{
+			done += completed.contains(ca.getId()) ? 1 : 0;
+		}
+		JPanel card = Ui.card();
+		card.add(Ui.section("Combat Achievements", "Combat Achievements (" + done + "/" + list.size() + " done)", true));
+		String monster = null;
+		for (com.slayercompanion.data.CombatAchievementInfo ca : list)
+		{
+			if (!ca.getMonster().equals(monster))
+			{
+				monster = ca.getMonster();
+				card.add(Ui.gap(3));
+				card.add(Ui.wrap(monster, Color.WHITE));
+			}
+			boolean ok = completed.contains(ca.getId());
+			card.add(Ui.wrap((ok ? "\u2713 " : "\u2022 ") + ca.getName() + " \u00b7 " + ca.getTier(), ok ? Ui.GOOD : Ui.WARN));
+			card.add(Ui.wrap(ca.getTask(), Ui.MUTED));
+		}
+		return card;
+	}
+
+	static String percent(double p)
+	{
+		if (p > 0 && p < 0.01)
+		{
+			return "<1%";
+		}
+		return Math.round(p * 100) + "%";
 	}
 }

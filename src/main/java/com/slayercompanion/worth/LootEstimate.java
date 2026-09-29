@@ -22,50 +22,37 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package com.slayercompanion.data;
+package com.slayercompanion.worth;
 
 import java.util.List;
-import javax.annotation.Nullable;
-import lombok.Data;
+import lombok.Value;
 
-/** Monster infobox facts for one of the task's monster pages. */
-@Data
-public class MonsterInfo
+/** What killing a task's monster is worth on average, at today's Grand Exchange prices. */
+@Value
+public class LootEstimate
 {
-	private String name;
-	@Nullable
-	private String page;
-	@Nullable
-	private List<Integer> npcIds;
-	@Nullable
-	private Integer combat;
-	@Nullable
-	private Integer hitpoints;
-	@Nullable
-	private List<String> attackStyles;
-	@Nullable
-	private String maxHit;
-	@Nullable
-	private String weakness;
-	@Nullable
-	private String aggressive;
-	@Nullable
-	private String poisonous;
-	@Nullable
-	private String immuneCannon;
-	@Nullable
-	private String immuneThrall;
-	@Nullable
-	private String attributes;
-	@Nullable
-	private Integer slayerLevel;
-	@Nullable
-	private Integer slayerXp;
-	@Nullable
-	private Integer attackSpeed;
-	@Nullable
-	private Integer size;
-	/** Defensive stats of the default version, from the wiki's Bucket. */
-	@Nullable
-	private MonsterCombatStats combatStats;
+	@Value
+	public static class Unique
+	{
+		String item;
+		/** As the wiki writes it ("1/512"). */
+		String rarity;
+		long price;
+		double chancePerKill;
+		/** Chance of at least one over {@link LootEstimate#getKills()} kills. */
+		double chanceOverKills;
+	}
+
+	/** The monster the drops are for (the chosen variant or the task's main monster). */
+	String monster;
+	long perKill;
+	int kills;
+	List<Unique> uniques;
+	/** Drops the estimate had to leave out (no rate or no item id). */
+	int unpriced;
+
+	public long getTotal()
+	{
+		return perKill * kills;
+	}
 }
