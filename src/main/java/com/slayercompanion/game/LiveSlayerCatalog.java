@@ -24,7 +24,6 @@
  */
 package com.slayercompanion.game;
 
-import com.slayercompanion.task.SlayerMaster;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -38,9 +37,8 @@ import net.runelite.api.gameval.VarbitID;
 
 /**
  * Reads Slayer reference data that the game client already carries in its cache database tables:
- * each master's assignment list with weights and amounts, and the Slayer reward unlocks with
- * their point costs. This is always current with the game, so it is preferred over the bundled
- * wiki snapshot wherever both exist.
+ * the Slayer reward unlocks with their point costs. This is always current with the game, so it
+ * is preferred over the bundled wiki snapshot wherever both exist.
  * <p>
  * Every method must be called on the client thread. Results are cached per session.
  */
@@ -48,16 +46,6 @@ import net.runelite.api.gameval.VarbitID;
 @Singleton
 public class LiveSlayerCatalog
 {
-	@Value
-	public static class MasterAssignment
-	{
-		SlayerMaster master;
-		String taskName;
-		int weight;
-		int minAmount;
-		int maxAmount;
-	}
-
 	@Value
 	public static class Unlock
 	{
@@ -71,7 +59,6 @@ public class LiveSlayerCatalog
 
 	private final Client client;
 
-	private List<MasterAssignment> assignments;
 	private List<Unlock> unlocks;
 	/** True once the "Bigger and Badder" row's bit matched its known varbit id. */
 	private boolean bitsAreVarbits;
@@ -84,31 +71,7 @@ public class LiveSlayerCatalog
 
 	public void reset()
 	{
-		assignments = null;
 		unlocks = null;
-	}
-
-	/** All assignments for all masters, read from {@code DBTableID.SlayerMasterTask}. */
-	public List<MasterAssignment> assignments()
-	{
-		if (assignments == null)
-		{
-			assignments = readAssignments();
-		}
-		return assignments;
-	}
-
-	public List<MasterAssignment> assignmentsFor(SlayerMaster master)
-	{
-		List<MasterAssignment> out = new ArrayList<>();
-		for (MasterAssignment a : assignments())
-		{
-			if (a.getMaster() == master)
-			{
-				out.add(a);
-			}
-		}
-		return out;
 	}
 
 	/** All reward-shop unlocks read from {@code DBTableID.SlayerUnlock}. */
@@ -140,44 +103,6 @@ public class LiveSlayerCatalog
 		{
 			return null;
 		}
-	}
-
-	private List<MasterAssignment> readAssignments()
-	{
-		List<MasterAssignment> out = new ArrayList<>();
-		try
-		{
-			for (int row : client.getDBTableRows(DBTableID.SlayerMasterTask.ID))
-			{
-				Object[] masterId = client.getDBTableField(row, DBTableID.SlayerMasterTask.COL_MASTER_ID, 0);
-				Object[] taskRow = client.getDBTableField(row, DBTableID.SlayerMasterTask.COL_TASK, 0);
-				if (masterId == null || masterId.length == 0 || taskRow == null || taskRow.length == 0)
-				{
-					continue;
-				}
-				SlayerMaster master = SlayerMaster.fromVarbit((Integer) masterId[0]);
-				if (master == null)
-				{
-					continue;
-				}
-				Object[] name = client.getDBTableField((Integer) taskRow[0], DBTableID.SlayerTask.COL_NAME_UPPERCASE, 0);
-				if (name == null || name.length == 0)
-				{
-					continue;
-				}
-				out.add(new MasterAssignment(
-					master,
-					(String) name[0],
-					intField(row, DBTableID.SlayerMasterTask.COL_WEIGHT),
-					intField(row, DBTableID.SlayerMasterTask.COL_MIN_AMOUNT),
-					intField(row, DBTableID.SlayerMasterTask.COL_MAX_AMOUNT)));
-			}
-		}
-		catch (RuntimeException e)
-		{
-			log.debug("Could not read slayer master assignments from cache", e);
-		}
-		return Collections.unmodifiableList(out);
 	}
 
 	private List<Unlock> readUnlocks()

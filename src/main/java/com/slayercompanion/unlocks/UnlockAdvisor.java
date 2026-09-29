@@ -115,7 +115,7 @@ public class UnlockAdvisor
 		}
 		if (b.getElsewhereItemId() != null)
 		{
-			int price = itemManager.getItemPrice(b.getElsewhereItemId());
+			long price = itemManager.getItemPrice(b.getElsewhereItemId());
 			if (price > 0)
 			{
 				return b.getElsewhere() + " The note is about " + QuantityFormatter.quantityToStackSize(price) + " gp on the Grand Exchange right now.";

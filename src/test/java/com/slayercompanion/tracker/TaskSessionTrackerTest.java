@@ -65,7 +65,7 @@ public class TaskSessionTrackerTest
 		configManager = mock(ConfigManager.class);
 		when(client.getGameState()).thenReturn(GameState.LOGIN_SCREEN);
 		when(itemManager.canonicalize(anyInt())).thenAnswer(inv -> inv.getArgument(0));
-		when(itemManager.getItemPrice(anyInt())).thenReturn(100);
+		when(itemManager.getItemPrice(anyInt())).thenReturn(100L);
 		when(configManager.getRSProfileConfiguration(anyString(), anyString())).thenReturn(null);
 		SlayerCompanionConfig config = new SlayerCompanionConfig()
 		{

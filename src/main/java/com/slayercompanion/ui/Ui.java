@@ -29,7 +29,6 @@ import java.awt.Color;
 import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
-import java.awt.Font;
 import java.awt.GridLayout;
 import java.util.List;
 import javax.swing.BorderFactory;
@@ -358,10 +357,5 @@ final class Ui
 	static String num(long value)
 	{
 		return QuantityFormatter.formatNumber(value);
-	}
-
-	static Font small()
-	{
-		return FontManager.getRunescapeFont();
 	}
 }

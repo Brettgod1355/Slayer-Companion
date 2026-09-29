@@ -25,21 +25,57 @@
 package com.slayercompanion.gear;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
-import lombok.Data;
+import javax.annotation.Nullable;
+import javax.inject.Inject;
+import javax.inject.Singleton;
 
-/** A player-defined loadout for one task, stored in config as JSON. */
-@Data
-public class GearSetup
+/** Which of a task's required items the player owns nowhere (bank, inventory or worn). */
+@Singleton
+public class RequiredItems
 {
-	private String name;
-	private String taskName;
-	/** Equipment slot index (EquipmentInventorySlot.getSlotIdx) -> item id. */
-	private Map<Integer, Integer> equipment = new HashMap<>();
-	/** Item id -> quantity in the inventory. */
-	private Map<Integer, Integer> inventory = new HashMap<>();
-	private List<String> notes = new ArrayList<>();
-	private long savedAtEpochMs;
+	private final ItemNameResolver resolver;
+	private final OwnedItems owned;
+
+	@Inject
+	RequiredItems(ItemNameResolver resolver, OwnedItems owned)
+	{
+		this.resolver = resolver;
+		this.owned = owned;
+	}
+
+	/** Names of required items the player does not own at all. */
+	public List<String> missing(@Nullable List<String> names)
+	{
+		List<String> missing = new ArrayList<>();
+		if (names == null)
+		{
+			return missing;
+		}
+		for (String name : names)
+		{
+			boolean has = false;
+			// "Nose peg or Slayer helmet": any alternative counts.
+			for (String alt : name.split("\\s+or\\s+"))
+			{
+				for (int id : resolver.resolve(alt.trim()))
+				{
+					if (owned.owns(id))
+					{
+						has = true;
+						break;
+					}
+				}
+				if (has)
+				{
+					break;
+				}
+			}
+			if (!has)
+			{
+				missing.add(name);
+			}
+		}
+		return missing;
+	}
 }

@@ -72,10 +72,12 @@ public class TaskInfo
 	private List<MonsterInfo> monsters;
 	@Nullable
 	private Map<String, MasterAssignmentInfo> masters;
+	/** Wiki page with the task's own recommended gear; null when the wiki has none. */
 	@Nullable
-	private List<GearTable> gearTables;
+	private String gearPage;
+	/** Variant name to the wiki page with that variant's own recommended gear (Vorkath on Blue dragons). */
 	@Nullable
-	private List<ExampleSetup> exampleSetups;
+	private Map<String, String> variantGearPages;
 	@Nullable
 	private List<String> strategy;
 	@Nullable
@@ -94,31 +96,25 @@ public class TaskInfo
 		return locations == null ? Collections.emptyList() : locations;
 	}
 
-	public List<GearTable> gearTablesOrEmpty()
-	{
-		return gearTables == null ? Collections.emptyList() : gearTables;
-	}
-
 	/**
-	 * Gear for the chosen variant: the variant's own tables when the wiki has them (e.g. Demonic
-	 * gorilla on a Black demons task), else the task's own tables (those without a variant).
+	 * Wiki page with the recommended gear and strategy for the chosen variant: the variant's own
+	 * page when it has one (e.g. Demonic gorilla on a Black demons task), else the task's; null
+	 * when the wiki has neither.
 	 */
-	public List<GearTable> gearTablesFor(@Nullable String variant)
+	@Nullable
+	public String gearPageFor(@Nullable String variant)
 	{
-		List<GearTable> own = new java.util.ArrayList<>();
-		List<GearTable> forVariant = new java.util.ArrayList<>();
-		for (GearTable t : gearTablesOrEmpty())
+		if (variant != null && variantGearPages != null)
 		{
-			if (t.getVariant() == null)
+			for (Map.Entry<String, String> e : variantGearPages.entrySet())
 			{
-				own.add(t);
-			}
-			else if (variant != null && variant.equalsIgnoreCase(t.getVariant()))
-			{
-				forVariant.add(t);
+				if (variant.equalsIgnoreCase(e.getKey()))
+				{
+					return e.getValue();
+				}
 			}
 		}
-		return forVariant.isEmpty() ? own : forVariant;
+		return gearPage;
 	}
 
 	public List<String> alternativesOrEmpty()

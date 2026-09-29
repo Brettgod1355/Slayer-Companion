@@ -32,20 +32,15 @@ import com.slayercompanion.events.OwnedItemsChanged;
 import com.slayercompanion.events.SessionUpdated;
 import com.slayercompanion.events.TaskChanged;
 import com.slayercompanion.game.LiveSlayerCatalog;
-import com.slayercompanion.gear.GearAdvisor;
-import com.slayercompanion.gear.GearSetup;
 import com.slayercompanion.gear.ItemIndex;
 import com.slayercompanion.gear.ItemNameResolver;
 import com.slayercompanion.gear.OwnedItems;
-import com.slayercompanion.gear.SetupStore;
-import com.slayercompanion.gear.SlotAdvice;
-import com.slayercompanion.gear.UpgradeAdvisor;
+import com.slayercompanion.gear.RequiredItems;
 import com.slayercompanion.location.LocationService;
 import com.slayercompanion.location.MapMarkerService;
 import com.slayercompanion.location.RouteService;
 import com.slayercompanion.points.PointsPlanner;
 import com.slayercompanion.task.CurrentTask;
-import com.slayercompanion.task.SlayerMaster;
 import com.slayercompanion.task.TaskTracker;
 import com.slayercompanion.tracker.TaskSession;
 import com.slayercompanion.tracker.TaskSessionTracker;
@@ -86,13 +81,13 @@ import net.runelite.client.util.LinkBrowser;
 @Slf4j
 @PluginDescriptor(
 	name = "Slayer Companion",
-	description = "Locations, routing, gear from your bank, points planning, supplies and profit, wilderness risk and unlock advice for your Slayer task",
+	description = "Locations, routing, the wiki's recommended gear and strategy, points planning, supplies and profit, wilderness risk and unlock advice for your Slayer task",
 	tags = {"slayer", "task", "gear", "location", "wilderness", "points", "konar", "supplies", "profit", "unlocks"}
 )
 public class SlayerCompanionPlugin extends Plugin
 {
 	/** Shown in the panel footer; bumped together with build.gradle and runelite-plugin.properties. */
-	public static final String VERSION = "0.5.1";
+	public static final String VERSION = "0.6.0";
 
 	private static final String WIKI_BASE = "https://oldschool.runescape.wiki/w/";
 	/** Refresh the Wilderness numbers at most this often (game ticks). */
@@ -132,11 +127,7 @@ public class SlayerCompanionPlugin extends Plugin
 	@Inject
 	private MapMarkerService mapMarkerService;
 	@Inject
-	private GearAdvisor gearAdvisor;
-	@Inject
-	private SetupStore setupStore;
-	@Inject
-	private UpgradeAdvisor upgradeAdvisor;
+	private RequiredItems requiredItems;
 	@Inject
 	private PointsPlanner pointsPlanner;
 	@Inject
@@ -179,7 +170,7 @@ public class SlayerCompanionPlugin extends Plugin
 		sessionTracker.setAlternativeNames(name -> data.task(name).map(TaskInfo::alternativesOrEmpty).orElse(Collections.emptyList()));
 		sessionTracker.setTargetNpcIds(name -> data.task(name).map(TaskInfo::npcIds).orElse(Collections.emptySet()));
 		itemIndex.startUp();
-		itemIndex.want(data.allItemNames());
+		itemIndex.want(data.requiredItemNames());
 		ownedItems.startUp();
 		sessionTracker.startUp();
 		taskTracker.startUp();
@@ -354,12 +345,7 @@ public class SlayerCompanionPlugin extends Plugin
 		int wildStreak = loggedIn ? client.getVarbitValue(VarbitID.SLAYER_WILDERNESS_TASKS_COMPLETED) : 0;
 		int mortimerStreak = loggedIn ? client.getVarpValue(VarPlayerID.SLAYER_MORTIMER_TASKS_COMPLETED) : 0;
 
-		GearSetup setup = task == null ? null : setupStore.get(task.getName()).orElse(null);
-		List<SetupStore.Difference> diffs = setup == null ? Collections.emptyList() : setupStore.compare(setup);
-		List<String> missingRequired = info == null ? Collections.emptyList() : gearAdvisor.missingItems(info.getRequiredItems());
-		SlayerMaster master = task == null ? SlayerMaster.fromVarbit(loggedIn ? client.getVarbitValue(VarbitID.SLAYER_MASTER) : 0) : task.getMaster();
-		List<UpgradeAdvisor.UpgradeSuggestion> upgrades = loggedIn && ownedItems.isBankKnown()
-			? upgradeAdvisor.suggest(master, null) : Collections.emptyList();
+		List<String> missingRequired = info == null ? Collections.emptyList() : requiredItems.missing(info.getRequiredItems());
 
 		WildernessStatus wilderness = loggedIn ? wildernessAdvisor.status() : null;
 		overlayWilderness = wilderness;
@@ -378,13 +364,6 @@ public class SlayerCompanionPlugin extends Plugin
 				itemNames.put(id, itemName(id));
 			}
 		}
-		List<com.slayercompanion.data.GearTable> gearTables = GearAdvisor.tablesFor(info, variant, data.generalGear());
-		boolean gearIsGeneral = info != null && info.gearTablesFor(variant).isEmpty() && data.generalGear().getGearTables() != null;
-		List<List<SlotAdvice>> gearAdvice = new java.util.ArrayList<>();
-		for (com.slayercompanion.data.GearTable table : gearTables)
-		{
-			gearAdvice.add(gearAdvisor.advise(table));
-		}
 
 		return PanelModel.builder()
 			.loggedIn(loggedIn)
@@ -398,9 +377,6 @@ public class SlayerCompanionPlugin extends Plugin
 			.shortestPathAvailable(routeService.isShortestPathAvailable())
 			.bankKnown(ownedItems.isBankKnown())
 			.missingRequiredItems(missingRequired)
-			.savedSetup(setup)
-			.setupDifferences(diffs)
-			.upgrades(upgrades)
 			.pointsPlan(loggedIn ? pointsPlanner.plan(points, shared, task) : null)
 			.sharedStreak(shared)
 			.wildernessStreak(wildStreak)
@@ -411,11 +387,7 @@ public class SlayerCompanionPlugin extends Plugin
 			.wilderness(wilderness)
 			.unlocks(loggedIn ? unlockAdvisor.advise(points) : Collections.emptyList())
 			.itemNames(itemNames)
-			.gearTables(gearTables)
-			.gearAdvice(gearAdvice)
-			.gearIsGeneral(gearIsGeneral)
 			.locks(locks)
-			.defaultGearTable(gearAdvisor.defaultTableIndex(gearTables, info == null ? null : info.getRecommendedStyle()))
 			.build();
 	}
 
@@ -484,23 +456,6 @@ public class SlayerCompanionPlugin extends Plugin
 				data.task(key).ifPresent(SlayerCompanionPlugin.this::updateMarkers);
 				requestRefresh();
 			});
-		}
-
-		@Override
-		public void saveCurrentSetup(String taskName)
-		{
-			clientThread.invokeLater(() ->
-			{
-				setupStore.saveCurrent(taskName);
-				requestRefresh();
-			});
-		}
-
-		@Override
-		public void deleteSetup(String taskName)
-		{
-			setupStore.delete(taskName);
-			requestRefresh();
 		}
 
 		@Override

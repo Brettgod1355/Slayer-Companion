@@ -26,9 +26,6 @@ package com.slayercompanion.ui;
 
 import com.slayercompanion.data.TaskInfo;
 import com.slayercompanion.data.TaskLocation;
-import com.slayercompanion.gear.GearSetup;
-import com.slayercompanion.gear.SetupStore;
-import com.slayercompanion.gear.UpgradeAdvisor;
 import com.slayercompanion.points.PointsPlan;
 import com.slayercompanion.task.CurrentTask;
 import com.slayercompanion.tracker.TaskSession;
@@ -65,10 +62,6 @@ public class PanelModel
 	boolean bankKnown;
 	List<String> missingRequiredItems;
 	@Nullable
-	GearSetup savedSetup;
-	List<SetupStore.Difference> setupDifferences;
-	List<UpgradeAdvisor.UpgradeSuggestion> upgrades;
-	@Nullable
 	PointsPlan pointsPlan;
 	int sharedStreak;
 	int wildernessStreak;
@@ -81,13 +74,6 @@ public class PanelModel
 	List<UnlockAdvice> unlocks;
 	/** Item id -> display name for everything the Loot tab shows. */
 	java.util.Map<Integer, String> itemNames;
-	/** Gear tables to show: the task's own, or the general Slayer tables when it has none. */
-	List<com.slayercompanion.data.GearTable> gearTables;
-	/** Slot advice aligned with {@code gearTables}. */
-	List<List<com.slayercompanion.gear.SlotAdvice>> gearAdvice;
-	boolean gearIsGeneral;
-	/** Index into {@code gearTables} to show first (preferred style, else the task's recommended style). */
-	int defaultGearTable;
 	/** Location id -> lock state for the current task's locations. */
 	java.util.Map<String, com.slayercompanion.game.LockState> locks;
 	int points;

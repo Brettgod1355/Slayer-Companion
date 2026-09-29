@@ -31,7 +31,7 @@ Data flow
     apply_access()              requirements[] text -> access{groups[any[rule]]}
           |
           v
-    out/tasks.json  out/locations.json  out/report.json  out/item-names.txt
+    out/tasks.json  out/locations.json  out/report.json
 
 Standard library only.  All network access goes through WikiCache which
 stores every page (and every "missing page" answer) under cache/ so re-runs
@@ -1209,6 +1209,8 @@ def finalise_variant_gear(tasks: list[dict]) -> None:
     for task in tasks:
         names = selectable_variants(task)
         for kind in ("gearTables", "exampleSetups"):
+            if kind not in task:
+                continue  # reused through --only: tasks.json no longer carries gear
             own = {_gear_key(t) for t in task.get(kind, []) if t.get("variant") is None} if kind == "gearTables" else set()
             kept = []
             for item in task.get(kind, []):
@@ -2851,23 +2853,6 @@ def build_task(cache: WikiCache, row: TaskRow, report: dict) -> dict:
     return task
 
 
-def collect_item_names(tasks: list[dict]) -> list[str]:
-    names: set[str] = set()
-    for t in tasks:
-        for g in t["gearTables"]:
-            for tiers in g["slots"].values():
-                for tier in tiers:
-                    for item in tier:
-                        names.add(item["name"])
-                        if item.get("pic"):
-                            names.add(item["pic"])
-        for s in t["exampleSetups"]:
-            names.update(v for v in s["equipment"].values() if v)
-            names.update(s["inventory"])
-            names.update(s["runePouch"])
-    return sorted(n for n in names if n)
-
-
 def build_locations_index(tasks: list[dict]) -> list[dict]:
     index: dict[str, dict] = {}
     for t in tasks:
@@ -2901,10 +2886,10 @@ def build_locations_index(tasks: list[dict]) -> list[dict]:
 
 
 # --------------------------------------------------------------------------
-# Post-processing: general Slayer gear, task summary, derived styles
+# Post-processing: task summary, derived styles, gear pages
 # --------------------------------------------------------------------------
 
-GENERAL_GEAR_PAGE = "Slayer training"
+TRAINING_PAGE = "Slayer training"
 
 
 def _section_body(text: str, title_re: str, level: int = 2) -> str | None:
@@ -2912,26 +2897,6 @@ def _section_body(text: str, title_re: str, level: int = 2) -> str | None:
         if s["level"] == level and re.fullmatch(title_re, s["title"], re.I):
             return text[s["start"]:s["end"]]
     return None
-
-
-def build_general_gear(cache: WikiCache) -> dict | None:
-    """General (non task-specific) Slayer gear from the ==Equipment== section of
-    the "Slayer training" page: one GearTable + ExampleSetup per <tabber> style."""
-    page = cache.get(GENERAL_GEAR_PAGE)
-    if not page.ok:
-        return None
-    body = _section_body(page.wikitext, r"equipment")
-    if body is None:
-        return None
-    gear_tables, setups = parse_gear_sections(body)
-    prose = re.sub(r"<tabber>.*?</tabber>", "", body, flags=re.S | re.I)
-    notes = [p for p in paragraphs(plain_text(prose)) if not p.endswith(":")][:8]
-    return {
-        "source": page.title or GENERAL_GEAR_PAGE,
-        "gearTables": gear_tables,
-        "exampleSetups": setups,
-        "notes": notes,
-    }
 
 
 _CELL_ATTR = re.compile(r'^\s*(?:[\w\-]+\s*=\s*(?:"[^"]*"|\'[^\']*\'|[^\s|]+)\s*)+\|(?!\|)')
@@ -3028,7 +2993,7 @@ def apply_training_summary(tasks: list[dict], cache: WikiCache, report: dict | N
     to report["trainingSummaryUnmatched"] when a report is given)."""
     for t in tasks:
         t.pop("trainingSummary", None)
-    page = cache.get(GENERAL_GEAR_PAGE)
+    page = cache.get(TRAINING_PAGE)
     rows = parse_task_summary(page.wikitext) if page.ok else []
     tiers = [_task_key_tiers(t) for t in tasks]
     unmatched: list[dict] = []
@@ -3139,6 +3104,10 @@ def derive_recommended_styles(tasks: list[dict], cache: WikiCache) -> dict[str, 
     and record where it came from in recommendedStyleSource."""
     counts: dict[str, int] = {}
     for t in tasks:
+        if t.get("recommendedStyleSource") == "gearTables" and "gearTables" not in t:
+            # reused through --only: tasks.json does not keep the gear tables, so keep the style
+            counts["gearTables"] = counts.get("gearTables", 0) + 1
+            continue
         if t.get("recommendedStyleSource") is not None:
             # derived on a previous run (task reused through --only): redo it
             t["recommendedStyle"] = None
@@ -3163,6 +3132,26 @@ def derive_recommended_styles(tasks: list[dict], cache: WikiCache) -> dict[str, 
             t["recommendedStyleSource"] = source
             counts[source] = counts.get(source, 0) + 1
     return counts
+
+
+def apply_gear_pages(tasks: list[dict]) -> None:
+    """The wiki page the plugin's "Recommended gear & strategy" link opens: `gearPage` is the
+    page of the task's first own gear table (null when it has none; the plugin then opens the
+    task page); `variantGearPages` maps each selectable variant with its own tables to their
+    page.  The tables themselves are not shipped (plugin 0.6.0 links to the wiki instead), so
+    they are removed here.  Tasks reused through --only have no tables left and keep the pages
+    they already have."""
+    for t in tasks:
+        if "gearTables" not in t:
+            continue
+        tables = t.pop("gearTables")
+        t.pop("exampleSetups", None)
+        t["gearPage"] = next((g["source"] for g in tables if g.get("variant") is None), None)
+        pages: dict[str, str] = {}
+        for g in tables:
+            if g.get("variant") is not None:
+                pages.setdefault(g["variant"], g["source"])
+        t["variantGearPages"] = pages
 
 
 def write_json(path: Path, data) -> None:
@@ -3242,7 +3231,6 @@ def main(argv: list[str] | None = None) -> int:
     report["curatedTasksUnused"] = sorted(k for k in curated if k not in used_curated)
 
     # post-processing from the "Slayer training" page (cached like any other page)
-    general_gear = build_general_gear(cache)
     apply_training_summary(tasks, cache, report)
     style_sources = derive_recommended_styles(tasks, cache)
     apply_access(tasks, report)
@@ -3256,8 +3244,8 @@ def main(argv: list[str] | None = None) -> int:
         "tasks": len(tasks),
         "withTaskPage": sum(1 for t in tasks if t["wikiTaskPage"]),
         "withSlayerInfobox": sum(1 for t in tasks if t["wikiTaskPageKind"] == "slayer-task"),
-        "withGearTables": sum(1 for t in tasks if t["gearTables"]),
-        "withAnyEquipment": sum(1 for t in tasks if t["gearTables"] or t["exampleSetups"]),
+        "withGearTables": sum(1 for t in tasks if t.get("gearTables")),
+        "withAnyEquipment": sum(1 for t in tasks if t.get("gearTables") or t.get("exampleSetups")),
         "withLocations": sum(1 for t in tasks if t["locations"]),
         "withMasters": sum(1 for t in tasks if t["masters"]),
         "withStrategy": sum(1 for t in tasks if t["strategy"]),
@@ -3267,20 +3255,17 @@ def main(argv: list[str] | None = None) -> int:
         "withTrainingSummary": sum(1 for t in tasks if t.get("trainingSummary")),
         "withRecommendedStyle": sum(1 for t in tasks if t["recommendedStyle"]),
         "recommendedStyleBySource": style_sources,
-        "generalGearTables": len(general_gear["gearTables"]) if general_gear else 0,
         "accessGroups": report["accessCounts"]["groups"],
         "accessGroupsCheckable": report["accessCounts"]["checkable"],
         "accessGroupsManual": report["accessCounts"]["manual"],
         "accessUnparsed": len(report["accessUnparsed"]),
     }
 
+    apply_gear_pages(tasks)
     args.out.mkdir(parents=True, exist_ok=True)
     write_json(args.out / "tasks.json", tasks)
     write_json(args.out / "locations.json", build_locations_index(tasks))
     write_json(args.out / "report.json", report)
-    if general_gear is not None:
-        write_json(args.out / "general-gear.json", general_gear)
-    (args.out / "item-names.txt").write_text("\n".join(collect_item_names(tasks)) + "\n", encoding="utf-8")
 
     print(json.dumps(report["counts"], indent=2))
     print(f"fetches this run: {cache.fetches}; failed pages: {len(cache.failed)}")

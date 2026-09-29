@@ -20,7 +20,7 @@ python3 generate.py --self-test              # unit tests for parse_access() (no
 | Option | Default | Meaning |
 | --- | --- | --- |
 | `--tasks PATH` | `../research/task-enum.txt` | tab-separated `ENUM_NAME<TAB>display name<TAB>alt1|alt2` |
-| `--out DIR` | `out/` | where `tasks.json`, `locations.json`, `report.json`, `item-names.txt` are written |
+| `--out DIR` | `out/` | where `tasks.json`, `locations.json`, `report.json` are written |
 | `--cache DIR` | `cache/` | raw wikitext cache (`<sanitised title>.wikitext` + `.meta.json`) |
 | `--curated DIR` | `curated/verified/` | curated override files (may be empty or absent) |
 | `--refresh` | off | re-fetch even if cached |
@@ -147,7 +147,7 @@ Bucket does not hold:
 | --- | --- |
 | Monster facts (Slayer XP and level, combat, hitpoints, size, attack speed, category, masters, cannon immunity, NPC ids) | `infobox_monster` bucket (the whole table, one query per 5000 rows); the page's own infobox fills fields Bucket lacks, and fields whose value differs between versions |
 | Which pages have gear tables | `recommended_equipment` bucket (list of pages). Automatic `/Strategies` guesses not on it are not fetched (about 200 fewer page reads on a full refresh) |
-| Gear tables themselves | page (Bucket stores no tab labels and flattens tiers) |
+| Gear tables themselves (read for `recommendedStyle` and `gearPage`, not shipped) | page (Bucket stores no tab labels and flattens tiers) |
 | Spawn locations | page `{{LocLine}}`s (Bucket's `locline` has coordinates but no location names) |
 | `{{Infobox Slayer}}`, strategy prose, shop unlocks | page (no bucket) |
 
@@ -179,8 +179,8 @@ All JSON is pretty-printed, keys sorted, UTF-8, `ensure_ascii=False`.
 | `recommendedStyle`, `styleNotes[]` | | style of the first gear table; `"<label>: <style>"` for each table |
 | `requiredItems[]`, `usefulItems[]`, `superior` | | curated only (empty/null otherwise) |
 | `xpPerKill` | int/null | first monster page's `slayxp` |
-| `gearTables[]` | `{label, style, slots{slot → [tier1[], … tier5[]]}, slotNotes{slot → text}, source}` | every `{{Recommended equipment}}` of the task page and its strategy pages (see page mapping); `source` is the wiki page; `label` is the `<tabber>` tab label (or level-2 heading / null); tier entries are `{name, txt?, pic?}` from `{{plink|Name|txt=…|pic=…}}` (`name` has any `#anchor` removed); `{{efn}}` footnotes and leftover text such as "(task only)" become `slotNotes` prefixed with `tier N:` |
-| `exampleSetups[]` | `{label, equipment{slot → item}, inventory[], inventoryGrid[28], runePouch[], notes, source}` | `{{Equipment}}`, `{{Inventory}}`, `{{Rune pouch}}` in the same tab/section; `notes` is the tab's prose (≤ 1500 chars) |
+| `gearPage` | string/null | the page the plugin's "Recommended gear & strategy" link opens: the `source` of the task's first own `{{Recommended equipment}}` table (task page or strategy page, see page mapping); null when it has none (the plugin then opens `wikiTaskPage`) |
+| `variantGearPages` | `{variant → page}` | the page of each selectable variant's own gear tables (`Vorkath` → `Vorkath/Strategies` on Blue dragons); the link follows the variant picked in the plugin |
 | `strategy[]` | strings | first 3 intro paragraphs + all `==Strategy==` paragraphs, plain text, capped at 2500 chars; bullet lists become `- ` lines inside one paragraph |
 | `unlocks[]` | `{name, cost, note}` | "Related slayer shop options" / "Slayer unlocks" table |
 | `monsters[]` | `{page, redirected, hasInfobox, locLines, mapLocations, name, versions[], slayerXp, slayerLevel, combat, hitpoints, maxHit, attackStyles[], weakness, attributes, size, aggressive, poisonous, attackSpeed, immuneCannon, immuneThrall, npcIds[], slayerCategory, assignedBy[]}` + `<field>ByVersion{version → value}` when the infobox is versioned | `{{Infobox Monster}}` of every monster page |
@@ -225,19 +225,6 @@ withMasters, withStrategy, withUnlocks, withXp, curatedTasks), `fetches`, `faile
 `accessCounts{…}`, `accessUnparsed{string → count}` (see "access"); `counts` also gains
 `accessGroups`, `accessGroupsCheckable`, `accessGroupsManual`, `accessUnparsed`.
 
-### `out/general-gear.json` – general Slayer gear (not task-specific)
-
-Built by `build_general_gear()` from the `==Equipment==` section of the wiki page **Slayer training**
-(cached like every other page under `cache/Slayer_training.wikitext`). Same parser as the per-task
-gear, so the objects have the same shape as in `tasks.json`:
-
-```json
-{"source": "Slayer training",
- "gearTables": [GearTable…],      // one {{Recommended equipment}} per <tabber> tab: Melee, Melee (Hallowfell), Magic (Barrage), Ranged, Ranged (Wilderness Slayer)
- "exampleSetups": [ExampleSetup…], // the {{Equipment}} / {{Inventory}} example of each tab (label = tab label)
- "notes": ["…"]}                   // the section's prose before the tabber, plain text, at most 8 paragraphs
-```
-
 ### `trainingSummary` / `recommendedStyleSource` on `tasks.json` records
 
 `apply_training_summary()` parses the `==Task summary==` wikitable of *Slayer training*
@@ -270,18 +257,7 @@ in `recommendedStyleSource`:
 Nothing else is guessed; tasks matching no rule keep `null` and no `recommendedStyleSource`. Note
 that the OSRS wiki no longer fills `weakness`; every hit of the last rule comes from
 `elementalweaknesstype`, i.e. an elemental (Magic) weakness, whatever its percentage. `report.json →
-counts` gains `withTrainingSummary`, `withRecommendedStyle`, `recommendedStyleBySource` and
-`generalGearTables`.
-
-### `out/item-names.txt`
-
-Every distinct item name referenced by gear tables (`name` and `pic` of each `{{plink}}`; `txt`
-labels such as "Rada's blessing 3/2" are not real items and are left out), example equipment,
-inventories and rune pouches – one per line, sorted. The plugin resolves these through
-`ItemManager.search` at runtime, so they must be exact wiki item names; names that are wiki
-*pages* rather than items (e.g. `God capes`, `Cape of Accomplishment (t)`) will simply not resolve
-and the accompanying `pic` name (`Imbued Saradomin cape`, `Strength cape(t)`) will.
-
+counts` gains `withTrainingSummary`, `withRecommendedStyle` and `recommendedStyleBySource`.
 
 ### `access` on `locations[]` – checkable requirements
 
