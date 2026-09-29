@@ -47,6 +47,18 @@ import lombok.Value;
 @Builder
 public class PanelModel
 {
+	/** A Slayer master to route to when there is no task. */
+	@Value
+	public static class MasterRoute
+	{
+		String name;
+		/** Why this master ("pays most for your next task"). */
+		String why;
+		@Nullable
+		String place;
+		List<String> travel;
+	}
+
 	@Nullable
 	CurrentTask task;
 	@Nullable
@@ -79,6 +91,8 @@ public class PanelModel
 	List<LoadoutDisplay> recommendationDisplays;
 	/** True while the recommendation is being worked out. */
 	boolean recommending;
+	/** With no task: masters to route to. */
+	List<MasterRoute> masterRoutes;
 	@Nullable
 	PointsPlan pointsPlan;
 	/** Do / skip / block for the current task. */

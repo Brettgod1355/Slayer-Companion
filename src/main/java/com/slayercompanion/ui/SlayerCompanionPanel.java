@@ -55,9 +55,10 @@ public class SlayerCompanionPanel extends PluginPanel
 	private final JPanel display = new JPanel(new BorderLayout());
 	private final MaterialTabGroup tabs = new MaterialTabGroup(display);
 
-	private final TaskTab taskTab;
+	private final TaskTab taskHeader;
 	private final LocationsTab locationsTab;
 	private final GearTab gearTab;
+	private final TaskTab taskDetails;
 	private final PointsTab pointsTab;
 	private final TrackerTab trackerTab;
 	private final WildernessTab wildernessTab;
@@ -85,9 +86,10 @@ public class SlayerCompanionPanel extends PluginPanel
 		header.add(Ui.gap(4));
 		header.add(progress);
 
-		taskTab = new TaskTab(actions);
+		taskHeader = new TaskTab(actions, TaskTab.Part.HEADER);
 		locationsTab = new LocationsTab(actions);
 		gearTab = new GearTab(actions, itemManager, spriteManager);
+		taskDetails = new TaskTab(actions, TaskTab.Part.DETAILS);
 		pointsTab = new PointsTab();
 		trackerTab = new TrackerTab(actions);
 		wildernessTab = new WildernessTab(wildernessInfo);
@@ -95,9 +97,16 @@ public class SlayerCompanionPanel extends PluginPanel
 
 		tabs.setLayout(new java.awt.GridLayout(0, 3, 2, 2));
 		tabs.setBorder(new EmptyBorder(4, 4, 0, 4));
-		addTab("Task", taskTab);
-		addTab("Where", locationsTab);
-		addTab("Gear", gearTab);
+		// One Task view answers "do it?", "where?" and "what to wear?" top to bottom.
+		JPanel taskView = new JPanel();
+		taskView.setLayout(new javax.swing.BoxLayout(taskView, javax.swing.BoxLayout.Y_AXIS));
+		taskView.setBackground(ColorScheme.DARK_GRAY_COLOR);
+		for (JPanel part : new JPanel[]{taskHeader, locationsTab, gearTab, taskDetails})
+		{
+			part.setAlignmentX(java.awt.Component.LEFT_ALIGNMENT);
+			taskView.add(part);
+		}
+		addTab("Task", taskView);
 		addTab("Points", pointsTab);
 		addTab("Loot", trackerTab);
 		wildernessMaterialTab = addTab("Wild", wildernessTab);
@@ -172,9 +181,10 @@ public class SlayerCompanionPanel extends PluginPanel
 			tabs.select(tabs.getTab(0));
 		}
 
-		taskTab.update(m);
+		taskHeader.update(m);
 		locationsTab.update(m);
 		gearTab.update(m);
+		taskDetails.update(m);
 		pointsTab.update(m);
 		trackerTab.update(m);
 		wildernessTab.update(m);

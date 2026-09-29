@@ -67,11 +67,7 @@ class GearTab extends JPanel
 		removeAll();
 		JPanel col = Ui.column();
 		TaskInfo info = m.getInfo();
-		if (m.getTask() == null)
-		{
-			col.add(Ui.wrap("No task."));
-		}
-		else
+		if (m.getTask() != null && m.isLoggedIn())
 		{
 			if (info == null)
 			{

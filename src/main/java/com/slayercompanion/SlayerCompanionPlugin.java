@@ -100,7 +100,7 @@ import net.runelite.client.util.LinkBrowser;
 public class SlayerCompanionPlugin extends Plugin
 {
 	/** Shown in the panel footer; bumped together with build.gradle and runelite-plugin.properties. */
-	public static final String VERSION = "0.9.0";
+	public static final String VERSION = "0.10.0";
 
 	private static final String WIKI_BASE = "https://oldschool.runescape.wiki/w/";
 	/** Refresh the Wilderness numbers at most this often (game ticks). */
@@ -463,6 +463,21 @@ public class SlayerCompanionPlugin extends Plugin
 			}
 		}
 
+		com.slayercompanion.points.PointsPlan pointsPlan = loggedIn ? pointsPlanner.plan(points, shared, task) : null;
+		List<PanelModel.MasterRoute> masterRoutes = new java.util.ArrayList<>();
+		if (loggedIn && task == null)
+		{
+			if (pointsPlan != null && pointsPlan.getRecommended() != null)
+			{
+				masterRoute(pointsPlan.getRecommended().getMasterName(), "pays most for your next task").ifPresent(masterRoutes::add);
+			}
+			com.slayercompanion.task.SlayerMaster last = com.slayercompanion.task.SlayerMaster.fromVarbit(client.getVarbitValue(VarbitID.SLAYER_MASTER));
+			if (last != null && masterRoutes.stream().noneMatch(r -> r.getName().equalsIgnoreCase(last.getDisplayName())))
+			{
+				masterRoute(last.getDisplayName(), "your last master").ifPresent(masterRoutes::add);
+			}
+		}
+
 		return PanelModel.builder()
 			.loggedIn(loggedIn)
 			.task(task)
@@ -481,7 +496,8 @@ public class SlayerCompanionPlugin extends Plugin
 			.recommendation(rec)
 			.recommendationDisplays(recommendationDisplays)
 			.recommending(recommending)
-			.pointsPlan(loggedIn ? pointsPlanner.plan(points, shared, task) : null)
+			.pointsPlan(pointsPlan)
+			.masterRoutes(masterRoutes)
 			.verdict(task == null ? null : VerdictAdvisor.verdict(info, masterInfo, points))
 			.lootEstimate(estimate)
 			.sessionExpected(sessionExpected)
@@ -521,6 +537,26 @@ public class SlayerCompanionPlugin extends Plugin
 		}
 	}
 
+	/** A master by display name, id or alias. */
+	private Optional<com.slayercompanion.data.MasterInfo> masterInfo(String name)
+	{
+		for (com.slayercompanion.data.MasterInfo mi : data.masters())
+		{
+			if (name.equalsIgnoreCase(mi.getName()) || name.equalsIgnoreCase(mi.getId()) || name.equalsIgnoreCase(mi.getAlias()))
+			{
+				return Optional.of(mi);
+			}
+		}
+		return Optional.empty();
+	}
+
+	private Optional<PanelModel.MasterRoute> masterRoute(String name, String why)
+	{
+		return masterInfo(name).filter(mi -> mi.getLocation() != null && mi.getLocation().getX() != null)
+			.map(mi -> new PanelModel.MasterRoute(mi.getName(), why, mi.getLocation().getPlace(),
+				mi.getTravel() == null ? Collections.emptyList() : mi.getTravel()));
+	}
+
 	/** The bundled task name, as favourites and loadouts are keyed; the game's name can be an alternative ("Artio"). */
 	private String bundledName(String taskName)
 	{
@@ -545,6 +581,14 @@ public class SlayerCompanionPlugin extends Plugin
 		public void clearRoute()
 		{
 			clientThread.invokeLater(routeService::clear);
+		}
+
+		@Override
+		public void routeToMaster(String masterName)
+		{
+			masterInfo(masterName).map(com.slayercompanion.data.MasterInfo::getLocation).filter(l -> l.getX() != null && l.getY() != null)
+				.ifPresent(l -> clientThread.invokeLater(() -> routeService.route(
+					new net.runelite.api.coords.WorldPoint(l.getX(), l.getY(), l.getPlane() == null ? 0 : l.getPlane()))));
 		}
 
 		@Override

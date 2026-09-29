@@ -31,7 +31,7 @@ dependencies {
 }
 
 group = 'com.slayercompanion'
-version = '0.9.0'
+version = '0.10.0'
 
 tasks.withType(JavaCompile).configureEach {
 	options.encoding = 'UTF-8'
