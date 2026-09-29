@@ -49,9 +49,6 @@ class GearTab extends JPanel
 	private final PanelActions actions;
 	private final ItemManager itemManager;
 	private final RsSprites sprites;
-	/** Which recommendation option is shown, per recommendation. */
-	private String shownKey;
-	private int shownOption;
 
 	GearTab(PanelActions actions, ItemManager itemManager, SpriteManager spriteManager)
 	{
@@ -78,12 +75,7 @@ class GearTab extends JPanel
 				col.add(wikiCard(m, info));
 			}
 			col.add(Ui.gap(4));
-			col.add(loadoutCard(m, info == null ? m.getTask().getName() : info.getTask()));
-			if (info != null && m.isLoggedIn())
-			{
-				col.add(Ui.gap(4));
-				col.add(bestCard(m, info));
-			}
+			col.add(loadoutCard(m, info));
 		}
 		add(col, BorderLayout.NORTH);
 		revalidate();
@@ -114,28 +106,93 @@ class GearTab extends JPanel
 		return card;
 	}
 
-	private JPanel loadoutCard(PanelModel m, String taskName)
+	/**
+	 * The player's loadout for the task, drawn like the Worn Equipment tab and inventory. "Recommend
+	 * from my bank" fills its gear with the best-DPS gear the player owns (Undo puts it back); with
+	 * the bank open, "Show in bank" lays the bank out the same way.
+	 */
+	private JPanel loadoutCard(PanelModel m, @javax.annotation.Nullable TaskInfo info)
 	{
+		String taskName = info == null ? m.getTask().getName() : info.getTask();
 		JPanel card = Ui.card();
 		card.add(Ui.title("Your loadout"));
-		LoadoutDisplay loadout = m.getLoadout();
 		if (!m.isLoggedIn())
 		{
 			card.add(Ui.wrap("Log in to see your loadout.", Ui.MUTED));
+			return card;
 		}
-		else if (loadout == null)
+		LoadoutDisplay loadout = m.getLoadout();
+		com.slayercompanion.dps.Recommendation r = m.getRecommendation();
+		if (m.isRecommending())
 		{
-			card.add(Ui.wrap("Nothing saved for " + taskName + " yet. Gear up, then save what you are wearing and carrying.", Ui.MUTED));
+			card.add(Ui.wrap("Working out the best gear from your bank\u2026", Ui.MUTED));
 			card.add(Ui.gap(4));
+		}
+		else if (r != null && r.getUnavailable() != null)
+		{
+			card.add(Ui.wrap(r.getUnavailable(), Ui.WARN));
+			card.add(Ui.gap(4));
+		}
+
+		if (loadout == null)
+		{
+			card.add(Ui.wrap("Nothing saved for " + taskName + " yet. Gear up and save what you are wearing and carrying, "
+				+ "or let the plugin fill it with the best-DPS gear from your bank.", Ui.MUTED));
+		}
+		else
+		{
+			if (r != null && !r.getOptions().isEmpty())
+			{
+				recommendationPicker(card, m, r, taskName);
+			}
+			card.add(new LoadoutView(loadout, itemManager, sprites));
+			card.add(Ui.gap(4));
+			card.add(summary(loadout));
+			if (loadout.getInventory().stream().allMatch(java.util.Objects::isNull))
+			{
+				card.add(Ui.wrap("No inventory saved. Once you have gear and supplies on you, press Replace to save it all.", Ui.MUTED));
+			}
+			if (r != null && !r.getOptions().isEmpty())
+			{
+				recommendationNumbers(card, r, m.getRecommendationIndex());
+			}
+		}
+
+		card.add(Ui.gap(4));
+		if (info != null)
+		{
+			card.add(Ui.buttonRow(Ui.button("Recommend from my bank", "Fill the gear with the highest-DPS gear you own for "
+				+ target(m, info) + " (your saved inventory stays)", () -> actions.recommendLoadout(taskName))));
+			card.add(Ui.gap(3));
+		}
+		if (m.isCanUndoRecommendation())
+		{
+			card.add(Ui.buttonRow(Ui.button("Undo recommendation", "Put your loadout back as it was", () -> actions.undoRecommendation(taskName))));
+			card.add(Ui.gap(3));
+		}
+		if (loadout != null)
+		{
+			if (m.isBankLayoutShowing())
+			{
+				card.add(Ui.buttonRow(Ui.button("Back to normal bank", "Stop showing the loadout in the bank", actions::closeBankLayout)));
+			}
+			else
+			{
+				javax.swing.JButton show = Ui.button("Show in bank", m.isBankOpen()
+					? "Filter the bank to this loadout, laid out like this view"
+					: "Open your bank first", () -> actions.showLoadoutInBank(taskName));
+				show.setEnabled(m.isBankOpen());
+				card.add(Ui.buttonRow(show));
+			}
+			card.add(Ui.gap(3));
+		}
+		if (loadout == null)
+		{
 			card.add(Ui.buttonRow(Ui.button("Save what I have on", "Save your worn equipment and inventory as the loadout for " + taskName,
 				() -> actions.saveLoadout(taskName))));
 		}
 		else
 		{
-			card.add(new LoadoutView(loadout, itemManager, sprites));
-			card.add(Ui.gap(4));
-			card.add(summary(loadout));
-			card.add(Ui.gap(4));
 			card.add(Ui.buttonRow(
 				Ui.button("Replace", "Save what you have on now instead", () ->
 				{
@@ -156,66 +213,35 @@ class GearTab extends JPanel
 		return card;
 	}
 
-	/** The best-DPS gear from the bank, drawn like the Worn Equipment tab, with the numbers behind it. */
-	private JPanel bestCard(PanelModel m, TaskInfo info)
+	private static String target(PanelModel m, TaskInfo info)
 	{
-		String taskName = info.getTask();
 		com.slayercompanion.data.MonsterInfo monster = info.mainMonster(m.getSelectedVariant());
-		String target = monster == null ? taskName : monster.getName();
-		JPanel card = Ui.card();
-		card.add(Ui.title("Best DPS from your bank"));
-		com.slayercompanion.dps.Recommendation r = m.getRecommendation();
-		if (m.isRecommending())
+		return monster == null ? info.getTask() : monster.getName();
+	}
+
+	/** Melee / ranged / magic: picking one puts that gear in the loadout. */
+	private void recommendationPicker(JPanel card, PanelModel m, com.slayercompanion.dps.Recommendation r, String taskName)
+	{
+		if (r.getOptions().size() < 2)
 		{
-			card.add(Ui.wrap("Working it out\u2026", Ui.MUTED));
-			return card;
-		}
-		if (r == null)
-		{
-			card.add(Ui.wrap("Finds the highest-DPS gear you own for " + target + " from your levels and the wiki's item and monster stats.", Ui.MUTED));
-			if (!m.isBankKnown())
-			{
-				card.add(Ui.wrap("Open your bank once first so the plugin knows what you own.", Ui.WARN));
-			}
-			card.add(Ui.gap(4));
-			card.add(Ui.buttonRow(Ui.button("Recommend from my bank", "Work out the best-DPS gear you own for " + target,
-				() -> actions.recommendLoadout(taskName))));
-			return card;
-		}
-		if (r.getUnavailable() != null)
-		{
-			card.add(Ui.wrap(r.getUnavailable(), Ui.WARN));
-			card.add(Ui.gap(4));
-			card.add(Ui.buttonRow(Ui.button("Try again", "Work it out again", () -> actions.recommendLoadout(taskName))));
-			return card;
-		}
-		if (!r.getKey().equals(shownKey))
-		{
-			shownKey = r.getKey();
-			shownOption = 0;
+			return;
 		}
 		List<String> labels = new ArrayList<>();
 		for (com.slayercompanion.dps.LoadoutOptimizer.Option o : r.getOptions())
 		{
-			labels.add(kind(o.getKind()) + " \u2014 " + dps(o.getResult().getDps()) + " DPS");
+			labels.add("Best " + kind(o.getKind()).toLowerCase(java.util.Locale.ROOT) + " \u2014 " + dps(o.getResult().getDps()) + " DPS");
 		}
-		int index = Math.min(shownOption, labels.size() - 1);
-		if (labels.size() > 1)
-		{
-			card.add(Ui.dropdown(labels, labels.get(index), v ->
-			{
-				shownOption = Math.max(0, labels.indexOf(v));
-				actions.refresh();
-			}));
-			card.add(Ui.gap(4));
-		}
-		com.slayercompanion.dps.LoadoutOptimizer.Option o = r.getOptions().get(index);
-		if (m.getRecommendationDisplays() != null && index < m.getRecommendationDisplays().size())
-		{
-			card.add(new LoadoutView(m.getRecommendationDisplays().get(index), itemManager, sprites, false));
-			card.add(Ui.gap(4));
-		}
+		int index = Math.min(m.getRecommendationIndex(), labels.size() - 1);
+		card.add(Ui.dropdown(labels, labels.get(index), v -> actions.useRecommendation(taskName, Math.max(0, labels.indexOf(v)))));
+		card.add(Ui.gap(4));
+	}
+
+	/** What the recommended gear does, and what it assumes. */
+	private static void recommendationNumbers(JPanel card, com.slayercompanion.dps.Recommendation r, int index)
+	{
+		com.slayercompanion.dps.LoadoutOptimizer.Option o = r.getOptions().get(Math.min(index, r.getOptions().size() - 1));
 		com.slayercompanion.dps.AttackStyle style = o.getStyle();
+		card.add(Ui.gap(4));
 		card.add(Ui.keyValue("Style", style.getStance() == com.slayercompanion.dps.AttackStyle.Stance.AUTOCAST ? style.getName() : style.toString()));
 		card.add(Ui.keyValue("Max hit", String.valueOf(o.getResult().getMaxHit())));
 		card.add(Ui.keyValue("Accuracy", Math.round(o.getResult().getHitChance() * 100) + "%"));
@@ -224,24 +250,11 @@ class GearTab extends JPanel
 		{
 			card.add(Ui.keyValue("Your worn gear now", dps(r.getCurrent().getResult().getDps()) + " DPS"));
 		}
-		card.add(Ui.gap(3));
-		card.add(Ui.wrap("Red slots are not on you (hover for where). Empty slots make no DPS difference: wear what you like there.", Ui.MUTED));
+		card.add(Ui.wrap("Empty gear slots make no DPS difference: wear what you like there.", Ui.MUTED));
 		for (String a : r.getAssumptions())
 		{
 			card.add(Ui.wrap(a, Ui.MUTED));
 		}
-		card.add(Ui.gap(4));
-		int chosen = index;
-		card.add(Ui.buttonRow(Ui.button("Use as my loadout", "Save this as your worn gear for " + taskName + " (your saved inventory stays)", () ->
-		{
-			if (m.getLoadout() == null || confirm("Replace the worn gear of your saved loadout for " + taskName + " with this?"))
-			{
-				actions.useRecommendation(taskName, chosen);
-			}
-		})));
-		card.add(Ui.gap(3));
-		card.add(Ui.buttonRow(Ui.button("Work out again", "Recalculate with your bank as it is now", () -> actions.recommendLoadout(taskName))));
-		return card;
 	}
 
 	private static String kind(com.slayercompanion.dps.LoadoutOptimizer.Kind kind)

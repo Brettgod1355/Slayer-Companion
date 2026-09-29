@@ -87,10 +87,15 @@ public class PanelModel
 	/** Best-DPS gear from the bank for the current task and variant; null until asked for. */
 	@Nullable
 	com.slayercompanion.dps.Recommendation recommendation;
-	/** Where each recommended item is, one per {@code recommendation} option. */
-	List<LoadoutDisplay> recommendationDisplays;
+	/** Which recommendation option is in the loadout now. */
+	int recommendationIndex;
 	/** True while the recommendation is being worked out. */
 	boolean recommending;
+	/** The loadout as it was before the recommendation filled it can be put back. */
+	boolean canUndoRecommendation;
+	boolean bankOpen;
+	/** The bank is showing this plugin's loadout layout. */
+	boolean bankLayoutShowing;
 	/** With no task: masters to route to. */
 	List<MasterRoute> masterRoutes;
 	@Nullable

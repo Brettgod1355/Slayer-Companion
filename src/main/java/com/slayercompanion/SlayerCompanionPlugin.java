@@ -35,10 +35,12 @@ import com.slayercompanion.events.OwnedItemsChanged;
 import com.slayercompanion.events.SessionUpdated;
 import com.slayercompanion.events.TaskChanged;
 import com.slayercompanion.game.LiveSlayerCatalog;
+import com.slayercompanion.gear.BankLayout;
 import com.slayercompanion.gear.InventorySetupsLink;
 import com.slayercompanion.gear.ItemIndex;
 import com.slayercompanion.gear.ItemNameResolver;
 import com.slayercompanion.gear.OwnedItems;
+import com.slayercompanion.gear.Loadout;
 import com.slayercompanion.gear.LoadoutDisplay;
 import com.slayercompanion.gear.LoadoutStore;
 import com.slayercompanion.gear.RequiredItems;
@@ -73,6 +75,9 @@ import net.runelite.api.Client;
 import net.runelite.api.GameState;
 import net.runelite.api.events.GameStateChanged;
 import net.runelite.api.events.GameTick;
+import net.runelite.api.events.WidgetClosed;
+import net.runelite.api.events.WidgetLoaded;
+import net.runelite.api.gameval.InterfaceID;
 import net.runelite.api.gameval.VarPlayerID;
 import net.runelite.api.gameval.VarbitID;
 import net.runelite.client.callback.ClientThread;
@@ -84,7 +89,9 @@ import net.runelite.client.events.PluginMessage;
 import net.runelite.client.game.ItemManager;
 import net.runelite.client.game.SpriteManager;
 import net.runelite.client.plugins.Plugin;
+import net.runelite.client.plugins.PluginDependency;
 import net.runelite.client.plugins.PluginDescriptor;
+import net.runelite.client.plugins.banktags.BankTagsPlugin;
 import net.runelite.client.ui.ClientToolbar;
 import net.runelite.client.ui.NavigationButton;
 import net.runelite.client.ui.overlay.OverlayManager;
@@ -97,10 +104,11 @@ import net.runelite.client.util.LinkBrowser;
 	description = "A do/skip/block verdict with what the task is worth, locations, routing, the wiki's recommended gear and strategy, your own loadout per task, points planning, supplies and profit, wilderness risk and unlock advice for your Slayer task",
 	tags = {"slayer", "task", "verdict", "loot", "achievements", "gear", "loadout", "dps", "inventory", "setups", "location", "wilderness", "points", "konar", "supplies", "profit", "unlocks"}
 )
+@PluginDependency(BankTagsPlugin.class)
 public class SlayerCompanionPlugin extends Plugin
 {
 	/** Shown in the panel footer; bumped together with build.gradle and runelite-plugin.properties. */
-	public static final String VERSION = "0.10.0";
+	public static final String VERSION = "0.11.0";
 
 	private static final String WIKI_BASE = "https://oldschool.runescape.wiki/w/";
 	/** Refresh the Wilderness numbers at most this often (game ticks). */
@@ -148,6 +156,8 @@ public class SlayerCompanionPlugin extends Plugin
 	@Inject
 	private LoadoutRecommender recommender;
 	@Inject
+	private BankLayout bankLayout;
+	@Inject
 	private InventorySetupsLink inventorySetupsLink;
 	@Inject
 	private SpriteManager spriteManager;
@@ -173,6 +183,11 @@ public class SlayerCompanionPlugin extends Plugin
 	/** The last best-in-bank result; shown only while its task and variant are current. */
 	private volatile Recommendation recommendation;
 	private volatile boolean recommending;
+	/** Which option of {@link #recommendation} is in the loadout. */
+	private volatile int recommendationIndex;
+	/** The loadout before the recommendation filled it (null: there was none), for Undo. */
+	private volatile Loadout undoLoadout;
+	private volatile String undoKey;
 
 	@Override
 	protected void startUp()
@@ -200,6 +215,7 @@ public class SlayerCompanionPlugin extends Plugin
 		ownedItems.startUp();
 		sessionTracker.startUp();
 		taskTracker.startUp();
+		clientThread.invoke(bankLayout::startUp);
 		inventorySetupsLink.refresh();
 		requestRefresh();
 		log.debug("Slayer Companion {} started", VERSION);
@@ -218,6 +234,9 @@ public class SlayerCompanionPlugin extends Plugin
 		clientToolbar.removeNavigation(navButton);
 		catalog.reset();
 		inventorySetupsLink.reset();
+		clientThread.invoke(bankLayout::shutDown);
+		recommendation = null;
+		undoKey = null;
 		panel = null;
 		overlayTask = null;
 		overlaySession = null;
@@ -237,6 +256,26 @@ public class SlayerCompanionPlugin extends Plugin
 		{
 			catalog.reset();
 			inventorySetupsLink.refresh();
+			requestRefresh();
+		}
+	}
+
+	@Subscribe
+	public void onWidgetLoaded(WidgetLoaded event)
+	{
+		if (event.getGroupId() == InterfaceID.BANKMAIN)
+		{
+			requestRefresh();
+		}
+	}
+
+	@Subscribe
+	public void onWidgetClosed(WidgetClosed event)
+	{
+		if (event.getGroupId() == InterfaceID.BANKMAIN)
+		{
+			// Next time the bank opens it is the normal bank again.
+			bankLayout.close();
 			requestRefresh();
 		}
 	}
@@ -454,14 +493,9 @@ public class SlayerCompanionPlugin extends Plugin
 		{
 			rec = null;
 		}
-		List<com.slayercompanion.gear.LoadoutDisplay> recommendationDisplays = new java.util.ArrayList<>();
-		if (rec != null && loggedIn)
-		{
-			for (LoadoutOptimizer.Option o : rec.getOptions())
-			{
-				recommendationDisplays.add(loadoutStore.displayEquipment(LoadoutOptimizer.itemIds(o.getGear(), rec.getOwned())));
-			}
-		}
+		String taskKeyForUndo = info == null ? (task == null ? null : task.getName()) : info.getTask();
+		boolean canUndo = undoKey != null && undoKey.equals(taskKeyForUndo);
+		boolean bankOpen = loggedIn && client.getWidget(InterfaceID.Bankmain.UNIVERSE) != null;
 
 		com.slayercompanion.points.PointsPlan pointsPlan = loggedIn ? pointsPlanner.plan(points, shared, task) : null;
 		List<PanelModel.MasterRoute> masterRoutes = new java.util.ArrayList<>();
@@ -494,8 +528,11 @@ public class SlayerCompanionPlugin extends Plugin
 			.inventorySetups(inventorySetupsLink.setups())
 			.linkedSetup(linkedSetup)
 			.recommendation(rec)
-			.recommendationDisplays(recommendationDisplays)
+			.recommendationIndex(rec == null ? 0 : Math.min(recommendationIndex, Math.max(0, rec.getOptions().size() - 1)))
 			.recommending(recommending)
+			.canUndoRecommendation(canUndo)
+			.bankOpen(bankOpen)
+			.bankLayoutShowing(bankOpen && bankLayout.isShowing())
 			.pointsPlan(pointsPlan)
 			.masterRoutes(masterRoutes)
 			.verdict(task == null ? null : VerdictAdvisor.verdict(info, masterInfo, points))
@@ -534,6 +571,38 @@ public class SlayerCompanionPlugin extends Plugin
 		else
 		{
 			mapMarkerService.clear();
+		}
+	}
+
+	/** Put recommendation option {@code index} into the task's loadout. Client thread only. */
+	private void applyRecommendation(String key, Recommendation r, int index)
+	{
+		loadoutStore.saveEquipment(key, LoadoutOptimizer.itemIds(r.getOptions().get(index).getGear(), r.getOwned()));
+		recommendationIndex = index;
+		refreshBankLayout(key);
+	}
+
+	private void forgetRecommendation()
+	{
+		recommendation = null;
+		undoKey = null;
+		undoLoadout = null;
+	}
+
+	/** When the bank is showing the loadout, show the loadout as it is now. Client thread only. */
+	private void refreshBankLayout(String key)
+	{
+		if (bankLayout.isShowing())
+		{
+			Optional<Loadout> loadout = loadoutStore.get(key);
+			if (loadout.isPresent())
+			{
+				bankLayout.show(loadout.get());
+			}
+			else
+			{
+				bankLayout.close();
+			}
 		}
 	}
 
@@ -622,6 +691,8 @@ public class SlayerCompanionPlugin extends Plugin
 			clientThread.invokeLater(() ->
 			{
 				loadoutStore.saveCurrent(key);
+				forgetRecommendation();
+				refreshBankLayout(key);
 				requestRefresh();
 			});
 		}
@@ -629,8 +700,54 @@ public class SlayerCompanionPlugin extends Plugin
 		@Override
 		public void deleteLoadout(String taskName)
 		{
-			loadoutStore.delete(bundledName(taskName));
-			requestRefresh();
+			String key = bundledName(taskName);
+			clientThread.invokeLater(() ->
+			{
+				loadoutStore.delete(key);
+				forgetRecommendation();
+				refreshBankLayout(key);
+				requestRefresh();
+			});
+		}
+
+		@Override
+		public void undoRecommendation(String taskName)
+		{
+			String key = bundledName(taskName);
+			clientThread.invokeLater(() ->
+			{
+				if (key.equals(undoKey))
+				{
+					loadoutStore.put(key, undoLoadout);
+					forgetRecommendation();
+					refreshBankLayout(key);
+				}
+				requestRefresh();
+			});
+		}
+
+		@Override
+		public void showLoadoutInBank(String taskName)
+		{
+			String key = bundledName(taskName);
+			clientThread.invokeLater(() ->
+			{
+				if (client.getWidget(InterfaceID.Bankmain.UNIVERSE) != null)
+				{
+					loadoutStore.get(key).ifPresent(bankLayout::show);
+				}
+				requestRefresh();
+			});
+		}
+
+		@Override
+		public void closeBankLayout()
+		{
+			clientThread.invokeLater(() ->
+			{
+				bankLayout.close();
+				requestRefresh();
+			});
 		}
 
 		@Override
@@ -658,12 +775,23 @@ public class SlayerCompanionPlugin extends Plugin
 				}
 				recommending = true;
 				requestRefresh();
-				recommender.recommend(info, locationService.variant(info), r ->
+				recommender.recommend(info, locationService.variant(info), r -> clientThread.invokeLater(() ->
 				{
 					recommendation = r;
 					recommending = false;
+					if (!r.getOptions().isEmpty())
+					{
+						// Fill the loadout with the best option. Undo goes back to the loadout from before the
+						// first recommendation, however many times the button is pressed.
+						if (!info.getTask().equals(undoKey))
+						{
+							undoLoadout = loadoutStore.get(info.getTask()).orElse(null);
+							undoKey = info.getTask();
+						}
+						applyRecommendation(info.getTask(), r, 0);
+					}
 					requestRefresh();
-				});
+				}));
 			});
 		}
 
@@ -676,10 +804,9 @@ public class SlayerCompanionPlugin extends Plugin
 				return;
 			}
 			String key = bundledName(taskName);
-			java.util.Map<Integer, Integer> ids = LoadoutOptimizer.itemIds(r.getOptions().get(index).getGear(), r.getOwned());
 			clientThread.invokeLater(() ->
 			{
-				loadoutStore.saveEquipment(key, ids);
+				applyRecommendation(key, r, index);
 				requestRefresh();
 			});
 		}

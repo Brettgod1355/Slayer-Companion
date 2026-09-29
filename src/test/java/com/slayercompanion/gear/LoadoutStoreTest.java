@@ -194,11 +194,21 @@ public class LoadoutStoreTest
 		assertEquals(1, loaded.getEquipment().size());
 		assertEquals(RUNE_SCIMITAR, loaded.getEquipment().get(WEAPON).getId());
 		assertEquals(DEATH_RUNE, loaded.getInventory().get(0).getId());
+	}
 
-		world.bank(RUNE_SCIMITAR);
-		LoadoutDisplay d = store.displayEquipment(gear);
-		assertEquals(LoadoutDisplay.Status.IN_BANK, d.getEquipment().get(WEAPON).getStatus());
-		assertTrue(d.getInventory().stream().allMatch(s -> s == null));
+	@Test
+	public void undoPutsTheLoadoutBackOrRemovesIt()
+	{
+		Loadout before = saved();
+		Map<Integer, Integer> gear = new HashMap<>();
+		gear.put(WEAPON, RUNE_SCIMITAR);
+		store.saveEquipment("Aberrant spectres", gear);
+		store.put("Aberrant spectres", before);
+		assertEquals(WHIP, store.get("Aberrant spectres").get().getEquipment().get(WEAPON).getId());
+
+		store.saveEquipment("Bloodveld", gear);
+		store.put("Bloodveld", null);
+		assertFalse(store.get("Bloodveld").isPresent());
 	}
 
 	@Test
