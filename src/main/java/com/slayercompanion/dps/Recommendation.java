@@ -22,43 +22,30 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package com.slayercompanion.ui;
+package com.slayercompanion.dps;
 
-import com.slayercompanion.data.TaskLocation;
+import java.util.List;
+import java.util.Set;
 import javax.annotation.Nullable;
+import lombok.Value;
 
-/** Callbacks from the panel into the plugin. Implementations hop to the client thread as needed. */
-public interface PanelActions
+/** The best-DPS gear the player owns for one monster, per combat type, and how their worn gear compares. */
+@Value
+public class Recommendation
 {
-	void routeTo(TaskLocation location);
-
-	void clearRoute();
-
-	void setFavourite(String taskName, @Nullable String locationId);
-
-	/** Choose which monster variant of the task the player is doing (filters locations and XP). */
-	void setVariant(String taskName, @Nullable String monsterName);
-
-	/** Save what the player is wearing and carrying as the task's loadout. */
-	void saveLoadout(String taskName);
-
-	void deleteLoadout(String taskName);
-
-	/** Link one of the player's Inventory Setups setups to the task; null unlinks. */
-	void linkInventorySetup(String taskName, @Nullable String setupName);
-
-	/** Ask Inventory Setups to open the setup (it filters the bank to it). */
-	void openInventorySetup(String setupName);
-
-	/** Work out the best-DPS gear from the bank for the task's monster. */
-	void recommendLoadout(String taskName);
-
-	/** Save recommendation option {@code index} as the task's worn gear (the saved inventory stays). */
-	void useRecommendation(String taskName, int index);
-
-	void resetSession();
-
-	void refresh();
-
-	void openWiki(String pageTitle);
+	/** Task name and variant it was worked out for; stale when either changes. */
+	String key;
+	String monster;
+	/** Best first; empty when nothing owned can hurt the monster. */
+	List<LoadoutOptimizer.Option> options;
+	/** What the worn gear does now, with its best style. */
+	@Nullable
+	LoadoutOptimizer.Option current;
+	/** What the numbers assume, one short line each. */
+	List<String> assumptions;
+	/** Why there is no recommendation, when there is none. */
+	@Nullable
+	String unavailable;
+	/** Canonical ids the player owns, for turning an option into a saved loadout. */
+	Set<Integer> owned;
 }

@@ -100,6 +100,18 @@ public interface SlayerCompanionConfig extends Config
 		return true;
 	}
 
+	@ConfigItem(keyName = "dpsAssumePotions", name = "Best in bank: assume potions", description = "Work out the best-DPS gear as if you drink a super combat, ranging or magic potion", section = gear, position = 1)
+	default boolean dpsAssumePotions()
+	{
+		return true;
+	}
+
+	@ConfigItem(keyName = "dpsAssumePrayers", name = "Best in bank: assume prayers", description = "Work out the best-DPS gear as if you use the best offensive prayer your levels allow (Rigour and Augury only if unlocked)", section = gear, position = 2)
+	default boolean dpsAssumePrayers()
+	{
+		return true;
+	}
+
 	@ConfigItem(keyName = "pointStrategy", name = "Point strategy", description = "How the Points tab advises you: keep your streak, maximise points, or off", section = points, position = 0)
 	default PointStrategy pointStrategy()
 	{

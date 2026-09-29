@@ -22,43 +22,37 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package com.slayercompanion.ui;
+package com.slayercompanion.dps;
 
-import com.slayercompanion.data.TaskLocation;
-import javax.annotation.Nullable;
+import lombok.Value;
 
-/** Callbacks from the panel into the plugin. Implementations hop to the client thread as needed. */
-public interface PanelActions
+/** One attack style of a weapon: what it hits with and the stance bonus it gives. */
+@Value
+public class AttackStyle
 {
-	void routeTo(TaskLocation location);
+	public enum Type
+	{
+		STAB, SLASH, CRUSH, RANGED, MAGIC;
 
-	void clearRoute();
+		public boolean isMelee()
+		{
+			return this == STAB || this == SLASH || this == CRUSH;
+		}
+	}
 
-	void setFavourite(String taskName, @Nullable String locationId);
+	public enum Stance
+	{
+		ACCURATE, AGGRESSIVE, CONTROLLED, DEFENSIVE, RAPID, LONGRANGE, AUTOCAST
+	}
 
-	/** Choose which monster variant of the task the player is doing (filters locations and XP). */
-	void setVariant(String taskName, @Nullable String monsterName);
+	/** The game's name for the style ("Lash", "Rapid"). */
+	String name;
+	Type type;
+	Stance stance;
 
-	/** Save what the player is wearing and carrying as the task's loadout. */
-	void saveLoadout(String taskName);
-
-	void deleteLoadout(String taskName);
-
-	/** Link one of the player's Inventory Setups setups to the task; null unlinks. */
-	void linkInventorySetup(String taskName, @Nullable String setupName);
-
-	/** Ask Inventory Setups to open the setup (it filters the bank to it). */
-	void openInventorySetup(String setupName);
-
-	/** Work out the best-DPS gear from the bank for the task's monster. */
-	void recommendLoadout(String taskName);
-
-	/** Save recommendation option {@code index} as the task's worn gear (the saved inventory stays). */
-	void useRecommendation(String taskName, int index);
-
-	void resetSession();
-
-	void refresh();
-
-	void openWiki(String pageTitle);
+	@Override
+	public String toString()
+	{
+		return name + " (" + type.name().toLowerCase() + ", " + stance.name().toLowerCase() + ")";
+	}
 }
