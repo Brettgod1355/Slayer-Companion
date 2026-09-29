@@ -22,37 +22,63 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package com.slayercompanion.ui;
+package com.slayercompanion.gear;
 
-import com.slayercompanion.data.TaskLocation;
+import java.util.List;
+import java.util.Map;
 import javax.annotation.Nullable;
+import lombok.Value;
 
-/** Callbacks from the panel into the plugin. Implementations hop to the client thread as needed. */
-public interface PanelActions
+/** A saved loadout ready to draw: every item with its name and where the player has it right now. */
+@Value
+public class LoadoutDisplay
 {
-	void routeTo(TaskLocation location);
+	public enum Status
+	{
+		/** Worn (equipment) or in the inventory (inventory items), in the saved amount. */
+		ON_YOU,
+		/** On you, but fewer than saved, or in the inventory instead of worn (or the other way round). */
+		PARTLY,
+		IN_BANK,
+		NOT_OWNED,
+		/** Not on you, and the bank has not been seen yet. */
+		UNKNOWN
+	}
 
-	void clearRoute();
+	@Value
+	public static class Slot
+	{
+		int itemId;
+		int quantity;
+		boolean stackable;
+		String name;
+		Status status;
+		/** Where the item is, for the tooltip ("In your bank"). */
+		String where;
+	}
 
-	void setFavourite(String taskName, @Nullable String locationId);
+	/** Equipment slot index to item. */
+	Map<Integer, Slot> equipment;
+	/** 28 entries in inventory order; null for an empty slot. */
+	List<Slot> inventory;
 
-	/** Choose which monster variant of the task the player is doing (filters locations and XP). */
-	void setVariant(String taskName, @Nullable String monsterName);
+	public int count(Status status)
+	{
+		int n = 0;
+		for (Slot s : equipment.values())
+		{
+			n += s.getStatus() == status ? 1 : 0;
+		}
+		for (@Nullable Slot s : inventory)
+		{
+			n += s != null && s.getStatus() == status ? 1 : 0;
+		}
+		return n;
+	}
 
-	/** Save what the player is wearing and carrying as the task's loadout. */
-	void saveLoadout(String taskName);
-
-	void deleteLoadout(String taskName);
-
-	/** Link one of the player's Inventory Setups setups to the task; null unlinks. */
-	void linkInventorySetup(String taskName, @Nullable String setupName);
-
-	/** Ask Inventory Setups to open the setup (it filters the bank to it). */
-	void openInventorySetup(String setupName);
-
-	void resetSession();
-
-	void refresh();
-
-	void openWiki(String pageTitle);
+	/** True when everything saved is on the player in the saved amounts. */
+	public boolean isComplete()
+	{
+		return count(Status.ON_YOU) == equipment.size() + (int) inventory.stream().filter(s -> s != null).count();
+	}
 }

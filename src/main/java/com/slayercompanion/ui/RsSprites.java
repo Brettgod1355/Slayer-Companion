@@ -24,35 +24,42 @@
  */
 package com.slayercompanion.ui;
 
-import com.slayercompanion.data.TaskLocation;
+import java.awt.image.BufferedImage;
+import java.util.Map;
+import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 import javax.annotation.Nullable;
+import javax.swing.SwingUtilities;
+import net.runelite.client.game.SpriteManager;
 
-/** Callbacks from the panel into the plugin. Implementations hop to the client thread as needed. */
-public interface PanelActions
+/** Game interface sprites for the panel, read once from the client's cache and kept for the session. */
+final class RsSprites
 {
-	void routeTo(TaskLocation location);
+	private final SpriteManager spriteManager;
+	private final Runnable onLoaded;
+	private final Map<Integer, BufferedImage> loaded = new ConcurrentHashMap<>();
+	private final Set<Integer> requested = ConcurrentHashMap.newKeySet();
 
-	void clearRoute();
+	/** {@code onLoaded} runs on the Swing thread whenever a sprite arrives. */
+	RsSprites(SpriteManager spriteManager, Runnable onLoaded)
+	{
+		this.spriteManager = spriteManager;
+		this.onLoaded = onLoaded;
+	}
 
-	void setFavourite(String taskName, @Nullable String locationId);
-
-	/** Choose which monster variant of the task the player is doing (filters locations and XP). */
-	void setVariant(String taskName, @Nullable String monsterName);
-
-	/** Save what the player is wearing and carrying as the task's loadout. */
-	void saveLoadout(String taskName);
-
-	void deleteLoadout(String taskName);
-
-	/** Link one of the player's Inventory Setups setups to the task; null unlinks. */
-	void linkInventorySetup(String taskName, @Nullable String setupName);
-
-	/** Ask Inventory Setups to open the setup (it filters the bank to it). */
-	void openInventorySetup(String setupName);
-
-	void resetSession();
-
-	void refresh();
-
-	void openWiki(String pageTitle);
+	/** The sprite, or null until the client has loaded it (then {@code onLoaded} runs). */
+	@Nullable
+	BufferedImage get(int spriteId)
+	{
+		BufferedImage img = loaded.get(spriteId);
+		if (img == null && requested.add(spriteId))
+		{
+			spriteManager.getSpriteAsync(spriteId, 0, sprite ->
+			{
+				loaded.put(spriteId, sprite);
+				SwingUtilities.invokeLater(onLoaded);
+			});
+		}
+		return img;
+	}
 }

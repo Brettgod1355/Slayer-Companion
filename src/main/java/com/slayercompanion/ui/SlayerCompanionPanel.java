@@ -37,6 +37,8 @@ import javax.swing.JScrollPane;
 import javax.swing.ScrollPaneConstants;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
+import net.runelite.client.game.ItemManager;
+import net.runelite.client.game.SpriteManager;
 import net.runelite.client.ui.ColorScheme;
 import net.runelite.client.ui.FontManager;
 import net.runelite.client.ui.PluginPanel;
@@ -62,7 +64,7 @@ public class SlayerCompanionPanel extends PluginPanel
 	private final UnlocksTab unlocksTab;
 	private final MaterialTab wildernessMaterialTab;
 
-	public SlayerCompanionPanel(PanelActions actions, WildernessInfo wildernessInfo)
+	public SlayerCompanionPanel(PanelActions actions, WildernessInfo wildernessInfo, ItemManager itemManager, SpriteManager spriteManager)
 	{
 		super(false);
 		setLayout(new BorderLayout());
@@ -85,7 +87,7 @@ public class SlayerCompanionPanel extends PluginPanel
 
 		taskTab = new TaskTab(actions);
 		locationsTab = new LocationsTab(actions);
-		gearTab = new GearTab(actions);
+		gearTab = new GearTab(actions, itemManager, spriteManager);
 		pointsTab = new PointsTab();
 		trackerTab = new TrackerTab(actions);
 		wildernessTab = new WildernessTab(wildernessInfo);

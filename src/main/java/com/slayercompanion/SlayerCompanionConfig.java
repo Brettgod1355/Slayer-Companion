@@ -49,6 +49,9 @@ public interface SlayerCompanionConfig extends Config
 	@ConfigSection(name = "Locations and routing", description = "Locations, map markers and Shortest Path", position = 1)
 	String routing = "routing";
 
+	@ConfigSection(name = "Gear", description = "Your loadouts and Inventory Setups", position = 2)
+	String gear = "gear";
+
 	@ConfigSection(name = "Points", description = "Point and streak planning", position = 3)
 	String points = "points";
 
@@ -89,6 +92,12 @@ public interface SlayerCompanionConfig extends Config
 	default boolean autoRouteFavourite()
 	{
 		return false;
+	}
+
+	@ConfigItem(keyName = "openLinkedSetup", name = "Open linked setup on new task", description = "When a task is assigned, open the Inventory Setups setup you linked to it (Inventory Setups then filters your bank to it)", section = gear, position = 0)
+	default boolean openLinkedSetup()
+	{
+		return true;
 	}
 
 	@ConfigItem(keyName = "pointStrategy", name = "Point strategy", description = "How the Points tab advises you: keep your streak, maximise points, or off", section = points, position = 0)
