@@ -34,14 +34,25 @@ import java.awt.Color;
 import java.util.List;
 import javax.swing.JPanel;
 
-/** Overview of the current task: how to do it, what to bring, what counts. */
+/**
+ * The current task, in two parts of the Task view: the header (which monster, the verdict, or how
+ * to get a task) above the locations and gear, and the details (how it's done, facts, what to
+ * bring, Combat Achievements, strategy) below them.
+ */
 class TaskTab extends JPanel
 {
-	private final PanelActions actions;
+	enum Part
+	{
+		HEADER, DETAILS
+	}
 
-	TaskTab(PanelActions actions)
+	private final PanelActions actions;
+	private final Part part;
+
+	TaskTab(PanelActions actions, Part part)
 	{
 		this.actions = actions;
+		this.part = part;
 		setLayout(new java.awt.BorderLayout());
 		setBackground(net.runelite.client.ui.ColorScheme.DARK_GRAY_COLOR);
 	}
@@ -53,6 +64,13 @@ class TaskTab extends JPanel
 		CurrentTask task = m.getTask();
 		TaskInfo info = m.getInfo();
 
+		if (part == Part.DETAILS && (!m.isLoggedIn() || task == null || info == null))
+		{
+			add(col, java.awt.BorderLayout.NORTH);
+			revalidate();
+			repaint();
+			return;
+		}
 		if (!m.isLoggedIn())
 		{
 			col.add(Ui.wrap("Log in to see your task."));
@@ -60,14 +78,14 @@ class TaskTab extends JPanel
 		else if (task == null)
 		{
 			col.add(Ui.wrap("No Slayer task. Visit a Slayer master to get one."));
-			col.add(Ui.gap(6));
-			col.add(Ui.wrap("The Points tab shows which master pays best for your next task.", Ui.MUTED));
+			col.add(Ui.gap(4));
+			col.add(mastersCard(m));
 		}
 		else if (info == null)
 		{
-			col.add(Ui.wrap("No bundled notes for \"" + task.getName() + "\" yet. The Where and Gear tabs will have little for this task.", Ui.WARN));
+			col.add(Ui.wrap("No bundled notes for \"" + task.getName() + "\" yet, so there is little below for this task.", Ui.WARN));
 		}
-		else
+		else if (part == Part.HEADER)
 		{
 			if (m.getVariants().size() > 1)
 			{
@@ -79,8 +97,9 @@ class TaskTab extends JPanel
 				col.add(Ui.gap(4));
 			}
 			col.add(verdictCard(m, info));
-			col.add(Ui.gap(4));
-
+		}
+		else
+		{
 			if (info.getSummary() != null && !info.getSummary().isEmpty())
 			{
 				JPanel card = Ui.card();
@@ -229,7 +248,7 @@ class TaskTab extends JPanel
 			if (info.getStrategy() != null && !info.getStrategy().isEmpty())
 			{
 				JPanel strat = Ui.card();
-				strat.add(Ui.title("Wiki strategy notes"));
+				strat.add(Ui.section("Wiki strategy notes", "Wiki strategy notes", true));
 				int shown = 0;
 				for (String p : info.getStrategy())
 				{
@@ -254,6 +273,40 @@ class TaskTab extends JPanel
 		add(col, java.awt.BorderLayout.NORTH);
 		revalidate();
 		repaint();
+	}
+
+	/** With no task: a route to the master who pays most for the next task, and to the last master. */
+	private JPanel mastersCard(PanelModel m)
+	{
+		JPanel card = Ui.card();
+		card.add(Ui.title("Get your next task"));
+		List<PanelModel.MasterRoute> routes = m.getMasterRoutes() == null ? java.util.Collections.emptyList() : m.getMasterRoutes();
+		if (routes.isEmpty())
+		{
+			card.add(Ui.wrap("The Points tab shows which master pays best for your next task.", Ui.MUTED));
+			return card;
+		}
+		if (!m.isShortestPathAvailable())
+		{
+			card.add(Ui.wrap("Install and enable the Shortest Path plugin to draw the way.", Ui.MUTED));
+		}
+		for (PanelModel.MasterRoute r : routes)
+		{
+			card.add(Ui.gap(4));
+			card.add(Ui.wrap(r.getName() + " \u2014 " + r.getWhy(), Color.WHITE));
+			if (r.getPlace() != null)
+			{
+				card.add(Ui.wrap(r.getPlace(), Ui.MUTED));
+			}
+			for (String tip : r.getTravel())
+			{
+				card.add(Ui.wrap("\u2022 " + tip, Ui.MUTED));
+			}
+			javax.swing.JButton route = Ui.button("Route to " + r.getName(), "Ask Shortest Path to draw the way to " + r.getName(), () -> actions.routeToMaster(r.getName()));
+			route.setEnabled(m.isShortestPathAvailable());
+			card.add(Ui.buttonRow(route));
+		}
+		return card;
 	}
 
 	/** The wiki's do / skip / block advice, what it costs, and what the kills left are worth. */

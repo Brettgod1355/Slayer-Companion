@@ -31,6 +31,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import net.runelite.client.util.ImageUtil;
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JButton;
@@ -57,13 +58,18 @@ class LocationsTab extends JPanel
 	{
 		removeAll();
 		JPanel col = Ui.column();
-		if (m.getTask() == null)
+		if (m.getTask() == null || !m.isLoggedIn())
 		{
-			col.add(Ui.wrap("No task."));
+			add(col, BorderLayout.NORTH);
+			revalidate();
+			repaint();
+			return;
 		}
-		else if (m.getLocations().isEmpty())
+		col.add(Ui.wrap("Where to kill them", Color.WHITE));
+		col.add(Ui.gap(3));
+		if (m.getLocations().isEmpty())
 		{
-			col.add(Ui.wrap("No locations bundled for " + m.getTask().getName() + "."));
+			col.add(Ui.wrap("No locations bundled for " + m.getTask().getName() + ".", Ui.MUTED));
 		}
 		else
 		{
@@ -78,15 +84,15 @@ class LocationsTab extends JPanel
 				col.add(Ui.gap(4));
 			}
 			String taskName = m.getTask().getName();
-			if (m.getVariants().size() > 1)
-			{
-				col.add(Ui.dropdown(m.getVariants(), m.getSelectedVariant(), v -> actions.setVariant(taskName, v)));
-				col.add(Ui.gap(4));
-			}
+			boolean anyFavourite = m.getFavouriteLocationId() != null;
+			boolean first = true;
 			for (TaskLocation l : m.getLocations())
 			{
-				col.add(card(l, taskName, l.getId().equals(m.getFavouriteLocationId()), m.isShortestPathAvailable(), m.getLocks().get(l.getId())));
+				boolean favourite = l.getId().equals(m.getFavouriteLocationId());
+				// Only the favourite (or, without one, the first spot) starts open; click a title for the rest.
+				col.add(card(l, taskName, favourite, !(favourite || (!anyFavourite && first)), m.isShortestPathAvailable(), m.getLocks().get(l.getId())));
 				col.add(Ui.gap(4));
+				first = false;
 			}
 			col.add(Ui.buttonRow(Ui.button("Clear route", "Remove the drawn route", actions::clearRoute)));
 		}
@@ -95,10 +101,10 @@ class LocationsTab extends JPanel
 		repaint();
 	}
 
-	private JPanel card(TaskLocation l, String taskName, boolean favourite, boolean routing, LockState lock)
+	private JPanel card(TaskLocation l, String taskName, boolean favourite, boolean collapsed, boolean routing, LockState lock)
 	{
 		JPanel card = Ui.card();
-		JLabel title = Ui.title((favourite ? "★ " : "") + l.label());
+		JLabel title = Ui.section("location:" + l.getId(), (favourite ? "★ " : "") + l.label(), collapsed);
 		if (lock != null)
 		{
 			switch (lock.getKind())

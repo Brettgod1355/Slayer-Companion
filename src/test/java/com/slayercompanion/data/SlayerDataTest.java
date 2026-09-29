@@ -58,6 +58,20 @@ public class SlayerDataTest
 	}
 
 	@Test
+	public void everyMasterCanBeRoutedToByItsDisplayName()
+	{
+		for (SlayerMaster m : SlayerMaster.values())
+		{
+			String name = m.getDisplayName();
+			MasterInfo info = data.masters().stream()
+				.filter(mi -> name.equalsIgnoreCase(mi.getName()) || name.equalsIgnoreCase(mi.getId()) || name.equalsIgnoreCase(mi.getAlias()))
+				.findFirst().orElse(null);
+			assertTrue("no masters.json entry for " + name, info != null);
+			assertTrue("no coordinates for " + name, info.getLocation() != null && info.getLocation().getX() != null && info.getLocation().getY() != null);
+		}
+	}
+
+	@Test
 	public void bundledUnlocksAndWildernessLoad()
 	{
 		assertFalse(data.unlocks().isEmpty());

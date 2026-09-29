@@ -34,6 +34,9 @@ public interface PanelActions
 
 	void clearRoute();
 
+	/** Ask Shortest Path to draw the way to a Slayer master (by display name). */
+	void routeToMaster(String masterName);
+
 	void setFavourite(String taskName, @Nullable String locationId);
 
 	/** Choose which monster variant of the task the player is doing (filters locations and XP). */
