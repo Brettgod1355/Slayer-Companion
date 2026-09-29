@@ -46,7 +46,7 @@ public enum SlayerMaster
 	DURADEL(5, "Duradel", "duradel", new String[]{"Duradel", "Kuradal"}, new WorldPoint(2869, 2982, 1), false, false),
 	NIEVE(6, "Nieve", "nieve", new String[]{"Nieve", "Steve"}, new WorldPoint(2432, 3423, 0), false, false),
 	KRYSTILIA(7, "Krystilia", "krystilia", new String[]{"Krystilia"}, new WorldPoint(3108, 3516, 0), true, true),
-	KONAR(8, "Konar quo Maten", "konar", new String[]{"Konar quo Maten", "Konar"}, new WorldPoint(1308, 3786, 0), true, false),
+	KONAR(8, "Konar", "konar", new String[]{"Konar quo Maten", "Konar"}, new WorldPoint(1308, 3786, 0), true, false),
 	SPRIA(9, "Spria", "spria", new String[]{"Spria"}, new WorldPoint(3091, 3267, 0), false, false),
 	MORTIMER(10, "Mortimer", "mortimer", new String[]{"Mortimer"}, new WorldPoint(2589, 8614, 0), false, true);
 

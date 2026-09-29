@@ -58,6 +58,22 @@ public class SlayerDataTest
 	}
 
 	@Test
+	public void konarIsJustKonar()
+	{
+		assertEquals("Konar", SlayerMaster.KONAR.getDisplayName());
+		assertEquals("Konar", data.master(SlayerMaster.KONAR).get().getName());
+		Gson gson = new Gson();
+		for (TaskInfo t : data.tasks())
+		{
+			assertFalse(t.getTask() + " uses Konar's full name", gson.toJson(t).contains("quo Maten"));
+		}
+		for (UnlockInfo u : data.unlocks())
+		{
+			assertFalse(u.getName() + " uses Konar's full name", gson.toJson(u).contains("quo Maten"));
+		}
+	}
+
+	@Test
 	public void everyMasterCanBeRoutedToByItsDisplayName()
 	{
 		for (SlayerMaster m : SlayerMaster.values())
