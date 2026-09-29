@@ -53,11 +53,20 @@ public interface PanelActions
 	/** Ask Inventory Setups to open the setup (it filters the bank to it). */
 	void openInventorySetup(String setupName);
 
-	/** Work out the best-DPS gear from the bank for the task's monster. */
+	/** Work out the best-DPS gear from the bank for the task's monster and put it in the loadout. */
 	void recommendLoadout(String taskName);
 
-	/** Save recommendation option {@code index} as the task's worn gear (the saved inventory stays). */
+	/** Put recommendation option {@code index} in the loadout (the saved inventory stays). */
 	void useRecommendation(String taskName, int index);
+
+	/** Put the loadout back as it was before the recommendation. */
+	void undoRecommendation(String taskName);
+
+	/** Filter the open bank to the task's loadout, laid out like the panel. */
+	void showLoadoutInBank(String taskName);
+
+	/** Back to the normal bank. */
+	void closeBankLayout();
 
 	void resetSession();
 

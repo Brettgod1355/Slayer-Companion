@@ -67,7 +67,6 @@ class LoadoutView extends JPanel
 	private static final int INV_H = 6 * INV_DY + ITEM_H;
 	private static final int WIDTH = INV_W + 2 * PAD;
 	private static final int HEIGHT = PAD + EQUIP_H + GAP + INV_H + PAD;
-	private static final int EQUIP_ONLY_HEIGHT = PAD + EQUIP_H + PAD;
 	private static final int EQUIP_X = (WIDTH - EQUIP_W) / 2;
 	private static final int INV_X = PAD;
 	private static final int INV_Y = PAD + EQUIP_H + GAP;
@@ -100,21 +99,13 @@ class LoadoutView extends JPanel
 
 	private final LoadoutDisplay loadout;
 	private final RsSprites sprites;
-	private final boolean showInventory;
 	private final Map<Integer, BufferedImage> equipImages = new LinkedHashMap<>();
 	private final List<BufferedImage> invImages = new ArrayList<>();
 
 	LoadoutView(LoadoutDisplay loadout, ItemManager itemManager, RsSprites sprites)
 	{
-		this(loadout, itemManager, sprites, true);
-	}
-
-	/** {@code showInventory} false draws the Worn Equipment part only (for recommended gear). */
-	LoadoutView(LoadoutDisplay loadout, ItemManager itemManager, RsSprites sprites, boolean showInventory)
-	{
 		this.loadout = loadout;
 		this.sprites = sprites;
-		this.showInventory = showInventory;
 		setOpaque(false);
 		setAlignmentX(Component.LEFT_ALIGNMENT);
 		setToolTipText("");
@@ -138,7 +129,7 @@ class LoadoutView extends JPanel
 	@Override
 	public Dimension getPreferredSize()
 	{
-		return new Dimension(WIDTH, showInventory ? HEIGHT : EQUIP_ONLY_HEIGHT);
+		return new Dimension(WIDTH, HEIGHT);
 	}
 
 	@Override
@@ -155,10 +146,7 @@ class LoadoutView extends JPanel
 		{
 			paintBackground(g);
 			paintEquipment(g);
-			if (showInventory)
-			{
-				paintInventory(g);
-			}
+			paintInventory(g);
 		}
 		finally
 		{
@@ -168,16 +156,15 @@ class LoadoutView extends JPanel
 
 	private void paintBackground(Graphics2D g)
 	{
-		int height = showInventory ? HEIGHT : EQUIP_ONLY_HEIGHT;
 		BufferedImage stone = sprites.get(SpriteID.SIDE_BACKGROUND);
 		if (stone == null)
 		{
 			g.setColor(STONE);
-			g.fillRect(0, 0, WIDTH, height);
+			g.fillRect(0, 0, WIDTH, HEIGHT);
 		}
 		else
 		{
-			for (int y = 0; y < height; y += stone.getHeight())
+			for (int y = 0; y < HEIGHT; y += stone.getHeight())
 			{
 				for (int x = 0; x < WIDTH; x += stone.getWidth())
 				{
@@ -185,11 +172,8 @@ class LoadoutView extends JPanel
 				}
 			}
 		}
-		if (showInventory)
-		{
-			g.setColor(LINE);
-			g.fillRect(PAD, PAD + EQUIP_H + GAP / 2 - 1, WIDTH - 2 * PAD, 2);
-		}
+		g.setColor(LINE);
+		g.fillRect(PAD, PAD + EQUIP_H + GAP / 2 - 1, WIDTH - 2 * PAD, 2);
 	}
 
 	private void paintEquipment(Graphics2D g)
@@ -288,7 +272,7 @@ class LoadoutView extends JPanel
 				hit = loadout.getEquipment().get(e.getKey());
 			}
 		}
-		for (int i = 0; showInventory && i < loadout.getInventory().size(); i++)
+		for (int i = 0; i < loadout.getInventory().size(); i++)
 		{
 			if (invRect(i).contains(event.getPoint()))
 			{
