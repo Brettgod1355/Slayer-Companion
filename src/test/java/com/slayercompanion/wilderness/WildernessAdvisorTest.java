@@ -87,7 +87,7 @@ public class WildernessAdvisorTest
 		advisor = new WildernessAdvisor(client, itemManager, owned);
 	}
 
-	private void item(int id, String name, boolean tradeable, int price, int alch)
+	private void item(int id, String name, boolean tradeable, long price, int alch)
 	{
 		ItemComposition c = mock(ItemComposition.class);
 		when(c.getName()).thenReturn(name);
@@ -218,7 +218,7 @@ public class WildernessAdvisorTest
 	@Test
 	public void tradeableWithoutAPriceFallsBackToAlchemyValue()
 	{
-		when(itemManager.getItemPrice(RUNE_PLATEBODY)).thenReturn(0);
+		when(itemManager.getItemPrice(RUNE_PLATEBODY)).thenReturn(0L);
 		when(player.getSkullIcon()).thenReturn(SkullIcon.SKULL);
 		equipment.put(RUNE_PLATEBODY, 1);
 		assertEquals(39_000, advisor.status().getRiskValue());

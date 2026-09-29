@@ -198,12 +198,12 @@ public class UnlockAdvisorTest
 		UnlockInfo pouch = bundle("Rune pouch", "buy", 750, 5);
 		pouch.setElsewhere("Buy the rune pouch note on the GE.");
 		pouch.setElsewhereItemId(24587);
-		when(itemManager.getItemPrice(24587)).thenReturn(4_200_000);
+		when(itemManager.getItemPrice(24587)).thenReturn(4_200_000L);
 		String line = find(advise(0), "Rune pouch").getElsewhere();
 		assertTrue(line, line.startsWith("Buy the rune pouch note on the GE. "));
 		assertTrue(line, line.contains("4.2M gp"));
 
-		when(itemManager.getItemPrice(anyInt())).thenReturn(0);
+		when(itemManager.getItemPrice(anyInt())).thenReturn(0L);
 		assertEquals("Buy the rune pouch note on the GE.", find(advise(0), "Rune pouch").getElsewhere());
 	}
 

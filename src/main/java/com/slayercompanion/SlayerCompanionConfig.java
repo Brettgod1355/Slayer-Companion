@@ -34,11 +34,6 @@ public interface SlayerCompanionConfig extends Config
 {
 	String GROUP = "slayercompanion";
 
-	enum CombatStyle
-	{
-		AUTO, MELEE, RANGED, MAGIC
-	}
-
 	enum PointStrategy
 	{
 		/** Never suggest skipping; suggest the master that pays most for milestone tasks. */
@@ -53,9 +48,6 @@ public interface SlayerCompanionConfig extends Config
 
 	@ConfigSection(name = "Locations and routing", description = "Locations, map markers and Shortest Path", position = 1)
 	String routing = "routing";
-
-	@ConfigSection(name = "Gear", description = "Gear advice", position = 2)
-	String gear = "gear";
 
 	@ConfigSection(name = "Points", description = "Point and streak planning", position = 3)
 	String points = "points";
@@ -97,12 +89,6 @@ public interface SlayerCompanionConfig extends Config
 	default boolean autoRouteFavourite()
 	{
 		return false;
-	}
-
-	@ConfigItem(keyName = "preferredStyle", name = "Preferred style", description = "Which combat style's gear table to show first", section = gear, position = 0)
-	default CombatStyle preferredStyle()
-	{
-		return CombatStyle.AUTO;
 	}
 
 	@ConfigItem(keyName = "pointStrategy", name = "Point strategy", description = "How the Points tab advises you: keep your streak, maximise points, or off", section = points, position = 0)

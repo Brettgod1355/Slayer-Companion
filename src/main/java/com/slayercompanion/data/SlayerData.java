@@ -58,7 +58,6 @@ public class SlayerData
 	private volatile UnlocksFile unlocks;
 	private volatile WildernessInfo wilderness;
 	private volatile AreaRules areaRules;
-	private volatile GeneralGearFile generalGear;
 
 	@Inject
 	public SlayerData(Gson gson)
@@ -200,58 +199,15 @@ public class SlayerData
 		return areaRules;
 	}
 
-	/** Every item name the bundled tasks mention (gear tables, example setups, required/useful items). */
-	public java.util.Set<String> allItemNames()
+	/** Every required item name of the bundled tasks: what the Bring list checks against the bank. */
+	public java.util.Set<String> requiredItemNames()
 	{
 		java.util.Set<String> names = new java.util.HashSet<>();
-		List<GearTable> general = generalGear().getGearTables();
-		if (general != null)
-		{
-			for (GearTable g : general)
-			{
-				addGearNames(names, g);
-			}
-		}
 		for (TaskInfo t : tasks())
 		{
 			addAll(names, t.getRequiredItems());
-			addAll(names, t.getUsefulItems());
-			for (GearTable g : t.gearTablesOrEmpty())
-			{
-				addGearNames(names, g);
-			}
-			if (t.getExampleSetups() != null)
-			{
-				for (ExampleSetup e : t.getExampleSetups())
-				{
-					if (e.getEquipment() != null)
-					{
-						addAll(names, e.getEquipment().values());
-					}
-					addAll(names, e.getInventory());
-					addAll(names, e.getRunePouch());
-				}
-			}
 		}
 		return names;
-	}
-
-	private static void addGearNames(java.util.Set<String> names, GearTable g)
-	{
-		if (g.getSlots() == null)
-		{
-			return;
-		}
-		for (List<List<GearItem>> tiers : g.getSlots().values())
-		{
-			for (List<GearItem> tier : tiers)
-			{
-				for (GearItem item : tier)
-				{
-					addAll(names, item.candidates());
-				}
-			}
-		}
 	}
 
 	private static void addAll(java.util.Set<String> into, @Nullable java.util.Collection<String> names)
@@ -281,23 +237,6 @@ public class SlayerData
 				}
 			}
 		}
-	}
-
-	/** General slayer gear tables (fallback when a task has none). */
-	public GeneralGearFile generalGear()
-	{
-		if (generalGear == null)
-		{
-			synchronized (this)
-			{
-				if (generalGear == null)
-				{
-					GeneralGearFile g = load("general-gear.json", GeneralGearFile.class);
-					generalGear = g == null ? new GeneralGearFile() : g;
-				}
-			}
-		}
-		return generalGear;
 	}
 
 	public static String normalise(String s)

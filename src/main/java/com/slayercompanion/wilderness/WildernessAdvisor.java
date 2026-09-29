@@ -158,12 +158,12 @@ public class WildernessAdvisor
 			int qty = e.getValue();
 			ItemComposition comp = itemManager.getItemComposition(id);
 			boolean tradeable = comp.isTradeable();
-			int unit = tradeable ? itemManager.getItemPrice(id) : 0;
+			long unit = tradeable ? itemManager.getItemPrice(id) : 0;
 			if (unit <= 0)
 			{
 				unit = comp.getHaPrice();
 			}
-			long value = (long) Math.max(0, unit) * qty;
+			long value = Math.max(0, unit) * qty;
 			into.add(new WildernessStatus.CarriedItem(id, comp.getName(), qty, value, tradeable));
 		}
 	}

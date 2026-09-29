@@ -52,7 +52,7 @@ import net.runelite.client.game.ItemManager;
  * Tracks which items the player owns: the bank as last seen, plus the live inventory and worn
  * equipment. Quantities are keyed by canonical item id (unnoted, un-placeholdered).
  * <p>
- * The bank snapshot is persisted per RuneScape profile (ids and quantities only) so gear advice
+ * The bank snapshot is persisted per RuneScape profile (ids and quantities only) so the Bring list
  * works right after login, before the bank has been opened this session.
  */
 @Slf4j

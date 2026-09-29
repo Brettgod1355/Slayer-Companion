@@ -30,10 +30,7 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
 import com.google.gson.Gson;
-import com.slayercompanion.data.GearItem;
-import com.slayercompanion.data.GearTable;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collection;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -119,7 +116,7 @@ class GearFixture
 			return id == NOTED_WHIP ? WHIP : id;
 		});
 		when(itemManager.search(anyString())).thenAnswer(inv -> search(inv.getArgument(0)));
-		when(itemManager.getItemPrice(anyInt())).thenReturn(0);
+		when(itemManager.getItemPrice(anyInt())).thenReturn(0L);
 
 		EventBus eventBus = mock(EventBus.class);
 		index = new ItemIndex(client, eventBus);
@@ -171,26 +168,6 @@ class GearFixture
 		return this;
 	}
 
-	/** Index every name a table mentions. */
-	GearFixture index(GearTable... tables)
-	{
-		List<String> wanted = new ArrayList<>();
-		for (GearTable t : tables)
-		{
-			for (List<List<GearItem>> tiers : t.getSlots().values())
-			{
-				for (List<GearItem> tier : tiers)
-				{
-					for (GearItem i : tier)
-					{
-						wanted.addAll(i.candidates());
-					}
-				}
-			}
-		}
-		return index(wanted);
-	}
-
 	GearFixture bank(int... ids)
 	{
 		container(InventoryID.BANK, ids);
@@ -219,44 +196,5 @@ class GearFixture
 		ItemContainer c = mock(ItemContainer.class);
 		when(c.getItems()).thenReturn(items);
 		owned.onItemContainerChanged(new ItemContainerChanged(containerId, c));
-	}
-
-	static GearItem gi(String name)
-	{
-		GearItem g = new GearItem();
-		g.setName(name);
-		return g;
-	}
-
-	@SafeVarargs
-	static List<List<GearItem>> tiers(List<GearItem>... tiers)
-	{
-		return Arrays.asList(tiers);
-	}
-
-	static List<GearItem> tier(String... names)
-	{
-		List<GearItem> out = new ArrayList<>();
-		for (String n : names)
-		{
-			out.add(gi(n));
-		}
-		return out;
-	}
-
-	static GearTable table(String style, Object... slotsAndTiers)
-	{
-		GearTable t = new GearTable();
-		t.setStyle(style);
-		t.setLabel(style);
-		Map<String, List<List<GearItem>>> slots = new LinkedHashMap<>();
-		for (int i = 0; i < slotsAndTiers.length; i += 2)
-		{
-			@SuppressWarnings("unchecked")
-			List<List<GearItem>> tiers = (List<List<GearItem>>) slotsAndTiers[i + 1];
-			slots.put((String) slotsAndTiers[i], tiers);
-		}
-		t.setSlots(slots);
-		return t;
 	}
 }

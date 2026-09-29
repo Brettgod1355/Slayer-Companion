@@ -26,6 +26,7 @@ package com.slayercompanion.data;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 
 import com.google.gson.Gson;
@@ -70,5 +71,50 @@ public class SlayerDataTest
 		assertFalse("tasks.json should be bundled", data.tasks().isEmpty());
 		assertTrue(data.task("Abyssal demons").isPresent());
 		assertTrue(data.task("ABYSSAL DEMONS").isPresent());
+	}
+
+	@Test
+	public void gearPageFollowsTheChosenVariant()
+	{
+		TaskInfo abyssal = data.task("Abyssal demons").get();
+		assertEquals("Slayer task/Abyssal demons", abyssal.gearPageFor(null));
+		assertEquals("Abyssal Sire/Strategies", abyssal.gearPageFor("abyssal sire"));
+		assertEquals("Slayer task/Abyssal demons", abyssal.gearPageFor("Abyssal demon"));
+		assertEquals("Abyssal Sire/Strategies", data.task("The Abyssal Sire").get().gearPageFor(null));
+
+		// Only Vorkath has a gear table on the wiki; the plugin falls back to the task page.
+		TaskInfo blue = data.task("Blue dragons").get();
+		assertEquals("Vorkath/Strategies", blue.gearPageFor("Vorkath"));
+		assertNull(blue.gearPageFor(null));
+	}
+
+	@Test
+	public void everyVariantGearPageBelongsToASelectableVariant()
+	{
+		for (TaskInfo t : data.tasks())
+		{
+			if (t.getVariantGearPages() == null)
+			{
+				continue;
+			}
+			for (String variant : t.getVariantGearPages().keySet())
+			{
+				boolean selectable = false;
+				for (MonsterInfo m : t.variants())
+				{
+					selectable |= variant.equalsIgnoreCase(m.getName());
+				}
+				assertTrue(t.getTask() + ": " + variant + " cannot be picked", selectable);
+			}
+		}
+	}
+
+	@Test
+	public void requiredItemNamesSplitAlternativesAndVariants()
+	{
+		java.util.Set<String> names = data.requiredItemNames();
+		assertTrue(names.contains("Nose peg"));
+		assertTrue(names.contains("Slayer helmet"));
+		assertTrue(names.contains("Spade"));
 	}
 }
