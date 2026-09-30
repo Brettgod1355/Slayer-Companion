@@ -105,11 +105,6 @@ class TaskTab extends JPanel
 				JPanel card = Ui.card();
 				card.add(Ui.title("How it's done"));
 				card.add(Ui.wrap(info.getSummary()));
-				if (info.getStyleNotes() != null && !info.getStyleNotes().isEmpty())
-				{
-					card.add(Ui.gap(4));
-					card.add(Ui.wrap(String.join(" \u2022 ", info.getStyleNotes()), Ui.MUTED));
-				}
 				col.add(card);
 				col.add(Ui.gap(4));
 			}
@@ -155,7 +150,8 @@ class TaskTab extends JPanel
 				}
 				if (mon.getAttackStyles() != null && !mon.getAttackStyles().isEmpty())
 				{
-					sb.append(", ").append(String.join("/", mon.getAttackStyles()));
+					// ", " rather than "/" so a long list can wrap
+					sb.append(", ").append(String.join(", ", mon.getAttackStyles()));
 				}
 				if (mon.getMaxHit() != null)
 				{
@@ -212,7 +208,11 @@ class TaskTab extends JPanel
 					for (String r : required)
 					{
 						boolean missing = m.getMissingRequiredItems().contains(r);
-						if (!m.isBankKnown() && missing)
+						if (m.getNonItemRequirements() != null && m.getNonItemRequirements().contains(r))
+						{
+							items.add(Ui.wrap("\u2022 " + r + " (required)", Color.WHITE));
+						}
+						else if (!m.isBankKnown() && missing)
 						{
 							items.add(Ui.wrap("? " + r + " (required)", Ui.MUTED));
 						}

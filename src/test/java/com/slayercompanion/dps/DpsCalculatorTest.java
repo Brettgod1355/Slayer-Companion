@@ -171,6 +171,59 @@ public class DpsCalculatorTest
 	}
 
 	@Test
+	public void meleeCannotReachFlyingOrOutOfReachMonsters()
+	{
+		MonsterCombatStats aviansie = DATA.task("Aviansies").get().monster("Aviansie").getCombatStats();
+		assertTrue(aviansie.is("flying"));
+		AttackStyle slash = WeaponStyles.of("Whip").get(1);
+		assertEquals(0, DpsCalculator.calc(maxed(true), gear("Abyssal whip"), slash, null, aviansie).getDps(), 0);
+		AttackStyle halberd = WeaponStyles.of("Polearm").get(1);
+		assertTrue(DpsCalculator.calc(maxed(true), gear("Dragon halberd"), halberd, null, aviansie).getDps() > 0);
+		// The kraken: not even a halberd.
+		MonsterCombatStats kraken = monster("The Cave Kraken Boss");
+		assertEquals("none", kraken.getMeleeReach());
+		assertEquals(0, DpsCalculator.calc(maxed(true), gear("Dragon halberd"), halberd, null, kraken).getDps(), 0);
+	}
+
+	@Test
+	public void optimizerKeepsTheShieldADragonTaskNeeds()
+	{
+		List<ItemStats> owned = new ArrayList<>();
+		for (String n : Arrays.asList("Abyssal whip", "Dragon defender", "Anti-dragon shield", "Scythe of Vitur", "Slayer helmet (i)"))
+		{
+			owned.add(item(n));
+		}
+		Map<Integer, java.util.function.Predicate<ItemStats>> required = new HashMap<>();
+		com.slayercompanion.data.RequiredGear rule = DATA.task("Black dragons").get().requiredGearOrEmpty().get(0);
+		required.put(Gear.SHIELD, s -> rule.accepts(s.getName()));
+		List<LoadoutOptimizer.Option> best = LoadoutOptimizer.best(maxed(true), owned, monster("Black dragons"), required);
+		LoadoutOptimizer.Option melee = best.get(0);
+		assertEquals("Anti-dragon shield", melee.getGear().get(Gear.SHIELD).getName());
+		// The two-handed scythe would empty the shield slot, so it is not used.
+		assertEquals("Abyssal whip", melee.getGear().get(Gear.WEAPON).getName());
+		// Without the rule the defender wins the slot.
+		LoadoutOptimizer.Option free = LoadoutOptimizer.best(maxed(true), owned, monster("Black dragons")).get(0);
+		assertTrue(free.getGear().get(Gear.SHIELD) == null || !"Anti-dragon shield".equals(free.getGear().get(Gear.SHIELD).getName()));
+	}
+
+	@Test
+	public void requiredGearRulesMatchVariantsAndItemVersions()
+	{
+		com.slayercompanion.data.RequiredGear shield = DATA.task("Black dragons").get().requiredGearOrEmpty().get(0);
+		assertTrue(shield.appliesTo("Black dragon", false));
+		assertTrue(!shield.appliesTo("Baby black dragon", false));
+		assertTrue(shield.accepts("Dragonfire shield (uncharged)"));
+		assertTrue(!shield.accepts("Dragon defender"));
+		com.slayercompanion.data.RequiredGear boots = DATA.task("Hydras").get().requiredGearOrEmpty().get(0);
+		assertTrue(boots.appliesTo("Hydra", false));
+		assertTrue(!boots.appliesTo("Hydra", true));
+		com.slayercompanion.data.RequiredGear head = DATA.task("Banshees").get().requiredGearOrEmpty().get(0);
+		assertTrue(head.accepts("Black slayer helmet (i)"));
+		assertTrue(head.accepts("Earmuffs"));
+		assertTrue(!head.accepts("Neitiznot faceguard"));
+	}
+
+	@Test
 	public void optimizerIsQuickOnABigBank()
 	{
 		List<ItemStats> owned = new ArrayList<>(new java.util.LinkedHashSet<>(DATA.itemStats().values())).subList(0, 1500);

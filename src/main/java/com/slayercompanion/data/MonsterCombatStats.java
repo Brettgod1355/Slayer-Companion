@@ -70,6 +70,9 @@ public class MonsterCombatStats
 	private List<String> attributes;
 	@Nullable
 	private String version;
+	/** "none": melee cannot reach it (the kraken, TzKal-Zuk); "halberd": only halberds and salamanders can (Zulrah). */
+	@Nullable
+	private String meleeReach;
 
 	public List<String> attributesOrEmpty()
 	{

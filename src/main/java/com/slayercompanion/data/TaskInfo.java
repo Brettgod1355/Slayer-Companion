@@ -55,9 +55,10 @@ public class TaskInfo
 	@Nullable
 	private String recommendedStyle;
 	@Nullable
-	private List<String> styleNotes;
-	@Nullable
 	private List<String> requiredItems;
+	/** Equipment the loadout recommendation keeps in its slot (from requiredItems, hand-checked). */
+	@Nullable
+	private List<RequiredGear> requiredGear;
 	@Nullable
 	private List<String> usefulItems;
 	@Nullable
@@ -117,6 +118,11 @@ public class TaskInfo
 			}
 		}
 		return gearPage;
+	}
+
+	public List<RequiredGear> requiredGearOrEmpty()
+	{
+		return requiredGear == null ? Collections.emptyList() : requiredGear;
 	}
 
 	public List<String> alternativesOrEmpty()

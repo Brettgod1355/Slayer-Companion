@@ -2903,6 +2903,26 @@ def self_test() -> int:
         r = rules(s)[0]
         assert r["type"] == "quest" and r["quest"] in QUESTS and r["name"] == QUESTS[r["quest"]], r
     checks += 1
+    # tidy_note: research bookkeeping goes, advice stays
+    assert tidy_note("14 goblins (levels 2, 5 and 13; 14 LocLine pins).") == "14 goblins (levels 2, 5 and 13)."; checks += 1
+    assert tidy_note("'In the Wilderness. Largest concentration.' (11 LocLine pins). Safespottable per the task table.") == \
+        "'In the Wilderness. Largest concentration.' Safespottable."; checks += 1
+    assert tidy_note("Exact level range not stated; the fortress itself is level 14-16.") == "The fortress itself is level 14-16."; checks += 1
+    assert tidy_note("12 level-96 araxytes only; worse drops, so the task page says to avoid them.") == \
+        "12 level-96 araxytes only; worse drops, so the wiki says to avoid them."; checks += 1
+    assert tidy_note("Spider LocLine 'Hosidius'.") is None; checks += 1
+    # tidy_strategy: a cut-off list item or an intro to a removed message goes
+    assert tidy_strategy(["A cannon cannot be set up here; if attempted, players will receive the message:", "Next."]) == \
+        ["A cannon cannot be set up here.", "Next."]; checks += 1
+    assert tidy_strategy(["Styles:\n- Melee: bites.\n- Ranged: rears up on his\u2026"]) == ["Styles:\n- Melee: bites."]; checks += 1
+    assert tidy_strategy(["Melee:", "Use a whip."]) == ["Melee:", "Use a whip."]; checks += 1
+    # gear rules: every rule item exists in the bundled item list
+    here = Path(__file__).resolve().parent
+    items_json = here.parent.parent / "src" / "main" / "resources" / "com" / "slayercompanion" / "data" / "items.json"
+    if items_json.exists():
+        missing = check_gear_rules(load_gear_rules(), (i["name"] for i in json.loads(items_json.read_text(encoding="utf-8"))))
+        assert not missing, missing
+        checks += 1
     print(f"self-test OK: {checks} checks")
     return 0
 
@@ -2979,7 +2999,6 @@ def build_task(cache: WikiCache, row: TaskRow, report: dict) -> dict:
         "masters": {},
         "summary": None,
         "recommendedStyle": None,
-        "styleNotes": [],
         "requiredItems": [],
         "usefulItems": [],
         "superior": None,
@@ -3013,7 +3032,6 @@ def build_task(cache: WikiCache, row: TaskRow, report: dict) -> dict:
             if g["style"] and g["style"] not in styles:
                 styles.append(g["style"])
         task["recommendedStyle"] = styles[0] if styles else None
-        task["styleNotes"] = [f"{g['label'] or 'Default'}: {g['style']}" for g in gear_tables if g["style"]]
     else:
         report["tasksWithoutTaskPage"].append({"task": row.display, "tried": tried})
 
@@ -3397,6 +3415,215 @@ def apply_gear_pages(tasks: list[dict]) -> None:
         t["variantGearPages"] = pages
 
 
+# ---------------------------------------------------------------- tidy (no network)
+#
+# Post-processing that only reads the task records, so it can be re-applied to an existing
+# tasks.json with --tidy.  Every step is idempotent.
+
+GEAR_RULES_PATH = Path(__file__).resolve().parent / "curated" / "gear-rules.json"
+
+# Research notes that ended up in location notes: where a count or a claim came from.  The
+# curated files keep them as evidence; the player only needs the advice.
+_PROVENANCE = re.compile(
+    r"LocLine|\bpins?\b|\binfobox\b|task (?:page )?table|monster table|inhabitants table|monster list|"
+    r"page places it|pages read|this run|Location [Cc]omparison|Monster Variants|task page row|"
+    r"not on the task page|[Nn]ot in the task page|listed only on|the count comes only|Slayer task list names|"
+    r"wikitext|\[\[|'\||\(see evidence\)|left unknown|recorded here|not stated|does not prove|the range here|"
+    r"pages? read|\bthe union\b|taken from|task list row|maplinks|area page|area list|prose says|page only says|"
+    r"details recorded",
+    re.I)
+# ...and inside brackets also any "page says" / "per ..." aside.
+_PAREN_PROVENANCE = re.compile(_PROVENANCE.pattern + r"|page (?:says|lists|calls|adds)|\bper\b|\btable\b|^[A-Z][\w' ]* page$",
+                               re.I)
+_CITATION = re.compile(r"\s*\((?:task table|task page|Slayer task/[^()]+|[A-Z][\w'&. -]{0,40} (?:page|changelog|update history))\)")
+
+
+def _split_sentences(text: str) -> list[str]:
+    # a full stop (not an ellipsis), "!" or "?", optionally inside a closing quote
+    end = r"(?:(?<=[^.]\.)|(?<=[!?])|(?<=[^.]\.['\"’])|(?<=[!?]['\"’]))"
+    return [s for s in re.split(end + r"\s+(?=[A-Z'\"(])", text) if s]
+
+
+def _split_clauses(sentence: str) -> list[str]:
+    """Split at "; " outside brackets."""
+    out, depth, start = [], 0, 0
+    for i, ch in enumerate(sentence):
+        depth += 1 if ch == "(" else -1 if ch == ")" and depth else 0
+        if ch == ";" and depth == 0:
+            out.append(sentence[start:i].strip())
+            start = i + 1
+    out.append(sentence[start:].strip())
+    return [c for c in out if c]
+
+
+def _tidy_parenthetical(inner: str) -> str:
+    keep = [part.strip() for part in inner.split(";")
+            if part.strip() and not _PAREN_PROVENANCE.search(part)]
+    return "; ".join(keep)
+
+
+def tidy_note(text: str | None) -> str | None:
+    """A location note without the research bookkeeping ("12 LocLine pins", "per the task table",
+    "(Canifis)" after a wiki quote); the advice itself stays."""
+    if not text:
+        return text
+    t = _CITATION.sub("", text)
+    # "'quote' (Page name)": the page a wiki quote came from
+    t = re.sub(r"(['’\"])\s*\((?:[A-Z][\w'&.-]*(?: [\w'&.()-]+){0,5})\)", r"\1", t)
+
+    t = re.sub(r",?\s*\bper the [^;.()]*(?:LocLine|table|infobox)[^;.()]*", " ", t)
+
+    def paren(m: re.Match) -> str:
+        kept = _tidy_parenthetical(m.group(1))
+        return f" ({kept})" if kept else ""
+    t = re.sub(r"\s*\(([^()]*)\)", paren, t)
+    t = re.sub(r",?\s*listed only on the [^;.]*|;?\s*not on the task page[^;.]*", "", t)
+    t = re.sub(r"\bRoutes from the same page:", "Routes:", t)
+    t = re.sub(r",?\s*\b(?:per|according to) (?:the )?(?:task (?:page )?table|task page|[A-Z][\w' ]* page)\b", "", t)
+    t = re.sub(r"\b([Tt])he (?:task|[A-Z][\w']*(?: \([\w ]+\))?) page (says|adds|calls)\b", r"\1he wiki \2", t)
+    sentences = []
+    for sentence in _split_sentences(t):
+        clauses = [c for c in _split_clauses(sentence) if not _PROVENANCE.search(c)]
+        if clauses:
+            joined = "; ".join(clauses).strip()
+            if not re.search(r"[.!?]['\"’)]?$", joined):
+                joined += "."
+            sentences.append(joined[0].upper() + joined[1:])
+    t = " ".join(sentences).strip()
+    t = re.sub(r"\bTask page:", "The wiki:", t)
+    t = re.sub(r"\b([Tt])he task page\b", r"\1he wiki", t)
+    t = re.sub(r"(^|\s)(['\"])\s+", r"\1\2", t)
+    t = re.sub(r"([.!?]['\"’])\.", r"\1", t)
+    t = re.sub(r"\s+([,.;:])", r"\1", t)
+    t = re.sub(r"\s{2,}", " ", t)
+    t = re.sub(r"^[;,.\s]+", "", t)
+    return t or None
+
+
+def tidy_strategy(paras: list[str]) -> list[str]:
+    """Drop what reads as cut off: a sentence ending in ':' whose list or message was a table or
+    template the text converter removed, and a paragraph cut mid-sentence at the length cap."""
+    out: list[str] = []
+    for i, p in enumerate(paras):
+        text = p.strip()
+        nxt = paras[i + 1].lstrip() if i + 1 < len(paras) else ""
+        if text.endswith(":") and not nxt.startswith("- "):
+            if "\n" not in text and len(text) < 40:
+                if not nxt:
+                    continue  # a heading with nothing under it
+            else:
+                # "... cannot be set up here; if attempted, players will receive the message:" keeps
+                # the part before the semicolon; an intro to a removed table goes.
+                sentences = _split_sentences(text)
+                last = sentences.pop()
+                if ";" in last:
+                    sentences.append(last[:last.rindex(";")].rstrip() + ".")
+                text = " ".join(sentences).strip()
+        if text.endswith("…"):
+            if "\n" in text:
+                text = text[:text.rindex("\n")].rstrip()  # drop the list item that was cut
+            else:
+                text = " ".join(_split_sentences(text)[:-1]).strip()
+        if text:
+            out.append(text)
+    return out
+
+
+def load_gear_rules(path: Path = GEAR_RULES_PATH) -> dict:
+    return json.loads(path.read_text(encoding="utf-8")) if path.exists() else {"requiredGear": [], "meleeReach": {}}
+
+
+def _gear_pattern_matches(pattern: str, name: str) -> bool:
+    p, n = pattern.lower(), name.lower()
+    if p.startswith("*"):
+        return p[1:] in n
+    return n == p or n.startswith(p + " (")
+
+
+def check_gear_rules(rules: dict, item_names: Iterable[str]) -> list[str]:
+    """Rule items that match no item in items.json (typos would silently never match)."""
+    names = list(item_names)
+    return [pat for r in rules.get("requiredGear", []) for pat in r["items"]
+            if not any(_gear_pattern_matches(pat, n) for n in names)]
+
+
+def apply_gear_rules(task: dict, rules: dict) -> None:
+    variants = [m["name"] for m in task.get("monsters") or [] if m.get("name")]
+    out = []
+    for r in rules.get("requiredGear", []):
+        if task["task"] not in r["tasks"]:
+            continue
+        rule = {"slot": r["slot"], "items": list(r["items"]), "reason": r["reason"],
+                "unlessKourendElite": bool(r.get("unlessKourendElite"))}
+        if r.get("onlyVariants"):
+            rule["onlyVariants"] = [v for v in r["onlyVariants"] if v in variants]
+            if not rule["onlyVariants"]:
+                continue
+        if r.get("exceptVariantsMatching"):
+            rule["exceptVariants"] = [v for v in variants if re.search(r["exceptVariantsMatching"], v)]
+        out.append(rule)
+    task["requiredGear"] = out
+    reach = rules.get("meleeReach", {})
+    for m in task.get("monsters") or []:
+        stats = m.get("combatStats")
+        if stats is not None:
+            entry = reach.get(m.get("name"))
+            if entry:
+                stats["meleeReach"] = entry["reach"]
+            else:
+                stats.pop("meleeReach", None)
+
+
+def tidy_locations(task: dict) -> None:
+    locs = task.get("locations") or []
+    # A floor or a second pin of a curated Wilderness spot (the same wiki link, singular or plural)
+    # is in the Wilderness too: the Rogues' Castle floors, the "Revenant Cave" pin.
+    def key(link: str | None) -> str | None:
+        return re.sub(r"s$", "", link.strip().lower()) if link else None
+
+    wild_by_link = {}
+    for l in locs:
+        if l.get("curated") and l.get("wilderness") and l.get("link"):
+            wild_by_link.setdefault(key(l["link"]), l)
+    for l in locs:
+        if not l.get("curated") and not l.get("wilderness"):
+            src = wild_by_link.get(key(l.get("link")))
+            if src is not None:
+                l["wilderness"] = True
+                l["wildernessLevelMin"] = src.get("wildernessLevelMin")
+                l["wildernessLevelMax"] = src.get("wildernessLevelMax")
+        if l.get("notes"):
+            l["notes"] = tidy_note(l["notes"])
+        if l.get("requirements"):
+            l["requirements"] = [r for r in l["requirements"] if not re.match(r"(?i)^none\b", r.strip())]
+
+
+def tidy_tasks(tasks: list[dict], rules: dict | None = None) -> None:
+    rules = load_gear_rules() if rules is None else rules
+    for t in tasks:
+        t.pop("styleNotes", None)  # labels of the gear tables the plugin no longer ships
+        t["strategy"] = tidy_strategy(t.get("strategy") or [])
+        tidy_locations(t)
+        apply_gear_rules(t, rules)
+
+
+def tidy_only(args) -> int:
+    """--tidy: re-apply tidy_tasks() to the existing out/tasks.json; reads nothing from the wiki."""
+    path = args.out / "tasks.json"
+    tasks = json.loads(path.read_text(encoding="utf-8"))
+    rules = load_gear_rules()
+    items_path = args.out / "items.json"
+    if items_path.exists():
+        missing = check_gear_rules(rules, (i["name"] for i in json.loads(items_path.read_text(encoding="utf-8"))))
+        if missing:
+            print(f"gear-rules.json names items that are not in items.json: {missing}", file=sys.stderr)
+            return 1
+    tidy_tasks(tasks, rules)
+    write_json(path, tasks)
+    print(f"tidied {len(tasks)} tasks")
+    return 0
+
+
 def buckets_only(args) -> int:
     """--buckets-only: apply the Bucket extras to out/tasks.json and write items.json."""
     path = args.out / "tasks.json"
@@ -3407,6 +3634,7 @@ def buckets_only(args) -> int:
     if client.failed:
         print(f"Bucket queries failed, nothing written: {client.failed}", file=sys.stderr)
         return 1
+    tidy_tasks(tasks)
     write_json(path, tasks)
     write_json_rows(args.out / "items.json", items)
     write_json_rows(args.out / "drops.json", drops)
@@ -3441,6 +3669,8 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--no-bucket", action="store_true",
                     help="do not use the Bucket API (pages only; for comparing outputs)")
     ap.add_argument("--self-test", action="store_true", help="run the parse_access() unit tests and exit")
+    ap.add_argument("--tidy", action="store_true",
+                    help="only re-apply the offline tidy-up (notes, strategy, gear rules) to the existing out/tasks.json")
     ap.add_argument("--buckets-only", action="store_true",
                     help="only (re)apply the Bucket extras (combat stats, drops, Combat Achievements, "
                          "items.json) to the existing out/tasks.json; reads no pages")
@@ -3449,6 +3679,8 @@ def main(argv: list[str] | None = None) -> int:
         return self_test()
     if args.buckets_only:
         return buckets_only(args)
+    if args.tidy:
+        return tidy_only(args)
 
     cache = WikiCache(args.cache, refresh=args.refresh, sleep=args.sleep)
     global BUCKET
@@ -3536,6 +3768,7 @@ def main(argv: list[str] | None = None) -> int:
 
     extras = apply_bucket_extras(tasks, bucket_client, report) if bucket_client else None
     apply_gear_pages(tasks)
+    tidy_tasks(tasks)
     args.out.mkdir(parents=True, exist_ok=True)
     write_json(args.out / "tasks.json", tasks)
     if extras is not None:

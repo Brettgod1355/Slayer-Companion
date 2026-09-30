@@ -27,6 +27,7 @@ package com.slayercompanion.dps;
 import com.slayercompanion.SlayerCompanionConfig;
 import com.slayercompanion.data.ItemStats;
 import com.slayercompanion.data.MonsterInfo;
+import com.slayercompanion.data.RequiredGear;
 import com.slayercompanion.data.SlayerData;
 import com.slayercompanion.data.TaskInfo;
 import com.slayercompanion.gear.OwnedItems;
@@ -40,6 +41,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.function.Consumer;
+import java.util.function.Predicate;
 import javax.annotation.Nullable;
 import javax.inject.Inject;
 import javax.inject.Singleton;
@@ -121,6 +123,8 @@ public class LoadoutRecommender
 				items.add(s);
 			}
 		}
+		Map<Integer, Predicate<ItemStats>> required = new HashMap<>();
+		List<String> requirements = requirements(task, variant == null ? name : variant, items, required);
 		Map<Integer, ItemStats> worn = new HashMap<>();
 		for (int id : owned.equipment().keySet())
 		{
@@ -134,9 +138,9 @@ public class LoadoutRecommender
 		{
 			try
 			{
-				List<LoadoutOptimizer.Option> options = LoadoutOptimizer.best(player, items, monster.getCombatStats());
+				List<LoadoutOptimizer.Option> options = LoadoutOptimizer.best(player, items, monster.getCombatStats(), required);
 				LoadoutOptimizer.Option current = LoadoutOptimizer.evaluate(player, worn, monster.getCombatStats());
-				done.accept(new Recommendation(key, name, options, current, assumptions(player, options),
+				done.accept(new Recommendation(key, name, options, current, requirements, assumptions(player, options),
 					options.isEmpty() ? "Nothing you own can hurt " + name + " (as far as the plugin can tell)." : null, ids));
 			}
 			catch (RuntimeException e)
@@ -149,7 +153,49 @@ public class LoadoutRecommender
 
 	private static Recommendation unavailable(String key, String name, String why)
 	{
-		return new Recommendation(key, name, Collections.emptyList(), null, Collections.emptyList(), why, Collections.emptySet());
+		return new Recommendation(key, name, Collections.emptyList(), null, Collections.emptyList(), Collections.emptyList(), why,
+			Collections.emptySet());
+	}
+
+	/**
+	 * The equipment the task needs for this variant, as slot rules for the optimizer, and one line
+	 * each saying what the recommendation keeps there or that the player owns none of it.
+	 */
+	private List<String> requirements(TaskInfo task, String variant, Set<ItemStats> owned, Map<Integer, Predicate<ItemStats>> into)
+	{
+		List<String> lines = new ArrayList<>();
+		for (RequiredGear rule : task.requiredGearOrEmpty())
+		{
+			int slot = Gear.slotOf(rule.getSlot());
+			if (slot < 0 || !rule.appliesTo(variant, config.eliteKourendDiary()))
+			{
+				continue;
+			}
+			Predicate<ItemStats> accepts = s -> rule.accepts(s.getName());
+			into.merge(slot, accepts, Predicate::and);
+			boolean ownsOne = owned.stream().anyMatch(s -> Gear.slotOf(s.getSlot()) == slot && rule.accepts(s.getName()));
+			String items = describe(rule.itemsOrEmpty());
+			lines.add(ownsOne
+				? "Keeps " + items + " on: needed " + rule.getReason() + "."
+				: "Needs " + items + " " + rule.getReason() + ". You own none, so that slot is left empty.");
+		}
+		return lines;
+	}
+
+	/** "Mirror shield or V's shield"; a "*slayer helmet" pattern reads "Slayer helmet". */
+	static String describe(List<String> patterns)
+	{
+		List<String> names = new ArrayList<>();
+		for (String p : patterns)
+		{
+			String n = p.startsWith("*") ? p.substring(1).trim() : p;
+			names.add(Character.toUpperCase(n.charAt(0)) + n.substring(1));
+		}
+		if (names.size() == 1)
+		{
+			return names.get(0);
+		}
+		return String.join(", ", names.subList(0, names.size() - 1)) + " or " + names.get(names.size() - 1);
 	}
 
 	private static List<String> assumptions(PlayerStats p, List<LoadoutOptimizer.Option> options)

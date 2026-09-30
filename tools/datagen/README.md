@@ -16,6 +16,7 @@ python3 generate.py --refresh                # ignore the cache and re-fetch eve
 python3 generate.py --limit 5                # smoke test on the first five tasks
 python3 generate.py --self-test              # unit tests for parse_access() (no network, no cache)
 python3 generate.py --buckets-only --out DIR  # only the Bucket extras (drops, combat stats, CAs, items.json) on DIR/tasks.json; no page reads
+python3 generate.py --tidy --out DIR          # only the offline tidy-up below on DIR/tasks.json; no network at all
 ```
 
 | Option | Default | Meaning |
@@ -30,6 +31,22 @@ python3 generate.py --buckets-only --out DIR  # only the Bucket extras (drops, c
 | `--sleep S` | 0.5 | seconds between network fetches |
 | `--self-test` | off | run the `parse_access()` assertions and exit (90 checks on the tricky requirement strings) |
 | `--buckets-only` | off | apply only the Bucket extras below to the existing `DIR/tasks.json` and write `drops.json` / `items.json`; reads no pages (16 table-wide queries on a cold cache) |
+| `--tidy` | off | re-apply only the offline tidy-up to the existing `DIR/tasks.json` (checks `curated/gear-rules.json` against `DIR/items.json` first) |
+
+### Tidy-up (`tidy_tasks`, every build and `--tidy`)
+
+* Location notes lose the research bookkeeping the curated files keep as evidence: "12 LocLine
+  pins", "per the task table", "(Canifis)" after a wiki quote, sentences about which page said what.
+* Strategy paragraphs lose what reads as cut off: a sentence ending in ":" whose list or message
+  was a table or template (the part before a semicolon stays), and a paragraph or list item cut at
+  the length cap.
+* A floor or second pin of a curated Wilderness location (same wiki link, singular or plural) gets
+  its Wilderness flag and levels (Rogues' Castle floors, the Revenant Cave pin); a "None" requirement
+  is dropped; `styleNotes` (labels of the gear tables the plugin no longer ships) is removed.
+* `curated/gear-rules.json` (hand-checked, each rule with its wiki source): `requiredGear` becomes
+  each task's `requiredGear` (slot, accepted items, variants it applies to, not needed with the elite
+  Kourend & Kebos diary), which the loadout recommendation keeps in its slot; `meleeReach` marks
+  monsters melee cannot reach (`none`) or only halberds reach (`halberd`) in `combatStats.meleeReach`.
 
 Progress goes to stderr; a summary of the `counts` block of `report.json` goes to stdout.
 

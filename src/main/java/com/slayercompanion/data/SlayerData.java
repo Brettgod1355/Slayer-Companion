@@ -272,17 +272,13 @@ public class SlayerData
 				continue;
 			}
 			// "Nose peg or Slayer helmet" lists alternatives; index each.
-			for (String part : n.split("\\s+or\\s+"))
+			for (String p : com.slayercompanion.gear.RequiredItems.alternatives(n))
 			{
-				String p = part.trim();
-				if (!p.isEmpty())
+				into.add(p);
+				int paren = p.indexOf(" (");
+				if (paren > 0)
 				{
-					into.add(p);
-					int paren = p.indexOf(" (");
-					if (paren > 0)
-					{
-						into.add(p.substring(0, paren));
-					}
+					into.add(p.substring(0, paren));
 				}
 			}
 		}

@@ -72,6 +72,7 @@ class GearFixture
 	static final int IMBUED_SARADOMIN_CAPE = 21791;
 	static final int NOSE_PEG = 4168;
 	static final int ARDOUGNE_CLOAK_4 = 13124;
+	static final int ANTI_DRAGON_SHIELD = 1540;
 
 	final Client client = mock(Client.class);
 	final ItemManager itemManager = mock(ItemManager.class);
@@ -101,6 +102,7 @@ class GearFixture
 		item(IMBUED_SARADOMIN_CAPE, "Imbued saradomin cape", false);
 		item(NOSE_PEG, "Nose peg", true);
 		item(ARDOUGNE_CLOAK_4, "Ardougne cloak 4", true);
+		item(ANTI_DRAGON_SHIELD, "Anti-dragon shield", true);
 
 		when(client.getItemCount()).thenReturn(30000);
 		// A noted whip shares the name but must not be indexed.

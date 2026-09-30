@@ -76,6 +76,8 @@ public class PanelModel
 	boolean shortestPathAvailable;
 	boolean bankKnown;
 	List<String> missingRequiredItems;
+	/** Required lines that name no item ("87 Slayer"); listed without a tick or cross. */
+	List<String> nonItemRequirements;
 	/** The player's saved loadout for this task with where each item is now; null when none is saved. */
 	@Nullable
 	LoadoutDisplay loadout;

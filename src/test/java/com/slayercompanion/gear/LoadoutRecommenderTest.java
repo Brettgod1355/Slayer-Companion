@@ -87,6 +87,25 @@ public class LoadoutRecommenderTest
 	}
 
 	@Test
+	public void keepsTheShieldADragonTaskNeedsAndSaysSo() throws Exception
+	{
+		world.bank(WHIP, DRAGON_DEFENDER, GearFixture.ANTI_DRAGON_SHIELD);
+		Recommendation r = recommend(data.task("Black dragons").get());
+		LoadoutOptimizer.Option best = r.getOptions().get(0);
+		assertEquals("Anti-dragon shield", best.getGear().get(Gear.SHIELD).getName());
+		assertTrue(r.getRequirements().get(0), r.getRequirements().get(0).startsWith("Keeps Anti-dragon shield"));
+	}
+
+	@Test
+	public void saysWhenTheNeededShieldIsNotOwned() throws Exception
+	{
+		world.bank(WHIP, DRAGON_DEFENDER);
+		Recommendation r = recommend(data.task("Black dragons").get());
+		assertNull(r.getOptions().get(0).getGear().get(Gear.SHIELD));
+		assertTrue(r.getRequirements().get(0), r.getRequirements().get(0).startsWith("Needs Anti-dragon shield"));
+	}
+
+	@Test
 	public void bestMeleeFromTheBankAndHowTheWornGearCompares() throws Exception
 	{
 		world.bank(WHIP, TENTACLE, SLAYER_HELMET_I, DRAGON_DEFENDER).worn(RUNE_SCIMITAR);
