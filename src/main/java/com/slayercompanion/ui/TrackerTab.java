@@ -28,8 +28,10 @@ import com.slayercompanion.tracker.TaskSession;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
+import javax.annotation.Nullable;
 import javax.swing.JPanel;
 import net.runelite.client.ui.ColorScheme;
 
@@ -68,8 +70,13 @@ class TrackerTab extends JPanel
 			card.add(Ui.title(s.getTaskName()));
 			double h = Math.max(s.getDurationMs(), 60000L) / 3600000.0;
 			card.add(Ui.keyValue("Kills", Ui.num(s.getKills()) + " / " + Ui.num(s.getInitialAmount())));
+			if (s.getKillsAtStart() > 0)
+			{
+				// Tracking began mid-task or was reset: the numbers below are for these kills only.
+				card.add(Ui.keyValue("Tracked", Ui.num(s.getTrackedKills()) + " kills", Ui.MUTED));
+			}
 			card.add(Ui.keyValue("Time", duration(s.getDurationMs())));
-			card.add(Ui.keyValue("Kills / hour", Ui.num(Math.round(s.getKills() / h))));
+			card.add(Ui.keyValue("Kills / hour", Ui.num(Math.round(s.getTrackedKills() / h))));
 			card.add(Ui.keyValue("Slayer XP", Ui.num(s.getSlayerXpGained())));
 			card.add(Ui.keyValue("Loot", Ui.gp(s.getLootValue()), Ui.GOOD));
 			addLuck(card, s, m.getSessionExpected());
@@ -86,18 +93,18 @@ class TrackerTab extends JPanel
 			{
 				JPanel loot = Ui.card();
 				loot.add(Ui.title("Loot"));
-				for (Map.Entry<Integer, Integer> e : top(s.getLoot(), 12))
+				for (Map.Entry<Integer, Integer> e : top(s.getLoot(), m.getItemPrices(), 12))
 				{
 					loot.add(Ui.wrap(itemNames.getOrDefault(e.getKey(), "Item " + e.getKey()) + " x " + Ui.num(e.getValue()), Color.WHITE));
 				}
 				col.add(loot);
 				col.add(Ui.gap(4));
 			}
-			if (!s.getSupplies().isEmpty())
+			if (s.getSupplies().values().stream().anyMatch(q -> q > 0))
 			{
 				JPanel sup = Ui.card();
 				sup.add(Ui.title("Supplies used"));
-				for (Map.Entry<Integer, Integer> e : top(s.getSupplies(), 12))
+				for (Map.Entry<Integer, Integer> e : top(s.getSupplies(), m.getItemPrices(), 12))
 				{
 					sup.add(Ui.wrap(itemNames.getOrDefault(e.getKey(), "Item " + e.getKey()) + " x " + Ui.num(e.getValue()), Color.WHITE));
 				}
@@ -134,7 +141,7 @@ class TrackerTab extends JPanel
 	{
 		JPanel card = Ui.card();
 		card.add(Ui.title("Last task: " + t.getTaskName()));
-		card.add(Ui.keyValue("Kills", Ui.num(t.getKills())));
+		card.add(Ui.keyValue("Kills", Ui.num(t.getTrackedKills())));
 		card.add(Ui.keyValue("Time", duration(t.getDurationMs())));
 		card.add(Ui.keyValue("Slayer XP", Ui.num(t.getSlayerXpGained())));
 		card.add(Ui.keyValue("Loot", Ui.gp(t.getLootValue()), Ui.GOOD));
@@ -146,13 +153,13 @@ class TrackerTab extends JPanel
 	/** Loot against the wiki average for the same number of kills. */
 	private static void addLuck(JPanel card, TaskSession s, Long expected)
 	{
-		if (expected == null || expected <= 0 || s.getKills() == 0)
+		if (expected == null || expected <= 0 || s.getTrackedKills() == 0)
 		{
 			return;
 		}
 		long diff = s.getLootValue() - expected;
 		JPanel row = Ui.keyValue("Luck", luck(s.getLootValue(), expected), diff >= 0 ? Ui.GOOD : Ui.WARN);
-		row.setToolTipText("Average loot for " + Ui.num(s.getKills()) + " kills is about " + Ui.gp(expected)
+		row.setToolTipText("Average loot for " + Ui.num(s.getTrackedKills()) + " kills is about " + Ui.gp(expected)
 			+ " (wiki drop rates, today's GE prices).");
 		card.add(row);
 	}
@@ -169,10 +176,23 @@ class TrackerTab extends JPanel
 		return list == null || index >= list.size() ? null : list.get(index);
 	}
 
-	private static List<Map.Entry<Integer, Integer>> top(Map<Integer, Integer> map, int n)
+	/** The {@code n} entries worth most (quantity x price; quantity when unpriced), positive quantities only. */
+	static List<Map.Entry<Integer, Integer>> top(Map<Integer, Integer> map, @Nullable Map<Integer, Long> prices, int n)
 	{
-		List<Map.Entry<Integer, Integer>> list = new ArrayList<>(map.entrySet());
-		list.sort((a, b) -> Integer.compare(b.getValue(), a.getValue()));
+		List<Map.Entry<Integer, Integer>> list = new ArrayList<>();
+		for (Map.Entry<Integer, Integer> e : map.entrySet())
+		{
+			if (e.getValue() > 0)
+			{
+				list.add(e);
+			}
+		}
+		java.util.function.ToLongFunction<Map.Entry<Integer, Integer>> worth = e ->
+		{
+			Long price = prices == null ? null : prices.get(e.getKey());
+			return price == null || price <= 0 ? e.getValue() : price * e.getValue();
+		};
+		list.sort(Comparator.comparingLong(worth).reversed());
 		return list.size() > n ? list.subList(0, n) : list;
 	}
 

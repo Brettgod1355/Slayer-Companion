@@ -88,13 +88,13 @@ public interface SlayerCompanionConfig extends Config
 		return true;
 	}
 
-	@ConfigItem(keyName = "autoRouteFavourite", name = "Auto-route to favourite", description = "When a new task is assigned, ask Shortest Path to draw the route to your favourite location for it", section = routing, position = 1)
+	@ConfigItem(keyName = "autoRouteFavourite", name = "Auto-route to favourite", description = "When a new task is assigned (not again at each login or world hop), ask Shortest Path to draw the route to your favourite location for it, if killing there counts for the task (Konar's area, Krystilia's Wilderness)", section = routing, position = 1)
 	default boolean autoRouteFavourite()
 	{
 		return false;
 	}
 
-	@ConfigItem(keyName = "openLinkedSetup", name = "Open linked setup on new task", description = "When a task is assigned, open the Inventory Setups setup you linked to it (Inventory Setups then filters your bank to it)", section = gear, position = 0)
+	@ConfigItem(keyName = "openLinkedSetup", name = "Open linked setup on new task", description = "When a task is assigned (not again at each login or world hop), open the Inventory Setups setup you linked to it (Inventory Setups then filters your bank to it)", section = gear, position = 0)
 	default boolean openLinkedSetup()
 	{
 		return true;

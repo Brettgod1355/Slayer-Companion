@@ -70,6 +70,27 @@ public class InventorySetupsLinkTest
 	private final EventBus eventBus = new EventBus();
 	private final InventorySetupsLink link = new InventorySetupsLink(eventBus);
 
+	/** Answers by putting its own list in the map instead of filling ours. */
+	public static class ReplacingInventorySetups
+	{
+		@Subscribe
+		public void onPluginMessage(PluginMessage m)
+		{
+			if ("inventory-setups".equals(m.getNamespace()) && "get-setups".equals(m.getName()))
+			{
+				m.getData().put("setups", new String[]{"Cerberus", "Hydra"});
+			}
+		}
+	}
+
+	@Test
+	public void anAnswerPutInTheMapIsReadBack()
+	{
+		eventBus.register(new ReplacingInventorySetups());
+		link.refresh();
+		assertEquals(Arrays.asList("Cerberus", "Hydra"), link.setups());
+	}
+
 	@Test
 	public void emptyWithoutInventorySetups()
 	{

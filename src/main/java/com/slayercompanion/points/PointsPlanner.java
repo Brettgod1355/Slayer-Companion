@@ -59,13 +59,24 @@ public class PointsPlanner
 		this.config = config;
 	}
 
+	/** As {@link #plan(int, int, CurrentTask, int, int)} with the player's levels unknown: every master counts. */
+	public PointsPlan plan(int points, int sharedStreak, @Nullable CurrentTask task)
+	{
+		return plan(points, sharedStreak, task, Integer.MAX_VALUE, Integer.MAX_VALUE);
+	}
+
 	/**
 	 * @param sharedStreak the shared streak counter (Turael..Konar); Krystilia and Mortimer keep
 	 *                     their own counters and are shown separately.
+	 * @param task         the task in hand; while it counts towards the shared streak it is task
+	 *                     {@code sharedStreak + 1}, so the plan is for the one after it.
+	 * @param combatLevel  masters above it (unless the Slayer cape lets the player past) are listed
+	 *                     but never recommended; the same for {@code slayerLevel}.
 	 */
-	public PointsPlan plan(int points, int sharedStreak, @Nullable CurrentTask task)
+	public PointsPlan plan(int points, int sharedStreak, @Nullable CurrentTask task, int combatLevel, int slayerLevel)
 	{
-		int next = sharedStreak + 1;
+		boolean onSharedTask = task != null && (task.getMaster() == null || !task.getMaster().isSeparateStreak());
+		int next = sharedStreak + (onSharedTask ? 2 : 1);
 		int interval = milestoneInterval(next);
 		int untilMilestone = tasksUntilNextMilestone(next);
 
@@ -82,10 +93,12 @@ public class PointsPlanner
 				continue;
 			}
 			int pts = pointsForTask(info, next, boosted(m));
-			String note = interval > 0 ? "milestone task " + next : "";
-			options.add(new PointsPlan.MasterOption(m.getDisplayName(), pts, interval > 0, note));
+			String needs = requirementNotMet(info, combatLevel, slayerLevel);
+			String note = needs != null ? needs : interval > 0 ? "milestone task " + next : "";
+			options.add(new PointsPlan.MasterOption(m.getDisplayName(), pts, interval > 0, note, needs == null));
 		}
-		options.sort((a, b) -> Integer.compare(b.getPointsForNextTask(), a.getPointsForNextTask()));
+		options.sort((a, b) -> a.isAvailable() != b.isAvailable() ? (a.isAvailable() ? -1 : 1)
+			: Integer.compare(b.getPointsForNextTask(), a.getPointsForNextTask()));
 
 		PointsPlan.MasterOption recommended = null;
 		String summary;
@@ -99,7 +112,7 @@ public class PointsPlanner
 		}
 		else
 		{
-			recommended = options.isEmpty() ? null : options.get(0);
+			recommended = options.isEmpty() || !options.get(0).isAvailable() ? null : options.get(0);
 			StringBuilder sb = new StringBuilder();
 			if (interval > 0 && recommended != null)
 			{
@@ -131,6 +144,21 @@ public class PointsPlanner
 
 		return new PointsPlan(points, sharedStreak, next, interval, untilMilestone, recommended,
 			Collections.unmodifiableList(options), summary);
+	}
+
+	/** "needs 75 combat" when the player cannot use the master yet, else null. The 99 Slayer cape lets Duradel's and Mortimer's combat requirement go. */
+	@Nullable
+	static String requirementNotMet(MasterInfo info, int combatLevel, int slayerLevel)
+	{
+		if (slayerLevel < info.getSlayerReq())
+		{
+			return "needs " + info.getSlayerReq() + " Slayer";
+		}
+		if (combatLevel < info.getCombatReq() && !(info.isCapeBypassesCombat() && slayerLevel >= 99))
+		{
+			return "needs " + info.getCombatReq() + " combat";
+		}
+		return null;
 	}
 
 	/** Points a completed task numbered {@code taskNumber} in the streak awards at this master. */

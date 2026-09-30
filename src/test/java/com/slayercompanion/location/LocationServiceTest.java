@@ -306,4 +306,30 @@ public class LocationServiceTest
 		l.setCoordsMissing(true);
 		assertFalse(LocationService.point(l).isPresent());
 	}
+
+	@Test
+	public void aSpotSuitsTheAssignmentOnlyInTheAssignedArea()
+	{
+		TaskLocation catacombs = loc("catacombs", 1, "Abyssal demon");
+		catacombs.setName("Catacombs of Kourend (north-east)");
+		catacombs.setDisplayName("Catacombs of Kourend - north-east");
+		TaskLocation abyss = loc("abyss", 2, "Abyssal demon");
+		abyss.setName("Abyss");
+		abyss.setDisplayName("The Abyss");
+		com.slayercompanion.task.CurrentTask konar = new com.slayercompanion.task.CurrentTask("Abyssal demons", 100, 150,
+			"Catacombs of Kourend", com.slayercompanion.task.SlayerMaster.KONAR, false, 0, 0);
+		assertTrue(LocationService.suitsAssignment(catacombs, konar));
+		assertFalse(LocationService.suitsAssignment(abyss, konar));
+		com.slayercompanion.task.CurrentTask abyssTask = new com.slayercompanion.task.CurrentTask("Abyssal demons", 100, 150,
+			"The Abyss", com.slayercompanion.task.SlayerMaster.KONAR, false, 0, 0);
+		assertTrue(LocationService.suitsAssignment(abyss, abyssTask));
+		com.slayercompanion.task.CurrentTask duradel = new com.slayercompanion.task.CurrentTask("Abyssal demons", 100, 150,
+			null, com.slayercompanion.task.SlayerMaster.DURADEL, false, 0, 0);
+		assertTrue(LocationService.suitsAssignment(abyss, duradel));
+		com.slayercompanion.task.CurrentTask krystilia = new com.slayercompanion.task.CurrentTask("Abyssal demons", 100, 150,
+			null, com.slayercompanion.task.SlayerMaster.KRYSTILIA, false, 0, 0);
+		assertFalse(LocationService.suitsAssignment(abyss, krystilia));
+		abyss.setWilderness(true);
+		assertTrue(LocationService.suitsAssignment(abyss, krystilia));
+	}
 }

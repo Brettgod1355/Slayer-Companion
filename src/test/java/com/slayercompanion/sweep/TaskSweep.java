@@ -41,6 +41,7 @@ import com.slayercompanion.data.TaskLocation;
 import com.slayercompanion.dps.Gear;
 import com.slayercompanion.dps.LoadoutOptimizer;
 import com.slayercompanion.dps.LoadoutRecommender;
+import com.slayercompanion.dps.PlayerStats;
 import com.slayercompanion.dps.Recommendation;
 import com.slayercompanion.gear.LoadoutDisplay;
 import com.slayercompanion.gear.OwnedItems;
@@ -605,6 +606,64 @@ public final class TaskSweep
 				&& !"polearm".equals(g.category()) && !"salamander".equals(g.category()))))
 			{
 				out.add(new Finding("rec-melee-out-of-reach", where, what));
+			}
+		}
+	}
+
+	/**
+	 * No bow or crossbow the account owns, with only its best ammo, may out-damage the option of its
+	 * combat type (the climb can only add to it). Skips two-handers when the task needs the shield slot.
+	 */
+	void checkLaunchers(Case c, SampleBank bank, Recommendation r, List<Finding> out)
+	{
+		MonsterInfo monster = c.info.mainMonster(c.variant);
+		if (r.getUnavailable() != null || monster == null || monster.getCombatStats() == null)
+		{
+			return;
+		}
+		String target = c.variant != null ? c.variant : r.getMonster();
+		boolean shieldNeeded = c.info.requiredGearOrEmpty().stream()
+			.anyMatch(g -> Gear.slotOf(g.getSlot()) == Gear.SHIELD && g.appliesTo(target, false));
+		PlayerStats p = PlayerStats.builder().attack(bank.attack).strength(bank.strength).defence(bank.defence)
+			.ranged(bank.ranged).magic(bank.magic).prayer(bank.prayer).potions(true).prayers(true)
+			.rigourUnlocked(bank.rigour).auguryUnlocked(bank.augury).spellbook(bank.spellbook).build();
+		List<ItemStats> ammo = new ArrayList<>();
+		for (String n : bank.items)
+		{
+			ItemStats s = byName.get(n.toLowerCase(Locale.ROOT));
+			if (s != null && Gear.slotOf(s.getSlot()) == Gear.AMMO)
+			{
+				ammo.add(s);
+			}
+		}
+		for (String n : bank.items)
+		{
+			ItemStats w = byName.get(n.toLowerCase(Locale.ROOT));
+			Gear launcher = w == null ? null : new Gear(new HashMap<>()).with(Gear.WEAPON, w);
+			if (launcher == null || Gear.slotOf(w.getSlot()) != Gear.WEAPON || !launcher.firesAmmo() || (shieldNeeded && w.isTwoHanded()))
+			{
+				continue;
+			}
+			Gear best = null;
+			for (ItemStats a : ammo)
+			{
+				Gear g = launcher.with(Gear.AMMO, a);
+				if (g.ammoFits() && (best == null || a.getRangedStr() > best.get(Gear.AMMO).getRangedStr()))
+				{
+					best = g;
+				}
+			}
+			LoadoutOptimizer.Option alone = best == null ? null : LoadoutOptimizer.evaluate(p, best.items(), monster.getCombatStats());
+			if (alone == null || alone.getResult().getDps() <= 0)
+			{
+				continue;
+			}
+			double option = r.getOptions().stream().filter(o -> o.getKind() == alone.getKind())
+				.mapToDouble(o -> o.getResult().getDps()).max().orElse(0);
+			if (alone.getResult().getDps() > option + 1e-6)
+			{
+				out.add(new Finding("rec-launcher-beats-option", c.label() + " [" + bank + "]",
+					names(best.items()) + " alone does " + alone.getResult().getDps() + " dps, the " + alone.getKind() + " option " + option));
 			}
 		}
 	}

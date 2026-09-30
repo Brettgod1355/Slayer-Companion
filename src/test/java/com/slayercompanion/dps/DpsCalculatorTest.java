@@ -207,6 +207,21 @@ public class DpsCalculatorTest
 	}
 
 	@Test
+	public void aBowKeepsItsArrowsWhenTheBankIsFullOfBolts()
+	{
+		List<ItemStats> owned = new ArrayList<>();
+		for (String n : Arrays.asList("Twisted bow", "Dragon arrow", "Runite bolts", "Dragon bolts", "Adamant bolts",
+			"Diamond bolts (e)", "Ruby bolts (e)", "Rune crossbow"))
+		{
+			owned.add(item(n));
+		}
+		LoadoutOptimizer.Option ranged = LoadoutOptimizer.best(maxed(true), owned, monster("Hydras")).stream()
+			.filter(o -> o.getKind() == LoadoutOptimizer.Kind.RANGED).findFirst().orElseThrow(AssertionError::new);
+		assertEquals("Twisted bow", ranged.getGear().get(Gear.WEAPON).getName());
+		assertEquals("Dragon arrow", ranged.getGear().get(Gear.AMMO).getName());
+	}
+
+	@Test
 	public void requiredGearRulesMatchVariantsAndItemVersions()
 	{
 		com.slayercompanion.data.RequiredGear shield = DATA.task("Black dragons").get().requiredGearOrEmpty().get(0);

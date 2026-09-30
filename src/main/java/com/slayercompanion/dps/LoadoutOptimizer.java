@@ -152,7 +152,7 @@ public final class LoadoutOptimizer
 				ItemStats weapon = (ItemStats) c[0];
 				AttackStyle style = (AttackStyle) c[1];
 				Spell spell = (Spell) c[2];
-				Map<Integer, List<ItemStats>> shortlist = shortlist(bySlot, style, required.keySet());
+				Map<Integer, List<ItemStats>> shortlist = shortlist(bySlot, weapon, style, required.keySet());
 				for (Gear seed : seeds(weapon, bySlot, required.keySet()))
 				{
 					Option o = climb(p, seed, style, spell, shortlist, monster);
@@ -176,10 +176,13 @@ public final class LoadoutOptimizer
 
 	/**
 	 * The strongest few items per slot for the style's two bonuses, plus every special-effect item;
-	 * required slots keep everything they may take.
+	 * required slots keep everything they may take. A bow or crossbow is only offered ammo it fires,
+	 * or a bank full of bolts would crowd every arrow out.
 	 */
-	private static Map<Integer, List<ItemStats>> shortlist(Map<Integer, List<ItemStats>> bySlot, AttackStyle style, Set<Integer> required)
+	private static Map<Integer, List<ItemStats>> shortlist(Map<Integer, List<ItemStats>> bySlot, ItemStats weapon,
+		AttackStyle style, Set<Integer> required)
 	{
+		Gear launcher = new Gear(new HashMap<>()).with(Gear.WEAPON, weapon);
 		Map<Integer, List<ItemStats>> out = new HashMap<>();
 		for (Map.Entry<Integer, List<ItemStats>> e : bySlot.entrySet())
 		{
@@ -192,8 +195,20 @@ public final class LoadoutOptimizer
 				out.put(e.getKey(), e.getValue());
 				continue;
 			}
+			List<ItemStats> items = e.getValue();
+			if (e.getKey() == Gear.AMMO && launcher.firesAmmo())
+			{
+				items = new ArrayList<>();
+				for (ItemStats a : e.getValue())
+				{
+					if (launcher.with(Gear.AMMO, a).ammoFits())
+					{
+						items.add(a);
+					}
+				}
+			}
 			Set<ItemStats> keep = new LinkedHashSet<>();
-			for (ItemStats s : e.getValue())
+			for (ItemStats s : items)
 			{
 				String name = s.getName() == null ? "" : s.getName().toLowerCase(Locale.ROOT);
 				for (String special : SPECIAL)
@@ -204,8 +219,8 @@ public final class LoadoutOptimizer
 					}
 				}
 			}
-			keep.addAll(top(e.getValue(), s -> accuracy(s, style.getType())));
-			keep.addAll(top(e.getValue(), s -> damage(s, style.getType())));
+			keep.addAll(top(items, s -> accuracy(s, style.getType())));
+			keep.addAll(top(items, s -> damage(s, style.getType())));
 			out.put(e.getKey(), new ArrayList<>(keep));
 		}
 		return out;
@@ -323,8 +338,9 @@ public final class LoadoutOptimizer
 	}
 
 	/**
-	 * The weapon alone, plus the weapon with each complete void set the player owns; every seed
-	 * starts with the first item owned for each required slot.
+	 * The weapon alone (a bow or crossbow with its best ammo, so it scores above zero from the
+	 * start), plus the weapon with each complete void set the player owns; every seed starts with
+	 * the first item owned for each required slot.
 	 */
 	private static List<Gear> seeds(ItemStats weapon, Map<Integer, List<ItemStats>> bySlot, Set<Integer> required)
 	{
@@ -347,7 +363,7 @@ public final class LoadoutOptimizer
 	private static List<Gear> voidSeeds(ItemStats weapon, Map<Integer, List<ItemStats>> bySlot)
 	{
 		List<Gear> seeds = new ArrayList<>();
-		Gear bare = new Gear(new HashMap<>()).with(Gear.WEAPON, weapon);
+		Gear bare = withBestAmmo(new Gear(new HashMap<>()).with(Gear.WEAPON, weapon), bySlot);
 		seeds.add(bare);
 		for (String helm : new String[]{"void melee helm", "void ranger helm", "void mage helm"})
 		{
