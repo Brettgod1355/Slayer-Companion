@@ -134,12 +134,17 @@ public final class Gear
 		return w == null || w.getCategory() == null ? "unarmed" : w.getCategory().trim().toLowerCase(Locale.ROOT);
 	}
 
-	/** Bows and crossbows fire the ammo slot; crystal bows, thrown weapons and the rest do not. */
+	/**
+	 * Bows and crossbows fire the ammo slot. Bows that make their own shots (crystal bows and the bow
+	 * of Faerdhinen on crystal, Craw's and Webweaver bows on revenant ether, Venator bows on ancient
+	 * essence) have their ranged strength built in, as do thrown weapons.
+	 */
 	public boolean firesAmmo()
 	{
 		String c = category();
 		String w = name(WEAPON);
-		return (c.equals("bow") && !w.startsWith("crystal bow") && !w.startsWith("bow of faerdhinen")) || c.equals("crossbow");
+		return (c.equals("bow") && !w.startsWith("crystal bow") && !w.startsWith("bow of faerdhinen")
+			&& !w.startsWith("craw's bow") && !w.startsWith("webweaver bow") && !w.contains("venator bow")) || c.equals("crossbow");
 	}
 
 	/** True when the ammo slot holds what the weapon fires (arrows for bows, bolts for crossbows). */

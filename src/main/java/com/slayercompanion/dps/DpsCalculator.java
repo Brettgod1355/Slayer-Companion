@@ -116,26 +116,28 @@ public final class DpsCalculator
 			roll = roll * 6 / 5;
 			max = max * 6 / 5;
 		}
-		if (m.is("kalphite") && weapon.startsWith("keris"))
+		boolean keris = m.is("kalphite") && weapon.startsWith("keris");
+		if (keris)
 		{
 			if (weapon.contains("breaching"))
 			{
 				roll = roll * 133 / 100;
 			}
-			max = max * 4 / 3;
+			max = max * 133 / 100;
 		}
 		if (m.is("leafy") && weapon.startsWith("leaf-bladed battleaxe"))
 		{
 			max = max * 1175 / 1000;
 		}
-		if (tzhaarWeapon(weapon) && obsidianSet(g))
+		if (tzhaarWeapon(weapon))
 		{
-			roll += baseRoll / 10;
-			max += baseMax / 10;
-		}
-		if (tzhaarWeapon(weapon) && neck.startsWith("berserker necklace"))
-		{
-			max = max * 6 / 5;
+			// Obsidian armour (+10%) and the berserker necklace (+20% damage) add up: 1.3 with both.
+			int bonus = (obsidianSet(g) ? 10 : 0) + (neck.startsWith("berserker necklace") ? 20 : 0);
+			if (obsidianSet(g))
+			{
+				roll += baseRoll / 10;
+			}
+			max += baseMax * bonus / 100;
 		}
 		if (style.getType() == AttackStyle.Type.CRUSH)
 		{
@@ -145,14 +147,20 @@ public final class DpsCalculator
 			roll = roll * (200 + inq) / 200;
 			max = max * (200 + inq) / 200;
 		}
-		long def = (long) (val(m.getDefenceLevel()) + 9) * (defenceBonus(m, style.getType()) + 64);
-		double hit = hitChance(roll, def);
-		if (weapon.startsWith("osmumten's fang") && style.getType() == AttackStyle.Type.STAB)
+		if (weapon.startsWith("colossal blade"))
 		{
-			hit = 1 - (1 - hit) * (1 - hit);
+			max += 2 * Math.min(val(m.getSize()), 5);
 		}
+		long def = (long) (val(m.getDefenceLevel()) + 9) * (defenceBonus(m, style.getType()) + 64);
+		double hit = weapon.startsWith("osmumten's fang") && style.getType() == AttackStyle.Type.STAB
+			? fangHitChance(roll, def) : hitChance(roll, def);
 		int speed = speed(g, style);
 		double perHit = max / 2.0;
+		if (keris)
+		{
+			// 1 in 51 hits goes through the chitin for triple damage.
+			perHit *= 1 + 2.0 / 51;
+		}
 		if (weapon.startsWith("scythe of vitur") || weapon.contains("scythe of vitur"))
 		{
 			int size = val(m.getSize());
@@ -194,10 +202,12 @@ public final class DpsCalculator
 		}
 		if (type == AttackStyle.Type.RANGED)
 		{
-			return p.isRigourUnlocked() && p.getPrayer() >= 74 && p.getDefence() >= 70 ? "Rigour" : p.getPrayer() >= 44 ? "Eagle Eye"
+			return p.isRigourUnlocked() && p.getPrayer() >= 74 && p.getDefence() >= 70 ? "Rigour"
+				: p.isDeadeyeUnlocked() && p.getPrayer() >= 62 ? "Deadeye" : p.getPrayer() >= 44 ? "Eagle Eye"
 				: p.getPrayer() >= 26 ? "Hawk Eye" : p.getPrayer() >= 8 ? "Sharp Eye" : null;
 		}
-		return p.isAuguryUnlocked() && p.getPrayer() >= 77 && p.getDefence() >= 70 ? "Augury" : p.getPrayer() >= 45 ? "Mystic Might"
+		return p.isAuguryUnlocked() && p.getPrayer() >= 77 && p.getDefence() >= 70 ? "Augury"
+			: p.isMysticVigourUnlocked() && p.getPrayer() >= 63 ? "Mystic Vigour" : p.getPrayer() >= 45 ? "Mystic Might"
 			: p.getPrayer() >= 27 ? "Mystic Lore" : p.getPrayer() >= 9 ? "Mystic Will" : null;
 	}
 
@@ -274,7 +284,19 @@ public final class DpsCalculator
 		long def = (long) (val(m.getDefenceLevel()) + 9) * (rangedDefence(m, g.category()) + 64);
 		int speed = speed(g, style);
 		double hit = hitChance(roll, def);
-		return new Result(hit * max / 2.0 / (speed * 0.6), max, hit, speed);
+		double perAttack = hit * max / 2.0;
+		String ammo = g.category().equals("crossbow") ? g.name(Gear.AMMO) : "";
+		if (ammo.startsWith("diamond") && ammo.endsWith("(e)"))
+		{
+			// Armour Piercing: 10% of shots always hit, with a 15% higher max hit (no hard Kandarin diary assumed).
+			perAttack = 0.1 * (max * 115 / 100) / 2.0 + 0.9 * perAttack;
+		}
+		else if (ammo.startsWith("ruby") && ammo.endsWith("(e)"))
+		{
+			// Blood Forfeit: 6% of shots deal 20% of the target's hitpoints (full health assumed), at most 100.
+			perAttack = 0.06 * Math.min(100, val(m.getHitpoints()) / 5) + 0.94 * perAttack;
+		}
+		return new Result(perAttack / (speed * 0.6), max, hit, speed);
 	}
 
 	private static int[] rangedPrayer(PlayerStats p)
@@ -287,7 +309,8 @@ public final class DpsCalculator
 		{
 			return new int[]{120, 123};
 		}
-		int f = p.getPrayer() >= 44 ? 115 : p.getPrayer() >= 26 ? 110 : p.getPrayer() >= 8 ? 105 : 100;
+		int f = p.isDeadeyeUnlocked() && p.getPrayer() >= 62 ? 118
+			: p.getPrayer() >= 44 ? 115 : p.getPrayer() >= 26 ? 110 : p.getPrayer() >= 8 ? 105 : 100;
 		return new int[]{f, f};
 	}
 
@@ -319,12 +342,14 @@ public final class DpsCalculator
 		{
 			return NONE;
 		}
-		int prayer = magicPrayer(p);
-		int effAtk = lvl * prayer / 100 + (powered && style.getStance() == AttackStyle.Stance.ACCURATE ? 2 : 0) + 9;
+		int[] prayer = magicPrayer(p);
+		// Damage per second/Magic: floor(level x prayer), x1.45 for void, +3 accurate / +1 longrange on a powered staff, +8.
+		int effAtk = lvl * prayer[0] / 100;
 		if (voidSet(g, "void mage helm"))
 		{
 			effAtk = effAtk * 29 / 20;
 		}
+		effAtk += (!powered ? 0 : style.getStance() == AttackStyle.Stance.ACCURATE ? 3 : style.getStance() == AttackStyle.Stance.LONGRANGE ? 1 : 0) + 8;
 		boolean shadow = weapon.startsWith("tumeken's shadow");
 		int magicBonus = g.attackBonus(AttackStyle.Type.MAGIC) * (shadow ? 3 : 1);
 		long baseRoll = (long) effAtk * (magicBonus + 64);
@@ -336,8 +361,9 @@ public final class DpsCalculator
 		}
 		if (voidSet(g, "void mage helm") && eliteVoid(g))
 		{
-			dmg += 25;
+			dmg += 50;
 		}
+		dmg += prayer[1];
 		String neck = g.name(Gear.NECK);
 		boolean helm = false;
 		if (neck.startsWith("salve amulet(ei)") && m.is("undead"))
@@ -362,30 +388,37 @@ public final class DpsCalculator
 		int weakness = element != null && element.equals(m.getWeakness()) ? val(m.getWeaknessPercent()) : 0;
 		roll += baseRoll * weakness / 100;
 
-		int max = base + base * dmg / 1000;
+		// Gear, prayer and salve add up; the weakness is added on; the Slayer helmet multiplies the lot.
+		int max = base + base * dmg / 1000 + base * weakness / 100;
 		if (helm)
 		{
 			max = max * 23 / 20;
 		}
-		max += base * weakness / 100;
 
 		long def = (long) (val(m.getMagicLevel()) + 9) * (val(m.getMagic()) + 64);
 		int speed = powered ? speed(g, style) : 5;
 		double hit = hitChance(roll, def);
-		return new Result(hit * max / 2.0 / (speed * 0.6), max, hit, speed);
+		// A successful magic hit that rolls 0 deals 1.
+		return new Result(hit * (max / 2.0 + 1.0 / (max + 1)) / (speed * 0.6), max, hit, speed);
 	}
 
-	private static int magicPrayer(PlayerStats p)
+	/** Magic accuracy multiplier (percent) and magic damage bonus (tenths of a percent) of the best prayer. */
+	private static int[] magicPrayer(PlayerStats p)
 	{
 		if (!p.isPrayers())
 		{
-			return 100;
+			return new int[]{100, 0};
 		}
 		if (p.isAuguryUnlocked() && p.getPrayer() >= 77 && p.getDefence() >= 70)
 		{
-			return 125;
+			return new int[]{125, 40};
 		}
-		return p.getPrayer() >= 45 ? 115 : p.getPrayer() >= 27 ? 110 : p.getPrayer() >= 9 ? 105 : 100;
+		if (p.isMysticVigourUnlocked() && p.getPrayer() >= 63)
+		{
+			return new int[]{118, 30};
+		}
+		return p.getPrayer() >= 45 ? new int[]{115, 20} : p.getPrayer() >= 27 ? new int[]{110, 10}
+			: p.getPrayer() >= 9 ? new int[]{105, 0} : new int[]{100, 0};
 	}
 
 	/** Built-in spell max hit of a powered staff at this magic level; 0 when the staff is not modelled or uncharged. */
@@ -447,6 +480,21 @@ public final class DpsCalculator
 	}
 
 	// ---------------------------------------------------------------- shared
+
+	/**
+	 * Osmumten's fang (stab, outside the Tombs of Amascut) rolls accuracy twice against one defence
+	 * roll; the exact chance from the wiki's formula.
+	 */
+	static double fangHitChance(long attack, long defence)
+	{
+		double a = attack;
+		double d = defence;
+		if (attack >= defence)
+		{
+			return 1 - (d + 2) * (2 * d + 3) / (6 * (a + 1) * (a + 1));
+		}
+		return a * (4 * a + 5) / (6 * (a + 1) * (d + 1));
+	}
 
 	/** The game's hit chance from the two rolls. */
 	static double hitChance(long attack, long defence)
