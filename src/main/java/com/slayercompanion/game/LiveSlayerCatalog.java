@@ -33,12 +33,13 @@ import lombok.Value;
 import lombok.extern.slf4j.Slf4j;
 import net.runelite.api.Client;
 import net.runelite.api.gameval.DBTableID;
+import net.runelite.api.gameval.VarPlayerID;
 import net.runelite.api.gameval.VarbitID;
 
 /**
  * Reads Slayer reference data that the game client already carries in its cache database tables:
- * the Slayer reward unlocks with their point costs. This is always current with the game, so it
- * is preferred over the bundled wiki snapshot wherever both exist.
+ * the Slayer reward unlocks with their point costs, and whether each is on. This is always current
+ * with the game, so it is preferred over the bundled wiki snapshot wherever both exist.
  * <p>
  * Every method must be called on the client thread. Results are cached per session.
  */
@@ -52,16 +53,25 @@ public class LiveSlayerCatalog
 		String name;
 		String description;
 		int cost;
-		/** Value of {@code SlayerUnlock.COL_BIT}; expected to be a varbit id, see {@link #isUnlocked}. */
+		/** Value of {@code SlayerUnlock.COL_BIT}: an index into the reward-unlock bits, see {@link #isUnlocked}; -1 when missing. */
 		int bit;
 		int listPosition;
 	}
 
+	/**
+	 * The varps that hold the reward-unlock bits, 32 to a varp: bit {@code n} is bit {@code n % 32} of
+	 * {@code UNLOCK_VARPS[n / 32]}. Every unlock varbit RuneLite names sits exactly there (checked against
+	 * the game cache), e.g. Bigger and Badder is bit 35, bit 3 of {@code SLAYER_REWARDS_UNLOCKS1}.
+	 */
+	private static final int[] UNLOCK_VARPS = {
+		VarPlayerID.SLAYER_REWARDS_UNLOCKS, VarPlayerID.SLAYER_REWARDS_UNLOCKS1, VarPlayerID.SLAYER_REWARDS_UNLOCKS2,
+	};
+
 	private final Client client;
 
 	private List<Unlock> unlocks;
-	/** True once the "Bigger and Badder" row's bit matched its known varbit id. */
-	private boolean bitsAreVarbits;
+	/** The "Bigger and Badder" row, whose bit is cross-checked against the varbit RuneLite names for it. */
+	private Unlock sanityRow;
 
 	@Inject
 	LiveSlayerCatalog(Client client)
@@ -85,24 +95,41 @@ public class LiveSlayerCatalog
 	}
 
 	/**
-	 * Whether an unlock is owned. {@code COL_BIT} is treated as a varbit id; a value that is not a
-	 * plausible varbit (0 or negative) yields {@code null} meaning unknown.
+	 * Whether an unlock's bit is set, which is how the reward shop records it. {@code null} means
+	 * unknown: the bit is out of range, the vars cannot be read, or the "Bigger and Badder" bit
+	 * disagrees with its own varbit (the layout would then have changed).
 	 */
 	public Boolean isUnlocked(Unlock unlock)
 	{
 		unlocks();
-		if (!bitsAreVarbits || unlock.getBit() <= 0)
-		{
-			return null;
-		}
 		try
 		{
-			return client.getVarbitValue(unlock.getBit()) != 0;
+			boolean superiors = client.getVarbitValue(VarbitID.SLAYER_UNLOCK_SUPERIORMOBS) != 0;
+			if (sanityRow == null || !Boolean.valueOf(superiors).equals(bitSet(sanityRow.getBit())))
+			{
+				return null;
+			}
+			return bitSet(unlock.getBit());
 		}
 		catch (RuntimeException e)
 		{
 			return null;
 		}
+	}
+
+	private Boolean bitSet(int bit)
+	{
+		if (bit < 0 || bit >= UNLOCK_VARPS.length * 32)
+		{
+			return null;
+		}
+		return bitSet(client.getVarpValue(UNLOCK_VARPS[bit / 32]), bit);
+	}
+
+	/** Bit {@code bit % 32} of one unlock varp's value. */
+	static boolean bitSet(int varpValue, int bit)
+	{
+		return (varpValue >>> (bit % 32) & 1) != 0;
 	}
 
 	private List<Unlock> readUnlocks()
@@ -121,9 +148,9 @@ public class LiveSlayerCatalog
 				out.add(new Unlock(
 					(String) name[0],
 					desc == null || desc.length == 0 ? "" : String.valueOf(desc[0]),
-					intField(row, DBTableID.SlayerUnlock.COL_COST),
-					intField(row, DBTableID.SlayerUnlock.COL_BIT),
-					intField(row, DBTableID.SlayerUnlock.COL_LIST_POSITION)));
+					intField(row, DBTableID.SlayerUnlock.COL_COST, 0),
+					intField(row, DBTableID.SlayerUnlock.COL_BIT, -1),
+					listPosition(row)));
 			}
 		}
 		catch (RuntimeException e)
@@ -131,28 +158,41 @@ public class LiveSlayerCatalog
 			log.debug("Could not read slayer unlocks from cache", e);
 		}
 		out.sort((a, b) -> Integer.compare(a.getListPosition(), b.getListPosition()));
-		// The cache column is assumed to hold varbit ids; prove it on a row whose varbit RuneLite names.
-		bitsAreVarbits = false;
+		// Prove the bit layout at run time on the one row whose varbit RuneLite names.
+		sanityRow = null;
 		for (Unlock u : out)
 		{
 			if ("biggerandbadder".equals(u.getName().toLowerCase().replaceAll("[^a-z0-9]", "")))
 			{
-				bitsAreVarbits = u.getBit() == VarbitID.SLAYER_UNLOCK_SUPERIORMOBS;
+				sanityRow = u;
 			}
 		}
-		if (!bitsAreVarbits)
+		if (sanityRow == null)
 		{
-			log.debug("SlayerUnlock.COL_BIT does not look like a varbit id; owned state unavailable");
+			log.debug("No Bigger and Badder row in SlayerUnlock; owned state unavailable");
 		}
 		return Collections.unmodifiableList(out);
 	}
 
-	private int intField(int row, int column)
+	/** {@code COL_LIST_POSITION} is (shop page, position on the page): unlocks come before extensions. */
+	private int listPosition(int row)
+	{
+		Object[] v = client.getDBTableField(row, DBTableID.SlayerUnlock.COL_LIST_POSITION, 0);
+		if (v == null || v.length == 0 || !(v[0] instanceof Integer))
+		{
+			return 0;
+		}
+		int page = (Integer) v[0];
+		int position = v.length > 1 && v[1] instanceof Integer ? (Integer) v[1] : 0;
+		return page * 1000 + position;
+	}
+
+	private int intField(int row, int column, int missing)
 	{
 		Object[] v = client.getDBTableField(row, column, 0);
 		if (v == null || v.length == 0 || !(v[0] instanceof Integer))
 		{
-			return 0;
+			return missing;
 		}
 		return (Integer) v[0];
 	}

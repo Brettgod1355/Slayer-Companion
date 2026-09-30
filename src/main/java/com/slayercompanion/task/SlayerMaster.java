@@ -31,10 +31,11 @@ import net.runelite.api.coords.WorldPoint;
 /**
  * Slayer masters keyed by the value of {@code VarbitID.SLAYER_MASTER}.
  * <p>
- * Values 7 (Krystilia) and 10 (Mortimer) are used by RuneLite's core Slayer plugin. The remaining
- * values follow the order the game lists masters in and match the SlayerPlus plugin's catalogue;
- * they are not confirmed by RuneLite source, so anything keyed on them degrades gracefully when
- * {@link #fromVarbit(int)} returns {@code null}.
+ * All ten values are confirmed against the game cache: they are the {@code COL_MASTER_ID} values of
+ * the {@code SlayerMasterTask} table (each master's rows hold exactly that master's tasks), and the
+ * client scripts that price skips and blocks and show Mortimer's task choice switch on the same
+ * numbers. RuneLite's core Slayer plugin also uses 7 (Krystilia) and 10 (Mortimer). Anything keyed
+ * on them still degrades gracefully when {@link #fromVarbit(int)} returns {@code null}.
  */
 @Getter
 public enum SlayerMaster

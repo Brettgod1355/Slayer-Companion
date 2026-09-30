@@ -56,11 +56,21 @@ public final class VerdictAdvisor
 			{
 				int block = master.getBlockCost();
 				notes.add(points >= block
-					? "Blocking costs " + block + " points and stops this task coming back."
+					? "Blocking costs " + block + " points and stops " + blockList(master) + " assigning it again."
 					: "Blocking costs " + block + " points; you have " + points + ", not enough.");
+				if (master.getBlockSlots() != null)
+				{
+					notes.add(master.getName() + " has only " + master.getBlockSlots() + " block slots.");
+				}
 			}
 		}
 		return new Verdict(kind, wiki == null || wiki.trim().isEmpty() ? null : wiki.trim(), notes);
+	}
+
+	/** Who a block applies to: each master keeps a block list, except that Turael (and Aya) share Spria's. */
+	private static String blockList(MasterInfo master)
+	{
+		return "turael".equals(master.getId()) || "spria".equals(master.getId()) ? "Turael and Spria" : master.getName();
 	}
 
 	/**

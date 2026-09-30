@@ -1,0 +1,2400 @@
+{
+  "_about": "Assignment weight and amounts per task and Slayer master, read from the game cache: DB table 114 (SlayerMasterTask: COL_WEIGHT, COL_MIN_AMOUNT, COL_MAX_AMOUNT) and table 113 (SlayerTask: COL_EXTENSION_MIN_MAX, or COL_EXTENSION_ADDITIVE added to the master's range). generate.py (tidy_tasks) replaces each task's wiki-parsed 'masters' with these. In game the plugin reads the same tables live; this snapshot is the fallback. Regenerate when a game update changes assignments.",
+  "source": "OpenRS2 archive cache 2720",
+  "tasks": {
+    "Aberrant spectres": {
+      "chaeldar": {
+        "weight": 8,
+        "min": 70,
+        "max": 130,
+        "extMin": 200,
+        "extMax": 250,
+        "extUnlock": "Smell Ya Later"
+      },
+      "duradel": {
+        "weight": 7,
+        "min": 130,
+        "max": 200,
+        "extMin": 200,
+        "extMax": 250,
+        "extUnlock": "Smell Ya Later"
+      },
+      "konar": {
+        "weight": 6,
+        "min": 120,
+        "max": 170,
+        "extMin": 200,
+        "extMax": 250,
+        "extUnlock": "Smell Ya Later"
+      },
+      "mortimer": {
+        "weight": 10,
+        "min": 80,
+        "max": 120,
+        "extMin": 200,
+        "extMax": 250,
+        "extUnlock": "Smell Ya Later"
+      },
+      "nieve": {
+        "weight": 6,
+        "min": 120,
+        "max": 185,
+        "extMin": 200,
+        "extMax": 250,
+        "extUnlock": "Smell Ya Later"
+      },
+      "vannaka": {
+        "weight": 8,
+        "min": 40,
+        "max": 90,
+        "extMin": 200,
+        "extMax": 250,
+        "extUnlock": "Smell Ya Later"
+      }
+    },
+    "Abyssal demons": {
+      "chaeldar": {
+        "weight": 12,
+        "min": 70,
+        "max": 130,
+        "extMin": 200,
+        "extMax": 250,
+        "extUnlock": "Augment My Abbies"
+      },
+      "duradel": {
+        "weight": 12,
+        "min": 130,
+        "max": 200,
+        "extMin": 200,
+        "extMax": 250,
+        "extUnlock": "Augment My Abbies"
+      },
+      "konar": {
+        "weight": 9,
+        "min": 120,
+        "max": 170,
+        "extMin": 200,
+        "extMax": 250,
+        "extUnlock": "Augment My Abbies"
+      },
+      "krystilia": {
+        "weight": 5,
+        "min": 75,
+        "max": 125,
+        "extMin": 200,
+        "extMax": 250,
+        "extUnlock": "Augment My Abbies"
+      },
+      "mortimer": {
+        "weight": 8,
+        "min": 120,
+        "max": 180,
+        "extMin": 200,
+        "extMax": 250,
+        "extUnlock": "Augment My Abbies"
+      },
+      "nieve": {
+        "weight": 9,
+        "min": 120,
+        "max": 185,
+        "extMin": 200,
+        "extMax": 250,
+        "extUnlock": "Augment My Abbies"
+      },
+      "vannaka": {
+        "weight": 5,
+        "min": 40,
+        "max": 90,
+        "extMin": 200,
+        "extMax": 250,
+        "extUnlock": "Augment My Abbies"
+      }
+    },
+    "Ankou": {
+      "duradel": {
+        "weight": 5,
+        "min": 50,
+        "max": 80,
+        "extMin": 91,
+        "extMax": 150,
+        "extUnlock": "Ankou Very Much"
+      },
+      "konar": {
+        "weight": 5,
+        "min": 50,
+        "max": 50,
+        "extMin": 91,
+        "extMax": 150,
+        "extUnlock": "Ankou Very Much"
+      },
+      "krystilia": {
+        "weight": 6,
+        "min": 75,
+        "max": 125,
+        "extMin": 91,
+        "extMax": 150,
+        "extUnlock": "Ankou Very Much"
+      },
+      "nieve": {
+        "weight": 5,
+        "min": 50,
+        "max": 90,
+        "extMin": 91,
+        "extMax": 150,
+        "extUnlock": "Ankou Very Much"
+      },
+      "vannaka": {
+        "weight": 8,
+        "min": 25,
+        "max": 35,
+        "extMin": 91,
+        "extMax": 150,
+        "extUnlock": "Ankou Very Much"
+      }
+    },
+    "Aquanites": {
+      "duradel": {
+        "weight": 5,
+        "min": 30,
+        "max": 50,
+        "extMin": 150,
+        "extMax": 200,
+        "extUnlock": "Let's Stay All Aquanite"
+      },
+      "mortimer": {
+        "weight": 10,
+        "min": 40,
+        "max": 60,
+        "extMin": 150,
+        "extMax": 200,
+        "extUnlock": "Let's Stay All Aquanite"
+      },
+      "nieve": {
+        "weight": 5,
+        "min": 40,
+        "max": 60,
+        "extMin": 150,
+        "extMax": 200,
+        "extUnlock": "Let's Stay All Aquanite"
+      }
+    },
+    "Araxytes": {
+      "duradel": {
+        "weight": 10,
+        "min": 60,
+        "max": 80,
+        "extMin": 200,
+        "extMax": 250,
+        "extUnlock": "More eyes than sense"
+      },
+      "mortimer": {
+        "weight": 8,
+        "min": 120,
+        "max": 180,
+        "extMin": 200,
+        "extMax": 250,
+        "extUnlock": "More eyes than sense"
+      },
+      "nieve": {
+        "weight": 8,
+        "min": 40,
+        "max": 60,
+        "extMin": 200,
+        "extMax": 250,
+        "extUnlock": "More eyes than sense"
+      }
+    },
+    "Aviansies": {
+      "chaeldar": {
+        "weight": 9,
+        "min": 70,
+        "max": 130,
+        "extMin": 200,
+        "extMax": 250,
+        "extUnlock": "Birds of a Feather"
+      },
+      "duradel": {
+        "weight": 8,
+        "min": 120,
+        "max": 200,
+        "extMin": 200,
+        "extMax": 250,
+        "extUnlock": "Birds of a Feather"
+      },
+      "konar": {
+        "weight": 6,
+        "min": 120,
+        "max": 170,
+        "extMin": 200,
+        "extMax": 250,
+        "extUnlock": "Birds of a Feather"
+      },
+      "krystilia": {
+        "weight": 7,
+        "min": 75,
+        "max": 125,
+        "extMin": 200,
+        "extMax": 250,
+        "extUnlock": "Birds of a Feather"
+      },
+      "nieve": {
+        "weight": 6,
+        "min": 120,
+        "max": 185,
+        "extMin": 200,
+        "extMax": 250,
+        "extUnlock": "Birds of a Feather"
+      }
+    },
+    "Bandits": {
+      "krystilia": {
+        "weight": 4,
+        "min": 75,
+        "max": 125
+      }
+    },
+    "Banshees": {
+      "mazchna": {
+        "weight": 8,
+        "min": 30,
+        "max": 50
+      },
+      "mortimer": {
+        "weight": 10,
+        "min": 35,
+        "max": 50
+      },
+      "spria": {
+        "weight": 8,
+        "min": 15,
+        "max": 30
+      },
+      "turael": {
+        "weight": 8,
+        "min": 15,
+        "max": 30
+      }
+    },
+    "Basilisks": {
+      "chaeldar": {
+        "weight": 7,
+        "min": 70,
+        "max": 130,
+        "extMin": 200,
+        "extMax": 250,
+        "extUnlock": "Basilonger"
+      },
+      "duradel": {
+        "weight": 7,
+        "min": 130,
+        "max": 200,
+        "extMin": 200,
+        "extMax": 250,
+        "extUnlock": "Basilonger"
+      },
+      "konar": {
+        "weight": 5,
+        "min": 110,
+        "max": 170,
+        "extMin": 200,
+        "extMax": 250,
+        "extUnlock": "Basilonger"
+      },
+      "mortimer": {
+        "weight": 10,
+        "min": 40,
+        "max": 60,
+        "extMin": 200,
+        "extMax": 250,
+        "extUnlock": "Basilonger"
+      },
+      "nieve": {
+        "weight": 6,
+        "min": 120,
+        "max": 185,
+        "extMin": 200,
+        "extMax": 250,
+        "extUnlock": "Basilonger"
+      },
+      "vannaka": {
+        "weight": 8,
+        "min": 40,
+        "max": 90,
+        "extMin": 200,
+        "extMax": 250,
+        "extUnlock": "Basilonger"
+      }
+    },
+    "Bats": {
+      "mazchna": {
+        "weight": 7,
+        "min": 30,
+        "max": 50
+      },
+      "spria": {
+        "weight": 7,
+        "min": 15,
+        "max": 30
+      },
+      "turael": {
+        "weight": 7,
+        "min": 15,
+        "max": 30
+      }
+    },
+    "Bears": {
+      "krystilia": {
+        "weight": 6,
+        "min": 65,
+        "max": 100
+      },
+      "mazchna": {
+        "weight": 6,
+        "min": 30,
+        "max": 50
+      },
+      "spria": {
+        "weight": 7,
+        "min": 10,
+        "max": 20
+      },
+      "turael": {
+        "weight": 7,
+        "min": 10,
+        "max": 20
+      }
+    },
+    "Birds": {
+      "spria": {
+        "weight": 6,
+        "min": 15,
+        "max": 30
+      },
+      "turael": {
+        "weight": 6,
+        "min": 15,
+        "max": 30
+      }
+    },
+    "Black Knights": {
+      "krystilia": {
+        "weight": 3,
+        "min": 75,
+        "max": 125
+      }
+    },
+    "Black demons": {
+      "chaeldar": {
+        "weight": 10,
+        "min": 70,
+        "max": 130,
+        "extMin": 200,
+        "extMax": 250,
+        "extUnlock": "It's Dark in Here"
+      },
+      "duradel": {
+        "weight": 8,
+        "min": 130,
+        "max": 200,
+        "extMin": 200,
+        "extMax": 250,
+        "extUnlock": "It's Dark in Here"
+      },
+      "konar": {
+        "weight": 9,
+        "min": 120,
+        "max": 170,
+        "extMin": 200,
+        "extMax": 250,
+        "extUnlock": "It's Dark in Here"
+      },
+      "krystilia": {
+        "weight": 7,
+        "min": 100,
+        "max": 150,
+        "extMin": 200,
+        "extMax": 250,
+        "extUnlock": "It's Dark in Here"
+      },
+      "nieve": {
+        "weight": 9,
+        "min": 120,
+        "max": 185,
+        "extMin": 200,
+        "extMax": 250,
+        "extUnlock": "It's Dark in Here"
+      }
+    },
+    "Black dragons": {
+      "duradel": {
+        "weight": 9,
+        "min": 10,
+        "max": 20,
+        "extMin": 40,
+        "extMax": 60,
+        "extUnlock": "Fire & Darkness"
+      },
+      "konar": {
+        "weight": 6,
+        "min": 10,
+        "max": 15,
+        "extMin": 40,
+        "extMax": 60,
+        "extUnlock": "Fire & Darkness"
+      },
+      "krystilia": {
+        "weight": 4,
+        "min": 8,
+        "max": 16,
+        "extMin": 40,
+        "extMax": 60,
+        "extUnlock": "Fire & Darkness"
+      },
+      "nieve": {
+        "weight": 6,
+        "min": 10,
+        "max": 20,
+        "extMin": 40,
+        "extMax": 60,
+        "extUnlock": "Fire & Darkness"
+      }
+    },
+    "Bloodveld": {
+      "chaeldar": {
+        "weight": 8,
+        "min": 70,
+        "max": 130,
+        "extMin": 200,
+        "extMax": 250,
+        "extUnlock": "Bleed Me Dry"
+      },
+      "duradel": {
+        "weight": 8,
+        "min": 130,
+        "max": 200,
+        "extMin": 200,
+        "extMax": 250,
+        "extUnlock": "Bleed Me Dry"
+      },
+      "konar": {
+        "weight": 9,
+        "min": 120,
+        "max": 170,
+        "extMin": 200,
+        "extMax": 250,
+        "extUnlock": "Bleed Me Dry"
+      },
+      "krystilia": {
+        "weight": 4,
+        "min": 70,
+        "max": 110,
+        "extMin": 200,
+        "extMax": 250,
+        "extUnlock": "Bleed Me Dry"
+      },
+      "mortimer": {
+        "weight": 8,
+        "min": 120,
+        "max": 180,
+        "extMin": 200,
+        "extMax": 250,
+        "extUnlock": "Bleed Me Dry"
+      },
+      "nieve": {
+        "weight": 9,
+        "min": 120,
+        "max": 185,
+        "extMin": 200,
+        "extMax": 250,
+        "extUnlock": "Bleed Me Dry"
+      },
+      "vannaka": {
+        "weight": 8,
+        "min": 40,
+        "max": 90,
+        "extMin": 200,
+        "extMax": 250,
+        "extUnlock": "Bleed Me Dry"
+      }
+    },
+    "Blue dragons": {
+      "chaeldar": {
+        "weight": 8,
+        "min": 70,
+        "max": 130
+      },
+      "duradel": {
+        "weight": 4,
+        "min": 110,
+        "max": 170
+      },
+      "konar": {
+        "weight": 4,
+        "min": 120,
+        "max": 170
+      },
+      "nieve": {
+        "weight": 4,
+        "min": 120,
+        "max": 185
+      },
+      "vannaka": {
+        "weight": 7,
+        "min": 40,
+        "max": 90
+      }
+    },
+    "Brine rats": {
+      "chaeldar": {
+        "weight": 7,
+        "min": 70,
+        "max": 130
+      },
+      "konar": {
+        "weight": 2,
+        "min": 120,
+        "max": 170
+      },
+      "nieve": {
+        "weight": 3,
+        "min": 120,
+        "max": 185
+      },
+      "vannaka": {
+        "weight": 7,
+        "min": 40,
+        "max": 90
+      }
+    },
+    "Catablepon": {
+      "mazchna": {
+        "weight": 8,
+        "min": 20,
+        "max": 30
+      }
+    },
+    "Cave bugs": {
+      "mazchna": {
+        "weight": 8,
+        "min": 10,
+        "max": 20
+      },
+      "spria": {
+        "weight": 8,
+        "min": 10,
+        "max": 30
+      },
+      "turael": {
+        "weight": 8,
+        "min": 10,
+        "max": 30
+      }
+    },
+    "Cave crawlers": {
+      "mazchna": {
+        "weight": 8,
+        "min": 30,
+        "max": 50
+      },
+      "mortimer": {
+        "weight": 10,
+        "min": 35,
+        "max": 50
+      },
+      "spria": {
+        "weight": 8,
+        "min": 15,
+        "max": 30
+      },
+      "turael": {
+        "weight": 8,
+        "min": 15,
+        "max": 30
+      }
+    },
+    "Cave horrors": {
+      "chaeldar": {
+        "weight": 10,
+        "min": 70,
+        "max": 130,
+        "extMin": 200,
+        "extMax": 250,
+        "extUnlock": "Horrorific"
+      },
+      "duradel": {
+        "weight": 4,
+        "min": 130,
+        "max": 200,
+        "extMin": 200,
+        "extMax": 250,
+        "extUnlock": "Horrorific"
+      },
+      "mortimer": {
+        "weight": 10,
+        "min": 80,
+        "max": 120,
+        "extMin": 200,
+        "extMax": 250,
+        "extUnlock": "Horrorific"
+      },
+      "nieve": {
+        "weight": 5,
+        "min": 120,
+        "max": 180,
+        "extMin": 200,
+        "extMax": 250,
+        "extUnlock": "Horrorific"
+      }
+    },
+    "Cave kraken": {
+      "chaeldar": {
+        "weight": 12,
+        "min": 30,
+        "max": 50,
+        "extMin": 150,
+        "extMax": 200,
+        "extUnlock": "Krack On"
+      },
+      "duradel": {
+        "weight": 9,
+        "min": 100,
+        "max": 120,
+        "extMin": 150,
+        "extMax": 200,
+        "extUnlock": "Krack On"
+      },
+      "konar": {
+        "weight": 9,
+        "min": 80,
+        "max": 100,
+        "extMin": 150,
+        "extMax": 200,
+        "extUnlock": "Krack On"
+      },
+      "nieve": {
+        "weight": 6,
+        "min": 100,
+        "max": 120,
+        "extMin": 150,
+        "extMax": 200,
+        "extUnlock": "Krack On"
+      }
+    },
+    "Cave slimes": {
+      "mazchna": {
+        "weight": 8,
+        "min": 10,
+        "max": 20
+      },
+      "spria": {
+        "weight": 8,
+        "min": 10,
+        "max": 20
+      },
+      "turael": {
+        "weight": 8,
+        "min": 10,
+        "max": 20
+      }
+    },
+    "Chaos druids": {
+      "krystilia": {
+        "weight": 5,
+        "min": 50,
+        "max": 90
+      }
+    },
+    "Cockatrice": {
+      "mazchna": {
+        "weight": 8,
+        "min": 30,
+        "max": 50
+      },
+      "mortimer": {
+        "weight": 10,
+        "min": 35,
+        "max": 50
+      },
+      "vannaka": {
+        "weight": 8,
+        "min": 40,
+        "max": 90
+      }
+    },
+    "Cows": {
+      "spria": {
+        "weight": 8,
+        "min": 15,
+        "max": 30
+      },
+      "turael": {
+        "weight": 8,
+        "min": 15,
+        "max": 30
+      }
+    },
+    "Crabs": {
+      "chaeldar": {
+        "weight": 8,
+        "min": 70,
+        "max": 130
+      },
+      "mazchna": {
+        "weight": 8,
+        "min": 30,
+        "max": 50
+      },
+      "vannaka": {
+        "weight": 8,
+        "min": 40,
+        "max": 90
+      }
+    },
+    "Crawling hands": {
+      "mazchna": {
+        "weight": 8,
+        "min": 30,
+        "max": 50
+      },
+      "mortimer": {
+        "weight": 10,
+        "min": 35,
+        "max": 50
+      },
+      "spria": {
+        "weight": 8,
+        "min": 15,
+        "max": 30
+      },
+      "turael": {
+        "weight": 8,
+        "min": 15,
+        "max": 30
+      }
+    },
+    "Crocodiles": {
+      "vannaka": {
+        "weight": 6,
+        "min": 40,
+        "max": 90
+      }
+    },
+    "Custodian Stalkers": {
+      "chaeldar": {
+        "weight": 11,
+        "min": 70,
+        "max": 130,
+        "extMin": 200,
+        "extMax": 250,
+        "extUnlock": "Un-restraining Order"
+      },
+      "mortimer": {
+        "weight": 8,
+        "min": 80,
+        "max": 120,
+        "extMin": 200,
+        "extMax": 250,
+        "extUnlock": "Un-restraining Order"
+      },
+      "nieve": {
+        "weight": 8,
+        "min": 110,
+        "max": 170,
+        "extMin": 200,
+        "extMax": 250,
+        "extUnlock": "Un-restraining Order"
+      }
+    },
+    "Dagannoth": {
+      "chaeldar": {
+        "weight": 11,
+        "min": 70,
+        "max": 130
+      },
+      "duradel": {
+        "weight": 9,
+        "min": 130,
+        "max": 200
+      },
+      "konar": {
+        "weight": 8,
+        "min": 120,
+        "max": 170
+      },
+      "nieve": {
+        "weight": 8,
+        "min": 120,
+        "max": 185
+      },
+      "vannaka": {
+        "weight": 7,
+        "min": 40,
+        "max": 90
+      }
+    },
+    "Dark beasts": {
+      "duradel": {
+        "weight": 11,
+        "min": 10,
+        "max": 20,
+        "extMin": 110,
+        "extMax": 135,
+        "extUnlock": "Need More Darkness"
+      },
+      "konar": {
+        "weight": 5,
+        "min": 10,
+        "max": 15,
+        "extMin": 110,
+        "extMax": 135,
+        "extUnlock": "Need More Darkness"
+      },
+      "mortimer": {
+        "weight": 10,
+        "min": 40,
+        "max": 60,
+        "extMin": 110,
+        "extMax": 135,
+        "extUnlock": "Need More Darkness"
+      },
+      "nieve": {
+        "weight": 5,
+        "min": 10,
+        "max": 20,
+        "extMin": 110,
+        "extMax": 135,
+        "extUnlock": "Need More Darkness"
+      }
+    },
+    "Dark warriors": {
+      "krystilia": {
+        "weight": 4,
+        "min": 75,
+        "max": 125
+      }
+    },
+    "Dogs": {
+      "mazchna": {
+        "weight": 7,
+        "min": 30,
+        "max": 50
+      },
+      "spria": {
+        "weight": 7,
+        "min": 15,
+        "max": 30
+      },
+      "turael": {
+        "weight": 7,
+        "min": 15,
+        "max": 30
+      }
+    },
+    "Drakes": {
+      "duradel": {
+        "weight": 8,
+        "min": 50,
+        "max": 110
+      },
+      "konar": {
+        "weight": 10,
+        "min": 75,
+        "max": 140
+      },
+      "mortimer": {
+        "weight": 10,
+        "min": 40,
+        "max": 60
+      },
+      "nieve": {
+        "weight": 7,
+        "min": 30,
+        "max": 95
+      }
+    },
+    "Dust devils": {
+      "chaeldar": {
+        "weight": 9,
+        "min": 70,
+        "max": 130,
+        "extMin": 200,
+        "extMax": 250,
+        "extUnlock": "To Dust You Shall Return"
+      },
+      "duradel": {
+        "weight": 5,
+        "min": 130,
+        "max": 200,
+        "extMin": 200,
+        "extMax": 250,
+        "extUnlock": "To Dust You Shall Return"
+      },
+      "konar": {
+        "weight": 6,
+        "min": 120,
+        "max": 170,
+        "extMin": 200,
+        "extMax": 250,
+        "extUnlock": "To Dust You Shall Return"
+      },
+      "krystilia": {
+        "weight": 5,
+        "min": 75,
+        "max": 125,
+        "extMin": 200,
+        "extMax": 250,
+        "extUnlock": "To Dust You Shall Return"
+      },
+      "mortimer": {
+        "weight": 8,
+        "min": 120,
+        "max": 180,
+        "extMin": 200,
+        "extMax": 250,
+        "extUnlock": "To Dust You Shall Return"
+      },
+      "nieve": {
+        "weight": 6,
+        "min": 120,
+        "max": 185,
+        "extMin": 200,
+        "extMax": 250,
+        "extUnlock": "To Dust You Shall Return"
+      },
+      "vannaka": {
+        "weight": 8,
+        "min": 40,
+        "max": 90,
+        "extMin": 200,
+        "extMax": 250,
+        "extUnlock": "To Dust You Shall Return"
+      }
+    },
+    "Dwarves": {
+      "spria": {
+        "weight": 7,
+        "min": 10,
+        "max": 25
+      },
+      "turael": {
+        "weight": 7,
+        "min": 10,
+        "max": 25
+      }
+    },
+    "Earth warriors": {
+      "krystilia": {
+        "weight": 6,
+        "min": 75,
+        "max": 125
+      }
+    },
+    "Elves": {
+      "chaeldar": {
+        "weight": 8,
+        "min": 70,
+        "max": 130
+      },
+      "duradel": {
+        "weight": 4,
+        "min": 110,
+        "max": 170
+      },
+      "nieve": {
+        "weight": 4,
+        "min": 60,
+        "max": 90
+      },
+      "vannaka": {
+        "weight": 7,
+        "min": 30,
+        "max": 70
+      }
+    },
+    "Ents": {
+      "krystilia": {
+        "weight": 5,
+        "min": 35,
+        "max": 60
+      }
+    },
+    "Fever spiders": {
+      "chaeldar": {
+        "weight": 7,
+        "min": 70,
+        "max": 130
+      },
+      "vannaka": {
+        "weight": 7,
+        "min": 30,
+        "max": 90
+      }
+    },
+    "Fire giants": {
+      "chaeldar": {
+        "weight": 12,
+        "min": 70,
+        "max": 130
+      },
+      "duradel": {
+        "weight": 7,
+        "min": 130,
+        "max": 200
+      },
+      "konar": {
+        "weight": 9,
+        "min": 120,
+        "max": 170
+      },
+      "krystilia": {
+        "weight": 7,
+        "min": 75,
+        "max": 125
+      },
+      "nieve": {
+        "weight": 9,
+        "min": 120,
+        "max": 185
+      },
+      "vannaka": {
+        "weight": 7,
+        "min": 40,
+        "max": 90
+      }
+    },
+    "Fleshcrawlers": {
+      "mazchna": {
+        "weight": 7,
+        "min": 15,
+        "max": 25
+      }
+    },
+    "Fossil island wyverns": {
+      "chaeldar": {
+        "weight": 7,
+        "min": 10,
+        "max": 20,
+        "extMin": 55,
+        "extMax": 75,
+        "extUnlock": "Wyver-nother Two"
+      },
+      "duradel": {
+        "weight": 7,
+        "min": 20,
+        "max": 50,
+        "extMin": 55,
+        "extMax": 75,
+        "extUnlock": "Wyver-nother Two"
+      },
+      "konar": {
+        "weight": 5,
+        "min": 15,
+        "max": 30,
+        "extMin": 55,
+        "extMax": 75,
+        "extUnlock": "Wyver-nother Two"
+      },
+      "nieve": {
+        "weight": 5,
+        "min": 5,
+        "max": 25,
+        "extMin": 55,
+        "extMax": 75,
+        "extUnlock": "Wyver-nother Two"
+      }
+    },
+    "Frost dragons": {
+      "duradel": {
+        "weight": 5,
+        "min": 70,
+        "max": 120,
+        "extMin": 180,
+        "extMax": 240,
+        "extUnlock": "I see Dragons"
+      },
+      "nieve": {
+        "weight": 5,
+        "min": 60,
+        "max": 100,
+        "extMin": 180,
+        "extMax": 240,
+        "extUnlock": "I see Dragons"
+      }
+    },
+    "Gargoyles": {
+      "chaeldar": {
+        "weight": 11,
+        "min": 70,
+        "max": 130,
+        "extMin": 200,
+        "extMax": 250,
+        "extUnlock": "Get Smashed"
+      },
+      "duradel": {
+        "weight": 8,
+        "min": 130,
+        "max": 200,
+        "extMin": 200,
+        "extMax": 250,
+        "extUnlock": "Get Smashed"
+      },
+      "konar": {
+        "weight": 6,
+        "min": 120,
+        "max": 170,
+        "extMin": 200,
+        "extMax": 250,
+        "extUnlock": "Get Smashed"
+      },
+      "mortimer": {
+        "weight": 10,
+        "min": 120,
+        "max": 180,
+        "extMin": 200,
+        "extMax": 250,
+        "extUnlock": "Get Smashed"
+      },
+      "nieve": {
+        "weight": 6,
+        "min": 120,
+        "max": 185,
+        "extMin": 200,
+        "extMax": 250,
+        "extUnlock": "Get Smashed"
+      },
+      "vannaka": {
+        "weight": 5,
+        "min": 40,
+        "max": 90,
+        "extMin": 200,
+        "extMax": 250,
+        "extUnlock": "Get Smashed"
+      }
+    },
+    "Ghosts": {
+      "mazchna": {
+        "weight": 7,
+        "min": 30,
+        "max": 50
+      },
+      "spria": {
+        "weight": 7,
+        "min": 15,
+        "max": 30
+      },
+      "turael": {
+        "weight": 7,
+        "min": 15,
+        "max": 30
+      }
+    },
+    "Ghouls": {
+      "mazchna": {
+        "weight": 7,
+        "min": 10,
+        "max": 20
+      },
+      "vannaka": {
+        "weight": 7,
+        "min": 10,
+        "max": 40
+      }
+    },
+    "Goblins": {
+      "spria": {
+        "weight": 7,
+        "min": 15,
+        "max": 30
+      },
+      "turael": {
+        "weight": 7,
+        "min": 15,
+        "max": 30
+      }
+    },
+    "Greater demons": {
+      "chaeldar": {
+        "weight": 9,
+        "min": 70,
+        "max": 130,
+        "extMin": 200,
+        "extMax": 250,
+        "extUnlock": "Greater Challenge"
+      },
+      "duradel": {
+        "weight": 9,
+        "min": 130,
+        "max": 200,
+        "extMin": 200,
+        "extMax": 250,
+        "extUnlock": "Greater Challenge"
+      },
+      "konar": {
+        "weight": 7,
+        "min": 120,
+        "max": 170,
+        "extMin": 200,
+        "extMax": 250,
+        "extUnlock": "Greater Challenge"
+      },
+      "krystilia": {
+        "weight": 8,
+        "min": 100,
+        "max": 150,
+        "extMin": 200,
+        "extMax": 250,
+        "extUnlock": "Greater Challenge"
+      },
+      "nieve": {
+        "weight": 7,
+        "min": 120,
+        "max": 185,
+        "extMin": 200,
+        "extMax": 250,
+        "extUnlock": "Greater Challenge"
+      }
+    },
+    "Green dragons": {
+      "krystilia": {
+        "weight": 4,
+        "min": 65,
+        "max": 100
+      }
+    },
+    "Gryphons": {
+      "chaeldar": {
+        "weight": 10,
+        "min": 60,
+        "max": 100,
+        "extMin": 140,
+        "extMax": 180,
+        "extUnlock": "Gryphon and on"
+      },
+      "duradel": {
+        "weight": 7,
+        "min": 100,
+        "max": 210,
+        "extMin": 180,
+        "extMax": 290,
+        "extUnlock": "Gryphon and on"
+      },
+      "mortimer": {
+        "weight": 10,
+        "min": 80,
+        "max": 120,
+        "extMin": 160,
+        "extMax": 200,
+        "extUnlock": "Gryphon and on"
+      },
+      "nieve": {
+        "weight": 7,
+        "min": 110,
+        "max": 170,
+        "extMin": 190,
+        "extMax": 250,
+        "extUnlock": "Gryphon and on"
+      },
+      "vannaka": {
+        "weight": 10,
+        "min": 30,
+        "max": 80,
+        "extMin": 110,
+        "extMax": 160,
+        "extUnlock": "Gryphon and on"
+      }
+    },
+    "Harpie bug swarms": {
+      "vannaka": {
+        "weight": 8,
+        "min": 40,
+        "max": 90
+      }
+    },
+    "Hellhounds": {
+      "chaeldar": {
+        "weight": 9,
+        "min": 70,
+        "max": 130
+      },
+      "duradel": {
+        "weight": 10,
+        "min": 130,
+        "max": 200
+      },
+      "konar": {
+        "weight": 8,
+        "min": 120,
+        "max": 170
+      },
+      "krystilia": {
+        "weight": 7,
+        "min": 75,
+        "max": 125
+      },
+      "nieve": {
+        "weight": 8,
+        "min": 120,
+        "max": 185
+      },
+      "vannaka": {
+        "weight": 7,
+        "min": 30,
+        "max": 60
+      }
+    },
+    "Hill giants": {
+      "krystilia": {
+        "weight": 3,
+        "min": 75,
+        "max": 125
+      },
+      "mazchna": {
+        "weight": 7,
+        "min": 30,
+        "max": 50
+      },
+      "vannaka": {
+        "weight": 7,
+        "min": 40,
+        "max": 90
+      }
+    },
+    "Hobgoblins": {
+      "mazchna": {
+        "weight": 7,
+        "min": 30,
+        "max": 50
+      },
+      "vannaka": {
+        "weight": 7,
+        "min": 40,
+        "max": 90
+      }
+    },
+    "Hydras": {
+      "konar": {
+        "weight": 10,
+        "min": 125,
+        "max": 190
+      },
+      "mortimer": {
+        "weight": 10,
+        "min": 150,
+        "max": 200
+      }
+    },
+    "Ice giants": {
+      "krystilia": {
+        "weight": 6,
+        "min": 100,
+        "max": 150
+      },
+      "vannaka": {
+        "weight": 7,
+        "min": 30,
+        "max": 80
+      }
+    },
+    "Ice warriors": {
+      "krystilia": {
+        "weight": 7,
+        "min": 100,
+        "max": 150
+      },
+      "mazchna": {
+        "weight": 7,
+        "min": 40,
+        "max": 50
+      },
+      "vannaka": {
+        "weight": 7,
+        "min": 40,
+        "max": 90
+      }
+    },
+    "Icefiends": {
+      "spria": {
+        "weight": 8,
+        "min": 15,
+        "max": 20
+      },
+      "turael": {
+        "weight": 8,
+        "min": 15,
+        "max": 20
+      }
+    },
+    "Infernal mages": {
+      "mortimer": {
+        "weight": 10,
+        "min": 35,
+        "max": 50
+      },
+      "vannaka": {
+        "weight": 8,
+        "min": 40,
+        "max": 90
+      }
+    },
+    "Jellies": {
+      "chaeldar": {
+        "weight": 10,
+        "min": 70,
+        "max": 130
+      },
+      "konar": {
+        "weight": 6,
+        "min": 120,
+        "max": 170
+      },
+      "krystilia": {
+        "weight": 5,
+        "min": 100,
+        "max": 150
+      },
+      "mortimer": {
+        "weight": 10,
+        "min": 80,
+        "max": 120
+      },
+      "vannaka": {
+        "weight": 8,
+        "min": 40,
+        "max": 90
+      }
+    },
+    "Jungle horrors": {
+      "chaeldar": {
+        "weight": 10,
+        "min": 70,
+        "max": 130
+      },
+      "vannaka": {
+        "weight": 8,
+        "min": 40,
+        "max": 90
+      }
+    },
+    "Kalphites": {
+      "chaeldar": {
+        "weight": 11,
+        "min": 70,
+        "max": 130
+      },
+      "duradel": {
+        "weight": 9,
+        "min": 130,
+        "max": 200
+      },
+      "konar": {
+        "weight": 9,
+        "min": 120,
+        "max": 170
+      },
+      "mazchna": {
+        "weight": 6,
+        "min": 30,
+        "max": 50
+      },
+      "nieve": {
+        "weight": 9,
+        "min": 120,
+        "max": 185
+      },
+      "spria": {
+        "weight": 6,
+        "min": 15,
+        "max": 30
+      },
+      "turael": {
+        "weight": 6,
+        "min": 15,
+        "max": 30
+      },
+      "vannaka": {
+        "weight": 7,
+        "min": 40,
+        "max": 90
+      }
+    },
+    "Killerwatts": {
+      "mazchna": {
+        "weight": 6,
+        "min": 30,
+        "max": 50
+      }
+    },
+    "Kurask": {
+      "chaeldar": {
+        "weight": 12,
+        "min": 70,
+        "max": 130
+      },
+      "duradel": {
+        "weight": 4,
+        "min": 130,
+        "max": 200
+      },
+      "konar": {
+        "weight": 3,
+        "min": 120,
+        "max": 170
+      },
+      "mortimer": {
+        "weight": 10,
+        "min": 40,
+        "max": 60
+      },
+      "nieve": {
+        "weight": 3,
+        "min": 120,
+        "max": 185
+      },
+      "vannaka": {
+        "weight": 7,
+        "min": 40,
+        "max": 90
+      }
+    },
+    "Lava Dragons": {
+      "krystilia": {
+        "weight": 3,
+        "min": 35,
+        "max": 60
+      }
+    },
+    "Lesser Nagua": {
+      "chaeldar": {
+        "weight": 4,
+        "min": 50,
+        "max": 100
+      },
+      "konar": {
+        "weight": 2,
+        "min": 55,
+        "max": 120
+      }
+    },
+    "Lesser demons": {
+      "chaeldar": {
+        "weight": 9,
+        "min": 70,
+        "max": 130
+      },
+      "krystilia": {
+        "weight": 6,
+        "min": 80,
+        "max": 120
+      },
+      "vannaka": {
+        "weight": 7,
+        "min": 40,
+        "max": 90
+      }
+    },
+    "Lizardmen": {
+      "chaeldar": {
+        "weight": 8,
+        "min": 50,
+        "max": 90
+      },
+      "duradel": {
+        "weight": 10,
+        "min": 130,
+        "max": 210
+      },
+      "konar": {
+        "weight": 8,
+        "min": 90,
+        "max": 110
+      },
+      "nieve": {
+        "weight": 8,
+        "min": 90,
+        "max": 120
+      }
+    },
+    "Lizards": {
+      "mazchna": {
+        "weight": 8,
+        "min": 30,
+        "max": 50
+      },
+      "spria": {
+        "weight": 8,
+        "min": 15,
+        "max": 30
+      },
+      "turael": {
+        "weight": 8,
+        "min": 15,
+        "max": 30
+      }
+    },
+    "Magic axes": {
+      "krystilia": {
+        "weight": 7,
+        "min": 75,
+        "max": 125
+      }
+    },
+    "Mammoths": {
+      "krystilia": {
+        "weight": 6,
+        "min": 75,
+        "max": 125
+      }
+    },
+    "Metal dragons": {
+      "duradel": {
+        "weight": 14,
+        "min": 35,
+        "max": 45,
+        "extMin": 150,
+        "extMax": 200,
+        "extUnlock": "Pedal to the Metals"
+      },
+      "konar": {
+        "weight": 15,
+        "min": 30,
+        "max": 40,
+        "extMin": 150,
+        "extMax": 200,
+        "extUnlock": "Pedal to the Metals"
+      },
+      "nieve": {
+        "weight": 12,
+        "min": 30,
+        "max": 40,
+        "extMin": 150,
+        "extMax": 200,
+        "extUnlock": "Pedal to the Metals"
+      }
+    },
+    "Minotaurs": {
+      "spria": {
+        "weight": 7,
+        "min": 10,
+        "max": 20
+      },
+      "turael": {
+        "weight": 7,
+        "min": 10,
+        "max": 20
+      }
+    },
+    "Mogres": {
+      "mazchna": {
+        "weight": 8,
+        "min": 30,
+        "max": 50
+      },
+      "vannaka": {
+        "weight": 7,
+        "min": 40,
+        "max": 90
+      }
+    },
+    "Molanisks": {
+      "vannaka": {
+        "weight": 7,
+        "min": 40,
+        "max": 50
+      }
+    },
+    "Monkeys": {
+      "spria": {
+        "weight": 6,
+        "min": 15,
+        "max": 30
+      },
+      "turael": {
+        "weight": 6,
+        "min": 15,
+        "max": 30
+      }
+    },
+    "Moss giants": {
+      "krystilia": {
+        "weight": 4,
+        "min": 100,
+        "max": 150
+      },
+      "vannaka": {
+        "weight": 7,
+        "min": 40,
+        "max": 90
+      }
+    },
+    "Mutated zygomites": {
+      "chaeldar": {
+        "weight": 7,
+        "min": 8,
+        "max": 15
+      },
+      "duradel": {
+        "weight": 2,
+        "min": 20,
+        "max": 30
+      },
+      "konar": {
+        "weight": 2,
+        "min": 10,
+        "max": 25
+      },
+      "nieve": {
+        "weight": 2,
+        "min": 10,
+        "max": 25
+      }
+    },
+    "Nechryael": {
+      "chaeldar": {
+        "weight": 12,
+        "min": 70,
+        "max": 130,
+        "extMin": 200,
+        "extMax": 250,
+        "extUnlock": "Nechs Please"
+      },
+      "duradel": {
+        "weight": 9,
+        "min": 130,
+        "max": 200,
+        "extMin": 200,
+        "extMax": 250,
+        "extUnlock": "Nechs Please"
+      },
+      "konar": {
+        "weight": 7,
+        "min": 110,
+        "max": 110,
+        "extMin": 200,
+        "extMax": 250,
+        "extUnlock": "Nechs Please"
+      },
+      "krystilia": {
+        "weight": 5,
+        "min": 75,
+        "max": 125,
+        "extMin": 200,
+        "extMax": 250,
+        "extUnlock": "Nechs Please"
+      },
+      "mortimer": {
+        "weight": 8,
+        "min": 150,
+        "max": 200,
+        "extMin": 200,
+        "extMax": 250,
+        "extUnlock": "Nechs Please"
+      },
+      "nieve": {
+        "weight": 7,
+        "min": 110,
+        "max": 170,
+        "extMin": 200,
+        "extMax": 250,
+        "extUnlock": "Nechs Please"
+      },
+      "vannaka": {
+        "weight": 5,
+        "min": 40,
+        "max": 90,
+        "extMin": 200,
+        "extMax": 250,
+        "extUnlock": "Nechs Please"
+      }
+    },
+    "Ogres": {
+      "vannaka": {
+        "weight": 7,
+        "min": 40,
+        "max": 90
+      }
+    },
+    "Otherworldly beings": {
+      "vannaka": {
+        "weight": 8,
+        "min": 40,
+        "max": 90
+      }
+    },
+    "Pirates": {
+      "krystilia": {
+        "weight": 3,
+        "min": 62,
+        "max": 75
+      }
+    },
+    "Pyrefiends": {
+      "mazchna": {
+        "weight": 8,
+        "min": 30,
+        "max": 50
+      },
+      "mortimer": {
+        "weight": 10,
+        "min": 35,
+        "max": 50
+      },
+      "vannaka": {
+        "weight": 8,
+        "min": 40,
+        "max": 90
+      }
+    },
+    "Rats": {
+      "spria": {
+        "weight": 7,
+        "min": 15,
+        "max": 30
+      },
+      "turael": {
+        "weight": 7,
+        "min": 15,
+        "max": 30
+      }
+    },
+    "Red dragons": {
+      "duradel": {
+        "weight": 8,
+        "min": 30,
+        "max": 65
+      },
+      "konar": {
+        "weight": 5,
+        "min": 30,
+        "max": 50
+      },
+      "nieve": {
+        "weight": 5,
+        "min": 30,
+        "max": 80
+      }
+    },
+    "Revenants": {
+      "krystilia": {
+        "weight": 5,
+        "min": 40,
+        "max": 100,
+        "extMin": 100,
+        "extMax": 150,
+        "extUnlock": "Revenenenenenants"
+      }
+    },
+    "Rockslugs": {
+      "mazchna": {
+        "weight": 8,
+        "min": 30,
+        "max": 50
+      },
+      "mortimer": {
+        "weight": 10,
+        "min": 35,
+        "max": 50
+      }
+    },
+    "Rogues": {
+      "krystilia": {
+        "weight": 5,
+        "min": 75,
+        "max": 125
+      }
+    },
+    "Scabarites": {
+      "nieve": {
+        "weight": 4,
+        "min": 30,
+        "max": 60,
+        "extMin": 130,
+        "extMax": 165,
+        "extUnlock": "Get Scabaright on It"
+      }
+    },
+    "Scorpions": {
+      "krystilia": {
+        "weight": 6,
+        "min": 65,
+        "max": 100
+      },
+      "mazchna": {
+        "weight": 7,
+        "min": 30,
+        "max": 50
+      },
+      "spria": {
+        "weight": 7,
+        "min": 15,
+        "max": 30
+      },
+      "turael": {
+        "weight": 7,
+        "min": 15,
+        "max": 30
+      }
+    },
+    "Sea snakes": {
+      "vannaka": {
+        "weight": 6,
+        "min": 40,
+        "max": 90
+      }
+    },
+    "Shades": {
+      "mazchna": {
+        "weight": 8,
+        "min": 30,
+        "max": 70
+      },
+      "vannaka": {
+        "weight": 8,
+        "min": 40,
+        "max": 90
+      }
+    },
+    "Shadow warriors": {
+      "chaeldar": {
+        "weight": 8,
+        "min": 70,
+        "max": 130
+      },
+      "vannaka": {
+        "weight": 8,
+        "min": 30,
+        "max": 80
+      }
+    },
+    "Skeletal wyverns": {
+      "chaeldar": {
+        "weight": 7,
+        "min": 10,
+        "max": 20,
+        "extMin": 50,
+        "extMax": 70,
+        "extUnlock": "Wyver-nother one"
+      },
+      "duradel": {
+        "weight": 7,
+        "min": 20,
+        "max": 40,
+        "extMin": 50,
+        "extMax": 70,
+        "extUnlock": "Wyver-nother one"
+      },
+      "konar": {
+        "weight": 5,
+        "min": 5,
+        "max": 12,
+        "extMin": 50,
+        "extMax": 70,
+        "extUnlock": "Wyver-nother one"
+      },
+      "nieve": {
+        "weight": 5,
+        "min": 5,
+        "max": 15,
+        "extMin": 50,
+        "extMax": 70,
+        "extUnlock": "Wyver-nother one"
+      }
+    },
+    "Skeletons": {
+      "krystilia": {
+        "weight": 5,
+        "min": 65,
+        "max": 100
+      },
+      "mazchna": {
+        "weight": 7,
+        "min": 30,
+        "max": 50
+      },
+      "spria": {
+        "weight": 7,
+        "min": 15,
+        "max": 30
+      },
+      "turael": {
+        "weight": 7,
+        "min": 15,
+        "max": 30
+      }
+    },
+    "Smoke devils": {
+      "duradel": {
+        "weight": 9,
+        "min": 130,
+        "max": 200
+      },
+      "konar": {
+        "weight": 7,
+        "min": 120,
+        "max": 170
+      },
+      "mortimer": {
+        "weight": 8,
+        "min": 80,
+        "max": 120
+      },
+      "nieve": {
+        "weight": 7,
+        "min": 120,
+        "max": 185
+      }
+    },
+    "Sourhogs": {
+      "spria": {
+        "weight": 6,
+        "min": 15,
+        "max": 25
+      }
+    },
+    "Spiders": {
+      "krystilia": {
+        "weight": 6,
+        "min": 65,
+        "max": 100
+      },
+      "spria": {
+        "weight": 6,
+        "min": 15,
+        "max": 30
+      },
+      "turael": {
+        "weight": 6,
+        "min": 15,
+        "max": 30
+      }
+    },
+    "Spiritual creatures": {
+      "chaeldar": {
+        "weight": 12,
+        "min": 70,
+        "max": 130,
+        "extMin": 181,
+        "extMax": 250,
+        "extUnlock": "Spiritual Fervour"
+      },
+      "duradel": {
+        "weight": 7,
+        "min": 130,
+        "max": 200,
+        "extMin": 181,
+        "extMax": 250,
+        "extUnlock": "Spiritual Fervour"
+      },
+      "krystilia": {
+        "weight": 6,
+        "min": 100,
+        "max": 150,
+        "extMin": 181,
+        "extMax": 250,
+        "extUnlock": "Spiritual Fervour"
+      },
+      "nieve": {
+        "weight": 6,
+        "min": 120,
+        "max": 185,
+        "extMin": 181,
+        "extMax": 250,
+        "extUnlock": "Spiritual Fervour"
+      },
+      "vannaka": {
+        "weight": 8,
+        "min": 40,
+        "max": 90,
+        "extMin": 181,
+        "extMax": 250,
+        "extUnlock": "Spiritual Fervour"
+      }
+    },
+    "Suqahs": {
+      "duradel": {
+        "weight": 8,
+        "min": 60,
+        "max": 90,
+        "extMin": 186,
+        "extMax": 250,
+        "extUnlock": "Suq-a-nother One"
+      },
+      "nieve": {
+        "weight": 8,
+        "min": 120,
+        "max": 185,
+        "extMin": 186,
+        "extMax": 250,
+        "extUnlock": "Suq-a-nother One"
+      }
+    },
+    "Terror dogs": {
+      "vannaka": {
+        "weight": 6,
+        "min": 20,
+        "max": 45
+      }
+    },
+    "Trolls": {
+      "chaeldar": {
+        "weight": 11,
+        "min": 70,
+        "max": 130
+      },
+      "duradel": {
+        "weight": 6,
+        "min": 130,
+        "max": 200
+      },
+      "konar": {
+        "weight": 6,
+        "min": 120,
+        "max": 170
+      },
+      "nieve": {
+        "weight": 6,
+        "min": 120,
+        "max": 185
+      },
+      "vannaka": {
+        "weight": 7,
+        "min": 40,
+        "max": 90
+      }
+    },
+    "Turoth": {
+      "chaeldar": {
+        "weight": 10,
+        "min": 70,
+        "max": 130
+      },
+      "konar": {
+        "weight": 3,
+        "min": 120,
+        "max": 170
+      },
+      "mortimer": {
+        "weight": 10,
+        "min": 80,
+        "max": 120
+      },
+      "nieve": {
+        "weight": 3,
+        "min": 120,
+        "max": 185
+      },
+      "vannaka": {
+        "weight": 8,
+        "min": 30,
+        "max": 90
+      }
+    },
+    "Tzhaar": {
+      "chaeldar": {
+        "weight": 8,
+        "min": 90,
+        "max": 150
+      },
+      "duradel": {
+        "weight": 10,
+        "min": 130,
+        "max": 199
+      },
+      "nieve": {
+        "weight": 10,
+        "min": 110,
+        "max": 180
+      }
+    },
+    "Vampyres": {
+      "chaeldar": {
+        "weight": 6,
+        "min": 80,
+        "max": 100,
+        "extMin": 200,
+        "extMax": 250,
+        "extUnlock": "More at Stake"
+      },
+      "duradel": {
+        "weight": 8,
+        "min": 100,
+        "max": 210,
+        "extMin": 200,
+        "extMax": 250,
+        "extUnlock": "More at Stake"
+      },
+      "konar": {
+        "weight": 4,
+        "min": 100,
+        "max": 160,
+        "extMin": 200,
+        "extMax": 250,
+        "extUnlock": "More at Stake"
+      },
+      "mazchna": {
+        "weight": 6,
+        "min": 10,
+        "max": 20,
+        "extMin": 200,
+        "extMax": 250,
+        "extUnlock": "More at Stake"
+      },
+      "nieve": {
+        "weight": 6,
+        "min": 110,
+        "max": 170,
+        "extMin": 200,
+        "extMax": 250,
+        "extUnlock": "More at Stake"
+      },
+      "vannaka": {
+        "weight": 7,
+        "min": 10,
+        "max": 20,
+        "extMin": 200,
+        "extMax": 250,
+        "extUnlock": "More at Stake"
+      }
+    },
+    "Venators": {
+      "mortimer": {
+        "weight": 10,
+        "min": 120,
+        "max": 180
+      }
+    },
+    "Wall beasts": {
+      "mazchna": {
+        "weight": 7,
+        "min": 10,
+        "max": 20
+      }
+    },
+    "Warped Creatures": {
+      "chaeldar": {
+        "weight": 6,
+        "min": 70,
+        "max": 130
+      },
+      "duradel": {
+        "weight": 8,
+        "min": 130,
+        "max": 200
+      },
+      "konar": {
+        "weight": 4,
+        "min": 110,
+        "max": 170
+      },
+      "mortimer": {
+        "weight": 10,
+        "min": 80,
+        "max": 120
+      },
+      "nieve": {
+        "weight": 6,
+        "min": 120,
+        "max": 185
+      }
+    },
+    "Waterfiends": {
+      "duradel": {
+        "weight": 2,
+        "min": 130,
+        "max": 200
+      },
+      "konar": {
+        "weight": 2,
+        "min": 120,
+        "max": 170
+      }
+    },
+    "Werewolves": {
+      "vannaka": {
+        "weight": 7,
+        "min": 30,
+        "max": 60
+      }
+    },
+    "Wolves": {
+      "mazchna": {
+        "weight": 7,
+        "min": 30,
+        "max": 50
+      },
+      "spria": {
+        "weight": 7,
+        "min": 15,
+        "max": 30
+      },
+      "turael": {
+        "weight": 7,
+        "min": 15,
+        "max": 30
+      }
+    },
+    "Wyrms": {
+      "chaeldar": {
+        "weight": 6,
+        "min": 60,
+        "max": 100,
+        "extMin": 200,
+        "extMax": 250,
+        "extUnlock": "Can of Wyrms"
+      },
+      "duradel": {
+        "weight": 8,
+        "min": 100,
+        "max": 160,
+        "extMin": 200,
+        "extMax": 250,
+        "extUnlock": "Can of Wyrms"
+      },
+      "konar": {
+        "weight": 10,
+        "min": 125,
+        "max": 190,
+        "extMin": 200,
+        "extMax": 250,
+        "extUnlock": "Can of Wyrms"
+      },
+      "mortimer": {
+        "weight": 10,
+        "min": 80,
+        "max": 120,
+        "extMin": 200,
+        "extMax": 250,
+        "extUnlock": "Can of Wyrms"
+      },
+      "nieve": {
+        "weight": 7,
+        "min": 80,
+        "max": 145,
+        "extMin": 200,
+        "extMax": 250,
+        "extUnlock": "Can of Wyrms"
+      }
+    },
+    "Zombies": {
+      "krystilia": {
+        "weight": 3,
+        "min": 75,
+        "max": 125
+      },
+      "mazchna": {
+        "weight": 7,
+        "min": 30,
+        "max": 50
+      },
+      "spria": {
+        "weight": 7,
+        "min": 15,
+        "max": 30
+      },
+      "turael": {
+        "weight": 7,
+        "min": 15,
+        "max": 30
+      }
+    }
+  }
+}

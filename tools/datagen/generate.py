@@ -81,6 +81,7 @@ TASK_PAGE_OVERRIDES: dict[str, str] = {
     "The Cave Kraken Boss": "Kraken",
     "The Thermonuclear Smoke Devil": "Thermonuclear smoke devil",
     "Elves": "Slayer task/Elves",
+    "Mutated zygomites": "Slayer task/Zygomites",
 }
 
 # Task display name -> list of monster pages that REPLACE the automatic
@@ -103,6 +104,13 @@ MONSTER_PAGE_OVERRIDES: dict[str, list[str]] = {
                            "Custodian stalker (monster)", "Ancient custodian stalker"],
 }
 
+# Monster page -> page whose drop lines stand for it, when the monster's own page
+# has none (the Grotesque Guardians' shared table is on the boss page; the loot
+# comes when Dusk, the last of the pair, dies).
+DROP_PAGE_OVERRIDES: dict[str, str] = {
+    "Dusk": "Grotesque Guardians",
+}
+
 # Tasks whose task page is a monster page but whose {{Infobox Monster}} `cat`
 # does not contain "Bosses" although the task is a boss-style assignment.
 BOSS_TASK_OVERRIDES = {"TzTok-Jad", "TzKal-Zuk"}
@@ -120,6 +128,7 @@ EXTRA_MONSTER_PAGES: dict[str, list[str]] = {
              "Crypt rat",                  # Barrows crypt (alias)
              "Giant rat"],                 # Lumbridge Swamp
     "Gryphons": ["Shellbane gryphon"],     # Shellbane Gryphon Cave ({{Map}} on the boss page)
+    "Mutated zygomites": ["Ancient Zygomite"],  # Fossil Island (Konar's other zygomite area)
     # Every page below has an {{Infobox Monster}} whose Slayer `cat` names the
     # task (checked when added); each supplies the LocLine of a curated location.
     "Aberrant spectres": ["Deviant spectre"],        # Catacombs of Kourend
@@ -1052,7 +1061,8 @@ def apply_bucket_extras(tasks: list[dict], client: "BucketClient", report: dict)
             if rows:
                 mon["combatStats"] = monster_combat_stats(default)
             if page and page not in drop_tables:
-                version, table = drops_for_page(drops.get(page, []), ids, default.get("version_anchor"))
+                version, table = drops_for_page(drops.get(DROP_PAGE_OVERRIDES.get(page, page), []), ids,
+                                                default.get("version_anchor"))
                 drop_tables[page] = {"page": page, "version": version, "drops": table}
                 if not table:
                     missing_drops.append(page)
@@ -2923,6 +2933,25 @@ def self_test() -> int:
         missing = check_gear_rules(load_gear_rules(), (i["name"] for i in json.loads(items_json.read_text(encoding="utf-8"))))
         assert not missing, missing
         checks += 1
+    # master assignments: the cache snapshot replaces the wiki ranges, and a task it lacks has none
+    snap = {"Hydras": {"mortimer": {"weight": 10, "min": 150, "max": 200}},
+            "Gryphons": {"vannaka": {"weight": 10, "min": 30, "max": 80, "extMin": 110, "extMax": 160, "extUnlock": "x"}}}
+    t = {"task": "Hydras", "masters": {"mortimer": {"min": 150, "max": 200, "extMin": 200, "extMax": 300,
+                                                    "raw": "150-200 (200-300)", "alternatives": []}}}
+    apply_master_assignments(t, snap)
+    assert t["masters"] == {"mortimer": {"weight": 10, "min": 150, "max": 200, "extMin": None, "extMax": None}}; checks += 1
+    t = {"task": "Gryphons", "masters": {}}
+    apply_master_assignments(t, snap)
+    assert t["masters"]["vannaka"]["extMin"] == 110 and "extUnlock" not in t["masters"]["vannaka"]; checks += 1
+    t = {"task": "Vorkath", "masters": {"nieve": {"min": 3}}}
+    apply_master_assignments(t, snap)
+    assert t["masters"] == {}; checks += 1
+    t = {"task": "Vorkath", "masters": {"nieve": {"min": 3}}}
+    apply_master_assignments(t, {})
+    assert t["masters"] == {"nieve": {"min": 3}}, "no snapshot: keep the wiki data"; checks += 1
+    assert tidy_other_requirement("Completion of Quest Priest in Peril") == "Completion of Priest in Peril"; checks += 1
+    assert tidy_other_requirement("Partial completion of Quest Lunar Diplomacy") == "Partial completion of Lunar Diplomacy"; checks += 1
+    assert tidy_other_requirement("Quest points: 32") == "Quest points: 32"; checks += 1
     print(f"self-test OK: {checks} checks")
     return 0
 
@@ -3365,9 +3394,11 @@ def derive_recommended_styles(tasks: list[dict], cache: WikiCache) -> dict[str, 
     and record where it came from in recommendedStyleSource."""
     counts: dict[str, int] = {}
     for t in tasks:
-        if t.get("recommendedStyleSource") == "gearTables" and "gearTables" not in t:
-            # reused through --only: tasks.json does not keep the gear tables, so keep the style
-            counts["gearTables"] = counts.get("gearTables", 0) + 1
+        kept = t.get("recommendedStyleSource")
+        if kept in ("gearTables", "curated") and "gearTables" not in t:
+            # reused through --only: tasks.json does not keep the gear tables and the
+            # curated file is not applied again, so keep the style
+            counts[kept] = counts.get(kept, 0) + 1
             continue
         if t.get("recommendedStyleSource") is not None:
             # derived on a previous run (task reused through --only): redo it
@@ -3377,7 +3408,7 @@ def derive_recommended_styles(tasks: list[dict], cache: WikiCache) -> dict[str, 
         if t["recommendedStyle"]:
             source = "curated" if t.get("curatedFile") else "gearTables"
         else:
-            style = next((g["style"] for g in t["gearTables"] if g.get("style")), None)
+            style = next((g["style"] for g in t.get("gearTables", []) if g.get("style")), None)
             if style:
                 t["recommendedStyle"], source = style, "gearTables"
             else:
@@ -3421,6 +3452,7 @@ def apply_gear_pages(tasks: list[dict]) -> None:
 # tasks.json with --tidy.  Every step is idempotent.
 
 GEAR_RULES_PATH = Path(__file__).resolve().parent / "curated" / "gear-rules.json"
+MASTER_ASSIGNMENTS_PATH = Path(__file__).resolve().parent / "curated" / "master-assignments.json"
 
 # Research notes that ended up in location notes: where a count or a claim came from.  The
 # curated files keep them as evidence; the player only needs the advice.
@@ -3598,13 +3630,41 @@ def tidy_locations(task: dict) -> None:
             l["requirements"] = [r for r in l["requirements"] if not re.match(r"(?i)^none\b", r.strip())]
 
 
-def tidy_tasks(tasks: list[dict], rules: dict | None = None) -> None:
+def load_master_assignments(path: Path = MASTER_ASSIGNMENTS_PATH) -> dict[str, dict]:
+    """curated/master-assignments.json: {task: {master: {weight, min, max, extMin?, extMax?, extUnlock?}}}."""
+    return json.loads(path.read_text(encoding="utf-8"))["tasks"] if path.exists() else {}
+
+
+def apply_master_assignments(task: dict, snapshot: dict[str, dict]) -> None:
+    """Replace the wiki-parsed assignment ranges with the game cache's (tables 113/114). The wiki
+    infoboxes miss weights and some masters, and Mortimer's column mixes his quantity-modifier range
+    into the extension slot. A task the snapshot lacks is assigned by no master (boss tasks)."""
+    if not snapshot:
+        return
+    task["masters"] = {m: {"weight": e["weight"], "min": e["min"], "max": e["max"],
+                           "extMin": e.get("extMin"), "extMax": e.get("extMax")}
+                       for m, e in snapshot.get(task["task"], {}).items()}
+
+
+# "{{SCP|Quest}} [[Priest in Peril]]" in an infobox renders as "Quest Priest in Peril": drop the icon's word.
+_QUEST_ICON_WORD = re.compile(r"(?<=\bof )Quest (?=[A-Z])")
+
+
+def tidy_other_requirement(text: str | None) -> str | None:
+    return _QUEST_ICON_WORD.sub("", text) if text else text
+
+
+def tidy_tasks(tasks: list[dict], rules: dict | None = None, assignments: dict[str, dict] | None = None) -> None:
     rules = load_gear_rules() if rules is None else rules
+    assignments = load_master_assignments() if assignments is None else assignments
     for t in tasks:
         t.pop("styleNotes", None)  # labels of the gear tables the plugin no longer ships
         t["strategy"] = tidy_strategy(t.get("strategy") or [])
         tidy_locations(t)
         apply_gear_rules(t, rules)
+        apply_master_assignments(t, assignments)
+        if t.get("requirements"):
+            t["requirements"]["other"] = tidy_other_requirement(t["requirements"].get("other"))
 
 
 def tidy_only(args) -> int:

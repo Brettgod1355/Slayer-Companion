@@ -27,7 +27,7 @@ package com.slayercompanion.data;
 import javax.annotation.Nullable;
 import lombok.Data;
 
-/** Assignment range for one master from the wiki task infobox. */
+/** Assignment weight and range for one master, from the game cache snapshot (tools/datagen/curated/master-assignments.json). */
 @Data
 public class MasterAssignmentInfo
 {

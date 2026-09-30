@@ -24,53 +24,51 @@
  */
 package com.slayercompanion.task;
 
-import java.util.Objects;
 import javax.annotation.Nullable;
-import lombok.AllArgsConstructor;
 import lombok.Value;
 
-/** Immutable snapshot of the detected Slayer assignment. */
+/**
+ * The bonus Mortimer attaches to a task ({@code VarbitID.SLAYER_MODIFIER_ID} and {@code _VALUE}), in
+ * the game's own wording: points, a bigger or smaller amount, or a better clue, superior or XP rate.
+ */
 @Value
-@AllArgsConstructor
-public class CurrentTask
+public class TaskModifier
 {
-	/** Display name as the game shows it, e.g. "Abyssal demons". */
-	String name;
-	int remaining;
-	int initialAmount;
-	/** Area name the master assigned (Konar / Krystilia), or null. */
-	@Nullable
-	String areaName;
-	@Nullable
-	SlayerMaster master;
-	boolean bossTask;
-	int points;
-	/** Streak for the assigning master's counter. */
-	int streak;
-	/** The master's range for this task, read live from the game; null for boss tasks or when unreadable. */
-	@Nullable
-	Assignment assignment;
-	/** Mortimer's bonus on this task, or null. */
-	@Nullable
-	TaskModifier modifier;
+	public static final int POINTS = 1;
+	public static final int AMOUNT = 2;
+	public static final int CLUES = 3;
+	public static final int SUPERIORS = 4;
+	public static final int XP = 5;
 
-	public CurrentTask(String name, int remaining, int initialAmount, @Nullable String areaName,
-		@Nullable SlayerMaster master, boolean bossTask, int points, int streak)
+	int type;
+	/** Signed for {@link #AMOUNT} (the game keeps the sign in {@code SLAYER_MODIFIER_NEGATIVE}). */
+	int value;
+
+	/** The modifier the varbits describe, or null when there is none. */
+	@Nullable
+	public static TaskModifier of(int type, int value, boolean negative)
 	{
-		this(name, remaining, initialAmount, areaName, master, bossTask, points, streak, null, null);
+		if (type < POINTS || type > XP || value <= 0)
+		{
+			return null;
+		}
+		return new TaskModifier(type, type == AMOUNT && negative ? -value : value);
 	}
 
-	public int getKills()
+	public String describe()
 	{
-		return Math.max(0, initialAmount - remaining);
-	}
-
-	/** True when both snapshots describe the same assignment (ignoring progress). */
-	public boolean sameAssignment(CurrentTask other)
-	{
-		return other != null
-			&& name.equalsIgnoreCase(other.name)
-			&& Objects.equals(areaName, other.areaName)
-			&& master == other.master;
+		switch (type)
+		{
+			case POINTS:
+				return "+" + value + " Slayer points";
+			case AMOUNT:
+				return (value > 0 ? "+" : "") + value + " assigned";
+			case CLUES:
+				return "+" + value + "% clue chance";
+			case SUPERIORS:
+				return "+" + value + "% superior unique chance";
+			default:
+				return "+" + value + "% Slayer XP";
+		}
 	}
 }

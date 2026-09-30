@@ -37,6 +37,7 @@ import com.slayercompanion.data.MasterInfo;
 import com.slayercompanion.data.SlayerData;
 import com.slayercompanion.data.TaskInfo;
 import com.slayercompanion.task.SlayerMaster;
+import java.util.List;
 import net.runelite.api.Client;
 import net.runelite.api.gameval.VarPlayerID;
 import net.runelite.client.game.ItemManager;
@@ -99,6 +100,27 @@ public class WorthTest
 		assertEquals(Verdict.Kind.NONE, none.getKind());
 		assertNull(none.getWikiSays());
 		assertTrue(none.getNotes().isEmpty());
+	}
+
+	@Test
+	public void blockNotesNameTheMastersList()
+	{
+		TaskInfo blocked = data.tasks().stream()
+			.filter(t -> t.getTrainingSummary() != null && t.getTrainingSummary().getRecommendation() != null
+				&& t.getTrainingSummary().getRecommendation().startsWith("Block"))
+			.findFirst().get();
+		MasterInfo duradel = data.master(SlayerMaster.DURADEL).get();
+		List<String> notes = VerdictAdvisor.verdict(blocked, duradel, 500).getNotes();
+		assertEquals("Blocking costs 100 points and stops Duradel assigning it again.", notes.get(1));
+		assertEquals(2, notes.size());
+
+		notes = VerdictAdvisor.verdict(blocked, data.master(SlayerMaster.MORTIMER).get(), 500).getNotes();
+		assertEquals("Skipping costs 100 points; you have 500.", notes.get(0));
+		assertEquals("Blocking costs 120 points and stops Mortimer assigning it again.", notes.get(1));
+		assertEquals("Mortimer has only 2 block slots.", notes.get(2));
+
+		notes = VerdictAdvisor.verdict(blocked, data.master(SlayerMaster.SPRIA).get(), 500).getNotes();
+		assertEquals("Blocking costs 40 points and stops Turael and Spria assigning it again.", notes.get(1));
 	}
 
 	@Test

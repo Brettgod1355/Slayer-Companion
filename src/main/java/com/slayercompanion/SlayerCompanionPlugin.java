@@ -108,7 +108,7 @@ import net.runelite.client.util.LinkBrowser;
 public class SlayerCompanionPlugin extends Plugin
 {
 	/** Shown in the panel footer; bumped together with build.gradle and runelite-plugin.properties. */
-	public static final String VERSION = "0.12.0";
+	public static final String VERSION = "0.13.0";
 
 	private static final String WIKI_BASE = "https://oldschool.runescape.wiki/w/";
 	/** Refresh the Wilderness numbers at most this often (game ticks). */
@@ -612,7 +612,9 @@ public class SlayerCompanionPlugin extends Plugin
 	{
 		for (com.slayercompanion.data.MasterInfo mi : data.masters())
 		{
-			if (name.equalsIgnoreCase(mi.getName()) || name.equalsIgnoreCase(mi.getId()) || name.equalsIgnoreCase(mi.getAlias()))
+			// The alias is "Aya (replaces Turael during/after While Guthix Sleeps)": match the name before the remark.
+			String alias = mi.getAlias() == null ? null : mi.getAlias().replaceFirst("\\s*\\(.*$", "");
+			if (name.equalsIgnoreCase(mi.getName()) || name.equalsIgnoreCase(mi.getId()) || name.equalsIgnoreCase(alias))
 			{
 				return Optional.of(mi);
 			}
