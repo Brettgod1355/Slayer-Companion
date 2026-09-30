@@ -79,6 +79,17 @@ public class LoadoutRecommenderTest
 	}
 
 	@Test
+	public void aStoppedExecutorStillGetsAnAnswer() throws Exception
+	{
+		world.bank(WHIP);
+		executor.shutdownNow();
+		// The panel would otherwise stay on "Working out..." for good.
+		Recommendation r = recommend(data.task("Abyssal demons").get());
+		assertTrue(r.getOptions().isEmpty());
+		assertEquals("Something went wrong working this out.", r.getUnavailable());
+	}
+
+	@Test
 	public void needsTheBankFirst() throws Exception
 	{
 		Recommendation r = recommend(data.task("Abyssal demons").get());

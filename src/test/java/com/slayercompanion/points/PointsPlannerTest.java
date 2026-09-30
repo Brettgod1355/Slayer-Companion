@@ -25,6 +25,8 @@
 package com.slayercompanion.points;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import com.slayercompanion.SlayerCompanionConfig;
 import com.slayercompanion.data.MasterInfo;
@@ -87,5 +89,48 @@ public class PointsPlannerTest
 		assertEquals(100, planner.pointsForTask(konar, 10, true));
 		// Boosted table lacks the 50 entry: falls back to the boosted per-task rate rather than the unboosted table.
 		assertEquals(20, planner.pointsForTask(konar, 50, true));
+	}
+	private static PointsPlanner planner()
+	{
+		return new PointsPlanner(new SlayerData(new com.google.gson.Gson()), new SlayerCompanionConfig()
+		{
+		});
+	}
+
+	@Test
+	public void mastersAboveThePlayersLevelsAreListedButNotRecommended()
+	{
+		// 72 combat, 45 Slayer, task 10 (a milestone) next.
+		PointsPlan plan = planner().plan(0, 9, null, 72, 45);
+		assertEquals(10, plan.getNextTaskNumber());
+		assertEquals("Chaeldar", plan.getRecommended().getMasterName());
+		PointsPlan.MasterOption konar = plan.getOptions().stream().filter(o -> o.getMasterName().equals("Konar")).findFirst().get();
+		assertFalse(konar.isAvailable());
+		assertEquals("needs 75 combat", konar.getNote());
+		PointsPlan.MasterOption duradel = plan.getOptions().stream().filter(o -> o.getMasterName().equals("Duradel")).findFirst().get();
+		assertEquals("needs 50 Slayer", duradel.getNote());
+		assertTrue(plan.getSummary().contains("Chaeldar pays"));
+	}
+
+	@Test
+	public void theSlayerCapeLetsDuradelsCombatRequirementGo()
+	{
+		PointsPlan.MasterOption duradel = planner().plan(0, 9, null, 90, 99).getOptions().stream()
+			.filter(o -> o.getMasterName().equals("Duradel")).findFirst().get();
+		assertTrue(duradel.isAvailable());
+		assertFalse(planner().plan(0, 9, null, 90, 98).getOptions().stream()
+			.filter(o -> o.getMasterName().equals("Duradel")).findFirst().get().isAvailable());
+	}
+
+	@Test
+	public void whileOnASharedTaskThePlanIsForTheOneAfter()
+	{
+		com.slayercompanion.task.CurrentTask onKonar = new com.slayercompanion.task.CurrentTask("Hydras", 50, 150, null,
+			SlayerMaster.KONAR, false, 0, 0);
+		assertEquals("the task in hand is #10, the plan is for #11", 11, planner().plan(0, 9, onKonar).getNextTaskNumber());
+		com.slayercompanion.task.CurrentTask onKrystilia = new com.slayercompanion.task.CurrentTask("Bears", 50, 150, null,
+			SlayerMaster.KRYSTILIA, false, 0, 0);
+		assertEquals("Krystilia's tasks do not move the shared streak", 10, planner().plan(0, 9, onKrystilia).getNextTaskNumber());
+		assertEquals(10, planner().plan(0, 9, null).getNextTaskNumber());
 	}
 }

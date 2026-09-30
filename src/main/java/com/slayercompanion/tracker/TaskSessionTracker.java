@@ -51,16 +51,19 @@ import net.runelite.api.ItemContainer;
 import net.runelite.api.NPCComposition;
 import net.runelite.api.Skill;
 import net.runelite.api.events.GameStateChanged;
+import net.runelite.api.events.GameTick;
 import net.runelite.api.events.ItemContainerChanged;
 import net.runelite.api.events.StatChanged;
 import net.runelite.api.events.WidgetClosed;
 import net.runelite.api.events.WidgetLoaded;
 import net.runelite.api.gameval.InterfaceID;
 import net.runelite.api.gameval.InventoryID;
+import net.runelite.api.gameval.VarPlayerID;
 import net.runelite.client.callback.ClientThread;
 import net.runelite.client.config.ConfigManager;
 import net.runelite.client.eventbus.EventBus;
 import net.runelite.client.eventbus.Subscribe;
+import net.runelite.client.events.ClientShutdown;
 import net.runelite.client.events.ServerNpcLoot;
 import net.runelite.client.game.ItemManager;
 import net.runelite.client.game.ItemStack;
@@ -73,7 +76,9 @@ import net.runelite.client.util.Text;
  * Supplies are detected as decreases of the inventory while the bank is closed for items that
  * are food ("Eat"), potions ("Drink"), or stackable ammunition and runes. Trading, dropping and
  * shop use also register as consumption; that is an accepted limitation of a passive tracker.
- * The session is persisted per RuneScape profile so it survives a relog.
+ * Drinking a dose or eating part of a cake leaves a smaller supply behind, which is credited back,
+ * so a four-dose potion costs its price once. The session is persisted per RuneScape profile so it
+ * survives a relog; logged-out time does not count towards its duration.
  */
 @Slf4j
 @Singleton
@@ -82,6 +87,8 @@ public class TaskSessionTracker
 	private static final String SESSION_KEY = "session";
 	private static final String HISTORY_KEY = "sessionHistory";
 	private static final int HISTORY_LIMIT = 30;
+	/** Ticks after login before a restored session with no task in hand is put away. */
+	static final int RESTORED_CHECK_TICKS = 10;
 	/** Item names (lowercase) that count as supplies when their stack shrinks. */
 	private static final List<String> STACKABLE_SUPPLY_SUFFIXES = Arrays.asList(
 		"rune", "arrow", "bolt", "bolts (e)", "dart", "knife", "javelin", "thrownaxe", "chinchompa",
@@ -105,6 +112,8 @@ public class TaskSessionTracker
 	private Function<String, List<String>> alternativeNames = name -> Collections.emptyList();
 	private Function<String, java.util.Set<Integer>> targetNpcIds = name -> Collections.emptySet();
 	private java.util.Set<Integer> npcIds = Collections.emptySet();
+	/** Game ticks left until a session restored at login is checked against the task varps; -1 = no check due. */
+	private int restoredCheckTicks = -1;
 
 	@Inject
 	TaskSessionTracker(Client client, ClientThread clientThread, ItemManager itemManager, ConfigManager configManager,
@@ -128,18 +137,24 @@ public class TaskSessionTracker
 			{
 				lastSlayerXp = client.getSkillExperience(Skill.SLAYER);
 				load();
+				restoredCheckTicks = session == null ? -1 : RESTORED_CHECK_TICKS;
 			});
 		}
 	}
 
 	public void shutDown()
 	{
-		persist();
+		// Stop taking events first, then save on the client thread, which is the one changing the session.
 		eventBus.unregister(this);
-		session = null;
-		targetNames.clear();
-		lastInventory.clear();
-		lastSlayerXp = -1;
+		clientThread.invoke(() ->
+		{
+			putAway();
+			targetNames.clear();
+			lastInventory.clear();
+			lastSlayerXp = -1;
+			bankOpen = false;
+			restoredCheckTicks = -1;
+		});
 	}
 
 	public Optional<TaskSession> current()
@@ -161,6 +176,8 @@ public class TaskSessionTracker
 		c.setUpdatedAtEpochMs(session.getUpdatedAtEpochMs());
 		c.setInitialAmount(session.getInitialAmount());
 		c.setKills(session.getKills());
+		c.setKillsAtStart(session.getKillsAtStart());
+		c.setPausedMs(session.getPausedMs());
 		c.setSlayerXpGained(session.getSlayerXpGained());
 		c.setLoot(new HashMap<>(session.getLoot()));
 		c.setLootValue(session.getLootValue());
@@ -201,6 +218,8 @@ public class TaskSessionTracker
 		fresh.setTaskName(session.getTaskName());
 		fresh.setMasterName(session.getMasterName());
 		fresh.setInitialAmount(session.getInitialAmount());
+		fresh.setKills(session.getKills());
+		fresh.setKillsAtStart(session.getKills());
 		fresh.setStartedAtEpochMs(System.currentTimeMillis());
 		fresh.setUpdatedAtEpochMs(fresh.getStartedAtEpochMs());
 		session = fresh;
@@ -217,19 +236,64 @@ public class TaskSessionTracker
 			if (session == null)
 			{
 				load();
+				restoredCheckTicks = session == null ? -1 : RESTORED_CHECK_TICKS;
 			}
 		}
 		else if (event.getGameState() == GameState.LOGIN_SCREEN || event.getGameState() == GameState.HOPPING)
 		{
 			// Save, then forget: the next login may be another account or profile, and load() restores
 			// whatever that profile has.
-			persist();
-			session = null;
+			putAway();
 			targetNames.clear();
 			npcIds = Collections.emptySet();
 			lastInventory.clear();
 			lastSlayerXp = -1;
+			bankOpen = false;
+			restoredCheckTicks = -1;
 		}
+	}
+
+	@Subscribe
+	public void onClientShutdown(ClientShutdown event)
+	{
+		if (session != null)
+		{
+			session.setPausedAtEpochMs(System.currentTimeMillis());
+		}
+		persist();
+	}
+
+	@Subscribe
+	public void onGameTick(GameTick tick)
+	{
+		if (restoredCheckTicks < 0 || --restoredCheckTicks > 0)
+		{
+			return;
+		}
+		restoredCheckTicks = -1;
+		// A session saved at logout whose task was finished or cancelled elsewhere (mobile, another
+		// client): nothing will ever report it as done, so put it in the history now.
+		if (session != null && client.getVarpValue(VarPlayerID.SLAYER_COUNT) <= 0)
+		{
+			archive(session);
+			session = null;
+			targetNames.clear();
+			persist();
+			eventBus.post(new SessionUpdated(null));
+		}
+	}
+
+	/** Save the session with the time it was put away, and drop it from memory. */
+	private void putAway()
+	{
+		if (session != null)
+		{
+			long now = System.currentTimeMillis();
+			session.setUpdatedAtEpochMs(Math.max(session.getUpdatedAtEpochMs(), now));
+			session.setPausedAtEpochMs(now);
+		}
+		persist();
+		session = null;
 	}
 
 	@Subscribe
@@ -268,6 +332,7 @@ public class TaskSessionTracker
 			session.setTaskName(task.getName());
 			session.setMasterName(task.getMaster() == null ? null : task.getMaster().getDisplayName());
 			session.setInitialAmount(task.getInitialAmount());
+			session.setKillsAtStart(task.getKills());
 			session.setStartedAtEpochMs(System.currentTimeMillis());
 			session.setUpdatedAtEpochMs(session.getStartedAtEpochMs());
 			rebuildTargetNames(task.getName());
@@ -333,19 +398,41 @@ public class TaskSessionTracker
 		snapshot(event.getItemContainer(), now);
 		if (session != null && config.trackSupplies() && !bankOpen && !lastInventory.isEmpty())
 		{
-			long used = 0;
+			Map<Integer, Integer> less = new HashMap<>();
+			Map<Integer, Integer> more = new HashMap<>();
 			for (Map.Entry<Integer, Integer> e : lastInventory.entrySet())
 			{
-				int id = e.getKey();
-				int before = e.getValue();
-				int after = now.getOrDefault(id, 0);
-				if (after >= before || !isSupply(id))
+				int after = now.getOrDefault(e.getKey(), 0);
+				if (after < e.getValue() && isSupply(e.getKey()))
 				{
-					continue;
+					less.put(e.getKey(), e.getValue() - after);
 				}
-				int consumed = before - after;
-				session.getSupplies().merge(id, consumed, Integer::sum);
-				used += (long) itemManager.getItemPrice(id) * consumed;
+			}
+			for (Map.Entry<Integer, Integer> e : now.entrySet())
+			{
+				int before = lastInventory.getOrDefault(e.getKey(), 0);
+				if (e.getValue() > before && isSupply(e.getKey()))
+				{
+					more.put(e.getKey(), e.getValue() - before);
+				}
+			}
+			long used = 0;
+			if (!less.isEmpty())
+			{
+				// A dose or a bite taken leaves the smaller supply behind (potion(4) -> potion(3), cake -> 2/3
+				// cake): what was used is the difference. A supply appearing on its own is a pickup, not a credit.
+				for (Map.Entry<Integer, Integer> e : less.entrySet())
+				{
+					session.getSupplies().merge(e.getKey(), e.getValue(), Integer::sum);
+					used += (long) itemManager.getItemPrice(e.getKey()) * e.getValue();
+				}
+				for (Map.Entry<Integer, Integer> e : more.entrySet())
+				{
+					session.getSupplies().merge(e.getKey(), -e.getValue(), Integer::sum);
+					session.getSupplies().remove(e.getKey(), 0);
+					used -= (long) itemManager.getItemPrice(e.getKey()) * e.getValue();
+				}
+				used = Math.max(0, used);
 			}
 			if (used > 0)
 			{
@@ -527,6 +614,14 @@ public class TaskSessionTracker
 			TaskSession saved = gson.fromJson(json, TaskSession.class);
 			if (saved != null && saved.getTaskName() != null)
 			{
+				if (saved.getPausedAtEpochMs() > 0)
+				{
+					// Resume: the time away is not part of the session.
+					long now = System.currentTimeMillis();
+					saved.setPausedMs(saved.getPausedMs() + Math.max(0, now - saved.getPausedAtEpochMs()));
+					saved.setUpdatedAtEpochMs(Math.max(saved.getUpdatedAtEpochMs(), now));
+					saved.setPausedAtEpochMs(0);
+				}
 				session = saved;
 				rebuildTargetNames(saved.getTaskName());
 				eventBus.post(new SessionUpdated(session));

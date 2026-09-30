@@ -22,37 +22,20 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package com.slayercompanion.points;
+package com.slayercompanion.ui;
 
 import java.util.List;
-import javax.annotation.Nullable;
-import lombok.Value;
+import java.util.Map;
 
-/** Advice for the Points tab. Text only; nothing here acts on the game. */
-@Value
-public class PointsPlan
+/** Lets tests in other packages see what the Loot tab would list. */
+public final class TrackerTabTestAccess
 {
-	@Value
-	public static class MasterOption
+	private TrackerTabTestAccess()
 	{
-		String masterName;
-		/** Points the next completed task would award at this master given the streak. */
-		int pointsForNextTask;
-		boolean milestone;
-		String note;
-		/** False when the player is below the master's combat or Slayer requirement. */
-		boolean available;
 	}
 
-	int currentPoints;
-	int streak;
-	/** Streak number of the next task: streak + 1, or streak + 2 while a shared-streak task is still to finish. */
-	int nextTaskNumber;
-	/** Interval of the next milestone task (10, 50, 100, 250, 1000) or 0 when unknown. */
-	int nextMilestoneInterval;
-	int tasksUntilMilestone;
-	@Nullable
-	MasterOption recommended;
-	List<MasterOption> options;
-	String summary;
+	public static List<Map.Entry<Integer, Integer>> top(Map<Integer, Integer> map)
+	{
+		return TrackerTab.top(map, null, 12);
+	}
 }

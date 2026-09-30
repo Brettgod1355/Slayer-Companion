@@ -48,6 +48,7 @@ import com.slayercompanion.location.LocationService;
 import com.slayercompanion.location.MapMarkerService;
 import com.slayercompanion.location.RouteService;
 import com.slayercompanion.points.PointsPlanner;
+import com.slayercompanion.task.AssignmentMemory;
 import com.slayercompanion.task.CurrentTask;
 import com.slayercompanion.task.TaskTracker;
 import com.slayercompanion.tracker.TaskSession;
@@ -108,7 +109,7 @@ import net.runelite.client.util.LinkBrowser;
 public class SlayerCompanionPlugin extends Plugin
 {
 	/** Shown in the panel footer; bumped together with build.gradle and runelite-plugin.properties. */
-	public static final String VERSION = "0.13.0";
+	public static final String VERSION = "0.14.0";
 
 	private static final String WIKI_BASE = "https://oldschool.runescape.wiki/w/";
 	/** Refresh the Wilderness numbers at most this often (game ticks). */
@@ -171,6 +172,8 @@ public class SlayerCompanionPlugin extends Plugin
 	private UnlockAdvisor unlockAdvisor;
 	@Inject
 	private TaskOverlay overlay;
+	@Inject
+	private AssignmentMemory assignmentMemory;
 
 	private SlayerCompanionPanel panel;
 	private NavigationButton navButton;
@@ -188,6 +191,8 @@ public class SlayerCompanionPlugin extends Plugin
 	/** The loadout before the recommendation filled it (null: there was none), for Undo. */
 	private volatile Loadout undoLoadout;
 	private volatile String undoKey;
+	/** Bumped on logout and shutdown so a search still running then is thrown away when it answers. */
+	private final java.util.concurrent.atomic.AtomicInteger recommendGeneration = new java.util.concurrent.atomic.AtomicInteger();
 
 	@Override
 	protected void startUp()
@@ -218,6 +223,8 @@ public class SlayerCompanionPlugin extends Plugin
 		clientThread.invoke(bankLayout::startUp);
 		inventorySetupsLink.refresh();
 		requestRefresh();
+		// The TaskChanged for a task already in hand can arrive before this plugin is on the event bus.
+		clientThread.invokeLater(() -> taskTracker.current().flatMap(t -> data.task(t.getName())).ifPresent(this::updateMarkers));
 		log.debug("Slayer Companion {} started", VERSION);
 	}
 
@@ -235,8 +242,8 @@ public class SlayerCompanionPlugin extends Plugin
 		catalog.reset();
 		inventorySetupsLink.reset();
 		clientThread.invoke(bankLayout::shutDown);
-		recommendation = null;
-		undoKey = null;
+		resetRecommendation();
+		indexWasComplete = false;
 		panel = null;
 		overlayTask = null;
 		overlaySession = null;
@@ -252,6 +259,12 @@ public class SlayerCompanionPlugin extends Plugin
 	@Subscribe
 	public void onGameStateChanged(GameStateChanged event)
 	{
+		if (event.getGameState() == GameState.LOGIN_SCREEN)
+		{
+			// The next login may be another account: nothing of this one's may carry over.
+			resetRecommendation();
+			mapMarkerService.clear();
+		}
 		if (event.getGameState() == GameState.LOGGED_IN || event.getGameState() == GameState.LOGIN_SCREEN)
 		{
 			catalog.reset();
@@ -305,19 +318,28 @@ public class SlayerCompanionPlugin extends Plugin
 		if (task == null)
 		{
 			mapMarkerService.clear();
+			if (event.isCompleted())
+			{
+				assignmentMemory.forget();
+			}
 		}
 		else if (event.isNewAssignment())
 		{
-			if (config.openLinkedSetup())
+			// A login, hop or restart reports the task in hand again: redraw the markers, but open the
+			// setup and route only once per assignment.
+			boolean firstSighting = assignmentMemory.firstSighting(task);
+			if (firstSighting && config.openLinkedSetup())
 			{
 				loadoutStore.linkedSetup(bundledName(task.getName())).ifPresent(inventorySetupsLink::open);
 			}
 			data.task(task.getName()).ifPresent(info ->
 			{
 				updateMarkers(info);
-				if (config.autoRouteFavourite())
+				if (firstSighting && config.autoRouteFavourite())
 				{
-					locationService.favouriteLocation(info).flatMap(LocationService::point).ifPresent(routeService::route);
+					locationService.favouriteLocation(info)
+						.filter(l -> LocationService.suitsAssignment(l, task))
+						.flatMap(LocationService::point).ifPresent(routeService::route);
 				}
 			});
 		}
@@ -354,7 +376,18 @@ public class SlayerCompanionPlugin extends Plugin
 		}
 		if ("showMapMarkers".equals(event.getKey()))
 		{
-			clientThread.invokeLater(() -> taskTracker.current().flatMap(t -> data.task(t.getName())).ifPresent(this::updateMarkers));
+			clientThread.invokeLater(() ->
+			{
+				Optional<TaskInfo> info = taskTracker.current().flatMap(t -> data.task(t.getName()));
+				if (info.isPresent())
+				{
+					updateMarkers(info.get());
+				}
+				else
+				{
+					mapMarkerService.clear();
+				}
+			});
 		}
 		requestRefresh();
 	}
@@ -445,15 +478,15 @@ public class SlayerCompanionPlugin extends Plugin
 		overlaySession = sessionTracker.snapshot().orElse(null);
 
 		java.util.Map<Integer, String> itemNames = new java.util.HashMap<>();
+		java.util.Map<Integer, Long> itemPrices = new java.util.HashMap<>();
 		if (overlaySession != null)
 		{
-			for (int id : overlaySession.getLoot().keySet())
+			java.util.Set<Integer> ids = new java.util.HashSet<>(overlaySession.getLoot().keySet());
+			ids.addAll(overlaySession.getSupplies().keySet());
+			for (int id : ids)
 			{
 				itemNames.put(id, itemName(id));
-			}
-			for (int id : overlaySession.getSupplies().keySet())
-			{
-				itemNames.put(id, itemName(id));
+				itemPrices.put(id, (long) itemManager.getItemPrice(id));
 			}
 		}
 
@@ -465,14 +498,14 @@ public class SlayerCompanionPlugin extends Plugin
 			TaskInfo sessionInfo = data.task(overlaySession.getTaskName()).orElse(null);
 			String sessionVariant = sessionInfo == info ? variant : null;
 			sessionExpected = sessionInfo == null ? null
-				: lootEstimator.estimate(sessionInfo, sessionVariant, overlaySession.getKills()).map(LootEstimate::getTotal).orElse(null);
+				: lootEstimator.estimate(sessionInfo, sessionVariant, overlaySession.getTrackedKills()).map(LootEstimate::getTotal).orElse(null);
 		}
 		List<TaskSession> history = sessionTracker.history();
 		List<Long> historyExpected = new java.util.ArrayList<>();
 		for (int i = 0; loggedIn && i < Math.min(history.size(), 8); i++)
 		{
 			TaskSession h = history.get(i);
-			historyExpected.add(data.task(h.getTaskName()).flatMap(t -> lootEstimator.estimate(t, null, h.getKills()))
+			historyExpected.add(data.task(h.getTaskName()).flatMap(t -> lootEstimator.estimate(t, null, h.getTrackedKills()))
 				.map(LootEstimate::getTotal).orElse(null));
 		}
 		java.util.Set<Integer> completedAchievements = new java.util.HashSet<>();
@@ -497,7 +530,9 @@ public class SlayerCompanionPlugin extends Plugin
 		boolean canUndo = undoKey != null && undoKey.equals(taskKeyForUndo);
 		boolean bankOpen = loggedIn && client.getWidget(InterfaceID.Bankmain.UNIVERSE) != null;
 
-		com.slayercompanion.points.PointsPlan pointsPlan = loggedIn ? pointsPlanner.plan(points, shared, task) : null;
+		com.slayercompanion.points.PointsPlan pointsPlan = loggedIn ? pointsPlanner.plan(points, shared, task,
+			client.getLocalPlayer() == null ? Integer.MAX_VALUE : client.getLocalPlayer().getCombatLevel(),
+			client.getRealSkillLevel(net.runelite.api.Skill.SLAYER)) : null;
 		List<PanelModel.MasterRoute> masterRoutes = new java.util.ArrayList<>();
 		if (loggedIn && task == null)
 		{
@@ -550,6 +585,7 @@ public class SlayerCompanionPlugin extends Plugin
 			.wilderness(wilderness)
 			.unlocks(loggedIn ? unlockAdvisor.advise(points) : Collections.emptyList())
 			.itemNames(itemNames)
+			.itemPrices(itemPrices)
 			.locks(locks)
 			.build();
 	}
@@ -586,8 +622,17 @@ public class SlayerCompanionPlugin extends Plugin
 	private void forgetRecommendation()
 	{
 		recommendation = null;
+		recommendationIndex = 0;
 		undoKey = null;
 		undoLoadout = null;
+	}
+
+	/** Forget the recommendation and Undo, and drop the answer of any search still running. */
+	private void resetRecommendation()
+	{
+		recommendGeneration.incrementAndGet();
+		recommending = false;
+		forgetRecommendation();
 	}
 
 	/** When the bank is showing the loadout, show the loadout as it is now. Client thread only. */
@@ -763,7 +808,8 @@ public class SlayerCompanionPlugin extends Plugin
 		@Override
 		public void openInventorySetup(String setupName)
 		{
-			inventorySetupsLink.open(setupName);
+			// Same thread as the automatic open on a new task.
+			clientThread.invokeLater(() -> inventorySetupsLink.open(setupName));
 		}
 
 		@Override
@@ -778,8 +824,13 @@ public class SlayerCompanionPlugin extends Plugin
 				}
 				recommending = true;
 				requestRefresh();
+				int generation = recommendGeneration.get();
 				recommender.recommend(info, locationService.variant(info), r -> clientThread.invokeLater(() ->
 				{
+					if (generation != recommendGeneration.get())
+					{
+						return; // logged out or shut down meanwhile
+					}
 					recommendation = r;
 					recommending = false;
 					if (!r.getOptions().isEmpty())

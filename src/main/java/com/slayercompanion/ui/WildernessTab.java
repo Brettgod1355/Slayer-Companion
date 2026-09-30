@@ -91,7 +91,7 @@ class WildernessTab extends JPanel
 				for (WildernessStatus.CarriedItem i : w.getLost())
 				{
 					lost.add(Ui.wrap(i.getName() + (i.getQuantity() > 1 ? " x " + i.getQuantity() : "") + " — " + Ui.gp(i.getValue()), Color.WHITE));
-					if (++shown >= 15)
+					if (++shown >= 15 && w.getLost().size() > shown)
 					{
 						lost.add(Ui.wrap("… and " + (w.getLost().size() - shown) + " more", Ui.MUTED));
 						break;

@@ -73,6 +73,7 @@ public class TaskSweepTest
 		{
 			Recommendation r = sweep.recommend(c, SampleBank.MAXED);
 			TaskSweep.checkRecommendation(c, SampleBank.MAXED, r, findings);
+			sweep.checkLaunchers(c, SampleBank.MAXED, r, findings);
 			sweep.render(sweep.model(c, r, TaskSweep.loadout(r)), c.label(), findings, false);
 			sweep.render(sweep.model(c, null, null), c.label() + " (no loadout)", findings, false);
 		}

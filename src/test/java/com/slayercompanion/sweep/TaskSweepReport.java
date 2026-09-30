@@ -91,6 +91,7 @@ public final class TaskSweepReport
 				}
 				recs.put(bank, r);
 				TaskSweep.checkRecommendation(c, bank, r, findings);
+				sweep.checkLaunchers(c, bank, r, findings);
 			}
 			dpsRows.put(c.label(), dpsRow(recs));
 			Recommendation maxed = recs.get(SampleBank.MAXED);

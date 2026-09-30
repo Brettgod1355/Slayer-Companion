@@ -177,6 +177,37 @@ public class LocationService
 		return Optional.of(new WorldPoint(l.getX(), l.getY(), l.getPlane() == null ? 0 : l.getPlane()));
 	}
 
+	/**
+	 * Whether killing at this spot counts for the assignment: Krystilia's tasks are all in the
+	 * Wilderness, and Konar names an area ("Catacombs of Kourend"), matched loosely against the
+	 * spot's names. Unknown area names do not match, so nothing is done on a guess.
+	 */
+	public static boolean suitsAssignment(TaskLocation l, com.slayercompanion.task.CurrentTask task)
+	{
+		if (task.getMaster() == com.slayercompanion.task.SlayerMaster.KRYSTILIA && !l.isWilderness())
+		{
+			return false;
+		}
+		String area = task.getAreaName() == null ? "" : areaKey(task.getAreaName());
+		if (area.isEmpty())
+		{
+			return true;
+		}
+		for (String n : new String[]{l.getName(), l.getDisplayName()})
+		{
+			if (n != null && areaKey(n).contains(area))
+			{
+				return true;
+			}
+		}
+		return false;
+	}
+
+	private static String areaKey(String name)
+	{
+		return name.toLowerCase(java.util.Locale.ROOT).replaceAll("^(in the |the |task-only )", "").replaceAll("[^a-z0-9]", "");
+	}
+
 	/** Config key fragment; the same for the game's task name and the wiki's (case, "The ", punctuation ignored). */
 	public static String slug(String taskName)
 	{

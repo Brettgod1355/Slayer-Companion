@@ -41,6 +41,12 @@ public class TaskSession
 	private long updatedAtEpochMs;
 	private int initialAmount;
 	private int kills;
+	/** Task kills already done when this session started counting (tracking began mid-task, or Reset). */
+	private int killsAtStart;
+	/** Time spent logged out (or with the plugin off) since the start; not part of the duration. */
+	private long pausedMs;
+	/** When the session was last put away at logout, 0 while it is live. */
+	private long pausedAtEpochMs;
 	private long slayerXpGained;
 	/** Canonical item id -> quantity received as loot from task targets. */
 	private Map<Integer, Integer> loot = new HashMap<>();
@@ -55,8 +61,15 @@ public class TaskSession
 		return lootValue - suppliesValue;
 	}
 
+	/** Logged-in time from the start to the last update. */
 	public long getDurationMs()
 	{
-		return Math.max(0, updatedAtEpochMs - startedAtEpochMs);
+		return Math.max(0, updatedAtEpochMs - startedAtEpochMs - pausedMs);
+	}
+
+	/** Kills made while this session was counting: the ones its loot, supplies and time belong to. */
+	public int getTrackedKills()
+	{
+		return Math.max(0, kills - killsAtStart);
 	}
 }

@@ -73,7 +73,10 @@ public class InventorySetupsLink
 		Map<String, Object> data = new HashMap<>();
 		data.put(KEY_SETUPS, names);
 		eventBus.post(new PluginMessage(NAMESPACE, MESSAGE_GET_SETUPS, data));
-		setups = copy(names);
+		// Read the answer back from the map: the other plugin may fill our list or put its own there.
+		Object answer = data.get(KEY_SETUPS);
+		setups = answer instanceof Collection ? copy((Collection<?>) answer)
+			: answer instanceof Object[] ? copy(java.util.Arrays.asList((Object[]) answer)) : copy(names);
 	}
 
 	/** Take in a "setups-changed" broadcast. Returns true when the setup list changed. */

@@ -126,6 +126,8 @@ public class PanelModel
 	List<UnlockAdvice> unlocks;
 	/** Item id -> display name for everything the Loot tab shows. */
 	java.util.Map<Integer, String> itemNames;
+	/** Grand Exchange price of each loot and supply item of the session, for ordering the lists. */
+	java.util.Map<Integer, Long> itemPrices;
 	/** Location id -> lock state for the current task's locations. */
 	java.util.Map<String, com.slayercompanion.game.LockState> locks;
 	int points;

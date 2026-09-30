@@ -81,6 +81,13 @@ public class WorthTest
 		assertEquals(Verdict.Kind.NONE, VerdictAdvisor.kind("Should not be unlocked"));
 		assertEquals(Verdict.Kind.NONE, VerdictAdvisor.kind("Don't unlock for XP; can unlock for profit or hunting the basilisk jaw on an ironman"));
 		assertEquals(Verdict.Kind.NONE, VerdictAdvisor.kind(null));
+		// Advice against is never a green "Do it".
+		assertEquals(Verdict.Kind.SKIP, VerdictAdvisor.kind("Don't do this task"));
+		assertEquals(Verdict.Kind.SKIP, VerdictAdvisor.kind("Do not do for XP"));
+		assertEquals(Verdict.Kind.SKIP, VerdictAdvisor.kind("Dont bother"));
+		assertEquals(Verdict.Kind.NONE, VerdictAdvisor.kind("Don\u2019t unlock for XP; can unlock for profit"));
+		assertEquals(Verdict.Kind.DEPENDS, VerdictAdvisor.kind("Doable with a cannon"));
+		assertEquals(Verdict.Kind.DO, VerdictAdvisor.kind("Do"));
 	}
 
 	@Test

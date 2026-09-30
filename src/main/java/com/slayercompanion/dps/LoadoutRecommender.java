@@ -39,6 +39,7 @@ import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.concurrent.RejectedExecutionException;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
@@ -134,21 +135,33 @@ public class LoadoutRecommender
 				worn.put(Gear.slotOf(s.getSlot()), s);
 			}
 		}
-		executor.execute(() ->
+		try
 		{
-			try
+			executor.execute(() ->
 			{
-				List<LoadoutOptimizer.Option> options = LoadoutOptimizer.best(player, items, monster.getCombatStats(), required);
-				LoadoutOptimizer.Option current = LoadoutOptimizer.evaluate(player, worn, monster.getCombatStats());
-				done.accept(new Recommendation(key, name, options, current, requirements, assumptions(player, options),
-					options.isEmpty() ? "Nothing you own can hurt " + name + " (as far as the plugin can tell)." : null, ids));
-			}
-			catch (RuntimeException e)
-			{
-				log.warn("Loadout recommendation failed", e);
-				done.accept(unavailable(key, name, "Something went wrong working this out."));
-			}
-		});
+				Recommendation result = null;
+				try
+				{
+					List<LoadoutOptimizer.Option> options = LoadoutOptimizer.best(player, items, monster.getCombatStats(), required);
+					LoadoutOptimizer.Option current = LoadoutOptimizer.evaluate(player, worn, monster.getCombatStats());
+					result = new Recommendation(key, name, options, current, requirements, assumptions(player, options),
+						options.isEmpty() ? "Nothing you own can hurt " + name + " (as far as the plugin can tell)." : null, ids);
+				}
+				catch (RuntimeException e)
+				{
+					log.warn("Loadout recommendation failed", e);
+				}
+				finally
+				{
+					// Always answer, even after an Error, so the panel never stays on "Working out...".
+					done.accept(result != null ? result : unavailable(key, name, "Something went wrong working this out."));
+				}
+			});
+		}
+		catch (RejectedExecutionException e)
+		{
+			done.accept(unavailable(key, name, "Something went wrong working this out."));
+		}
 	}
 
 	private static Recommendation unavailable(String key, String name, String why)

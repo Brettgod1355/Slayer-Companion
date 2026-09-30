@@ -84,10 +84,16 @@ public final class VerdictAdvisor
 		{
 			return Verdict.Kind.NONE;
 		}
-		String w = wiki.trim().toLowerCase(Locale.ROOT);
-		if (w.startsWith("should") || w.startsWith("can be unlocked") || w.startsWith("don't unlock"))
+		String w = wiki.trim().toLowerCase(Locale.ROOT).replace('\u2019', '\'');
+		if (w.startsWith("should") || w.startsWith("can be unlocked") || w.startsWith("don't unlock")
+			|| w.startsWith("dont unlock") || w.startsWith("do not unlock"))
 		{
 			return Verdict.Kind.NONE;
+		}
+		if (w.startsWith("don't") || w.startsWith("dont") || w.startsWith("do not"))
+		{
+			// "Don't do this task", "Do not do for XP": advice against, not a green "Do it".
+			return Verdict.Kind.SKIP;
 		}
 		if (w.startsWith("block"))
 		{
@@ -97,7 +103,7 @@ public final class VerdictAdvisor
 		{
 			return Verdict.Kind.SKIP;
 		}
-		if (w.startsWith("do"))
+		if (w.equals("do") || w.startsWith("do ") || w.startsWith("do;") || w.startsWith("do,") || w.startsWith("do."))
 		{
 			return w.startsWith("do if") || w.contains("skip") || w.contains("block") ? Verdict.Kind.DEPENDS : Verdict.Kind.DO;
 		}
