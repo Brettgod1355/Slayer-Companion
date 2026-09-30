@@ -56,6 +56,12 @@ python3 generate.py --tidy --out DIR          # only the offline tidy-up below o
   dump when an update changes assignments.
 * An "other" requirement loses the word the quest icon leaves behind ("Completion of Quest Priest
   in Peril" → "Completion of Priest in Peril").
+* `curated/page-fills.json`: values the Bucket API does not hold, read from wiki pages found with
+  the wiki's search (owner, 2026-09-30). `locations` gives coordinates to a location record (in every
+  task, or only `task`), replacing missing or instance-only ones (the Slayer Tower roof, Cerberus'
+  Lair's entrance area, the Skeletal Tomb and the Web Chasm); `monsters` fills combat stats a bucket
+  row leaves empty (Vardorvis's Defence, "215-145" on the page, as its midpoint). Each entry cites
+  its page.
 
 Progress goes to stderr; a summary of the `counts` block of `report.json` goes to stdout.
 

@@ -1950,8 +1950,9 @@ def parse_infobox_monster(text: str) -> dict | None:
     return out
 
 
-_COORD = re.compile(r"x\s*:\s*(-?\d+)\s*,\s*y\s*:\s*(-?\d+)(?:\s*,\s*plane\s*:\s*(\d+))?", re.I)
-_BARE_COORD = re.compile(r"^\s*(-?\d+)\s*,\s*(-?\d+)\s*(?:,|$)")
+# A large monster's pin can sit between tiles ("x:3091.5,y:9799", Obor): the tile is the whole part.
+_COORD = re.compile(r"x\s*:\s*(-?\d+)(?:\.\d+)?\s*,\s*y\s*:\s*(-?\d+)(?:\.\d+)?(?:\s*,\s*plane\s*:\s*(\d+))?", re.I)
+_BARE_COORD = re.compile(r"^\s*(-?\d+)(?:\.\d+)?\s*,\s*(-?\d+)(?:\.\d+)?\s*(?:,|$)")
 
 
 def coords_in_arg(arg: str) -> list[tuple[int, int, int | None]]:
@@ -2952,6 +2953,18 @@ def self_test() -> int:
     assert tidy_other_requirement("Completion of Quest Priest in Peril") == "Completion of Priest in Peril"; checks += 1
     assert tidy_other_requirement("Partial completion of Quest Lunar Diplomacy") == "Partial completion of Lunar Diplomacy"; checks += 1
     assert tidy_other_requirement("Quest points: 32") == "Quest points: 32"; checks += 1
+    fills = {"locations": [{"location": "Lair", "x": 1, "y": 2, "plane": 0},
+                           {"location": "Roof", "task": "B", "x": 3, "y": 4, "plane": 2}],
+             "monsters": [{"page": "Boss", "version": "Post-quest", "defenceLevel": 180, "source": "s"}]}
+    t = {"task": "A", "locations": [{"name": "Lair", "x": 9, "y": 9, "plane": 0, "coordsMissing": False},
+                                     {"name": "Roof", "x": None, "y": None, "plane": None, "coordsMissing": True}],
+         "monsters": [{"page": "Boss", "combatStats": {"version": "Post-quest", "hitpoints": 700}}]}
+    apply_page_fills(t, fills)
+    assert (t["locations"][0]["x"], t["locations"][0]["y"]) == (1, 2), "instance coordinates replaced"; checks += 1
+    assert t["locations"][1]["x"] is None, "task-specific entry leaves other tasks alone"; checks += 1
+    assert t["monsters"][0]["combatStats"] == {"version": "Post-quest", "hitpoints": 700, "defenceLevel": 180}; checks += 1
+    assert coords_in_arg("x:3091.5,y:9799") == [(3091, 9799, None)]; checks += 1
+    assert coords_in_arg("3091.5,9799.5") == [(3091, 9799, None)]; checks += 1
     print(f"self-test OK: {checks} checks")
     return 0
 
@@ -3453,6 +3466,7 @@ def apply_gear_pages(tasks: list[dict]) -> None:
 
 GEAR_RULES_PATH = Path(__file__).resolve().parent / "curated" / "gear-rules.json"
 MASTER_ASSIGNMENTS_PATH = Path(__file__).resolve().parent / "curated" / "master-assignments.json"
+PAGE_FILLS_PATH = Path(__file__).resolve().parent / "curated" / "page-fills.json"
 
 # Research notes that ended up in location notes: where a count or a claim came from.  The
 # curated files keep them as evidence; the player only needs the advice.
@@ -3646,6 +3660,29 @@ def apply_master_assignments(task: dict, snapshot: dict[str, dict]) -> None:
                        for m, e in snapshot.get(task["task"], {}).items()}
 
 
+def load_page_fills(path: Path = PAGE_FILLS_PATH) -> dict:
+    return json.loads(path.read_text(encoding="utf-8")) if path.exists() else {"locations": [], "monsters": []}
+
+
+def apply_page_fills(task: dict, fills: dict) -> None:
+    """curated/page-fills.json: coordinates and monster stats read from wiki pages where the Bucket
+    API has none. A location entry without "task" applies to that location name in every task."""
+    for f in fills.get("locations", []):
+        if f.get("task") not in (None, task["task"]):
+            continue
+        for loc in task.get("locations") or []:
+            if loc.get("name") == f["location"]:
+                loc["x"], loc["y"], loc["plane"] = f["x"], f["y"], f["plane"]
+                loc["coordsMissing"] = False
+    for f in fills.get("monsters", []):
+        for mon in task.get("monsters") or []:
+            stats = mon.get("combatStats")
+            if mon.get("page") == f["page"] and stats is not None and stats.get("version") == f.get("version", stats.get("version")):
+                for k, v in f.items():
+                    if k not in ("page", "version", "source") and stats.get(k) is None:
+                        stats[k] = v
+
+
 # "{{SCP|Quest}} [[Priest in Peril]]" in an infobox renders as "Quest Priest in Peril": drop the icon's word.
 _QUEST_ICON_WORD = re.compile(r"(?<=\bof )Quest (?=[A-Z])")
 
@@ -3654,9 +3691,11 @@ def tidy_other_requirement(text: str | None) -> str | None:
     return _QUEST_ICON_WORD.sub("", text) if text else text
 
 
-def tidy_tasks(tasks: list[dict], rules: dict | None = None, assignments: dict[str, dict] | None = None) -> None:
+def tidy_tasks(tasks: list[dict], rules: dict | None = None, assignments: dict[str, dict] | None = None,
+               fills: dict | None = None) -> None:
     rules = load_gear_rules() if rules is None else rules
     assignments = load_master_assignments() if assignments is None else assignments
+    fills = load_page_fills() if fills is None else fills
     for t in tasks:
         t.pop("styleNotes", None)  # labels of the gear tables the plugin no longer ships
         t["strategy"] = tidy_strategy(t.get("strategy") or [])
@@ -3665,6 +3704,7 @@ def tidy_tasks(tasks: list[dict], rules: dict | None = None, assignments: dict[s
         apply_master_assignments(t, assignments)
         if t.get("requirements"):
             t["requirements"]["other"] = tidy_other_requirement(t["requirements"].get("other"))
+        apply_page_fills(t, fills)
 
 
 def tidy_only(args) -> int:

@@ -155,7 +155,10 @@ public final class DpsCalculator
 		double hit = weapon.startsWith("osmumten's fang") && style.getType() == AttackStyle.Type.STAB
 			? fangHitChance(roll, def) : hitChance(roll, def);
 		int speed = speed(g, style);
-		double perHit = max / 2.0;
+		int armour = val(m.getFlatArmour());
+		boolean fang = weapon.startsWith("osmumten's fang");
+		// The fang's hits land between 15% and 85% of its max hit.
+		double perHit = fang ? averageHit(max * 3 / 20, max - max * 3 / 20, armour) : averageHit(0, max, armour);
 		if (keris)
 		{
 			// 1 in 51 hits goes through the chitin for triple damage.
@@ -164,7 +167,8 @@ public final class DpsCalculator
 		if (weapon.startsWith("scythe of vitur") || weapon.contains("scythe of vitur"))
 		{
 			int size = val(m.getSize());
-			perHit = size >= 3 ? max / 2.0 + (max / 2) / 2.0 + (max / 4) / 2.0 : size == 2 ? max / 2.0 + (max / 2) / 2.0 : perHit;
+			perHit = size >= 3 ? averageHit(0, max, armour) + averageHit(0, max / 2, armour) + averageHit(0, max / 4, armour)
+				: size == 2 ? averageHit(0, max, armour) + averageHit(0, max / 2, armour) : perHit;
 		}
 		return new Result(hit * perHit / (speed * 0.6), max, hit, speed);
 	}
@@ -284,12 +288,13 @@ public final class DpsCalculator
 		long def = (long) (val(m.getDefenceLevel()) + 9) * (rangedDefence(m, g.category()) + 64);
 		int speed = speed(g, style);
 		double hit = hitChance(roll, def);
-		double perAttack = hit * max / 2.0;
+		int armour = val(m.getFlatArmour());
+		double perAttack = hit * averageHit(0, max, armour);
 		String ammo = g.category().equals("crossbow") ? g.name(Gear.AMMO) : "";
 		if (ammo.startsWith("diamond") && ammo.endsWith("(e)"))
 		{
 			// Armour Piercing: 10% of shots always hit, with a 15% higher max hit (no hard Kandarin diary assumed).
-			perAttack = 0.1 * (max * 115 / 100) / 2.0 + 0.9 * perAttack;
+			perAttack = 0.1 * averageHit(0, max * 115 / 100, armour) + 0.9 * perAttack;
 		}
 		else if (ammo.startsWith("ruby") && ammo.endsWith("(e)"))
 		{
@@ -480,6 +485,29 @@ public final class DpsCalculator
 	}
 
 	// ---------------------------------------------------------------- shared
+
+	/**
+	 * Average damage of a successful melee or ranged hit rolled evenly from {@code lo} to {@code hi},
+	 * after the target's flat armour: subtracted from every hit (a negative value adds to it), never
+	 * below 0. Magic ignores flat armour.
+	 */
+	static double averageHit(int lo, int hi, int flatArmour)
+	{
+		if (hi < lo)
+		{
+			return 0;
+		}
+		if (flatArmour <= lo)
+		{
+			return (lo + hi) / 2.0 - flatArmour;
+		}
+		double total = 0;
+		for (int d = lo; d <= hi; d++)
+		{
+			total += Math.max(0, d - flatArmour);
+		}
+		return total / (hi - lo + 1);
+	}
 
 	/**
 	 * Osmumten's fang (stab, outside the Tombs of Amascut) rolls accuracy twice against one defence
