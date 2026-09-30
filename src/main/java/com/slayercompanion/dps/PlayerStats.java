@@ -44,6 +44,9 @@ public class PlayerStats
 	boolean prayers;
 	boolean rigourUnlocked;
 	boolean auguryUnlocked;
+	/** Deadeye and Mystic Vigour (Royal Titans scrolls) replace Eagle Eye and Mystic Might once unlocked. */
+	boolean deadeyeUnlocked;
+	boolean mysticVigourUnlocked;
 	/** Spellbook varbit: 0 standard, 1 ancient, 2 lunar, 3 arceuus. */
 	int spellbook;
 }

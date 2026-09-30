@@ -108,6 +108,8 @@ public class LoadoutRecommender
 			.prayers(config.dpsAssumePrayers())
 			.rigourUnlocked(client.getVarbitValue(VarbitID.PRAYER_RIGOUR_UNLOCKED) != 0)
 			.auguryUnlocked(client.getVarbitValue(VarbitID.PRAYER_AUGURY_UNLOCKED) != 0)
+			.deadeyeUnlocked(client.getVarbitValue(VarbitID.PRAYER_DEADEYE_UNLOCKED) != 0)
+			.mysticVigourUnlocked(client.getVarbitValue(VarbitID.PRAYER_MYSTIC_VIGOUR_UNLOCKED) != 0)
 			.spellbook(client.getVarbitValue(VarbitID.SPELLBOOK))
 			.build();
 		Set<Integer> ids = new HashSet<>();
@@ -232,10 +234,11 @@ public class LoadoutRecommender
 			}
 			if (!prayers.isEmpty())
 			{
-				out.add("Prayer: " + String.join(" / ", prayers) + " (by your levels; Rigour and Augury only if unlocked).");
+				out.add("Prayer: " + String.join(" / ", prayers) + " (by your levels; Rigour, Augury, Deadeye and Mystic Vigour only if unlocked).");
 			}
 		}
-		out.add("Does not check level requirements, ammo tiers, runes, charges or blowpipe darts, and uses no special attacks.");
+		out.add("Does not check level requirements, ammo tiers, runes, charges or blowpipe darts, and uses no special attacks."
+			+ " Enchanted diamond and ruby bolts count their effects, without the hard Kandarin diary's bonus.");
 		return out;
 	}
 }
