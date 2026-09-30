@@ -65,6 +65,10 @@ public final class DpsCalculator
 	private static Result melee(PlayerStats p, Gear g, AttackStyle style, MonsterCombatStats m)
 	{
 		String weapon = g.name(Gear.WEAPON);
+		if (!meleeReaches(m, g.category()))
+		{
+			return NONE;
+		}
 		if (m.is("leafy") && !weapon.startsWith("leaf-bladed"))
 		{
 			return NONE;
@@ -526,6 +530,20 @@ public final class DpsCalculator
 	private static boolean tzhaarWeapon(String weapon)
 	{
 		return weapon.startsWith("tzhaar-ket") || weapon.startsWith("toktz-xil") || weapon.startsWith("toktz-mej");
+	}
+
+	/**
+	 * Flying monsters (aviansies, Kree'arra) and Zulrah can be hit in melee only with a halberd or a
+	 * salamander; the kraken and TzKal-Zuk not at all.
+	 */
+	static boolean meleeReaches(MonsterCombatStats m, String weaponCategory)
+	{
+		String reach = m.getMeleeReach() != null ? m.getMeleeReach() : m.is("flying") ? "halberd" : null;
+		if (reach == null)
+		{
+			return true;
+		}
+		return "halberd".equals(reach) && ("polearm".equals(weaponCategory) || "salamander".equals(weaponCategory));
 	}
 
 	/** Vyrewatch and similar vampyres only take damage from their special weapons. */

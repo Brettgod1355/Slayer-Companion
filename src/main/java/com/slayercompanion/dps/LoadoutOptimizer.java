@@ -28,6 +28,7 @@ import com.slayercompanion.data.ItemStats;
 import com.slayercompanion.data.MonsterCombatStats;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.EnumMap;
 import java.util.HashMap;
@@ -37,6 +38,7 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
+import java.util.function.Predicate;
 import javax.annotation.Nullable;
 import lombok.Value;
 
@@ -47,7 +49,8 @@ import lombok.Value;
  * repeating until nothing improves. Only the strongest few items per slot for the style are tried,
  * plus every item with a special effect (Slayer helmet, salve, void, crystal, obsidian, ...); void
  * sets are also tried as a starting point because no single void piece helps on its own. Slots
- * where nothing changes DPS stay empty.
+ * where nothing changes DPS stay empty. Slots the task needs something in (an anti-dragon shield
+ * against dragons) only take those items, and start filled with one.
  */
 public final class LoadoutOptimizer
 {
@@ -87,6 +90,17 @@ public final class LoadoutOptimizer
 	/** The best option per combat type, highest DPS first; empty when nothing owned can hurt the monster. */
 	public static List<Option> best(PlayerStats p, Collection<ItemStats> owned, MonsterCombatStats monster)
 	{
+		return best(p, owned, monster, Collections.emptyMap());
+	}
+
+	/**
+	 * As {@link #best(PlayerStats, Collection, MonsterCombatStats)}, with {@code required} slots only
+	 * taking items the predicate accepts (left empty when the player owns none). Two-handed weapons
+	 * are skipped when the shield slot is required.
+	 */
+	public static List<Option> best(PlayerStats p, Collection<ItemStats> owned, MonsterCombatStats monster,
+		Map<Integer, Predicate<ItemStats>> required)
+	{
 		Map<Integer, List<ItemStats>> bySlot = new HashMap<>();
 		for (ItemStats s : new LinkedHashSet<>(owned))
 		{
@@ -96,11 +110,25 @@ public final class LoadoutOptimizer
 				bySlot.computeIfAbsent(slot, k -> new ArrayList<>()).add(s);
 			}
 		}
+		for (Map.Entry<Integer, Predicate<ItemStats>> r : required.entrySet())
+		{
+			List<ItemStats> allowed = new ArrayList<>();
+			for (ItemStats s : bySlot.getOrDefault(r.getKey(), Collections.emptyList()))
+			{
+				if (r.getValue().test(s))
+				{
+					allowed.add(s);
+				}
+			}
+			bySlot.put(r.getKey(), allowed);
+		}
+		boolean shieldRequired = required.containsKey(Gear.SHIELD);
 		// Score every weapon and style alone (bows with their best ammo), keep the strongest per kind.
 		Map<Kind, List<Object[]>> candidates = new EnumMap<>(Kind.class);
 		for (ItemStats weapon : bySlot.getOrDefault(Gear.WEAPON, new ArrayList<>()))
 		{
-			if (weapon.getName() == null || weapon.getName().toLowerCase(Locale.ROOT).contains("uncharged"))
+			if (weapon.getName() == null || weapon.getName().toLowerCase(Locale.ROOT).contains("uncharged")
+				|| (shieldRequired && weapon.isTwoHanded()))
 			{
 				continue;
 			}
@@ -124,8 +152,8 @@ public final class LoadoutOptimizer
 				ItemStats weapon = (ItemStats) c[0];
 				AttackStyle style = (AttackStyle) c[1];
 				Spell spell = (Spell) c[2];
-				Map<Integer, List<ItemStats>> shortlist = shortlist(bySlot, style);
-				for (Gear seed : seeds(weapon, bySlot))
+				Map<Integer, List<ItemStats>> shortlist = shortlist(bySlot, style, required.keySet());
+				for (Gear seed : seeds(weapon, bySlot, required.keySet()))
 				{
 					Option o = climb(p, seed, style, spell, shortlist, monster);
 					if (o.getResult().getDps() <= 0)
@@ -146,14 +174,22 @@ public final class LoadoutOptimizer
 		return out;
 	}
 
-	/** The strongest few items per slot for the style's two bonuses, plus every special-effect item. */
-	private static Map<Integer, List<ItemStats>> shortlist(Map<Integer, List<ItemStats>> bySlot, AttackStyle style)
+	/**
+	 * The strongest few items per slot for the style's two bonuses, plus every special-effect item;
+	 * required slots keep everything they may take.
+	 */
+	private static Map<Integer, List<ItemStats>> shortlist(Map<Integer, List<ItemStats>> bySlot, AttackStyle style, Set<Integer> required)
 	{
 		Map<Integer, List<ItemStats>> out = new HashMap<>();
 		for (Map.Entry<Integer, List<ItemStats>> e : bySlot.entrySet())
 		{
 			if (e.getKey() == Gear.WEAPON)
 			{
+				continue;
+			}
+			if (required.contains(e.getKey()))
+			{
+				out.put(e.getKey(), e.getValue());
 				continue;
 			}
 			Set<ItemStats> keep = new LinkedHashSet<>();
@@ -286,8 +322,29 @@ public final class LoadoutOptimizer
 		return new Option(kind(style), gear.items(), style, spell, DpsCalculator.calc(p, gear, style, spell, monster));
 	}
 
-	/** The weapon alone, plus the weapon with each complete void set the player owns. */
-	private static List<Gear> seeds(ItemStats weapon, Map<Integer, List<ItemStats>> bySlot)
+	/**
+	 * The weapon alone, plus the weapon with each complete void set the player owns; every seed
+	 * starts with the first item owned for each required slot.
+	 */
+	private static List<Gear> seeds(ItemStats weapon, Map<Integer, List<ItemStats>> bySlot, Set<Integer> required)
+	{
+		List<Gear> seeds = new ArrayList<>();
+		for (Gear g : voidSeeds(weapon, bySlot))
+		{
+			for (int slot : required)
+			{
+				List<ItemStats> allowed = bySlot.getOrDefault(slot, Collections.emptyList());
+				if (slot != Gear.WEAPON && !allowed.isEmpty())
+				{
+					g = g.with(slot, allowed.get(0));
+				}
+			}
+			seeds.add(g);
+		}
+		return seeds;
+	}
+
+	private static List<Gear> voidSeeds(ItemStats weapon, Map<Integer, List<ItemStats>> bySlot)
 	{
 		List<Gear> seeds = new ArrayList<>();
 		Gear bare = new Gear(new HashMap<>()).with(Gear.WEAPON, weapon);

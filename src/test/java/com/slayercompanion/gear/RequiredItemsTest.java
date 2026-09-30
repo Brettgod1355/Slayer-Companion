@@ -24,6 +24,7 @@
  */
 package com.slayercompanion.gear;
 
+import static com.slayercompanion.gear.GearFixture.ANTI_DRAGON_SHIELD;
 import static com.slayercompanion.gear.GearFixture.ARDOUGNE_CLOAK_4;
 import static com.slayercompanion.gear.GearFixture.DRAGON_DEFENDER_T;
 import static com.slayercompanion.gear.GearFixture.FIRE_CAPE;
@@ -123,6 +124,36 @@ public class RequiredItemsTest
 	{
 		world.index(Arrays.asList("Trident of the swamp", "Abyssal whip")).bank(UNCHARGED_TOXIC_TRIDENT, TENTACLE);
 		assertEquals(Arrays.asList("Trident of the swamp", "Abyssal whip"), missing("Trident of the swamp", "Abyssal whip"));
+	}
+
+	@Test
+	public void anItemInACommaListCounts()
+	{
+		// The wiki writes alternatives as "A, B, C or D (remark)"; owning A is enough.
+		String line = "Anti-dragon shield, dragonfire shield, dragonfire ward or ancient wyvern shield (except for baby dragons)";
+		world.index(Collections.singletonList("Anti-dragon shield"));
+		assertEquals(Collections.singletonList(line), missing(line));
+		world.bank(ANTI_DRAGON_SHIELD);
+		assertEquals(none(), missing(line));
+	}
+
+	@Test
+	public void linesThatNameNoItemAreNeitherOwnedNorMissing()
+	{
+		world.index(Collections.singletonList("Nose peg"));
+		List<String> lines = Arrays.asList("87 Slayer (cannot be boosted)", "Nose peg");
+		assertEquals(Collections.singletonList("Nose peg"), required().missing(lines));
+		assertEquals(Collections.singletonList("87 Slayer (cannot be boosted)"), required().notItems(lines));
+	}
+
+	@Test
+	public void alternativesDropRemarksButKeepVariantTags()
+	{
+		assertEquals(Arrays.asList("Anti-dragon shield", "dragonfire shield", "ward", "ancient wyvern shield"),
+			RequiredItems.alternatives("Anti-dragon shield, dragonfire shield/ward or ancient wyvern shield (except for baby dragons)"));
+		assertEquals(Collections.singletonList("Slayer helmet (i)"), RequiredItems.alternatives("Slayer helmet (i)"));
+		assertEquals(Arrays.asList("Bullseye lantern (lit)", "another light source"),
+			RequiredItems.alternatives("Bullseye lantern (lit) or another light source (Fire of Eternal Light removes the need)"));
 	}
 
 	@Test

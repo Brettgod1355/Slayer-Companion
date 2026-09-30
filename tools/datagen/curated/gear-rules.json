@@ -1,0 +1,122 @@
+{
+  "_about": "Hand-checked rules for the loadout recommendation, applied by generate.py (tidy_tasks). requiredGear: equipment the wiki says must be worn for a task, so 'Recommend from my bank' keeps it in its slot. meleeReach: monsters melee cannot reach ('none') or only halberds and salamanders can ('halberd'); flying monsters (wiki attribute 'flying') get 'halberd' without an entry here. Item names match the wiki name exactly or with a ' (...)' suffix; a leading '*' matches any name containing the rest.",
+  "requiredGear": [
+    {
+      "tasks": ["Black dragons", "Blue dragons", "Green dragons", "Red dragons", "Metal dragons", "Lava Dragons", "Frost dragons", "The King Black Dragon", "Vorkath"],
+      "slot": "shield",
+      "items": ["Anti-dragon shield", "Dragonfire shield", "Dragonfire ward", "Ancient wyvern shield"],
+      "exceptVariantsMatching": "(?i)^baby ",
+      "reason": "against dragonfire (a super antifire potion frees the slot)",
+      "source": "Slayer task pages' required items; Anti-dragon shield: 'mitigates the effects of dragonfire, reducing the maximum hit of most dragon-breath attacks by roughly ~80%'"
+    },
+    {
+      "tasks": ["Zombies"],
+      "onlyVariants": ["Vorkath"],
+      "slot": "shield",
+      "items": ["Anti-dragon shield", "Dragonfire shield", "Dragonfire ward", "Ancient wyvern shield"],
+      "reason": "against dragonfire (a super antifire potion frees the slot)",
+      "source": "Vorkath uses dragonfire; Slayer task/Blue dragons required items"
+    },
+    {
+      "tasks": ["Skeletal wyverns", "Fossil island wyverns"],
+      "slot": "shield",
+      "items": ["Elemental shield", "Mind shield", "Dragonfire shield", "Dragonfire ward", "Ancient wyvern shield"],
+      "reason": "against the icy breath",
+      "source": "Skeletal Wyvern: 'Like other wyverns, they require an elemental shield, mind shield, dragonfire shield, dragonfire ward, or ancient wyvern shield to reduce damage from their icy breath'"
+    },
+    {
+      "tasks": ["Basilisks", "Cockatrice"],
+      "slot": "shield",
+      "items": ["Mirror shield", "V's shield"],
+      "reason": "against their gaze",
+      "source": "Basilisk / Basilisk Knight / Cockatrice / Moonlight Cockatrice: 'players must equip a mirror shield or V's shield when fighting these monsters'"
+    },
+    {
+      "tasks": ["Harpie bug swarms"],
+      "slot": "shield",
+      "items": ["Lit bug lantern"],
+      "reason": "to damage them at all",
+      "source": "Harpie Bug Swarm: 'A lit bug lantern ... is required to damage these monsters (the lantern must be lit and equipped)'"
+    },
+    {
+      "tasks": ["Killerwatts"],
+      "slot": "feet",
+      "items": ["Insulated boots"],
+      "reason": "against their electric attacks",
+      "source": "Killerwatt: max hit 15 without insulated boots, and that extra damage 'does not hit through the correct protection prayer'; Slayer task/Killerwatts required items"
+    },
+    {
+      "tasks": ["Drakes", "Hydras", "The Alchemical Hydra"],
+      "slot": "feet",
+      "items": ["Boots of stone", "Boots of brimstone", "Granite boots"],
+      "unlessKourendElite": true,
+      "reason": "against the Karuulm Slayer Dungeon's heat, unless you have the elite Kourend & Kebos diary",
+      "source": "Karuulm Slayer Dungeon: 'must wear the boots of stone, boots of brimstone or granite boots' ... 'Players who have obtained the rewards from the Elite Kourend & Kebos Diary will no longer need to wear these boots'"
+    },
+    {
+      "tasks": ["Lizards"],
+      "onlyVariants": ["Sulphur Lizard"],
+      "slot": "feet",
+      "items": ["Boots of stone", "Boots of brimstone", "Granite boots"],
+      "unlessKourendElite": true,
+      "reason": "against the Karuulm Slayer Dungeon's heat, unless you have the elite Kourend & Kebos diary",
+      "source": "Slayer task/Lizards required items; Karuulm Slayer Dungeon"
+    },
+    {
+      "tasks": ["Aberrant spectres"],
+      "slot": "head",
+      "items": ["Nose peg", "*slayer helmet"],
+      "reason": "against their stench",
+      "source": "Slayer task/Aberrant spectres required items: 'Nose peg or Slayer helmet'"
+    },
+    {
+      "tasks": ["Banshees"],
+      "slot": "head",
+      "items": ["Earmuffs", "*slayer helmet"],
+      "reason": "against their screams",
+      "source": "Slayer task/Banshees required items: 'Earmuffs or Slayer helmet'"
+    },
+    {
+      "tasks": ["Warped Creatures"],
+      "onlyVariants": ["Warped Terrorbird"],
+      "slot": "head",
+      "items": ["Earmuffs", "*slayer helmet"],
+      "reason": "against their screech",
+      "source": "Slayer task/Warped Creatures required items: 'Earmuffs or Slayer helmet (terrorbirds)'"
+    },
+    {
+      "tasks": ["Dust devils", "Smoke devils", "The Thermonuclear Smoke Devil"],
+      "slot": "head",
+      "items": ["Facemask", "*slayer helmet"],
+      "reason": "against their dust and smoke",
+      "source": "Slayer task pages' required items: 'Facemask or Slayer helmet'"
+    },
+    {
+      "tasks": ["Wall beasts"],
+      "slot": "head",
+      "items": ["Spiny helmet", "*slayer helmet"],
+      "reason": "to start a fight without being grabbed",
+      "source": "Wall beast: 'A spiny helmet or Slayer helmet is required to start fighting one'"
+    },
+    {
+      "tasks": ["Sourhogs"],
+      "slot": "head",
+      "items": ["Reinforced goggles", "*slayer helmet"],
+      "reason": "against their spray",
+      "source": "Slayer task/Sourhogs required items: 'Reinforced goggles or Slayer helmet'"
+    },
+    {
+      "tasks": ["Fever spiders"],
+      "slot": "hands",
+      "items": ["Slayer gloves"],
+      "reason": "against their fever",
+      "source": "Slayer task/Fever spiders required items: 'Slayer gloves (when being hit by the spiders)'"
+    }
+  ],
+  "meleeReach": {
+    "Zulrah": {"reach": "halberd", "source": "Zulrah: 'It cannot be reached with melee (with the exception of halberds).'"},
+    "Kraken": {"reach": "none", "source": "Kraken: 'cannot be reached with Melee weapons, and is additionally entirely immune to melee attacks'"},
+    "Cave kraken": {"reach": "none", "source": "Cave kraken: 'Melee cannot be used, including halberds.'"},
+    "TzKal-Zuk": {"reach": "none", "source": "TzKal-Zuk: 'As TzKal-Zuk is isolated from the platform the player is on, it cannot be attacked with melee.'"}
+  }
+}

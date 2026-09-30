@@ -22,32 +22,20 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package com.slayercompanion.dps;
+package com.slayercompanion.worth;
 
-import java.util.List;
-import java.util.Set;
-import javax.annotation.Nullable;
-import lombok.Value;
+import com.slayercompanion.data.SlayerData;
+import net.runelite.client.game.ItemManager;
 
-/** The best-DPS gear the player owns for one monster, per combat type, and how their worn gear compares. */
-@Value
-public class Recommendation
+/** Test access to the package-private constructor. */
+public final class WorthAccess
 {
-	/** Task name and variant it was worked out for; stale when either changes. */
-	String key;
-	String monster;
-	/** Best first; empty when nothing owned can hurt the monster. */
-	List<LoadoutOptimizer.Option> options;
-	/** What the worn gear does now, with its best style. */
-	@Nullable
-	LoadoutOptimizer.Option current;
-	/** What the task needs worn and whether the gear has it ("Keeps an anti-dragon shield..."), one line each. */
-	List<String> requirements;
-	/** What the numbers assume, one short line each. */
-	List<String> assumptions;
-	/** Why there is no recommendation, when there is none. */
-	@Nullable
-	String unavailable;
-	/** Canonical ids the player owns, for turning an option into a saved loadout. */
-	Set<Integer> owned;
+	private WorthAccess()
+	{
+	}
+
+	public static LootEstimator lootEstimator(SlayerData data, ItemManager itemManager)
+	{
+		return new LootEstimator(data, itemManager);
+	}
 }

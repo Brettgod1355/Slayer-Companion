@@ -44,7 +44,7 @@ public class RequiredItems
 		this.owned = owned;
 	}
 
-	/** Names of required items the player does not own at all. */
+	/** Names of required items the player does not own at all (lines that name no item are left out). */
 	public List<String> missing(@Nullable List<String> names)
 	{
 		List<String> missing = new ArrayList<>();
@@ -54,12 +54,14 @@ public class RequiredItems
 		}
 		for (String name : names)
 		{
+			boolean isItem = false;
 			boolean has = false;
-			// "Nose peg or Slayer helmet": any alternative counts.
-			for (String alt : name.split("\\s+or\\s+"))
+			// "Nose peg or Slayer helmet", "Anti-dragon shield, dragonfire shield or dragonfire ward": any alternative counts.
+			for (String alt : alternatives(name))
 			{
-				for (int id : resolver.resolve(alt.trim()))
+				for (int id : resolver.resolve(alt))
 				{
+					isItem = true;
 					if (owned.owns(id))
 					{
 						has = true;
@@ -71,11 +73,49 @@ public class RequiredItems
 					break;
 				}
 			}
-			if (!has)
+			if (isItem && !has)
 			{
 				missing.add(name);
 			}
 		}
 		return missing;
+	}
+
+	/** Required lines that name no item at all ("87 Slayer (cannot be boosted)", "On a Kraken task"). */
+	public List<String> notItems(@Nullable List<String> names)
+	{
+		List<String> out = new ArrayList<>();
+		if (names == null)
+		{
+			return out;
+		}
+		for (String name : names)
+		{
+			if (alternatives(name).stream().allMatch(alt -> resolver.resolve(alt).isEmpty()))
+			{
+				out.add(name);
+			}
+		}
+		return out;
+	}
+
+	/**
+	 * The item names in a wiki "required items" line: remarks in brackets dropped ("(except for baby
+	 * dragons)"; a short variant tag such as "(i)" or "(lit)" stays), then split at commas, slashes,
+	 * "or" and "and/or".
+	 */
+	public static List<String> alternatives(String line)
+	{
+		String s = line.replaceAll("\\s*\\((?=[^()]*[\\s,;])[^()]*\\)", " ");
+		List<String> out = new ArrayList<>();
+		for (String part : s.split(",|/|\\s+and/or\\s+|\\s+or\\s+"))
+		{
+			String p = part.trim().replaceAll("^(?:or|and/or)\\s+", "");
+			if (!p.isEmpty())
+			{
+				out.add(p);
+			}
+		}
+		return out;
 	}
 }

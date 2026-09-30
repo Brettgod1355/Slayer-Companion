@@ -51,6 +51,10 @@ final class Ui
 	static final Color WARN = ColorScheme.PROGRESS_INPROGRESS_COLOR;
 	static final Color BAD = ColorScheme.PROGRESS_ERROR_COLOR;
 	static final Color MUTED = ColorScheme.LIGHT_GRAY_COLOR;
+	/** Narrowest right-hand column a key-value row wraps its value into before stacking it under the key. */
+	private static final int MIN_VALUE_WIDTH = 90;
+	/** Width a dropdown gets in a card. */
+	private static final int DROPDOWN_WIDTH = 215;
 
 	private Ui()
 	{
@@ -223,13 +227,26 @@ final class Ui
 
 	static JPanel keyValue(String key, String value, Color valueColor)
 	{
-		JPanel row = rowPanel(new BorderLayout(6, 0));
-		row.setBackground(ColorScheme.DARKER_GRAY_COLOR);
-		row.setAlignmentX(Component.LEFT_ALIGNMENT);
 		JLabel k = new JLabel(key);
 		k.setForeground(MUTED);
 		k.setFont(FontManager.getRunescapeFont());
 		int valueWidth = (CONTENT_WIDTH - 24) - k.getPreferredSize().width - 6;
+		JLabel probe = new JLabel(value);
+		probe.setFont(FontManager.getRunescapeFont());
+		if (valueWidth < probe.getPreferredSize().width && valueWidth < MIN_VALUE_WIDTH)
+		{
+			// A long key leaves no room beside it: put the value on its own line below.
+			JPanel stacked = rowPanel(null);
+			stacked.setLayout(new BoxLayout(stacked, BoxLayout.Y_AXIS));
+			stacked.setBackground(ColorScheme.DARKER_GRAY_COLOR);
+			stacked.setAlignmentX(Component.LEFT_ALIGNMENT);
+			stacked.add(wrap(key, MUTED));
+			stacked.add(wrap(value, valueColor));
+			return stacked;
+		}
+		JPanel row = rowPanel(new BorderLayout(6, 0));
+		row.setBackground(ColorScheme.DARKER_GRAY_COLOR);
+		row.setAlignmentX(Component.LEFT_ALIGNMENT);
 		JLabel v = new JLabel();
 		v.setForeground(valueColor);
 		v.setFont(FontManager.getRunescapeFont());
@@ -311,6 +328,11 @@ final class Ui
 			combo.setSelectedItem(selected);
 		}
 		combo.setFont(FontManager.getRunescapeFont());
+		if (combo.getPreferredSize().width > DROPDOWN_WIDTH)
+		{
+			// Long entries ("Skeleton (Stronghold of Security)") would be cut in the box and its list.
+			combo.setFont(FontManager.getRunescapeSmallFont());
+		}
 		combo.setAlignmentX(Component.LEFT_ALIGNMENT);
 		combo.setMaximumSize(new Dimension(Integer.MAX_VALUE, combo.getPreferredSize().height));
 		combo.addActionListener(e ->

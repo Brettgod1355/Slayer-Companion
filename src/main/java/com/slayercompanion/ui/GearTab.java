@@ -242,6 +242,10 @@ class GearTab extends JPanel
 		com.slayercompanion.dps.LoadoutOptimizer.Option o = r.getOptions().get(Math.min(index, r.getOptions().size() - 1));
 		com.slayercompanion.dps.AttackStyle style = o.getStyle();
 		card.add(Ui.gap(4));
+		for (String line : r.getRequirements())
+		{
+			card.add(Ui.wrap(line, line.startsWith("Needs") ? Ui.WARN : Color.WHITE));
+		}
 		card.add(Ui.keyValue("Style", style.getStance() == com.slayercompanion.dps.AttackStyle.Stance.AUTOCAST ? style.getName() : style.toString()));
 		card.add(Ui.keyValue("Max hit", String.valueOf(o.getResult().getMaxHit())));
 		card.add(Ui.keyValue("Accuracy", Math.round(o.getResult().getHitChance() * 100) + "%"));
