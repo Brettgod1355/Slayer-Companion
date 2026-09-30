@@ -27,11 +27,13 @@ package com.slayercompanion.ui;
 import com.slayercompanion.data.MasterAssignmentInfo;
 import com.slayercompanion.data.MonsterInfo;
 import com.slayercompanion.data.TaskInfo;
+import com.slayercompanion.task.Assignment;
 import com.slayercompanion.task.CurrentTask;
 import com.slayercompanion.worth.LootEstimate;
 import com.slayercompanion.worth.Verdict;
 import java.awt.Color;
 import java.util.List;
+import javax.annotation.Nullable;
 import javax.swing.JPanel;
 
 /**
@@ -177,18 +179,14 @@ class TaskTab extends JPanel
 			{
 				facts.add(Ui.keyValue("Also counts", String.join(", ", alts)));
 			}
-			if (task.getMaster() != null && info.getMasters() != null)
+			String range = assignedRange(task, info);
+			if (range != null)
 			{
-				MasterAssignmentInfo a = info.getMasters().get(task.getMaster().getDataId());
-				if (a != null && a.getMin() != null && a.getMax() != null)
-				{
-					String range = a.getMin() + "-" + a.getMax();
-					if (a.getExtMin() != null && a.getExtMax() != null)
-					{
-						range += " (" + a.getExtMin() + "-" + a.getExtMax() + " extended)";
-					}
-					facts.add(Ui.keyValue(task.getMaster().getDisplayName() + " assigns", range));
-				}
+				facts.add(Ui.keyValue(task.getMaster().getDisplayName() + " assigns", range));
+			}
+			if (task.getModifier() != null)
+			{
+				facts.add(Ui.keyValue("Task modifier", task.getModifier().describe()));
 			}
 			if (task.getAreaName() != null)
 			{
@@ -430,6 +428,37 @@ class TaskTab extends JPanel
 			card.add(Ui.wrap(ca.getTask(), Ui.MUTED));
 		}
 		return card;
+	}
+
+	/**
+	 * "min-max (extMin-extMax extended)" for the task's master: the range the game itself holds when
+	 * it could be read, else the bundled copy of it.
+	 */
+	@Nullable
+	static String assignedRange(CurrentTask task, TaskInfo info)
+	{
+		if (task.getMaster() == null)
+		{
+			return null;
+		}
+		Assignment live = task.getAssignment();
+		if (live != null)
+		{
+			return range(live.getMin(), live.getMax(), live.getExtMin(), live.getExtMax());
+		}
+		MasterAssignmentInfo a = info.getMasters() == null ? null : info.getMasters().get(task.getMaster().getDataId());
+		return a == null || a.getMin() == null || a.getMax() == null ? null
+			: range(a.getMin(), a.getMax(), a.getExtMin(), a.getExtMax());
+	}
+
+	private static String range(int min, int max, @Nullable Integer extMin, @Nullable Integer extMax)
+	{
+		String range = min + "-" + max;
+		if (extMin != null && extMax != null)
+		{
+			range += " (" + extMin + "-" + extMax + " extended)";
+		}
+		return range;
 	}
 
 	static String percent(double p)

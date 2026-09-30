@@ -630,65 +630,46 @@
     ],
     "masters": {
       "chaeldar": {
-        "alternatives": [],
         "extMax": 250,
         "extMin": 200,
         "max": 130,
         "min": 70,
-        "raw": "70-130 (200-250)",
-        "weight": null
+        "weight": 8
       },
       "duradel": {
-        "alternatives": [],
         "extMax": 250,
         "extMin": 200,
         "max": 200,
         "min": 130,
-        "raw": "130-200 (200-250)",
-        "weight": null
+        "weight": 7
       },
       "konar": {
-        "alternatives": [],
         "extMax": 250,
         "extMin": 200,
         "max": 170,
         "min": 120,
-        "raw": "120-170 (200-250)",
-        "weight": null
+        "weight": 6
       },
       "mortimer": {
-        "alternatives": [
-          {
-            "extMax": 330,
-            "extMin": 230,
-            "max": 200,
-            "min": 110
-          }
-        ],
         "extMax": 250,
         "extMin": 200,
         "max": 120,
         "min": 80,
-        "raw": "80-120 (200-250) <br/> or 110-200 (230-330)",
-        "weight": null
+        "weight": 10
       },
       "nieve": {
-        "alternatives": [],
         "extMax": 250,
         "extMin": 200,
         "max": 185,
         "min": 120,
-        "raw": "120-185 (200-250)",
-        "weight": null
+        "weight": 6
       },
       "vannaka": {
-        "alternatives": [],
         "extMax": 250,
         "extMin": 200,
         "max": 90,
         "min": 40,
-        "raw": "40-90 (200-250)",
-        "weight": null
+        "weight": 8
       }
     },
     "monsters": [
@@ -1877,73 +1858,52 @@
     ],
     "masters": {
       "chaeldar": {
-        "alternatives": [],
         "extMax": 250,
         "extMin": 200,
         "max": 130,
         "min": 70,
-        "raw": "70-130 (200-250) (Weighting 12)",
         "weight": 12
       },
       "duradel": {
-        "alternatives": [],
         "extMax": 250,
         "extMin": 200,
         "max": 200,
         "min": 130,
-        "raw": "130-200 (200-250) (Weighting 12)",
         "weight": 12
       },
       "konar": {
-        "alternatives": [],
         "extMax": 250,
         "extMin": 200,
         "max": 170,
         "min": 120,
-        "raw": "120-170 (200-250) (Weighting 9)",
         "weight": 9
       },
       "krystilia": {
-        "alternatives": [],
         "extMax": 250,
         "extMin": 200,
         "max": 125,
         "min": 75,
-        "raw": "75-125 (200-250) (Weighting 5)",
         "weight": 5
       },
       "mortimer": {
-        "alternatives": [
-          {
-            "extMax": 350,
-            "extMin": 250,
-            "max": 280,
-            "min": 170
-          }
-        ],
         "extMax": 250,
         "extMin": 200,
         "max": 180,
         "min": 120,
-        "raw": "120-180 (200-250) <br/> or 170-280 (250-350)",
-        "weight": null
+        "weight": 8
       },
       "nieve": {
-        "alternatives": [],
         "extMax": 250,
         "extMin": 200,
         "max": 185,
         "min": 120,
-        "raw": "120-185 (200-250) (Weighting 9)",
         "weight": 9
       },
       "vannaka": {
-        "alternatives": [],
         "extMax": 250,
         "extMin": 200,
         "max": 90,
         "min": 40,
-        "raw": "40-90 (200-250) (Weighting 5)",
         "weight": 5
       }
     },
@@ -3932,49 +3892,39 @@
     ],
     "masters": {
       "duradel": {
-        "alternatives": [],
         "extMax": 150,
         "extMin": 91,
         "max": 80,
         "min": 50,
-        "raw": "50-80 (91-150)",
-        "weight": null
+        "weight": 5
       },
       "konar": {
-        "alternatives": [],
         "extMax": 150,
         "extMin": 91,
         "max": 50,
         "min": 50,
-        "raw": "50 (91-150)",
-        "weight": null
+        "weight": 5
       },
       "krystilia": {
-        "alternatives": [],
         "extMax": 150,
         "extMin": 91,
         "max": 125,
         "min": 75,
-        "raw": "75-125 (91-150)",
-        "weight": null
+        "weight": 6
       },
       "nieve": {
-        "alternatives": [],
         "extMax": 150,
         "extMin": 91,
         "max": 90,
         "min": 50,
-        "raw": "50-90 (91-150)",
-        "weight": null
+        "weight": 5
       },
       "vannaka": {
-        "alternatives": [],
         "extMax": 150,
         "extMin": 91,
         "max": 35,
         "min": 25,
-        "raw": "25-35 (91-150)",
-        "weight": null
+        "weight": 8
       }
     },
     "monsters": [
@@ -4364,38 +4314,25 @@
     ],
     "masters": {
       "duradel": {
-        "alternatives": [],
         "extMax": 200,
         "extMin": 150,
         "max": 50,
         "min": 30,
-        "raw": "30-50 (150-200)",
-        "weight": null
+        "weight": 5
       },
       "mortimer": {
-        "alternatives": [
-          {
-            "extMax": 300,
-            "extMin": 200,
-            "max": 160,
-            "min": 90
-          }
-        ],
         "extMax": 200,
         "extMin": 150,
         "max": 60,
         "min": 40,
-        "raw": "40-60 (150-200) <br/> or 90-160 (200-300)",
-        "weight": null
+        "weight": 10
       },
       "nieve": {
-        "alternatives": [],
         "extMax": 200,
         "extMin": 150,
         "max": 60,
         "min": 40,
-        "raw": "40-60 (150-200)",
-        "weight": null
+        "weight": 5
       }
     },
     "monsters": [
@@ -5536,56 +5473,25 @@
     ],
     "masters": {
       "duradel": {
-        "alternatives": [],
         "extMax": 250,
         "extMin": 200,
         "max": 80,
         "min": 60,
-        "raw": "60-80 (200-250)",
-        "weight": null
+        "weight": 10
       },
       "mortimer": {
-        "alternatives": [
-          {
-            "extMax": 350,
-            "extMin": 250,
-            "max": 280,
-            "min": 170
-          }
-        ],
         "extMax": 250,
         "extMin": 200,
         "max": 180,
         "min": 120,
-        "raw": "120-180 (200-250) <br/> or 170-280 (250-350)",
-        "weight": null
+        "weight": 8
       },
       "nieve": {
-        "alternatives": [],
         "extMax": 250,
         "extMin": 200,
         "max": 60,
         "min": 40,
-        "raw": "40-60 (200-250)",
-        "weight": null
-      },
-      "spria": {
-        "alternatives": [],
-        "extMax": null,
-        "extMin": null,
-        "max": 30,
-        "min": 15,
-        "raw": "15-30",
-        "weight": null
-      },
-      "turael": {
-        "alternatives": [],
-        "extMax": null,
-        "extMin": null,
-        "max": 30,
-        "min": 15,
-        "raw": "15-30",
-        "weight": null
+        "weight": 8
       }
     },
     "monsters": [
@@ -6551,49 +6457,39 @@
     ],
     "masters": {
       "chaeldar": {
-        "alternatives": [],
         "extMax": 250,
         "extMin": 200,
         "max": 130,
         "min": 70,
-        "raw": "70-130 (200-250)",
-        "weight": null
+        "weight": 9
       },
       "duradel": {
-        "alternatives": [],
         "extMax": 250,
         "extMin": 200,
         "max": 200,
         "min": 120,
-        "raw": "120-200 (200-250)",
-        "weight": null
+        "weight": 8
       },
       "konar": {
-        "alternatives": [],
         "extMax": 250,
         "extMin": 200,
         "max": 170,
         "min": 120,
-        "raw": "120-170 (200-250)",
-        "weight": null
+        "weight": 6
       },
       "krystilia": {
-        "alternatives": [],
         "extMax": 250,
         "extMin": 200,
         "max": 125,
         "min": 75,
-        "raw": "75-125 (200-250)",
-        "weight": null
+        "weight": 7
       },
       "nieve": {
-        "alternatives": [],
         "extMax": 250,
         "extMin": 200,
         "max": 185,
         "min": 120,
-        "raw": "120-185 (200-250)",
-        "weight": null
+        "weight": 6
       }
     },
     "monsters": [
@@ -7504,13 +7400,11 @@
     ],
     "masters": {
       "krystilia": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 125,
         "min": 75,
-        "raw": "75-125",
-        "weight": null
+        "weight": 4
       }
     },
     "monsters": [
@@ -8074,40 +7968,32 @@
     ],
     "masters": {
       "mazchna": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 50,
         "min": 30,
-        "raw": "30-50",
-        "weight": null
+        "weight": 8
       },
       "mortimer": {
-        "alternatives": [],
-        "extMax": 80,
-        "extMin": 20,
+        "extMax": null,
+        "extMin": null,
         "max": 50,
         "min": 35,
-        "raw": "35-50 (20-80)",
-        "weight": null
+        "weight": 10
       },
       "spria": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 30,
         "min": 15,
-        "raw": "15-30",
-        "weight": null
+        "weight": 8
       },
       "turael": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 30,
         "min": 15,
-        "raw": "15-30",
-        "weight": null
+        "weight": 8
       }
     },
     "monsters": [
@@ -9288,65 +9174,46 @@
     ],
     "masters": {
       "chaeldar": {
-        "alternatives": [],
         "extMax": 250,
         "extMin": 200,
         "max": 130,
         "min": 70,
-        "raw": "70-130 (200-250)",
-        "weight": null
+        "weight": 7
       },
       "duradel": {
-        "alternatives": [],
         "extMax": 250,
         "extMin": 200,
         "max": 200,
         "min": 130,
-        "raw": "130-200 (200-250)",
-        "weight": null
+        "weight": 7
       },
       "konar": {
-        "alternatives": [],
         "extMax": 250,
         "extMin": 200,
         "max": 170,
         "min": 110,
-        "raw": "110-170 (200-250)",
-        "weight": null
+        "weight": 5
       },
       "mortimer": {
-        "alternatives": [
-          {
-            "extMax": 350,
-            "extMin": 250,
-            "max": 160,
-            "min": 90
-          }
-        ],
         "extMax": 250,
         "extMin": 200,
         "max": 60,
         "min": 40,
-        "raw": "40-60 (200-250) <br/> or 90-160 (250-350)",
-        "weight": null
+        "weight": 10
       },
       "nieve": {
-        "alternatives": [],
         "extMax": 250,
         "extMin": 200,
         "max": 185,
         "min": 120,
-        "raw": "120-185 (200-250)",
-        "weight": null
+        "weight": 6
       },
       "vannaka": {
-        "alternatives": [],
         "extMax": 250,
         "extMin": 200,
         "max": 90,
         "min": 40,
-        "raw": "40-90 (200-250)",
-        "weight": null
+        "weight": 8
       }
     },
     "monsters": [
@@ -13787,31 +13654,25 @@
     ],
     "masters": {
       "mazchna": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 50,
         "min": 30,
-        "raw": "30-50",
-        "weight": null
+        "weight": 7
       },
       "spria": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 30,
         "min": 15,
-        "raw": "15-30",
-        "weight": null
+        "weight": 7
       },
       "turael": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 30,
         "min": 15,
-        "raw": "15-30",
-        "weight": null
+        "weight": 7
       }
     },
     "monsters": [
@@ -16206,40 +16067,32 @@
     ],
     "masters": {
       "krystilia": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 100,
         "min": 65,
-        "raw": "65-100",
-        "weight": null
+        "weight": 6
       },
       "mazchna": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 50,
         "min": 30,
-        "raw": "30-50",
-        "weight": null
+        "weight": 6
       },
       "spria": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 20,
         "min": 10,
-        "raw": "10-20",
-        "weight": null
+        "weight": 7
       },
       "turael": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 20,
         "min": 10,
-        "raw": "10-20",
-        "weight": null
+        "weight": 7
       }
     },
     "monsters": [
@@ -24611,22 +24464,18 @@
     ],
     "masters": {
       "spria": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 30,
         "min": 15,
-        "raw": "15-30",
-        "weight": null
+        "weight": 6
       },
       "turael": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 30,
         "min": 15,
-        "raw": "15-30",
-        "weight": null
+        "weight": 6
       }
     },
     "monsters": [
@@ -26831,49 +26680,39 @@
     ],
     "masters": {
       "chaeldar": {
-        "alternatives": [],
         "extMax": 250,
         "extMin": 200,
         "max": 130,
         "min": 70,
-        "raw": "70-130 (200-250)",
-        "weight": null
+        "weight": 10
       },
       "duradel": {
-        "alternatives": [],
         "extMax": 250,
         "extMin": 200,
         "max": 200,
         "min": 130,
-        "raw": "130-200 (200-250)",
-        "weight": null
+        "weight": 8
       },
       "konar": {
-        "alternatives": [],
         "extMax": 250,
         "extMin": 200,
         "max": 170,
         "min": 120,
-        "raw": "120-170 (200-250)",
-        "weight": null
+        "weight": 9
       },
       "krystilia": {
-        "alternatives": [],
         "extMax": 250,
         "extMin": 200,
         "max": 150,
         "min": 100,
-        "raw": "100-150 (200-250)",
-        "weight": null
+        "weight": 7
       },
       "nieve": {
-        "alternatives": [],
         "extMax": 250,
         "extMin": 200,
         "max": 185,
         "min": 120,
-        "raw": "120-185 (200-250)",
-        "weight": null
+        "weight": 9
       }
     },
     "monsters": [
@@ -28473,40 +28312,32 @@
     ],
     "masters": {
       "duradel": {
-        "alternatives": [],
         "extMax": 60,
         "extMin": 40,
         "max": 20,
         "min": 10,
-        "raw": "10-20 (40-60)",
-        "weight": null
+        "weight": 9
       },
       "konar": {
-        "alternatives": [],
         "extMax": 60,
         "extMin": 40,
         "max": 15,
         "min": 10,
-        "raw": "10-15 (40-60)",
-        "weight": null
+        "weight": 6
       },
       "krystilia": {
-        "alternatives": [],
         "extMax": 60,
         "extMin": 40,
         "max": 16,
         "min": 8,
-        "raw": "8-16 (40-60)",
-        "weight": null
+        "weight": 4
       },
       "nieve": {
-        "alternatives": [],
         "extMax": 60,
         "extMin": 40,
         "max": 20,
         "min": 10,
-        "raw": "10-20 (40-60)",
-        "weight": null
+        "weight": 6
       }
     },
     "monsters": [
@@ -29944,7 +29775,15 @@
         "y": 9699
       }
     ],
-    "masters": {},
+    "masters": {
+      "krystilia": {
+        "extMax": null,
+        "extMin": null,
+        "max": 125,
+        "min": 75,
+        "weight": 3
+      }
+    },
     "monsters": [
       {
         "aggressive": "Yes",
@@ -31530,67 +31369,53 @@
     ],
     "masters": {
       "chaeldar": {
-        "alternatives": [],
         "extMax": 250,
         "extMin": 200,
         "max": 130,
         "min": 70,
-        "raw": "70-130 (200-250)",
-        "weight": null
+        "weight": 8
       },
       "duradel": {
-        "alternatives": [],
         "extMax": 250,
         "extMin": 200,
         "max": 200,
         "min": 130,
-        "raw": "130-200 (200-250)",
-        "weight": null
+        "weight": 8
       },
       "konar": {
-        "alternatives": [],
         "extMax": 250,
         "extMin": 200,
         "max": 170,
         "min": 120,
-        "raw": "120-170 (200-250)",
-        "weight": null
+        "weight": 9
       },
       "krystilia": {
-        "alternatives": [],
         "extMax": 250,
         "extMin": 200,
         "max": 110,
         "min": 70,
-        "raw": "70-110 (200-250)",
-        "weight": null
+        "weight": 4
       },
       "mortimer": {
-        "alternatives": [],
         "extMax": 250,
         "extMin": 200,
         "max": 180,
         "min": 120,
-        "raw": "120-180 (200-250)",
-        "weight": null
+        "weight": 8
       },
       "nieve": {
-        "alternatives": [],
         "extMax": 250,
         "extMin": 200,
         "max": 185,
         "min": 120,
-        "raw": "120-185 (200-250)",
-        "weight": null
+        "weight": 9
       },
       "vannaka": {
-        "alternatives": [],
         "extMax": 250,
         "extMin": 200,
         "max": 90,
         "min": 40,
-        "raw": "40-90 (200-250)",
-        "weight": null
+        "weight": 8
       }
     },
     "monsters": [
@@ -33210,49 +33035,39 @@
     ],
     "masters": {
       "chaeldar": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 130,
         "min": 70,
-        "raw": "70-130",
-        "weight": null
+        "weight": 8
       },
       "duradel": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 170,
         "min": 110,
-        "raw": "110-170",
-        "weight": null
+        "weight": 4
       },
       "konar": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 170,
         "min": 120,
-        "raw": "120-170",
-        "weight": null
+        "weight": 4
       },
       "nieve": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 185,
         "min": 120,
-        "raw": "120-185",
-        "weight": null
+        "weight": 4
       },
       "vannaka": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 90,
         "min": 40,
-        "raw": "40-90",
-        "weight": null
+        "weight": 7
       }
     },
     "monsters": [
@@ -33792,7 +33607,36 @@
         "y": 10133
       }
     ],
-    "masters": {},
+    "masters": {
+      "chaeldar": {
+        "extMax": null,
+        "extMin": null,
+        "max": 130,
+        "min": 70,
+        "weight": 7
+      },
+      "konar": {
+        "extMax": null,
+        "extMin": null,
+        "max": 170,
+        "min": 120,
+        "weight": 2
+      },
+      "nieve": {
+        "extMax": null,
+        "extMin": null,
+        "max": 185,
+        "min": 120,
+        "weight": 3
+      },
+      "vannaka": {
+        "extMax": null,
+        "extMin": null,
+        "max": 90,
+        "min": 40,
+        "weight": 7
+      }
+    },
     "monsters": [
       {
         "aggressive": "No",
@@ -34501,7 +34345,15 @@
         "y": 5027
       }
     ],
-    "masters": {},
+    "masters": {
+      "mazchna": {
+        "extMax": null,
+        "extMin": null,
+        "max": 30,
+        "min": 20,
+        "weight": 8
+      }
+    },
     "monsters": [
       {
         "aggressive": "Yes",
@@ -35060,7 +34912,29 @@
         "y": 5225
       }
     ],
-    "masters": {},
+    "masters": {
+      "mazchna": {
+        "extMax": null,
+        "extMin": null,
+        "max": 20,
+        "min": 10,
+        "weight": 8
+      },
+      "spria": {
+        "extMax": null,
+        "extMin": null,
+        "max": 30,
+        "min": 10,
+        "weight": 8
+      },
+      "turael": {
+        "extMax": null,
+        "extMin": null,
+        "max": 30,
+        "min": 10,
+        "weight": 8
+      }
+    },
     "monsters": [
       {
         "aggressive": "Yes",
@@ -35642,7 +35516,36 @@
         "y": 9614
       }
     ],
-    "masters": {},
+    "masters": {
+      "mazchna": {
+        "extMax": null,
+        "extMin": null,
+        "max": 50,
+        "min": 30,
+        "weight": 8
+      },
+      "mortimer": {
+        "extMax": null,
+        "extMin": null,
+        "max": 50,
+        "min": 35,
+        "weight": 10
+      },
+      "spria": {
+        "extMax": null,
+        "extMin": null,
+        "max": 30,
+        "min": 15,
+        "weight": 8
+      },
+      "turael": {
+        "extMax": null,
+        "extMin": null,
+        "max": 30,
+        "min": 15,
+        "weight": 8
+      }
+    },
     "monsters": [
       {
         "aggressive": "Yes",
@@ -36483,47 +36386,32 @@
     ],
     "masters": {
       "chaeldar": {
-        "alternatives": [],
         "extMax": 250,
         "extMin": 200,
         "max": 130,
         "min": 70,
-        "raw": "70-130 (200-250)",
-        "weight": null
+        "weight": 10
       },
       "duradel": {
-        "alternatives": [],
         "extMax": 250,
         "extMin": 200,
         "max": 200,
         "min": 130,
-        "raw": "130-200 (200-250)",
-        "weight": null
+        "weight": 4
       },
       "mortimer": {
-        "alternatives": [
-          {
-            "extMax": 330,
-            "extMin": 230,
-            "max": 200,
-            "min": 110
-          }
-        ],
         "extMax": 250,
         "extMin": 200,
         "max": 120,
         "min": 80,
-        "raw": "80-120 (200-250) <br/> or 110-200 (230-330)",
-        "weight": null
+        "weight": 10
       },
       "nieve": {
-        "alternatives": [],
         "extMax": 250,
         "extMin": 200,
         "max": 180,
         "min": 120,
-        "raw": "120-180 (200-250)",
-        "weight": null
+        "weight": 5
       }
     },
     "monsters": [
@@ -37068,39 +36956,31 @@
     ],
     "masters": {
       "chaeldar": {
-        "alternatives": [],
         "extMax": 200,
         "extMin": 150,
         "max": 50,
         "min": 30,
-        "raw": "30-50 (150-200) (Weighting 12)",
         "weight": 12
       },
       "duradel": {
-        "alternatives": [],
         "extMax": 200,
         "extMin": 150,
         "max": 120,
         "min": 100,
-        "raw": "100-120 (150-200) (Weighting 9)",
         "weight": 9
       },
       "konar": {
-        "alternatives": [],
         "extMax": 200,
         "extMin": 150,
         "max": 100,
         "min": 80,
-        "raw": "80-100 (150-200) (Weighting 9)",
         "weight": 9
       },
       "nieve": {
-        "alternatives": [],
         "extMax": 200,
         "extMin": 150,
         "max": 120,
         "min": 100,
-        "raw": "100-120 (150-200) (Weighting 6)",
         "weight": 6
       }
     },
@@ -37662,7 +37542,29 @@
         "y": 5235
       }
     ],
-    "masters": {},
+    "masters": {
+      "mazchna": {
+        "extMax": null,
+        "extMin": null,
+        "max": 20,
+        "min": 10,
+        "weight": 8
+      },
+      "spria": {
+        "extMax": null,
+        "extMin": null,
+        "max": 20,
+        "min": 10,
+        "weight": 8
+      },
+      "turael": {
+        "extMax": null,
+        "extMin": null,
+        "max": 20,
+        "min": 10,
+        "weight": 8
+      }
+    },
     "monsters": [
       {
         "aggressive": "No",
@@ -38695,7 +38597,15 @@
         "y": 9498
       }
     ],
-    "masters": {},
+    "masters": {
+      "krystilia": {
+        "extMax": null,
+        "extMin": null,
+        "max": 90,
+        "min": 50,
+        "weight": 5
+      }
+    },
     "monsters": [
       {
         "aggressive": "Yes",
@@ -39505,7 +39415,29 @@
         "y": 9688
       }
     ],
-    "masters": {},
+    "masters": {
+      "mazchna": {
+        "extMax": null,
+        "extMin": null,
+        "max": 50,
+        "min": 30,
+        "weight": 8
+      },
+      "mortimer": {
+        "extMax": null,
+        "extMin": null,
+        "max": 50,
+        "min": 35,
+        "weight": 10
+      },
+      "vannaka": {
+        "extMax": null,
+        "extMin": null,
+        "max": 90,
+        "min": 40,
+        "weight": 8
+      }
+    },
     "monsters": [
       {
         "aggressive": "No",
@@ -42320,7 +42252,22 @@
         "y": 4449
       }
     ],
-    "masters": {},
+    "masters": {
+      "spria": {
+        "extMax": null,
+        "extMin": null,
+        "max": 30,
+        "min": 15,
+        "weight": 8
+      },
+      "turael": {
+        "extMax": null,
+        "extMin": null,
+        "max": 30,
+        "min": 15,
+        "weight": 8
+      }
+    },
     "monsters": [
       {
         "aggressive": "No",
@@ -48331,31 +48278,25 @@
     ],
     "masters": {
       "chaeldar": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 130,
         "min": 70,
-        "raw": "70-130",
-        "weight": null
+        "weight": 8
       },
       "mazchna": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 50,
         "min": 30,
-        "raw": "30-50",
-        "weight": null
+        "weight": 8
       },
       "vannaka": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 90,
         "min": 40,
-        "raw": "40-90",
-        "weight": null
+        "weight": 8
       }
     },
     "monsters": [
@@ -49371,7 +49312,36 @@
         "y": 9761
       }
     ],
-    "masters": {},
+    "masters": {
+      "mazchna": {
+        "extMax": null,
+        "extMin": null,
+        "max": 50,
+        "min": 30,
+        "weight": 8
+      },
+      "mortimer": {
+        "extMax": null,
+        "extMin": null,
+        "max": 50,
+        "min": 35,
+        "weight": 10
+      },
+      "spria": {
+        "extMax": null,
+        "extMin": null,
+        "max": 30,
+        "min": 15,
+        "weight": 8
+      },
+      "turael": {
+        "extMax": null,
+        "extMin": null,
+        "max": 30,
+        "min": 15,
+        "weight": 8
+      }
+    },
     "monsters": [
       {
         "aggressive": "No",
@@ -50395,7 +50365,15 @@
         "y": 2775
       }
     ],
-    "masters": {},
+    "masters": {
+      "vannaka": {
+        "extMax": null,
+        "extMin": null,
+        "max": 90,
+        "min": 40,
+        "weight": 6
+      }
+    },
     "monsters": [
       {
         "aggressive": "Yes",
@@ -50967,7 +50945,29 @@
         "y": 9808
       }
     ],
-    "masters": {},
+    "masters": {
+      "chaeldar": {
+        "extMax": 250,
+        "extMin": 200,
+        "max": 130,
+        "min": 70,
+        "weight": 11
+      },
+      "mortimer": {
+        "extMax": 250,
+        "extMin": 200,
+        "max": 120,
+        "min": 80,
+        "weight": 8
+      },
+      "nieve": {
+        "extMax": 250,
+        "extMin": 200,
+        "max": 170,
+        "min": 110,
+        "weight": 8
+      }
+    },
     "monsters": [
       {
         "aggressive": "Yes",
@@ -54050,49 +54050,39 @@
     ],
     "masters": {
       "chaeldar": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 130,
         "min": 70,
-        "raw": "70-130",
-        "weight": null
+        "weight": 11
       },
       "duradel": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 200,
         "min": 130,
-        "raw": "130-200",
-        "weight": null
+        "weight": 9
       },
       "konar": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 170,
         "min": 120,
-        "raw": "120-170",
-        "weight": null
+        "weight": 8
       },
       "nieve": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 185,
         "min": 120,
-        "raw": "120-185",
-        "weight": null
+        "weight": 8
       },
       "vannaka": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 90,
         "min": 40,
-        "raw": "40-90",
-        "weight": null
+        "weight": 7
       }
     },
     "monsters": [
@@ -55489,47 +55479,32 @@
     ],
     "masters": {
       "duradel": {
-        "alternatives": [],
         "extMax": 135,
         "extMin": 110,
         "max": 20,
         "min": 10,
-        "raw": "10-20 (110-135)",
-        "weight": null
+        "weight": 11
       },
       "konar": {
-        "alternatives": [],
         "extMax": 135,
         "extMin": 110,
         "max": 15,
         "min": 10,
-        "raw": "10-15 (110-135)",
-        "weight": null
+        "weight": 5
       },
       "mortimer": {
-        "alternatives": [
-          {
-            "extMax": 215,
-            "extMin": 140,
-            "max": 140,
-            "min": 70
-          }
-        ],
         "extMax": 135,
         "extMin": 110,
         "max": 60,
         "min": 40,
-        "raw": "40-60 (110-135) <br/> or 70-140 (140-215)",
-        "weight": null
+        "weight": 10
       },
       "nieve": {
-        "alternatives": [],
         "extMax": 135,
         "extMin": 110,
         "max": 20,
         "min": 10,
-        "raw": "10-20 (110-135)",
-        "weight": null
+        "weight": 5
       }
     },
     "monsters": [
@@ -56262,7 +56237,15 @@
         "y": 3758
       }
     ],
-    "masters": {},
+    "masters": {
+      "krystilia": {
+        "extMax": null,
+        "extMin": null,
+        "max": 125,
+        "min": 75,
+        "weight": 4
+      }
+    },
     "monsters": [
       {
         "aggressive": "Yes",
@@ -58293,22 +58276,25 @@
     ],
     "masters": {
       "mazchna": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 50,
         "min": 30,
-        "raw": "30-50",
-        "weight": null
+        "weight": 7
       },
-      "turael": {
-        "alternatives": [],
+      "spria": {
         "extMax": null,
         "extMin": null,
         "max": 30,
         "min": 15,
-        "raw": "15-30",
-        "weight": null
+        "weight": 7
+      },
+      "turael": {
+        "extMax": null,
+        "extMin": null,
+        "max": 30,
+        "min": 15,
+        "weight": 7
       }
     },
     "monsters": [
@@ -58823,40 +58809,32 @@
     ],
     "masters": {
       "duradel": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 110,
         "min": 50,
-        "raw": "50-110",
-        "weight": null
+        "weight": 8
       },
       "konar": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 140,
         "min": 75,
-        "raw": "75-140",
-        "weight": null
+        "weight": 10
       },
       "mortimer": {
-        "alternatives": [],
-        "extMax": 140,
-        "extMin": 70,
+        "extMax": null,
+        "extMin": null,
         "max": 60,
         "min": 40,
-        "raw": "40-60 (70-140)",
-        "weight": null
+        "weight": 10
       },
       "nieve": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 95,
         "min": 30,
-        "raw": "30-95",
-        "weight": null
+        "weight": 7
       }
     },
     "monsters": [
@@ -59992,74 +59970,53 @@
     ],
     "masters": {
       "chaeldar": {
-        "alternatives": [],
         "extMax": 250,
         "extMin": 200,
         "max": 130,
         "min": 70,
-        "raw": "70-130 (200-250)",
-        "weight": null
+        "weight": 9
       },
       "duradel": {
-        "alternatives": [],
         "extMax": 250,
         "extMin": 200,
         "max": 200,
         "min": 130,
-        "raw": "130-200 (200-250)",
-        "weight": null
+        "weight": 5
       },
       "konar": {
-        "alternatives": [],
         "extMax": 250,
         "extMin": 200,
         "max": 170,
         "min": 120,
-        "raw": "120-170 (200-250)",
-        "weight": null
+        "weight": 6
       },
       "krystilia": {
-        "alternatives": [],
         "extMax": 250,
         "extMin": 200,
         "max": 125,
         "min": 75,
-        "raw": "75-125 (200-250)",
-        "weight": null
+        "weight": 5
       },
       "mortimer": {
-        "alternatives": [
-          {
-            "extMax": 400,
-            "extMin": 250,
-            "max": 330,
-            "min": 170
-          }
-        ],
         "extMax": 250,
         "extMin": 200,
         "max": 180,
         "min": 120,
-        "raw": "120-180 (200-250) <br/> or 170-330 (250-400)",
-        "weight": null
+        "weight": 8
       },
       "nieve": {
-        "alternatives": [],
         "extMax": 250,
         "extMin": 200,
         "max": 185,
         "min": 120,
-        "raw": "120-185 (200-250)",
-        "weight": null
+        "weight": 6
       },
       "vannaka": {
-        "alternatives": [],
         "extMax": 250,
         "extMin": 200,
         "max": 90,
         "min": 40,
-        "raw": "40-90 (200-250)",
-        "weight": null
+        "weight": 8
       }
     },
     "monsters": [
@@ -62303,22 +62260,18 @@
     ],
     "masters": {
       "spria": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 25,
         "min": 10,
-        "raw": "10-25",
-        "weight": null
+        "weight": 7
       },
       "turael": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 25,
         "min": 10,
-        "raw": "10-25",
-        "weight": null
+        "weight": 7
       }
     },
     "monsters": [
@@ -63101,13 +63054,11 @@
     ],
     "masters": {
       "krystilia": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 125,
         "min": 75,
-        "raw": "75-125",
-        "weight": null
+        "weight": 6
       }
     },
     "monsters": [
@@ -64391,40 +64342,32 @@
     ],
     "masters": {
       "chaeldar": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 130,
         "min": 70,
-        "raw": "70-130",
-        "weight": null
+        "weight": 8
       },
       "duradel": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 170,
-        "min": 100,
-        "raw": "100-170",
-        "weight": null
+        "min": 110,
+        "weight": 4
       },
       "nieve": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 90,
         "min": 60,
-        "raw": "60-90",
-        "weight": null
+        "weight": 4
       },
       "vannaka": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 70,
         "min": 30,
-        "raw": "30-70",
-        "weight": null
+        "weight": 7
       }
     },
     "monsters": [
@@ -65250,7 +65193,15 @@
         "y": 9887
       }
     ],
-    "masters": {},
+    "masters": {
+      "krystilia": {
+        "extMax": null,
+        "extMin": null,
+        "max": 60,
+        "min": 35,
+        "weight": 5
+      }
+    },
     "monsters": [
       {
         "aggressive": "Yes",
@@ -65522,7 +65473,22 @@
         "y": 5098
       }
     ],
-    "masters": {},
+    "masters": {
+      "chaeldar": {
+        "extMax": null,
+        "extMin": null,
+        "max": 130,
+        "min": 70,
+        "weight": 7
+      },
+      "vannaka": {
+        "extMax": null,
+        "extMin": null,
+        "max": 90,
+        "min": 30,
+        "weight": 7
+      }
+    },
     "monsters": [
       {
         "aggressive": "No",
@@ -67151,58 +67117,46 @@
     ],
     "masters": {
       "chaeldar": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 130,
         "min": 70,
-        "raw": "70-130",
-        "weight": null
+        "weight": 12
       },
       "duradel": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 200,
         "min": 130,
-        "raw": "130-200",
-        "weight": null
+        "weight": 7
       },
       "konar": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 170,
         "min": 120,
-        "raw": "120-170",
-        "weight": null
+        "weight": 9
       },
       "krystilia": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 125,
         "min": 75,
-        "raw": "75-125",
-        "weight": null
+        "weight": 7
       },
       "nieve": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 185,
         "min": 120,
-        "raw": "120-185",
-        "weight": null
+        "weight": 9
       },
       "vannaka": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 90,
         "min": 40,
-        "raw": "40-90",
-        "weight": null
+        "weight": 7
       }
     },
     "monsters": [
@@ -67689,7 +67643,15 @@
         "y": 5117
       }
     ],
-    "masters": {},
+    "masters": {
+      "mazchna": {
+        "extMax": null,
+        "extMin": null,
+        "max": 25,
+        "min": 15,
+        "weight": 7
+      }
+    },
     "monsters": [
       {
         "aggressive": "Yes",
@@ -68204,40 +68166,32 @@
     ],
     "masters": {
       "chaeldar": {
-        "alternatives": [],
         "extMax": 75,
         "extMin": 55,
         "max": 20,
         "min": 10,
-        "raw": "10-20 (55-75)",
-        "weight": null
+        "weight": 7
       },
       "duradel": {
-        "alternatives": [],
         "extMax": 75,
         "extMin": 55,
         "max": 50,
         "min": 20,
-        "raw": "20-50 (55-75)",
-        "weight": null
+        "weight": 7
       },
       "konar": {
-        "alternatives": [],
         "extMax": 75,
         "extMin": 55,
         "max": 30,
         "min": 15,
-        "raw": "15-30 (55-75)",
-        "weight": null
+        "weight": 5
       },
       "nieve": {
-        "alternatives": [],
         "extMax": 75,
         "extMin": 55,
         "max": 25,
         "min": 5,
-        "raw": "5-25 (55-75)",
-        "weight": null
+        "weight": 5
       }
     },
     "monsters": [
@@ -68795,7 +68749,22 @@
         "y": 10462
       }
     ],
-    "masters": {},
+    "masters": {
+      "duradel": {
+        "extMax": 240,
+        "extMin": 180,
+        "max": 120,
+        "min": 70,
+        "weight": 5
+      },
+      "nieve": {
+        "extMax": 240,
+        "extMin": 180,
+        "max": 100,
+        "min": 60,
+        "weight": 5
+      }
+    },
     "monsters": [
       {
         "aggressive": "Yes",
@@ -68914,6 +68883,699 @@
       "Slayer task/Frost dragons"
     ],
     "xpPerKill": 235
+  },
+  {
+    "alternatives": [
+      "Grotesque Guardians (Dusk and Dawn, on the roof)"
+    ],
+    "bossTask": false,
+    "combatAchievements": [
+      {
+        "id": 97,
+        "monster": "Gargoyle",
+        "name": "A Smashing Time",
+        "task": "Kill a Gargoyle.",
+        "tier": "Medium",
+        "type": "Kill Count"
+      }
+    ],
+    "curatedFile": "batch13.json",
+    "enum": "GARGOYLES",
+    "gearPage": "Slayer task/Gargoyles",
+    "locations": [
+      {
+        "access": {
+          "groups": [
+            {
+              "any": [
+                {
+                  "level": 75,
+                  "skill": "SLAYER",
+                  "type": "skill"
+                }
+              ],
+              "manual": false,
+              "text": "75 Slayer"
+            },
+            {
+              "any": [
+                {
+                  "name": "Priest in Peril",
+                  "quest": "PRIEST_IN_PERIL",
+                  "state": "FINISHED",
+                  "type": "quest"
+                }
+              ],
+              "manual": false,
+              "text": "Priest in Peril"
+            },
+            {
+              "any": [],
+              "manual": true,
+              "note": "task-only",
+              "text": "Task-only area (Raulyn blocks off-task attacks)"
+            }
+          ]
+        },
+        "annotations": [],
+        "annotationsRaw": [],
+        "cannon": false,
+        "coordsMissing": false,
+        "curated": true,
+        "curatedName": "Slayer Tower basement (Slayer task only)",
+        "displayName": "Slayer Tower basement (Slayer task only)",
+        "dropversions": [],
+        "id": "slayer-tower-basement-slayer-task-only-p0",
+        "konarAssignable": true,
+        "levels": [
+          111
+        ],
+        "link": "Slayer Tower",
+        "mapID": 14,
+        "members": "Yes",
+        "monsters": [
+          "Gargoyle"
+        ],
+        "multi": false,
+        "name": "Slayer Tower basement (Slayer task only)",
+        "notes": "The wiki recommends the basement: 'there are many gargoyles in a fairly small area compared to the top floor' and it is 'large enough that the player can reset the aggression timer easily'. Gargoyles here are immune to poison and venom.",
+        "pages": [
+          "Gargoyle"
+        ],
+        "plane": 0,
+        "rank": 1,
+        "requirements": [
+          "75 Slayer",
+          "Priest in Peril",
+          "Task-only area (Raulyn blocks off-task attacks)"
+        ],
+        "source": "locline",
+        "spawnCount": 12,
+        "spawns": [
+          [
+            3427,
+            9943
+          ],
+          [
+            3428,
+            9932
+          ],
+          [
+            3432,
+            9937
+          ],
+          [
+            3432,
+            9947
+          ],
+          [
+            3433,
+            9942
+          ],
+          [
+            3434,
+            9932
+          ],
+          [
+            3437,
+            9948
+          ],
+          [
+            3439,
+            9932
+          ],
+          [
+            3439,
+            9943
+          ],
+          [
+            3440,
+            9928
+          ],
+          [
+            3440,
+            9936
+          ],
+          [
+            3444,
+            9931
+          ]
+        ],
+        "spawnsByMonster": {
+          "Gargoyle": [
+            [
+              3427,
+              9943
+            ],
+            [
+              3428,
+              9932
+            ],
+            [
+              3432,
+              9937
+            ],
+            [
+              3432,
+              9947
+            ],
+            [
+              3433,
+              9942
+            ],
+            [
+              3434,
+              9932
+            ],
+            [
+              3437,
+              9948
+            ],
+            [
+              3439,
+              9932
+            ],
+            [
+              3439,
+              9943
+            ],
+            [
+              3440,
+              9928
+            ],
+            [
+              3440,
+              9936
+            ],
+            [
+              3444,
+              9931
+            ]
+          ]
+        },
+        "wilderness": false,
+        "wildernessLevelMax": null,
+        "wildernessLevelMin": null,
+        "x": 3435,
+        "y": 9938
+      },
+      {
+        "access": {
+          "groups": [
+            {
+              "any": [
+                {
+                  "level": 75,
+                  "skill": "SLAYER",
+                  "type": "skill"
+                }
+              ],
+              "manual": false,
+              "text": "75 Slayer"
+            },
+            {
+              "any": [
+                {
+                  "name": "Priest in Peril",
+                  "quest": "PRIEST_IN_PERIL",
+                  "state": "FINISHED",
+                  "type": "quest"
+                }
+              ],
+              "manual": false,
+              "text": "Priest in Peril"
+            }
+          ]
+        },
+        "annotations": [],
+        "annotationsRaw": [],
+        "cannon": false,
+        "coordsMissing": false,
+        "curated": true,
+        "curatedName": "Slayer Tower top floor",
+        "displayName": "Slayer Tower top floor",
+        "dropversions": [],
+        "id": "slayer-tower-top-floor-p2",
+        "konarAssignable": true,
+        "levels": [
+          111
+        ],
+        "link": "Slayer Tower",
+        "mapID": 0,
+        "members": "Yes",
+        "monsters": [
+          "Gargoyle"
+        ],
+        "multi": false,
+        "name": "Slayer Tower top floor",
+        "notes": "The way up passes banshees and aberrant spectres, which drain stats without earmuffs, a nose peg or a Slayer helmet. The top-floor gargoyles are not immune to venom, so a toxic blowpipe can envenom them here.",
+        "pages": [
+          "Gargoyle"
+        ],
+        "plane": 2,
+        "rank": 2,
+        "requirements": [
+          "75 Slayer",
+          "Priest in Peril"
+        ],
+        "source": "locline",
+        "spawnCount": 8,
+        "spawns": [
+          [
+            3432,
+            3540
+          ],
+          [
+            3435,
+            3548
+          ],
+          [
+            3437,
+            3537
+          ],
+          [
+            3439,
+            3542
+          ],
+          [
+            3439,
+            3548
+          ],
+          [
+            3443,
+            3548
+          ],
+          [
+            3445,
+            3541
+          ],
+          [
+            3446,
+            3535
+          ]
+        ],
+        "spawnsByMonster": {
+          "Gargoyle": [
+            [
+              3432,
+              3540
+            ],
+            [
+              3435,
+              3548
+            ],
+            [
+              3437,
+              3537
+            ],
+            [
+              3439,
+              3542
+            ],
+            [
+              3439,
+              3548
+            ],
+            [
+              3443,
+              3548
+            ],
+            [
+              3445,
+              3541
+            ],
+            [
+              3446,
+              3535
+            ]
+          ]
+        },
+        "wilderness": false,
+        "wildernessLevelMax": null,
+        "wildernessLevelMin": null,
+        "x": 3440,
+        "y": 3542
+      }
+    ],
+    "masters": {
+      "chaeldar": {
+        "extMax": 250,
+        "extMin": 200,
+        "max": 130,
+        "min": 70,
+        "weight": 11
+      },
+      "duradel": {
+        "extMax": 250,
+        "extMin": 200,
+        "max": 200,
+        "min": 130,
+        "weight": 8
+      },
+      "konar": {
+        "extMax": 250,
+        "extMin": 200,
+        "max": 170,
+        "min": 120,
+        "weight": 6
+      },
+      "mortimer": {
+        "extMax": 250,
+        "extMin": 200,
+        "max": 180,
+        "min": 120,
+        "weight": 10
+      },
+      "nieve": {
+        "extMax": 250,
+        "extMin": 200,
+        "max": 185,
+        "min": 120,
+        "weight": 6
+      },
+      "vannaka": {
+        "extMax": 250,
+        "extMin": 200,
+        "max": 90,
+        "min": 40,
+        "weight": 5
+      }
+    },
+    "monsters": [
+      {
+        "aggressive": "Yes",
+        "assignedBy": [
+          "vannaka",
+          "chaeldar",
+          "konar",
+          "nieve",
+          "duradel",
+          "mortimer"
+        ],
+        "attackSpeed": 4,
+        "attackStyles": [
+          "Slash"
+        ],
+        "attributes": "Golem",
+        "combat": 111,
+        "combatStats": {
+          "attributes": [
+            "golem"
+          ],
+          "crush": -20,
+          "defenceLevel": 107,
+          "flatArmour": -2,
+          "hitpoints": 105,
+          "magic": 20,
+          "magicLevel": 1,
+          "rangedHeavy": -20,
+          "rangedLight": 20,
+          "rangedStandard": 20,
+          "size": 3,
+          "slash": 60,
+          "stab": 50,
+          "version": "Upstairs",
+          "weakness": "earth",
+          "weaknessPercent": 40
+        },
+        "hasInfobox": true,
+        "hitpoints": 105,
+        "immuneCannon": "No",
+        "immuneThrall": "No",
+        "locLines": 2,
+        "mapLocations": 0,
+        "maxHit": "11",
+        "name": "Gargoyle",
+        "npcIds": [
+          412,
+          413
+        ],
+        "npcIdsByVersion": {
+          "Basement": [
+            1543,
+            413
+          ],
+          "Upstairs": [
+            412,
+            413
+          ]
+        },
+        "page": "Gargoyle",
+        "poisonous": "No",
+        "redirected": false,
+        "size": 3,
+        "slayerCategory": "Gargoyles",
+        "slayerLevel": 75,
+        "slayerXp": 105,
+        "versions": [
+          "Upstairs",
+          "Basement"
+        ],
+        "weakness": null
+      },
+      {
+        "aggressive": "No",
+        "assignedBy": [
+          "vannaka",
+          "chaeldar",
+          "konar",
+          "nieve",
+          "duradel",
+          "mortimer"
+        ],
+        "attackSpeed": 6,
+        "attackStyles": [
+          "Slash"
+        ],
+        "attackStylesByVersion": {
+          "First form": [
+            "Slash"
+          ],
+          "Second form": [
+            "Slash",
+            "Ranged"
+          ]
+        },
+        "attributes": "Golem",
+        "combat": 248,
+        "combatByVersion": {
+          "First form": 248,
+          "Second form": 328
+        },
+        "combatStats": {
+          "attributes": [
+            "golem"
+          ],
+          "crush": 0,
+          "defenceLevel": 100,
+          "flatArmour": -1,
+          "hitpoints": 450,
+          "magic": 0,
+          "magicLevel": 140,
+          "rangedHeavy": 0,
+          "rangedLight": 0,
+          "rangedStandard": 0,
+          "size": 4,
+          "slash": 0,
+          "stab": 0,
+          "version": "First form",
+          "weakness": "earth",
+          "weaknessPercent": 40
+        },
+        "hasInfobox": true,
+        "hitpoints": 450,
+        "immuneCannon": null,
+        "immuneThrall": null,
+        "locLines": 0,
+        "mapLocations": 0,
+        "maxHit": "15 (melee) 33 (special attack)",
+        "maxHitByVersion": {
+          "First form": "15 (melee) 33 (special attack)",
+          "Second form": "26 (melee)\n15x2 (ranged)\n65 (special attack)"
+        },
+        "name": "Dusk",
+        "npcIds": [
+          7851,
+          7854,
+          7855,
+          7882,
+          7883,
+          7886
+        ],
+        "npcIdsByVersion": {
+          "First form": [
+            7851,
+            7854,
+            7855,
+            7882,
+            7883,
+            7886
+          ],
+          "Second form": [
+            7887,
+            7888,
+            7889
+          ]
+        },
+        "page": "Dusk",
+        "poisonous": "No",
+        "redirected": false,
+        "size": 4,
+        "sizeByVersion": {
+          "First form": 4,
+          "Second form": 6
+        },
+        "slayerCategory": "Bosses, Gargoyles",
+        "slayerLevel": 75,
+        "slayerXp": 1350,
+        "versions": [
+          "First form",
+          "Second form"
+        ],
+        "weakness": null
+      },
+      {
+        "aggressive": "No",
+        "assignedBy": [
+          "vannaka",
+          "chaeldar",
+          "konar",
+          "nieve",
+          "duradel",
+          "mortimer"
+        ],
+        "attackSpeed": 6,
+        "attackStyles": [
+          "Slash",
+          "Ranged",
+          "Magic (special)"
+        ],
+        "attributes": "Flying, Golem",
+        "combat": 228,
+        "combatStats": {
+          "attributes": [
+            "flying",
+            "golem"
+          ],
+          "crush": 0,
+          "defenceLevel": 100,
+          "hitpoints": 450,
+          "magic": 80,
+          "magicLevel": 100,
+          "rangedHeavy": 0,
+          "rangedLight": 0,
+          "rangedStandard": 0,
+          "size": 4,
+          "slash": 0,
+          "stab": 0,
+          "version": null,
+          "weakness": "earth",
+          "weaknessPercent": 70
+        },
+        "hasInfobox": true,
+        "hitpoints": 450,
+        "immuneCannon": null,
+        "immuneThrall": null,
+        "locLines": 0,
+        "mapLocations": 0,
+        "maxHit": "15",
+        "name": "Dawn",
+        "npcIds": [
+          7852,
+          7853,
+          7884,
+          7885
+        ],
+        "page": "Dawn",
+        "poisonous": "No",
+        "redirected": false,
+        "size": 4,
+        "slayerCategory": "Bosses, Gargoyles",
+        "slayerLevel": 75,
+        "slayerXp": 0,
+        "versions": [],
+        "weakness": null
+      }
+    ],
+    "recommendedStyle": "Melee",
+    "recommendedStyleSource": "curated",
+    "requiredGear": [],
+    "requiredItems": [
+      "Rock hammer, rock thrownhammer or granite hammer"
+    ],
+    "requirements": {
+      "combat": 80,
+      "other": "Completion of Priest in Peril",
+      "skills": [
+        {
+          "level": 75,
+          "skill": "Slayer"
+        }
+      ],
+      "slayer": 75
+    },
+    "strategy": [
+      "Gargoyles can be assigned as a Slayer task by various Slayer masters at level 75 Slayer, level 80 combat, and with completion of the Priest in Peril quest. They are only found in the Slayer Tower, either on the top floor or in the basement. The gargoyles in the basement of the Slayer Tower can only be killed while on a Slayer task, as Raulyn will stop the player if they attempt to fight them off-task. Gargoyles have a Superior slayer monster variant, the level 349 marble gargoyle. Unlike regular gargoyles, the marble gargoyle also utilises ranged attacks. It also has a special attack, launching a white-red orb that deals heavy damage and entraps the player if not dodged; this attack has a 1x1 AoE.",
+      "Gargoyles are weak to both magic and crush attacks, but melee is commonly used due to the lack of safespots, less defence against their attacks and expenses for casting spells. They have -2 flat armour, so weapons such as Dual macuahuitl are recommended to make use of the extra damage. Even then, they are still easily fought with most standard weapons one might have available.",
+      "To kill a gargoyle, a rock hammer, a rock thrownhammer, or a granite hammer must be used when they reach 9 or lower Hitpoints. Normally, the item must be used on the gargoyle, but players can buy the \"Gargoyle Smasher\" perk from Slayer masters for 120 Slayer points, which will automatically smash the gargoyle when it falls to 9 or lower Hitpoints, provided that the player has a rock hammer (or equivalent) in their inventory. The granite hammer will automatically smash gargoyles even without the perk if it is equipped. The rock hammer is faster than the rock thrownhammer as it does not have travel time. If both are in the inventory, the rock hammer is used in melee distance, while thrownhammers are used outside of melee distance."
+    ],
+    "summary": "Gargoyles need 75 Slayer, 80 combat and Priest in Peril, and live only in the Slayer Tower: on the top floor, and in the basement, where they can only be killed on task. They cannot be killed normally: finish each one at low health with a rock hammer, rock thrownhammer or granite hammer, or buy Gargoyle smasher (120 points) to do it automatically with a rock hammer in your inventory. They are weak to crush, have -2 flat armour, and Protect from Melee blocks all of their damage. The basement is the usual choice because more of them spawn in a smaller area. Killing them on task can drop the brittle key that opens the Grotesque Guardians on the roof.",
+    "superior": "Marble gargoyle",
+    "task": "Gargoyles",
+    "taskId": 4147,
+    "trainingSummary": {
+      "assignment": "Gargoyles",
+      "cons": "Mediocre experience rates. Can be crowded in the Slayer Tower.",
+      "pros": "Decent profit, relatively low-effort task. Grotesque Guardians can be killed on task.",
+      "recommendation": "Do for profit; skip for XP",
+      "xpPerHour": "30,000"
+    },
+    "unlocks": [
+      {
+        "cost": 120,
+        "name": "Gargoyle smasher",
+        "note": "Gargoyles are automatically dealt the finishing blow if the player has a Rock hammer in their inventory."
+      },
+      {
+        "cost": 50,
+        "name": "Bigger and Badder",
+        "note": "Increase the risk against certain slayer monsters with the chance of a superior version spawning whilst on a slayer task."
+      },
+      {
+        "cost": 500,
+        "name": "Double Trouble",
+        "note": "Slaying Dusk and Dawn now counts for two kills towards your task rather than one."
+      },
+      {
+        "cost": 100,
+        "name": "Get smashed",
+        "note": "Number of gargoyles assigned is increased to 200-250."
+      }
+    ],
+    "usefulItems": [
+      "Gargoyle smasher unlock (120 points)",
+      "Slayer ring (teleport to the Slayer Tower)",
+      "Ring of wealth (picks up their frequent coin drops)"
+    ],
+    "variantGearPages": {},
+    "wikiMonsterPages": [
+      "Gargoyle",
+      "Dusk",
+      "Dawn"
+    ],
+    "wikiMonsterPagesTried": [
+      "Gargoyle",
+      "Dusk",
+      "Dawn"
+    ],
+    "wikiTaskPage": "Slayer task/Gargoyles",
+    "wikiTaskPageKind": "slayer-task",
+    "wikiTaskPageRedirected": false,
+    "wikiTaskPageRequested": "Slayer task/Gargoyles",
+    "wikiTaskPageTried": [
+      "Slayer task/Gargoyles"
+    ],
+    "xpPerKill": 105
   },
   {
     "alternatives": [],
@@ -71493,31 +72155,25 @@
     ],
     "masters": {
       "mazchna": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 50,
         "min": 30,
-        "raw": "30-50",
-        "weight": null
+        "weight": 7
       },
       "spria": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 30,
         "min": 15,
-        "raw": "15-30",
-        "weight": null
+        "weight": 7
       },
       "turael": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 30,
         "min": 15,
-        "raw": "15-30",
-        "weight": null
+        "weight": 7
       }
     },
     "monsters": [
@@ -72324,7 +72980,22 @@
         "y": 3463
       }
     ],
-    "masters": {},
+    "masters": {
+      "mazchna": {
+        "extMax": null,
+        "extMin": null,
+        "max": 20,
+        "min": 10,
+        "weight": 7
+      },
+      "vannaka": {
+        "extMax": null,
+        "extMin": null,
+        "max": 40,
+        "min": 10,
+        "weight": 7
+      }
+    },
     "monsters": [
       {
         "aggressive": "Yes",
@@ -77028,22 +77699,18 @@
     ],
     "masters": {
       "spria": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 30,
         "min": 15,
-        "raw": "15-30",
-        "weight": null
+        "weight": 7
       },
       "turael": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 30,
         "min": 15,
-        "raw": "15-30",
-        "weight": null
+        "weight": 7
       }
     },
     "monsters": [
@@ -79570,49 +80237,39 @@
     ],
     "masters": {
       "chaeldar": {
-        "alternatives": [],
         "extMax": 250,
         "extMin": 200,
         "max": 130,
         "min": 70,
-        "raw": "70-130 (200-250)",
-        "weight": null
+        "weight": 9
       },
       "duradel": {
-        "alternatives": [],
         "extMax": 250,
         "extMin": 200,
         "max": 200,
         "min": 130,
-        "raw": "130-200 (200-250)",
-        "weight": null
+        "weight": 9
       },
       "konar": {
-        "alternatives": [],
         "extMax": 250,
         "extMin": 200,
         "max": 170,
         "min": 120,
-        "raw": "120-170 (200-250)",
-        "weight": null
+        "weight": 7
       },
       "krystilia": {
-        "alternatives": [],
         "extMax": 250,
         "extMin": 200,
         "max": 150,
         "min": 100,
-        "raw": "100-150 (200-250)",
-        "weight": null
+        "weight": 8
       },
       "nieve": {
-        "alternatives": [],
         "extMax": 250,
         "extMin": 200,
         "max": 185,
         "min": 120,
-        "raw": "120-185 (200-250)",
-        "weight": null
+        "weight": 7
       }
     },
     "monsters": [
@@ -80648,13 +81305,11 @@
     ],
     "masters": {
       "krystilia": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 100,
         "min": 65,
-        "raw": "65-100",
-        "weight": null
+        "weight": 4
       }
     },
     "monsters": [
@@ -80859,6 +81514,423 @@
       "Slayer task/Green dragons"
     ],
     "xpPerKill": 75
+  },
+  {
+    "alternatives": [],
+    "bossTask": true,
+    "combatAchievements": [
+      {
+        "id": 82,
+        "monster": "Grotesque Guardians",
+        "name": "Grotesque Guardians Adept",
+        "task": "Kill the Grotesque Guardians 25 times.",
+        "tier": "Hard",
+        "type": "Kill Count"
+      },
+      {
+        "id": 83,
+        "monster": "Grotesque Guardians",
+        "name": "Grotesque Guardians Veteran",
+        "task": "Kill the Grotesque Guardians 50 times.",
+        "tier": "Elite",
+        "type": "Kill Count"
+      },
+      {
+        "id": 84,
+        "monster": "Grotesque Guardians",
+        "name": "Don't Look at the Eclipse",
+        "task": "Kill the Grotesque Guardians without taking damage from Dusk's blinding attack.",
+        "tier": "Hard",
+        "type": "Mechanical"
+      },
+      {
+        "id": 85,
+        "monster": "Grotesque Guardians",
+        "name": "Prison Break",
+        "task": "Kill the Grotesque Guardians without taking damage from Dusk's prison attack.",
+        "tier": "Hard",
+        "type": "Mechanical"
+      },
+      {
+        "id": 86,
+        "monster": "Grotesque Guardians",
+        "name": "Granite Footwork",
+        "task": "Kill the Grotesque Guardians without taking damage from Dawn's rockfall attack.",
+        "tier": "Hard",
+        "type": "Mechanical"
+      },
+      {
+        "id": 87,
+        "monster": "Grotesque Guardians",
+        "name": "Heal No More",
+        "task": "Kill the Grotesque Guardians without letting Dawn receive any healing from her orbs.",
+        "tier": "Hard",
+        "type": "Mechanical"
+      },
+      {
+        "id": 88,
+        "monster": "Grotesque Guardians",
+        "name": "Static Awareness",
+        "task": "Kill the Grotesque Guardians without being hit by any lightning attacks.",
+        "tier": "Hard",
+        "type": "Mechanical"
+      },
+      {
+        "id": 89,
+        "monster": "Grotesque Guardians",
+        "name": "Done before Dusk",
+        "task": "Kill the Grotesque Guardians before Dusk uses his prison attack for a second time.",
+        "tier": "Elite",
+        "type": "Mechanical"
+      },
+      {
+        "id": 90,
+        "monster": "Grotesque Guardians",
+        "name": "Perfect Grotesque Guardians",
+        "task": "Kill the Grotesque Guardians whilst completing the \"Don't look at the eclipse\", \"Prison Break\", \"Granite Footwork\", \"Heal no more\", \"Static Awareness\" and \"Done before dusk\" tasks.",
+        "tier": "Elite",
+        "type": "Perfection"
+      },
+      {
+        "id": 91,
+        "monster": "Grotesque Guardians",
+        "name": "Perfect Grotesque Guardians II",
+        "task": "Kill the Grotesque Guardians 5 times in a row without leaving the instance, whilst completing the Perfect Grotesque Guardians task every time.",
+        "tier": "Master",
+        "type": "Perfection"
+      },
+      {
+        "id": 92,
+        "monster": "Grotesque Guardians",
+        "name": "Grotesque Guardians Speed-Trialist",
+        "task": "Kill the Grotesque Guardians in less than 2 minutes.",
+        "tier": "Elite",
+        "type": "Speed"
+      },
+      {
+        "id": 93,
+        "monster": "Grotesque Guardians",
+        "name": "Grotesque Guardians Speed-Chaser",
+        "task": "Kill the Grotesque Guardians in less than 1:40 minutes.",
+        "tier": "Master",
+        "type": "Speed"
+      },
+      {
+        "id": 94,
+        "monster": "Grotesque Guardians",
+        "name": "Grotesque Guardians Speed-Runner",
+        "task": "Kill the Grotesque Guardians in less than 1:20 minutes.",
+        "tier": "Grandmaster",
+        "type": "Speed"
+      },
+      {
+        "id": 95,
+        "monster": "Grotesque Guardians",
+        "name": "From Dusk...",
+        "task": "Kill the Grotesque Guardians 10 times without leaving the instance.",
+        "tier": "Elite",
+        "type": "Stamina"
+      },
+      {
+        "id": 96,
+        "monster": "Grotesque Guardians",
+        "name": "... 'til Dawn",
+        "task": "Kill the Grotesque Guardians 20 times without leaving the instance.",
+        "tier": "Master",
+        "type": "Stamina"
+      }
+    ],
+    "curatedFile": "batch13.json",
+    "enum": "GROTESQUE_GUARDIANS",
+    "gearPage": "Grotesque Guardians/Strategies",
+    "locations": [
+      {
+        "access": {
+          "groups": [
+            {
+              "any": [
+                {
+                  "level": 75,
+                  "skill": "SLAYER",
+                  "type": "skill"
+                }
+              ],
+              "manual": false,
+              "text": "75 Slayer"
+            },
+            {
+              "any": [
+                {
+                  "name": "Priest in Peril",
+                  "quest": "PRIEST_IN_PERIL",
+                  "state": "FINISHED",
+                  "type": "quest"
+                }
+              ],
+              "manual": false,
+              "text": "Priest in Peril"
+            },
+            {
+              "any": [],
+              "manual": true,
+              "text": "Roof unlocked once with a brittle key"
+            },
+            {
+              "any": [],
+              "manual": true,
+              "note": "task-only",
+              "text": "Gargoyles or Grotesque Guardians Slayer task"
+            }
+          ]
+        },
+        "annotations": [],
+        "annotationsRaw": [],
+        "cannon": false,
+        "coordsMissing": true,
+        "curated": true,
+        "curatedName": "Slayer Tower roof",
+        "displayName": "Slayer Tower roof",
+        "dropversions": [],
+        "id": "slayer-tower-roof-px",
+        "konarAssignable": true,
+        "levels": [],
+        "link": null,
+        "mapID": null,
+        "members": null,
+        "monsters": [],
+        "multi": "unknown",
+        "name": "Slayer Tower roof",
+        "notes": "The entrance is on the 2nd floor of the Slayer Tower. Ring the Cloister Bell to start; you are kicked out after five minutes of inactivity. Items lost on death go to the Magical Chest (50,000 coins to reclaim).",
+        "pages": [],
+        "plane": null,
+        "rank": 1,
+        "requirements": [
+          "75 Slayer",
+          "Priest in Peril",
+          "Roof unlocked once with a brittle key",
+          "Gargoyles or Grotesque Guardians Slayer task"
+        ],
+        "spawnCount": 0,
+        "spawns": [],
+        "spawnsByMonster": {},
+        "wilderness": false,
+        "wildernessLevelMax": null,
+        "wildernessLevelMin": null,
+        "x": null,
+        "y": null
+      }
+    ],
+    "masters": {},
+    "monsters": [
+      {
+        "aggressive": "No",
+        "assignedBy": [
+          "vannaka",
+          "chaeldar",
+          "konar",
+          "nieve",
+          "duradel",
+          "mortimer"
+        ],
+        "attackSpeed": 6,
+        "attackStyles": [
+          "Slash"
+        ],
+        "attackStylesByVersion": {
+          "First form": [
+            "Slash"
+          ],
+          "Second form": [
+            "Slash",
+            "Ranged"
+          ]
+        },
+        "attributes": "Golem",
+        "combat": 248,
+        "combatByVersion": {
+          "First form": 248,
+          "Second form": 328
+        },
+        "combatStats": {
+          "attributes": [
+            "golem"
+          ],
+          "crush": 0,
+          "defenceLevel": 100,
+          "flatArmour": -1,
+          "hitpoints": 450,
+          "magic": 0,
+          "magicLevel": 140,
+          "rangedHeavy": 0,
+          "rangedLight": 0,
+          "rangedStandard": 0,
+          "size": 4,
+          "slash": 0,
+          "stab": 0,
+          "version": "First form",
+          "weakness": "earth",
+          "weaknessPercent": 40
+        },
+        "hasInfobox": true,
+        "hitpoints": 450,
+        "immuneCannon": null,
+        "immuneThrall": null,
+        "locLines": 0,
+        "mapLocations": 0,
+        "maxHit": "15 (melee) 33 (special attack)",
+        "maxHitByVersion": {
+          "First form": "15 (melee) 33 (special attack)",
+          "Second form": "26 (melee)\n15x2 (ranged)\n65 (special attack)"
+        },
+        "name": "Dusk",
+        "npcIds": [
+          7851,
+          7854,
+          7855,
+          7882,
+          7883,
+          7886
+        ],
+        "npcIdsByVersion": {
+          "First form": [
+            7851,
+            7854,
+            7855,
+            7882,
+            7883,
+            7886
+          ],
+          "Second form": [
+            7887,
+            7888,
+            7889
+          ]
+        },
+        "page": "Dusk",
+        "poisonous": "No",
+        "redirected": false,
+        "size": 4,
+        "sizeByVersion": {
+          "First form": 4,
+          "Second form": 6
+        },
+        "slayerCategory": "Bosses, Gargoyles",
+        "slayerLevel": 75,
+        "slayerXp": 1350,
+        "versions": [
+          "First form",
+          "Second form"
+        ],
+        "weakness": null
+      },
+      {
+        "aggressive": "No",
+        "assignedBy": [
+          "vannaka",
+          "chaeldar",
+          "konar",
+          "nieve",
+          "duradel",
+          "mortimer"
+        ],
+        "attackSpeed": 6,
+        "attackStyles": [
+          "Slash",
+          "Ranged",
+          "Magic (special)"
+        ],
+        "attributes": "Flying, Golem",
+        "combat": 228,
+        "combatStats": {
+          "attributes": [
+            "flying",
+            "golem"
+          ],
+          "crush": 0,
+          "defenceLevel": 100,
+          "hitpoints": 450,
+          "magic": 80,
+          "magicLevel": 100,
+          "rangedHeavy": 0,
+          "rangedLight": 0,
+          "rangedStandard": 0,
+          "size": 4,
+          "slash": 0,
+          "stab": 0,
+          "version": null,
+          "weakness": "earth",
+          "weaknessPercent": 70
+        },
+        "hasInfobox": true,
+        "hitpoints": 450,
+        "immuneCannon": null,
+        "immuneThrall": null,
+        "locLines": 0,
+        "mapLocations": 0,
+        "maxHit": "15",
+        "name": "Dawn",
+        "npcIds": [
+          7852,
+          7853,
+          7884,
+          7885
+        ],
+        "page": "Dawn",
+        "poisonous": "No",
+        "redirected": false,
+        "size": 4,
+        "slayerCategory": "Bosses, Gargoyles",
+        "slayerLevel": 75,
+        "slayerXp": 0,
+        "versions": [],
+        "weakness": null
+      }
+    ],
+    "recommendedStyle": "Melee",
+    "recommendedStyleSource": "curated",
+    "requiredGear": [],
+    "requiredItems": [
+      "Rock hammer, rock thrownhammer or granite hammer"
+    ],
+    "requirements": {
+      "combat": null,
+      "other": null,
+      "skills": [],
+      "slayer": 75
+    },
+    "strategy": [
+      "The Grotesque Guardians are a pair of gargoyles, Dusk and Dawn, found on the Slayer Tower's rooftop, whose entrance is found on the 2nd floor. In order to access the roof for the first time, players must unlock the gate using a brittle key obtained from killing gargoyles during a Slayer task (requiring 75 Slayer). This is a permanent unlock; once the brittle key has been used, the gate will remain accessible in future, and players will no longer be able to obtain the key as a drop.",
+      "Similar to other Slayer bosses, such as Cerberus and the Abyssal Sire, the Grotesque Guardians can only be killed while the player is assigned gargoyles or the Guardians themselves as a Slayer task. Players attempting to use the stairs to the roof without the proper Slayer task will be stopped via dialogue and be unable to proceed.",
+      "Upon Dusk's death, 1,350 Slayer experience is awarded. Completing additional tiers of the Morytania Diary will reward the player with more experience; with an additonal 33.7, 67.5, 101.5, or 135 Slayer experience after completing the easy, medium, hard or elite tier, respectively. Slayer experience per kill is not affected by the Double Trouble perk. Despite Dusk and Dawn being two different entities, killing both guardians only counts as one kill on the player's Slayer task. However, if the player has Double Trouble unlocked, two kills will be decremented from their Slayer task count upon defeating Dusk."
+    ],
+    "summary": "The Grotesque Guardians, Dusk and Dawn, are the gargoyle Slayer boss on the Slayer Tower roof (75 Slayer), fought in a solo instance on a gargoyle or Grotesque Guardians task. The roof is unlocked once, permanently, with a brittle key dropped by gargoyles on task. Bring a rock hammer, rock thrownhammer or granite hammer to finish them. Dawn flies, so only halberds reach her in melee, and Dusk is immune to magic and ranged; melee or a melee/ranged hybrid is usual. Both together count as one kill, or two with Double Trouble.",
+    "superior": null,
+    "task": "The Grotesque Guardians",
+    "taskId": null,
+    "unlocks": [],
+    "usefulItems": [],
+    "variantGearPages": {},
+    "wikiMonsterPages": [
+      "Dusk",
+      "Dawn"
+    ],
+    "wikiMonsterPagesTried": [
+      "Grotesque Guardian",
+      "Grotesque Guardians",
+      "Dusk",
+      "Dawn"
+    ],
+    "wikiTaskPage": "Grotesque Guardians",
+    "wikiTaskPageKind": "monster",
+    "wikiTaskPageRedirected": true,
+    "wikiTaskPageRequested": "The Grotesque Guardians",
+    "wikiTaskPageTried": [
+      "Slayer task/The Grotesque Guardians",
+      "Slayer task/Grotesque Guardians",
+      "Slayer task/Grotesque Guardian",
+      "The Grotesque Guardians"
+    ],
+    "xpPerKill": 1350
   },
   {
     "alternatives": [
@@ -81489,56 +82561,39 @@
     ],
     "masters": {
       "chaeldar": {
-        "alternatives": [],
         "extMax": 180,
         "extMin": 140,
         "max": 100,
         "min": 60,
-        "raw": "60-100 (140-180)",
-        "weight": null
+        "weight": 10
       },
       "duradel": {
-        "alternatives": [],
         "extMax": 290,
         "extMin": 180,
         "max": 210,
         "min": 100,
-        "raw": "100-210 (180-290)",
-        "weight": null
+        "weight": 7
       },
       "mortimer": {
-        "alternatives": [
-          {
-            "extMax": 300,
-            "extMin": 210,
-            "max": 220,
-            "min": 130
-          }
-        ],
         "extMax": 200,
         "extMin": 160,
         "max": 120,
         "min": 80,
-        "raw": "80-120 (160-200) <br/> or 130-220 (210-300)",
-        "weight": null
+        "weight": 10
       },
       "nieve": {
-        "alternatives": [],
         "extMax": 250,
         "extMin": 190,
         "max": 170,
         "min": 110,
-        "raw": "110-170 (190-250)",
-        "weight": null
+        "weight": 7
       },
       "vannaka": {
-        "alternatives": [],
         "extMax": 160,
         "extMin": 110,
         "max": 80,
         "min": 30,
-        "raw": "30-80 (110-160)",
-        "weight": null
+        "weight": 10
       }
     },
     "monsters": [
@@ -82109,7 +83164,15 @@
         "y": 3112
       }
     ],
-    "masters": {},
+    "masters": {
+      "vannaka": {
+        "extMax": null,
+        "extMin": null,
+        "max": 90,
+        "min": 40,
+        "weight": 8
+      }
+    },
     "monsters": [
       {
         "aggressive": "Yes",
@@ -83585,58 +84648,46 @@
     ],
     "masters": {
       "chaeldar": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 130,
         "min": 70,
-        "raw": "70-130",
-        "weight": null
+        "weight": 9
       },
       "duradel": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 200,
         "min": 130,
-        "raw": "130-200",
-        "weight": null
+        "weight": 10
       },
       "konar": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 170,
         "min": 120,
-        "raw": "120-170",
-        "weight": null
+        "weight": 8
       },
       "krystilia": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 125,
         "min": 75,
-        "raw": "75-125",
-        "weight": null
+        "weight": 7
       },
       "nieve": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 185,
         "min": 120,
-        "raw": "120-185",
-        "weight": null
+        "weight": 8
       },
       "vannaka": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 60,
         "min": 30,
-        "raw": "30-60",
-        "weight": null
+        "weight": 7
       }
     },
     "monsters": [
@@ -85963,31 +87014,25 @@
     ],
     "masters": {
       "krystilia": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 125,
         "min": 75,
-        "raw": "75-125",
-        "weight": null
+        "weight": 3
       },
       "mazchna": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 50,
         "min": 30,
-        "raw": "30-50",
-        "weight": null
+        "weight": 7
       },
       "vannaka": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 90,
         "min": 40,
-        "raw": "40-90",
-        "weight": null
+        "weight": 7
       }
     },
     "monsters": [
@@ -88291,22 +89336,18 @@
     ],
     "masters": {
       "mazchna": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 50,
         "min": 30,
-        "raw": "30-50",
-        "weight": null
+        "weight": 7
       },
       "vannaka": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 90,
         "min": 40,
-        "raw": "40-90",
-        "weight": null
+        "weight": 7
       }
     },
     "monsters": [
@@ -88729,22 +89770,18 @@
     ],
     "masters": {
       "konar": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 190,
         "min": 125,
-        "raw": "125-190",
-        "weight": null
+        "weight": 10
       },
       "mortimer": {
-        "alternatives": [],
-        "extMax": 300,
-        "extMin": 200,
+        "extMax": null,
+        "extMin": null,
         "max": 200,
         "min": 150,
-        "raw": "150-200 (200-300)",
-        "weight": null
+        "weight": 10
       }
     },
     "monsters": [
@@ -89536,22 +90573,18 @@
     ],
     "masters": {
       "spria": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 20,
         "min": 15,
-        "raw": "15-20",
-        "weight": null
+        "weight": 8
       },
       "turael": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 20,
         "min": 15,
-        "raw": "15-20",
-        "weight": null
+        "weight": 8
       }
     },
     "monsters": [
@@ -90599,22 +91632,18 @@
     ],
     "masters": {
       "krystilia": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 150,
         "min": 100,
-        "raw": "100-150",
-        "weight": null
+        "weight": 6
       },
       "vannaka": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 80,
         "min": 30,
-        "raw": "30-80",
-        "weight": null
+        "weight": 7
       }
     },
     "monsters": [
@@ -91734,7 +92763,29 @@
         "y": 9653
       }
     ],
-    "masters": {},
+    "masters": {
+      "krystilia": {
+        "extMax": null,
+        "extMin": null,
+        "max": 150,
+        "min": 100,
+        "weight": 7
+      },
+      "mazchna": {
+        "extMax": null,
+        "extMin": null,
+        "max": 50,
+        "min": 40,
+        "weight": 7
+      },
+      "vannaka": {
+        "extMax": null,
+        "extMin": null,
+        "max": 90,
+        "min": 40,
+        "weight": 7
+      }
+    },
     "monsters": [
       {
         "aggressive": "Yes",
@@ -92143,7 +93194,22 @@
         "y": 3566
       }
     ],
-    "masters": {},
+    "masters": {
+      "mortimer": {
+        "extMax": null,
+        "extMin": null,
+        "max": 50,
+        "min": 35,
+        "weight": 10
+      },
+      "vannaka": {
+        "extMax": null,
+        "extMin": null,
+        "max": 90,
+        "min": 40,
+        "weight": 8
+      }
+    },
     "monsters": [
       {
         "aggressive": "No",
@@ -93471,49 +94537,39 @@
     ],
     "masters": {
       "chaeldar": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 130,
         "min": 70,
-        "raw": "70-130",
-        "weight": null
+        "weight": 10
       },
       "konar": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 170,
         "min": 120,
-        "raw": "120-170",
-        "weight": null
+        "weight": 6
       },
       "krystilia": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 150,
         "min": 100,
-        "raw": "100-150",
-        "weight": null
+        "weight": 5
       },
       "mortimer": {
-        "alternatives": [],
-        "extMax": 220,
-        "extMin": 130,
+        "extMax": null,
+        "extMin": null,
         "max": 120,
         "min": 80,
-        "raw": "80-120 (130-220)",
-        "weight": null
+        "weight": 10
       },
       "vannaka": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 90,
         "min": 40,
-        "raw": "40-90",
-        "weight": null
+        "weight": 8
       }
     },
     "monsters": [
@@ -94239,7 +95295,22 @@
         "y": 3022
       }
     ],
-    "masters": {},
+    "masters": {
+      "chaeldar": {
+        "extMax": null,
+        "extMin": null,
+        "max": 130,
+        "min": 70,
+        "weight": 10
+      },
+      "vannaka": {
+        "extMax": null,
+        "extMin": null,
+        "max": 90,
+        "min": 40,
+        "weight": 8
+      }
+    },
     "monsters": [
       {
         "aggressive": "Yes",
@@ -95045,76 +96116,60 @@
     ],
     "masters": {
       "chaeldar": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 130,
         "min": 70,
-        "raw": "70-130",
-        "weight": null
+        "weight": 11
       },
       "duradel": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 200,
         "min": 130,
-        "raw": "130-200",
-        "weight": null
+        "weight": 9
       },
       "konar": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 170,
         "min": 120,
-        "raw": "120-170",
-        "weight": null
+        "weight": 9
       },
       "mazchna": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 50,
         "min": 30,
-        "raw": "30-50",
-        "weight": null
+        "weight": 6
       },
       "nieve": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 185,
         "min": 120,
-        "raw": "120-185",
-        "weight": null
+        "weight": 9
       },
       "spria": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 30,
         "min": 15,
-        "raw": "15-30",
-        "weight": null
+        "weight": 6
       },
       "turael": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 30,
         "min": 15,
-        "raw": "15-30",
-        "weight": null
+        "weight": 6
       },
       "vannaka": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 90,
         "min": 40,
-        "raw": "40-90",
-        "weight": null
+        "weight": 7
       }
     },
     "monsters": [
@@ -95887,7 +96942,15 @@
         "y": 5213
       }
     ],
-    "masters": {},
+    "masters": {
+      "mazchna": {
+        "extMax": null,
+        "extMin": null,
+        "max": 50,
+        "min": 30,
+        "weight": 6
+      }
+    },
     "monsters": [
       {
         "aggressive": "No",
@@ -97622,7 +98685,50 @@
         "y": 9196
       }
     ],
-    "masters": {},
+    "masters": {
+      "chaeldar": {
+        "extMax": null,
+        "extMin": null,
+        "max": 130,
+        "min": 70,
+        "weight": 12
+      },
+      "duradel": {
+        "extMax": null,
+        "extMin": null,
+        "max": 200,
+        "min": 130,
+        "weight": 4
+      },
+      "konar": {
+        "extMax": null,
+        "extMin": null,
+        "max": 170,
+        "min": 120,
+        "weight": 3
+      },
+      "mortimer": {
+        "extMax": null,
+        "extMin": null,
+        "max": 60,
+        "min": 40,
+        "weight": 10
+      },
+      "nieve": {
+        "extMax": null,
+        "extMin": null,
+        "max": 185,
+        "min": 120,
+        "weight": 3
+      },
+      "vannaka": {
+        "extMax": null,
+        "extMin": null,
+        "max": 90,
+        "min": 40,
+        "weight": 7
+      }
+    },
     "monsters": [
       {
         "aggressive": "Yes",
@@ -97870,7 +98976,15 @@
         "y": 3825
       }
     ],
-    "masters": {},
+    "masters": {
+      "krystilia": {
+        "extMax": null,
+        "extMin": null,
+        "max": 60,
+        "min": 35,
+        "weight": 3
+      }
+    },
     "monsters": [
       {
         "aggressive": "Yes",
@@ -99499,31 +100613,25 @@
     ],
     "masters": {
       "chaeldar": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 130,
         "min": 70,
-        "raw": "70-130",
-        "weight": null
+        "weight": 9
       },
       "krystilia": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 120,
         "min": 80,
-        "raw": "80-120",
-        "weight": null
+        "weight": 6
       },
       "vannaka": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 90,
         "min": 40,
-        "raw": "40-90",
-        "weight": null
+        "weight": 7
       }
     },
     "monsters": [
@@ -100508,22 +101616,18 @@
     ],
     "masters": {
       "chaeldar": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 100,
         "min": 50,
-        "raw": "50-100",
-        "weight": null
+        "weight": 4
       },
       "konar": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 120,
         "min": 55,
-        "raw": "55-120",
-        "weight": null
+        "weight": 2
       }
     },
     "monsters": [
@@ -102306,40 +103410,32 @@
     ],
     "masters": {
       "chaeldar": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 90,
         "min": 50,
-        "raw": "50-90",
-        "weight": null
+        "weight": 8
       },
       "duradel": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 210,
         "min": 130,
-        "raw": "130-210",
-        "weight": null
+        "weight": 10
       },
       "konar": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 110,
         "min": 90,
-        "raw": "90-110",
-        "weight": null
+        "weight": 8
       },
       "nieve": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 120,
         "min": 90,
-        "raw": "90-120",
-        "weight": null
+        "weight": 8
       }
     },
     "monsters": [
@@ -103393,31 +104489,25 @@
     ],
     "masters": {
       "mazchna": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 50,
         "min": 30,
-        "raw": "30-50",
-        "weight": null
+        "weight": 8
       },
       "spria": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 30,
         "min": 15,
-        "raw": "15-30",
-        "weight": null
+        "weight": 8
       },
       "turael": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 30,
         "min": 15,
-        "raw": "15-30",
-        "weight": null
+        "weight": 8
       }
     },
     "monsters": [
@@ -104339,7 +105429,15 @@
         "y": 9785
       }
     ],
-    "masters": {},
+    "masters": {
+      "krystilia": {
+        "extMax": null,
+        "extMin": null,
+        "max": 125,
+        "min": 75,
+        "weight": 7
+      }
+    },
     "monsters": [
       {
         "aggressive": "Yes",
@@ -104566,7 +105664,15 @@
         "y": 3593
       }
     ],
-    "masters": {},
+    "masters": {
+      "krystilia": {
+        "extMax": null,
+        "extMin": null,
+        "max": 125,
+        "min": 75,
+        "weight": 6
+      }
+    },
     "monsters": [
       {
         "aggressive": "Yes",
@@ -105600,31 +106706,25 @@
     ],
     "masters": {
       "duradel": {
-        "alternatives": [],
         "extMax": 200,
         "extMin": 150,
         "max": 45,
         "min": 35,
-        "raw": "35-45 (150-200)",
-        "weight": null
+        "weight": 14
       },
       "konar": {
-        "alternatives": [],
         "extMax": 200,
         "extMin": 150,
         "max": 40,
         "min": 30,
-        "raw": "30-40 (150-200)",
-        "weight": null
+        "weight": 15
       },
       "nieve": {
-        "alternatives": [],
         "extMax": 200,
         "extMin": 150,
         "max": 40,
         "min": 30,
-        "raw": "30-40 (150-200)",
-        "weight": null
+        "weight": 12
       }
     },
     "monsters": [
@@ -106519,7 +107619,22 @@
         "y": 5213
       }
     ],
-    "masters": {},
+    "masters": {
+      "spria": {
+        "extMax": null,
+        "extMin": null,
+        "max": 20,
+        "min": 10,
+        "weight": 7
+      },
+      "turael": {
+        "extMax": null,
+        "extMin": null,
+        "max": 20,
+        "min": 10,
+        "weight": 7
+      }
+    },
     "monsters": [
       {
         "aggressive": "No",
@@ -107125,7 +108240,22 @@
         "y": 3117
       }
     ],
-    "masters": {},
+    "masters": {
+      "mazchna": {
+        "extMax": null,
+        "extMin": null,
+        "max": 50,
+        "min": 30,
+        "weight": 8
+      },
+      "vannaka": {
+        "extMax": null,
+        "extMin": null,
+        "max": 90,
+        "min": 40,
+        "weight": 7
+      }
+    },
     "monsters": [
       {
         "aggressive": "Yes",
@@ -107456,13 +108586,11 @@
     ],
     "masters": {
       "vannaka": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 50,
-        "min": 39,
-        "raw": "39-50",
-        "weight": null
+        "min": 40,
+        "weight": 7
       }
     },
     "monsters": [
@@ -113585,22 +114713,18 @@
     ],
     "masters": {
       "spria": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 30,
         "min": 15,
-        "raw": "15-30",
-        "weight": null
+        "weight": 6
       },
       "turael": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 30,
         "min": 15,
-        "raw": "15-30",
-        "weight": null
+        "weight": 6
       }
     },
     "monsters": [
@@ -116261,22 +117385,18 @@
     ],
     "masters": {
       "krystilia": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 150,
         "min": 100,
-        "raw": "100-150",
-        "weight": null
+        "weight": 4
       },
       "vannaka": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 90,
         "min": 40,
-        "raw": "40-90",
-        "weight": null
+        "weight": 7
       }
     },
     "monsters": [
@@ -116528,6 +117648,786 @@
       "Slayer task/Moss giants"
     ],
     "xpPerKill": 60
+  },
+  {
+    "alternatives": [
+      "Ancient Zygomite (Fossil Island, Stalker Den)"
+    ],
+    "bossTask": false,
+    "combatAchievements": [],
+    "curatedFile": "batch13.json",
+    "enum": "MUTATED_ZYGOMITES",
+    "gearPage": null,
+    "locations": [
+      {
+        "access": {
+          "groups": [
+            {
+              "any": [
+                {
+                  "name": "Lost City",
+                  "quest": "LOST_CITY",
+                  "state": "FINISHED",
+                  "type": "quest"
+                }
+              ],
+              "manual": false,
+              "text": "Lost City"
+            }
+          ]
+        },
+        "annotations": [],
+        "annotationsRaw": [],
+        "cannon": true,
+        "coordsMissing": false,
+        "curated": true,
+        "curatedName": "Zanaris",
+        "displayName": "Zanaris",
+        "dropversions": [
+          "Level 74",
+          "Level 86"
+        ],
+        "id": "zanaris-p0",
+        "konarAssignable": true,
+        "levels": [
+          74,
+          86
+        ],
+        "link": "Zanaris",
+        "mapID": -1,
+        "members": "Yes",
+        "monsters": [
+          "Zygomite"
+        ],
+        "multi": false,
+        "name": "Zanaris",
+        "notes": "Two groups of five: east of the furnace (level 74 and 86) and near the Cosmic Altar, where they can be trapped behind a pillar and safespotted from near the mysterious ruins.",
+        "pages": [
+          "Zygomite"
+        ],
+        "plane": 0,
+        "rank": 1,
+        "requirements": [
+          "Lost City"
+        ],
+        "source": "locline",
+        "spawnCount": 10,
+        "spawns": [
+          [
+            2412,
+            4470
+          ],
+          [
+            2414,
+            4467
+          ],
+          [
+            2415,
+            4475
+          ],
+          [
+            2419,
+            4467
+          ],
+          [
+            2419,
+            4474
+          ],
+          [
+            2412,
+            4370
+          ],
+          [
+            2416,
+            4376
+          ],
+          [
+            2419,
+            4374
+          ],
+          [
+            2420,
+            4377
+          ],
+          [
+            2421,
+            4370
+          ]
+        ],
+        "spawnsByMonster": {
+          "Zygomite": [
+            [
+              2412,
+              4470
+            ],
+            [
+              2414,
+              4467
+            ],
+            [
+              2415,
+              4475
+            ],
+            [
+              2419,
+              4467
+            ],
+            [
+              2419,
+              4474
+            ],
+            [
+              2412,
+              4370
+            ],
+            [
+              2416,
+              4376
+            ],
+            [
+              2419,
+              4374
+            ],
+            [
+              2420,
+              4377
+            ],
+            [
+              2421,
+              4370
+            ]
+          ]
+        },
+        "wilderness": false,
+        "wildernessLevelMax": null,
+        "wildernessLevelMin": null,
+        "x": 2417,
+        "y": 4422
+      },
+      {
+        "access": {
+          "groups": [
+            {
+              "any": [
+                {
+                  "name": "Bone Voyage",
+                  "quest": "BONE_VOYAGE",
+                  "state": "FINISHED",
+                  "type": "quest"
+                }
+              ],
+              "manual": false,
+              "text": "Bone Voyage"
+            }
+          ]
+        },
+        "annotations": [],
+        "annotationsRaw": [],
+        "cannon": true,
+        "coordsMissing": false,
+        "curated": true,
+        "curatedName": "Fossil Island",
+        "displayName": "Fossil Island",
+        "dropversions": [],
+        "id": "fossil-island-p0",
+        "konarAssignable": true,
+        "levels": [
+          109
+        ],
+        "link": "Fossil Island",
+        "mapID": -1,
+        "members": "Yes",
+        "monsters": [
+          "Ancient Zygomite"
+        ],
+        "multi": false,
+        "name": "Fossil Island",
+        "notes": "Ancient zygomites (level 109). Konar's Fossil Island assignment can only be done here.",
+        "pages": [
+          "Ancient Zygomite"
+        ],
+        "plane": 0,
+        "rank": 2,
+        "requirements": [
+          "Bone Voyage"
+        ],
+        "source": "locline",
+        "spawnCount": 27,
+        "spawns": [
+          [
+            3680,
+            3825
+          ],
+          [
+            3680,
+            3835
+          ],
+          [
+            3686,
+            3823
+          ],
+          [
+            3690,
+            3831
+          ],
+          [
+            3692,
+            3816
+          ],
+          [
+            3692,
+            3838
+          ],
+          [
+            3693,
+            3823
+          ],
+          [
+            3673,
+            3858
+          ],
+          [
+            3674,
+            3878
+          ],
+          [
+            3677,
+            3850
+          ],
+          [
+            3678,
+            3846
+          ],
+          [
+            3678,
+            3867
+          ],
+          [
+            3679,
+            3857
+          ],
+          [
+            3682,
+            3848
+          ],
+          [
+            3685,
+            3858
+          ],
+          [
+            3685,
+            3867
+          ],
+          [
+            3685,
+            3890
+          ],
+          [
+            3689,
+            3845
+          ],
+          [
+            3689,
+            3857
+          ],
+          [
+            3692,
+            3868
+          ],
+          [
+            3693,
+            3847
+          ],
+          [
+            3694,
+            3853
+          ],
+          [
+            3696,
+            3859
+          ],
+          [
+            3697,
+            3864
+          ],
+          [
+            3697,
+            3890
+          ],
+          [
+            3698,
+            3846
+          ],
+          [
+            3703,
+            3872
+          ]
+        ],
+        "spawnsByMonster": {
+          "Ancient Zygomite": [
+            [
+              3680,
+              3825
+            ],
+            [
+              3680,
+              3835
+            ],
+            [
+              3686,
+              3823
+            ],
+            [
+              3690,
+              3831
+            ],
+            [
+              3692,
+              3816
+            ],
+            [
+              3692,
+              3838
+            ],
+            [
+              3693,
+              3823
+            ],
+            [
+              3673,
+              3858
+            ],
+            [
+              3674,
+              3878
+            ],
+            [
+              3677,
+              3850
+            ],
+            [
+              3678,
+              3846
+            ],
+            [
+              3678,
+              3867
+            ],
+            [
+              3679,
+              3857
+            ],
+            [
+              3682,
+              3848
+            ],
+            [
+              3685,
+              3858
+            ],
+            [
+              3685,
+              3867
+            ],
+            [
+              3685,
+              3890
+            ],
+            [
+              3689,
+              3845
+            ],
+            [
+              3689,
+              3857
+            ],
+            [
+              3692,
+              3868
+            ],
+            [
+              3693,
+              3847
+            ],
+            [
+              3694,
+              3853
+            ],
+            [
+              3696,
+              3859
+            ],
+            [
+              3697,
+              3864
+            ],
+            [
+              3697,
+              3890
+            ],
+            [
+              3698,
+              3846
+            ],
+            [
+              3703,
+              3872
+            ]
+          ]
+        },
+        "wilderness": false,
+        "wildernessLevelMax": null,
+        "wildernessLevelMin": null,
+        "x": 3687,
+        "y": 3852
+      },
+      {
+        "access": {
+          "groups": [
+            {
+              "any": [
+                {
+                  "name": "Shadows of Custodia",
+                  "quest": "SHADOWS_OF_CUSTODIA",
+                  "state": "FINISHED",
+                  "type": "quest"
+                }
+              ],
+              "manual": false,
+              "text": "Shadows of Custodia"
+            }
+          ]
+        },
+        "annotations": [],
+        "annotationsRaw": [],
+        "cannon": true,
+        "coordsMissing": false,
+        "curated": true,
+        "curatedName": "Stalker Den",
+        "displayName": "Stalker Den",
+        "dropversions": [],
+        "id": "stalker-den-p0",
+        "konarAssignable": false,
+        "levels": [
+          109
+        ],
+        "link": "Stalker Den",
+        "mapID": -1,
+        "members": "Yes",
+        "monsters": [
+          "Ancient Zygomite"
+        ],
+        "multi": true,
+        "name": "Stalker Den",
+        "notes": "Ancient zygomites (level 109); only these drop grimy kwuarm.",
+        "pages": [
+          "Ancient Zygomite"
+        ],
+        "plane": 0,
+        "rank": 3,
+        "requirements": [
+          "Shadows of Custodia"
+        ],
+        "source": "locline",
+        "spawnCount": 9,
+        "spawns": [
+          [
+            1318,
+            9775
+          ],
+          [
+            1321,
+            9780
+          ],
+          [
+            1313,
+            9778
+          ],
+          [
+            1298,
+            9782
+          ],
+          [
+            1291,
+            9785
+          ],
+          [
+            1289,
+            9791
+          ],
+          [
+            1300,
+            9792
+          ],
+          [
+            1311,
+            9790
+          ],
+          [
+            1315,
+            9795
+          ]
+        ],
+        "spawnsByMonster": {
+          "Ancient Zygomite": [
+            [
+              1318,
+              9775
+            ],
+            [
+              1321,
+              9780
+            ],
+            [
+              1313,
+              9778
+            ],
+            [
+              1298,
+              9782
+            ],
+            [
+              1291,
+              9785
+            ],
+            [
+              1289,
+              9791
+            ],
+            [
+              1300,
+              9792
+            ],
+            [
+              1311,
+              9790
+            ],
+            [
+              1315,
+              9795
+            ]
+          ]
+        },
+        "wilderness": false,
+        "wildernessLevelMax": null,
+        "wildernessLevelMin": null,
+        "x": 1306,
+        "y": 9785
+      }
+    ],
+    "masters": {
+      "chaeldar": {
+        "extMax": null,
+        "extMin": null,
+        "max": 15,
+        "min": 8,
+        "weight": 7
+      },
+      "duradel": {
+        "extMax": null,
+        "extMin": null,
+        "max": 30,
+        "min": 20,
+        "weight": 2
+      },
+      "konar": {
+        "extMax": null,
+        "extMin": null,
+        "max": 25,
+        "min": 10,
+        "weight": 2
+      },
+      "nieve": {
+        "extMax": null,
+        "extMin": null,
+        "max": 25,
+        "min": 10,
+        "weight": 2
+      }
+    },
+    "monsters": [
+      {
+        "aggressive": "No",
+        "assignedBy": [
+          "chaeldar",
+          "konar",
+          "nieve",
+          "duradel"
+        ],
+        "attackSpeed": 4,
+        "attackStyles": [
+          "Magical melee",
+          "Magical ranged"
+        ],
+        "attributes": null,
+        "combat": 74,
+        "combatStats": {
+          "attributes": [
+            "none"
+          ],
+          "crush": 10,
+          "defenceLevel": 65,
+          "hitpoints": 65,
+          "magic": 20,
+          "magicLevel": 65,
+          "rangedHeavy": 20,
+          "rangedLight": 20,
+          "rangedStandard": 20,
+          "size": 1,
+          "slash": 10,
+          "stab": 10,
+          "version": null,
+          "weakness": "fire",
+          "weaknessPercent": 40
+        },
+        "hasInfobox": true,
+        "hitpoints": 65,
+        "immuneCannon": "No",
+        "immuneThrall": "no",
+        "locLines": 2,
+        "mapLocations": 0,
+        "maxHit": "7 (Melee), 6 (Ranged)",
+        "name": "Zygomite",
+        "npcIds": [
+          537
+        ],
+        "page": "Zygomite",
+        "poisonous": "No",
+        "redirected": true,
+        "size": 1,
+        "slayerCategory": "Mutated Zygomites",
+        "slayerLevel": 57,
+        "slayerXp": 65,
+        "versions": [],
+        "weakness": null
+      },
+      {
+        "aggressive": "No",
+        "assignedBy": [
+          "chaeldar",
+          "konar",
+          "nieve",
+          "duradel"
+        ],
+        "attackSpeed": 4,
+        "attackStyles": [
+          "Magical melee",
+          "Magical ranged"
+        ],
+        "attributes": null,
+        "combat": 109,
+        "combatStats": {
+          "attributes": [
+            "none"
+          ],
+          "crush": 20,
+          "defenceLevel": 80,
+          "hitpoints": 150,
+          "magic": 30,
+          "magicLevel": 80,
+          "rangedHeavy": 30,
+          "rangedLight": 30,
+          "rangedStandard": 30,
+          "size": 2,
+          "slash": 20,
+          "stab": 20,
+          "version": null,
+          "weakness": "fire",
+          "weaknessPercent": 40
+        },
+        "hasInfobox": true,
+        "hitpoints": 150,
+        "immuneCannon": null,
+        "immuneThrall": null,
+        "locLines": 2,
+        "mapLocations": 0,
+        "maxHit": "9 (melee), 10 (ranged)",
+        "name": "Ancient Zygomite",
+        "npcIds": [
+          7797
+        ],
+        "page": "Ancient Zygomite",
+        "poisonous": "No",
+        "redirected": false,
+        "size": 2,
+        "slayerCategory": "Mutated Zygomites",
+        "slayerLevel": 57,
+        "slayerXp": 154,
+        "versions": [],
+        "weakness": null
+      },
+      {
+        "hasInfobox": false,
+        "locLines": 0,
+        "mapLocations": 0,
+        "page": "Fungi",
+        "redirected": false
+      }
+    ],
+    "recommendedStyle": "Any",
+    "recommendedStyleSource": "curated",
+    "requiredGear": [],
+    "requiredItems": [
+      "Fungicide spray (refilled with fungicide)"
+    ],
+    "requirements": {
+      "combat": 60,
+      "other": "Completion of Lost City",
+      "skills": [
+        {
+          "level": 57,
+          "skill": "Slayer"
+        }
+      ],
+      "slayer": 57
+    },
+    "strategy": [
+      "Zygomites can be assigned to level 60 combat and level 57 slayer by Chaeldar, Konar, Nieve, and Duradel. Zygomites cannot be killed unless a fungicide spray has been used to deliver the final blow.",
+      "Zygomites can be safespotted by trapping them and moving out of their attack range. For instance, in Zanaris near the Cosmic Altar, players may trap them using a pillar and standing back near the mysterious ruins.",
+      "Players can alternatively kill Ancient Zygomites on Fossil Island or in the Stalker Den."
+    ],
+    "summary": "Mutated zygomites need 57 Slayer, 60 combat and Lost City, and are assigned by Chaeldar, Konar, Nieve and Duradel. They hide as fungi in Zanaris until you pick them, and can only be finished with a fungicide spray, which needs refilling with fungicide every ten kills. Ancient zygomites on Fossil Island or in the Stalker Den also count, unless Konar sends you to Zanaris; if she sends you to Fossil Island, only the ancient ones count. Their attacks are magic-based, so dragonhide armour helps, and Protect from Melee is the prayer to use because their melee attacks are more accurate.",
+    "superior": null,
+    "task": "Mutated zygomites",
+    "taskId": 7420,
+    "trainingSummary": {
+      "assignment": "Mutated Zygomites",
+      "cons": "Poor experience rates. Not worth doing unless Slayer points are an issue.",
+      "pros": "Relatively fast task.",
+      "recommendation": "Skip",
+      "xpPerHour": "10,000"
+    },
+    "unlocks": [
+      {
+        "cost": 110,
+        "name": "'Shroom sprayer",
+        "note": "Mutated zygomites are automatically dealt the finishing blow if the player has Fungicide spray & Fungicide."
+      }
+    ],
+    "usefulItems": [
+      "Fungicide (spray refills)",
+      "Reagent pouch (ancient zygomites always drop mort myre fungus)"
+    ],
+    "variantGearPages": {},
+    "wikiMonsterPages": [
+      "Zygomite",
+      "Ancient Zygomite",
+      "Fungi"
+    ],
+    "wikiMonsterPagesTried": [
+      "Mutated zygomite",
+      "Ancient Zygomite",
+      "Zygomite",
+      "Fungi"
+    ],
+    "wikiTaskPage": "Slayer task/Zygomites",
+    "wikiTaskPageKind": "slayer-task",
+    "wikiTaskPageRedirected": false,
+    "wikiTaskPageRequested": "Slayer task/Zygomites",
+    "wikiTaskPageTried": [
+      "Slayer task/Zygomites"
+    ],
+    "xpPerKill": 65
   },
   {
     "alternatives": [
@@ -117488,74 +119388,53 @@
     ],
     "masters": {
       "chaeldar": {
-        "alternatives": [],
         "extMax": 250,
         "extMin": 200,
         "max": 130,
         "min": 70,
-        "raw": "70-130 (200-250)",
-        "weight": null
+        "weight": 12
       },
       "duradel": {
-        "alternatives": [],
         "extMax": 250,
         "extMin": 200,
         "max": 200,
         "min": 130,
-        "raw": "130-200 (200-250)",
-        "weight": null
+        "weight": 9
       },
       "konar": {
-        "alternatives": [],
         "extMax": 250,
         "extMin": 200,
         "max": 110,
         "min": 110,
-        "raw": "110 (200-250)",
-        "weight": null
+        "weight": 7
       },
       "krystilia": {
-        "alternatives": [],
         "extMax": 250,
         "extMin": 200,
         "max": 125,
         "min": 75,
-        "raw": "75-125 (200-250)",
-        "weight": null
+        "weight": 5
       },
       "mortimer": {
-        "alternatives": [
-          {
-            "extMax": 350,
-            "extMin": 250,
-            "max": 300,
-            "min": 200
-          }
-        ],
         "extMax": 250,
         "extMin": 200,
         "max": 200,
         "min": 150,
-        "raw": "150-200 (200-250) <br/> or 200-300 (250-350)",
-        "weight": null
+        "weight": 8
       },
       "nieve": {
-        "alternatives": [],
         "extMax": 250,
         "extMin": 200,
         "max": 170,
         "min": 110,
-        "raw": "110-170 (200-250)",
-        "weight": null
+        "weight": 7
       },
       "vannaka": {
-        "alternatives": [],
         "extMax": 250,
         "extMin": 200,
         "max": 90,
         "min": 40,
-        "raw": "40-90 (200-250)",
-        "weight": null
+        "weight": 5
       }
     },
     "monsters": [
@@ -120542,13 +122421,11 @@
     ],
     "masters": {
       "vannaka": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 90,
         "min": 40,
-        "raw": "40-90",
-        "weight": null
+        "weight": 7
       }
     },
     "monsters": [
@@ -121283,7 +123160,15 @@
         "y": 4424
       }
     ],
-    "masters": {},
+    "masters": {
+      "vannaka": {
+        "extMax": null,
+        "extMin": null,
+        "max": 90,
+        "min": 40,
+        "weight": 8
+      }
+    },
     "monsters": [
       {
         "aggressive": "No",
@@ -122981,13 +124866,11 @@
     ],
     "masters": {
       "krystilia": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 75,
         "min": 62,
-        "raw": "62-75",
-        "weight": null
+        "weight": 3
       }
     },
     "monsters": [
@@ -124220,31 +126103,25 @@
     ],
     "masters": {
       "mazchna": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 50,
         "min": 30,
-        "raw": "30-50",
-        "weight": null
+        "weight": 8
       },
       "mortimer": {
-        "alternatives": [],
-        "extMax": 80,
-        "extMin": 20,
+        "extMax": null,
+        "extMin": null,
         "max": 50,
         "min": 35,
-        "raw": "35-50 (20-80)",
-        "weight": null
+        "weight": 10
       },
       "vannaka": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 90,
         "min": 40,
-        "raw": "40-90",
-        "weight": null
+        "weight": 8
       }
     },
     "monsters": [
@@ -137166,22 +139043,18 @@
     ],
     "masters": {
       "spria": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 30,
         "min": 15,
-        "raw": "15-30",
-        "weight": null
+        "weight": 7
       },
       "turael": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 30,
         "min": 15,
-        "raw": "15-30",
-        "weight": null
+        "weight": 7
       }
     },
     "monsters": [
@@ -138160,31 +140033,25 @@
     ],
     "masters": {
       "duradel": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 65,
         "min": 30,
-        "raw": "30-65",
-        "weight": null
+        "weight": 8
       },
       "konar": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 50,
         "min": 30,
-        "raw": "30-50",
-        "weight": null
+        "weight": 5
       },
       "nieve": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 80,
         "min": 30,
-        "raw": "30-80",
-        "weight": null
+        "weight": 5
       }
     },
     "monsters": [
@@ -138807,7 +140674,15 @@
         "y": 10158
       }
     ],
-    "masters": {},
+    "masters": {
+      "krystilia": {
+        "extMax": 150,
+        "extMin": 100,
+        "max": 100,
+        "min": 40,
+        "weight": 5
+      }
+    },
     "monsters": [
       {
         "aggressive": "Yes",
@@ -139565,6 +141440,664 @@
     "alternatives": [],
     "bossTask": false,
     "combatAchievements": [],
+    "curatedFile": "batch13.json",
+    "enum": "ROCKSLUGS",
+    "gearPage": null,
+    "locations": [
+      {
+        "access": {
+          "groups": []
+        },
+        "annotations": [
+          "fairy ring AJR"
+        ],
+        "annotationsRaw": [
+          "{{Fairycode|ajr}}"
+        ],
+        "cannon": false,
+        "coordsMissing": false,
+        "curated": true,
+        "curatedName": "Fremennik Slayer Dungeon",
+        "displayName": "Fremennik Slayer Dungeon (fairy ring AJR)",
+        "dropversions": [],
+        "id": "fremennik-slayer-dungeon-p0",
+        "konarAssignable": false,
+        "levels": [
+          29
+        ],
+        "link": "Fremennik Slayer Dungeon",
+        "mapID": 17,
+        "members": "Yes",
+        "monsters": [
+          "Rockslug"
+        ],
+        "multi": false,
+        "name": "Fremennik Slayer Dungeon",
+        "notes": "Ranked first because it has several spawns and no entry requirement.",
+        "pages": [
+          "Rockslug"
+        ],
+        "plane": 0,
+        "rank": 1,
+        "requirements": [],
+        "source": "locline",
+        "spawnCount": 7,
+        "spawns": [
+          [
+            2793,
+            10016
+          ],
+          [
+            2795,
+            10017
+          ],
+          [
+            2798,
+            10018
+          ],
+          [
+            2800,
+            10020
+          ],
+          [
+            2801,
+            10015
+          ],
+          [
+            2803,
+            10017
+          ],
+          [
+            2804,
+            10019
+          ]
+        ],
+        "spawnsByMonster": {
+          "Rockslug": [
+            [
+              2793,
+              10016
+            ],
+            [
+              2795,
+              10017
+            ],
+            [
+              2798,
+              10018
+            ],
+            [
+              2800,
+              10020
+            ],
+            [
+              2801,
+              10015
+            ],
+            [
+              2803,
+              10017
+            ],
+            [
+              2804,
+              10019
+            ]
+          ]
+        },
+        "wilderness": false,
+        "wildernessLevelMax": null,
+        "wildernessLevelMin": null,
+        "x": 2799,
+        "y": 10017
+      },
+      {
+        "access": {
+          "groups": [
+            {
+              "any": [],
+              "manual": true,
+              "text": "Light source"
+            },
+            {
+              "any": [],
+              "manual": true,
+              "text": "Rope to enter the caves (only needed once)"
+            }
+          ]
+        },
+        "annotations": [],
+        "annotationsRaw": [],
+        "cannon": true,
+        "coordsMissing": false,
+        "curated": true,
+        "curatedName": "Lumbridge Swamp Caves",
+        "displayName": "Lumbridge Swamp Caves",
+        "dropversions": [],
+        "id": "lumbridge-swamp-caves-p0",
+        "konarAssignable": false,
+        "levels": [
+          29
+        ],
+        "link": "Lumbridge Swamp Caves",
+        "mapID": 12,
+        "members": "Yes",
+        "monsters": [
+          "Rockslug"
+        ],
+        "multi": false,
+        "name": "Lumbridge Swamp Caves",
+        "notes": null,
+        "pages": [
+          "Rockslug"
+        ],
+        "plane": 0,
+        "rank": 2,
+        "requirements": [
+          "Light source",
+          "Rope to enter the caves (only needed once)"
+        ],
+        "source": "locline",
+        "spawnCount": 5,
+        "spawns": [
+          [
+            3222,
+            9571
+          ],
+          [
+            3225,
+            9577
+          ],
+          [
+            3225,
+            9583
+          ],
+          [
+            3222,
+            9580
+          ],
+          [
+            3226,
+            9573
+          ]
+        ],
+        "spawnsByMonster": {
+          "Rockslug": [
+            [
+              3222,
+              9571
+            ],
+            [
+              3225,
+              9577
+            ],
+            [
+              3225,
+              9583
+            ],
+            [
+              3222,
+              9580
+            ],
+            [
+              3226,
+              9573
+            ]
+          ]
+        },
+        "wilderness": false,
+        "wildernessLevelMax": null,
+        "wildernessLevelMin": null,
+        "x": 3224,
+        "y": 9577
+      },
+      {
+        "access": {
+          "groups": [
+            {
+              "any": [
+                {
+                  "name": "The Final Dawn",
+                  "quest": "THE_FINAL_DAWN",
+                  "state": "FINISHED",
+                  "type": "quest"
+                }
+              ],
+              "manual": false,
+              "text": "The Final Dawn"
+            }
+          ]
+        },
+        "annotations": [],
+        "annotationsRaw": [],
+        "cannon": false,
+        "coordsMissing": false,
+        "curated": true,
+        "curatedName": "Tonali Cavern",
+        "displayName": "Tonali Cavern",
+        "dropversions": [],
+        "id": "tonali-cavern-p1",
+        "konarAssignable": false,
+        "levels": [
+          29
+        ],
+        "link": "Tonali Cavern",
+        "mapID": -1,
+        "members": "Yes",
+        "monsters": [
+          "Rockslug"
+        ],
+        "multi": "unknown",
+        "name": "Tonali Cavern",
+        "notes": null,
+        "pages": [
+          "Rockslug"
+        ],
+        "plane": 1,
+        "rank": 3,
+        "requirements": [
+          "The Final Dawn"
+        ],
+        "source": "locline",
+        "spawnCount": 6,
+        "spawns": [
+          [
+            1321,
+            9382
+          ],
+          [
+            1323,
+            9382
+          ],
+          [
+            1322,
+            9380
+          ],
+          [
+            1324,
+            9379
+          ],
+          [
+            1322,
+            9377
+          ],
+          [
+            1323,
+            9377
+          ]
+        ],
+        "spawnsByMonster": {
+          "Rockslug": [
+            [
+              1321,
+              9382
+            ],
+            [
+              1323,
+              9382
+            ],
+            [
+              1322,
+              9380
+            ],
+            [
+              1324,
+              9379
+            ],
+            [
+              1322,
+              9377
+            ],
+            [
+              1323,
+              9377
+            ]
+          ]
+        },
+        "wilderness": false,
+        "wildernessLevelMax": null,
+        "wildernessLevelMin": null,
+        "x": 1322,
+        "y": 9380
+      },
+      {
+        "access": {
+          "groups": [
+            {
+              "any": [
+                {
+                  "level": 73,
+                  "skill": "SAILING",
+                  "type": "skill"
+                }
+              ],
+              "manual": false,
+              "text": "73 Sailing and a boat with an adamant keel or better to reach Ynysdail"
+            },
+            {
+              "any": [],
+              "manual": true,
+              "text": "73 Sailing and a boat with an adamant keel or better to reach Ynysdail"
+            }
+          ]
+        },
+        "annotations": [],
+        "annotationsRaw": [],
+        "cannon": false,
+        "coordsMissing": false,
+        "curated": true,
+        "curatedName": "Ynysdail Cavern",
+        "displayName": "Ynysdail Cavern",
+        "dropversions": [],
+        "id": "ynysdail-cavern-p0",
+        "konarAssignable": false,
+        "levels": [
+          29
+        ],
+        "link": "Ynysdail Cavern",
+        "mapID": -1,
+        "members": "Yes",
+        "monsters": [
+          "Rockslug"
+        ],
+        "multi": false,
+        "name": "Ynysdail Cavern",
+        "notes": null,
+        "pages": [
+          "Rockslug"
+        ],
+        "plane": 0,
+        "rank": 4,
+        "requirements": [
+          "73 Sailing and a boat with an adamant keel or better to reach Ynysdail"
+        ],
+        "source": "locline",
+        "spawnCount": 8,
+        "spawns": [
+          [
+            2261,
+            9901
+          ],
+          [
+            2261,
+            9908
+          ],
+          [
+            2262,
+            9905
+          ],
+          [
+            2263,
+            9913
+          ],
+          [
+            2264,
+            9902
+          ],
+          [
+            2268,
+            9901
+          ],
+          [
+            2269,
+            9913
+          ],
+          [
+            2271,
+            9904
+          ]
+        ],
+        "spawnsByMonster": {
+          "Rockslug": [
+            [
+              2261,
+              9901
+            ],
+            [
+              2261,
+              9908
+            ],
+            [
+              2262,
+              9905
+            ],
+            [
+              2263,
+              9913
+            ],
+            [
+              2264,
+              9902
+            ],
+            [
+              2268,
+              9901
+            ],
+            [
+              2269,
+              9913
+            ],
+            [
+              2271,
+              9904
+            ]
+          ]
+        },
+        "wilderness": false,
+        "wildernessLevelMax": null,
+        "wildernessLevelMin": null,
+        "x": 2265,
+        "y": 9906
+      },
+      {
+        "access": {
+          "groups": [
+            {
+              "any": [
+                {
+                  "name": "Death to the Dorgeshuun",
+                  "quest": "DEATH_TO_THE_DORGESHUUN",
+                  "state": "FINISHED",
+                  "type": "quest"
+                }
+              ],
+              "manual": false,
+              "text": "Death to the Dorgeshuun"
+            },
+            {
+              "any": [],
+              "manual": true,
+              "text": "Light source"
+            }
+          ]
+        },
+        "annotations": [
+          "fairy ring AJQ"
+        ],
+        "annotationsRaw": [
+          "{{Fairycode|ajq}}"
+        ],
+        "cannon": true,
+        "coordsMissing": false,
+        "curated": true,
+        "curatedName": "Dorgesh-Kaan South Dungeon",
+        "displayName": "Dorgesh-Kaan South Dungeon (fairy ring AJQ)",
+        "dropversions": [],
+        "id": "dorgesh-kaan-south-dungeon-p0",
+        "konarAssignable": false,
+        "levels": [
+          29
+        ],
+        "link": "Dorgesh-Kaan South Dungeon",
+        "mapID": 10045,
+        "members": "Yes",
+        "monsters": [
+          "Rockslug"
+        ],
+        "multi": false,
+        "name": "Dorgesh-Kaan South Dungeon",
+        "notes": "Only one rockslug spawns here.",
+        "pages": [
+          "Rockslug"
+        ],
+        "plane": 0,
+        "rank": 5,
+        "requirements": [
+          "Death to the Dorgeshuun",
+          "Light source"
+        ],
+        "source": "locline",
+        "spawnCount": 1,
+        "spawns": [
+          [
+            2729,
+            5223
+          ]
+        ],
+        "spawnsByMonster": {
+          "Rockslug": [
+            [
+              2729,
+              5223
+            ]
+          ]
+        },
+        "wilderness": false,
+        "wildernessLevelMax": null,
+        "wildernessLevelMin": null,
+        "x": 2729,
+        "y": 5223
+      }
+    ],
+    "masters": {
+      "mazchna": {
+        "extMax": null,
+        "extMin": null,
+        "max": 50,
+        "min": 30,
+        "weight": 8
+      },
+      "mortimer": {
+        "extMax": null,
+        "extMin": null,
+        "max": 50,
+        "min": 35,
+        "weight": 10
+      }
+    },
+    "monsters": [
+      {
+        "aggressive": "No",
+        "assignedBy": [
+          "mazchna",
+          "mortimer"
+        ],
+        "attackSpeed": 4,
+        "attackStyles": [
+          "Crush"
+        ],
+        "attributes": null,
+        "combat": 29,
+        "combatStats": {
+          "attributes": [
+            "none"
+          ],
+          "crush": 0,
+          "defenceLevel": 27,
+          "hitpoints": 27,
+          "magic": 0,
+          "magicLevel": 1,
+          "rangedHeavy": 0,
+          "rangedLight": 0,
+          "rangedStandard": 0,
+          "size": 1,
+          "slash": 0,
+          "stab": 0,
+          "version": "Adult",
+          "weakness": "earth",
+          "weaknessPercent": 25
+        },
+        "hasInfobox": true,
+        "hitpoints": 27,
+        "immuneCannon": "No",
+        "immuneThrall": "No",
+        "locLines": 5,
+        "mapLocations": 0,
+        "maxHit": "4",
+        "name": "Rockslug",
+        "npcIds": [
+          421,
+          14423
+        ],
+        "npcIdsByVersion": {
+          "Adult": [
+            421,
+            14423
+          ],
+          "Baby": [
+            422
+          ]
+        },
+        "page": "Rockslug",
+        "poisonous": "No",
+        "redirected": false,
+        "size": 1,
+        "slayerCategory": "Rockslugs",
+        "slayerLevel": 20,
+        "slayerXp": 27,
+        "versions": [
+          "Adult",
+          "Baby"
+        ],
+        "weakness": null
+      }
+    ],
+    "recommendedStyle": "Any",
+    "recommendedStyleSource": "curated",
+    "requiredGear": [],
+    "requiredItems": [
+      "Bag of salt or Brine sabre"
+    ],
+    "requirements": {
+      "combat": null,
+      "other": null,
+      "skills": [],
+      "slayer": 20
+    },
+    "strategy": [
+      "Rockslugs are Slayer monsters that require level 20 Slayer to kill. A bag of salt must be used on it when it has 4 or less Hitpoints to finish it off. If used on a rockslug with 5 or more Hitpoints, the bag will be consumed but have no effect. If a rockslug's health is reduced to 1 but a bag of salt is not used on it, the rockslug will stop retaliating and wander off.",
+      "Players can buy the \"Slug salter\" perk from a Slayer Master for 10 Slayer points, which will automatically salt the rockslug when it falls below 4 Hitpoints, provided that the player has a bag of salt in their inventory. Alternatively, a brine sabre can be used to kill them without the need for bags of salt.",
+      "They are rarely killed due to their mediocre drops, which consists of low level ores and seeds. They may rarely drop the mystic gloves (light)."
+    ],
+    "summary": "Rockslugs need 20 Slayer and are assigned by Mazchna and Mortimer. Use a bag of salt on one at 4 Hitpoints or less to finish it; at 5 or more the salt is wasted. The Slug salter unlock (10 points) does this automatically with bags of salt in your inventory, and a brine sabre kills them without salt. Their drops are poor (low-level ores and seeds, rarely mystic gloves (light)).",
+    "superior": "Giant rockslug",
+    "task": "Rockslugs",
+    "taskId": null,
+    "unlocks": [],
+    "usefulItems": [
+      "Slug salter unlock (10 points)"
+    ],
+    "variantGearPages": {},
+    "wikiMonsterPages": [
+      "Rockslug"
+    ],
+    "wikiMonsterPagesTried": [
+      "Rockslug"
+    ],
+    "wikiTaskPage": "Rockslug",
+    "wikiTaskPageKind": "monster",
+    "wikiTaskPageRedirected": true,
+    "wikiTaskPageRequested": "Rockslugs",
+    "wikiTaskPageTried": [
+      "Slayer task/Rockslugs",
+      "Slayer task/Rockslug",
+      "Rockslugs"
+    ],
+    "xpPerKill": 27
+  },
+  {
+    "alternatives": [],
+    "bossTask": false,
+    "combatAchievements": [],
     "curatedFile": "batch9.json",
     "enum": "ROGUES",
     "gearPage": null,
@@ -140112,7 +142645,15 @@
         "y": 3936
       }
     ],
-    "masters": {},
+    "masters": {
+      "krystilia": {
+        "extMax": null,
+        "extMin": null,
+        "max": 125,
+        "min": 75,
+        "weight": 5
+      }
+    },
     "monsters": [
       {
         "aggressive": "No",
@@ -141509,13 +144050,11 @@
     ],
     "masters": {
       "nieve": {
-        "alternatives": [],
-        "extMax": 170,
+        "extMax": 165,
         "extMin": 130,
         "max": 60,
         "min": 30,
-        "raw": "30-60, (130-170)",
-        "weight": null
+        "weight": 4
       }
     },
     "monsters": [
@@ -144716,40 +147255,32 @@
     ],
     "masters": {
       "krystilia": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 100,
         "min": 65,
-        "raw": "65-100",
-        "weight": null
+        "weight": 6
       },
       "mazchna": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 50,
         "min": 30,
-        "raw": "30-50",
-        "weight": null
+        "weight": 7
       },
       "spria": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 30,
         "min": 15,
-        "raw": "15-30",
-        "weight": null
+        "weight": 7
       },
       "turael": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 30,
         "min": 15,
-        "raw": "15-30",
-        "weight": null
+        "weight": 7
       }
     },
     "monsters": [
@@ -145299,13 +147830,11 @@
     ],
     "masters": {
       "vannaka": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 90,
         "min": 40,
-        "raw": "40-90",
-        "weight": null
+        "weight": 6
       }
     },
     "monsters": [
@@ -146720,22 +149249,18 @@
     ],
     "masters": {
       "mazchna": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 70,
         "min": 30,
-        "raw": "30-70",
-        "weight": null
+        "weight": 8
       },
       "vannaka": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 90,
         "min": 40,
-        "raw": "40-90",
-        "weight": null
+        "weight": 8
       }
     },
     "monsters": [
@@ -147506,7 +150031,22 @@
         "y": 9768
       }
     ],
-    "masters": {},
+    "masters": {
+      "chaeldar": {
+        "extMax": null,
+        "extMin": null,
+        "max": 130,
+        "min": 70,
+        "weight": 8
+      },
+      "vannaka": {
+        "extMax": null,
+        "extMin": null,
+        "max": 80,
+        "min": 30,
+        "weight": 8
+      }
+    },
     "monsters": [
       {
         "aggressive": "Yes",
@@ -148134,7 +150674,36 @@
         "y": 9561
       }
     ],
-    "masters": {},
+    "masters": {
+      "chaeldar": {
+        "extMax": 70,
+        "extMin": 50,
+        "max": 20,
+        "min": 10,
+        "weight": 7
+      },
+      "duradel": {
+        "extMax": 70,
+        "extMin": 50,
+        "max": 40,
+        "min": 20,
+        "weight": 7
+      },
+      "konar": {
+        "extMax": 70,
+        "extMin": 50,
+        "max": 12,
+        "min": 5,
+        "weight": 5
+      },
+      "nieve": {
+        "extMax": 70,
+        "extMin": 50,
+        "max": 15,
+        "min": 5,
+        "weight": 5
+      }
+    },
     "monsters": [
       {
         "aggressive": "Yes",
@@ -152366,40 +154935,32 @@
     ],
     "masters": {
       "krystilia": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 100,
         "min": 65,
-        "raw": "65-100",
-        "weight": null
+        "weight": 5
       },
       "mazchna": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 50,
         "min": 30,
-        "raw": "30-50",
-        "weight": null
+        "weight": 7
       },
       "spria": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 30,
         "min": 15,
-        "raw": "15-30",
-        "weight": null
+        "weight": 7
       },
       "turael": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 30,
         "min": 15,
-        "raw": "15-30",
-        "weight": null
+        "weight": 7
       }
     },
     "monsters": [
@@ -153335,40 +155896,32 @@
     ],
     "masters": {
       "duradel": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 200,
         "min": 130,
-        "raw": "130-200",
-        "weight": null
+        "weight": 9
       },
       "konar": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 170,
         "min": 120,
-        "raw": "120-170",
-        "weight": null
+        "weight": 7
       },
       "mortimer": {
-        "alternatives": [],
-        "extMax": 220,
-        "extMin": 130,
+        "extMax": null,
+        "extMin": null,
         "max": 120,
         "min": 80,
-        "raw": "80-120 (130-220)",
-        "weight": null
+        "weight": 8
       },
       "nieve": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 185,
         "min": 120,
-        "raw": "120-185",
-        "weight": null
+        "weight": 7
       }
     },
     "monsters": [
@@ -153638,7 +156191,15 @@
         "y": 9686
       }
     ],
-    "masters": {},
+    "masters": {
+      "spria": {
+        "extMax": null,
+        "extMin": null,
+        "max": 25,
+        "min": 15,
+        "weight": 6
+      }
+    },
     "monsters": [
       {
         "aggressive": "Yes",
@@ -160572,31 +163133,25 @@
     ],
     "masters": {
       "krystilia": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 100,
         "min": 65,
-        "raw": "65-100",
-        "weight": null
+        "weight": 6
       },
       "spria": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 30,
         "min": 15,
-        "raw": "15-30",
-        "weight": null
+        "weight": 6
       },
       "turael": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 30,
         "min": 15,
-        "raw": "15-30",
-        "weight": null
+        "weight": 6
       }
     },
     "monsters": [
@@ -162959,49 +165514,39 @@
     ],
     "masters": {
       "chaeldar": {
-        "alternatives": [],
-        "extMax": null,
-        "extMin": null,
+        "extMax": 250,
+        "extMin": 181,
         "max": 130,
         "min": 70,
-        "raw": "70-130",
-        "weight": null
+        "weight": 12
       },
       "duradel": {
-        "alternatives": [],
-        "extMax": null,
-        "extMin": null,
+        "extMax": 250,
+        "extMin": 181,
         "max": 200,
         "min": 130,
-        "raw": "130-200",
-        "weight": null
+        "weight": 7
       },
       "krystilia": {
-        "alternatives": [],
-        "extMax": null,
-        "extMin": null,
+        "extMax": 250,
+        "extMin": 181,
         "max": 150,
         "min": 100,
-        "raw": "100-150",
-        "weight": null
+        "weight": 6
       },
       "nieve": {
-        "alternatives": [],
-        "extMax": null,
-        "extMin": null,
+        "extMax": 250,
+        "extMin": 181,
         "max": 185,
         "min": 120,
-        "raw": "120-185",
-        "weight": null
+        "weight": 6
       },
       "vannaka": {
-        "alternatives": [],
-        "extMax": null,
-        "extMin": null,
+        "extMax": 250,
+        "extMin": 181,
         "max": 90,
         "min": 40,
-        "raw": "40-90",
-        "weight": null
+        "weight": 8
       }
     },
     "monsters": [
@@ -163911,22 +166456,18 @@
     ],
     "masters": {
       "duradel": {
-        "alternatives": [],
         "extMax": 250,
-        "extMin": 162,
+        "extMin": 186,
         "max": 90,
         "min": 60,
-        "raw": "60-90 (162-250)",
-        "weight": null
+        "weight": 8
       },
       "nieve": {
-        "alternatives": [],
         "extMax": 250,
         "extMin": 186,
         "max": 185,
         "min": 120,
-        "raw": "120-185 (186-250)",
-        "weight": null
+        "weight": 8
       }
     },
     "monsters": [
@@ -164021,7 +166562,7 @@
     "requiredItems": [],
     "requirements": {
       "combat": 85,
-      "other": "Partial completion of Quest Lunar Diplomacy",
+      "other": "Partial completion of Lunar Diplomacy",
       "skills": [],
       "slayer": null
     },
@@ -164229,7 +166770,15 @@
         "y": 4618
       }
     ],
-    "masters": {},
+    "masters": {
+      "vannaka": {
+        "extMax": null,
+        "extMin": null,
+        "max": 45,
+        "min": 20,
+        "weight": 6
+      }
+    },
     "monsters": [
       {
         "aggressive": "Yes",
@@ -164359,6 +166908,228 @@
       "Terror dogs"
     ],
     "xpPerKill": 82
+  },
+  {
+    "alternatives": [
+      "Smoke devil (the regular task alternative)"
+    ],
+    "bossTask": true,
+    "combatAchievements": [
+      {
+        "id": 261,
+        "monster": "Thermonuclear Smoke Devil",
+        "name": "Thermonuclear Veteran",
+        "task": "Kill the Thermonuclear Smoke Devil 20 times.",
+        "tier": "Elite",
+        "type": "Kill Count"
+      },
+      {
+        "id": 262,
+        "monster": "Thermonuclear Smoke Devil",
+        "name": "Hazard Prevention",
+        "task": "Kill the Thermonuclear Smoke Devil without it hitting anyone.",
+        "tier": "Elite",
+        "type": "Perfection"
+      },
+      {
+        "id": 263,
+        "monster": "Thermonuclear Smoke Devil",
+        "name": "Spec'd Out",
+        "task": "Kill the Thermonuclear Smoke Devil using only special attacks.",
+        "tier": "Elite",
+        "type": "Restriction"
+      }
+    ],
+    "curatedFile": "batch10.json",
+    "enum": "THERMONUCLEAR_SMOKE_DEVIL",
+    "gearPage": "Thermonuclear smoke devil/Strategies",
+    "locations": [
+      {
+        "access": {
+          "groups": [
+            {
+              "any": [
+                {
+                  "level": 93,
+                  "skill": "SLAYER",
+                  "type": "skill"
+                }
+              ],
+              "manual": false,
+              "text": "93 Slayer (not boostable)"
+            },
+            {
+              "any": [],
+              "manual": true,
+              "text": "Smoke devil task or Thermonuclear smoke devil boss task (one off-task kill allowed for the Western Provinces Diary)"
+            },
+            {
+              "any": [],
+              "manual": true,
+              "text": "Facemask or Slayer helmet"
+            }
+          ]
+        },
+        "annotations": [],
+        "annotationsRaw": [],
+        "cannon": false,
+        "coordsMissing": false,
+        "curated": true,
+        "curatedName": "Smoke Devil Dungeon",
+        "displayName": "Smoke Devil Dungeon",
+        "dropversions": [],
+        "id": "smoke-devil-dungeon-p0",
+        "konarAssignable": true,
+        "levels": [
+          301
+        ],
+        "link": "Smoke Devil Dungeon",
+        "mapID": 27,
+        "members": "Yes",
+        "monsters": [
+          "Thermonuclear smoke devil"
+        ],
+        "multi": true,
+        "name": "Smoke Devil Dungeon",
+        "notes": "Fairy ring BKP lands just south-west of the dungeon, or ring of dueling to Castle Wars and run south-west. Six smoke devils share the boss room; a peek option on the room entrance shows how many players are inside.",
+        "pages": [
+          "Thermonuclear smoke devil"
+        ],
+        "plane": 0,
+        "rank": 1,
+        "requirements": [
+          "93 Slayer (not boostable)",
+          "Smoke devil task or Thermonuclear smoke devil boss task (one off-task kill allowed for the Western Provinces Diary)",
+          "Facemask or Slayer helmet"
+        ],
+        "source": "locline",
+        "spawnCount": 1,
+        "spawns": [
+          [
+            2360,
+            9452
+          ]
+        ],
+        "spawnsByMonster": {
+          "Thermonuclear smoke devil": [
+            [
+              2360,
+              9452
+            ]
+          ]
+        },
+        "wilderness": false,
+        "wildernessLevelMax": null,
+        "wildernessLevelMin": null,
+        "x": 2360,
+        "y": 9452
+      }
+    ],
+    "masters": {},
+    "monsters": [
+      {
+        "aggressive": "No",
+        "assignedBy": [
+          "konar",
+          "nieve",
+          "duradel",
+          "mortimer"
+        ],
+        "attackSpeed": 2,
+        "attackStyles": [
+          "Magical ranged (100% prayer penetration)"
+        ],
+        "attributes": null,
+        "combat": 301,
+        "combatStats": {
+          "attributes": [
+            "none"
+          ],
+          "crush": 9,
+          "defenceLevel": 360,
+          "hitpoints": 240,
+          "magic": 800,
+          "magicLevel": 1,
+          "rangedHeavy": 900,
+          "rangedLight": 900,
+          "rangedStandard": 900,
+          "size": 4,
+          "slash": 4,
+          "stab": 11,
+          "version": null,
+          "weakness": "air",
+          "weaknessPercent": 20
+        },
+        "hasInfobox": true,
+        "hitpoints": 240,
+        "immuneCannon": "No",
+        "immuneThrall": "No",
+        "locLines": 1,
+        "mapLocations": 0,
+        "maxHit": "8",
+        "name": "Thermonuclear smoke devil",
+        "npcIds": [
+          499
+        ],
+        "page": "Thermonuclear smoke devil",
+        "poisonous": "No",
+        "redirected": false,
+        "size": 4,
+        "slayerCategory": "Bosses, Smoke Devils",
+        "slayerLevel": 93,
+        "slayerXp": 240,
+        "versions": [],
+        "weakness": null
+      }
+    ],
+    "recommendedStyle": "Any",
+    "recommendedStyleSource": "curated",
+    "requiredGear": [
+      {
+        "items": [
+          "Facemask",
+          "*slayer helmet"
+        ],
+        "reason": "against their dust and smoke",
+        "slot": "head",
+        "unlessKourendElite": false
+      }
+    ],
+    "requiredItems": [
+      "Facemask or Slayer helmet"
+    ],
+    "requirements": {
+      "combat": null,
+      "other": null,
+      "skills": [],
+      "slayer": 93
+    },
+    "strategy": [
+      "The thermonuclear smoke devil, often referred to as thermy, is the boss version of the smoke devil. It requires a minimum of 93 Slayer to damage. Located at the Smoke Devil Dungeon south of Castle Wars, the Thermonuclear smoke devil can only be attacked on a smoke devil task, with the exception of one kill for the Western Provinces Diary (provided that the player has 93 Slayer without boosting).",
+      "It is the only monster to drop the smoke battlestaff, jar of smoke, and the pet smoke devil. It drops the occult necklace at a higher rate than smoke devils.",
+      "Unlike most NPCs, the Thermonuclear smoke devil is always able to walk through other monsters/players. This is to prevent players from safespotting the boss using the smoke devils found in its lair."
+    ],
+    "summary": "The boss version of the smoke devil, fought in its side room of the task-only Smoke Devil Dungeon south of Castle Wars; it needs 93 Slayer and either a smoke devil task or a boss task, plus a facemask or slayer helmet.",
+    "superior": null,
+    "task": "The Thermonuclear Smoke Devil",
+    "taskId": null,
+    "unlocks": [],
+    "usefulItems": [],
+    "variantGearPages": {},
+    "wikiMonsterPages": [
+      "Thermonuclear smoke devil"
+    ],
+    "wikiMonsterPagesTried": [
+      "Thermonuclear smoke devil"
+    ],
+    "wikiTaskPage": "Thermonuclear smoke devil",
+    "wikiTaskPageKind": "monster",
+    "wikiTaskPageRedirected": false,
+    "wikiTaskPageRequested": "Thermonuclear smoke devil",
+    "wikiTaskPageTried": [
+      "Thermonuclear smoke devil"
+    ],
+    "xpPerKill": 240
   },
   {
     "alternatives": [],
@@ -164813,228 +167584,6 @@
       "The Whisperer"
     ],
     "xpPerKill": 900
-  },
-  {
-    "alternatives": [
-      "Smoke devil (the regular task alternative)"
-    ],
-    "bossTask": true,
-    "combatAchievements": [
-      {
-        "id": 261,
-        "monster": "Thermonuclear Smoke Devil",
-        "name": "Thermonuclear Veteran",
-        "task": "Kill the Thermonuclear Smoke Devil 20 times.",
-        "tier": "Elite",
-        "type": "Kill Count"
-      },
-      {
-        "id": 262,
-        "monster": "Thermonuclear Smoke Devil",
-        "name": "Hazard Prevention",
-        "task": "Kill the Thermonuclear Smoke Devil without it hitting anyone.",
-        "tier": "Elite",
-        "type": "Perfection"
-      },
-      {
-        "id": 263,
-        "monster": "Thermonuclear Smoke Devil",
-        "name": "Spec'd Out",
-        "task": "Kill the Thermonuclear Smoke Devil using only special attacks.",
-        "tier": "Elite",
-        "type": "Restriction"
-      }
-    ],
-    "curatedFile": "batch10.json",
-    "enum": "THERMONUCLEAR_SMOKE_DEVIL",
-    "gearPage": "Thermonuclear smoke devil/Strategies",
-    "locations": [
-      {
-        "access": {
-          "groups": [
-            {
-              "any": [
-                {
-                  "level": 93,
-                  "skill": "SLAYER",
-                  "type": "skill"
-                }
-              ],
-              "manual": false,
-              "text": "93 Slayer (not boostable)"
-            },
-            {
-              "any": [],
-              "manual": true,
-              "text": "Smoke devil task or Thermonuclear smoke devil boss task (one off-task kill allowed for the Western Provinces Diary)"
-            },
-            {
-              "any": [],
-              "manual": true,
-              "text": "Facemask or Slayer helmet"
-            }
-          ]
-        },
-        "annotations": [],
-        "annotationsRaw": [],
-        "cannon": false,
-        "coordsMissing": false,
-        "curated": true,
-        "curatedName": "Smoke Devil Dungeon",
-        "displayName": "Smoke Devil Dungeon",
-        "dropversions": [],
-        "id": "smoke-devil-dungeon-p0",
-        "konarAssignable": true,
-        "levels": [
-          301
-        ],
-        "link": "Smoke Devil Dungeon",
-        "mapID": 27,
-        "members": "Yes",
-        "monsters": [
-          "Thermonuclear smoke devil"
-        ],
-        "multi": true,
-        "name": "Smoke Devil Dungeon",
-        "notes": "Fairy ring BKP lands just south-west of the dungeon, or ring of dueling to Castle Wars and run south-west. Six smoke devils share the boss room; a peek option on the room entrance shows how many players are inside.",
-        "pages": [
-          "Thermonuclear smoke devil"
-        ],
-        "plane": 0,
-        "rank": 1,
-        "requirements": [
-          "93 Slayer (not boostable)",
-          "Smoke devil task or Thermonuclear smoke devil boss task (one off-task kill allowed for the Western Provinces Diary)",
-          "Facemask or Slayer helmet"
-        ],
-        "source": "locline",
-        "spawnCount": 1,
-        "spawns": [
-          [
-            2360,
-            9452
-          ]
-        ],
-        "spawnsByMonster": {
-          "Thermonuclear smoke devil": [
-            [
-              2360,
-              9452
-            ]
-          ]
-        },
-        "wilderness": false,
-        "wildernessLevelMax": null,
-        "wildernessLevelMin": null,
-        "x": 2360,
-        "y": 9452
-      }
-    ],
-    "masters": {},
-    "monsters": [
-      {
-        "aggressive": "No",
-        "assignedBy": [
-          "konar",
-          "nieve",
-          "duradel",
-          "mortimer"
-        ],
-        "attackSpeed": 2,
-        "attackStyles": [
-          "Magical ranged (100% prayer penetration)"
-        ],
-        "attributes": null,
-        "combat": 301,
-        "combatStats": {
-          "attributes": [
-            "none"
-          ],
-          "crush": 9,
-          "defenceLevel": 360,
-          "hitpoints": 240,
-          "magic": 800,
-          "magicLevel": 1,
-          "rangedHeavy": 900,
-          "rangedLight": 900,
-          "rangedStandard": 900,
-          "size": 4,
-          "slash": 4,
-          "stab": 11,
-          "version": null,
-          "weakness": "air",
-          "weaknessPercent": 20
-        },
-        "hasInfobox": true,
-        "hitpoints": 240,
-        "immuneCannon": "No",
-        "immuneThrall": "No",
-        "locLines": 1,
-        "mapLocations": 0,
-        "maxHit": "8",
-        "name": "Thermonuclear smoke devil",
-        "npcIds": [
-          499
-        ],
-        "page": "Thermonuclear smoke devil",
-        "poisonous": "No",
-        "redirected": false,
-        "size": 4,
-        "slayerCategory": "Bosses, Smoke Devils",
-        "slayerLevel": 93,
-        "slayerXp": 240,
-        "versions": [],
-        "weakness": null
-      }
-    ],
-    "recommendedStyle": "Any",
-    "recommendedStyleSource": "curated",
-    "requiredGear": [
-      {
-        "items": [
-          "Facemask",
-          "*slayer helmet"
-        ],
-        "reason": "against their dust and smoke",
-        "slot": "head",
-        "unlessKourendElite": false
-      }
-    ],
-    "requiredItems": [
-      "Facemask or Slayer helmet"
-    ],
-    "requirements": {
-      "combat": null,
-      "other": null,
-      "skills": [],
-      "slayer": 93
-    },
-    "strategy": [
-      "The thermonuclear smoke devil, often referred to as thermy, is the boss version of the smoke devil. It requires a minimum of 93 Slayer to damage. Located at the Smoke Devil Dungeon south of Castle Wars, the Thermonuclear smoke devil can only be attacked on a smoke devil task, with the exception of one kill for the Western Provinces Diary (provided that the player has 93 Slayer without boosting).",
-      "It is the only monster to drop the smoke battlestaff, jar of smoke, and the pet smoke devil. It drops the occult necklace at a higher rate than smoke devils.",
-      "Unlike most NPCs, the Thermonuclear smoke devil is always able to walk through other monsters/players. This is to prevent players from safespotting the boss using the smoke devils found in its lair."
-    ],
-    "summary": "The boss version of the smoke devil, fought in its side room of the task-only Smoke Devil Dungeon south of Castle Wars; it needs 93 Slayer and either a smoke devil task or a boss task, plus a facemask or slayer helmet.",
-    "superior": null,
-    "task": "The Thermonuclear Smoke Devil",
-    "taskId": null,
-    "unlocks": [],
-    "usefulItems": [],
-    "variantGearPages": {},
-    "wikiMonsterPages": [
-      "Thermonuclear smoke devil"
-    ],
-    "wikiMonsterPagesTried": [
-      "Thermonuclear smoke devil"
-    ],
-    "wikiTaskPage": "Thermonuclear smoke devil",
-    "wikiTaskPageKind": "monster",
-    "wikiTaskPageRedirected": false,
-    "wikiTaskPageRequested": "Thermonuclear smoke devil",
-    "wikiTaskPageTried": [
-      "Thermonuclear smoke devil"
-    ],
-    "xpPerKill": 240
   },
   {
     "alternatives": [
@@ -167841,49 +170390,39 @@
     ],
     "masters": {
       "chaeldar": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 130,
         "min": 70,
-        "raw": "70-130",
-        "weight": null
+        "weight": 11
       },
       "duradel": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 200,
         "min": 130,
-        "raw": "130-200",
-        "weight": null
+        "weight": 6
       },
       "konar": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 170,
         "min": 120,
-        "raw": "120-170",
-        "weight": null
+        "weight": 6
       },
       "nieve": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 185,
         "min": 120,
-        "raw": "120-185",
-        "weight": null
+        "weight": 6
       },
       "vannaka": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 90,
         "min": 40,
-        "raw": "40-90",
-        "weight": null
+        "weight": 7
       }
     },
     "monsters": [
@@ -169442,49 +171981,39 @@
     ],
     "masters": {
       "chaeldar": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 130,
         "min": 70,
-        "raw": "70-130",
-        "weight": null
+        "weight": 10
       },
       "konar": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 170,
         "min": 120,
-        "raw": "120-170",
-        "weight": null
+        "weight": 3
       },
       "mortimer": {
-        "alternatives": [],
-        "extMax": 200,
-        "extMin": 110,
+        "extMax": null,
+        "extMin": null,
         "max": 120,
         "min": 80,
-        "raw": "80-120 (110-200)",
-        "weight": null
+        "weight": 10
       },
       "nieve": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 185,
         "min": 120,
-        "raw": "120-185",
-        "weight": null
+        "weight": 3
       },
       "vannaka": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 90,
         "min": 30,
-        "raw": "30-90",
-        "weight": null
+        "weight": 8
       }
     },
     "monsters": [
@@ -172065,31 +174594,25 @@
     ],
     "masters": {
       "chaeldar": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 150,
         "min": 90,
-        "raw": "90-150",
-        "weight": null
+        "weight": 8
       },
       "duradel": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 199,
         "min": 130,
-        "raw": "130-199",
-        "weight": null
+        "weight": 10
       },
       "nieve": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 180,
         "min": 110,
-        "raw": "110-180",
-        "weight": null
+        "weight": 10
       }
     },
     "monsters": [
@@ -174912,58 +177435,46 @@
     ],
     "masters": {
       "chaeldar": {
-        "alternatives": [],
         "extMax": 250,
         "extMin": 200,
         "max": 100,
         "min": 80,
-        "raw": "80-100 (200-250)",
-        "weight": null
+        "weight": 6
       },
       "duradel": {
-        "alternatives": [],
         "extMax": 250,
         "extMin": 200,
         "max": 210,
         "min": 100,
-        "raw": "100-210 (200-250)",
-        "weight": null
+        "weight": 8
       },
       "konar": {
-        "alternatives": [],
         "extMax": 250,
         "extMin": 200,
         "max": 160,
         "min": 100,
-        "raw": "100-160 (200-250)",
-        "weight": null
+        "weight": 4
       },
       "mazchna": {
-        "alternatives": [],
         "extMax": 250,
         "extMin": 200,
         "max": 20,
         "min": 10,
-        "raw": "10-20 (200-250)",
-        "weight": null
+        "weight": 6
       },
       "nieve": {
-        "alternatives": [],
         "extMax": 250,
         "extMin": 200,
         "max": 170,
         "min": 110,
-        "raw": "110-170 (200-250)",
-        "weight": null
+        "weight": 6
       },
       "vannaka": {
-        "alternatives": [],
         "extMax": 250,
         "extMin": 200,
         "max": 20,
         "min": 10,
-        "raw": "10-20 (200-250)",
-        "weight": null
+        "weight": 7
       }
     },
     "monsters": [
@@ -176364,68 +178875,12 @@
       }
     ],
     "masters": {
-      "chaeldar": {
-        "alternatives": [],
-        "extMax": 250,
-        "extMin": 200,
-        "max": 100,
-        "min": 80,
-        "raw": "80-100 (200-250)",
-        "weight": null
-      },
-      "duradel": {
-        "alternatives": [],
-        "extMax": 250,
-        "extMin": 200,
-        "max": 210,
-        "min": 100,
-        "raw": "100-210 (200-250)",
-        "weight": null
-      },
-      "konar": {
-        "alternatives": [],
-        "extMax": 250,
-        "extMin": 200,
-        "max": 160,
-        "min": 100,
-        "raw": "100-160 (200-250)",
-        "weight": null
-      },
-      "mazchna": {
-        "alternatives": [],
-        "extMax": 250,
-        "extMin": 200,
-        "max": 20,
-        "min": 10,
-        "raw": "10-20 (200-250)",
-        "weight": null
-      },
       "mortimer": {
-        "alternatives": [],
-        "extMax": 280,
-        "extMin": 170,
+        "extMax": null,
+        "extMin": null,
         "max": 180,
         "min": 120,
-        "raw": "120-180 (170-280)",
-        "weight": null
-      },
-      "nieve": {
-        "alternatives": [],
-        "extMax": 250,
-        "extMin": 200,
-        "max": 170,
-        "min": 110,
-        "raw": "110-170 (200-250)",
-        "weight": null
-      },
-      "vannaka": {
-        "alternatives": [],
-        "extMax": 250,
-        "extMin": 200,
-        "max": 20,
-        "min": 10,
-        "raw": "10-20 (200-250)",
-        "weight": null
+        "weight": 10
       }
     },
     "monsters": [
@@ -177498,13 +179953,11 @@
     ],
     "masters": {
       "mazchna": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 20,
         "min": 10,
-        "raw": "10-20",
-        "weight": null
+        "weight": 7
       }
     },
     "monsters": [
@@ -178233,49 +180686,39 @@
     ],
     "masters": {
       "chaeldar": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 130,
         "min": 70,
-        "raw": "70-130",
-        "weight": null
+        "weight": 6
       },
       "duradel": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 200,
         "min": 130,
-        "raw": "130-200",
-        "weight": null
+        "weight": 8
       },
       "konar": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 170,
         "min": 110,
-        "raw": "110-170",
-        "weight": null
+        "weight": 4
       },
       "mortimer": {
-        "alternatives": [],
-        "extMax": 220,
-        "extMin": 130,
+        "extMax": null,
+        "extMin": null,
         "max": 120,
         "min": 80,
-        "raw": "80-120 (130-220)",
-        "weight": null
+        "weight": 10
       },
       "nieve": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 185,
         "min": 120,
-        "raw": "120-185",
-        "weight": null
+        "weight": 6
       }
     },
     "monsters": [
@@ -179293,22 +181736,18 @@
     ],
     "masters": {
       "duradel": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 200,
         "min": 130,
-        "raw": "130-200",
-        "weight": null
+        "weight": 2
       },
       "konar": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 170,
         "min": 120,
-        "raw": "120-170",
-        "weight": null
+        "weight": 2
       }
     },
     "monsters": [
@@ -180165,7 +182604,15 @@
         "y": 3479
       }
     ],
-    "masters": {},
+    "masters": {
+      "vannaka": {
+        "extMax": null,
+        "extMin": null,
+        "max": 60,
+        "min": 30,
+        "weight": 7
+      }
+    },
     "monsters": [
       {
         "aggressive": "No",
@@ -181942,31 +184389,25 @@
     ],
     "masters": {
       "mazchna": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 50,
         "min": 30,
-        "raw": "30-50",
-        "weight": null
+        "weight": 7
       },
       "spria": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 30,
         "min": 15,
-        "raw": "15-30",
-        "weight": null
+        "weight": 7
       },
       "turael": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 30,
         "min": 15,
-        "raw": "15-30",
-        "weight": null
+        "weight": 7
       }
     },
     "monsters": [
@@ -182925,56 +185366,39 @@
     ],
     "masters": {
       "chaeldar": {
-        "alternatives": [],
         "extMax": 250,
         "extMin": 200,
         "max": 100,
         "min": 60,
-        "raw": "60-100 (200-250)",
-        "weight": null
+        "weight": 6
       },
       "duradel": {
-        "alternatives": [],
         "extMax": 250,
         "extMin": 200,
         "max": 160,
         "min": 100,
-        "raw": "100-160 (200-250)",
-        "weight": null
+        "weight": 8
       },
       "konar": {
-        "alternatives": [],
         "extMax": 250,
         "extMin": 200,
         "max": 190,
         "min": 125,
-        "raw": "125-190 (200-250)",
-        "weight": null
+        "weight": 10
       },
       "mortimer": {
-        "alternatives": [
-          {
-            "extMax": 350,
-            "extMin": 250,
-            "max": 220,
-            "min": 130
-          }
-        ],
         "extMax": 250,
         "extMin": 200,
         "max": 120,
         "min": 80,
-        "raw": "80-120 (200-250) <br/> or 130-220 (250-350)",
-        "weight": null
+        "weight": 10
       },
       "nieve": {
-        "alternatives": [],
         "extMax": 250,
         "extMin": 200,
         "max": 145,
         "min": 80,
-        "raw": "80-145 (200-250)",
-        "weight": null
+        "weight": 7
       }
     },
     "monsters": [
@@ -186801,40 +189225,32 @@
     ],
     "masters": {
       "krystilia": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 125,
         "min": 75,
-        "raw": "75-125",
-        "weight": null
+        "weight": 3
       },
       "mazchna": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 50,
         "min": 30,
-        "raw": "30-50",
-        "weight": null
+        "weight": 7
       },
       "spria": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 30,
         "min": 15,
-        "raw": "15-30",
-        "weight": null
+        "weight": 7
       },
       "turael": {
-        "alternatives": [],
         "extMax": null,
         "extMin": null,
         "max": 30,
         "min": 15,
-        "raw": "15-30",
-        "weight": null
+        "weight": 7
       }
     },
     "monsters": [

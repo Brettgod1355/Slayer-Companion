@@ -24,53 +24,18 @@
  */
 package com.slayercompanion.task;
 
-import java.util.Objects;
 import javax.annotation.Nullable;
-import lombok.AllArgsConstructor;
 import lombok.Value;
 
-/** Immutable snapshot of the detected Slayer assignment. */
+/** How many of a task a master assigns, read from the game's {@code SlayerMasterTask} and {@code SlayerTask} tables. */
 @Value
-@AllArgsConstructor
-public class CurrentTask
+public class Assignment
 {
-	/** Display name as the game shows it, e.g. "Abyssal demons". */
-	String name;
-	int remaining;
-	int initialAmount;
-	/** Area name the master assigned (Konar / Krystilia), or null. */
+	int min;
+	int max;
+	/** Range with the task's extension unlock, or null when the task has none. */
 	@Nullable
-	String areaName;
+	Integer extMin;
 	@Nullable
-	SlayerMaster master;
-	boolean bossTask;
-	int points;
-	/** Streak for the assigning master's counter. */
-	int streak;
-	/** The master's range for this task, read live from the game; null for boss tasks or when unreadable. */
-	@Nullable
-	Assignment assignment;
-	/** Mortimer's bonus on this task, or null. */
-	@Nullable
-	TaskModifier modifier;
-
-	public CurrentTask(String name, int remaining, int initialAmount, @Nullable String areaName,
-		@Nullable SlayerMaster master, boolean bossTask, int points, int streak)
-	{
-		this(name, remaining, initialAmount, areaName, master, bossTask, points, streak, null, null);
-	}
-
-	public int getKills()
-	{
-		return Math.max(0, initialAmount - remaining);
-	}
-
-	/** True when both snapshots describe the same assignment (ignoring progress). */
-	public boolean sameAssignment(CurrentTask other)
-	{
-		return other != null
-			&& name.equalsIgnoreCase(other.name)
-			&& Objects.equals(areaName, other.areaName)
-			&& master == other.master;
-	}
+	Integer extMax;
 }

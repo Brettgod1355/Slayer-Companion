@@ -1,0 +1,350 @@
+[
+  {
+    "task": "Gargoyles",
+    "wikiTaskPage": "Slayer task/Gargoyles",
+    "monsterPages": [
+      "Gargoyle"
+    ],
+    "bossTask": false,
+    "summary": "Gargoyles need 75 Slayer, 80 combat and Priest in Peril, and live only in the Slayer Tower: on the top floor, and in the basement, where they can only be killed on task. They cannot be killed normally: finish each one at low health with a rock hammer, rock thrownhammer or granite hammer, or buy Gargoyle smasher (120 points) to do it automatically with a rock hammer in your inventory. They are weak to crush, have -2 flat armour, and Protect from Melee blocks all of their damage. The basement is the usual choice because more of them spawn in a smaller area. Killing them on task can drop the brittle key that opens the Grotesque Guardians on the roof.",
+    "recommendedStyle": "Melee",
+    "requiredItems": [
+      "Rock hammer, rock thrownhammer or granite hammer"
+    ],
+    "usefulItems": [
+      "Gargoyle smasher unlock (120 points)",
+      "Slayer ring (teleport to the Slayer Tower)",
+      "Ring of wealth (picks up their frequent coin drops)"
+    ],
+    "superior": "Marble gargoyle",
+    "alternatives": [
+      "Grotesque Guardians (Dusk and Dawn, on the roof)"
+    ],
+    "xpPerKill": 105,
+    "locations": [
+      {
+        "name": "Slayer Tower basement (Slayer task only)",
+        "displayName": "Slayer Tower basement (task-only, 12 gargoyles, safespots)",
+        "rank": 1,
+        "multi": false,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "75 Slayer",
+          "Priest in Peril",
+          "Task-only area (Raulyn blocks off-task attacks)"
+        ],
+        "notes": "The wiki recommends the basement: 'there are many gargoyles in a fairly small area compared to the top floor' and it is 'large enough that the player can reset the aggression timer easily'. Gargoyles here are immune to poison and venom.",
+        "evidence": {
+          "multi": "Slayer task/Gargoyles Location comparison row 'Slayer Tower (basement)': Multicombat {{No}}, Safespottable {{Yes}}",
+          "cannon": "Dwarf multicannon prohibited list: \"Slayer Tower - A strange magical force won't let you set up a cannon here.\"; Slayer task/Gargoyles Location comparison: Cannonable {{No}}",
+          "requirements": "Slayer task/Gargoyles infobox: skillreq Slayer 75, combatreq 80, 'Completion of Priest in Peril'; location row note: 'Gargoyles can only be killed here while on a Slayer task.'",
+          "konar": "Game cache table 114 row KONAR_GARGOYLES: areas 'Slayer Tower'"
+        }
+      },
+      {
+        "name": "Slayer Tower top floor",
+        "displayName": "Slayer Tower top floor (8 gargoyles, safespots)",
+        "rank": 2,
+        "multi": false,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "75 Slayer",
+          "Priest in Peril"
+        ],
+        "notes": "The way up passes banshees and aberrant spectres, which drain stats without earmuffs, a nose peg or a Slayer helmet. The top-floor gargoyles are not immune to venom, so a toxic blowpipe can envenom them here.",
+        "evidence": {
+          "multi": "Slayer task/Gargoyles Location comparison row 'Slayer Tower (top floor)': Multicombat {{No}}, Safespottable {{Yes}}",
+          "cannon": "Dwarf multicannon prohibited list: \"Slayer Tower - A strange magical force won't let you set up a cannon here.\"; Slayer task/Gargoyles Location comparison: Cannonable {{No}}",
+          "requirements": "Slayer task/Gargoyles infobox (Slayer 75, Priest in Peril); row note: 'Running through the floors of the Slayer Tower takes the player past many other dangerous monsters, most notably banshees and aberrant spectres'",
+          "konar": "Game cache table 114 row KONAR_GARGOYLES: areas 'Slayer Tower'"
+        }
+      }
+    ],
+    "notes": "Added in 0.13.0: the game can assign this task (cache table 114 rows for Vannaka, Chaeldar, Konar, Nieve, Duradel and Mortimer) but tasks.json lacked it. The two finishing thresholds differ on the wiki: 'must be used when they reach 9 or lower Hitpoints' (Slayer task/Gargoyles) and '8 or lower Hitpoints' (Gargoyle), so the summary says 'at low health'. 'If killing the Grotesque Guardians, it is strongly recommended the player avoid purchasing Double Trouble, as this causes the boss to be counted as two kills per task rather than one' (Slayer task/Gargoyles).",
+    "_verification": {
+      "corrections": [],
+      "confirmed": 12,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Rockslugs",
+    "wikiTaskPage": "Rockslug",
+    "monsterPages": [
+      "Rockslug"
+    ],
+    "bossTask": false,
+    "summary": "Rockslugs need 20 Slayer and are assigned by Mazchna and Mortimer. Use a bag of salt on one at 4 Hitpoints or less to finish it; at 5 or more the salt is wasted. The Slug salter unlock (10 points) does this automatically with bags of salt in your inventory, and a brine sabre kills them without salt. Their drops are poor (low-level ores and seeds, rarely mystic gloves (light)).",
+    "recommendedStyle": "Any",
+    "requiredItems": [
+      "Bag of salt or Brine sabre"
+    ],
+    "usefulItems": [
+      "Slug salter unlock (10 points)"
+    ],
+    "superior": "Giant rockslug",
+    "alternatives": [],
+    "xpPerKill": 27,
+    "locations": [
+      {
+        "name": "Fremennik Slayer Dungeon",
+        "displayName": "Fremennik Slayer Dungeon - fairy ring AJR (7 rockslugs)",
+        "rank": 1,
+        "multi": false,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [],
+        "notes": "Ranked first because it has several spawns and no entry requirement.",
+        "evidence": {
+          "multi": "Location Comparison rows 'Fremennik Slayer Dungeon': Multicombat {{No}} in Slayer task/Basilisks, Slayer task/Jellies, Slayer task/Kurasks, Slayer task/Turoth and Slayer task/Pyrefiends",
+          "cannon": "'Players cannot set up a dwarf multicannon within the caves. Attempting to do so yields the chatbox message: The air is too dank for you to set up a cannon here.' (Fremennik Slayer Dungeon)",
+          "requirements": "not stated",
+          "konar": "Konar does not assign rockslugs: Rockslug infobox 'assignedby = mazchna,mortimer'; game cache table 114 has only MAZCHNA_ROCKSLUGS and MORTIMER_ROCKSLUGS"
+        }
+      },
+      {
+        "name": "Lumbridge Swamp Caves",
+        "displayName": "Lumbridge Swamp Caves (5 rockslugs, cannon)",
+        "rank": 2,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Light source",
+          "Rope to enter the caves (only needed once)"
+        ],
+        "notes": null,
+        "evidence": {
+          "multi": "Slayer task/Goblins Location Comparison row 'Lumbridge Swamp Caves': Multicombat {{No}}",
+          "cannon": "'A Dwarf multicannon can be used in the caves.' (Lumbridge Swamp Caves)",
+          "requirements": "'The caves require a light source, unless the player has lit a fire of eternal light near the rope entrance.' (Lumbridge Swamp Caves)"
+        }
+      },
+      {
+        "name": "Tonali Cavern",
+        "displayName": "Tonali Cavern (6 rockslugs, The Final Dawn)",
+        "rank": 3,
+        "multi": "unknown",
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "The Final Dawn"
+        ],
+        "notes": null,
+        "evidence": {
+          "multi": "not stated for the rockslug spawns (Tonali Cavern names only the Moon and Sun chambers as multicombat)",
+          "cannon": "'Players cannot set up a dwarf multicannon within the cavern.' (Tonali Cavern)",
+          "requirements": "Tonali Cavern entry after The Final Dawn, as recorded for the moss giants and lesser nagua curated here"
+        }
+      },
+      {
+        "name": "Ynysdail Cavern",
+        "displayName": "Ynysdail Cavern (8 rockslugs; Sailing 73)",
+        "rank": 4,
+        "multi": false,
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "73 Sailing and a boat with an adamant keel or better to reach Ynysdail"
+        ],
+        "notes": null,
+        "evidence": {
+          "multi": "Ynysdail Cavern: 'The entire dungeon is a single-combat zone'",
+          "cannon": "Ynysdail Cavern: 'Dwarf multicannons cannot be set in the dungeon; attempting to do so will result in the message \"The ground is too damp to set up a cannon here.\"'",
+          "requirements": "Ynysdail: 'It requires 73 Sailing to moor onto ... the player will need a boat equipped with an adamant keel or better'"
+        }
+      },
+      {
+        "name": "Dorgesh-Kaan South Dungeon",
+        "displayName": "Dorgesh-Kaan South Dungeon - fairy ring AJQ (1 rockslug)",
+        "rank": 5,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Death to the Dorgeshuun",
+          "Light source"
+        ],
+        "notes": "Only one rockslug spawns here.",
+        "evidence": {
+          "multi": "'You can use a dwarf multicannon in the dungeon, however it is not multicombat.' (Dorgesh-Kaan South Dungeon)",
+          "cannon": "'You can use a dwarf multicannon in the dungeon, however it is not multicombat.' (Dorgesh-Kaan South Dungeon)",
+          "requirements": "'Entry to the dungeon requires completion of the Death to the Dorgeshuun quest. The dungeon is dark and requires the player to have a light source' (Dorgesh-Kaan South Dungeon)"
+        }
+      }
+    ],
+    "notes": "Added in 0.13.0: assigned by Mazchna (30-50) and Mortimer (35-50) per game cache table 114; there is no Slayer task/Rockslugs page, so the Rockslug monster page is the task page. 'Vannaka and Chaeldar no longer assign players Rockslug tasks' (Rockslug, 8 May 2024). 'The cost of Slug Salter was reduced from 80 to 10 points' (Rockslug, 27 August 2025).",
+    "_verification": {
+      "corrections": [],
+      "confirmed": 11,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "Mutated zygomites",
+    "wikiTaskPage": "Slayer task/Zygomites",
+    "monsterPages": [
+      "Zygomite",
+      "Ancient Zygomite"
+    ],
+    "bossTask": false,
+    "summary": "Mutated zygomites need 57 Slayer, 60 combat and Lost City, and are assigned by Chaeldar, Konar, Nieve and Duradel. They hide as fungi in Zanaris until you pick them, and can only be finished with a fungicide spray, which needs refilling with fungicide every ten kills. Ancient zygomites on Fossil Island or in the Stalker Den also count, unless Konar sends you to Zanaris; if she sends you to Fossil Island, only the ancient ones count. Their attacks are magic-based, so dragonhide armour helps, and Protect from Melee is the prayer to use because their melee attacks are more accurate.",
+    "recommendedStyle": "Any",
+    "requiredItems": [
+      "Fungicide spray (refilled with fungicide)"
+    ],
+    "usefulItems": [
+      "Fungicide (spray refills)",
+      "Reagent pouch (ancient zygomites always drop mort myre fungus)"
+    ],
+    "superior": null,
+    "alternatives": [
+      "Ancient Zygomite (Fossil Island, Stalker Den)"
+    ],
+    "xpPerKill": 65,
+    "locations": [
+      {
+        "name": "Zanaris",
+        "displayName": "Zanaris - by the furnace and near the Cosmic Altar (10 zygomites)",
+        "rank": 1,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Lost City"
+        ],
+        "notes": "Two groups of five: east of the furnace (level 74 and 86) and near the Cosmic Altar, where they can be trapped behind a pillar and safespotted from near the mysterious ruins.",
+        "evidence": {
+          "multi": "Slayer task/Zygomites Location Comparison rows 'East of the furnace in Zanaris' and 'Zanaris near the Cosmic Altar': Multicombat {{No}}",
+          "cannon": "Same rows: Cannonable {{Yes}}",
+          "requirements": "Slayer task/Zygomites infobox: 'otherreq = Completion of Lost City'",
+          "konar": "Game cache table 114 row KONAR_MUTATEDZYGOMITES: areas 'Zanaris|Fossil Island'"
+        }
+      },
+      {
+        "name": "Fossil Island",
+        "displayName": "Fossil Island - Mushroom Forest (27 ancient zygomites)",
+        "rank": 2,
+        "multi": false,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "Bone Voyage"
+        ],
+        "notes": "Ancient zygomites (level 109). Konar's Fossil Island assignment can only be done here.",
+        "evidence": {
+          "multi": "Slayer task/Zygomites Location Comparison row 'Mushroom Forest on Fossil Island': Multicombat {{No}}",
+          "cannon": "Same row: Cannonable {{Yes}}",
+          "requirements": "Fossil Island access after Bone Voyage, as recorded for the ammonite crabs curated here",
+          "konar": "Game cache table 114 row KONAR_MUTATEDZYGOMITES: areas 'Zanaris|Fossil Island'; Ancient Zygomite: 'if she assigns a task for mutated zygomites on Fossil Island, players will be required to kill ancient zygomites'"
+        }
+      },
+      {
+        "name": "Stalker Den",
+        "displayName": "Stalker Den (9 ancient zygomites, multicombat)",
+        "rank": 3,
+        "multi": true,
+        "cannon": true,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": false,
+        "requirements": [
+          "Shadows of Custodia"
+        ],
+        "notes": "Ancient zygomites (level 109); only these drop grimy kwuarm.",
+        "evidence": {
+          "multi": "Slayer task/Zygomites Location Comparison row 'Stalker Den': Multicombat {{Yes}}",
+          "cannon": "Same row: Cannonable {{Yes}}",
+          "requirements": "'can be found in the Stalker Den after the completion of the Shadows of Custodia quest' (Slayer task/Custodian stalker)",
+          "konar": "Game cache table 114 row KONAR_MUTATEDZYGOMITES lists only Zanaris and Fossil Island"
+        }
+      }
+    ],
+    "notes": "Added in 0.13.0: assigned by Chaeldar (8-15), Konar (10-25), Nieve (10-25) and Duradel (20-30); these ranges match both the Slayer task/Zygomites infobox and game cache table 114. 'Players must use fungicide spray on Zygomites once they are under 8 hitpoints to kill them.' and 'The Fungicide spray must be reloaded every ten kills.' (Zygomite).",
+    "_verification": {
+      "corrections": [],
+      "confirmed": 13,
+      "downgraded": 0
+    }
+  },
+  {
+    "task": "The Grotesque Guardians",
+    "wikiTaskPage": "Grotesque Guardians",
+    "monsterPages": [
+      "Dusk",
+      "Dawn"
+    ],
+    "bossTask": true,
+    "summary": "The Grotesque Guardians, Dusk and Dawn, are the gargoyle Slayer boss on the Slayer Tower roof (75 Slayer), fought in a solo instance on a gargoyle or Grotesque Guardians task. The roof is unlocked once, permanently, with a brittle key dropped by gargoyles on task. Bring a rock hammer, rock thrownhammer or granite hammer to finish them. Dawn flies, so only halberds reach her in melee, and Dusk is immune to magic and ranged; melee or a melee/ranged hybrid is usual. Both together count as one kill, or two with Double Trouble.",
+    "recommendedStyle": "Melee",
+    "requiredItems": [
+      "Rock hammer, rock thrownhammer or granite hammer"
+    ],
+    "usefulItems": [],
+    "superior": null,
+    "alternatives": [],
+    "xpPerKill": 1350,
+    "locations": [
+      {
+        "name": "Slayer Tower roof",
+        "displayName": "Slayer Tower roof - stairs on the top floor (solo instance)",
+        "rank": 1,
+        "multi": "unknown",
+        "cannon": false,
+        "wilderness": false,
+        "wildernessLevelMin": null,
+        "wildernessLevelMax": null,
+        "konarAssignable": true,
+        "requirements": [
+          "75 Slayer",
+          "Priest in Peril",
+          "Roof unlocked once with a brittle key",
+          "Gargoyles or Grotesque Guardians Slayer task"
+        ],
+        "notes": "The entrance is on the 2nd floor of the Slayer Tower. Ring the Cloister Bell to start; you are kicked out after five minutes of inactivity. Items lost on death go to the Magical Chest (50,000 coins to reclaim).",
+        "evidence": {
+          "multi": "not stated for the instance; Slayer task/Gargoyles row 'Slayer Tower (roof)' says Multicombat {{Yes}} but the fight is a solo instance",
+          "cannon": "Slayer task/Gargoyles row 'Slayer Tower (roof)': Cannonable {{No}}; Dwarf multicannon prohibited list: Slayer Tower",
+          "requirements": "Grotesque Guardians: 'players must unlock the gate using a brittle key obtained from killing gargoyles during a Slayer task (requiring 75 Slayer). This is a permanent unlock' and 'can only be killed while the player is assigned gargoyles or the Guardians themselves as a Slayer task'",
+          "konar": "Konar assigns gargoyles in the Slayer Tower (game cache table 114 row KONAR_GARGOYLES)"
+        }
+      }
+    ],
+    "notes": "Added in 0.13.0 (boss task, cache table 113 row SLAYER_TASK_GROTESQUEGUARDIANS, min stat Slayer 75). 'Dawn is flying and cannot be targeted by non-halberd melee weapons, while Dusk is completely immune to magic and ranged damage.' and 'Despite Dusk and Dawn being two different entities, killing both guardians only counts as one kill on the player's Slayer task. However, if the player has Double Trouble unlocked, two kills will be decremented' (Grotesque Guardians). Boss tasks grant an extra 5,000 Slayer XP on completion.",
+    "_verification": {
+      "corrections": [],
+      "confirmed": 10,
+      "downgraded": 0
+    }
+  }
+]

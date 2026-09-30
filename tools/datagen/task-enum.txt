@@ -56,6 +56,7 @@ FIRE_GIANTS	Fire giants	Branda the Fire Queen
 FLESH_CRAWLERS	Fleshcrawlers	Flesh crawler
 FOSSIL_ISLAND_WYVERNS	Fossil island wyverns	Ancient wyvern|Long-tailed wyvern|Spitting wyvern|Taloned wyvern
 FROST_DRAGONS	Frost dragons	
+GARGOYLES	Gargoyles	Dusk|Dawn
 GENERAL_GRAARDOR	General Graardor	
 GHOSTS	Ghosts	Death wing|Tortured soul|Forgotten Soul|Revenant
 GHOULS	Ghouls	
@@ -63,6 +64,7 @@ GIANT_MOLE	The Giant Mole
 GOBLINS	Goblins	Sergeant Strongstack|Sergeant Grimspike|Sergeant Steelwill
 GREATER_DEMONS	Greater demons	K'ril Tsutsaroth|Tstanon Karlak|Skotizo|Tormented Demon
 GREEN_DRAGONS	Green dragons	Elvarg
+GROTESQUE_GUARDIANS	The Grotesque Guardians	Dusk|Dawn
 GRYPHONS	Gryphons	
 HARPIE_BUG_SWARMS	Harpie bug swarms	
 HELLHOUNDS	Hellhounds	Cerberus
@@ -98,6 +100,7 @@ MOGRES	Mogres
 MOLANISKS	Molanisks	
 MONKEYS	Monkeys	Tortured gorilla|Demonic gorilla|Padulah
 MOSS_GIANTS	Moss giants	Bryophyta
+MUTATED_ZYGOMITES	Mutated zygomites	Zygomite|Fungi
 NECHRYAEL	Nechryael	Nechryarch
 OGRES	Ogres	Enclave guard|Mogre|Ogress|Skogre|Zogre
 OTHERWORLDLY_BEING	Otherworldly beings	
@@ -107,6 +110,7 @@ PYREFIENDS	Pyrefiends	Flaming pyrelord
 RATS	Rats	
 RED_DRAGONS	Red dragons	
 REVENANTS	Revenants	
+ROCKSLUGS	Rockslugs	
 ROGUES	Rogues	
 SARACHNIS	Sarachnis	
 SCABARITES	Scabarites	Scarab swarm|Locust rider|Scarab mage|Small Scarab
@@ -124,9 +128,9 @@ SPIDERS	Spiders	Kalrag|Sarachnis|Venenatis|Spindel|Araxxor|Araxyte
 SPIRITUAL_CREATURES	Spiritual creatures	Spiritual ranger|Spiritual mage|Spiritual warrior
 SUQAHS	Suqahs	
 TERROR_DOGS	Terror dogs	
+THERMONUCLEAR_SMOKE_DEVIL	The Thermonuclear Smoke Devil	
 THE_LEVIATHAN	The Leviathan	
 THE_WHISPERER	The Whisperer	
-THERMONUCLEAR_SMOKE_DEVIL	The Thermonuclear Smoke Devil	
 TROLLS	Trolls	Dad|Arrg|Stick|Kraka|Pee Hat|Rock|Twig|Berry
 TUROTH	Turoth	
 TZHAAR	Tzhaar	TzTok-Jad|TzKal-Zuk

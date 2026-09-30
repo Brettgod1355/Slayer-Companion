@@ -25,7 +25,9 @@
 package com.slayercompanion.task;
 
 import com.slayercompanion.events.TaskChanged;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 import javax.annotation.Nullable;
 import javax.inject.Inject;
@@ -62,6 +64,8 @@ public class TaskTracker
 	@Nullable
 	private CurrentTask current;
 	private boolean refreshPending;
+	/** Master id x 100000 + task row -> range; the tables only change with a game update. */
+	private final Map<Long, Assignment> assignments = new HashMap<>();
 
 	@Inject
 	TaskTracker(Client client, ClientThread clientThread, EventBus eventBus)
@@ -84,6 +88,7 @@ public class TaskTracker
 	{
 		eventBus.unregister(this);
 		current = null;
+		assignments.clear();
 	}
 
 	public Optional<CurrentTask> current()
@@ -199,19 +204,96 @@ public class TaskTracker
 			}
 		}
 
+		TaskModifier modifier = TaskModifier.of(client.getVarbitValue(VarbitID.SLAYER_MODIFIER_ID),
+			client.getVarbitValue(VarbitID.SLAYER_MODIFIER_VALUE),
+			client.getVarbitValue(VarbitID.SLAYER_MODIFIER_NEGATIVE) == 1);
 		int initial = client.getVarpValue(VarPlayerID.SLAYER_COUNT_ORIGINAL);
-		if (client.getVarbitValue(VarbitID.SLAYER_MODIFIER_ID) == 2)
+		if (modifier != null && modifier.getType() == TaskModifier.AMOUNT)
 		{
-			boolean negative = client.getVarbitValue(VarbitID.SLAYER_MODIFIER_NEGATIVE) == 1;
-			int value = client.getVarbitValue(VarbitID.SLAYER_MODIFIER_VALUE);
-			initial += negative ? -value : value;
+			initial += modifier.getValue();
 		}
 
 		SlayerMaster master = SlayerMaster.fromVarbit(client.getVarbitValue(VarbitID.SLAYER_MASTER));
 		int points = client.getVarbitValue(VarbitID.SLAYER_POINTS);
 		int streak = streakFor(master);
+		Assignment assignment = boss || master == null ? null : assignment(master, taskRow);
 
-		return new CurrentTask(name, remaining, initial, area, master, boss, points, streak);
+		return new CurrentTask(name, remaining, initial, area, master, boss, points, streak, assignment, modifier);
+	}
+
+	/**
+	 * The master's range for a task: its {@code SlayerMasterTask} row (the lookup the game's own task
+	 * scripts do), with the extension from the task's {@code SlayerTask} row, either a fixed range or
+	 * an amount added to the master's. Client thread only.
+	 */
+	@Nullable
+	private Assignment assignment(SlayerMaster master, int taskRow)
+	{
+		long key = master.getVarbitValue() * 100000L + taskRow;
+		Assignment known = assignments.get(key);
+		if (known == null)
+		{
+			// Not remembered when unreadable, so a read before the tables load is retried.
+			known = readAssignment(master.getVarbitValue(), taskRow);
+			if (known != null)
+			{
+				assignments.put(key, known);
+			}
+		}
+		return known;
+	}
+
+	@Nullable
+	private Assignment readAssignment(int masterId, int taskRow)
+	{
+		try
+		{
+			for (int row : client.getDBRowsByValue(DBTableID.SlayerMasterTask.ID, DBTableID.SlayerMasterTask.COL_MASTER_ID, 0, masterId))
+			{
+				Integer task = intField(row, DBTableID.SlayerMasterTask.COL_TASK, 0);
+				if (task == null || task != taskRow)
+				{
+					continue;
+				}
+				Integer min = intField(row, DBTableID.SlayerMasterTask.COL_MIN_AMOUNT, 0);
+				Integer max = intField(row, DBTableID.SlayerMasterTask.COL_MAX_AMOUNT, 0);
+				if (min == null || max == null)
+				{
+					return null;
+				}
+				Integer extMin = intField(taskRow, DBTableID.SlayerTask.COL_EXTENSION_MIN_MAX, 1);
+				Integer extMax = intField(taskRow, DBTableID.SlayerTask.COL_EXTENSION_MIN_MAX, 2);
+				if (extMin == null || extMax == null)
+				{
+					Integer addMin = intField(taskRow, DBTableID.SlayerTask.COL_EXTENSION_ADDITIVE, 1);
+					Integer addMax = intField(taskRow, DBTableID.SlayerTask.COL_EXTENSION_ADDITIVE, 2);
+					extMin = addMin == null || addMax == null ? null : min + addMin;
+					extMax = addMin == null || addMax == null ? null : max + addMax;
+				}
+				return new Assignment(min, max, extMin, extMax);
+			}
+		}
+		catch (RuntimeException e)
+		{
+			log.debug("Could not read the assignment range for master {} task row {}", masterId, taskRow, e);
+		}
+		return null;
+	}
+
+	/** One integer of a row's first tuple in a column, or null when the column is empty. */
+	@Nullable
+	private Integer intField(int row, int column, int index)
+	{
+		Object[] v;
+		try
+		{
+			v = client.getDBTableField(row, column, 0);
+		}
+		catch (RuntimeException e)
+		{
+			return null;
+		}
+		return v != null && v.length > index && v[index] instanceof Integer ? (Integer) v[index] : null;
 	}
 
 	/** Streak counter that applies to the given master. Client thread only. */

@@ -71,7 +71,7 @@ class PointsTab extends JPanel
 					next.add(Ui.keyValue(o.getMasterName(), o.getPointsForNextTask() + " pts", best ? Ui.GOOD : Color.WHITE));
 				}
 				next.add(Ui.gap(3));
-				next.add(Ui.wrap("Krystilia (25 base) and Mortimer (modifier-based) use their own streaks and are not part of this list. Skipping costs 30 points at most masters (100 at Mortimer); a Turael task resets the shared streak.", Ui.MUTED));
+				next.add(Ui.wrap("Krystilia (25 base) and Mortimer (modifier-based) use their own streaks and are not part of this list. Skipping costs 30 points at most masters (100 at Mortimer); swapping another master's task for a Turael task resets the shared streak.", Ui.MUTED));
 				col.add(next);
 				col.add(Ui.gap(4));
 			}

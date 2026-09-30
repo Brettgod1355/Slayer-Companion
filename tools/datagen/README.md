@@ -47,6 +47,15 @@ python3 generate.py --tidy --out DIR          # only the offline tidy-up below o
   each task's `requiredGear` (slot, accepted items, variants it applies to, not needed with the elite
   Kourend & Kebos diary), which the loadout recommendation keeps in its slot; `meleeReach` marks
   monsters melee cannot reach (`none`) or only halberds reach (`halberd`) in `combatStats.meleeReach`.
+* `curated/master-assignments.json` (a snapshot of the game cache, DB tables 113 SlayerTask and 114
+  SlayerMasterTask): replaces each task's wiki-parsed `masters` with the game's weight, min and max
+  per master, and the extension range (`COL_EXTENSION_MIN_MAX`, or `COL_EXTENSION_ADDITIVE` added to
+  the master's range). A task it lacks (boss tasks) gets no masters. The wiki infoboxes miss weights
+  and some masters, and Mortimer's column puts his quantity-modifier range where an extension would
+  go. In game the plugin reads the same tables live; this is the fallback. Rebuild it from a cache
+  dump when an update changes assignments.
+* An "other" requirement loses the word the quest icon leaves behind ("Completion of Quest Priest
+  in Peril" → "Completion of Priest in Peril").
 
 Progress goes to stderr; a summary of the `counts` block of `report.json` goes to stdout.
 
@@ -193,7 +202,7 @@ All JSON is pretty-printed, keys sorted, UTF-8, `ensure_ascii=False`.
 | `bossTask` | bool | monster-page task whose infobox `cat` lists "Bosses" (see page mapping; curated can override) |
 | `taskId` | int/null | `{{Infobox Slayer}}` `id` |
 | `requirements` | `{skills:[{skill,level}], slayer, combat, other}` | `skillreq`, `combatreq`, `otherreq`; `slayer` falls back to the monster's `slaylvl` |
-| `masters` | `{master → {raw, min, max, extMin, extMax, weight, alternatives:[{min,max,extMin,extMax}]}}` | infobox fields `turael…mortimer`; e.g. `120-170 (200-250) (Weighting 9)`. A fixed amount `50 (91-150)` gives `min = max = 50`. Mortimer's `A <br/> or B` keeps B in `alternatives`. Only present for pages with `{{Infobox Slayer}}` (76 of 148); the plugin reads live ranges from the game cache anyway |
+| `masters` | `{master → {raw, min, max, extMin, extMax, weight, alternatives:[{min,max,extMin,extMax}]}}` | infobox fields `turael…mortimer`; e.g. `120-170 (200-250) (Weighting 9)`. A fixed amount `50 (91-150)` gives `min = max = 50`. Mortimer's `A <br/> or B` keeps B in `alternatives`. Parsed only from pages with `{{Infobox Slayer}}`; replaced by `curated/master-assignments.json` in the tidy-up (`{weight, min, max, extMin, extMax}`); the plugin reads live ranges from the game cache anyway |
 | `summary` | string/null | first intro paragraph (≤ 400 chars) – curated overrides |
 | `recommendedStyle`, `styleNotes[]` | | style of the first gear table; `"<label>: <style>"` for each table |
 | `requiredItems[]`, `usefulItems[]`, `superior` | | curated only (empty/null otherwise) |
@@ -234,7 +243,8 @@ for every monster page of every task. From Bucket `dropsline` (the `drop_json` f
 default version when the drop rows name it (`Abyssal demon#Standard`), else the version with the most
 rows. `rate` is the chance per roll from `Rarity` ("Always" = 1, "4/128", "~1/200", "2 × 1/128" = 2/128;
 "Varies" and the like = null). `itemId` comes from Bucket `infobox_item` (item name → default version's
-first id).
+first id). `DROP_PAGE_OVERRIDES` names a page whose drop rows stand for a monster page that has none
+(Dusk → Grotesque Guardians, whose shared table is on the boss page).
 
 ### `out/items.json` – equipment bonuses (Bucket extras)
 
@@ -368,6 +378,11 @@ infobox has no `slayxp`).
 Access: 1025 location records carry 537 requirement strings (377 distinct) →
 551 groups, 264 with rules (252 fully checkable), 298 manual;
 19 strings listed in `accessUnparsed` (see COVERAGE.md).
+
+2026-09-30: `--only` added the four tasks the game could assign but the bundle lacked (Gargoyles,
+Rockslugs, Mutated zygomites, The Grotesque Guardians; curated in `batch13.json`), so the bundle has
+152 tasks (78 `Slayer task/…` pages). The other 148 kept their wiki data; the tidy-up then gave every
+task the game cache's assignment ranges.
 
 ## Maintaining
 
