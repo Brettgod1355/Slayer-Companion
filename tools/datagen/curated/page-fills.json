@@ -1,0 +1,44 @@
+{
+  "_about": "Values the Bucket API does not hold, read from wiki pages (owner 2026-09-30: what the API and buckets lack, get with the wiki's own page search). Applied by generate.py (tidy_tasks); each entry names the page it came from. locations: coordinates for a location record (all tasks with that location name unless 'task' is given), replacing missing or instance-only ones so the route and map marker work. monsters: combat stats the monster's bucket row leaves empty.",
+  "locations": [
+    {
+      "location": "Slayer Tower roof",
+      "task": "The Grotesque Guardians",
+      "x": 3422,
+      "y": 3544,
+      "plane": 2,
+      "source": "Slayer Tower: 'Near the staircases of this floor lies a rooftop entrance and a magical chest'; Magical Chest: {{Map|x:3422,y:3544|plane=2}}"
+    },
+    {
+      "location": "Cerberus' Lair",
+      "x": 2863,
+      "y": 9837,
+      "plane": 0,
+      "source": "Cerberus' Lair: 'accessed via a cave entrance in the eastern wall of the hellhound area within the Taverley Dungeon' (the lair itself is an instance at 1302,1271); hellhound area of Taverley Dungeon from the Hellhound LocLine"
+    },
+    {
+      "location": "Skeletal Tomb",
+      "task": "Skeletons",
+      "x": 3164,
+      "y": 3672,
+      "plane": 0,
+      "source": "Skeletal Tomb: 'located in the Graveyard of Shadows north of Ferox Enclave' (map = No); Graveyard of Shadows: {{Map|x=3164|y=3672}}"
+    },
+    {
+      "location": "Web Chasm",
+      "task": "Spiders",
+      "x": 3165,
+      "y": 3734,
+      "plane": 0,
+      "source": "Web Chasm: 'located in the eastern ruins north of the Graveyard of Shadows' (map = No); Ruins (east): {{Map|x=3165|y=3734}}"
+    }
+  ],
+  "monsters": [
+    {
+      "page": "Vardorvis",
+      "version": "Post-quest",
+      "defenceLevel": 180,
+      "source": "Vardorvis infobox: 'def1 = 215-145' (his Defence falls as his hitpoints do); the midpoint stands for a whole kill"
+    }
+  ]
+}

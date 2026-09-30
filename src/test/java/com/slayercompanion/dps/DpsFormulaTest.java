@@ -303,6 +303,28 @@ public class DpsFormulaTest
 	}
 
 	@Test
+	public void flatArmourComesOffEverySuccessfulMeleeAndRangedHit()
+	{
+		// Flat armour: "if a target has 4 flat armour then an attack that would usually deal 10 damage would instead deal 6".
+		assertEquals(5.0, DpsCalculator.averageHit(0, 10, 0), 1e-12);
+		assertEquals("-2 (gargoyles) adds 2", 7.0, DpsCalculator.averageHit(0, 10, -2), 1e-12);
+		assertEquals("2 (drakes): (0+0+0+1+...+8)/11", 36.0 / 11, DpsCalculator.averageHit(0, 10, 2), 1e-12);
+		assertEquals(0.0, DpsCalculator.averageHit(0, 2, 5), 1e-12);
+
+		MonsterCombatStats gargoyle = dummy(1);
+		DpsCalculator.Result plain = DpsCalculator.calc(maxed().build(), gear("Abyssal whip"), style("Whip", "Lash"), null, gargoyle);
+		gargoyle.setFlatArmour(-2);
+		DpsCalculator.Result soft = DpsCalculator.calc(maxed().build(), gear("Abyssal whip"), style("Whip", "Lash"), null, gargoyle);
+		assertEquals(plain.getHitChance() * (plain.getMaxHit() / 2.0 + 2) / (plain.getSpeedTicks() * 0.6), soft.getDps(), 1e-9);
+		// Magic ignores it.
+		Spell surge = Spell.best(Spell.STANDARD, 99);
+		MonsterCombatStats drake = dummy(1);
+		double before = DpsCalculator.calc(maxed().build(), new Gear(new HashMap<>()), autocast(), surge, drake).getDps();
+		drake.setFlatArmour(2);
+		assertEquals(before, DpsCalculator.calc(maxed().build(), new Gear(new HashMap<>()), autocast(), surge, drake).getDps(), 1e-12);
+	}
+
+	@Test
 	public void sanguinestiStaffStartsAtTwentySevenAtEightyTwoMagic()
 	{
 		assertEquals(27, DpsCalculator.poweredStaffMax("sanguinesti staff", 82));

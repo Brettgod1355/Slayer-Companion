@@ -37806,8 +37806,8 @@
         "wilderness": false,
         "wildernessLevelMax": null,
         "wildernessLevelMin": null,
-        "x": 1302,
-        "y": 1271
+        "x": 2863,
+        "y": 9837
       }
     ],
     "masters": {},
@@ -81686,7 +81686,7 @@
         "annotations": [],
         "annotationsRaw": [],
         "cannon": false,
-        "coordsMissing": true,
+        "coordsMissing": false,
         "curated": true,
         "curatedName": "Slayer Tower roof",
         "displayName": "Slayer Tower roof",
@@ -81702,7 +81702,7 @@
         "name": "Slayer Tower roof",
         "notes": "The entrance is on the 2nd floor of the Slayer Tower. Ring the Cloister Bell to start; you are kicked out after five minutes of inactivity. Items lost on death go to the Magical Chest (50,000 coins to reclaim).",
         "pages": [],
-        "plane": null,
+        "plane": 2,
         "rank": 1,
         "requirements": [
           "75 Slayer",
@@ -81716,8 +81716,8 @@
         "wilderness": false,
         "wildernessLevelMax": null,
         "wildernessLevelMin": null,
-        "x": null,
-        "y": null
+        "x": 3422,
+        "y": 3544
       }
     ],
     "masters": {},
@@ -84642,8 +84642,8 @@
         "wilderness": false,
         "wildernessLevelMax": null,
         "wildernessLevelMin": null,
-        "x": 1302,
-        "y": 1271
+        "x": 2863,
+        "y": 9837
       }
     ],
     "masters": {
@@ -86742,7 +86742,7 @@
         "annotations": [],
         "annotationsRaw": [],
         "cannon": "unknown",
-        "coordsMissing": true,
+        "coordsMissing": false,
         "curated": false,
         "displayName": "Obor's Lair (Edgeville Dungeon)",
         "dropversions": [
@@ -86769,16 +86769,26 @@
         "rank": null,
         "requirements": [],
         "source": "locline",
-        "spawnCount": 0,
-        "spawns": [],
+        "spawnCount": 1,
+        "spawns": [
+          [
+            3091,
+            9799
+          ]
+        ],
         "spawnsByMonster": {
-          "Obor": []
+          "Obor": [
+            [
+              3091,
+              9799
+            ]
+          ]
         },
         "wilderness": false,
         "wildernessLevelMax": null,
         "wildernessLevelMin": null,
-        "x": null,
-        "y": null
+        "x": 3091,
+        "y": 9799
       },
       {
         "access": {
@@ -151889,7 +151899,7 @@
         "annotations": [],
         "annotationsRaw": [],
         "cannon": "unknown",
-        "coordsMissing": true,
+        "coordsMissing": false,
         "curated": true,
         "curatedName": "Skeletal Tomb",
         "displayName": "Skeletal Tomb",
@@ -151905,7 +151915,7 @@
         "name": "Skeletal Tomb",
         "notes": "Weaker Vet'ion variant in a singles-plus arena in the Graveyard of Shadows north of Ferox Enclave. Its summoned skeleton hellhounds also count.",
         "pages": [],
-        "plane": null,
+        "plane": 0,
         "rank": 7,
         "requirements": [
           "Hard Wilderness Diary (a skeleton task does not bypass it; only a Vet'ion boss task does)",
@@ -151917,8 +151927,8 @@
         "wilderness": true,
         "wildernessLevelMax": 21,
         "wildernessLevelMin": 21,
-        "x": null,
-        "y": null
+        "x": 3164,
+        "y": 3672
       },
       {
         "access": {
@@ -157154,7 +157164,7 @@
         "annotations": [],
         "annotationsRaw": [],
         "cannon": "unknown",
-        "coordsMissing": true,
+        "coordsMissing": false,
         "curated": true,
         "curatedName": "Web Chasm",
         "displayName": "Web Chasm",
@@ -157170,7 +157180,7 @@
         "name": "Web Chasm",
         "notes": "Singles-plus lair in the eastern ruins north of the Graveyard of Shadows; Spindel counts toward a spider task and the spiderlings do not decrement it. Without the hard diary you cannot teleport for 3 ticks after entering if you have recently attacked Spindel.",
         "pages": [],
-        "plane": null,
+        "plane": 0,
         "rank": 5,
         "requirements": [
           "Hard Wilderness Diary (a spider task does not bypass this; only a Venenatis boss task does)",
@@ -157182,8 +157192,8 @@
         "wilderness": true,
         "wildernessLevelMax": 29,
         "wildernessLevelMin": 29,
-        "x": null,
-        "y": null
+        "x": 3165,
+        "y": 3734
       },
       {
         "access": {
@@ -178449,6 +178459,7 @@
             "none"
           ],
           "crush": 85,
+          "defenceLevel": 180,
           "hitpoints": 700,
           "magic": 580,
           "magicLevel": 215,
